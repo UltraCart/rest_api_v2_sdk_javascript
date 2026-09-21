@@ -30,27 +30,10 @@ Retrieve a JWT to authorize an agent to make a websocket connection.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowAgentWebsocketAuthorization -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getWorkflowAgentWebsocketAuthorization((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowAgentWebsocketAuthorization -->
 
 ### Parameters
 
@@ -81,31 +64,10 @@ Retrieve a list of groups that workflow tasks can be assigned to
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowAssignmentGroups -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0 // Number | Pagination of the record set.  Offset is a zero based index.
-};
-apiInstance.getWorkflowAssignmentGroups(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowAssignmentGroups -->
 
 ### Parameters
 
@@ -140,31 +102,10 @@ Retrieve a list of users that workflow tasks can be assigned to
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowAssignmentUsers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0 // Number | Pagination of the record set.  Offset is a zero based index.
-};
-apiInstance.getWorkflowAssignmentUsers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowAssignmentUsers -->
 
 ### Parameters
 
@@ -199,27 +140,10 @@ Retrieve a user object for myself
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowMe -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getWorkflowMe((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowMe -->
 
 ### Parameters
 
@@ -250,28 +174,10 @@ Retrieve a workflow task
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTask -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let task_uuid = "task_uuid_example"; // String | 
-apiInstance.getWorkflowTask(task_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTask -->
 
 ### Parameters
 
@@ -305,28 +211,10 @@ Get a presigned workflow task attachment upload URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTaskAttachmentUploadUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let extension = "extension_example"; // String | 
-apiInstance.getWorkflowTaskAttachmentUploadUrl(extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTaskAttachmentUploadUrl -->
 
 ### Parameters
 
@@ -360,29 +248,10 @@ Retrieve a workflow task by object type and id
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTaskByObjectType -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object_type = "object_type_example"; // String | 
-let object_id = "object_id_example"; // String | 
-apiInstance.getWorkflowTaskByObjectType(object_type, object_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTaskByObjectType -->
 
 ### Parameters
 
@@ -417,27 +286,10 @@ Retrieve workflow task open count
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTaskOpenCount -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getWorkflowTaskOpenCount((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTaskOpenCount -->
 
 ### Parameters
 
@@ -468,27 +320,10 @@ Retrieves a unique list of all the existing workflow task tags.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTaskTags -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getWorkflowTaskTags((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTaskTags -->
 
 ### Parameters
 
@@ -519,33 +354,10 @@ Retrieves a set of workflow tasks from the account based on a query object.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getWorkflowTasks -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let workflow_tasks_query = new UltraCartRestApiV2.WorkflowTasksRequest(); // WorkflowTasksRequest | Workflow tasks query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getWorkflowTasks(workflow_tasks_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getWorkflowTasks -->
 
 ### Parameters
 
@@ -582,28 +394,10 @@ Insert a workflow task
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertWorkflowTask -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let workflow_task = new UltraCartRestApiV2.WorkflowTask(); // WorkflowTask | workflow task
-apiInstance.insertWorkflowTask(workflow_task, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertWorkflowTask -->
 
 ### Parameters
 
@@ -637,29 +431,10 @@ Update a workflow task
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateWorkflowTask -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.WorkflowApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let task_uuid = "task_uuid_example"; // String | 
-let workflow_task = new UltraCartRestApiV2.WorkflowTask(); // WorkflowTask | Workflow task
-apiInstance.updateWorkflowTask(task_uuid, workflow_task, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateWorkflowTask -->
 
 ### Parameters
 

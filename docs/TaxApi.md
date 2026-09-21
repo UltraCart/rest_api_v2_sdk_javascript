@@ -49,29 +49,10 @@ Deletes a Self tax provider city.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTaxProviderSelfCity -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let city = "city_example"; // String | The city being deleted.
-let tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be deleted
-apiInstance.deleteTaxProviderSelfCity(city, tax_city, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteTaxProviderSelfCity -->
 
 ### Parameters
 
@@ -106,29 +87,10 @@ Deletes a Self tax provider country.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTaxProviderSelfCountry -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let countryCode = "countryCode_example"; // String | The country code being deleted.
-let tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be deleted
-apiInstance.deleteTaxProviderSelfCountry(countryCode, tax_country, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteTaxProviderSelfCountry -->
 
 ### Parameters
 
@@ -163,29 +125,10 @@ Deletes a Self tax provider county.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTaxProviderSelfCounty -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let county = "county_example"; // String | The county being deleted.
-let tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be deleted
-apiInstance.deleteTaxProviderSelfCounty(county, tax_county, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteTaxProviderSelfCounty -->
 
 ### Parameters
 
@@ -220,29 +163,10 @@ Deletes a Self tax provider postalCode.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTaxProviderSelfPostalCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let postal_code = "postal_code_example"; // String | The postal code being deleted.
-let tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be deleted
-apiInstance.deleteTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteTaxProviderSelfPostalCode -->
 
 ### Parameters
 
@@ -277,29 +201,10 @@ Deletes a Self tax provider state.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTaxProviderSelfState -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let stateCode = "stateCode_example"; // String | The state code being deleted.
-let tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be deleted
-apiInstance.deleteTaxProviderSelfState(stateCode, tax_state, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteTaxProviderSelfState -->
 
 ### Parameters
 
@@ -334,27 +239,9 @@ Retrieves the Anrok tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderAnrok -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderAnrok((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getTaxProviderAnrok -->
 
 ### Parameters
 
@@ -385,27 +272,9 @@ Attempts to connect to Anrok and returns back the response.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderAnrokTest -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderAnrokTest((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getTaxProviderAnrokTest -->
 
 ### Parameters
 
@@ -436,27 +305,10 @@ Retrieves the Avalara tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderAvalara -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderAvalara((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderAvalara -->
 
 ### Parameters
 
@@ -487,28 +339,10 @@ Returns Avalara Tax companies configured by the merchant
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderAvalaraCompanies -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
-apiInstance.getTaxProviderAvalaraCompanies(tax_provider_avalara, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderAvalaraCompanies -->
 
 ### Parameters
 
@@ -542,27 +376,10 @@ Attempts to connect to Avalara and returns back the response.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderAvalaraTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderAvalaraTest((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderAvalaraTest -->
 
 ### Parameters
 
@@ -593,27 +410,10 @@ Retrieves the Self tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderSelf -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderSelf((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderSelf -->
 
 ### Parameters
 
@@ -644,27 +444,10 @@ Retrieves the Self tax provider countries.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderSelfCountries -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderSelfCountries((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderSelfCountries -->
 
 ### Parameters
 
@@ -695,28 +478,10 @@ Retrieves the Self tax provider regions for a given country code.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderSelfRegionsByCountryCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let countryCode = "countryCode_example"; // String | The country code regions desired.
-apiInstance.getTaxProviderSelfRegionsByCountryCode(countryCode, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderSelfRegionsByCountryCode -->
 
 ### Parameters
 
@@ -750,27 +515,10 @@ Retrieves the Sovos tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderSovos -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderSovos((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderSovos -->
 
 ### Parameters
 
@@ -801,27 +549,10 @@ Attempts to connect to Sovos and returns back the response.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderSovosTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderSovosTest((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderSovosTest -->
 
 ### Parameters
 
@@ -852,27 +583,10 @@ Retrieves the TaxJar tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderTaxJar -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderTaxJar((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderTaxJar -->
 
 ### Parameters
 
@@ -903,27 +617,10 @@ Attempts to connect to TaxJar and returns back the response.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderTaxJarTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderTaxJarTest((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderTaxJarTest -->
 
 ### Parameters
 
@@ -954,27 +651,10 @@ Retrieves the UltraCart tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviderUltraCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTaxProviderUltraCart((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviderUltraCart -->
 
 ### Parameters
 
@@ -1005,32 +685,10 @@ Retrieves tax methods for this account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTaxProviders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getTaxProviders(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getTaxProviders -->
 
 ### Parameters
 
@@ -1066,28 +724,10 @@ Toggle a tax provider to active.
 
 ### Example
 
-<!-- UC_START_EXAMPLE setActiveTaxProvider -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let providerName = "providerName_example"; // String | The tax provider to set active.
-apiInstance.setActiveTaxProvider(providerName, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE setActiveTaxProvider -->
 
 ### Parameters
 
@@ -1121,28 +761,9 @@ Update the Anrok tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderAnrok -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_anrok = new UltraCartRestApiV2.TaxProviderAnrok(); // TaxProviderAnrok | TaxProviderAnrok object
-apiInstance.updateTaxProviderAnrok(tax_provider_anrok, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateTaxProviderAnrok -->
 
 ### Parameters
 
@@ -1176,28 +797,10 @@ Update the Avalara tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderAvalara -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_avalara = new UltraCartRestApiV2.TaxProviderAvalara(); // TaxProviderAvalara | TaxProviderAvalara object
-apiInstance.updateTaxProviderAvalara(tax_provider_avalara, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderAvalara -->
 
 ### Parameters
 
@@ -1231,28 +834,10 @@ Update the Self tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelf -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_self = new UltraCartRestApiV2.TaxProviderSelf(); // TaxProviderSelf | TaxProviderSelf object
-apiInstance.updateTaxProviderSelf(tax_provider_self, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelf -->
 
 ### Parameters
 
@@ -1286,29 +871,10 @@ Updates a Self tax provider city.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelfCity -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let city = "city_example"; // String | The city being updated.
-let tax_city = new UltraCartRestApiV2.TaxCity(); // TaxCity | tax city to be updated
-apiInstance.updateTaxProviderSelfCity(city, tax_city, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelfCity -->
 
 ### Parameters
 
@@ -1343,29 +909,10 @@ Updates a Self tax provider country.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelfCountry -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let countryCode = "countryCode_example"; // String | The country code being updated.
-let tax_country = new UltraCartRestApiV2.TaxCountry(); // TaxCountry | tax country to be updated
-apiInstance.updateTaxProviderSelfCountry(countryCode, tax_country, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelfCountry -->
 
 ### Parameters
 
@@ -1400,29 +947,10 @@ Updates a Self tax provider county.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelfCounty -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let county = "county_example"; // String | The county being updated.
-let tax_county = new UltraCartRestApiV2.TaxCounty(); // TaxCounty | tax county to be updated
-apiInstance.updateTaxProviderSelfCounty(county, tax_county, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelfCounty -->
 
 ### Parameters
 
@@ -1457,29 +985,10 @@ Updates a Self tax provider postalCode.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelfPostalCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let postal_code = "postal_code_example"; // String | The postal code being updated.
-let tax_postal_code = new UltraCartRestApiV2.TaxPostalCode(); // TaxPostalCode | tax postal code to be updated
-apiInstance.updateTaxProviderSelfPostalCode(postal_code, tax_postal_code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelfPostalCode -->
 
 ### Parameters
 
@@ -1514,29 +1023,10 @@ Updates a Self tax provider state.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSelfState -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let stateCode = "stateCode_example"; // String | The state code being updated.
-let tax_state = new UltraCartRestApiV2.TaxState(); // TaxState | tax state to be updated
-apiInstance.updateTaxProviderSelfState(stateCode, tax_state, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSelfState -->
 
 ### Parameters
 
@@ -1571,28 +1061,10 @@ Update the Sovos tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderSovos -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_sovos = new UltraCartRestApiV2.TaxProviderSovos(); // TaxProviderSovos | TaxProviderSovos object
-apiInstance.updateTaxProviderSovos(tax_provider_sovos, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderSovos -->
 
 ### Parameters
 
@@ -1626,28 +1098,10 @@ Update the TaxJar tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderTaxJar -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_taxJar = new UltraCartRestApiV2.TaxProviderTaxJar(); // TaxProviderTaxJar | TaxProviderTaxJar object
-apiInstance.updateTaxProviderTaxJar(tax_provider_taxJar, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderTaxJar -->
 
 ### Parameters
 
@@ -1681,28 +1135,10 @@ Update the UltraCart tax provider.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTaxProviderUltraCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.TaxApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let tax_provider_ultracart = new UltraCartRestApiV2.TaxProviderUltraCart(); // TaxProviderUltraCart | TaxProviderUltraCart object
-apiInstance.updateTaxProviderUltraCart(tax_provider_ultracart, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateTaxProviderUltraCart -->
 
 ### Parameters
 

@@ -26,29 +26,32 @@ Adds a ledger entry for this gift certificate.
 
 ### Example
 
-<!-- UC_START_EXAMPLE addGiftCertificateLedgerEntry -->
-
 ```javascript
 var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+const { apiClient } = require('../api.js');
+var luxon = require('luxon');
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+var giftCertificateApi = new ucApi.GiftCertificateApi(apiClient);
 
-let gift_certificate_oid = 56; // Number | 
-let gift_certificate_ledger_entry = new UltraCartRestApiV2.GiftCertificateLedgerEntry(); // GiftCertificateLedgerEntry | Gift certificate ledger entry
-apiInstance.addGiftCertificateLedgerEntry(gift_certificate_oid, gift_certificate_ledger_entry, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+let giftCertificateOid = 676813;
+let ledgerEntry = new ucApi.GiftCertificateLedgerEntry();
+
+ledgerEntry.amount = -65.35;  // this is the change amount in the gift certificate.  this is not a balance.  it will be subtracted from it.
+ledgerEntry.description = "Customer bought something over the counter using this gift certificate.";
+ledgerEntry.entry_dts = luxon.DateTime.now().setZone('America/New_York').toISO();
+ledgerEntry.gift_certificate_ledger_oid = 0;  // the system will assign an oid.  do not assign one here.
+ledgerEntry.gift_certificate_oid = giftCertificateOid  // this is an existing gift certificate oid.  I created it using createGiftCertificate.ts
+ledgerEntry.reference_order_id = 'BLAH-12345'; // if this ledger entry is related to an order, add it here, else use null.
+
+
+// add ledger entry does not take an expansion variable.  it will return the entire object by default.
+giftCertificateApi.addGiftCertificateLedgerEntry(giftCertificateOid, ledgerEntry, 
+    function(error, data, response){
+        let giftCertificate = data.gift_certificate;    
+        console.log('giftCertificate', giftCertificate);
+    });
 ```
 
-<!-- UC_END_EXAMPLE addGiftCertificateLedgerEntry -->
 
 ### Parameters
 
@@ -83,28 +86,50 @@ Creates a gift certificate for this merchant account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE createGiftCertificate -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import {DateTime} from 'luxon';
+import {giftCertificateApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class CreateGiftCertificate {
+    static async execute() {
+        const giftCertificate = await CreateGiftCertificate.createGiftCertificateCall();
+        console.log("Gift Certificate:", giftCertificate);
+    }
 
-let gift_certificate_create_request = new UltraCartRestApiV2.GiftCertificateCreateRequest(); // GiftCertificateCreateRequest | Gift certificate create request
-apiInstance.createGiftCertificate(gift_certificate_create_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    static async createGiftCertificateCall() {
+
+        const giftCertificateCreateRequest = {
+            amount: 200.00,
+            initial_ledger_description: "Created via TypeScript SDK",
+            merchant_note: "Internal comment here",
+            email: "support@ultracart.com",
+            expiration_dts: DateTime.now()
+                .setZone('America/New_York')
+                .plus({months: 3})
+                .toISO()
+        };
+
+        const request = {
+            giftCertificateCreateRequest: giftCertificateCreateRequest
+        };
+
+        // create does not take an expansion variable.  it will return the entire object by default.
+        const gcResponse = await new Promise((resolve, reject) => {
+            giftCertificateApi.createGiftCertificate(request, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        return gcResponse.gift_certificate;
+    }
+}
+
+export default CreateGiftCertificate;
 ```
 
-<!-- UC_END_EXAMPLE createGiftCertificate -->
 
 ### Parameters
 
@@ -138,28 +163,50 @@ Deletes a gift certificate for this merchant account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteGiftCertificate -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class DeleteGiftCertificate {
+    static async execute() {
+        const giftCertificate = await this.deleteGiftCertificateCall();
+        console.debug(giftCertificate, "Gift Certificate");
+    }
 
-let gift_certificate_oid = 56; // Number | 
-apiInstance.deleteGiftCertificate(gift_certificate_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+    static async deleteGiftCertificateCall() {
+        const api = giftCertificateApi;
+
+        const giftCertificateOid = 676713;
+
+        // Wrap the delete call in a Promise
+        await new Promise((resolve, reject) => {
+            api.deleteGiftCertificate(giftCertificateOid, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+
+        // if I re-query the gift certificate after deleting, I will still get an object back, but the
+        // deleted flag on the object will be true.
+        // by_oid does not take an expansion variable.  it will return the entire object by default.
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificateByOid(giftCertificateOid, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+
+        return gcResponse.gift_certificate;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteGiftCertificate -->
 
 ### Parameters
 
@@ -193,28 +240,38 @@ Retrieves a gift certificate from the account based on the code (the value the c
 
 ### Example
 
-<!-- UC_START_EXAMPLE getGiftCertificateByCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+// ReSharper disable once ClassNeverInstantiated.Global
+export class GetGiftCertificateByCode {
+    static async execute() {
+        const giftCertificate = await this.getGiftCertificateByCodeCall();
+        console.log(giftCertificate, "Gift Certificate");
+    }
 
-let code = "code_example"; // String | 
-apiInstance.getGiftCertificateByCode(code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // ReSharper disable once MemberCanBePrivate.Global
+    static async getGiftCertificateByCodeCall() {
+        const api = giftCertificateApi;
+        
+        const code = "X8PV761V2Z";
+
+        // by_code does not take an expansion variable.  it will return the entire object by default.
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificateByCode(code, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+
+        return gcResponse.gift_certificate;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getGiftCertificateByCode -->
 
 ### Parameters
 
@@ -248,28 +305,38 @@ Retrieves a gift certificate from the account based on the internal primary key.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getGiftCertificateByOid -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+// ReSharper disable once ClassNeverInstantiated.Global
+export class GetGiftCertificateByOid {
+    static async execute() {
+        const giftCertificate = await this.getGiftCertificateByOidCall();
+        console.log(giftCertificate, "Gift Certificate");
+    }
 
-let gift_certificate_oid = 56; // Number | 
-apiInstance.getGiftCertificateByOid(gift_certificate_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // ReSharper disable once MemberCanBePrivate.Global
+    static async getGiftCertificateByOidCall() {
+        const api = giftCertificateApi;
+        
+        const giftCertificateOid = 676713;
+
+        // by_oid does not take an expansion variable.  it will return the entire object by default.
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificateByOid(giftCertificateOid, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+
+        return gcResponse.gift_certificate;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getGiftCertificateByOid -->
 
 ### Parameters
 
@@ -303,28 +370,42 @@ Retrieves all gift certificates from the account based on customer email.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getGiftCertificatesByEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+// ReSharper disable once ClassNeverInstantiated.Global
+export class GetGiftCertificatesByEmail {
+    static async execute() {
+        const giftCertificates = await this.getGiftCertificatesByEmailCall();
+        if(giftCertificates !== undefined) {
+            for (const gc of giftCertificates) {
+                console.log(gc);
+            }
+        }
+    }
 
-let email = "email_example"; // String | 
-apiInstance.getGiftCertificatesByEmail(email, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // ReSharper disable once MemberCanBePrivate.Global
+    static async getGiftCertificatesByEmailCall() {
+        const api = giftCertificateApi;
+        
+        const email = "support@ultracart.com";
+
+        // by_email does not take an expansion variable.  it will return the entire object by default.
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificatesByEmail(email, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+
+        return gcResponse.gift_certificates;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getGiftCertificatesByEmail -->
 
 ### Parameters
 
@@ -358,35 +439,76 @@ Retrieves gift certificates from the account.  If no parameters are specified, a
 
 ### Example
 
-<!-- UC_START_EXAMPLE getGiftCertificatesByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+// ReSharper disable once ClassNeverInstantiated.Global
+export class GetGiftCertificatesByQuery {
+    static async execute() {
+        const giftCertificates = await this.getGiftCertificateByQueryCall();
+        if(giftCertificates !== undefined) {
+            for (const giftCertificate of giftCertificates) {
+                // Assuming Utility is available in your TS environment
+                console.log(giftCertificate);
+            }
+        }
+    }
 
-let gift_certificate_query = new UltraCartRestApiV2.GiftCertificateQuery(); // GiftCertificateQuery | Gift certificates query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getGiftCertificatesByQuery(gift_certificate_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    static async getGiftCertificateChunk(api, offset, limit) {
+        const expansion = "ledger";
+
+        // leaving query empty, so no filtering, and I should get all records returned.
+        const query = {};
+
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificatesByQuery(
+                query, {_limit: limit, _offset: offset, _expand: expansion},
+                function(error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                }
+            );
+        });
+
+        if (gcResponse !== undefined && gcResponse.success === true && gcResponse.gift_certificates !== null) {
+            return gcResponse.gift_certificates;
+        }
+
+        return [];
+    }
+
+    // ReSharper disable once MemberCanBePrivate.Global
+    static async getGiftCertificateByQueryCall() {
+        const api = giftCertificateApi;
+
+        const giftCertificates = [];
+
+        let iteration = 1;
+        let offset = 0;
+        const limit = 200;
+        let moreRecordsToFetch = true;
+
+        while (moreRecordsToFetch) {
+            console.log(`executing iteration ${iteration}`);
+            const chunkOfCertificates = await this.getGiftCertificateChunk(api, offset, limit);
+            if(chunkOfCertificates !== undefined && chunkOfCertificates !== null) {
+                giftCertificates.push(...chunkOfCertificates);
+                offset += limit;
+                moreRecordsToFetch = chunkOfCertificates.length === limit;
+                iteration++;
+            } else {
+                moreRecordsToFetch = false;
+            }
+        }
+
+        return giftCertificates;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getGiftCertificatesByQuery -->
 
 ### Parameters
 
@@ -425,29 +547,58 @@ Update a gift certificate for this merchant account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateGiftCertificate -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.GiftCertificateApi(apiClient);
+import { giftCertificateApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+// ReSharper disable once ClassNeverInstantiated.Global
+export class UpdateGiftCertificate {
+    static async execute() {
+        const giftCertificate = await this.updateGiftCertificateCall();
+        console.log(giftCertificate);
+    }
 
-let gift_certificate_oid = 56; // Number | 
-let gift_certificate = new UltraCartRestApiV2.GiftCertificate(); // GiftCertificate | Gift certificate
-apiInstance.updateGiftCertificate(gift_certificate_oid, gift_certificate, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // ReSharper disable once MemberCanBePrivate.Global
+    static async updateGiftCertificateCall() {
+        const api = giftCertificateApi;
+        
+        const giftCertificateOid = 676713;
+        
+        const gcResponse = await new Promise((resolve, reject) => {
+            api.getGiftCertificateByOid({giftCertificateOid: giftCertificateOid}, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+
+        if(gcResponse.gift_certificate !== undefined) {
+            const giftCertificate = gcResponse.gift_certificate;
+            giftCertificate.email = "perry@ultracart.com";
+
+            // update does not take an expansion variable.  it will return the entire object by default.
+            const updatedResponse = await new Promise((resolve, reject) => {
+                api.updateGiftCertificate(
+                    giftCertificateOid, giftCertificate,
+                    function(error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    }
+                );
+            });
+
+            return updatedResponse.gift_certificate;
+        }
+        // handle this condition somehow.
+        return undefined;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateGiftCertificate -->
 
 ### Parameters
 

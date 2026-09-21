@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbExperimentVariationUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest
- * @version 4.1.166
+ * @version 4.1.167
  */
 class SfvbExperimentVariationUpdateRequest {
     /**

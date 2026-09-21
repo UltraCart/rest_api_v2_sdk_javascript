@@ -22,27 +22,10 @@ This is the equivalent of logging out of the single sign on session
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSsoSessionUser -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SsoApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getSsoSessionUser((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getSsoSessionUser -->
 
 ### Parameters
 
@@ -73,28 +56,10 @@ Starts the process of authorizing a single sign on session.
 
 ### Example
 
-<!-- UC_START_EXAMPLE ssoAuthorize -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SsoApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let authorization_request = new UltraCartRestApiV2.SingleSignOnAuthorizeRequest(); // SingleSignOnAuthorizeRequest | Authorization request
-apiInstance.ssoAuthorize(authorization_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE ssoAuthorize -->
 
 ### Parameters
 
@@ -128,27 +93,10 @@ This is the equivalent of logging out of the single sign on session
 
 ### Example
 
-<!-- UC_START_EXAMPLE ssoSessionRevoke -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SsoApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.ssoSessionRevoke((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE ssoSessionRevoke -->
 
 ### Parameters
 
@@ -179,28 +127,10 @@ Called by your application after receiving the code back on the redirect URI to 
 
 ### Example
 
-<!-- UC_START_EXAMPLE ssoToken -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SsoApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let token_request = new UltraCartRestApiV2.SingleSignOnTokenRequest(); // SingleSignOnTokenRequest | Token request
-apiInstance.ssoToken(token_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE ssoToken -->
 
 ### Parameters
 

@@ -37,28 +37,47 @@ Look up the city and state for the shipping zip code.  Useful for building an au
 
 ### Example
 
-<!-- UC_START_EXAMPLE cityState -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/// <summary>
+/// Takes a postal code and returns back a city and state (US Only)
+/// </summary>
+export class CityState {
+    /// <summary>
+    /// Takes a postal code and returns back a city and state (US Only)
+    /// </summary>
+    static async Execute() {
+        // Reference Implementation: https://github.com/UltraCart/responsive_checkout
+        // Takes a postal code and returns back a city and state (US Only)
 
-let cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-apiInstance.cityState(cart, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        const cartId = "123456789123456789123456789123456789";  // you should have the cart id from session or cookie.
+        const cart = {
+            cart_id: cartId, // required
+            shipping: {
+                postal_code: "44233"
+            }
+        };
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.cityState(cart, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            console.log("City: " + apiResponse.city);
+            console.log("State: " + apiResponse.state);
+        } catch (error) {
+            console.error("Error retrieving city and state:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE cityState -->
 
 ### Parameters
 
@@ -92,28 +111,83 @@ Finalize the cart into an order.  This method can not be called with browser key
 
 ### Example
 
-<!-- UC_START_EXAMPLE finalizeOrder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class FinalizeOrder {
+    /// <summary>
+    /// Finalizes an order from a cart
+    /// </summary>
+    static async Execute() {
+        // Reference Implementation: https://github.com/UltraCart/responsive_checkout
 
-let finalize_request = new UltraCartRestApiV2.CartFinalizeOrderRequest(); // CartFinalizeOrderRequest | Finalize request
-apiInstance.finalizeOrder(finalize_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // Note: You probably should NOT be using this method.  Use handoffCart() instead.
+        // This method is a server-side only (no browser key allowed) method for turning a cart into an order.
+        // It exists for merchants who wish to provide their own upsells, but again, a warning, using this method
+        // will exclude the customer checkout from a vast and powerful suite of functionality provided free by UltraCart.
+        // Still, some merchants need this functionality, so here it is.  If you're unsure, you don't need it.  Use handoff.
+
+        const expansion = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes"; //
+        // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html
+        /*
+        affiliate                   checkout                            customer_profile
+        billing                     coupons                             gift
+        gift_certificate            items.attributes                   items.multimedia
+        items                       items.multimedia.thumbnails         items.physical
+        marketing                   payment                                settings.gift
+        settings.billing.provinces  settings.shipping.deliver_on_date   settings.shipping.estimates
+        settings.shipping.provinces settings.shipping.ship_on_date     settings.taxes
+        settings.terms              shipping                           taxes
+        summary                     upsell_after
+         */
+
+        const cartId = "123456789123456789123456789123456789"; // get the cart id from session or cookie.  beyond this sample scope.
+
+        try {
+            const cartResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getCartByCartId(cartId, {_expand: expansion}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const cart = cartResponse.cart;
+
+            // TODO - add some items, collect billing and shipping, use hosted fields to collect payment, etc.
+
+            if (!cart) {
+                throw new Error('Cart not found');
+            }
+
+            const finalizeRequest = {
+                cart: cart,
+                options: {} // Lots of options here. Contact support if you're unsure what you need.
+            };
+
+            const orderResponse = await new Promise((resolve, reject) => {
+                checkoutApi.finalizeOrder(finalizeRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            // orderResponse.successful;
+            // orderResponse.errors;
+            // orderResponse.orderId;
+            // orderResponse.order;
+
+            console.log(JSON.stringify(orderResponse, null, 2));
+        } catch (error) {
+            console.error('Error finalizing order:', error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE finalizeOrder -->
 
 ### Parameters
 
@@ -147,28 +221,48 @@ Get a Affirm checkout object for the specified cart_id parameter.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAffirmCheckout -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetAffirmCheckout {
+    /// <summary>
+    /// For a given cart id (the cart should be fully updated in UltraCart), returns back the json object
+    /// needed to proceed with an Affirm checkout.
+    /// </summary>
+    static async Execute() {
+        // Reference Implementation: https://github.com/UltraCart/responsive_checkout
+        // For a given cart id (the cart should be fully updated in UltraCart), returns back the json object
+        // needed to proceed with an Affirm checkout.  See https://www.affirm.com/ for details about Affirm.
+        // This sample does not show the construction of the affirm checkout widgets.  See the affirm api for those examples.
 
-let cart_id = "cart_id_example"; // String | Cart ID to retrieve
-apiInstance.getAffirmCheckout(cart_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        const cartId = "123456789123456789123456789123456789"; // this should be retrieved from a session or cookie
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getAffirmCheckout(cartId, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (apiResponse.errors && apiResponse.errors.length > 0) {
+                // TODO: display errors to customer about the failure
+                apiResponse.errors.forEach(error => {
+                    console.log(error);
+                });
+            } else {
+                console.log(apiResponse.checkout_json); // this is the object to send to Affirm.
+            }
+        } catch (error) {
+            console.error('Error retrieving Affirm checkout:', error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getAffirmCheckout -->
 
 ### Parameters
 
@@ -202,27 +296,39 @@ Lookup the allowed countries for this merchant id
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAllowedCountries -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetAllowedCountries {
+    /// <summary>
+    /// A simple method for populating the country list boxes with all the countries this merchant has configured to accept.
+    /// </summary>
+    static async Execute() {
+        // Reference Implementation: https://github.com/UltraCart/responsive_checkout
+        // A simple method for populating the country list boxes with all the countries this merchant has configured to accept.
 
-apiInstance.getAllowedCountries((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getAllowedCountries(function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const allowedCountries = apiResponse.countries || [];
+
+            allowedCountries.forEach(country => {
+                console.log(JSON.stringify(country, null, 2));
+            });
+        } catch (error) {
+            console.error('Error retrieving allowed countries:', error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getAllowedCountries -->
 
 ### Parameters
 
@@ -253,30 +359,75 @@ If the cookie is set on the browser making the request then it will return their
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
+import { DateTime } from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCart {
+    /// <summary>
+    /// Retrieves a cart either by creating a new one or getting an existing one by cart ID
+    /// </summary>
+    static async Execute() {
+        // Reference Implementation: https://github.com/UltraCart/responsive_checkout
 
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCart(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // this example is the same for both getCart.php and getCartByCartId.php.  They work as a pair and are called
+        // depending on the presence of an existing cart id or not.  For new carts, getCart() is used.  For existing
+        // carts, getCartByCartId($cart_id) is used.
+
+        const expansion = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes"; //
+        // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html
+        /*
+        affiliate                   checkout                            customer_profile
+        billing                     coupons                             gift
+        gift_certificate            items.attributes                   items.multimedia
+        items                       items.multimedia.thumbnails         items.physical
+        marketing                   payment                                settings.gift
+        settings.billing.provinces  settings.shipping.deliver_on_date   settings.shipping.estimates
+        settings.shipping.provinces settings.shipping.ship_on_date     settings.taxes
+        settings.terms              shipping                           taxes
+        summary                     upsell_after
+         */
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getCart({_expand: expansion}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const cart = apiResponse.cart;
+
+            if (!cart || !cart.cart_id) {
+                throw new Error('No cart retrieved');
+            }
+
+            // TODO: set or re-set the cart cookie if this is part of a multi-page process. two weeks is a generous cart id time.
+            // In TypeScript/browser environment, this would typically be handled using document.cookie or browser storage APIs
+            this.setCookie(
+                "UltraCartShoppingCartID",
+                cart.cart_id,
+                DateTime.now().plus({days: 14}).toJSDate()
+            );
+
+            console.log(JSON.stringify(cart, null, 2));
+        } catch (error) {
+            console.error('Error retrieving cart:', error);
+        }
+    }
+
+    /// <summary>
+    /// Sets a cookie with the given name, value, and expiration
+    /// </summary>
+    static setCookie(name, value, expires) {
+        const cookieValue = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${expires.toUTCString()}; path=/`;
+        document.cookie = cookieValue;
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCart -->
 
 ### Parameters
 
@@ -310,31 +461,55 @@ Get a cart specified by the cart_id parameter.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCartByCartId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
+import { DateTime } from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Retrieves a cart either by creating a new one or getting an existing one by cart ID
+ * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+ *
+ * This example is the same for both getCart.php and getCartByCartId.php. They work as a pair and are called
+ * depending on the presence of an existing cart id or not. For new carts, getCart() is used.
+ * For existing carts, getCartByCartId($cart_id) is used.
+ */
+export async function execute() {
+    // For this example, we're just getting a cart to insert some items into it.
+    const expansion = "items";
 
-let cart_id = "cart_id_example"; // String | Cart ID to retrieve
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCartByCartId(cart_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // Get from session or cookie.
+    const cartId = "123456780123456780123456780123456780";
+
+    try {
+        // Perform the API call
+        const apiResponse = await new Promise((resolve, reject) => {
+            checkoutApi.getCartByCartId(cartId, {_expand: expansion}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const cart = apiResponse.cart;
+
+        if (cart) {
+            // TODO: set or re-set the cart cookie if this is part of a multi-page process.
+            // Two weeks is a generous cart id time.
+
+            // Note: In a browser environment, you would use document.cookie or browser-specific cookie management
+            document.cookie = `UltraCartShoppingCartID=${cart.cart_id}; expires=${DateTime.now().plus({days: 14}).toHTTP()}; path=/;`;
+
+            // Log the cart details
+            console.log(JSON.stringify(cart, null, 2));
+        }
+    } catch (error) {
+        // Error handling
+        console.error('Error retrieving cart:', error);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCartByCartId -->
 
 ### Parameters
 
@@ -369,31 +544,66 @@ Get a cart specified by the return code parameter.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCartByReturnCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
+import { DateTime } from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Retrieves a cart using a return code
+ * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+ *
+ * This example returns a shopping cart given a return_code. The return_code is generated by UltraCart
+ * and usually emailed to a customer. The email will provide a link to this script where you may use the
+ * return_code to retrieve the customer's cart.
+ *
+ * Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html)
+ * - affiliate                   - checkout                            - customer_profile
+ * - billing                     - coupons                             - gift
+ * - gift_certificate            - items.attributes                    - items.multimedia
+ * - items                       - items.multimedia.thumbnails         - items.physical
+ * - marketing                   - payment                             - settings.gift
+ * - settings.billing.provinces  - settings.shipping.deliver_on_date   - settings.shipping.estimates
+ * - settings.shipping.provinces - settings.shipping.ship_on_date      - settings.shipping.terms
+ * - settings.terms              - shipping                            - taxes
+ * - summary                     - upsell_after
+ */
+export async function execute() {
+    // Expansion to include multiple cart details
+    const expansion = "items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let return_code = "return_code_example"; // String | Return code to lookup cart ID by
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCartByReturnCode(return_code, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // Usually retrieved from a query parameter
+    const returnCode = "1234567890";
+
+    try {
+        // Retrieve cart by return code
+        const apiResponse = await new Promise((resolve, reject) => {
+            checkoutApi.getCartByReturnCode(returnCode, {_expand: expansion}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const cart = apiResponse.cart;
+
+        if (cart) {
+            // TODO: set or re-set the cart cookie if this is part of a multi-page process.
+            // Two weeks is a generous cart id time.
+
+            // Note: In a browser environment, you would use document.cookie or browser-specific cookie management
+            document.cookie = `UltraCartShoppingCartID=${cart.cart_id}; expires=${DateTime.now().plus({ days: 14 }).toHTTP()}; path=/;`;
+
+            // Log the cart details
+            console.log(JSON.stringify(cart, null, 2));
+        }
+    } catch (error) {
+        // Error handling
+        console.error('Error retrieving cart by return code:', error);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCartByReturnCode -->
 
 ### Parameters
 
@@ -428,31 +638,66 @@ Get a cart specified by the encrypted return token parameter.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCartByReturnToken -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
+import {DateTime} from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Retrieves a cart using a return token
+ * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+ *
+ * This example returns a shopping cart given a return_token. The return token is generated by StoreFront Communications
+ * and usually emailed to a customer. The link within the email will (when you configure your storefront communications)
+ * provide a link to this script where you may use the token to retrieve the customer's cart.
+ *
+ * Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html)
+ * - affiliate                   - checkout                            - customer_profile
+ * - billing                     - coupons                             - gift
+ * - gift_certificate            - items.attributes                    - items.multimedia
+ * - items                       - items.multimedia.thumbnails         - items.physical
+ * - marketing                   - payment                             - settings.gift
+ * - settings.billing.provinces  - settings.shipping.deliver_on_date   - settings.shipping.estimates
+ * - settings.shipping.provinces - settings.shipping.ship_on_date      - settings.shipping.terms
+ * - settings.terms              - shipping                            - taxes
+ * - summary                     - upsell_after
+ */
+export async function execute() {
+    // Expansion to include multiple cart details
+    const expansion = "items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let opts = {
-  'return_token': "return_token_example", // String | Return token provided by StoreFront Communications
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCartByReturnToken(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    // Usually retrieved from a query parameter
+    const cartToken = "1234567890";
+
+    try {
+        // Retrieve cart by return token
+        const apiResponse = await new Promise((resolve, reject) => {
+            checkoutApi.getCartByReturnToken(cartToken, {_expand: expansion}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const cart = apiResponse.cart;
+
+        if (cart) {
+            // TODO: set or re-set the cart cookie if this is part of a multi-page process.
+            // Two weeks is a generous cart id time.
+
+            // Note: In a browser environment, you would use document.cookie or browser-specific cookie management
+            document.cookie = `UltraCartShoppingCartID=${cart.cart_id}; expires=${DateTime.now().plus({days: 14}).toHTTP()}; path=/;`;
+
+            // Log the cart details
+            console.log(JSON.stringify(cart, null, 2));
+        }
+    } catch (error) {
+        // Error handling
+        console.error('Error retrieving cart by return token:', error);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCartByReturnToken -->
 
 ### Parameters
 
@@ -487,28 +732,46 @@ Lookup a state/province list for a given country code
 
 ### Example
 
-<!-- UC_START_EXAMPLE getStateProvincesForCountry -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/// <summary>
+/// A simple method for populating the state_region list boxes with all the states/regions allowed for a country code.
+/// </summary>
+export class GetStateProvincesForCountry {
+    /// <summary>
+    /// A simple method for populating the state_region list boxes with all the states/regions allowed for a country code.
+    /// Reference Implementation: https://github.com/UltraCart/responsive_checkout
+    /// </summary>
+    static async execute() {
+        // Use the API key from your configuration (replace with actual method of getting API key)
+        const countryCode = "US";
 
-let country_code = "country_code_example"; // String | Two letter ISO country code
-apiInstance.getStateProvincesForCountry(country_code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getStateProvincesForCountry(countryCode, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const provinces = apiResponse.stateProvinces || [];
+
+            provinces.forEach(province => {
+                console.log(JSON.stringify(province, null, 2));
+            });
+        } catch (error) {
+            console.error("Error fetching state provinces:", error);
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// GetStateProvincesForCountry.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getStateProvincesForCountry -->
 
 ### Parameters
 
@@ -542,31 +805,104 @@ Handoff the browser to UltraCart for view cart on StoreFront, transfer to PayPal
 
 ### Example
 
-<!-- UC_START_EXAMPLE handoffCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/// <summary>
+/// Hands off a cart to the UltraCart engine for further processing
+/// </summary>
+export class HandoffCart {
+    /// <summary>
+    /// Hands off a cart to the UltraCart engine for further processing
+    /// Reference Implementation: https://github.com/UltraCart/responsive_checkout
+    ///
+    /// This example uses the getCart code as a starting point, because we must get a cart to handoff a cart.
+    /// Here, we are handing off the cart to the ultracart engine with an operation of 'view', meaning that we
+    /// simply added some items to the cart and wish for UltraCart to gather the remaining customer information
+    /// as part of a normal checkout operation.
+    ///
+    /// Valid operations are: "view", "checkout", "paypal", "paypalcredit", "affirm", "sezzle"
+    /// Besides "view", the other operations are finalizers.
+    /// "checkout": finalize the transaction using a customer's personal credit card (traditional checkout)
+    /// "paypal": finalize the transaction by sending the customer to PayPal
+    /// </summary>
+    static async execute() {
+        try {
+            // expand parameter to include items in the cart
+            const expand = "items";
 
-let handoff_request = new UltraCartRestApiV2.CheckoutHandoffRequest(); // CheckoutHandoffRequest | Handoff request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.handoffCart(handoff_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Get cart ID from cookie (commented out in original code)
+            // In a real application, you'd replace this with your actual cookie/session management
+            const cartId = undefined;
+
+            // Retrieve cart - either by existing cart ID or create a new one
+            let cart;
+            let apiResponse;
+
+            if (!cartId) {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCart({_expand:expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+            } else {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCartByCartId(cartId, {_expand:expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+            }
+            cart = apiResponse.cart;
+
+            // Prepare handoff request
+            const handoffRequest = {
+                cart: cart,
+                operation: "View",
+                error_return_url: "/some/page/on/this/php/server/that/can/handle/errors/if/ultracart/encounters/an/issue/with/this/cart.php",
+                error_parameter_name: "uc_error", // name this whatever the script supplied in ->setErrorReturnUrl() will check for in the $_GET object.
+                secure_host_name: "mystorefront.com" // set to desired storefront. some merchants have multiple storefronts.
+            };
+
+            // Perform cart handoff
+            const handoffResponse = await new Promise((resolve, reject) => {
+                checkoutApi.handoffCart(handoffRequest, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Handle response
+            if (handoffResponse.errors && handoffResponse.errors.length > 0) {
+                // TODO: handle errors that might happen before handoff and manage those
+                console.error("Errors during cart handoff:", handoffResponse.errors);
+            } else {
+                const redirectUrl = handoffResponse.redirect_to_url;
+                console.log(redirectUrl);
+                // In a web application, you would typically redirect the user
+                // This could be done via window.location.href or a routing mechanism
+                // window.location.href = redirectUrl;
+            }
+        } catch (error) {
+            console.error("Error during cart handoff:", error);
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// HandoffCart.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE handoffCart -->
 
 ### Parameters
 
@@ -601,31 +937,101 @@ Login in to the customer profile specified by cart.billing.email and password
 
 ### Example
 
-<!-- UC_START_EXAMPLE login -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/// <summary>
+/// Handles user login in the UltraCart system
+/// </summary>
+export class Login {
+    /// <summary>
+    /// Logs a user into the UltraCart system
+    /// Reference Implementation: https://github.com/UltraCart/responsive_checkout
+    ///
+    /// This example assumes you already have a shopping cart object created.
+    /// For new carts, getCart() is used. For existing carts, getCartByCartId(cart_id) is used.
+    ///
+    /// Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html)
+    /// </summary>
+    static async execute() {
+        try {
+            // Note: customer_profile is a required expand for login to work properly
+            const expand = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let login_request = new UltraCartRestApiV2.CartProfileLoginRequest(); // CartProfileLoginRequest | Login request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.login(login_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Create a new cart
+            let cart = await new Promise((resolve, reject) => {
+                checkoutApi.getCart({_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            }).then(data => data.cart);
+
+            if (!cart) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return {success: false};
+            }
+
+            // Collect these from user input in a real application
+            const email = "test@ultracart.com";
+            const password = "ABC123";
+
+            // Prepare billing information
+            cart.billing = {
+                email: email
+            };
+
+            // Prepare login request
+            const loginRequest = {
+                cart: cart, // will look for billing.email
+                password: password
+            };
+
+            // Perform login
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.login(loginRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Update cart with response
+            cart = apiResponse.cart;
+
+            // Check for errors
+            if (apiResponse.errors && apiResponse.errors.length > 0) {
+                console.error("Login failed:", apiResponse.errors);
+                return {success: false};
+            }
+
+            // Successful login
+            return {
+                success: true,
+                cart: cart
+            };
+
+        } catch (error) {
+            console.error("Error during login process:", error);
+            return {success: false};
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// Login.execute().then(result => {
+//     if (result.success) {
+//         console.log("Login successful", result.cart);
+//     } else {
+//         console.log("Login failed");
+//     }
+// });
 ```
 
-<!-- UC_END_EXAMPLE login -->
 
 ### Parameters
 
@@ -660,31 +1066,111 @@ Log the cart out of the current profile.  No error will occur if they are not lo
 
 ### Example
 
-<!-- UC_START_EXAMPLE logout -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/// <summary>
+/// Handles user logout in the UltraCart system
+/// </summary>
+export class Logout {
+    /// <summary>
+    /// Logs a user OUT of the UltraCart system
+    /// Reference Implementation: https://github.com/UltraCart/responsive_checkout
+    ///
+    /// This example assumes the shopping cart has already had a successful login.
+    /// See login SDK sample for logging in help.
+    /// For new carts, getCart() is used. For existing carts, getCartByCartId(cart_id) is used.
+    ///
+    /// Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html)
+    /// </summary>
+    static async execute() {
+        try {
+            // Note: customer_profile is a required expand for login to work properly
+            const expand = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.logout(cart, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Create a new cart
+            let cart = await new Promise((resolve, reject) => {
+                checkoutApi.getCart({_expand:expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            }).then(data => data.cart);
+
+            if (!cart) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return {success: false};
+            }
+
+            // Collect these from user input in a real application
+            const email = "test@test.com";
+            const password = "ABC123";
+
+            // Prepare billing information
+            cart.billing = {
+                email: email
+            };
+
+            // Prepare login request
+            const loginRequest = {
+                cart: cart, // will look for billing.email
+                password: password
+            };
+
+            // Perform login
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.login(loginRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            cart = apiResponse.cart;
+
+            // Check for login errors
+            if (apiResponse.errors && apiResponse.errors.length > 0) {
+                console.error("Login failed:", apiResponse.errors);
+                return { success: false };
+            }
+            if (!cart) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return {success: false};
+            }
+
+            // Perform logout
+            await new Promise((resolve, reject) => {
+                checkoutApi.logout(cart, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            return { success: true };
+
+        } catch (error) {
+            console.error("Error during logout process:", error);
+            return { success: false };
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// Logout.execute().then(result => {
+//     if (result.success) {
+//         console.log("Logout successful");
+//     } else {
+//         console.log("Logout failed");
+//     }
+// });
 ```
 
-<!-- UC_END_EXAMPLE logout -->
 
 ### Parameters
 
@@ -719,31 +1205,76 @@ Register a new customer profile.  Requires the cart.billing object to be populat
 
 ### Example
 
-<!-- UC_START_EXAMPLE register -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class Register {
+    /**
+     * Registers a user in your merchant system. This will create a customer profile.
+     * For new carts, getCart() is used. For existing carts, getCartByCartId(cart_id) is used.
+     *
+     * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+     */
+    static async execute() {
+        try {
+            // Note: customer_profile is a required expansion for login to work properly
+            // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html
+            const expand = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let register_request = new UltraCartRestApiV2.CartProfileRegisterRequest(); // CartProfileRegisterRequest | Register request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.register(register_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // create a new cart (change this to an existing if you have one)
+            const cartResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getCart({_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const cart = cartResponse.cart;
+
+            if (!cart) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return;
+            }
+
+            const email = "test@test.com"; // collect this from user
+            const password = "ABC123"; // collect this from user
+
+            cart.billing = {
+                email: email // this is the username
+            };
+
+            const registerRequest = {
+                cart: cart, // will look for billing.email
+                password: password
+            };
+
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.register(registerRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const updatedCart = apiResponse.cart; // Important! Get the cart from the response
+
+            if (apiResponse.errors && apiResponse.errors.length > 0) {
+                apiResponse.errors.forEach(error => {
+                    console.log(error);
+                });
+            } else {
+                console.log("Successfully registered new customer profile!");
+            }
+        } catch (error) {
+            console.error("Error during registration:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE register -->
 
 ### Parameters
 
@@ -778,31 +1309,50 @@ Register an affiliate click.  Used by custom checkouts that are completely API b
 
 ### Example
 
-<!-- UC_START_EXAMPLE registerAffiliateClick -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class RegisterAffiliateClick {
+    /**
+     * Records an affiliate click.
+     *
+     * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+     */
+    static async execute() {
+        try {
+            // Note: In TypeScript, you'll need to get these values from your request context
+            // This is a simplified example - implement proper request handling in your application
+            const ipAddress = "127.0.0.1"; // Replace with actual implementation to get IP
+            const userAgent = ""; // Replace with actual implementation to get user agent
+            const refererUrl = ""; // Replace with actual implementation to get referer URL
 
-let register_affiliate_click_request = new UltraCartRestApiV2.RegisterAffiliateClickRequest(); // RegisterAffiliateClickRequest | Register affiliate click request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.registerAffiliateClick(register_affiliate_click_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            const clickRequest = {
+                ip_address: ipAddress,
+                user_agent: userAgent,
+                referrer_url: refererUrl,
+                affid: 123456789, // you should know this from your UltraCart affiliate system
+                subid: "TODO:SupplyThisValue",
+                // landingPageUrl: undefined,  // if you have landing page url
+            };
+
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.registerAffiliateClick(clickRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            console.log(JSON.stringify(apiResponse, null, 2));
+        } catch (error) {
+            console.error("Error registering affiliate click:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE registerAffiliateClick -->
 
 ### Parameters
 
@@ -837,31 +1387,126 @@ Retrieve all the related items for the cart contents.  Expansion is limited to c
 
 ### Example
 
-<!-- UC_START_EXAMPLE relatedItemsForCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class RelatedItemsForCart {
+    /**
+     * Retrieves items related to the items within the cart.
+     * Item relations are configured in the UltraCart backend.
+     *
+     * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+     *
+     * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1377171/Related+Items
+     *
+     * Note: The returned items have a fixed expansion (only so many item properties are returned).
+     * Item expansion includes:
+     * content, content.assignments, content.attributes, content.multimedia,
+     * content.multimedia.thumbnails, options, pricing, and pricing.tiers
+     */
+    static async execute() {
+        try {
+            // Expansion options for the cart
+            // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html
+            /*
+            affiliate                   checkout                            customer_profile
+            billing                     coupons                             gift
+            gift_certificate            items.attributes                   items.multimedia
+            items                       items.multimedia.thumbnails         items.physical
+            marketing                   payment                                settings.gift
+            settings.billing.provinces  settings.shipping.deliver_on_date   settings.shipping.estimates
+            settings.shipping.provinces settings.shipping.ship_on_date     settings.taxes
+            settings.terms              shipping                           taxes
+            summary                     upsell_after
+            */
+            const expand = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
-};
-apiInstance.relatedItemsForCart(cart, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // In TypeScript web application, you'd get the cookie from your request context
+            let cartId;
+            // Example of how you might get the cookie
+            // cartId = request.cookies["UltraCartShoppingCartID"];
+
+            let cart;
+            let apiResponse;
+
+            if (!cartId) {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCart({_expand:expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+                cart = apiResponse.cart;
+            } else {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCartByCartId(
+                        cartId,
+                        {_expand:expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+                cart = apiResponse.cart;
+            }
+
+            if (cart === undefined) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return;
+            }
+
+            // Add some items to the cart and update
+            cart.items = [{
+                item_id: "ITEM_ABC",
+                quantity: 1
+            }];
+
+            // Update the cart and assign it back to our variable
+            const updateResponse = await new Promise((resolve, reject) => {
+                checkoutApi.updateCart(cart, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            cart = updateResponse.cart;
+
+            if (cart === undefined) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return;
+            }
+
+            // Get related items for the cart
+            const apiResponse2 = await new Promise((resolve, reject) => {
+                checkoutApi.relatedItemsForCart(cart, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const relatedItems = apiResponse2.items || [];
+
+            // Output related items
+            relatedItems.forEach(item => {
+                console.log(JSON.stringify(item, null, 2));
+            });
+
+        } catch (error) {
+            console.error("Error retrieving related items:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE relatedItemsForCart -->
 
 ### Parameters
 
@@ -896,32 +1541,128 @@ Retrieve all the related items for the cart contents.  Expansion is limited to c
 
 ### Example
 
-<!-- UC_START_EXAMPLE relatedItemsForItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class RelatedItemsForItem {
+    /**
+     * Retrieves items related to the items within the cart, in addition to another item id.
+     * Item relations are configured in the UltraCart backend.
+     *
+     * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+     *
+     * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1377171/Related+Items
+     *
+     * Note: The returned items have a fixed expansion (only so many item properties are returned).
+     * Item expansion includes:
+     * content, content.assignments, content.attributes, content.multimedia,
+     * content.multimedia.thumbnails, options, pricing, and pricing.tiers
+     */
+    static async execute() {
+        try {
+            // Expansion options for the cart
+            // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html
+            /*
+            affiliate                   checkout                            customer_profile
+            billing                     coupons                             gift
+            gift_certificate            items.attributes                   items.multimedia
+            items                       items.multimedia.thumbnails         items.physical
+            marketing                   payment                                settings.gift
+            settings.billing.provinces  settings.shipping.deliver_on_date   settings.shipping.estimates
+            settings.shipping.provinces settings.shipping.ship_on_date     settings.taxes
+            settings.terms              shipping                           taxes
+            summary                     upsell_after
+            */
+            const expand = "customer_profile,items,billing,shipping,coupons,checkout,payment,summary,taxes";
 
-let item_id = "item_id_example"; // String | Item ID to retrieve related items for
-let cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See item resource documentation for examples
-};
-apiInstance.relatedItemsForItem(item_id, cart, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // In TypeScript web application, you'd get the cookie from your request context
+            let cartId;
+            // Example of how you might get the cookie
+            // cartId = request.cookies["UltraCartShoppingCartID"];
+
+            let cart;
+            let apiResponse;
+
+            if (!cartId) {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCart({_expand:expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+                cart = apiResponse.cart;
+            } else {
+                apiResponse = await new Promise((resolve, reject) => {
+                    checkoutApi.getCartByCartId(
+                        cartId,{_expand: expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    });
+                });
+                cart = apiResponse.cart;
+            }
+
+            if (cart === undefined) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return;
+            }
+
+            // Add some items to the cart and update
+            cart.items = [{
+                item_id: "ITEM_ABC",
+                quantity: 1
+            }];
+
+            // Update the cart and assign it back to our variable
+            const updateResponse = await new Promise((resolve, reject) => {
+                checkoutApi.updateCart(cart, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            cart = updateResponse.cart;
+
+            if (cart === undefined) {
+                console.error("Could not get a cart from UltraCart, cannot continue.");
+                return;
+            }
+
+            // Another item ID to find related items for
+            const anotherItemId = "ITEM_ZZZ";
+
+            // Get related items for the specific item and cart
+            const apiResponse2 = await new Promise((resolve, reject) => {
+                checkoutApi.relatedItemsForItem(anotherItemId, cart,{_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const relatedItems = apiResponse2.items || [];
+
+            // Output related items
+            relatedItems.forEach(item => {
+                console.log(JSON.stringify(item, null, 2));
+            });
+
+        } catch (error) {
+            console.error("Error retrieving related items:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE relatedItemsForItem -->
 
 ### Parameters
 
@@ -957,28 +1698,44 @@ Setup a browser key authenticated application with checkout permissions.  This R
 
 ### Example
 
-<!-- UC_START_EXAMPLE setupBrowserKey -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import {checkoutApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class SetupBrowserKey {
+    /**
+     * Creates a browser key for use in a client-side checkout.
+     *
+     * This call must be made server-side with a Simple API Key or an OAuth access token.
+     */
+    static async execute() {
+        try {
+            // Prepare the browser key request
+            const keyRequest = {
+                allowed_referrers: ["https://www.mywebsite.com"]
+            };
 
-let browser_key_request = new UltraCartRestApiV2.CheckoutSetupBrowserKeyRequest(); // CheckoutSetupBrowserKeyRequest | Setup browser key request
-apiInstance.setupBrowserKey(browser_key_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Setup the browser key
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.setupBrowserKey(keyRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const browserKey = apiResponse.browser_key || "";
+
+            // Output the browser key
+            console.log(browserKey);
+
+        } catch (error) {
+            console.error("Error setting up browser key:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE setupBrowserKey -->
 
 ### Parameters
 
@@ -1012,31 +1769,98 @@ Update the cart.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
+import { DateTime } from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Reference Implementation: https://github.com/UltraCart/responsive_checkout
+ *
+ * This example uses the getCart.php code as a starting point, because we must get a cart to update a cart.
+ * This example is the same for both getCart.php and getCartByCartId.php. They work as a pair and are called
+ * depending on the presence of an existing cart id or not. For new carts, getCart() is used.
+ * For existing carts, getCartByCartId(cart_id) is used.
+ */
+export class UpdateCart {
+    static async execute() {
+        // For this example, we're just getting a cart to insert some items into it.
+        const expand = "items";
 
-let cart = new UltraCartRestApiV2.Cart(); // Cart | Cart
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateCart(cart, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // In web applications, you'd retrieve the cookie from the browser context
+        let cartId = undefined;
+        // Example of how you might retrieve a cookie in a web application:
+        // cartId = document.cookie.split('; ').find(row => row.startsWith('UltraCartShoppingCartID='))?.split('=')[1];
+
+        let cart;
+        if (cartId === undefined) {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getCart({_expand:expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            cart = apiResponse.cart;
+        } else {
+            const apiResponse = await new Promise((resolve, reject) => {
+                checkoutApi.getCartByCartId(cartId, {_expand:expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            cart = apiResponse.cart;
+        }
+
+        // Get the items array on the cart, creating it if it doesn't exist
+        let items = cart?.items ?? [];
+
+        // Create a new item
+        const item = {
+            item_id: "BASEBALL", // TODO: Adjust the item id
+            quantity: 1, // TODO: Adjust the quantity
+
+            // TODO: If your item has options then you need to create a new CartItemOption object and add it to the list.
+            options: []
+        };
+
+        // Add the item to the items list
+        items.push(item);
+
+        // Make sure to update the cart with the new list
+        if (cart) {
+            cart.items = items;
+
+            // Push the cart up to save the item
+            const cartResponse = await new Promise((resolve, reject) => {
+                checkoutApi.updateCart(cart, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Extract the updated cart from the response
+            cart = cartResponse.cart;
+
+            // TODO: set or re-set the cart cookie if this is part of a multi-page process.
+            // Two weeks is a generous cart id time.
+            // Example of how you might set a cookie in a web application:
+            // document.cookie = `UltraCartShoppingCartID=${cart.cartId}; expires=${new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+
+            // In a real-world scenario, you might want to log or handle the updated cart
+            console.log(JSON.stringify(cart, null, 2));
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateCart -->
 
 ### Parameters
 
@@ -1071,31 +1895,82 @@ Validate the cart for errors.  Specific checks can be passed and multiple valida
 
 ### Example
 
-<!-- UC_START_EXAMPLE validateCart -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CheckoutApi(apiClient);
+import { checkoutApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This is a checkout api method. It can be used both server side or client side.
+ * This example is a server side call using a Simple API Key.
+ * See the JavaScript sdk samples if you wish to see a browser key implementation.
+ *
+ * validateCart passes a shopping cart to UltraCart for validation.
+ */
+export class ValidateCart {
+    static async execute() {
+        // Usually this would be retrieved from a session variable or cookie.
+        const cartId = "123456789123456789123456789123456789";
 
-let validation_request = new UltraCartRestApiV2.CartValidationRequest(); // CartValidationRequest | Validation request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.validateCart(validation_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // Possible Expansion Variables: (see https://www.ultracart.com/api/#resource_checkout.html)
+        // also see getCart() example
+        const expand = "items,billing,shipping,coupons,checkout,payment,summary,taxes";
+
+        // Retrieve the cart
+        const retrievedCartResponse = await new Promise((resolve, reject) => {
+            checkoutApi.getCartByCartId(cartId, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const cart = retrievedCartResponse.cart;
+
+        // Create validation request
+        const validationRequest = {
+            cart: cart
+            // validationRequest.checks = undefined; // leave this undefined for all validations
+        };
+
+        /**
+         * Possible Checks:
+         * All,Advertising Source Provided,Billing Address Provided,
+         * Billing Destination Restriction,Billing Phone Numbers Provided,Billing State Abbreviation Valid,
+         * Billing Validate City State Zip,Coupon Zip Code Restriction,Credit Card Shipping Method Conflict,
+         * Customer Profile Does Not Exist.,CVV2 Not Required,Electronic Check Confirm Account Number,
+         * Email confirmed,Email provided if required,Gift Message Length,Item Quantity Valid,
+         * Item Restrictions,Items Present,Merchant Specific Item Relationships,One per customer violations,
+         * Options Provided,Payment Information Validate,Payment Method Provided,Payment Method Restriction,
+         * Pricing Tier Limits,Quantity requirements met,Referral Code Provided,Shipping Address Provided,
+         * Shipping Destination Restriction,Shipping Method Provided,Shipping Needs Recalculation,
+         * Shipping State Abbreviation Valid,Shipping Validate City State Zip,Special Instructions Length,
+         * Tax County Specified,Valid Delivery Date,Valid Ship On Date,Auth Test Credit Card
+         */
+
+        // This method also does an update in the process, so pass in a good expansion and grab the return cart variable.
+        const apiResponse = await new Promise((resolve, reject) => {
+            checkoutApi.validateCart(validationRequest, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const updatedCart = apiResponse.cart;
+
+        // Logging validation results
+        console.log("Validation Errors:");
+        if (apiResponse.errors) {
+            apiResponse.errors.forEach(error => {
+                console.log(error);
+            });
+        }
+        console.log(JSON.stringify(updatedCart, null, 2));
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE validateCart -->
 
 ### Parameters
 

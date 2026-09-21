@@ -48,29 +48,9 @@ Analyze a custom report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE analyzeCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | The report oid to analyze.
-let analyze_request = new UltraCartRestApiV2.CustomReportAnalysisRequest(); // CustomReportAnalysisRequest | Request to analyze custom report
-apiInstance.analyzeCustomReport(custom_report_oid, analyze_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE analyzeCustomReport -->
 
 ### Parameters
 
@@ -105,28 +85,9 @@ Delete a custom dashboard on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteCustomDashboard -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_oid = 56; // Number | The dashboard oid to delete.
-apiInstance.deleteCustomDashboard(custom_dashboard_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteCustomDashboard -->
 
 ### Parameters
 
@@ -160,29 +121,9 @@ delete a custom dashboard schedule on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteCustomDashboardSchedule -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_schedule_oid = 56; // Number | The dashboard schedule oid to delete.
-let custom_dashboard_oid = 56; // Number | The dashboard oid that owns the schedule.
-apiInstance.deleteCustomDashboardSchedule(custom_dashboard_schedule_oid, custom_dashboard_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteCustomDashboardSchedule -->
 
 ### Parameters
 
@@ -217,28 +158,9 @@ Delete a custom report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | The report oid to delete.
-apiInstance.deleteCustomReport(custom_report_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteCustomReport -->
 
 ### Parameters
 
@@ -272,28 +194,10 @@ Delete a report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteReport -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let report_oid = 56; // Number | The report oid to delete.
-apiInstance.deleteReport(report_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteReport -->
 
 ### Parameters
 
@@ -327,28 +231,10 @@ Dry run the report queries
 
 ### Example
 
-<!-- UC_START_EXAMPLE dryRunReportQueries -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let query_request = new UltraCartRestApiV2.ReportDryRunQueriesRequest(); // ReportDryRunQueriesRequest | Dry run request
-apiInstance.dryRunReportQueries(query_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE dryRunReportQueries -->
 
 ### Parameters
 
@@ -382,29 +268,9 @@ Execute a custom report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE executeCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | The report oid to execute.
-let execution_request = new UltraCartRestApiV2.CustomReportExecutionRequest(); // CustomReportExecutionRequest | Request to execute custom report
-apiInstance.executeCustomReport(custom_report_oid, execution_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE executeCustomReport -->
 
 ### Parameters
 
@@ -439,28 +305,9 @@ Execute a custom reports on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE executeCustomReports -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let execution_request = new UltraCartRestApiV2.CustomReportsExecutionRequest(); // CustomReportsExecutionRequest | Request to execute custom reports
-apiInstance.executeCustomReports(execution_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE executeCustomReports -->
 
 ### Parameters
 
@@ -494,28 +341,10 @@ Execute the report queries
 
 ### Example
 
-<!-- UC_START_EXAMPLE executeReportQueries -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let query_request = new UltraCartRestApiV2.ReportExecuteQueriesRequest(); // ReportExecuteQueriesRequest | Query request
-apiInstance.executeReportQueries(query_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE executeReportQueries -->
 
 ### Parameters
 
@@ -549,28 +378,9 @@ Retrieve a custom dashboard
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomDashboard -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_oid = 56; // Number | 
-apiInstance.getCustomDashboard(custom_dashboard_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomDashboard -->
 
 ### Parameters
 
@@ -604,28 +414,9 @@ Retrieve a custom dashboards
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomDashboardSchedules -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_oid = 56; // Number | 
-apiInstance.getCustomDashboardSchedules(custom_dashboard_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomDashboardSchedules -->
 
 ### Parameters
 
@@ -659,27 +450,9 @@ Retrieve a custom dashboards
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomDashboards -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getCustomDashboards((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomDashboards -->
 
 ### Parameters
 
@@ -710,28 +483,9 @@ Retrieve a custom report
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | 
-apiInstance.getCustomReport(custom_report_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomReport -->
 
 ### Parameters
 
@@ -765,27 +519,9 @@ Retrieve a custom report account configuration
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomReportAccountConfig -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getCustomReportAccountConfig((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomReportAccountConfig -->
 
 ### Parameters
 
@@ -816,28 +552,9 @@ Upload a PNG of a custom report chart
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomReportChartPngUploadUrl -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | The report oid to upload a chart PNG for.
-apiInstance.getCustomReportChartPngUploadUrl(custom_report_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomReportChartPngUploadUrl -->
 
 ### Parameters
 
@@ -871,27 +588,9 @@ Retrieve a custom reports
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomReports -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getCustomReports((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomReports -->
 
 ### Parameters
 
@@ -922,28 +621,10 @@ Retrieve a report
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReport -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let report_oid = 56; // Number | 
-apiInstance.getReport(report_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getReport -->
 
 ### Parameters
 
@@ -977,28 +658,10 @@ Retrieve a report data set
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReportDataSet -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let dataset_uuid = "dataset_uuid_example"; // String | 
-apiInstance.getReportDataSet(dataset_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getReportDataSet -->
 
 ### Parameters
 
@@ -1032,29 +695,10 @@ Retrieve a report data set page
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReportDataSetPage -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let dataset_uuid = "dataset_uuid_example"; // String | 
-let page_number = 56; // Number | 
-apiInstance.getReportDataSetPage(dataset_uuid, page_number, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getReportDataSetPage -->
 
 ### Parameters
 
@@ -1089,27 +733,10 @@ Retrieve a JWT to authorize a report to make a websocket connection.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReportWebsocketAuthorization -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getReportWebsocketAuthorization((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getReportWebsocketAuthorization -->
 
 ### Parameters
 
@@ -1140,27 +767,10 @@ Retrieve a list of reports available
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReports -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getReports((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getReports -->
 
 ### Parameters
 
@@ -1191,28 +801,9 @@ Create a new custom dashboard on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertCustomDashboard -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let dashboard = new UltraCartRestApiV2.CustomDashboard(); // CustomDashboard | Dashboard to create
-apiInstance.insertCustomDashboard(dashboard, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertCustomDashboard -->
 
 ### Parameters
 
@@ -1246,29 +837,9 @@ Create a new custom dashboard schedule on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertCustomDashboardSchedule -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_oid = 56; // Number | 
-let dashboard_schedule = new UltraCartRestApiV2.CustomDashboardSchedule(); // CustomDashboardSchedule | Dashboard schedule to create
-apiInstance.insertCustomDashboardSchedule(custom_dashboard_oid, dashboard_schedule, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertCustomDashboardSchedule -->
 
 ### Parameters
 
@@ -1303,28 +874,9 @@ Create a new custom report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let report = new UltraCartRestApiV2.CustomReport(); // CustomReport | Report to create
-apiInstance.insertCustomReport(report, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertCustomReport -->
 
 ### Parameters
 
@@ -1358,28 +910,10 @@ Create a new report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertReport -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let report = new UltraCartRestApiV2.Report(); // Report | Report to create
-apiInstance.insertReport(report, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertReport -->
 
 ### Parameters
 
@@ -1413,29 +947,9 @@ Update a custom dashboard on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomDashboard -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_oid = 56; // Number | The dashboard oid to custom update.
-let dashboard = new UltraCartRestApiV2.CustomDashboard(); // CustomDashboard | Dashboard to custom update
-apiInstance.updateCustomDashboard(custom_dashboard_oid, dashboard, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateCustomDashboard -->
 
 ### Parameters
 
@@ -1470,30 +984,9 @@ Update a custom dashboard schedule on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomDashboardSchedule -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_dashboard_schedule_oid = 56; // Number | The dashboard schedule oid to update.
-let custom_dashboard_oid = 56; // Number | The dashboard oid to update.
-let dashboard_schedule = new UltraCartRestApiV2.CustomDashboardSchedule(); // CustomDashboardSchedule | Dashboard schedule to update
-apiInstance.updateCustomDashboardSchedule(custom_dashboard_schedule_oid, custom_dashboard_oid, dashboard_schedule, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateCustomDashboardSchedule -->
 
 ### Parameters
 
@@ -1529,29 +1022,9 @@ Update a custom report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomReport -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let custom_report_oid = 56; // Number | The report oid to custom update.
-let report = new UltraCartRestApiV2.CustomReport(); // CustomReport | Report to custom update
-apiInstance.updateCustomReport(custom_report_oid, report, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateCustomReport -->
 
 ### Parameters
 
@@ -1586,28 +1059,9 @@ Update custom report account config.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomReportAccountConfig -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let account_config = new UltraCartRestApiV2.CustomReportAccountConfig(); // CustomReportAccountConfig | Account config to update
-apiInstance.updateCustomReportAccountConfig(account_config, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateCustomReportAccountConfig -->
 
 ### Parameters
 
@@ -1641,29 +1095,10 @@ Update a report on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateReport -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.DatawarehouseApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let report_oid = 56; // Number | The report oid to update.
-let report = new UltraCartRestApiV2.Report(); // Report | Report to update
-apiInstance.updateReport(report_oid, report, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateReport -->
 
 ### Parameters
 

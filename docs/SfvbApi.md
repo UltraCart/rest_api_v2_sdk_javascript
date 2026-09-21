@@ -88,30 +88,9 @@ Adds posts by blog_post_oid, at most 500 at a time.  Every oid must be a post on
 
 ### Example
 
-<!-- UC_START_EXAMPLE addSfvbPageBlogPosts -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /blog/
-let page_blog_posts_request = new UltraCartRestApiV2.SfvbPageBlogPostsRequest(); // SfvbPageBlogPostsRequest | Blog posts to assign
-apiInstance.addSfvbPageBlogPosts(storefront_oid, path, page_blog_posts_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE addSfvbPageBlogPosts -->
 
 ### Parameters
 
@@ -147,30 +126,9 @@ Adds items by item id, at most 500 at a time, or changes the sort order or url p
 
 ### Example
 
-<!-- UC_START_EXAMPLE addSfvbPageItems -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-let page_items_add_request = new UltraCartRestApiV2.SfvbPageItemsAddRequest(); // SfvbPageItemsAddRequest | Items to assign
-apiInstance.addSfvbPageItems(storefront_oid, path, page_items_add_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE addSfvbPageItems -->
 
 ### Parameters
 
@@ -206,28 +164,9 @@ Compiles a container document to Velocity without storing anything.  Supply them
 
 ### Example
 
-<!-- UC_START_EXAMPLE compileSfvbCjson -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let compile_request = new UltraCartRestApiV2.SfvbCompileRequest(); // SfvbCompileRequest | CJSON to compile
-apiInstance.compileSfvbCjson(compile_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE compileSfvbCjson -->
 
 ### Parameters
 
@@ -261,31 +200,9 @@ The preview URL only works in a browser already signed in to UltraCart on the st
 
 ### Example
 
-<!-- UC_START_EXAMPLE createSfvbPreviewAccess -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'preview_access': new UltraCartRestApiV2.SfvbPreviewAccessRequest() // SfvbPreviewAccessRequest | What the browser should see
-};
-apiInstance.createSfvbPreviewAccess(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE createSfvbPreviewAccess -->
 
 ### Parameters
 
@@ -320,28 +237,9 @@ Returns a server generated session id to push containers into, and opens the ses
 
 ### Example
 
-<!-- UC_START_EXAMPLE createSfvbPreviewSession -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.createSfvbPreviewSession(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE createSfvbPreviewSession -->
 
 ### Parameters
 
@@ -375,32 +273,9 @@ Recoverable from the recycle bin.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteSfvbFile -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let If_Match = "If_Match_example"; // String | Content hash of the file being deleted.  Required; 428 when absent, 412 when stale.
-let opts = {
-  'path': "path_example" // String | 
-};
-apiInstance.deleteSfvbFile(storefront_oid, If_Match, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteSfvbFile -->
 
 ### Parameters
 
@@ -436,33 +311,9 @@ Name exactly one of code or default.  Removes the page&#39;s copy of the image; 
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteSfvbPageMultimedia -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /catalog/dispensers/
-let opts = {
-  'code': "code_example", // String | Image code to detach
-  '_default': true // Boolean | True to detach the default image
-};
-apiInstance.deleteSfvbPageMultimedia(storefront_oid, path, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteSfvbPageMultimedia -->
 
 ### Parameters
 
@@ -499,29 +350,9 @@ Releases the session before its eight hour expiry.  Without this the only way to
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteSfvbPreviewSession -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let preview_session_id = "preview_session_id_example"; // String | 
-apiInstance.deleteSfvbPreviewSession(storefront_oid, preview_session_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteSfvbPreviewSession -->
 
 ### Parameters
 
@@ -556,31 +387,9 @@ Returns the file itself rather than a JSON envelope, for any type including bina
 
 ### Example
 
-<!-- UC_START_EXAMPLE downloadSfvbFile -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'path': "path_example" // String | 
-};
-apiInstance.downloadSfvbFile(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE downloadSfvbFile -->
 
 ### Parameters
 
@@ -615,29 +424,9 @@ Copies what the store admin&#39;s duplicate copies - settings, items, blog posts
 
 ### Example
 
-<!-- UC_START_EXAMPLE duplicateSfvbPage -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let page_duplicate_request = new UltraCartRestApiV2.SfvbPageDuplicateRequest(); // SfvbPageDuplicateRequest | The page to copy and where
-apiInstance.duplicateSfvbPage(storefront_oid, page_duplicate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE duplicateSfvbPage -->
 
 ### Parameters
 
@@ -672,30 +461,9 @@ Copies a theme into a new one and returns a job handle to poll.  Asynchronous, b
 
 ### Example
 
-<!-- UC_START_EXAMPLE duplicateSfvbTheme -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-let duplicate_request = new UltraCartRestApiV2.SfvbThemeDuplicateRequest(); // SfvbThemeDuplicateRequest | Theme duplication details
-apiInstance.duplicateSfvbTheme(storefront_oid, theme_oid, duplicate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE duplicateSfvbTheme -->
 
 ### Parameters
 
@@ -731,32 +499,9 @@ Ends a running experiment.  With winner_variation_number the winner gets all new
 
 ### Example
 
-<!-- UC_START_EXAMPLE endSfvbExperiment -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let experiment_oid = 56; // Number | 
-let opts = {
-  'experiment_end_request': new UltraCartRestApiV2.SfvbExperimentEndRequest() // SfvbExperimentEndRequest | The winner, if any
-};
-apiInstance.endSfvbExperiment(storefront_oid, experiment_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE endSfvbExperiment -->
 
 ### Parameters
 
@@ -790,28 +535,9 @@ Element types used by a container
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbCjsonUsedElements -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let compile_request = new UltraCartRestApiV2.SfvbCompileRequest(); // SfvbCompileRequest | CJSON to inspect
-apiInstance.getSfvbCjsonUsedElements(compile_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbCjsonUsedElements -->
 
 ### Parameters
 
@@ -845,33 +571,9 @@ owner_type is one of upsell, email, postcardfront, postcardback, item or itemid.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbContainer -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let owner_type = "owner_type_example"; // String | 
-let owner_object_id = "owner_object_id_example"; // String | 
-let opts = {
-  'container_name': "container_name_example" // String | 
-};
-apiInstance.getSfvbContainer(storefront_oid, owner_type, owner_object_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbContainer -->
 
 ### Parameters
 
@@ -908,34 +610,9 @@ Inspect or diff an earlier version without reverting to it.  The version is addr
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbContainerVersion -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let container_history_oid = 56; // Number | 
-let opts = {
-  'owner_type': "owner_type_example", // String | 
-  'owner_object_id': "owner_object_id_example", // String | 
-  'container_name': "container_name_example" // String | 
-};
-apiInstance.getSfvbContainerVersion(storefront_oid, container_history_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbContainerVersion -->
 
 ### Parameters
 
@@ -973,28 +650,9 @@ schema is the draft-07 JSON schema for the element config object and doc is the 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbElement -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let element_type = "element_type_example"; // String | 
-apiInstance.getSfvbElement(element_type, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbElement -->
 
 ### Parameters
 
@@ -1028,32 +686,9 @@ The experiment, its variations and their statistics, and with daily&#x3D;true ea
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbExperiment -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let experiment_oid = 56; // Number | 
-let opts = {
-  'daily': true // Boolean | Include each variation's daily statistics
-};
-apiInstance.getSfvbExperiment(storefront_oid, experiment_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbExperiment -->
 
 ### Parameters
 
@@ -1089,28 +724,9 @@ Each objective with what is measured per session and compared between variations
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbExperimentObjectives -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getSfvbExperimentObjectives(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbExperimentObjectives -->
 
 ### Parameters
 
@@ -1144,32 +760,9 @@ Returns the current content, or an earlier version when version is supplied.  Se
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbFileContent -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'path': "path_example", // String | 
-  'version': 56 // Number | 
-};
-apiInstance.getSfvbFileContent(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbFileContent -->
 
 ### Parameters
 
@@ -1205,29 +798,9 @@ Binary content does not travel through this API as JSON, so uploading an image, 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbFileUploadUrl -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let extension = "extension_example"; // String | 
-apiInstance.getSfvbFileUploadUrl(storefront_oid, extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbFileUploadUrl -->
 
 ### Parameters
 
@@ -1262,29 +835,9 @@ Returns the fragment as authored.  If it references images or other storefront f
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbLibraryEntry -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let library_oid = 56; // Number | 
-apiInstance.getSfvbLibraryEntry(storefront_oid, library_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbLibraryEntry -->
 
 ### Parameters
 
@@ -1319,29 +872,9 @@ The whole tree, in render order.  Page entries carry the page_path they resolve 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbMenu -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let code = "code_example"; // String | Menu code, matched without regard to case
-apiInstance.getSfvbMenu(storefront_oid, code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbMenu -->
 
 ### Parameters
 
@@ -1376,28 +909,9 @@ The menus a menu element&#39;s menuName can name, sorted by code and without the
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbMenus -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getSfvbMenus(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbMenus -->
 
 ### Parameters
 
@@ -1431,29 +945,9 @@ What the pageattribute and pageimage elements render for this page.  These are n
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbPage -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /catalog/dispensers/
-apiInstance.getSfvbPage(storefront_oid, path, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbPage -->
 
 ### Parameters
 
@@ -1488,29 +982,9 @@ The posts the page shows.  uses_selectors is true when the page&#39;s blog post 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbPageBlogPosts -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /blog/
-apiInstance.getSfvbPageBlogPosts(storefront_oid, path, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbPageBlogPosts -->
 
 ### Parameters
 
@@ -1545,29 +1019,9 @@ The items on the page with their sort order and url part.  uses_selectors is tru
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbPageItems -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-apiInstance.getSfvbPageItems(storefront_oid, path, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbPageItems -->
 
 ### Parameters
 
@@ -1602,29 +1056,9 @@ The conditions that choose the page&#39;s items and blog posts, and whether each
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbPageSelectors -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-apiInstance.getSfvbPageSelectors(storefront_oid, path, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbPageSelectors -->
 
 ### Parameters
 
@@ -1659,32 +1093,9 @@ Refuses a session that does not exist, so a URL you receive is for a session tha
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbPreviewUrl -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let preview_session_id = "preview_session_id_example"; // String | 
-let opts = {
-  'path': "path_example" // String | 
-};
-apiInstance.getSfvbPreviewUrl(storefront_oid, preview_session_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbPreviewUrl -->
 
 ### Parameters
 
@@ -1720,28 +1131,9 @@ The values the siteattribute element and $site.attr render.  These are not in an
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbSiteAttributes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getSfvbSiteAttributes(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbSiteAttributes -->
 
 ### Parameters
 
@@ -1773,29 +1165,9 @@ Get a theme
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbTheme -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-apiInstance.getSfvbTheme(storefront_oid, theme_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbTheme -->
 
 ### Parameters
 
@@ -1830,29 +1202,9 @@ The values theme.css and the compiled containers resolve at render time.  These 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbThemeAttributes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-apiInstance.getSfvbThemeAttributes(storefront_oid, theme_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbThemeAttributes -->
 
 ### Parameters
 
@@ -1887,29 +1239,9 @@ Poll until complete is true, then check success.  Note that the new theme&#39;s 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbThemeJob -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let job_id = 56; // Number | 
-apiInstance.getSfvbThemeJob(storefront_oid, job_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbThemeJob -->
 
 ### Parameters
 
@@ -1944,27 +1276,9 @@ The visual builder release channel is per merchant, so a CLI holding cached sche
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbVersion -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getSfvbVersion((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbVersion -->
 
 ### Parameters
 
@@ -1995,27 +1309,9 @@ Returns the merchant, user, granted scopes and reachable storefronts for the cal
 
 ### Example
 
-<!-- UC_START_EXAMPLE getSfvbWhoami -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getSfvbWhoami((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getSfvbWhoami -->
 
 ### Parameters
 
@@ -2046,29 +1342,9 @@ Creates the page and its folder, the way the store admin&#39;s add page does.  T
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertSfvbPage -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let page_create_request = new UltraCartRestApiV2.SfvbPageCreateRequest(); // SfvbPageCreateRequest | The page to create
-apiInstance.insertSfvbPage(storefront_oid, page_create_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertSfvbPage -->
 
 ### Parameters
 
@@ -2103,29 +1379,9 @@ Copies the fragment&#39;s referenced assets into the storefront file system and 
 
 ### Example
 
-<!-- UC_START_EXAMPLE installSfvbLibraryEntry -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let library_oid = 56; // Number | 
-apiInstance.installSfvbLibraryEntry(storefront_oid, library_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE installSfvbLibraryEntry -->
 
 ### Parameters
 
@@ -2160,33 +1416,9 @@ One page of blog posts, newest first, without their bodies.  search matches the 
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbBlogPosts -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'search': "search_example", // String | Text to search for
-  'page': 56, // Number | Page number, starting at 1
-  'page_size': 56 // Number | Posts per page, 1 to 100, default 50
-};
-apiInstance.listSfvbBlogPosts(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbBlogPosts -->
 
 ### Parameters
 
@@ -2223,33 +1455,9 @@ Addressed the same way as the container itself, so owner_type also says how owne
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbContainerVersions -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'owner_type': "owner_type_example", // String | 
-  'owner_object_id': "owner_object_id_example", // String | 
-  'container_name': "container_name_example" // String | 
-};
-apiInstance.listSfvbContainerVersions(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbContainerVersions -->
 
 ### Parameters
 
@@ -2286,27 +1494,9 @@ The authoritative vocabulary, taken from the same lookup the compiler uses.  A t
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbElements -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.listSfvbElements((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbElements -->
 
 ### Parameters
 
@@ -2337,33 +1527,9 @@ Every experiment that is not deleted, with its variations and their statistics -
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbExperiments -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'status': "status_example", // String | Running or Ended
-  'type': "type_example", // String | page, url, theme or openai
-  'path': "path_example" // String | Only experiments on this page, for example /lp/spring-sale/
-};
-apiInstance.listSfvbExperiments(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbExperiments -->
 
 ### Parameters
 
@@ -2400,31 +1566,9 @@ Version history is the undo for anything in the storefront file system, which is
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbFileVersions -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'path': "path_example" // String | 
-};
-apiInstance.listSfvbFileVersions(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbFileVersions -->
 
 ### Parameters
 
@@ -2459,34 +1603,9 @@ Directories first, then files, each sorted by name.  Address by path or by direc
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbFiles -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'path': "path_example", // String | 
-  'storefront_fs_directory_oid': 56, // Number | 
-  'theme_oid': 56, // Number | 
-  'max_entries': 56 // Number | 
-};
-apiInstance.listSfvbFiles(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbFiles -->
 
 ### Parameters
 
@@ -2524,31 +1643,9 @@ Every page with its settings, sorted by path with the root first.  Hidden pages 
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbPages -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'under': "under_example" // String | Only this page and the pages below it, for example /lp/
-};
-apiInstance.listSfvbPages(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbPages -->
 
 ### Parameters
 
@@ -2581,27 +1678,9 @@ List storefronts
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbStorefronts -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.listSfvbStorefronts((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbStorefronts -->
 
 ### Parameters
 
@@ -2632,31 +1711,9 @@ Each template with the page type it declares and what it can render - items, sub
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbTemplates -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'page_type': "page_type_example" // String | Only templates declaring this page type, for example group
-};
-apiInstance.listSfvbTemplates(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbTemplates -->
 
 ### Parameters
 
@@ -2691,28 +1748,9 @@ Exactly one theme is flagged active.  Writing to the active theme is writing liv
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbThemes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.listSfvbThemes(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbThemes -->
 
 ### Parameters
 
@@ -2746,28 +1784,9 @@ Without container JSON, so the funnel can be surveyed cheaply.  A large containe
 
 ### Example
 
-<!-- UC_START_EXAMPLE listSfvbUpsellOffers -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.listSfvbUpsellOffers(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE listSfvbUpsellOffers -->
 
 ### Parameters
 
@@ -2801,35 +1820,9 @@ Validation is mandatory and runs here regardless of whether the caller validated
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbContainer -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let owner_type = "owner_type_example"; // String | 
-let owner_object_id = "owner_object_id_example"; // String | 
-let If_Match = "If_Match_example"; // String | CJSON hash from the last read.  Required; 428 when absent, 412 when stale.
-let container_write_request = new UltraCartRestApiV2.SfvbContainerWriteRequest(); // SfvbContainerWriteRequest | Container CJSON to write
-let opts = {
-  'container_name': "container_name_example" // String | 
-};
-apiInstance.putSfvbContainer(storefront_oid, owner_type, owner_object_id, If_Match, container_write_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbContainer -->
 
 ### Parameters
 
@@ -2868,31 +1861,9 @@ Stops or resumes sending new visitors to one variation of a running experiment. 
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbExperimentVariation -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let experiment_oid = 56; // Number | 
-let variation_number = 56; // Number | 
-let experiment_variation_update_request = new UltraCartRestApiV2.SfvbExperimentVariationUpdateRequest(); // SfvbExperimentVariationUpdateRequest | Pause or resume
-apiInstance.putSfvbExperimentVariation(storefront_oid, experiment_oid, variation_number, experiment_variation_update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbExperimentVariation -->
 
 ### Parameters
 
@@ -2929,33 +1900,9 @@ Runs the template sandbox, Velocity validation and the internationalization chec
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbFileContent -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let If_Match = "If_Match_example"; // String | Content hash from the last read.  Required; 428 when absent, 412 when stale.
-let file_write_request = new UltraCartRestApiV2.SfvbFileWriteRequest(); // SfvbFileWriteRequest | File content to write
-let opts = {
-  'path': "path_example" // String | 
-};
-apiInstance.putSfvbFileContent(storefront_oid, If_Match, file_write_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbFileContent -->
 
 ### Parameters
 
@@ -2992,33 +1939,9 @@ A whole menu replace, not a merge - what you send is what the menu holds afterwa
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbMenu -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let code = "code_example"; // String | Menu code, matched without regard to case
-let menu_write_request = new UltraCartRestApiV2.SfvbMenuWriteRequest(); // SfvbMenuWriteRequest | The menu's replacement contents
-let opts = {
-  'If_Match': "If_Match_example" // String | Content hash from the last read.  Required when the menu already exists; 428 when absent, 412 when stale.
-};
-apiInstance.putSfvbMenu(storefront_oid, code, menu_write_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbMenu -->
 
 ### Parameters
 
@@ -3055,30 +1978,9 @@ A partial update.  Only the attributes you name are changed.  Every entry is che
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbPageAttributes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /catalog/dispensers/
-let page_attribute_update_request = new UltraCartRestApiV2.SfvbPageAttributeUpdateRequest(); // SfvbPageAttributeUpdateRequest | Attributes to change
-apiInstance.putSfvbPageAttributes(storefront_oid, path, page_attribute_update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbPageAttributes -->
 
 ### Parameters
 
@@ -3114,30 +2016,9 @@ Upload the image with files/upload to the page path followed by a filename first
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbPageMultimedia -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /catalog/dispensers/
-let page_multimedia_request = new UltraCartRestApiV2.SfvbPageMultimediaRequest(); // SfvbPageMultimediaRequest | Image to attach
-apiInstance.putSfvbPageMultimedia(storefront_oid, path, page_multimedia_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbPageMultimedia -->
 
 ### Parameters
 
@@ -3173,30 +2054,9 @@ Each list you send replaces that whole set, and an empty list clears it.  A list
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbPageSelectors -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-let page_selectors_request = new UltraCartRestApiV2.SfvbPageSelectors(); // SfvbPageSelectors | The selector sets to replace
-apiInstance.putSfvbPageSelectors(storefront_oid, path, page_selectors_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbPageSelectors -->
 
 ### Parameters
 
@@ -3232,30 +2092,9 @@ A partial update.  Only the fields you send change - title, description, templat
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbPageSettings -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-let page_settings_request = new UltraCartRestApiV2.SfvbPageSettingsRequest(); // SfvbPageSettingsRequest | The settings to change
-apiInstance.putSfvbPageSettings(storefront_oid, path, page_settings_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbPageSettings -->
 
 ### Parameters
 
@@ -3291,33 +2130,9 @@ Stores compiled containers against a session created by createSfvbPreviewSession
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbPreviewSession -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let preview_session_id = "preview_session_id_example"; // String | 
-let preview_session = new UltraCartRestApiV2.SfvbPreviewSessionRequest(); // SfvbPreviewSessionRequest | Containers to stage in the preview session
-let opts = {
-  'theme_oid': 56 // Number | 
-};
-apiInstance.putSfvbPreviewSession(storefront_oid, preview_session_id, preview_session, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbPreviewSession -->
 
 ### Parameters
 
@@ -3354,29 +2169,9 @@ A partial update.  Only the attributes you name are changed.  Every entry is che
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbSiteAttributes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let site_attribute_update_request = new UltraCartRestApiV2.SfvbSiteAttributeUpdateRequest(); // SfvbSiteAttributeUpdateRequest | Attributes to change
-apiInstance.putSfvbSiteAttributes(storefront_oid, site_attribute_update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbSiteAttributes -->
 
 ### Parameters
 
@@ -3411,30 +2206,9 @@ A partial update.  Only the slots you name are changed and every other slot on t
 
 ### Example
 
-<!-- UC_START_EXAMPLE putSfvbThemeAttributes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-let attribute_update_request = new UltraCartRestApiV2.SfvbThemeAttributeUpdateRequest(); // SfvbThemeAttributeUpdateRequest | Slots to change
-apiInstance.putSfvbThemeAttributes(storefront_oid, theme_oid, attribute_update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE putSfvbThemeAttributes -->
 
 ### Parameters
 
@@ -3470,30 +2244,9 @@ Removes posts by blog_post_oid, at most 500 at a time.  Every oid must be on the
 
 ### Example
 
-<!-- UC_START_EXAMPLE removeSfvbPageBlogPosts -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /blog/
-let page_blog_posts_request = new UltraCartRestApiV2.SfvbPageBlogPostsRequest(); // SfvbPageBlogPostsRequest | Blog posts to take off the page
-apiInstance.removeSfvbPageBlogPosts(storefront_oid, path, page_blog_posts_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE removeSfvbPageBlogPosts -->
 
 ### Parameters
 
@@ -3529,30 +2282,9 @@ Removes items by item id, at most 500 at a time.  Every id must be on the page, 
 
 ### Example
 
-<!-- UC_START_EXAMPLE removeSfvbPageItems -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let path = "path_example"; // String | Page path, for example /lp/spring-sale/
-let page_items_remove_request = new UltraCartRestApiV2.SfvbPageItemsRemoveRequest(); // SfvbPageItemsRemoveRequest | Items to take off the page
-apiInstance.removeSfvbPageItems(storefront_oid, path, page_items_remove_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE removeSfvbPageItems -->
 
 ### Parameters
 
@@ -3588,30 +2320,9 @@ Renders one node in the context of a theme and a page.  Unlike compile this is s
 
 ### Example
 
-<!-- UC_START_EXAMPLE renderSfvbWidgets -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-let render_request = new UltraCartRestApiV2.SfvbRenderRequest(); // SfvbRenderRequest | Widgets to render
-apiInstance.renderSfvbWidgets(storefront_oid, theme_oid, render_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE renderSfvbWidgets -->
 
 ### Parameters
 
@@ -3647,31 +2358,9 @@ Widget ids are allocated by the server, not invented by the caller.  Reserve a b
 
 ### Example
 
-<!-- UC_START_EXAMPLE reserveSfvbWidgetIds -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'count': 56 // Number | 
-};
-apiInstance.reserveSfvbWidgetIds(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE reserveSfvbWidgetIds -->
 
 ### Parameters
 
@@ -3706,35 +2395,9 @@ The restore is itself snapshotted, so a revert can be undone in turn.  Reverting
 
 ### Example
 
-<!-- UC_START_EXAMPLE revertSfvbContainer -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let owner_type = "owner_type_example"; // String | 
-let owner_object_id = "owner_object_id_example"; // String | 
-let If_Match = "If_Match_example"; // String | CJSON hash of the container being reverted.  Required; 428 when absent, 412 when stale.
-let container_revert_request = new UltraCartRestApiV2.SfvbContainerRevertRequest(); // SfvbContainerRevertRequest | Version to revert the container to
-let opts = {
-  'container_name': "container_name_example" // String | 
-};
-apiInstance.revertSfvbContainer(storefront_oid, owner_type, owner_object_id, If_Match, container_revert_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE revertSfvbContainer -->
 
 ### Parameters
 
@@ -3773,30 +2436,9 @@ The revert lands as a new version, so it is itself undoable.
 
 ### Example
 
-<!-- UC_START_EXAMPLE revertSfvbFile -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let If_Match = "If_Match_example"; // String | Content hash of the file being reverted.  Required; 428 when absent, 412 when stale.
-let file_revert_request = new UltraCartRestApiV2.SfvbFileRevertRequest(); // SfvbFileRevertRequest | Version to revert the file to
-apiInstance.revertSfvbFile(storefront_oid, If_Match, file_revert_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE revertSfvbFile -->
 
 ### Parameters
 
@@ -3832,29 +2474,9 @@ Searches names and, when text is supplied, file contents.  For a CLI with no loc
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchSfvbFiles -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let search_request = new UltraCartRestApiV2.SfvbFileSearchRequest(); // SfvbFileSearchRequest | File search
-apiInstance.searchSfvbFiles(storefront_oid, search_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchSfvbFiles -->
 
 ### Parameters
 
@@ -3889,34 +2511,9 @@ Known-good CJSON fragments a human already built out of real elements.  This is 
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchSfvbLibrary -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'segment': "segment_example", // String | 
-  'search': "search_example", // String | 
-  'page_number': 56, // Number | 
-  'results_per_page': 56 // Number | 
-};
-apiInstance.searchSfvbLibrary(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchSfvbLibrary -->
 
 ### Parameters
 
@@ -3954,29 +2551,9 @@ type page starts an experiment element already saved in a page body - send path,
 
 ### Example
 
-<!-- UC_START_EXAMPLE startSfvbExperiment -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let experiment_start_request = new UltraCartRestApiV2.SfvbExperimentStartRequest(); // SfvbExperimentStartRequest | The experiment to start
-apiInstance.startSfvbExperiment(storefront_oid, experiment_start_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE startSfvbExperiment -->
 
 ### Parameters
 
@@ -4011,32 +2588,9 @@ The second half of the two step upload.  The bytes are fetched from the key, che
 
 ### Example
 
-<!-- UC_START_EXAMPLE uploadSfvbFile -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let file_upload_request = new UltraCartRestApiV2.SfvbFileUploadRequest(); // SfvbFileUploadRequest | Where to store the uploaded bytes
-let opts = {
-  'If_Match': "If_Match_example" // String | Content hash from the last read.  Required when the file already exists; 428 when absent, 412 when stale.
-};
-apiInstance.uploadSfvbFile(storefront_oid, file_upload_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE uploadSfvbFile -->
 
 ### Parameters
 
@@ -4072,28 +2626,9 @@ Runs the structural schema, the contextual business rules for the destination ow
 
 ### Example
 
-<!-- UC_START_EXAMPLE validateSfvbCjson -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let validate_request = new UltraCartRestApiV2.SfvbValidateRequest(); // SfvbValidateRequest | CJSON to validate
-apiInstance.validateSfvbCjson(validate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE validateSfvbCjson -->
 
 ### Parameters
 
@@ -4127,30 +2662,9 @@ Theme scoped rather than stateless.  Validation builds a theme template context 
 
 ### Example
 
-<!-- UC_START_EXAMPLE validateSfvbVelocity -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.SfvbApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let theme_oid = 56; // Number | 
-let velocity_validate_request = new UltraCartRestApiV2.SfvbVelocityValidateRequest(); // SfvbVelocityValidateRequest | Velocity template to validate
-apiInstance.validateSfvbVelocity(storefront_oid, theme_oid, velocity_validate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE validateSfvbVelocity -->
 
 ### Parameters
 

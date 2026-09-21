@@ -24,29 +24,9 @@ Queued jobs cancel immediately (200). In-progress jobs finalize as cancelled bet
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkCancelJob -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-let job_id = "job_id_example"; // String | The bulk job id
-apiInstance.bulkCancelJob(object, job_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkCancelJob -->
 
 ### Parameters
 
@@ -81,28 +61,9 @@ Returns a presigned S3 PUT URL the merchant uploads NDJSON to, plus the s3_key t
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkGenerateUploadUrl -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-apiInstance.bulkGenerateUploadUrl(object, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkGenerateUploadUrl -->
 
 ### Parameters
 
@@ -134,29 +95,9 @@ Retrieve a bulk job&#39;s status and counts
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkGetJob -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-let job_id = "job_id_example"; // String | The bulk job id
-apiInstance.bulkGetJob(object, job_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkGetJob -->
 
 ### Parameters
 
@@ -189,34 +130,9 @@ Paginate a bulk job&#39;s per-record results
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkGetJobRecords -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-let job_id = "job_id_example"; // String | The bulk job id
-let opts = {
-  'status': "status_example", // String | Filter by per-record result status (success, failed, duplicate)
-  'cursor': "cursor_example", // String | Opaque pagination cursor
-  'limit': 56 // Number | Page size (default 100, max 1000)
-};
-apiInstance.bulkGetJobRecords(object, job_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkGetJobRecords -->
 
 ### Parameters
 
@@ -252,33 +168,9 @@ List bulk jobs for the calling merchant
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkListJobs -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-let opts = {
-  'status': "status_example", // String | Filter by job status
-  'cursor': "cursor_example", // String | Opaque pagination cursor
-  'limit': 56 // Number | Page size (default 100, max 1000)
-};
-apiInstance.bulkListJobs(object, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkListJobs -->
 
 ### Parameters
 
@@ -315,29 +207,9 @@ Submits a job referencing a previously uploaded NDJSON object. One active job pe
 
 ### Example
 
-<!-- UC_START_EXAMPLE bulkSubmitJob -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.BulkApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let object = "object_example"; // String | Object type
-let bulk_job = new UltraCartRestApiV2.BulkJobRequest(); // BulkJobRequest | Bulk job submission
-apiInstance.bulkSubmitJob(object, bulk_job, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE bulkSubmitJob -->
 
 ### Parameters
 

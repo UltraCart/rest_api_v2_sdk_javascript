@@ -202,28 +202,10 @@ Add to library
 
 ### Example
 
-<!-- UC_START_EXAMPLE addToLibrary -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let add_library_request = new UltraCartRestApiV2.AddLibraryItemRequest(); // AddLibraryItemRequest | New library item request
-apiInstance.addToLibrary(add_library_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE addToLibrary -->
 
 ### Parameters
 
@@ -255,28 +237,10 @@ Apply library item to storefront.
 
 ### Example
 
-<!-- UC_START_EXAMPLE applyToStoreFront -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let apply_library_request = new UltraCartRestApiV2.ApplyLibraryItemRequest(); // ApplyLibraryItemRequest | New library item
-apiInstance.applyToStoreFront(apply_library_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE applyToStoreFront -->
 
 ### Parameters
 
@@ -308,29 +272,10 @@ Archive email list
 
 ### Example
 
-<!-- UC_START_EXAMPLE archiveEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-apiInstance.archiveEmailList(storefront_oid, email_list_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE archiveEmailList -->
 
 ### Parameters
 
@@ -363,29 +308,10 @@ Archive email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE archiveEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-apiInstance.archiveEmailSegment(storefront_oid, email_segment_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE archiveEmailSegment -->
 
 ### Parameters
 
@@ -418,30 +344,10 @@ Back populate email flow
 
 ### Example
 
-<!-- UC_START_EXAMPLE backPopulateEmailFlow -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_uuid = "email_flow_uuid_example"; // String | 
-let back_populate_request = new UltraCartRestApiV2.EmailFlowBackPopulateRequest(); // EmailFlowBackPopulateRequest | The request to back populate
-apiInstance.backPopulateEmailFlow(storefront_oid, email_flow_uuid, back_populate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE backPopulateEmailFlow -->
 
 ### Parameters
 
@@ -475,30 +381,10 @@ Check download of email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE checkDownloadEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-let email_segment_rebuild_uuid = "email_segment_rebuild_uuid_example"; // String | 
-apiInstance.checkDownloadEmailSegment(storefront_oid, email_segment_uuid, email_segment_rebuild_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE checkDownloadEmailSegment -->
 
 ### Parameters
 
@@ -532,32 +418,10 @@ Clone email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE cloneEmailCampaign -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_uuid = "email_campaign_uuid_example"; // String | 
-let opts = {
-  'target_storefront_oid': 56 // Number | 
-};
-apiInstance.cloneEmailCampaign(storefront_oid, email_campaign_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE cloneEmailCampaign -->
 
 ### Parameters
 
@@ -591,32 +455,10 @@ Clone email flow
 
 ### Example
 
-<!-- UC_START_EXAMPLE cloneEmailFlow -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_uuid = "email_flow_uuid_example"; // String | 
-let opts = {
-  'target_storefront_oid': 56 // Number | 
-};
-apiInstance.cloneEmailFlow(storefront_oid, email_flow_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE cloneEmailFlow -->
 
 ### Parameters
 
@@ -650,28 +492,10 @@ Create email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE createEmailSendingDomain -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let domain = "domain_example"; // String | 
-apiInstance.createEmailSendingDomain(domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE createEmailSendingDomain -->
 
 ### Parameters
 
@@ -703,28 +527,10 @@ Create email sending domain for various providers
 
 ### Example
 
-<!-- UC_START_EXAMPLE createEmailSendingDomain2 -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let email_domain = new UltraCartRestApiV2.EmailDomain(); // EmailDomain | EmailDomain
-apiInstance.createEmailSendingDomain2(email_domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
 ```
 
-<!-- UC_END_EXAMPLE createEmailSendingDomain2 -->
 
 ### Parameters
 
@@ -756,32 +562,10 @@ Create file manager directory
 
 ### Example
 
-<!-- UC_START_EXAMPLE createFsDirectory -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let id = 56; // Number | 
-let opts = {
-  'name': "name_example", // String | 
-  'parent_storefront_fs_directory_oid': 56 // Number | 
-};
-apiInstance.createFsDirectory(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE createFsDirectory -->
 
 ### Parameters
 
@@ -815,28 +599,10 @@ Create Twilio account
 
 ### Example
 
-<!-- UC_START_EXAMPLE createTwilioAccount -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let twilio = new UltraCartRestApiV2.Twilio(); // Twilio | Twilio
-apiInstance.createTwilioAccount(twilio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE createTwilioAccount -->
 
 ### Parameters
 
@@ -868,29 +634,10 @@ Delete email campaignFolder
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailCampaignFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_folder_uuid = "email_campaign_folder_uuid_example"; // String | 
-apiInstance.deleteEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailCampaignFolder -->
 
 ### Parameters
 
@@ -923,29 +670,10 @@ Delete communication sequence stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailCommseqStat -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.deleteEmailCommseqStat(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailCommseqStat -->
 
 ### Parameters
 
@@ -978,29 +706,10 @@ Delete email email
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-apiInstance.deleteEmailEmail(storefront_oid, commseq_email_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailEmail -->
 
 ### Parameters
 
@@ -1033,29 +742,10 @@ Delete email flowFolder
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailFlowFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_folder_uuid = "email_flow_folder_uuid_example"; // String | 
-apiInstance.deleteEmailFlowFolder(storefront_oid, email_flow_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailFlowFolder -->
 
 ### Parameters
 
@@ -1088,30 +778,10 @@ Delete email list customer
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailListCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-apiInstance.deleteEmailListCustomer(storefront_oid, email_list_uuid, email_customer_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailListCustomer -->
 
 ### Parameters
 
@@ -1145,29 +815,10 @@ Delete email ListSegmentFolder
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailListSegmentFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_segment_folder_uuid = "email_list_segment_folder_uuid_example"; // String | 
-apiInstance.deleteEmailListSegmentFolder(storefront_oid, email_list_segment_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -1200,29 +851,10 @@ Delete email postcard
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailPostcard -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
-apiInstance.deleteEmailPostcard(storefront_oid, commseq_postcard_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailPostcard -->
 
 ### Parameters
 
@@ -1255,28 +887,10 @@ delete email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEmailSendingDomain -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let domain = "domain_example"; // String | 
-apiInstance.deleteEmailSendingDomain(domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteEmailSendingDomain -->
 
 ### Parameters
 
@@ -1308,29 +922,10 @@ Delete experiment
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteExperiment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let storefront_experiment_oid = 56; // Number | 
-apiInstance.deleteExperiment(storefront_oid, storefront_experiment_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteExperiment -->
 
 ### Parameters
 
@@ -1363,32 +958,10 @@ Delete file manager directory
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteFsFile -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let id = 56; // Number | 
-let opts = {
-  'parent_storefront_fs_directory_oid': 56, // Number | 
-  'storefront_fs_file_oid': 56 // Number | 
-};
-apiInstance.deleteFsFile(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteFsFile -->
 
 ### Parameters
 
@@ -1424,29 +997,10 @@ Delete screen recording heatmap
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteHeatmap -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let query = new UltraCartRestApiV2.ScreenRecordingHeatmapReset(); // ScreenRecordingHeatmapReset | Query
-apiInstance.deleteHeatmap(storefront_oid, query, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteHeatmap -->
 
 ### Parameters
 
@@ -1479,28 +1033,10 @@ Delete library item
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-apiInstance.deleteLibraryItem(library_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteLibraryItem -->
 
 ### Parameters
 
@@ -1532,28 +1068,10 @@ Delete all published versions for a library item, including anything in review.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteLibraryItemPublishedVersions -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-apiInstance.deleteLibraryItemPublishedVersions(library_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteLibraryItemPublishedVersions -->
 
 ### Parameters
 
@@ -1585,29 +1103,10 @@ Delete screen recording segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteScreenRecordingSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_segment_oid = 56; // Number | 
-apiInstance.deleteScreenRecordingSegment(storefront_oid, screen_recording_segment_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteScreenRecordingSegment -->
 
 ### Parameters
 
@@ -1640,28 +1139,10 @@ delete Twilio account
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteTwilioAccount -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let esp_twilio_uuid = "esp_twilio_uuid_example"; // String | 
-apiInstance.deleteTwilioAccount(esp_twilio_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE deleteTwilioAccount -->
 
 ### Parameters
 
@@ -1693,28 +1174,10 @@ Duplicate library item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE duplicateLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-apiInstance.duplicateLibraryItem(library_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE duplicateLibraryItem -->
 
 ### Parameters
 
@@ -1748,30 +1211,9 @@ Enrolls a single real customer (by email) into the communication sequence.  A cu
 
 ### Example
 
-<!-- UC_START_EXAMPLE enrollCommseqCustomer -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let email_commseq_enrollment_request = new UltraCartRestApiV2.EmailCommseqEnrollmentRequest(); // EmailCommseqEnrollmentRequest | Commseq enrollment request
-apiInstance.enrollCommseqCustomer(storefront_oid, commseq_uuid, email_commseq_enrollment_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE enrollCommseqCustomer -->
 
 ### Parameters
 
@@ -1807,29 +1249,10 @@ Update favorite flag on screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE favoriteScreenRecording -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-apiInstance.favoriteScreenRecording(storefront_oid, screen_recording_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE favoriteScreenRecording -->
 
 ### Parameters
 
@@ -1862,29 +1285,10 @@ Obtain lat/long for an address
 
 ### Example
 
-<!-- UC_START_EXAMPLE geocodeAddress -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let geocode_request = new UltraCartRestApiV2.GeocodeRequest(); // GeocodeRequest | geocode request
-apiInstance.geocodeAddress(storefront_oid, geocode_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE geocodeAddress -->
 
 ### Parameters
 
@@ -1919,28 +1323,10 @@ Obtain a list of all the countries
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCountries -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getCountries(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getCountries -->
 
 ### Parameters
 
@@ -1974,28 +1360,10 @@ Fetches a temporary authentication token for the editor
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEditorToken -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEditorToken(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEditorToken -->
 
 ### Parameters
 
@@ -2027,28 +1395,10 @@ Get email communication base templates
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailBaseTemplates -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailBaseTemplates(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailBaseTemplates -->
 
 ### Parameters
 
@@ -2080,29 +1430,10 @@ Get email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaign -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_uuid = "email_campaign_uuid_example"; // String | 
-apiInstance.getEmailCampaign(storefront_oid, email_campaign_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaign -->
 
 ### Parameters
 
@@ -2135,29 +1466,10 @@ Get email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaignFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_folder_uuid = "email_campaign_folder_uuid_example"; // String | 
-apiInstance.getEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaignFolder -->
 
 ### Parameters
 
@@ -2190,28 +1502,10 @@ Get email campaign folders
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaignFolders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailCampaignFolders(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaignFolders -->
 
 ### Parameters
 
@@ -2243,29 +1537,10 @@ Get email campaign screenshots
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaignScreenshots -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_uuid = "email_campaign_uuid_example"; // String | 
-apiInstance.getEmailCampaignScreenshots(storefront_oid, email_campaign_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaignScreenshots -->
 
 ### Parameters
 
@@ -2298,28 +1573,10 @@ Get email campaigns
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaigns -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailCampaigns(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaigns -->
 
 ### Parameters
 
@@ -2351,29 +1608,10 @@ Get email campaigns with stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCampaignsWithStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let stat_days = "stat_days_example"; // String | 
-apiInstance.getEmailCampaignsWithStats(storefront_oid, stat_days, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCampaignsWithStats -->
 
 ### Parameters
 
@@ -2406,29 +1644,10 @@ Get email commseq
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseq -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.getEmailCommseq(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseq -->
 
 ### Parameters
 
@@ -2461,28 +1680,9 @@ Get email merchant specific editor values
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqEditorValues -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailCommseqEditorValues(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailCommseqEditorValues -->
 
 ### Parameters
 
@@ -2514,30 +1714,10 @@ Get email communication sequence emails stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqEmailStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let statsRequest = new UltraCartRestApiV2.EmailStatSummaryRequest(); // EmailStatSummaryRequest | StatsRequest
-apiInstance.getEmailCommseqEmailStats(storefront_oid, commseq_uuid, statsRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqEmailStats -->
 
 ### Parameters
 
@@ -2571,30 +1751,10 @@ Get email communication sequence postcard stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqPostcardStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let statsRequest = new UltraCartRestApiV2.EmailStatPostcardSummaryRequest(); // EmailStatPostcardSummaryRequest | StatsRequest
-apiInstance.getEmailCommseqPostcardStats(storefront_oid, commseq_uuid, statsRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqPostcardStats -->
 
 ### Parameters
 
@@ -2628,29 +1788,10 @@ Get email communication postcard tracking
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqPostcardTracking -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
-apiInstance.getEmailCommseqPostcardTracking(storefront_oid, commseq_postcard_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqPostcardTracking -->
 
 ### Parameters
 
@@ -2683,29 +1824,10 @@ Get email commseq rate limiters
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqRateLimiters -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.getEmailCommseqRateLimiters(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqRateLimiters -->
 
 ### Parameters
 
@@ -2738,30 +1860,10 @@ Get email communication sequence sms stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqSmsStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let statsRequest = new UltraCartRestApiV2.EmailStatSmsSummaryRequest(); // EmailStatSmsSummaryRequest | StatsRequest
-apiInstance.getEmailCommseqSmsStats(storefront_oid, commseq_uuid, statsRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqSmsStats -->
 
 ### Parameters
 
@@ -2795,29 +1897,10 @@ Get communication sequence stats overall
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqStatOverall -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.getEmailCommseqStatOverall(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqStatOverall -->
 
 ### Parameters
 
@@ -2850,30 +1933,10 @@ Get email communication sequence step stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqStepStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let statsRequest = new UltraCartRestApiV2.EmailStepStatRequest(); // EmailStepStatRequest | StatsRequest
-apiInstance.getEmailCommseqStepStats(storefront_oid, commseq_uuid, statsRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqStepStats -->
 
 ### Parameters
 
@@ -2907,30 +1970,10 @@ Get email communication sequence customers waiting at each requested step
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqStepWaiting -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let waitingRequest = new UltraCartRestApiV2.EmailStepWaitingRequest(); // EmailStepWaitingRequest | WaitingRequest
-apiInstance.getEmailCommseqStepWaiting(storefront_oid, commseq_uuid, waitingRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqStepWaiting -->
 
 ### Parameters
 
@@ -2964,29 +2007,10 @@ Get email webhook editor values
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqWebhookEditorValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.getEmailCommseqWebhookEditorValues(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqWebhookEditorValues -->
 
 ### Parameters
 
@@ -3019,28 +2043,10 @@ Get email commseqs
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCommseqs -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailCommseqs(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCommseqs -->
 
 ### Parameters
 
@@ -3074,37 +2080,9 @@ Paginated, date-boundable journey of every flow/campaign step a customer moved t
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCustomerDispatchLogs -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-let opts = {
-  'since': "since_example", // String | 
-  'until': "until_example", // String | 
-  'pageNumber': 56, // Number | 
-  'pageSize': 56, // Number | 
-  'scanForward': true, // Boolean | 
-  'includeDetail': true // Boolean | 
-};
-apiInstance.getEmailCustomerDispatchLogs(storefront_oid, email_customer_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailCustomerDispatchLogs -->
 
 ### Parameters
 
@@ -3143,29 +2121,10 @@ Get customers editor URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCustomerEditorUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-apiInstance.getEmailCustomerEditorUrl(storefront_oid, email_customer_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCustomerEditorUrl -->
 
 ### Parameters
 
@@ -3198,33 +2157,10 @@ Get email customers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'pageNumber': 56, // Number | 
-  'pageSize': 56, // Number | 
-  'searchEmailPrefix': "searchEmailPrefix_example" // String | 
-};
-apiInstance.getEmailCustomers(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailCustomers -->
 
 ### Parameters
 
@@ -3259,31 +2195,10 @@ Get email dashboard activity
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailDashboardActivity -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'last_records': 56 // Number | 
-};
-apiInstance.getEmailDashboardActivity(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailDashboardActivity -->
 
 ### Parameters
 
@@ -3316,31 +2231,10 @@ Get dashboard stats
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailDashboardStats -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'days': 56 // Number | 
-};
-apiInstance.getEmailDashboardStats(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailDashboardStats -->
 
 ### Parameters
 
@@ -3375,31 +2269,9 @@ Entry-hop resolver for the customer-journey screen (AP0). Returns the esp_custom
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailDispatchLogCustomerLookup -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'email': "email_example" // String | 
-};
-apiInstance.getEmailDispatchLogCustomerLookup(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailDispatchLogCustomerLookup -->
 
 ### Parameters
 
@@ -3432,30 +2304,10 @@ Get email dispatch logs
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailDispatchLogs -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-apiInstance.getEmailDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailDispatchLogs -->
 
 ### Parameters
 
@@ -3489,29 +2341,10 @@ Get email email
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-apiInstance.getEmailEmail(storefront_oid, commseq_email_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmail -->
 
 ### Parameters
 
@@ -3544,34 +2377,10 @@ Get email email clicks
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmailClicks -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let opts = {
-  'days': 56 // Number | 
-};
-apiInstance.getEmailEmailClicks(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmailClicks -->
 
 ### Parameters
 
@@ -3607,30 +2416,10 @@ Get email order customer editor url
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmailCustomerEditorUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let order_id = "order_id_example"; // String | 
-apiInstance.getEmailEmailCustomerEditorUrl(storefront_oid, commseq_email_uuid, order_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmailCustomerEditorUrl -->
 
 ### Parameters
 
@@ -3664,34 +2453,10 @@ Get email email orders
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmailOrders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let opts = {
-  'days': 56 // Number | 
-};
-apiInstance.getEmailEmailOrders(storefront_oid, commseq_uuid, commseq_step_uuid, commseq_email_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmailOrders -->
 
 ### Parameters
 
@@ -3727,28 +2492,10 @@ Get email emails
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmails -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailEmails(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmails -->
 
 ### Parameters
 
@@ -3780,29 +2527,10 @@ Get email emails multiple
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailEmailsMultiple -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_emails_request = new UltraCartRestApiV2.EmailCommseqEmailsRequest(); // EmailCommseqEmailsRequest | Request of email uuids
-apiInstance.getEmailEmailsMultiple(storefront_oid, email_commseq_emails_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailEmailsMultiple -->
 
 ### Parameters
 
@@ -3835,29 +2563,10 @@ Get email flow
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailFlow -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_uuid = "email_flow_uuid_example"; // String | 
-apiInstance.getEmailFlow(storefront_oid, email_flow_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailFlow -->
 
 ### Parameters
 
@@ -3890,29 +2599,10 @@ Get email flow folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailFlowFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_folder_uuid = "email_flow_folder_uuid_example"; // String | 
-apiInstance.getEmailFlowFolder(storefront_oid, email_flow_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailFlowFolder -->
 
 ### Parameters
 
@@ -3945,28 +2635,10 @@ Get email flow folders
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailFlowFolders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailFlowFolders(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailFlowFolders -->
 
 ### Parameters
 
@@ -3998,29 +2670,10 @@ Get email flow screenshots
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailFlowScreenshots -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_uuid = "email_flow_uuid_example"; // String | 
-apiInstance.getEmailFlowScreenshots(storefront_oid, email_flow_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailFlowScreenshots -->
 
 ### Parameters
 
@@ -4053,28 +2706,10 @@ Get email flows
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailFlows -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailFlows(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailFlows -->
 
 ### Parameters
 
@@ -4106,27 +2741,10 @@ Get email globalsettings
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailGlobalSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getEmailGlobalSettings((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailGlobalSettings -->
 
 ### Parameters
 
@@ -4155,29 +2773,10 @@ Get email list
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-apiInstance.getEmailList(storefront_oid, email_list_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailList -->
 
 ### Parameters
 
@@ -4210,30 +2809,10 @@ Get email list customer editor url
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailListCustomerEditorUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-apiInstance.getEmailListCustomerEditorUrl(storefront_oid, email_list_uuid, email_customer_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailListCustomerEditorUrl -->
 
 ### Parameters
 
@@ -4267,33 +2846,10 @@ Get email list customers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailListCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let opts = {
-  'pageNumber': 56, // Number | 
-  'pageSize': 56 // Number | 
-};
-apiInstance.getEmailListCustomers(storefront_oid, email_list_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailListCustomers -->
 
 ### Parameters
 
@@ -4328,29 +2884,10 @@ Get email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailListSegmentFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_segment_folder_uuid = "email_list_segment_folder_uuid_example"; // String | 
-apiInstance.getEmailListSegmentFolder(storefront_oid, email_list_segment_folder_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -4383,28 +2920,10 @@ Get email campaign folders
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailListSegmentFolders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailListSegmentFolders(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailListSegmentFolders -->
 
 ### Parameters
 
@@ -4436,28 +2955,10 @@ Get email lists
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailLists -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailLists(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailLists -->
 
 ### Parameters
 
@@ -4489,28 +2990,10 @@ Get email performance
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailPerformance -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailPerformance(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailPerformance -->
 
 ### Parameters
 
@@ -4542,28 +3025,10 @@ Get email plan
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailPlan -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailPlan(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailPlan -->
 
 ### Parameters
 
@@ -4595,29 +3060,10 @@ Get email postcard
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailPostcard -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
-apiInstance.getEmailPostcard(storefront_oid, commseq_postcard_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailPostcard -->
 
 ### Parameters
 
@@ -4650,28 +3096,10 @@ Get email postcards
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailPostcards -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailPostcards(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailPostcards -->
 
 ### Parameters
 
@@ -4703,29 +3131,10 @@ Get email postcards multiple
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailPostcardsMultiple -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_postcards_request = new UltraCartRestApiV2.EmailCommseqPostcardsRequest(); // EmailCommseqPostcardsRequest | Request of postcard uuids
-apiInstance.getEmailPostcardsMultiple(storefront_oid, email_commseq_postcards_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailPostcardsMultiple -->
 
 ### Parameters
 
@@ -4758,29 +3167,9 @@ Get the review status of an email
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailReviewStatus -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-apiInstance.getEmailReviewStatus(storefront_oid, commseq_email_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailReviewStatus -->
 
 ### Parameters
 
@@ -4815,29 +3204,9 @@ Returns one entry per requested email, in the order requested, so a caller polli
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailReviewStatusesMultiple -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_email_review_statuses_request = new UltraCartRestApiV2.EmailCommseqEmailReviewStatusesRequest(); // EmailCommseqEmailReviewStatusesRequest | Request of email uuids
-apiInstance.getEmailReviewStatusesMultiple(storefront_oid, email_commseq_email_review_statuses_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailReviewStatusesMultiple -->
 
 ### Parameters
 
@@ -4870,29 +3239,10 @@ Get email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-apiInstance.getEmailSegment(storefront_oid, email_segment_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSegment -->
 
 ### Parameters
 
@@ -4925,30 +3275,10 @@ Get email segment customers editor URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSegmentCustomerEditorUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-apiInstance.getEmailSegmentCustomerEditorUrl(storefront_oid, email_segment_uuid, email_customer_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSegmentCustomerEditorUrl -->
 
 ### Parameters
 
@@ -4982,33 +3312,10 @@ Get email segment customers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSegmentCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-let opts = {
-  'pageNumber': 56, // Number | 
-  'pageSize': 56 // Number | 
-};
-apiInstance.getEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSegmentCustomers -->
 
 ### Parameters
 
@@ -5043,28 +3350,10 @@ Get email segments
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSegments -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailSegments(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSegments -->
 
 ### Parameters
 
@@ -5096,28 +3385,10 @@ Get email sending domain
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSendingDomain -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let domain = "domain_example"; // String | 
-apiInstance.getEmailSendingDomain(domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSendingDomain -->
 
 ### Parameters
 
@@ -5149,28 +3420,10 @@ Get email sending domain status
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSendingDomainStatus -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let domain = "domain_example"; // String | 
-apiInstance.getEmailSendingDomainStatus(domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSendingDomainStatus -->
 
 ### Parameters
 
@@ -5202,27 +3455,10 @@ Get email sending domains
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSendingDomains -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getEmailSendingDomains((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSendingDomains -->
 
 ### Parameters
 
@@ -5251,28 +3487,10 @@ Get email settings
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailSettings(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSettings -->
 
 ### Parameters
 
@@ -5304,33 +3522,10 @@ Get email sms orders
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailSmsOrders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let opts = {
-  'days': 56 // Number | 
-};
-apiInstance.getEmailSmsOrders(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getEmailSmsOrders -->
 
 ### Parameters
 
@@ -5367,34 +3562,9 @@ Fetches and gunzips the full detail payload of one dispatch-log record (AP5 dril
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailStepDispatchLogDetail -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let opts = {
-  'log_dts': "log_dts_example", // String | 
-  'esp_customer_uuid': "esp_customer_uuid_example" // String | 
-};
-apiInstance.getEmailStepDispatchLogDetail(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailStepDispatchLogDetail -->
 
 ### Parameters
 
@@ -5432,37 +3602,9 @@ Paginated per-step dispatch activity with 90-day depth (AP3/AP4). Rows are lean 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailStepDispatchLogs -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let opts = {
-  'since': "since_example", // String | 
-  'until': "until_example", // String | 
-  'pageNumber': 56, // Number | 
-  'pageSize': 56, // Number | 
-  'includeDetail': true // Boolean | 
-};
-apiInstance.getEmailStepDispatchLogs(storefront_oid, commseq_uuid, commseq_step_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmailStepDispatchLogs -->
 
 ### Parameters
 
@@ -5501,29 +3643,10 @@ Get email template
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailTemplate -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_template_oid = 56; // Number | 
-apiInstance.getEmailTemplate(storefront_oid, email_template_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailTemplate -->
 
 ### Parameters
 
@@ -5556,31 +3679,10 @@ Get email templates
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailTemplates -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'trigger_type': "trigger_type_example" // String | 
-};
-apiInstance.getEmailTemplates(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailTemplates -->
 
 ### Parameters
 
@@ -5613,28 +3715,10 @@ Get a list of third party email providers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailThirdPartyProviders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getEmailThirdPartyProviders(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getEmailThirdPartyProviders -->
 
 ### Parameters
 
@@ -5666,28 +3750,10 @@ Get experiments
 
 ### Example
 
-<!-- UC_START_EXAMPLE getExperiments -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getExperiments(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getExperiments -->
 
 ### Parameters
 
@@ -5719,33 +3785,10 @@ Get file manager directory
 
 ### Example
 
-<!-- UC_START_EXAMPLE getFsDirectory -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let id = 56; // Number | 
-let opts = {
-  'path': "path_example", // String | 
-  'storefront_fs_directory_oid': 56, // Number | 
-  'storefront_theme_oid': 56 // Number | 
-};
-apiInstance.getFsDirectory(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getFsDirectory -->
 
 ### Parameters
 
@@ -5782,29 +3825,10 @@ Get screen recording heatmap
 
 ### Example
 
-<!-- UC_START_EXAMPLE getHeatmap -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let query = new UltraCartRestApiV2.ScreenRecordingHeatmapRequest(); // ScreenRecordingHeatmapRequest | Query
-apiInstance.getHeatmap(storefront_oid, query, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getHeatmap -->
 
 ### Parameters
 
@@ -5839,34 +3863,10 @@ Get screen recording heatmap index
 
 ### Example
 
-<!-- UC_START_EXAMPLE getHeatmapIndex -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let query = new UltraCartRestApiV2.ScreenRecordingHeatmapIndexRequest(); // ScreenRecordingHeatmapIndexRequest | Query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getHeatmapIndex(storefront_oid, query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getHeatmapIndex -->
 
 ### Parameters
 
@@ -5904,31 +3904,10 @@ Obtain a list of property names for a given property type
 
 ### Example
 
-<!-- UC_START_EXAMPLE getHistogramPropertyNames -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'property_type': "property_type_example" // String | 
-};
-apiInstance.getHistogramPropertyNames(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getHistogramPropertyNames -->
 
 ### Parameters
 
@@ -5963,33 +3942,10 @@ Obtain a list of property values for a given property name and type
 
 ### Example
 
-<!-- UC_START_EXAMPLE getHistogramPropertyValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let opts = {
-  'property_name': "property_name_example", // String | 
-  'property_type': "property_type_example", // String | 
-  'limit': 56 // Number | 
-};
-apiInstance.getHistogramPropertyValues(storefront_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getHistogramPropertyValues -->
 
 ### Parameters
 
@@ -6024,27 +3980,10 @@ Get library values used to populate drop down boxes for filtering.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getLibraryFilterValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getLibraryFilterValues((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getLibraryFilterValues -->
 
 ### Parameters
 
@@ -6073,28 +4012,10 @@ Get library item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-apiInstance.getLibraryItem(library_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getLibraryItem -->
 
 ### Parameters
 
@@ -6126,28 +4047,10 @@ Get all published versions for a library item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getLibraryItemPublishedVersions -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-apiInstance.getLibraryItemPublishedVersions(library_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getLibraryItemPublishedVersions -->
 
 ### Parameters
 
@@ -6181,29 +4084,10 @@ Get screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecording -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-apiInstance.getScreenRecording(storefront_oid, screen_recording_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecording -->
 
 ### Parameters
 
@@ -6238,30 +4122,10 @@ Get screen recording page view data
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingPageViewData -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-let screen_recording_page_view_uuid = "screen_recording_page_view_uuid_example"; // String | 
-apiInstance.getScreenRecordingPageViewData(storefront_oid, screen_recording_uuid, screen_recording_page_view_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingPageViewData -->
 
 ### Parameters
 
@@ -6295,29 +4159,10 @@ Get screen recording segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_segment_oid = 56; // Number | 
-apiInstance.getScreenRecordingSegment(storefront_oid, screen_recording_segment_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingSegment -->
 
 ### Parameters
 
@@ -6350,28 +4195,10 @@ Get screen recording segments
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingSegments -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getScreenRecordingSegments(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingSegments -->
 
 ### Parameters
 
@@ -6403,28 +4230,10 @@ Get screen recording settings
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getScreenRecordingSettings(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingSettings -->
 
 ### Parameters
 
@@ -6458,28 +4267,10 @@ Get tags used by screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingTags -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getScreenRecordingTags(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingTags -->
 
 ### Parameters
 
@@ -6513,34 +4304,10 @@ Query screen recordings
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingsByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let query = new UltraCartRestApiV2.ScreenRecordingQueryRequest(); // ScreenRecordingQueryRequest | Query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getScreenRecordingsByQuery(storefront_oid, query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingsByQuery -->
 
 ### Parameters
 
@@ -6578,34 +4345,10 @@ Get screen recordings by segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE getScreenRecordingsBySegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_segment_oid = 56; // Number | 
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getScreenRecordingsBySegment(storefront_oid, screen_recording_segment_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getScreenRecordingsBySegment -->
 
 ### Parameters
 
@@ -6643,30 +4386,10 @@ Retrieves the pricing tiers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getStoreFrontPricingTiers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getStoreFrontPricingTiers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getStoreFrontPricingTiers -->
 
 ### Parameters
 
@@ -6698,27 +4421,10 @@ Get storefronts (internal use only for security reasons)
 
 ### Example
 
-<!-- UC_START_EXAMPLE getStoreFronts -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getStoreFronts((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getStoreFronts -->
 
 ### Parameters
 
@@ -6747,28 +4453,10 @@ Get thumbnail parameters
 
 ### Example
 
-<!-- UC_START_EXAMPLE getThumbnailParameters -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let thumbnail_parameters = new UltraCartRestApiV2.ThumbnailParametersRequest(); // ThumbnailParametersRequest | Thumbnail Parameters
-apiInstance.getThumbnailParameters(thumbnail_parameters, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getThumbnailParameters -->
 
 ### Parameters
 
@@ -6802,29 +4490,10 @@ Fetch a transactional email
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTransactionEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_id = "email_id_example"; // String | 
-apiInstance.getTransactionEmail(storefront_oid, email_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getTransactionEmail -->
 
 ### Parameters
 
@@ -6859,28 +4528,10 @@ Obtain a list of all transactional emails and return back just their names
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTransactionEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-apiInstance.getTransactionEmailList(storefront_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getTransactionEmailList -->
 
 ### Parameters
 
@@ -6912,29 +4563,10 @@ Get transactional email screenshots
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTransactionEmailScreenshots -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_id = "email_id_example"; // String | 
-apiInstance.getTransactionEmailScreenshots(storefront_oid, email_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getTransactionEmailScreenshots -->
 
 ### Parameters
 
@@ -6967,28 +4599,10 @@ Get Twilio account
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTwilioAccount -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let esp_twilio_uuid = "esp_twilio_uuid_example"; // String | 
-apiInstance.getTwilioAccount(esp_twilio_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getTwilioAccount -->
 
 ### Parameters
 
@@ -7020,27 +4634,10 @@ Get all Twilio accounts
 
 ### Example
 
-<!-- UC_START_EXAMPLE getTwilioAccounts -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getTwilioAccounts((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE getTwilioAccounts -->
 
 ### Parameters
 
@@ -7069,29 +4666,10 @@ Retrieves a S3 url where a file may be uploaded. Once uploaded, use uploadFsFile
 
 ### Example
 
-<!-- UC_START_EXAMPLE getUploadFsFileUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let id = 56; // Number | 
-let extension = "extension_example"; // String | 
-apiInstance.getUploadFsFileUrl(id, extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getUploadFsFileUrl -->
 
 ### Parameters
 
@@ -7124,29 +4702,10 @@ Globally unsubscribe a customer
 
 ### Example
 
-<!-- UC_START_EXAMPLE globalUnsubscribe -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let unsubscribe = new UltraCartRestApiV2.EmailGlobalUnsubscribeRequest(); // EmailGlobalUnsubscribeRequest | Unsubscribe
-apiInstance.globalUnsubscribe(storefront_oid, unsubscribe, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE globalUnsubscribe -->
 
 ### Parameters
 
@@ -7179,29 +4738,10 @@ Import a third party provider list
 
 ### Example
 
-<!-- UC_START_EXAMPLE importEmailThirdPartyProviderList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let import_request = new UltraCartRestApiV2.EmailThirdPartyListImportRequest(); // EmailThirdPartyListImportRequest | lists to import
-apiInstance.importEmailThirdPartyProviderList(storefront_oid, import_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE importEmailThirdPartyProviderList -->
 
 ### Parameters
 
@@ -7234,29 +4774,10 @@ Insert email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailCampaign -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
-apiInstance.insertEmailCampaign(storefront_oid, email_campaign, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailCampaign -->
 
 ### Parameters
 
@@ -7289,29 +4810,10 @@ Insert email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailCampaignFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_folder = new UltraCartRestApiV2.EmailCampaignFolder(); // EmailCampaignFolder | Email campaign folder
-apiInstance.insertEmailCampaignFolder(storefront_oid, email_campaign_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailCampaignFolder -->
 
 ### Parameters
 
@@ -7344,29 +4846,10 @@ Insert email commseq
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailCommseq -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
-apiInstance.insertEmailCommseq(storefront_oid, email_commseq, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailCommseq -->
 
 ### Parameters
 
@@ -7399,29 +4882,10 @@ Insert email email
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_email = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email email
-apiInstance.insertEmailEmail(storefront_oid, email_commseq_email, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailEmail -->
 
 ### Parameters
 
@@ -7454,29 +4918,10 @@ Insert email flow
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailFlow -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
-apiInstance.insertEmailFlow(storefront_oid, email_flow, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailFlow -->
 
 ### Parameters
 
@@ -7509,29 +4954,10 @@ Insert email flow folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailFlowFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_folder = new UltraCartRestApiV2.EmailFlowFolder(); // EmailFlowFolder | Email flow folder
-apiInstance.insertEmailFlowFolder(storefront_oid, email_flow_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailFlowFolder -->
 
 ### Parameters
 
@@ -7564,29 +4990,10 @@ Insert email list
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
-apiInstance.insertEmailList(storefront_oid, email_list, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailList -->
 
 ### Parameters
 
@@ -7619,29 +5026,10 @@ Insert email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailListSegmentFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_segment_folder = new UltraCartRestApiV2.EmailListSegmentFolder(); // EmailListSegmentFolder | Email campaign folder
-apiInstance.insertEmailListSegmentFolder(storefront_oid, email_list_segment_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -7674,29 +5062,10 @@ Insert email postcard
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailPostcard -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_postcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email postcard
-apiInstance.insertEmailPostcard(storefront_oid, email_commseq_postcard, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailPostcard -->
 
 ### Parameters
 
@@ -7729,29 +5098,10 @@ Insert email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
-apiInstance.insertEmailSegment(storefront_oid, email_segment, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertEmailSegment -->
 
 ### Parameters
 
@@ -7784,29 +5134,10 @@ Insert screen recording segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertScreenRecordingSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let segment = new UltraCartRestApiV2.ScreenRecordingSegment(); // ScreenRecordingSegment | Segment
-apiInstance.insertScreenRecordingSegment(storefront_oid, segment, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE insertScreenRecordingSegment -->
 
 ### Parameters
 
@@ -7841,30 +5172,10 @@ Update a page content attribute, creating it new if it does not yet exist.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertUpdatePageContentAttribute -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let page_oid = 56; // Number | The page oid to modify.
-let page_attribute = new UltraCartRestApiV2.StoreFrontPageContentAttribute(); // StoreFrontPageContentAttribute | Page content attribute to upsert
-apiInstance.insertUpdatePageContentAttribute(storefront_oid, page_oid, page_attribute, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertUpdatePageContentAttribute -->
 
 ### Parameters
 
@@ -7898,29 +5209,10 @@ Prepare download of email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE prepareDownloadEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-apiInstance.prepareDownloadEmailSegment(storefront_oid, email_segment_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE prepareDownloadEmailSegment -->
 
 ### Parameters
 
@@ -7953,29 +5245,10 @@ Publish library item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE publishLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-let publish_library_request = new UltraCartRestApiV2.PublishLibraryItemRequest(); // PublishLibraryItemRequest | Publish library item request
-apiInstance.publishLibraryItem(library_item_oid, publish_library_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE publishLibraryItem -->
 
 ### Parameters
 
@@ -8008,31 +5281,10 @@ Purchase public library item, which creates a copy of the item in your personal 
 
 ### Example
 
-<!-- UC_START_EXAMPLE purchaseLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-let opts = {
-  'storefront_oid': 56 // Number | 
-};
-apiInstance.purchaseLibraryItem(library_item_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE purchaseLibraryItem -->
 
 ### Parameters
 
@@ -8065,30 +5317,10 @@ Release email communication sequence customers waiting at the specified step
 
 ### Example
 
-<!-- UC_START_EXAMPLE releaseEmailCommseqStepWaiting -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-apiInstance.releaseEmailCommseqStepWaiting(storefront_oid, commseq_uuid, commseq_step_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE releaseEmailCommseqStepWaiting -->
 
 ### Parameters
 
@@ -8122,29 +5354,10 @@ Reset email commseq rate limiters (only callable by UltraCart Support)
 
 ### Example
 
-<!-- UC_START_EXAMPLE resetEmailCommseqRateLimiters -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-apiInstance.resetEmailCommseqRateLimiters(storefront_oid, commseq_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE resetEmailCommseqRateLimiters -->
 
 ### Parameters
 
@@ -8177,30 +5390,10 @@ Request a review of an email
 
 ### Example
 
-<!-- UC_START_EXAMPLE review -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let email_commseq_email_review_request = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email review request
-apiInstance.review(storefront_oid, commseq_email_uuid, email_commseq_email_review_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE review -->
 
 ### Parameters
 
@@ -8234,34 +5427,10 @@ Searches for all matching values
 
 ### Example
 
-<!-- UC_START_EXAMPLE search -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  'category': "category_example", // String | 
-  'matches': "matches_example", // String | 
-  'storefront_oid': "storefront_oid_example", // String | 
-  'max_hits': 56, // Number | 
-  'subcategory': "subcategory_example" // String | 
-};
-apiInstance.search(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE search -->
 
 ### Parameters
 
@@ -8297,28 +5466,10 @@ Searches for all matching values (using POST)
 
 ### Example
 
-<!-- UC_START_EXAMPLE search2 -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let lookup_request = new UltraCartRestApiV2.LookupRequest(); // LookupRequest | LookupRequest
-apiInstance.search2(lookup_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE search2 -->
 
 ### Parameters
 
@@ -8350,32 +5501,10 @@ Search email list customers
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchEmailListCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let opts = {
-  'startsWith': "startsWith_example" // String | 
-};
-apiInstance.searchEmailListCustomers(storefront_oid, email_list_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchEmailListCustomers -->
 
 ### Parameters
 
@@ -8409,32 +5538,10 @@ Search email segment customers
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchEmailSegmentCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-let opts = {
-  'startsWith': "startsWith_example" // String | 
-};
-apiInstance.searchEmailSegmentCustomers(storefront_oid, email_segment_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchEmailSegmentCustomers -->
 
 ### Parameters
 
@@ -8470,33 +5577,10 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchLibraryItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
-let opts = {
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.searchLibraryItems(item_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchLibraryItems -->
 
 ### Parameters
 
@@ -8533,33 +5617,10 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchPublishedItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
-let opts = {
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.searchPublishedItems(item_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchPublishedItems -->
 
 ### Parameters
 
@@ -8596,33 +5657,10 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchReviewItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
-let opts = {
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.searchReviewItems(item_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchReviewItems -->
 
 ### Parameters
 
@@ -8659,33 +5697,10 @@ Retrieves a library items based on a query object.  If no parameters are specifi
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchSharedItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item_query = new UltraCartRestApiV2.LibraryItemQuery(); // LibraryItemQuery | Item query
-let opts = {
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the library items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.searchSharedItems(item_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE searchSharedItems -->
 
 ### Parameters
 
@@ -8720,30 +5735,10 @@ Send email test
 
 ### Example
 
-<!-- UC_START_EXAMPLE sendEmailTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let email_commseq_email_test_request = new UltraCartRestApiV2.EmailCommseqEmailSendTestRequest(); // EmailCommseqEmailSendTestRequest | Email commseq email test request
-apiInstance.sendEmailTest(storefront_oid, commseq_email_uuid, email_commseq_email_test_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE sendEmailTest -->
 
 ### Parameters
 
@@ -8777,30 +5772,10 @@ Send postcard test
 
 ### Example
 
-<!-- UC_START_EXAMPLE sendPostcardTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
-let email_commseq_postcard_test_request = new UltraCartRestApiV2.EmailCommseqPostcardSendTestRequest(); // EmailCommseqPostcardSendTestRequest | Email commseq email test request
-apiInstance.sendPostcardTest(storefront_oid, commseq_postcard_uuid, email_commseq_postcard_test_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE sendPostcardTest -->
 
 ### Parameters
 
@@ -8834,31 +5809,10 @@ Send SMS test
 
 ### Example
 
-<!-- UC_START_EXAMPLE sendSmsTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let commseq_step_uuid = "commseq_step_uuid_example"; // String | 
-let email_commseq_sms_test_request = new UltraCartRestApiV2.EmailCommseqSmsSendTestRequest(); // EmailCommseqSmsSendTestRequest | Email commseq sms test request
-apiInstance.sendSmsTest(storefront_oid, commseq_uuid, commseq_step_uuid, email_commseq_sms_test_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE sendSmsTest -->
 
 ### Parameters
 
@@ -8893,29 +5847,10 @@ Send webhook test
 
 ### Example
 
-<!-- UC_START_EXAMPLE sendWebhookTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_commseq_webhook_test_request = new UltraCartRestApiV2.EmailCommseqWebhookSendTestRequest(); // EmailCommseqWebhookSendTestRequest | Email commseq webhook test request
-apiInstance.sendWebhookTest(storefront_oid, email_commseq_webhook_test_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE sendWebhookTest -->
 
 ### Parameters
 
@@ -8948,30 +5883,10 @@ Sequence test
 
 ### Example
 
-<!-- UC_START_EXAMPLE sequenceTest -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let email_commseq_sequence_test_request = new UltraCartRestApiV2.EmailCommseqSequenceTestRequest(); // EmailCommseqSequenceTestRequest | Commseq test request
-apiInstance.sequenceTest(storefront_oid, commseq_uuid, email_commseq_sequence_test_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE sequenceTest -->
 
 ### Parameters
 
@@ -9005,29 +5920,10 @@ Start email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE startEmailCampaign -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_uuid = "email_campaign_uuid_example"; // String | 
-apiInstance.startEmailCampaign(storefront_oid, email_campaign_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE startEmailCampaign -->
 
 ### Parameters
 
@@ -9060,30 +5956,10 @@ Subscribe customers to email list
 
 ### Example
 
-<!-- UC_START_EXAMPLE subscribeToEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let customers = [new UltraCartRestApiV2.EmailCustomer()]; // [EmailCustomer] | Customers
-apiInstance.subscribeToEmailList(storefront_oid, email_list_uuid, customers, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE subscribeToEmailList -->
 
 ### Parameters
 
@@ -9117,29 +5993,10 @@ Sunset email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE sunsetEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-apiInstance.sunsetEmailSegment(storefront_oid, email_segment_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE sunsetEmailSegment -->
 
 ### Parameters
 
@@ -9174,29 +6031,10 @@ Remove favorite flag on screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE unfavoriteScreenRecording -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-apiInstance.unfavoriteScreenRecording(storefront_oid, screen_recording_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE unfavoriteScreenRecording -->
 
 ### Parameters
 
@@ -9229,30 +6067,10 @@ Update email campaign
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailCampaign -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_uuid = "email_campaign_uuid_example"; // String | 
-let email_campaign = new UltraCartRestApiV2.EmailCampaign(); // EmailCampaign | Email campaign
-apiInstance.updateEmailCampaign(storefront_oid, email_campaign_uuid, email_campaign, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailCampaign -->
 
 ### Parameters
 
@@ -9286,30 +6104,10 @@ Update email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailCampaignFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_campaign_folder_uuid = "email_campaign_folder_uuid_example"; // String | 
-let email_campaign_folder = new UltraCartRestApiV2.EmailCampaignFolder(); // EmailCampaignFolder | Email campaign folder
-apiInstance.updateEmailCampaignFolder(storefront_oid, email_campaign_folder_uuid, email_campaign_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailCampaignFolder -->
 
 ### Parameters
 
@@ -9343,30 +6141,10 @@ Update email commseq
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailCommseq -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_uuid = "commseq_uuid_example"; // String | 
-let email_commseq = new UltraCartRestApiV2.EmailCommseq(); // EmailCommseq | Email commseq
-apiInstance.updateEmailCommseq(storefront_oid, commseq_uuid, email_commseq, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailCommseq -->
 
 ### Parameters
 
@@ -9400,30 +6178,10 @@ Update email customer
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_customer_uuid = "email_customer_uuid_example"; // String | 
-let email_customer = new UltraCartRestApiV2.EmailCustomer(); // EmailCustomer | Email customer
-apiInstance.updateEmailCustomer(storefront_oid, email_customer_uuid, email_customer, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailCustomer -->
 
 ### Parameters
 
@@ -9457,30 +6215,10 @@ Update email email
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
-let email_commseq_email = new UltraCartRestApiV2.EmailCommseqEmail(); // EmailCommseqEmail | Email commseq email
-apiInstance.updateEmailEmail(storefront_oid, commseq_email_uuid, email_commseq_email, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailEmail -->
 
 ### Parameters
 
@@ -9514,30 +6252,10 @@ Update email flow
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailFlow -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_uuid = "email_flow_uuid_example"; // String | 
-let email_flow = new UltraCartRestApiV2.EmailFlow(); // EmailFlow | Email flow
-apiInstance.updateEmailFlow(storefront_oid, email_flow_uuid, email_flow, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailFlow -->
 
 ### Parameters
 
@@ -9571,30 +6289,10 @@ Update email flow folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailFlowFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_flow_folder_uuid = "email_flow_folder_uuid_example"; // String | 
-let email_flow_folder = new UltraCartRestApiV2.EmailFlowFolder(); // EmailFlowFolder | Email flow folder
-apiInstance.updateEmailFlowFolder(storefront_oid, email_flow_folder_uuid, email_flow_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailFlowFolder -->
 
 ### Parameters
 
@@ -9628,28 +6326,10 @@ Update email global settings
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailGlobalSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let global_settings = new UltraCartRestApiV2.EmailGlobalSettings(); // EmailGlobalSettings | global settings request
-apiInstance.updateEmailGlobalSettings(global_settings, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailGlobalSettings -->
 
 ### Parameters
 
@@ -9681,30 +6361,10 @@ Update email list
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_uuid = "email_list_uuid_example"; // String | 
-let email_list = new UltraCartRestApiV2.EmailList(); // EmailList | Email list
-apiInstance.updateEmailList(storefront_oid, email_list_uuid, email_list, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailList -->
 
 ### Parameters
 
@@ -9738,30 +6398,10 @@ Update email campaign folder
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailListSegmentFolder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_list_segment_folder_uuid = "email_list_segment_folder_uuid_example"; // String | 
-let email_list_segment_folder = new UltraCartRestApiV2.EmailListSegmentFolder(); // EmailListSegmentFolder | Email campaign folder
-apiInstance.updateEmailListSegmentFolder(storefront_oid, email_list_segment_folder_uuid, email_list_segment_folder, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailListSegmentFolder -->
 
 ### Parameters
 
@@ -9795,29 +6435,10 @@ Update email plan
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailPlan -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let settings = new UltraCartRestApiV2.EmailPlan(); // EmailPlan | plan request
-apiInstance.updateEmailPlan(storefront_oid, settings, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailPlan -->
 
 ### Parameters
 
@@ -9850,30 +6471,10 @@ Update email postcard
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailPostcard -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let commseq_postcard_uuid = "commseq_postcard_uuid_example"; // String | 
-let email_commseq_postcard = new UltraCartRestApiV2.EmailCommseqPostcard(); // EmailCommseqPostcard | Email commseq postcard
-apiInstance.updateEmailPostcard(storefront_oid, commseq_postcard_uuid, email_commseq_postcard, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailPostcard -->
 
 ### Parameters
 
@@ -9907,30 +6508,10 @@ Update email segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_segment_uuid = "email_segment_uuid_example"; // String | 
-let email_segment = new UltraCartRestApiV2.EmailSegment(); // EmailSegment | Email segment
-apiInstance.updateEmailSegment(storefront_oid, email_segment_uuid, email_segment, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailSegment -->
 
 ### Parameters
 
@@ -9964,29 +6545,10 @@ Update email sending domain
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailSendingDomain -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let domain = "domain_example"; // String | 
-let email_domain = new UltraCartRestApiV2.EmailDomain(); // EmailDomain | EmailDomain
-apiInstance.updateEmailSendingDomain(domain, email_domain, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
 ```
 
-<!-- UC_END_EXAMPLE updateEmailSendingDomain -->
 
 ### Parameters
 
@@ -10019,29 +6581,10 @@ Update email settings
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateEmailSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let settings = new UltraCartRestApiV2.EmailSettings(); // EmailSettings | settings request
-apiInstance.updateEmailSettings(storefront_oid, settings, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateEmailSettings -->
 
 ### Parameters
 
@@ -10074,30 +6617,10 @@ Update experiment
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateExperiment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let storefront_experiment_oid = 56; // Number | 
-let experiment = new UltraCartRestApiV2.Experiment(); // Experiment | Experiment
-apiInstance.updateExperiment(storefront_oid, storefront_experiment_oid, experiment, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateExperiment -->
 
 ### Parameters
 
@@ -10131,29 +6654,10 @@ Update library item. Note that only certain fields may be updated via this metho
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateLibraryItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let library_item_oid = 56; // Number | 
-let library_item = new UltraCartRestApiV2.LibraryItem(); // LibraryItem | Library item
-apiInstance.updateLibraryItem(library_item_oid, library_item, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateLibraryItem -->
 
 ### Parameters
 
@@ -10188,30 +6692,10 @@ Update merchant notes on a screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateScreenRecordingMerchantNotes -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-let merchant_notes_request = new UltraCartRestApiV2.ScreenRecordingMerchantNotesRequest(); // ScreenRecordingMerchantNotesRequest | Merchant Notes
-apiInstance.updateScreenRecordingMerchantNotes(storefront_oid, screen_recording_uuid, merchant_notes_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateScreenRecordingMerchantNotes -->
 
 ### Parameters
 
@@ -10245,30 +6729,10 @@ Update screen recording segment
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateScreenRecordingSegment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_segment_oid = 56; // Number | 
-let segment = new UltraCartRestApiV2.ScreenRecordingSegment(); // ScreenRecordingSegment | Segment
-apiInstance.updateScreenRecordingSegment(storefront_oid, screen_recording_segment_oid, segment, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateScreenRecordingSegment -->
 
 ### Parameters
 
@@ -10302,29 +6766,10 @@ Update screen recording settings
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateScreenRecordingSettings -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let settings = new UltraCartRestApiV2.ScreenRecordingSettings(); // ScreenRecordingSettings | Settings
-apiInstance.updateScreenRecordingSettings(storefront_oid, settings, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateScreenRecordingSettings -->
 
 ### Parameters
 
@@ -10359,30 +6804,10 @@ Update tags on a screen recording
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateScreenRecordingTags -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let screen_recording_uuid = "screen_recording_uuid_example"; // String | 
-let tags = new UltraCartRestApiV2.ScreenRecordingTagsRequest(); // ScreenRecordingTagsRequest | Tags
-apiInstance.updateScreenRecordingTags(storefront_oid, screen_recording_uuid, tags, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateScreenRecordingTags -->
 
 ### Parameters
 
@@ -10418,30 +6843,10 @@ Updates a transactional email
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTransactionEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let storefront_oid = 56; // Number | 
-let email_id = "email_id_example"; // String | 
-let transaction_email = new UltraCartRestApiV2.TransactionEmail(); // TransactionEmail | TransactionEmail
-apiInstance.updateTransactionEmail(storefront_oid, email_id, transaction_email, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateTransactionEmail -->
 
 ### Parameters
 
@@ -10475,29 +6880,10 @@ Update Twilio account
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateTwilioAccount -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let esp_twilio_uuid = "esp_twilio_uuid_example"; // String | 
-let twilio = new UltraCartRestApiV2.Twilio(); // Twilio | Twilio
-apiInstance.updateTwilioAccount(esp_twilio_uuid, twilio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Please see the README.md in this directory for an explanation about StoreFrontApi samples.
 ```
 
-<!-- UC_END_EXAMPLE updateTwilioAccount -->
 
 ### Parameters
 
@@ -10530,29 +6916,10 @@ This is the last step in uploading a file after 1) calling getUploadFsFileUrl an
 
 ### Example
 
-<!-- UC_START_EXAMPLE uploadFsFile -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let id = 56; // Number | 
-let upload_request = new UltraCartRestApiV2.FileManagerUploadRequest(); // FileManagerUploadRequest | UploadRequest
-apiInstance.uploadFsFile(id, upload_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE uploadFsFile -->
 
 ### Parameters
 
@@ -10585,28 +6952,10 @@ Validate AWS Event Ruler
 
 ### Example
 
-<!-- UC_START_EXAMPLE validateRuler -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.StorefrontApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let ruler_validate_request = new UltraCartRestApiV2.RulerValidationRequest(); // RulerValidationRequest | Ruler Validate Request
-apiInstance.validateRuler(ruler_validate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE validateRuler -->
 
 ### Parameters
 

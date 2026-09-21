@@ -23,29 +23,10 @@ Retrieve an integration logs from the account based identifiers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getIntegrationLog -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.IntegrationLogApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pk = "pk_example"; // String | 
-let sk = "sk_example"; // String | 
-apiInstance.getIntegrationLog(pk, sk, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getIntegrationLog -->
 
 ### Parameters
 
@@ -80,30 +61,10 @@ Retrieve an integration log file from the account based identifiers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getIntegrationLogFile -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.IntegrationLogApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pk = "pk_example"; // String | 
-let sk = "sk_example"; // String | 
-let uuid = "uuid_example"; // String | 
-apiInstance.getIntegrationLogFile(pk, sk, uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getIntegrationLogFile -->
 
 ### Parameters
 
@@ -139,30 +100,10 @@ Retrieve an integration log file from the account based identifiers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getIntegrationLogFilePdf -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.IntegrationLogApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pk = "pk_example"; // String | 
-let sk = "sk_example"; // String | 
-let uuid = "uuid_example"; // String | 
-apiInstance.getIntegrationLogFilePdf(pk, sk, uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getIntegrationLogFilePdf -->
 
 ### Parameters
 
@@ -198,28 +139,10 @@ Retrieves a set of integration log summaries from the account based on a query o
 
 ### Example
 
-<!-- UC_START_EXAMPLE getIntegrationLogSummariesQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.IntegrationLogApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let integration_log_summaries_query = new UltraCartRestApiV2.IntegrationLogSummaryQueryRequest(); // IntegrationLogSummaryQueryRequest | Integration log summaries query
-apiInstance.getIntegrationLogSummariesQuery(integration_log_summaries_query, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getIntegrationLogSummariesQuery -->
 
 ### Parameters
 
@@ -253,33 +176,10 @@ Retrieves a set of integration logs from the account based on a query object.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getIntegrationLogsQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.IntegrationLogApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let integration_log_query = new UltraCartRestApiV2.IntegrationLogQueryRequest(); // IntegrationLogQueryRequest | Integration log query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 500)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getIntegrationLogsQuery(integration_log_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getIntegrationLogsQuery -->
 
 ### Parameters
 

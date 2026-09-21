@@ -24,28 +24,42 @@ Adds one email address to the fraud decline list for this merchant account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE declineEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * declineEmail is a shortcut for telling UltraCart to decline orders from a specific email
+ * address. It is the quick alternative to building a full "address email" fraud rule by hand.
+ */
+export async function declineEmail() {
+  console.log(`--- ${declineEmail.name} ---`);
 
-let fraud_decline_emails_request = new UltraCartRestApiV2.FraudDeclineEmailRequest(); // FraudDeclineEmailRequest | Fraud decline emails request
-apiInstance.declineEmail(fraud_decline_emails_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
+  const declineRequest = {
+    email: "chargeback-charlie@example.com",
+  };
+
+  try {
+    await new Promise((resolve, reject) => {
+      fraudApi.declineEmail(declineRequest, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    console.log(`Declined email: ${declineRequest.email}`);
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// declineEmail().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE declineEmail -->
 
 ### Parameters
 
@@ -79,28 +93,63 @@ Deletes a fraud rule for this merchant account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteFraudRule -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * deleteFraudRule removes a fraud rule by its oid.
+ *
+ * To keep this sample self-contained it first inserts a throwaway rule, then deletes it using
+ * the oid returned from the insert. In your own code you would already have the oid of the rule
+ * you want to remove (for example from searchFraudRules).
+ */
+export async function deleteFraudRule() {
+  console.log(`--- ${deleteFraudRule.name} ---`);
 
-let fraud_rule_oid = 56; // Number | 
-apiInstance.deleteFraudRule(fraud_rule_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
+  try {
+    // Insert a rule so we have something to delete.
+    const rule = {
+      rule_type: "credit card single transaction exceeds",
+      amount_threshold: 2500.0,
+      failure_action: "Flag For Review",
+      auto_note: "Temporary rule created by the deleteFraudRule sample",
+    };
+
+    const insertResponse = await new Promise((resolve, reject) => {
+      fraudApi.insertFraudRule(rule, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    const fraudRuleOid = insertResponse.fraud_rule.fraud_rule_oid;
+    console.log(`Inserted temporary rule, oid = ${fraudRuleOid}`);
+
+    // Now delete it.
+    await new Promise((resolve, reject) => {
+      fraudApi.deleteFraudRule(fraudRuleOid, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    console.log(`Deleted fraud rule oid = ${fraudRuleOid}`);
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// deleteFraudRule().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE deleteFraudRule -->
 
 ### Parameters
 
@@ -134,28 +183,58 @@ Creates one or more fraud rules for this merchant account derived from an existi
 
 ### Example
 
-<!-- UC_START_EXAMPLE establishFraudRulesFromOrder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * establishFraudRulesFromOrder is a shortcut that derives fraud rules from an existing order.
+ * Point it at an order you have identified as fraudulent and tell it which attributes of that
+ * order to turn into rules: the email, the credit card, the ip address, and/or the address.
+ * It creates the matching rules and returns them. This is the fast way to "block everything
+ * associated with this bad order" instead of building each rule by hand.
+ *
+ * Not every filter produces a rule; the order must actually have that attribute. For example an
+ * order with no stored card data will not produce a credit card rule.
+ */
+export async function establishFraudRulesFromOrder() {
+  console.log(`--- ${establishFraudRulesFromOrder.name} ---`);
 
-let fraud_rule_from_order_request = new UltraCartRestApiV2.FraudRuleFromOrderRequest(); // FraudRuleFromOrderRequest | Fraud rule from order request
-apiInstance.establishFraudRulesFromOrder(fraud_rule_from_order_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  const request = {
+    order_id: "DEMO-0009104434",
+    establish_email_filter: true,
+    establish_card_filter: true,
+    establish_ip_filter: true,
+    establish_address_filter: true,
+    failure_action: "Flag For Review",
+    auto_note: "Established from fraudulent order DEMO-0009104434",
+  };
+
+  try {
+    const apiResponse = await new Promise((resolve, reject) => {
+      fraudApi.establishFraudRulesFromOrder(request, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    const fraudRules = apiResponse.fraud_rules || [];
+    console.log(`Established ${fraudRules.length} rule(s) from the order:`);
+    fraudRules.forEach((fraudRule) => {
+      console.log(`  oid ${fraudRule.fraud_rule_oid} - ${fraudRule.rule_type} - ${fraudRule.auto_note || ''}`);
+    });
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// establishFraudRulesFromOrder().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE establishFraudRulesFromOrder -->
 
 ### Parameters
 
@@ -189,27 +268,43 @@ Returns the dropdown values required to build valid fraud rule insert and search
 
 ### Example
 
-<!-- UC_START_EXAMPLE getFraudLookupValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * getFraudLookupValues returns the lookup values used when building fraud rules:
+ * the allowed countries, affiliates, ip range types, rule groups, and rule types.
+ * Call this first when constructing a rule so you supply valid values.
+ */
+export async function getFraudLookupValues() {
+  console.log(`--- ${getFraudLookupValues.name} ---`);
 
-apiInstance.getFraudLookupValues((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  try {
+    const apiResponse = await new Promise((resolve, reject) => {
+      fraudApi.getFraudLookupValues(function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    const lookupValues = apiResponse.fraud_lookup_values || {};
+    console.log("Rule types:", lookupValues.rule_types);
+    console.log("Rule groups:", lookupValues.rule_groups);
+    console.log("IP range types:", lookupValues.ip_range_types);
+    console.log("Countries:", lookupValues.countries);
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// getFraudLookupValues().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getFraudLookupValues -->
 
 ### Parameters
 
@@ -240,28 +335,93 @@ Creates a fraud rule for this merchant account. Field names in the request body 
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertFraudRule -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * insertFraudRule creates a single fraud rule. Each rule has a rule_type (what it inspects),
+ * a failure_action (what happens when it matches), and type-specific fields such as an amount
+ * threshold, country code, ip address, or email.
+ *
+ * This sample has some fun and inserts several rules of different types in one run. Call
+ * getFraudLookupValues.js to see every valid rule_type and the other lookup values.
+ */
+export async function insertFraudRule() {
+  console.log(`--- ${insertFraudRule.name} ---`);
 
-let fraud_rule_insert_request = new UltraCartRestApiV2.FraudRuleInsertRequest(); // FraudRuleInsertRequest | Fraud rule insert request
-apiInstance.insertFraudRule(fraud_rule_insert_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  // Build a handful of rules covering different rule types.
+  const rules = [
+    // 1. Decline any order placed with a known-bad email address.
+    {
+      rule_type: "address email",
+      email: "chargeback-charlie@example.com",
+      failure_action: "Decline Transaction",
+      auto_note: "Known chargeback email - decline on sight",
+    },
+    // 2. Flag large single credit card transactions over $1,000 for manual review.
+    {
+      rule_type: "credit card single transaction exceeds",
+      amount_threshold: 1000.0,
+      failure_action: "Flag For Review",
+      auto_note: "Large single transaction - review before shipping",
+    },
+    // 3. Decline orders that ship outside the United States.
+    {
+      rule_type: "address not in country",
+      country_code: "US",
+      failure_action: "Decline Transaction",
+      auto_note: "Domestic shipping only",
+    },
+    // 4. Decline transactions originating from a specific bad IP address.
+    {
+      rule_type: "ip matches",
+      ip_address: "203.0.113.66",
+      ip_range_type: "address",
+      failure_action: "Decline Transaction",
+      auto_note: "Blocked IP address",
+    },
+    // 5. Flag prepaid credit cards for review.
+    {
+      rule_type: "credit card block prepaid",
+      failure_action: "Flag For Review",
+      auto_note: "Prepaid card - take a closer look",
+    },
+    // 6. Flag a customer IP making more than 10 transactions in a single day.
+    {
+      rule_type: "ip daily transaction count exceeds",
+      count_threshold: 10,
+      ip_range_type: "address",
+      user_action: "Attempted",
+      failure_action: "Flag For Review",
+      auto_note: "IP velocity - more than 10 orders in a day",
+    },
+  ];
+
+  try {
+    for (const rule of rules) {
+      const apiResponse = await new Promise((resolve, reject) => {
+        fraudApi.insertFraudRule(rule, function (error, data, response) {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(data, response);
+          }
+        });
+      });
+
+      const created = apiResponse.fraud_rule || {};
+      console.log(`Inserted '${rule.rule_type}' rule, oid = ${created.fraud_rule_oid}`);
+    }
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// insertFraudRule().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE insertFraudRule -->
 
 ### Parameters
 
@@ -295,33 +455,54 @@ Searches fraud rules for this merchant account using semantic filter fields. Pag
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchFraudRules -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.FraudApi(apiClient);
+import { fraudApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * searchFraudRules returns the fraud rules that match the supplied criteria. Every field on the
+ * search request is optional; supply only the ones you want to filter on. Pagination and sort
+ * are passed as options (_limit, _offset, _sort).
+ *
+ * This sample searches for every rule whose action is "Decline Transaction".
+ */
+export async function searchFraudRules() {
+  console.log(`--- ${searchFraudRules.name} ---`);
 
-let fraud_rule_search_request = new UltraCartRestApiV2.FraudRuleSearchRequest(); // FraudRuleSearchRequest | Fraud rule search request
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the fraud rules.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.searchFraudRules(fraud_rule_search_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  const searchRequest = {
+    failure_action: "Decline Transaction",
+  };
+
+  const opts = {
+    _limit: 200,
+    _offset: 0,
+  };
+
+  try {
+    const apiResponse = await new Promise((resolve, reject) => {
+      fraudApi.searchFraudRules(searchRequest, opts, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    const fraudRules = apiResponse.fraud_rules || [];
+    console.log(`Found ${fraudRules.length} rule(s) with action 'Decline Transaction'`);
+    fraudRules.forEach((fraudRule) => {
+      console.log(`  oid ${fraudRule.fraud_rule_oid} - ${fraudRule.rule_type} - ${fraudRule.auto_note || ''}`);
+    });
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// searchFraudRules().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE searchFraudRules -->
 
 ### Parameters
 

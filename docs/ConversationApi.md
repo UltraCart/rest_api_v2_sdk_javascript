@@ -162,29 +162,9 @@ Delete a knowledge base document
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteAgentProfileKnowledgeBaseDocument -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let document_uuid = "document_uuid_example"; // String | 
-apiInstance.deleteAgentProfileKnowledgeBaseDocument(user_id, document_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteAgentProfileKnowledgeBaseDocument -->
 
 ### Parameters
 
@@ -219,29 +199,9 @@ Delete an agent MCP server
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteAgentProfileMcp -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let mcp_server_uuid = "mcp_server_uuid_example"; // String | 
-apiInstance.deleteAgentProfileMcp(user_id, mcp_server_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteAgentProfileMcp -->
 
 ### Parameters
 
@@ -276,28 +236,9 @@ Sets active&#x3D;false on the row and the DDB sync record. The Twilio Activity i
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteAgentStatusConfig -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_status_uuid = "conversation_status_uuid_example"; // String | 
-apiInstance.deleteAgentStatusConfig(conversation_status_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteAgentStatusConfig -->
 
 ### Parameters
 
@@ -331,28 +272,10 @@ Delete a conversation canned message
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteConversationCannedMessage -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_canned_message_oid = 56; // Number | 
-apiInstance.deleteConversationCannedMessage(conversation_canned_message_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
 ```
 
-<!-- UC_END_EXAMPLE deleteConversationCannedMessage -->
 
 ### Parameters
 
@@ -386,28 +309,10 @@ Delete a conversation department
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteDepartment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_department_oid = 56; // Number | 
-apiInstance.deleteDepartment(conversation_department_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteDepartment -->
 
 ### Parameters
 
@@ -441,28 +346,10 @@ Delete a conversation engagement
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteEngagement -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_engagement_oid = 56; // Number | 
-apiInstance.deleteEngagement(conversation_engagement_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deleteEngagement -->
 
 ### Parameters
 
@@ -496,28 +383,9 @@ Delete a pbx address
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxAddress -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAddressUuid = "conversationPbxAddressUuid_example"; // String | 
-apiInstance.deletePbxAddress(conversationPbxAddressUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deletePbxAddress -->
 
 ### Parameters
 
@@ -551,28 +419,10 @@ Delete pbx agent Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxAgentVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.deletePbxAgentVoicemail(recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxAgentVoicemail -->
 
 ### Parameters
 
@@ -606,28 +456,10 @@ Delete a pbx audio
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxAudio -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-apiInstance.deletePbxAudio(conversationPbxAudioUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxAudio -->
 
 ### Parameters
 
@@ -661,28 +493,9 @@ Delete a class of service
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxClassOfService -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let classOfServiceUuid = "classOfServiceUuid_example"; // String | 
-apiInstance.deletePbxClassOfService(classOfServiceUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deletePbxClassOfService -->
 
 ### Parameters
 
@@ -716,28 +529,9 @@ Delete a pbx hardware phone
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxHardwarePhone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxHardwarePhoneUuid = "conversationPbxHardwarePhoneUuid_example"; // String | 
-apiInstance.deletePbxHardwarePhone(conversationPbxHardwarePhoneUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deletePbxHardwarePhone -->
 
 ### Parameters
 
@@ -771,28 +565,10 @@ Delete a pbx menu
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxMenu -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxMenuUuid = "conversationPbxMenuUuid_example"; // String | 
-apiInstance.deletePbxMenu(conversationPbxMenuUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxMenu -->
 
 ### Parameters
 
@@ -826,28 +602,10 @@ Delete a pbx phoneNumber. Only works if deletion_protected is false.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxPhoneNumber -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxPhoneNumberUuid = "conversationPbxPhoneNumberUuid_example"; // String | 
-apiInstance.deletePbxPhoneNumber(conversationPbxPhoneNumberUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxPhoneNumber -->
 
 ### Parameters
 
@@ -881,28 +639,10 @@ Delete a pbx queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxQueue -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxQueueUuid = "conversationPbxQueueUuid_example"; // String | 
-apiInstance.deletePbxQueue(conversationPbxQueueUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxQueue -->
 
 ### Parameters
 
@@ -936,29 +676,10 @@ Delete pbx queue Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxQueueVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_uuid = "queue_uuid_example"; // String | 
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.deletePbxQueueVoicemail(queue_uuid, recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxQueueVoicemail -->
 
 ### Parameters
 
@@ -993,28 +714,10 @@ Delete a pbx timeBased
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxTimeBased -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeBasedUuid = "conversationPbxTimeBasedUuid_example"; // String | 
-apiInstance.deletePbxTimeBased(conversationPbxTimeBasedUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxTimeBased -->
 
 ### Parameters
 
@@ -1048,28 +751,10 @@ Delete a pbx timeRange
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxTimeRange -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeRangeUuid = "conversationPbxTimeRangeUuid_example"; // String | 
-apiInstance.deletePbxTimeRange(conversationPbxTimeRangeUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxTimeRange -->
 
 ### Parameters
 
@@ -1103,28 +788,10 @@ Delete a pbx voicemailMailbox
 
 ### Example
 
-<!-- UC_START_EXAMPLE deletePbxVoicemailMailbox -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxVoicemailMailboxUuid = "conversationPbxVoicemailMailboxUuid_example"; // String | 
-apiInstance.deletePbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE deletePbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -1158,28 +825,9 @@ Delete a pbx audio file owned by the authenticated user
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteUserPbxAudio -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-apiInstance.deleteUserPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteUserPbxAudio -->
 
 ### Parameters
 
@@ -1213,27 +861,10 @@ Called periodically by the conversation API to keep the session alive.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentKeepAlive -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getAgentKeepAlive((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getAgentKeepAlive -->
 
 ### Parameters
 
@@ -1264,27 +895,10 @@ Retrieve the agents profile
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfile -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getAgentProfile((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getAgentProfile -->
 
 ### Parameters
 
@@ -1315,28 +929,9 @@ Retrieve knowledge base documents
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfileKnowledgeBase -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-apiInstance.getAgentProfileKnowledgeBase(user_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentProfileKnowledgeBase -->
 
 ### Parameters
 
@@ -1370,29 +965,9 @@ Retrieve MCP server associated with this agent
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfileMcp -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let mcp_server_uuid = "mcp_server_uuid_example"; // String | 
-apiInstance.getAgentProfileMcp(user_id, mcp_server_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentProfileMcp -->
 
 ### Parameters
 
@@ -1427,29 +1002,9 @@ Get the tools available from the MCP server
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfileMcpTools -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let mcp_server_uuid = "mcp_server_uuid_example"; // String | 
-apiInstance.getAgentProfileMcpTools(user_id, mcp_server_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentProfileMcpTools -->
 
 ### Parameters
 
@@ -1484,28 +1039,9 @@ Retrieve MCP servers associated with this agent
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfileMcps -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-apiInstance.getAgentProfileMcps(user_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentProfileMcps -->
 
 ### Parameters
 
@@ -1539,27 +1075,9 @@ Retrieve the agents profile
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentProfiles -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getAgentProfiles((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentProfiles -->
 
 ### Parameters
 
@@ -1590,27 +1108,9 @@ Returns all custom statuses (active and soft-deactivated) for the merchant.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentStatusConfigs -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getAgentStatusConfigs((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentStatusConfigs -->
 
 ### Parameters
 
@@ -1641,28 +1141,9 @@ Returns ECharts-shaped agent x hour grid for the requested metric (availability,
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentStatusHeatmap -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let heatmap_request = new UltraCartRestApiV2.ConversationAgentStatusHeatmapRequest(); // ConversationAgentStatusHeatmapRequest | Heatmap request
-apiInstance.getAgentStatusHeatmap(heatmap_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentStatusHeatmap -->
 
 ### Parameters
 
@@ -1696,33 +1177,9 @@ Top-line summary: total_agents, avg_available_pct, status_breakdown, per-agent r
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentStatusSummary -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let date_start2 = "date_start_example"; // String | Range start (YYYY-MM-DD)
-let date_end2 = "date_end_example"; // String | Range end (YYYY-MM-DD)
-let opts = {
-  'date_start': "date_start_example", // String | 
-  'date_end': "date_end_example" // String | 
-};
-apiInstance.getAgentStatusSummary(date_start2, date_end2, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentStatusSummary -->
 
 ### Parameters
 
@@ -1759,34 +1216,9 @@ Returns merged status events + PBX calls + chat conversations for the agent on t
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentStatusTimeline -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let agent_user_id = "agent_user_id_example"; // String | 
-let date2 = "date_example"; // String | Day to retrieve (YYYY-MM-DD)
-let opts = {
-  'date': "date_example", // String | 
-  'channel': "channel_example", // String | 
-  'channel2': "channel_example" // String | Restrict to one channel (omit for both)
-};
-apiInstance.getAgentStatusTimeline(agent_user_id, date2, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAgentStatusTimeline -->
 
 ### Parameters
 
@@ -1824,27 +1256,10 @@ Retrieve a JWT to authorize an agent to make a websocket connection.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAgentWebsocketAuthorization -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getAgentWebsocketAuthorization((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getAgentWebsocketAuthorization -->
 
 ### Parameters
 
@@ -1875,31 +1290,10 @@ Retrieve a conversation including the participants and messages
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-let opts = {
-  'limit': 56 // Number | 
-};
-apiInstance.getConversation(conversation_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversation -->
 
 ### Parameters
 
@@ -1934,27 +1328,10 @@ Retrieve a list of canned messages ordered by short_code
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationCannedMessages -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationCannedMessages((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationCannedMessages -->
 
 ### Parameters
 
@@ -1985,28 +1362,10 @@ Get a webchat conversation context
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationContext -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-apiInstance.getConversationContext(conversation_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationContext -->
 
 ### Parameters
 
@@ -2040,27 +1399,10 @@ Retrieve a list of possible department members
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationDepartmentMemberList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationDepartmentMemberList((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationDepartmentMemberList -->
 
 ### Parameters
 
@@ -2091,27 +1433,10 @@ Retrieve a list of departments ordered by name
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationDepartments -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationDepartments((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationDepartments -->
 
 ### Parameters
 
@@ -2142,28 +1467,10 @@ Retrieve an engagement
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationEngagement -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_engagement_oid = 56; // Number | 
-apiInstance.getConversationEngagement(conversation_engagement_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationEngagement -->
 
 ### Parameters
 
@@ -2197,27 +1504,10 @@ Retrieve a list of engagements ordered by name
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationEngagements -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationEngagements((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationEngagements -->
 
 ### Parameters
 
@@ -2248,28 +1538,9 @@ Retrieve an item with sparse variations populated
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationItemVariations -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_id = "merchant_item_id_example"; // String | 
-apiInstance.getConversationItemVariations(merchant_item_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getConversationItemVariations -->
 
 ### Parameters
 
@@ -2303,29 +1574,9 @@ Get a pre-signed conversation knowledge base document upload URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationKnowledgeBaseDocumentUploadUrl -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let extension = "extension_example"; // String | 
-apiInstance.getConversationKnowledgeBaseDocumentUploadUrl(user_id, extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getConversationKnowledgeBaseDocumentUploadUrl -->
 
 ### Parameters
 
@@ -2360,32 +1611,10 @@ Retrieve conversation messages since a particular time
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationMessages -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-let since = 789; // Number | 
-let opts = {
-  'limit': 56 // Number | 
-};
-apiInstance.getConversationMessages(conversation_uuid, since, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationMessages -->
 
 ### Parameters
 
@@ -2421,28 +1650,10 @@ Get a presigned conversation multimedia upload URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationMultimediaUploadUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let extension = "extension_example"; // String | 
-apiInstance.getConversationMultimediaUploadUrl(extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationMultimediaUploadUrl -->
 
 ### Parameters
 
@@ -2476,28 +1687,10 @@ Get a pre-signed conversation multimedia upload URL
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationPbxAudioUploadUrl -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let extension = "extension_example"; // String | 
-apiInstance.getConversationPbxAudioUploadUrl(extension, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationPbxAudioUploadUrl -->
 
 ### Parameters
 
@@ -2531,28 +1724,10 @@ Retrieves all the orders, auto orders, and customer profile for a given phone nu
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationPbxCustomerSnapshot -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_customer_snapshot_request = new UltraCartRestApiV2.ConversationPbxCustomerSnapshotRequest(); // ConversationPbxCustomerSnapshotRequest | Conversation pbx customer snapshot request
-apiInstance.getConversationPbxCustomerSnapshot(pbx_customer_snapshot_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationPbxCustomerSnapshot -->
 
 ### Parameters
 
@@ -2586,27 +1761,10 @@ Retrieve conversation permissions
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationPermissions -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationPermissions((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationPermissions -->
 
 ### Parameters
 
@@ -2637,27 +1795,10 @@ Retrieve a conversation webchat queue statuses including agent status and queue 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationWebchatQueueStatuses -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getConversationWebchatQueueStatuses((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationWebchatQueueStatuses -->
 
 ### Parameters
 
@@ -2688,33 +1829,10 @@ Retrieve a list of conversation summaries that are ordered newest to oldest, inc
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversations -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  'medium': "medium_example", // String | 
-  'before': "before_example", // String | 
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0 // Number | Pagination of the record set.  Offset is a zero based index.
-};
-apiInstance.getConversations(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversations -->
 
 ### Parameters
 
@@ -2751,28 +1869,10 @@ Retrieve a list of matching terms for a search field
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationsAutocomplete -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let autocomplete_request = new UltraCartRestApiV2.ConversationAutocompleteRequest(); // ConversationAutocompleteRequest | Autocomplete Request
-apiInstance.getConversationsAutocomplete(autocomplete_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationsAutocomplete -->
 
 ### Parameters
 
@@ -2806,28 +1906,10 @@ Search conversations
 
 ### Example
 
-<!-- UC_START_EXAMPLE getConversationsSearch -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let search_request = new UltraCartRestApiV2.ConversationSearchRequest(); // ConversationSearchRequest | Search Request
-apiInstance.getConversationsSearch(search_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getConversationsSearch -->
 
 ### Parameters
 
@@ -2861,27 +1943,10 @@ Get location data for engagement configuration
 
 ### Example
 
-<!-- UC_START_EXAMPLE getLocationsForEngagement -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getLocationsForEngagement((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getLocationsForEngagement -->
 
 ### Parameters
 
@@ -2912,28 +1977,9 @@ Retrieve a pbx address
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAddress -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAddressUuid = "conversationPbxAddressUuid_example"; // String | 
-apiInstance.getPbxAddress(conversationPbxAddressUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxAddress -->
 
 ### Parameters
 
@@ -2967,27 +2013,9 @@ Retrieve pbx addresses
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAddresses -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxAddresses((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxAddresses -->
 
 ### Parameters
 
@@ -3018,28 +2046,10 @@ Retrieve a pbx agent
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAgent -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAgentUuid = "conversationPbxAgentUuid_example"; // String | 
-apiInstance.getPbxAgent(conversationPbxAgentUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAgent -->
 
 ### Parameters
 
@@ -3073,28 +2083,10 @@ Retrieve pbx agent Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAgentVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.getPbxAgentVoicemail(recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAgentVoicemail -->
 
 ### Parameters
 
@@ -3128,27 +2120,10 @@ Retrieve pbx agent Voicemails
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAgentVoicemails -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxAgentVoicemails((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAgentVoicemails -->
 
 ### Parameters
 
@@ -3179,27 +2154,10 @@ Retrieve pbx agents
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAgents -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxAgents((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAgents -->
 
 ### Parameters
 
@@ -3230,28 +2188,10 @@ Retrieve a pbx audio
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAudio -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-apiInstance.getPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAudio -->
 
 ### Parameters
 
@@ -3285,28 +2225,10 @@ Retrieve a pbx audio usage
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAudioUsage -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-apiInstance.getPbxAudioUsage(conversationPbxAudioUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAudioUsage -->
 
 ### Parameters
 
@@ -3340,27 +2262,10 @@ Retrieve pbx audios
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxAudios -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxAudios((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxAudios -->
 
 ### Parameters
 
@@ -3391,28 +2296,9 @@ Retrieve a single PBX call record with full details
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxCall -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let callUuid = "callUuid_example"; // String | 
-apiInstance.getPbxCall(callUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxCall -->
 
 ### Parameters
 
@@ -3446,28 +2332,9 @@ Retrieve a single class of service
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxClassOfService -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let classOfServiceUuid = "classOfServiceUuid_example"; // String | 
-apiInstance.getPbxClassOfService(classOfServiceUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxClassOfService -->
 
 ### Parameters
 
@@ -3501,27 +2368,9 @@ Retrieve all classes of service for the merchant
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxClassesOfService -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxClassesOfService((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxClassesOfService -->
 
 ### Parameters
 
@@ -3552,33 +2401,9 @@ Retrieve audit log entries for class of service enforcement
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxCosAuditLogs -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  'since': "since_example", // String | ISO timestamp to filter entries since
-  'agent_login': "agent_login_example", // String | Filter by agent login
-  'action': "action_example", // String | Action
-  'limit': 56 // Number | Maximum number of entries to return (default 100)
-};
-apiInstance.getPbxCosAuditLogs(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxCosAuditLogs -->
 
 ### Parameters
 
@@ -3615,27 +2440,9 @@ Returns the merchant&#39;s stored default timezone (IANA name). Falls back to Am
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxDefaultTimezone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxDefaultTimezone((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxDefaultTimezone -->
 
 ### Parameters
 
@@ -3666,28 +2473,9 @@ Retrieve a pbx hardware phone
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxHardwarePhone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxHardwarePhoneUuid = "conversationPbxHardwarePhoneUuid_example"; // String | 
-apiInstance.getPbxHardwarePhone(conversationPbxHardwarePhoneUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxHardwarePhone -->
 
 ### Parameters
 
@@ -3721,27 +2509,9 @@ Retrieve pbx hardware phone manufacturers and models for auto-provisioning
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxHardwarePhoneManufacturers -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxHardwarePhoneManufacturers((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxHardwarePhoneManufacturers -->
 
 ### Parameters
 
@@ -3772,27 +2542,9 @@ Retrieve pbx hardware phones
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxHardwarePhones -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxHardwarePhones((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxHardwarePhones -->
 
 ### Parameters
 
@@ -3823,28 +2575,10 @@ Retrieve a pbx menu
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxMenu -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxMenuUuid = "conversationPbxMenuUuid_example"; // String | 
-apiInstance.getPbxMenu(conversationPbxMenuUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxMenu -->
 
 ### Parameters
 
@@ -3878,27 +2612,10 @@ Retrieve pbx menus
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxMenus -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxMenus((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxMenus -->
 
 ### Parameters
 
@@ -3929,27 +2646,9 @@ Retrieve the Twilio Pay Connectors installed in the Twilio account for this merc
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxPayConnectors -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxPayConnectors((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxPayConnectors -->
 
 ### Parameters
 
@@ -3980,28 +2679,10 @@ Retrieve a pbx phoneNumber
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxPhoneNumber -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxPhoneNumberUuid = "conversationPbxPhoneNumberUuid_example"; // String | 
-apiInstance.getPbxPhoneNumber(conversationPbxPhoneNumberUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxPhoneNumber -->
 
 ### Parameters
 
@@ -4035,27 +2716,10 @@ Retrieve pbx phoneNumbers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxPhoneNumbers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxPhoneNumbers((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxPhoneNumbers -->
 
 ### Parameters
 
@@ -4086,28 +2750,10 @@ Retrieve a pbx queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxQueue -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxQueueUuid = "conversationPbxQueueUuid_example"; // String | 
-apiInstance.getPbxQueue(conversationPbxQueueUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxQueue -->
 
 ### Parameters
 
@@ -4141,29 +2787,10 @@ Retrieve pbx queue Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxQueueVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_uuid = "queue_uuid_example"; // String | 
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.getPbxQueueVoicemail(queue_uuid, recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxQueueVoicemail -->
 
 ### Parameters
 
@@ -4198,28 +2825,10 @@ Retrieve pbx queue voicemails
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxQueueVoicemails -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_uuid = "queue_uuid_example"; // String | 
-apiInstance.getPbxQueueVoicemails(queue_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxQueueVoicemails -->
 
 ### Parameters
 
@@ -4253,27 +2862,10 @@ Retrieve pbx queues
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxQueues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxQueues((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxQueues -->
 
 ### Parameters
 
@@ -4304,28 +2896,10 @@ Retrieve a pbx timeBased
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxTimeBased -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeBasedUuid = "conversationPbxTimeBasedUuid_example"; // String | 
-apiInstance.getPbxTimeBased(conversationPbxTimeBasedUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxTimeBased -->
 
 ### Parameters
 
@@ -4359,27 +2933,10 @@ Retrieve pbx timeBaseds
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxTimeBaseds -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxTimeBaseds((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxTimeBaseds -->
 
 ### Parameters
 
@@ -4410,28 +2967,10 @@ Retrieve a pbx timeRange
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxTimeRange -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeRangeUuid = "conversationPbxTimeRangeUuid_example"; // String | 
-apiInstance.getPbxTimeRange(conversationPbxTimeRangeUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxTimeRange -->
 
 ### Parameters
 
@@ -4465,27 +3004,10 @@ Retrieve pbx timeRanges
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxTimeRanges -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxTimeRanges((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxTimeRanges -->
 
 ### Parameters
 
@@ -4516,27 +3038,9 @@ Retrieve voicemail notification capabilities including available channels
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxVoicemailCapabilities -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxVoicemailCapabilities((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getPbxVoicemailCapabilities -->
 
 ### Parameters
 
@@ -4567,28 +3071,10 @@ Retrieve a pbx voicemailMailbox
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxVoicemailMailbox -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxVoicemailMailboxUuid = "conversationPbxVoicemailMailboxUuid_example"; // String | 
-apiInstance.getPbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -4622,27 +3108,10 @@ Retrieve pbx voicemailMailboxes
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPbxVoicemailMailboxes -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getPbxVoicemailMailboxes((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getPbxVoicemailMailboxes -->
 
 ### Parameters
 
@@ -4673,28 +3142,9 @@ Retrieve a pbx audio file owned by the authenticated user
 
 ### Example
 
-<!-- UC_START_EXAMPLE getUserPbxAudio -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-apiInstance.getUserPbxAudio(conversationPbxAudioUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getUserPbxAudio -->
 
 ### Parameters
 
@@ -4728,27 +3178,9 @@ Retrieve pbx audio files owned by the authenticated user
 
 ### Example
 
-<!-- UC_START_EXAMPLE getUserPbxAudios -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getUserPbxAudios((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getUserPbxAudios -->
 
 ### Parameters
 
@@ -4779,27 +3211,9 @@ Retrieve virtual agent budget
 
 ### Example
 
-<!-- UC_START_EXAMPLE getVirtualAgentBudget -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getVirtualAgentBudget((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getVirtualAgentBudget -->
 
 ### Parameters
 
@@ -4830,27 +3244,9 @@ Retrieve virtual agent capabilities
 
 ### Example
 
-<!-- UC_START_EXAMPLE getVirtualAgentCapabilities -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getVirtualAgentCapabilities((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getVirtualAgentCapabilities -->
 
 ### Parameters
 
@@ -4881,29 +3277,9 @@ Insert a knowledge base document
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertAgentProfileKnowledgeBaseDocument -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let knowledge_base_document_request = new UltraCartRestApiV2.ConversationInsertKnowledgeBaseDocumentRequest(); // ConversationInsertKnowledgeBaseDocumentRequest | Insert request
-apiInstance.insertAgentProfileKnowledgeBaseDocument(user_id, knowledge_base_document_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertAgentProfileKnowledgeBaseDocument -->
 
 ### Parameters
 
@@ -4938,29 +3314,9 @@ Insert an agent MCP server
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertAgentProfileMcp -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let mcp_server = new UltraCartRestApiV2.ConversationMcpServer(); // ConversationMcpServer | MCP Server
-apiInstance.insertAgentProfileMcp(user_id, mcp_server, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertAgentProfileMcp -->
 
 ### Parameters
 
@@ -4995,28 +3351,9 @@ Create a custom status. Enforces a 20-active-status-per-merchant cap and the 50-
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertAgentStatusConfig -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let status_config = new UltraCartRestApiV2.ConversationAgentStatusConfig(); // ConversationAgentStatusConfig | Status config
-apiInstance.insertAgentStatusConfig(status_config, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertAgentStatusConfig -->
 
 ### Parameters
 
@@ -5050,28 +3387,10 @@ Insert a canned message
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertConversationCannedMessage -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let canned_message = new UltraCartRestApiV2.ConversationCannedMessage(); // ConversationCannedMessage | Canned message
-apiInstance.insertConversationCannedMessage(canned_message, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertConversationCannedMessage -->
 
 ### Parameters
 
@@ -5105,28 +3424,10 @@ Insert a department
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertConversationDepartment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let department = new UltraCartRestApiV2.ConversationDepartment(); // ConversationDepartment | Department
-apiInstance.insertConversationDepartment(department, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertConversationDepartment -->
 
 ### Parameters
 
@@ -5160,28 +3461,10 @@ Insert a engagement
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertConversationEngagement -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let engagement = new UltraCartRestApiV2.ConversationEngagement(); // ConversationEngagement | Engagement
-apiInstance.insertConversationEngagement(engagement, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertConversationEngagement -->
 
 ### Parameters
 
@@ -5215,28 +3498,9 @@ Insert a pbx address
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxAddress -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_address = new UltraCartRestApiV2.ConversationPbxAddress(); // ConversationPbxAddress | Pbx Address
-apiInstance.insertPbxAddress(pbx_address, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertPbxAddress -->
 
 ### Parameters
 
@@ -5270,28 +3534,10 @@ Insert a pbx audio
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxAudio -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
-apiInstance.insertPbxAudio(pbx_audio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxAudio -->
 
 ### Parameters
 
@@ -5325,28 +3571,9 @@ Create a new class of service
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxClassOfService -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let class_of_service = new UltraCartRestApiV2.ConversationPbxClassOfService(); // ConversationPbxClassOfService | Class of service
-apiInstance.insertPbxClassOfService(class_of_service, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertPbxClassOfService -->
 
 ### Parameters
 
@@ -5380,28 +3607,9 @@ Insert a pbx hardware phone
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxHardwarePhone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_hardware_phone = new UltraCartRestApiV2.ConversationPbxHardwarePhone(); // ConversationPbxHardwarePhone | Pbx Hardware Phone
-apiInstance.insertPbxHardwarePhone(pbx_hardware_phone, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertPbxHardwarePhone -->
 
 ### Parameters
 
@@ -5435,28 +3643,10 @@ Insert a pbx menu
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxMenu -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_menu = new UltraCartRestApiV2.ConversationPbxMenu(); // ConversationPbxMenu | Pbx Menu
-apiInstance.insertPbxMenu(pbx_menu, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxMenu -->
 
 ### Parameters
 
@@ -5490,28 +3680,10 @@ Insert a pbx queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxQueue -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_queue = new UltraCartRestApiV2.ConversationPbxQueue(); // ConversationPbxQueue | Pbx Queue
-apiInstance.insertPbxQueue(pbx_queue, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxQueue -->
 
 ### Parameters
 
@@ -5545,28 +3717,10 @@ Insert a pbx timeBased
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxTimeBased -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_timeBased = new UltraCartRestApiV2.ConversationPbxTimeBased(); // ConversationPbxTimeBased | Pbx TimeBased
-apiInstance.insertPbxTimeBased(pbx_timeBased, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxTimeBased -->
 
 ### Parameters
 
@@ -5600,28 +3754,10 @@ Insert a pbx timeRange
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxTimeRange -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_timeRange = new UltraCartRestApiV2.ConversationPbxTimeRange(); // ConversationPbxTimeRange | Pbx TimeRange
-apiInstance.insertPbxTimeRange(pbx_timeRange, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxTimeRange -->
 
 ### Parameters
 
@@ -5655,28 +3791,10 @@ Insert a pbx voicemailMailbox
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertPbxVoicemailMailbox -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_voicemailMailbox = new UltraCartRestApiV2.ConversationPbxVoicemailMailbox(); // ConversationPbxVoicemailMailbox | Pbx VoicemailMailbox
-apiInstance.insertPbxVoicemailMailbox(pbx_voicemailMailbox, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE insertPbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -5710,28 +3828,9 @@ Insert a pbx audio file for the authenticated user
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertUserPbxAudio -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
-apiInstance.insertUserPbxAudio(pbx_audio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertUserPbxAudio -->
 
 ### Parameters
 
@@ -5765,30 +3864,9 @@ Joins the simulated customer to the conversation the agent opened for a test ses
 
 ### Example
 
-<!-- UC_START_EXAMPLE joinAgentTestSession -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let conversation_uuid = "conversation_uuid_example"; // String | 
-let join_request = new UltraCartRestApiV2.ConversationAgentTestSessionJoinRequest(); // ConversationAgentTestSessionJoinRequest | Test session join request
-apiInstance.joinAgentTestSession(user_id, conversation_uuid, join_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE joinAgentTestSession -->
 
 ### Parameters
 
@@ -5824,31 +3902,10 @@ Join a conversation
 
 ### Example
 
-<!-- UC_START_EXAMPLE joinConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-let opts = {
-  'join_request': new UltraCartRestApiV2.ConversationJoinRequest() // ConversationJoinRequest | Join request
-};
-apiInstance.joinConversation(conversation_uuid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE joinConversation -->
 
 ### Parameters
 
@@ -5883,28 +3940,10 @@ Leave a conversation
 
 ### Example
 
-<!-- UC_START_EXAMPLE leaveConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-apiInstance.leaveConversation(conversation_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE leaveConversation -->
 
 ### Parameters
 
@@ -5938,28 +3977,10 @@ Listened pbx agent Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE listenedPbxAgentVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.listenedPbxAgentVoicemail(recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE listenedPbxAgentVoicemail -->
 
 ### Parameters
 
@@ -5993,29 +4014,10 @@ Listened pbx queue Voicemail
 
 ### Example
 
-<!-- UC_START_EXAMPLE listenedPbxQueueVoicemail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_uuid = "queue_uuid_example"; // String | 
-let recording_sid = "recording_sid_example"; // String | 
-apiInstance.listenedPbxQueueVoicemail(queue_uuid, recording_sid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE listenedPbxQueueVoicemail -->
 
 ### Parameters
 
@@ -6050,28 +4052,10 @@ Mark a conversation as read
 
 ### Example
 
-<!-- UC_START_EXAMPLE markReadConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-apiInstance.markReadConversation(conversation_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE markReadConversation -->
 
 ### Parameters
 
@@ -6105,28 +4089,9 @@ Protect a pbx phoneNumber from deletion. This is a one-way operation and cannot 
 
 ### Example
 
-<!-- UC_START_EXAMPLE protectPbxPhoneNumber -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxPhoneNumberUuid = "conversationPbxPhoneNumberUuid_example"; // String | 
-apiInstance.protectPbxPhoneNumber(conversationPbxPhoneNumberUuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE protectPbxPhoneNumber -->
 
 ### Parameters
 
@@ -6160,28 +4125,9 @@ Purchase a phone number from Twilio. The phone_number must be from the available
 
 ### Example
 
-<!-- UC_START_EXAMPLE purchasePbxPhoneNumber -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let phone_number_purchase_request = new UltraCartRestApiV2.ConversationPbxPhoneNumberPurchaseRequest(); // ConversationPbxPhoneNumberPurchaseRequest | Phone number purchase request
-apiInstance.purchasePbxPhoneNumber(phone_number_purchase_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE purchasePbxPhoneNumber -->
 
 ### Parameters
 
@@ -6215,29 +4161,9 @@ Update a pbx hardware phone
 
 ### Example
 
-<!-- UC_START_EXAMPLE regeneratePasswordForPbxHardwarePhone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxHardwarePhoneUuid = "conversationPbxHardwarePhoneUuid_example"; // String | 
-let pbx_hardware_phone = new UltraCartRestApiV2.ConversationPbxHardwarePhone(); // ConversationPbxHardwarePhone | Pbx Hardware Phone
-apiInstance.regeneratePasswordForPbxHardwarePhone(conversationPbxHardwarePhoneUuid, pbx_hardware_phone, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE regeneratePasswordForPbxHardwarePhone -->
 
 ### Parameters
 
@@ -6272,28 +4198,10 @@ reset statistics within the queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE resetConversationPbxQueueStatistics -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_uuid = "queue_uuid_example"; // String | 
-apiInstance.resetConversationPbxQueueStatistics(queue_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE resetConversationPbxQueueStatistics -->
 
 ### Parameters
 
@@ -6327,32 +4235,9 @@ Paginated search over conversation_agent_status_events_all. Filters: agent_user_
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchAgentStatusHistory -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let search_request = new UltraCartRestApiV2.ConversationAgentStatusHistorySearchRequest(); // ConversationAgentStatusHistorySearchRequest | Search request
-let opts = {
-  '_limit': 100, // Number | Maximum records per call (max 200)
-  '_offset': 0 // Number | Pagination offset (zero-based)
-};
-apiInstance.searchAgentStatusHistory(search_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchAgentStatusHistory -->
 
 ### Parameters
 
@@ -6388,28 +4273,9 @@ Aggregated over conversation_agent_status_events_all via date_histogram + terms.
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchAgentStatusRollups -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let search_request = new UltraCartRestApiV2.ConversationAgentStatusRollupSearchRequest(); // ConversationAgentStatusRollupSearchRequest | Search request
-apiInstance.searchAgentStatusRollups(search_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchAgentStatusRollups -->
 
 ### Parameters
 
@@ -6443,28 +4309,10 @@ Search for canned messages by short_code
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchConversationCannedMessages -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let search_request = new UltraCartRestApiV2.ConversationCannedMessagesSearch(); // ConversationCannedMessagesSearch | Search request
-apiInstance.searchConversationCannedMessages(search_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE searchConversationCannedMessages -->
 
 ### Parameters
 
@@ -6498,36 +4346,9 @@ Search for available phone numbers from Twilio that can be purchased
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchPbxAvailablePhoneNumbers -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let country = "country_example"; // String | ISO country code (e.g., US, CA, GB)
-let opts = {
-  'area_code': "area_code_example", // String | Area code filter (e.g., 614)
-  'contains': "contains_example", // String | Pattern to match (e.g., 555, *PIZZA)
-  'sms_enabled': true, // Boolean | Filter for SMS capability
-  'voice_enabled': true, // Boolean | Filter for voice capability
-  'type': "type_example", // String | Phone number type
-  'limit': 56 // Number | Max results (default 20, max 100)
-};
-apiInstance.searchPbxAvailablePhoneNumbers(country, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchPbxAvailablePhoneNumbers -->
 
 ### Parameters
 
@@ -6567,33 +4388,9 @@ Search and list PBX call records with filtering, sorting, and pagination
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchPbxCalls -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let search_request = new UltraCartRestApiV2.ConversationPbxCallSearchRequest(); // ConversationPbxCallSearchRequest | Search Request
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the calls.
-};
-apiInstance.searchPbxCalls(search_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchPbxCalls -->
 
 ### Parameters
 
@@ -6630,28 +4427,10 @@ Unsubscribe any SMS participants in this conversation
 
 ### Example
 
-<!-- UC_START_EXAMPLE smsUnsubscribeConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_uuid = "conversation_uuid_example"; // String | 
-apiInstance.smsUnsubscribeConversation(conversation_uuid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE smsUnsubscribeConversation -->
 
 ### Parameters
 
@@ -6685,29 +4464,9 @@ Opens a webchat conversation against this specific AI agent as if the given cust
 
 ### Example
 
-<!-- UC_START_EXAMPLE startAgentTestSession -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let test_session_request = new UltraCartRestApiV2.ConversationAgentTestSessionRequest(); // ConversationAgentTestSessionRequest | Test session request
-apiInstance.startAgentTestSession(user_id, test_session_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE startAgentTestSession -->
 
 ### Parameters
 
@@ -6742,28 +4501,10 @@ Start a new conversation
 
 ### Example
 
-<!-- UC_START_EXAMPLE startConversation -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let start_request = new UltraCartRestApiV2.ConversationStartRequest(); // ConversationStartRequest | Start request
-apiInstance.startConversation(start_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE startConversation -->
 
 ### Parameters
 
@@ -6797,28 +4538,10 @@ Update agent profile
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAgentProfile -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let profile_request = new UltraCartRestApiV2.ConversationAgentProfile(); // ConversationAgentProfile | Profile request
-apiInstance.updateAgentProfile(profile_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateAgentProfile -->
 
 ### Parameters
 
@@ -6852,30 +4575,9 @@ Update an agent MCP server
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAgentProfileMcp -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let user_id = 56; // Number | 
-let mcp_server_uuid = "mcp_server_uuid_example"; // String | 
-let mcp_server = new UltraCartRestApiV2.ConversationMcpServer(); // ConversationMcpServer | MCP Server
-apiInstance.updateAgentProfileMcp(user_id, mcp_server_uuid, mcp_server, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAgentProfileMcp -->
 
 ### Parameters
 
@@ -6911,29 +4613,9 @@ Update a custom status. Renaming flows through to the Twilio Activity.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAgentStatusConfig -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_status_uuid = "conversation_status_uuid_example"; // String | 
-let status_config = new UltraCartRestApiV2.ConversationAgentStatusConfig(); // ConversationAgentStatusConfig | Status config
-apiInstance.updateAgentStatusConfig(conversation_status_uuid, status_config, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAgentStatusConfig -->
 
 ### Parameters
 
@@ -6968,29 +4650,10 @@ Update a canned message
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateConversationCannedMessage -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_canned_message_oid = 56; // Number | 
-let canned_message = new UltraCartRestApiV2.ConversationCannedMessage(); // ConversationCannedMessage | Canned message
-apiInstance.updateConversationCannedMessage(conversation_canned_message_oid, canned_message, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateConversationCannedMessage -->
 
 ### Parameters
 
@@ -7025,29 +4688,10 @@ Update a department
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateConversationDepartment -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_department_oid = 56; // Number | 
-let department = new UltraCartRestApiV2.ConversationDepartment(); // ConversationDepartment | Department
-apiInstance.updateConversationDepartment(conversation_department_oid, department, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateConversationDepartment -->
 
 ### Parameters
 
@@ -7082,29 +4726,10 @@ Update a engagement
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateConversationEngagement -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversation_engagement_oid = 56; // Number | 
-let engagement = new UltraCartRestApiV2.ConversationEngagement(); // ConversationEngagement | Engagement
-apiInstance.updateConversationEngagement(conversation_engagement_oid, engagement, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateConversationEngagement -->
 
 ### Parameters
 
@@ -7139,29 +4764,10 @@ Update status within the queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateConversationWebchatQueueStatus -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let queue_name = "queue_name_example"; // String | 
-let status_request = new UltraCartRestApiV2.ConversationWebchatQueueStatusUpdateRequest(); // ConversationWebchatQueueStatusUpdateRequest | Status request
-apiInstance.updateConversationWebchatQueueStatus(queue_name, status_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updateConversationWebchatQueueStatus -->
 
 ### Parameters
 
@@ -7196,29 +4802,9 @@ Update a pbx address
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxAddress -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAddressUuid = "conversationPbxAddressUuid_example"; // String | 
-let pbx_address = new UltraCartRestApiV2.ConversationPbxAddress(); // ConversationPbxAddress | Pbx Address
-apiInstance.updatePbxAddress(conversationPbxAddressUuid, pbx_address, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updatePbxAddress -->
 
 ### Parameters
 
@@ -7253,29 +4839,10 @@ Update a pbx agent
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxAgent -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAgentUuid = "conversationPbxAgentUuid_example"; // String | 
-let pbx_agent = new UltraCartRestApiV2.ConversationPbxAgent(); // ConversationPbxAgent | Pbx Agent
-apiInstance.updatePbxAgent(conversationPbxAgentUuid, pbx_agent, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxAgent -->
 
 ### Parameters
 
@@ -7310,29 +4877,10 @@ Update a pbx audio
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxAudio -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
-apiInstance.updatePbxAudio(conversationPbxAudioUuid, pbx_audio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxAudio -->
 
 ### Parameters
 
@@ -7367,29 +4915,9 @@ Update the agent-authored fields (notes, finalize) on a PBX call record
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxCall -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let callUuid = "callUuid_example"; // String | 
-let update_request = new UltraCartRestApiV2.ConversationPbxCallUpdateRequest(); // ConversationPbxCallUpdateRequest | Update Request
-apiInstance.updatePbxCall(callUuid, update_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updatePbxCall -->
 
 ### Parameters
 
@@ -7424,29 +4952,9 @@ Update an existing class of service
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxClassOfService -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let classOfServiceUuid = "classOfServiceUuid_example"; // String | 
-let class_of_service = new UltraCartRestApiV2.ConversationPbxClassOfService(); // ConversationPbxClassOfService | Class of service
-apiInstance.updatePbxClassOfService(classOfServiceUuid, class_of_service, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updatePbxClassOfService -->
 
 ### Parameters
 
@@ -7481,28 +4989,9 @@ Persists the IANA timezone on the Config#&lt;merchant_id&gt;/default DDB record 
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxDefaultTimezone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let timezone_update = new UltraCartRestApiV2.ConversationPbxDefaultTimezoneUpdateRequest(); // ConversationPbxDefaultTimezoneUpdateRequest | Timezone update
-apiInstance.updatePbxDefaultTimezone(timezone_update, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updatePbxDefaultTimezone -->
 
 ### Parameters
 
@@ -7536,29 +5025,9 @@ Update a pbx hardware phone
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxHardwarePhone -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxHardwarePhoneUuid = "conversationPbxHardwarePhoneUuid_example"; // String | 
-let pbx_hardware_phone = new UltraCartRestApiV2.ConversationPbxHardwarePhone(); // ConversationPbxHardwarePhone | Pbx Hardware Phone
-apiInstance.updatePbxHardwarePhone(conversationPbxHardwarePhoneUuid, pbx_hardware_phone, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updatePbxHardwarePhone -->
 
 ### Parameters
 
@@ -7593,29 +5062,10 @@ Update a pbx menu
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxMenu -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxMenuUuid = "conversationPbxMenuUuid_example"; // String | 
-let pbx_menu = new UltraCartRestApiV2.ConversationPbxMenu(); // ConversationPbxMenu | Pbx Menu
-apiInstance.updatePbxMenu(conversationPbxMenuUuid, pbx_menu, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxMenu -->
 
 ### Parameters
 
@@ -7650,29 +5100,10 @@ Update a pbx phoneNumber
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxPhoneNumber -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxPhoneNumberUuid = "conversationPbxPhoneNumberUuid_example"; // String | 
-let pbx_phoneNumber = new UltraCartRestApiV2.ConversationPbxPhoneNumber(); // ConversationPbxPhoneNumber | Pbx PhoneNumber
-apiInstance.updatePbxPhoneNumber(conversationPbxPhoneNumberUuid, pbx_phoneNumber, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxPhoneNumber -->
 
 ### Parameters
 
@@ -7707,29 +5138,10 @@ Update a pbx queue
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxQueue -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxQueueUuid = "conversationPbxQueueUuid_example"; // String | 
-let pbx_queue = new UltraCartRestApiV2.ConversationPbxQueue(); // ConversationPbxQueue | Pbx Queue
-apiInstance.updatePbxQueue(conversationPbxQueueUuid, pbx_queue, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxQueue -->
 
 ### Parameters
 
@@ -7764,29 +5176,10 @@ Update a pbx timeBased
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxTimeBased -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeBasedUuid = "conversationPbxTimeBasedUuid_example"; // String | 
-let pbx_timeBased = new UltraCartRestApiV2.ConversationPbxTimeBased(); // ConversationPbxTimeBased | Pbx TimeBased
-apiInstance.updatePbxTimeBased(conversationPbxTimeBasedUuid, pbx_timeBased, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxTimeBased -->
 
 ### Parameters
 
@@ -7821,29 +5214,10 @@ Update a pbx timeRange
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxTimeRange -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxTimeRangeUuid = "conversationPbxTimeRangeUuid_example"; // String | 
-let pbx_timeRange = new UltraCartRestApiV2.ConversationPbxTimeRange(); // ConversationPbxTimeRange | Pbx TimeRange
-apiInstance.updatePbxTimeRange(conversationPbxTimeRangeUuid, pbx_timeRange, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxTimeRange -->
 
 ### Parameters
 
@@ -7878,29 +5252,10 @@ Update a pbx voicemailMailbox
 
 ### Example
 
-<!-- UC_START_EXAMPLE updatePbxVoicemailMailbox -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxVoicemailMailboxUuid = "conversationPbxVoicemailMailboxUuid_example"; // String | 
-let pbx_voicemailMailbox = new UltraCartRestApiV2.ConversationPbxVoicemailMailbox(); // ConversationPbxVoicemailMailbox | Pbx VoicemailMailbox
-apiInstance.updatePbxVoicemailMailbox(conversationPbxVoicemailMailboxUuid, pbx_voicemailMailbox, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE updatePbxVoicemailMailbox -->
 
 ### Parameters
 
@@ -7935,29 +5290,9 @@ Update a pbx audio file owned by the authenticated user
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateUserPbxAudio -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let conversationPbxAudioUuid = "conversationPbxAudioUuid_example"; // String | 
-let pbx_audio = new UltraCartRestApiV2.ConversationPbxAudio(); // ConversationPbxAudio | Pbx Audio
-apiInstance.updateUserPbxAudio(conversationPbxAudioUuid, pbx_audio, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateUserPbxAudio -->
 
 ### Parameters
 
@@ -7992,28 +5327,9 @@ Update virtual agent budget
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateVirtualAgentBudget -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let virtual_agent_budget = new UltraCartRestApiV2.ConversationVirtualAgentBudget(); // ConversationVirtualAgentBudget | Virtual Agent Budget
-apiInstance.updateVirtualAgentBudget(virtual_agent_budget, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateVirtualAgentBudget -->
 
 ### Parameters
 
@@ -8047,28 +5363,9 @@ Update virtual agent capabilities
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateVirtualAgentCapabilities -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let virtual_agent_capabilities = new UltraCartRestApiV2.ConversationVirtualAgentCapabilities(); // ConversationVirtualAgentCapabilities | Virtual Agent Capabilities
-apiInstance.updateVirtualAgentCapabilities(virtual_agent_capabilities, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateVirtualAgentCapabilities -->
 
 ### Parameters
 

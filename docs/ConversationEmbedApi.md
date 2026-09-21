@@ -22,29 +22,9 @@ RFC 8628 device authorization. Only the embed widget&#39;s client_id and the crm
 
 ### Example
 
-<!-- UC_START_EXAMPLE embedOauthDeviceAuthorize -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationEmbedApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let client_id = "client_id_example"; // String | The embed widget OAuth client_id.
-let scope = "scope_example"; // String | The application-level scope (must be 'crm_embed').
-apiInstance.embedOauthDeviceAuthorize(client_id, scope, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE embedOauthDeviceAuthorize -->
 
 ### Parameters
 
@@ -79,29 +59,9 @@ RFC 7009 style â€” the token itself is proof of possession. Accepts either 
 
 ### Example
 
-<!-- UC_START_EXAMPLE embedOauthRevoke -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationEmbedApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let client_id = "client_id_example"; // String | The embed widget OAuth client_id.
-let token = "token_example"; // String | The token to revoke (access token or refresh token).
-apiInstance.embedOauthRevoke(client_id, token, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE embedOauthRevoke -->
 
 ### Parameters
 
@@ -136,33 +96,9 @@ Accepts grant_type&#x3D;urn:ietf:params:oauth:grant-type:device_code or grant_ty
 
 ### Example
 
-<!-- UC_START_EXAMPLE embedOauthToken -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationEmbedApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let client_id = "client_id_example"; // String | The embed widget OAuth client_id.
-let grant_type = "grant_type_example"; // String | Grant type.
-let opts = {
-  'device_code': "device_code_example", // String | The device code received from /oauth/device/authorize (required for device_code grant).
-  'refresh_token': "refresh_token_example" // String | The refresh token (required for refresh_token grant).
-};
-apiInstance.embedOauthToken(client_id, grant_type, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE embedOauthToken -->
 
 ### Parameters
 
@@ -199,27 +135,9 @@ Returns a narrow subset of agent auth fields â€” only what the softphone wi
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmbedPbxAuth -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ConversationEmbedApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getEmbedPbxAuth((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getEmbedPbxAuth -->
 
 ### Parameters
 

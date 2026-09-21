@@ -47,29 +47,70 @@ Adds store credit to a customer
 
 ### Example
 
-<!-- UC_START_EXAMPLE addCustomerStoreCredit -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class AddCustomerStoreCredit {
+    /**
+     * Adds store credit to a customer's account.
+     *
+     * This method requires a customer profile oid. This is a unique number used by UltraCart to identify a customer.
+     * If you do not know a customer's oid, call getCustomerByEmail() to retrieve the customer and their oid.
+     *
+     * Possible Errors:
+     * Missing store credit -> "store_credit_request.amount is missing and is required."
+     * Zero or negative store credit -> "store_credit_request.amount must be a positive amount."
+     */
+    static async execute() {
+        const email = "test@ultracart.com";
 
-let customer_profile_oid = 56; // Number | The customer oid to credit.
-let store_credit_request = new UltraCartRestApiV2.CustomerStoreCreditAddRequest(); // CustomerStoreCreditAddRequest | Store credit to add
-apiInstance.addCustomerStoreCredit(customer_profile_oid, store_credit_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // Retrieve customer by email
+        const customerResponse = await new Promise((resolve, reject) => {
+            customerApi.getCustomerByEmail(email, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        const customer = customerResponse.customer;
+
+        if (!customer || !customer.customer_profile_oid) {
+            throw new Error("Customer not found or missing customer profile OID");
+        }
+
+        const customerOid = customer.customer_profile_oid;
+
+        const storeCreditRequest = {
+            amount: 20.00,
+            description: "Customer is super cool and I wanted to give them store credit.",
+            expiration_days: 365, // or leave undefined for no expiration
+            vesting_days: 45 // customer has to wait 45 days to use it.
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            customerApi.addCustomerStoreCredit(customerOid, storeCreditRequest, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        if (apiResponse.error) {
+            console.error(apiResponse.error.developer_message);
+            console.error(apiResponse.error.user_message);
+            throw new Error("Failed to add store credit");
+        }
+
+        console.log(apiResponse.success);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE addCustomerStoreCredit -->
 
 ### Parameters
 
@@ -104,29 +145,78 @@ Updates the cashback balance for a customer by updating the internal gift certif
 
 ### Example
 
-<!-- UC_START_EXAMPLE adjustInternalCertificate -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {DateTime} from 'luxon';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class AdjustInternalCertificate {
+    /**
+     * Adjusts the cashback balance of a customer. This method's name is adjustInternalCertificate, which
+     * is a poor choice of naming, but results from an underlying implementation of using an internal gift certificate
+     * to track cashback balance. Sorry for the confusion.
+     *
+     * This method requires a customer profile oid. This is a unique number used by UltraCart to identify a customer.
+     * If you do not know a customer's oid, call getCustomerByEmail() to retrieve the customer and their oid.
+     *
+     * Possible Errors:
+     * Missing adjustment amount -> "adjust_internal_certificate_request.adjustment_amount is required and was missing"
+     */
+    static async execute() {
+        const email = "test@ultracart.com";
 
-let customer_profile_oid = 56; // Number | The customer profile oid
-let adjust_internal_certificate_request = new UltraCartRestApiV2.AdjustInternalCertificateRequest(); // AdjustInternalCertificateRequest | adjustInternalCertificateRequest
-apiInstance.adjustInternalCertificate(customer_profile_oid, adjust_internal_certificate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // Retrieve customer by email
+        const customerResponse = await new Promise((resolve, reject) => {
+            customerApi.getCustomerByEmail(email, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        const customer = customerResponse.customer;
+
+        if (!customer || !customer.customer_profile_oid) {
+            throw new Error("Customer not found or missing customer profile OID");
+        }
+
+        const customerOid = customer.customer_profile_oid;
+
+        const adjustRequest = {
+            description: "Adjusting customer cashback balance because they called and complained about product.",
+            expiration_days: 365, // expires in 365 days
+            vesting_days: 45, // customer has to wait 45 days to use it.
+            adjustment_amount: 59, // add 59 to their balance.
+            order_id: "DEMO-12345", // or leave undefined. this ties the adjustment to a particular order.
+            entry_dts: DateTime.now().setZone('America/New_York').toISO() // use current time in ISO format
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            customerApi.adjustInternalCertificate(customerOid,adjustRequest, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        if (apiResponse.error) {
+            console.error(apiResponse.error.developer_message);
+            console.error(apiResponse.error.user_message);
+            throw new Error("Failed to adjust internal certificate");
+        }
+
+        console.log(`Success: ${apiResponse.success}`);
+        console.log(`Adjustment Amount: ${apiResponse.adjustment_amount}`);
+        console.log(`Balance Amount: ${apiResponse.balance_amount}`);
+
+        console.log(apiResponse);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE adjustInternalCertificate -->
 
 ### Parameters
 
@@ -161,29 +251,9 @@ Adjusts the loyalty points for a customer by adding a record to the loyalty ledg
 
 ### Example
 
-<!-- UC_START_EXAMPLE adjustLoyaltyPoints -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer_profile_oid = 56; // Number | The customer profile oid
-let adjust_loyalty_points_request = new UltraCartRestApiV2.AdjustLoyaltyPointsRequest(); // AdjustLoyaltyPointsRequest | adjustLoyaltyPointsRequest
-apiInstance.adjustLoyaltyPoints(customer_profile_oid, adjust_loyalty_points_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE adjustLoyaltyPoints -->
 
 ### Parameters
 
@@ -218,28 +288,23 @@ Delete a customer on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer_profile_oid = 56; // Number | The customer_profile_oid to delete.
-apiInstance.deleteCustomer(customer_profile_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+export class DeleteCustomer {
+    static async execute() {
+        try {
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteCustomer -->
 
 ### Parameters
 
@@ -273,29 +338,139 @@ Delete a customer wishlist item
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteWishListItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {ItemFunctions} from '../item/itemFunctions.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * The wishlist methods allow management of a customer's wishlist.
+ * This includes:
+ *     DeleteWishListItem
+ *     GetCustomerWishList
+ *     GetCustomerWishListItem
+ *     InsertWishListItem
+ *     UpdateWishListItem
+ * These methods provide a standard CRUD interface.
+ *
+ * You'll need merchant_item_oids to insert wishlist items. If you don't know the oids,
+ * call ItemApi.GetItemByMerchantItemId() to retrieve the item, then get item.MerchantItemOid
+ *
+ * Note: Priority of wishlist item, 3 being low priority and 5 is high priority.
+ */
+export class DeleteWishListItem {
+    static async execute() {
+        try {
+            // create a few items first.
+            const firstItemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            const secondItemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
-let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item to delete.
-apiInstance.deleteWishListItem(customer_profile_oid, customer_wishlist_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+
+            // TODO: If you don't know the customer oid, use GetCustomerByEmail() to retrieve the customer.
+
+            // add some wish list items.
+            const firstWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: firstItemOid,
+                comments: "I really want this for my birthday",
+                priority: 3 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const firstCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, firstWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const secondWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: secondItemOid,
+                comments: "Christmas Idea!",
+                priority: 5 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const secondCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, secondWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (firstCreatedWishItem === undefined || firstCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("first wish list item is undefined.  update failed.");
+                return;
+            }
+
+            if (secondCreatedWishItem === undefined || secondCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("second wish list item is undefined.  update failed.");
+                return;
+            }
+
+            // retrieve one wishlist item again
+            const firstCreatedWishItemCopyResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const firstCreatedWishItemCopy = firstCreatedWishItemCopyResponse.wishlist_item;
+
+            // retrieve all wishlist items
+            const allWishListItems = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishList(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // update an item.
+            const updatedSecondWishItem = await new Promise((resolve, reject) => {
+                customerApi.updateWishListItem(customerOid, secondCreatedWishItem.customer_wishlist_item_oid, secondCreatedWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // delete a wish list item
+            await new Promise((resolve, reject) => {
+                customerApi.deleteWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Clean up
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+            await ItemFunctions.deleteSampleItemByOid(firstItemOid);
+            await ItemFunctions.deleteSampleItemByOid(secondItemOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteWishListItem -->
 
 ### Parameters
 
@@ -330,31 +505,46 @@ Retrieves a single customer using the specified customer profile oid.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import { customerApi } from '../api.js';
+import { CustomerFunctions } from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCustomer {
+    /**
+     * Of the two GetCustomer methods, you'll probably always use GetCustomerByEmail instead of this one.
+     * Most customer logic revolves around the email, not the customer oid. The latter is only meaningful as a primary
+     * key in the UltraCart databases. But here is an example of using GetCustomer().
+     */
+    static async execute() {
+        try {
+            const email = CustomerFunctions.createRandomEmail();
+            const customerOid = await CustomerFunctions.insertSampleCustomer(email);
 
-let customer_profile_oid = 56; // Number | The customer oid to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCustomer(customer_profile_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // the expand variable is set to return just the address fields.
+            // see CustomerFunctions for a list of expansions, or consult the source: https://www.ultracart.com/api/
+            const apiResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomer(customerOid,{_expand: 'billing,shipping'}, function(error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const customer = apiResponse.customer; // assuming this succeeded
+
+            console.log(customer);
+
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomer -->
 
 ### Parameters
 
@@ -389,31 +579,47 @@ Retrieves a single customer using the specified customer email address.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerByEmail -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCustomerByEmail {
+    /**
+     * Of the two GetCustomer methods, you'll probably always use this one over GetCustomer.
+     * Most customer logic revolves around the email, not the customer oid. The latter is only meaningful as a primary
+     * key in the UltraCart databases. But our sample functions return back the oid, so we'll ignore that and just
+     * use the email that we create.
+     */
+    static async execute() {
+        try {
+            const email = CustomerFunctions.createRandomEmail();
+            const customerOid = await CustomerFunctions.insertSampleCustomer(email);
 
-let email = "email_example"; // String | The email address of the customer to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCustomerByEmail(email, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // the expand variable is set to return just the address fields.
+            // see CustomerFunctions for a list of expansions, or consult the source: https://www.ultracart.com/api/
+            const apiResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerByEmail(email, {_expand: 'billing,shipping'}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const customer = apiResponse.customer; // assuming this succeeded
+
+            console.log(customer);
+
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomerByEmail -->
 
 ### Parameters
 
@@ -448,27 +654,12 @@ Retrieve values needed for a customer profile editor.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerEditorValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getCustomerEditorValues((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This is an internal method used by our Customer management screen.  It returns back all the static data needed
+// for our dropdown lists, such as lists of state and countries.  You can call it if you like, but the data won't be
+// of much use.
 ```
 
-<!-- UC_END_EXAMPLE getCustomerEditorValues -->
 
 ### Parameters
 
@@ -499,27 +690,12 @@ Retrieve all email lists across all storefronts
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerEmailLists -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-apiInstance.getCustomerEmailLists((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This is an internal method used by our Email workflow engines.  It returns back all the email lists a customer
+// is currently subscribed to.  It's geared towards our UI needs, so the data returned may appear cryptic.
+//  We're not including a sample for it because we don't envision it being valuable to a merchant.
 ```
 
-<!-- UC_END_EXAMPLE getCustomerEmailLists -->
 
 ### Parameters
 
@@ -550,28 +726,9 @@ Retrieve the loyalty points, ledger and redemptions for a customer.  This is a c
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerLoyalty -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer_profile_oid = 56; // Number | The customer oid to retrieve.
-apiInstance.getCustomerLoyalty(customer_profile_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getCustomerLoyalty -->
 
 ### Parameters
 
@@ -605,28 +762,83 @@ Retrieve the customer store credit accumulated through loyalty programs
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerStoreCredit -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCustomerStoreCredit {
+    /*
+        getCustomerStoreCredit returns back the store credit for a customer, which includes:
+        total - lifetime credit
+        available - currently available store credit
+        vesting - amount of store credit vesting
+        expiring - amount of store credit expiring within 30 days
+        pastLedgers - transaction history
+        futureLedgers - future transactions including expiring entries
+     */
+    static async execute() {
+        try {
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
 
-let customer_profile_oid = 56; // Number | The customer oid to retrieve.
-apiInstance.getCustomerStoreCredit(customer_profile_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // add some store credit.
+            const firstAddRequest = {
+                description: "First credit add",
+                vesting_days: 10,
+                expiration_days: 20, // that's not a lot of time!
+                amount: 20
+            };
+            await new Promise((resolve, reject) => {
+                customerApi.addCustomerStoreCredit(customerOid, firstAddRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // add more store credit.
+            const secondAddRequest = {
+                description: "Second credit add",
+                vesting_days: 0, // immediately available.
+                expiration_days: 90,
+                amount: 40
+            };
+            await new Promise((resolve, reject) => {
+                customerApi.addCustomerStoreCredit(customerOid, secondAddRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const apiResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerStoreCredit(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const storeCredit = apiResponse.customer_store_credit;
+
+            console.log(storeCredit); // <-- There's a lot of information inside this object.
+
+            // clean up this sample.
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (e) {
+            console.log("An Exception occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomerStoreCredit -->
 
 ### Parameters
 
@@ -660,28 +872,139 @@ Retrieve wishlist items for customer.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerWishList -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {ItemFunctions} from '../item/itemFunctions.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * The wishlist methods allow management of a customer's wishlist.
+ * This includes:
+ *     DeleteWishListItem
+ *     GetCustomerWishList
+ *     GetCustomerWishListItem
+ *     InsertWishListItem
+ *     UpdateWishListItem
+ * These methods provide a standard CRUD interface.
+ *
+ * You'll need merchant_item_oids to insert wishlist items. If you don't know the oids,
+ * call ItemApi.GetItemByMerchantItemId() to retrieve the item, then get item.MerchantItemOid
+ *
+ * Note: Priority of wishlist item, 3 being low priority and 5 is high priority.
+ */
+export class GetCustomerWishList  {
+    static async execute() {
+        try {
+            // create a few items first.
+            const firstItemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            const secondItemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
-apiInstance.getCustomerWishList(customer_profile_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+
+            // TODO: If you don't know the customer oid, use GetCustomerByEmail() to retrieve the customer.
+
+            // add some wish list items.
+            const firstWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: firstItemOid,
+                comments: "I really want this for my birthday",
+                priority: 3 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const firstCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, firstWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const secondWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: secondItemOid,
+                comments: "Christmas Idea!",
+                priority: 5 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const secondCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, secondWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (firstCreatedWishItem === undefined || firstCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("first wish list item is undefined.  update failed.");
+                return;
+            }
+
+            if (secondCreatedWishItem === undefined || secondCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("second wish list item is undefined.  update failed.");
+                return;
+            }
+
+            // retrieve one wishlist item again
+            const firstCreatedWishItemCopyResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const firstCreatedWishItemCopy = firstCreatedWishItemCopyResponse.wishlist_item;
+
+            // retrieve all wishlist items
+            const allWishListItems = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishList(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // update an item.
+            const updatedSecondWishItem = await new Promise((resolve, reject) => {
+                customerApi.updateWishListItem(customerOid, secondCreatedWishItem.customer_wishlist_item_oid, secondCreatedWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // delete a wish list item
+            await new Promise((resolve, reject) => {
+                customerApi.deleteWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Clean up
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+            await ItemFunctions.deleteSampleItemByOid(firstItemOid);
+            await ItemFunctions.deleteSampleItemByOid(secondItemOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomerWishList -->
 
 ### Parameters
 
@@ -715,29 +1038,139 @@ Retrieve wishlist item for customer.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomerWishListItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {ItemFunctions} from '../item/itemFunctions.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * The wishlist methods allow management of a customer's wishlist.
+ * This includes:
+ *     DeleteWishListItem
+ *     GetCustomerWishList
+ *     GetCustomerWishListItem
+ *     InsertWishListItem
+ *     UpdateWishListItem
+ * These methods provide a standard CRUD interface.
+ *
+ * You'll need merchant_item_oids to insert wishlist items. If you don't know the oids,
+ * call ItemApi.GetItemByMerchantItemId() to retrieve the item, then get item.MerchantItemOid
+ *
+ * Note: Priority of wishlist item, 3 being low priority and 5 is high priority.
+ */
+export class GetCustomerWishListItem {
+    static async execute() {
+        try {
+            // create a few items first.
+            const firstItemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            const secondItemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
-let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item.
-apiInstance.getCustomerWishListItem(customer_profile_oid, customer_wishlist_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+
+            // TODO: If you don't know the customer oid, use GetCustomerByEmail() to retrieve the customer.
+
+            // add some wish list items.
+            const firstWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: firstItemOid,
+                comments: "I really want this for my birthday",
+                priority: 3 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const firstCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, firstWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const secondWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: secondItemOid,
+                comments: "Christmas Idea!",
+                priority: 5 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const secondCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, secondWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (firstCreatedWishItem === undefined || firstCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("first wish list item is undefined.  update failed.");
+                return;
+            }
+
+            if (secondCreatedWishItem === undefined || secondCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("second wish list item is undefined.  update failed.");
+                return;
+            }
+
+            // retrieve one wishlist item again
+            const firstCreatedWishItemCopyResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const firstCreatedWishItemCopy = firstCreatedWishItemCopyResponse.wishlist_item;
+
+            // retrieve all wishlist items
+            const allWishListItems = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishList(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // update an item.
+            const updatedSecondWishItem = await new Promise((resolve, reject) => {
+                customerApi.updateWishListItem(customerOid, secondCreatedWishItem.customer_wishlist_item_oid, secondCreatedWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // delete a wish list item
+            await new Promise((resolve, reject) => {
+                customerApi.deleteWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Clean up
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+            await ItemFunctions.deleteSampleItemByOid(firstItemOid);
+            await ItemFunctions.deleteSampleItemByOid(secondItemOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomerWishListItem -->
 
 ### Parameters
 
@@ -772,61 +1205,108 @@ Retrieves customers from the account.  If no parameters are specified, all custo
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCustomers {
+    /**
+     * This example illustrates how to retrieve customers. It uses the pagination logic necessary to query all customers.
+     * This method was the first GetCustomers and has parameters for all the search terms. It's an ogre. Using
+     * GetCustomersByQuery is much easier to use.
+     */
+    static async getCustomerChunk(offset, limit) {
+        // The real devil in the GetCustomers calls is the expansion, making sure you return everything you need without
+        // returning everything since these objects are extremely large. The customer object can be truly large with
+        // all the order history. These are the possible expansion values.
+        /*
+            attachments     billing     cards           cc_emails       loyalty     orders_summary          pricing_tiers
+            privacy         properties  quotes_summary  reviewer        shipping    software_entitlements   tags
+            tax_codes
+         */
+        const expand = "shipping,billing"; // just the address fields. contact us if you're unsure
 
-let opts = {
-  'email': "email_example", // String | Email
-  'qb_class': "qb_class_example", // String | Quickbooks class
-  'quickbooks_code': "quickbooks_code_example", // String | Quickbooks code
-  'last_modified_dts_start': "last_modified_dts_start_example", // String | Last modified date start
-  'last_modified_dts_end': "last_modified_dts_end_example", // String | Last modified date end
-  'signup_dts_start': "signup_dts_start_example", // String | Signup date start
-  'signup_dts_end': "signup_dts_end_example", // String | Signup date end
-  'billing_first_name': "billing_first_name_example", // String | Billing first name
-  'billing_last_name': "billing_last_name_example", // String | Billing last name
-  'billing_company': "billing_company_example", // String | Billing company
-  'billing_city': "billing_city_example", // String | Billing city
-  'billing_state': "billing_state_example", // String | Billing state
-  'billing_postal_code': "billing_postal_code_example", // String | Billing postal code
-  'billing_country_code': "billing_country_code_example", // String | Billing country code
-  'billing_day_phone': "billing_day_phone_example", // String | Billing day phone
-  'billing_evening_phone': "billing_evening_phone_example", // String | Billing evening phone
-  'shipping_first_name': "shipping_first_name_example", // String | Shipping first name
-  'shipping_last_name': "shipping_last_name_example", // String | Shipping last name
-  'shipping_company': "shipping_company_example", // String | Shipping company
-  'shipping_city': "shipping_city_example", // String | Shipping city
-  'shipping_state': "shipping_state_example", // String | Shipping state
-  'shipping_postal_code': "shipping_postal_code_example", // String | Shipping postal code
-  'shipping_country_code': "shipping_country_code_example", // String | Shipping country code
-  'shipping_day_phone': "shipping_day_phone_example", // String | Shipping day phone
-  'shipping_evening_phone': "shipping_evening_phone_example", // String | Shipping evening phone
-  'pricing_tier_oid': 56, // Number | Pricing tier oid
-  'pricing_tier_name': "pricing_tier_name_example", // String | Pricing tier name
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCustomers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // TODO: Seriously, use GetCustomersByQuery -- it's so much better than this old method.
+        const params = {
+            email: undefined,
+            qbClass: undefined,
+            quickbooksCode: undefined,
+            lastModifiedDtsStart: undefined,
+            lastModifiedDtsEnd: undefined,
+            signupDtsStart: undefined,
+            signupDtsEnd: undefined,
+            billingFirstName: undefined,
+            billingLastName: undefined,
+            billingCompany: undefined,
+            billingCity: undefined,
+            billingState: undefined,
+            billingPostalCode: undefined,
+            billingCountryCode: undefined,
+            billingDayPhone: undefined,
+            billingEveningPhone: undefined,
+            shippingFirstName: undefined,
+            shippingLastName: undefined,
+            shippingCompany: undefined,
+            shippingCity: undefined,
+            shippingState: undefined,
+            shippingPostalCode: undefined,
+            shippingCountryCode: undefined,
+            shippingDayPhone: undefined,
+            shippingEveningPhone: undefined,
+            pricingTierOid: undefined,
+            pricingTierName: undefined,
+            _limit: limit,
+            _offset: offset,
+            _since: undefined,
+            _sort: undefined,
+            _expand: expand
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            customerApi.getCustomers(params, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        if (apiResponse.customers) {
+            return apiResponse.customers;
+        }
+        return [];
+    }
+
+    static async execute() {
+        try {
+            const customers = [];
+
+            let iteration = 1;
+            let offset = 0;
+            const limit = 200;
+            let moreRecordsToFetch = true;
+
+            while (moreRecordsToFetch) {
+                console.log(`Executing iteration ${iteration}`);
+
+                const chunkOfCustomers = await GetCustomers.getCustomerChunk(offset, limit);
+                customers.push(...chunkOfCustomers);
+                offset = offset + limit;
+                moreRecordsToFetch = chunkOfCustomers.length === limit;
+                iteration++;
+            }
+
+            // This will be verbose...
+            console.log(customers);
+        } catch (ex) {
+            console.error(`Exception occurred: ${ex.message}`);
+            console.error(ex);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomers -->
 
 ### Parameters
 
@@ -891,35 +1371,118 @@ Retrieves customers from the account.  If no parameters are specified, all custo
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomersByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import { customerApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetCustomersByQuery {
+    /*
+     * This example illustrates how to retrieve customers. It uses the pagination logic necessary to query all customers.
+     */
+    static async execute() {
+        // pulling all records could take a long time.
+        const customers = [];
 
-let customer_query = new UltraCartRestApiV2.CustomerQuery(); // CustomerQuery | Customer query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCustomersByQuery(customer_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        let iteration = 1;
+        let offset = 0;
+        const limit = 200;
+        let moreRecordsToFetch = true;
+
+        try {
+            while (moreRecordsToFetch) {
+                console.log("executing iteration " + iteration);
+
+                const chunkOfCustomers = await GetCustomersByQuery.getCustomerChunk(offset, limit);
+                customers.push(...chunkOfCustomers);
+                offset = offset + limit;
+                moreRecordsToFetch = chunkOfCustomers.length === limit;
+                iteration++;
+            }
+        } catch (e) {
+            console.log("Exception occurred on iteration " + iteration);
+            console.log(e);
+            process.exit(1);
+        }
+
+        // this will be verbose...
+        for (const customer of customers) {
+            console.log(customer);
+        }
+    }
+
+    /**
+     * Retrieves a chunk of customers based on specified parameters
+     * @param offset Starting position for retrieval
+     * @param limit Maximum number of records to retrieve
+     * @returns Array of customers
+     */
+    static async getCustomerChunk(offset, limit) {
+        // The real devil in the getCustomers calls is the expansion, making sure you return everything you need without
+        // returning everything since these objects are extremely large. The customer object can be truly large with
+        // all the order history. These are the possible expansion values.
+        /*
+            attachments     billing     cards           cc_emails       loyalty     orders_summary          pricing_tiers
+            privacy         properties  quotes_summary  reviewer        shipping    software_entitlements   tags
+            tax_codes
+        */
+        const expand = "shipping,billing"; // just the address fields. contact us if you're unsure
+
+        // TODO: This is just showing all the possibilities. In reality, you'll just assign the filters you need.
+        const query = {
+            //email: undefined,
+            //qbClass: undefined,
+            //quickbooksCode: undefined,
+            //lastModifiedDtsStart: undefined,
+            //lastModifiedDtsEnd: undefined,
+            //signupDtsStart: undefined,
+            //signupDtsEnd: undefined,
+            //billingFirstName: undefined,
+            //billingLastName: undefined,
+            //billingCompany: undefined,
+            //billingCity: undefined,
+            //billingState: undefined,
+            //billingPostalCode: undefined,
+            //billingCountryCode: undefined,
+            //billingDayPhone: undefined,
+            //billingEveningPhone: undefined,
+            //shippingFirstName: undefined,
+            //shippingLastName: undefined,
+            //shippingCompany: undefined,
+            //shippingCity: undefined,
+            //shippingState: undefined,
+            //shippingPostalCode: undefined,
+            //shippingCountryCode: undefined,
+            //shippingDayPhone: undefined,
+            //shippingEveningPhone: undefined,
+            //pricingTierOid: undefined,
+            //pricingTierName: undefined
+        };
+
+        const opts = {
+            _offset: offset,
+            _limit: limit,
+            _since: undefined,
+            _sort: "email",
+            _expand: expand
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            customerApi.getCustomersByQuery(query, opts, function(error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        if (apiResponse.customers) {
+            return apiResponse.customers;
+        }
+        return [];
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getCustomersByQuery -->
 
 ### Parameters
 
@@ -958,30 +1521,11 @@ Retrieves customers from the account.  If no searches are specified, all custome
 
 ### Example
 
-<!-- UC_START_EXAMPLE getCustomersForDataTables -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getCustomersForDataTables(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This is an internal method used by our Customer management screen.  It won't be of much use to you, so we're
+// not including a sample.  getCustomer, getCustomerByEmail, getCustomers and getCustomersByQuery are more useful
 ```
 
-<!-- UC_END_EXAMPLE getCustomersForDataTables -->
 
 ### Parameters
 
@@ -1015,28 +1559,60 @@ Create a token that can be used to verify a customer email address.  The impleme
 
 ### Example
 
-<!-- UC_START_EXAMPLE getEmailVerificationToken -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetEmailVerificationToken {
+    /*
+        GetEmailVerificationToken and ValidateEmailVerificationToken are tandem functions that allow a merchant to verify
+        a customer's email address. GetEmailVerificationToken returns back a token that the merchant can use however
+        they wish to present to a customer. Usually this will be emailed to the customer within instructions to enter
+        it back into a website. Once the customer enters the token back into a site (along with their email),
+        ValidateEmailVerificationToken will validate the token.
 
-let token_request = new UltraCartRestApiV2.EmailVerifyTokenRequest(); // EmailVerifyTokenRequest | Token request
-apiInstance.getEmailVerificationToken(token_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        Notice that GetEmailVerificationToken requires both the email and password.
+     */
+    static async execute() {
+        const email = "test@ultracart.com";
+        const password = "squirrel";
+
+        const tokenRequest = {
+            email: email,
+            password: password
+        };
+
+        const tokenResponse = await new Promise((resolve, reject) => {
+            customerApi.getEmailVerificationToken(tokenRequest, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const token = tokenResponse.token;
+
+        // TODO - email the token to the customer, have them enter it back into another page...
+        // TODO - verify the token with the following call
+
+        const verifyRequest = {
+            token: token
+        };
+        const verifyResponse = await new Promise((resolve, reject) => {
+            customerApi.validateEmailVerificationToken(verifyRequest, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        console.log("Was the correct token provided? " + verifyResponse.success);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getEmailVerificationToken -->
 
 ### Parameters
 
@@ -1070,29 +1646,50 @@ Retrieves a magic link to allow a merchant to login as a customer.  This method 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getMagicLink -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetMagicLink {
+    /**
+     * getMagicLink returns back a url whereby a merchant can log into their website as the customer.
+     * This may be useful to "see what the customer is seeing" and is the only method to do so since
+     * the customer's passwords are encrypted.  Note: A merchant may also do this using the UltraCart
+     * backend site within the Customer Management section.
+     */
+    static async execute() {
+        try {
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+            const storefront = "www.website.com";  // required.  many merchants have dozens of storefronts. which one?
 
-let customer_profile_oid = 56; // Number | The customer_profile_oid of the customer.
-let storefront_host_name = "storefront_host_name_example"; // String | The storefront to log into.
-apiInstance.getMagicLink(customer_profile_oid, storefront_host_name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            const apiResponse = await new Promise((resolve, reject) => {
+                customerApi.getMagicLink(customerOid, storefront, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const url = apiResponse.url || "error_failed_to_get_magic_link";
+
+            // Note: In a web context, you'd typically use window.location or a framework-specific routing method
+            document.write(`<html><body><script>window.location.href = "${encodeURIComponent(url)}";</script></body></html>`);
+
+            // clean up this sample. - don't do this or the above magic link won't work.  But you'll want to clean up this
+            // sample customer manually using the backend.
+            // await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (e) {
+            console.error("An ApiException occurred. Please review the following error:");
+            console.error(e); // handle gracefully
+            throw e; // or handle as appropriate in your application
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getMagicLink -->
 
 ### Parameters
 
@@ -1127,30 +1724,9 @@ Typeahead search of the merchant&#39;s QuickBooks Online customers by display na
 
 ### Example
 
-<!-- UC_START_EXAMPLE getQuickBooksOnlineCustomers -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  'q': "q_example" // String | Search query matched against the QuickBooks Online customer display name
-};
-apiInstance.getQuickBooksOnlineCustomers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getQuickBooksOnlineCustomers -->
 
 ### Parameters
 
@@ -1184,31 +1760,17 @@ Insert a customer on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import { CustomerFunctions } from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to insert
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.insertCustomer(customer, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+export class InsertCustomer {
+    static async execute() {
+        const customerOid = await CustomerFunctions.insertSampleCustomer();
+        await CustomerFunctions.deleteSampleCustomer(customerOid);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertCustomer -->
 
 ### Parameters
 
@@ -1243,29 +1805,139 @@ Insert a customer wishlist item
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertWishListItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {ItemFunctions} from '../item/itemFunctions.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * The wishlist methods allow management of a customer's wishlist.
+ * This includes:
+ *     DeleteWishListItem
+ *     GetCustomerWishList
+ *     GetCustomerWishListItem
+ *     InsertWishListItem
+ *     UpdateWishListItem
+ * These methods provide a standard CRUD interface.
+ *
+ * You'll need merchant_item_oids to insert wishlist items. If you don't know the oids,
+ * call ItemApi.GetItemByMerchantItemId() to retrieve the item, then get item.MerchantItemOid
+ *
+ * Note: Priority of wishlist item, 3 being low priority and 5 is high priority.
+ */
+export class InsertWishListItem {
+    static async execute() {
+        try {
+            // create a few items first.
+            const firstItemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            const secondItemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
-let wishlist_item = new UltraCartRestApiV2.CustomerWishListItem(); // CustomerWishListItem | Wishlist item to insert
-apiInstance.insertWishListItem(customer_profile_oid, wishlist_item, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+
+            // TODO: If you don't know the customer oid, use GetCustomerByEmail() to retrieve the customer.
+
+            // add some wish list items.
+            const firstWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: firstItemOid,
+                comments: "I really want this for my birthday",
+                priority: 3 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const firstCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, firstWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const secondWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: secondItemOid,
+                comments: "Christmas Idea!",
+                priority: 5 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const secondCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, secondWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (firstCreatedWishItem === undefined || firstCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("first wish list item is undefined.  update failed.");
+                return;
+            }
+
+            if (secondCreatedWishItem === undefined || secondCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("second wish list item is undefined.  update failed.");
+                return;
+            }
+
+            // retrieve one wishlist item again
+            const firstCreatedWishItemCopyResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const firstCreatedWishItemCopy = firstCreatedWishItemCopyResponse.wishlist_item;
+
+            // retrieve all wishlist items
+            const allWishListItems = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishList(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // update an item.
+            const updatedSecondWishItem = await new Promise((resolve, reject) => {
+                customerApi.updateWishListItem(customerOid, secondCreatedWishItem.customer_wishlist_item_oid, secondCreatedWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // delete a wish list item
+            await new Promise((resolve, reject) => {
+                customerApi.deleteWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Clean up
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+            await ItemFunctions.deleteSampleItemByOid(firstItemOid);
+            await ItemFunctions.deleteSampleItemByOid(secondItemOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertWishListItem -->
 
 ### Parameters
 
@@ -1300,32 +1972,59 @@ Merge customer into this customer.
 
 ### Example
 
-<!-- UC_START_EXAMPLE mergeCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class MergeCustomer {
+    /**
+     * The merge function was requested by UltraCart merchants that sell software and manage activation keys.  Frequently,
+     * customers would purchase their software using one email address, and then accidentally re-subscribe using a
+     * different email address (for example, they purchased subsequent years using PayPal which was tied to their spouse's
+     * email).  However it happened, the customer now how software licenses spread across multiple emails and therefore
+     * multiple customer profiles.
+     *
+     * merge combine the customer profiles, merging order history and software entitlements.  Still, it may be used to
+     * combine any two customer profiles for any reason.
+     *
+     * Success returns back a status code 204 (No Content)
+     */
+    static async execute() {
+        try {
+            // first customer
+            const firstCustomerOid = await CustomerFunctions.insertSampleCustomer();
 
-let customer_profile_oid = 56; // Number | The customer_profile_oid to update.
-let customer = new UltraCartRestApiV2.CustomerMergeRequest(); // CustomerMergeRequest | Customer to merge into this profile.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.mergeCustomer(customer_profile_oid, customer, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+            const secondEmail = CustomerFunctions.createRandomEmail();
+            const secondCustomerOid = await CustomerFunctions.insertSampleCustomer(secondEmail);
+
+            const mergeRequest = {
+                // Supply either the email or the customer oid.  Only need one.
+                email: secondEmail,
+                // customerProfileOid: customerOid, // Commented out as in original code
+            };
+
+            await new Promise((resolve, reject) => {
+                customerApi.mergeCustomer(firstCustomerOid, mergeRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // clean up this sample.
+            await CustomerFunctions.deleteSampleCustomer(firstCustomerOid);
+            // Notice: No need to delete the second sample.  The merge call deletes it.
+        } catch (e) {
+            console.error("An ApiException occurred. Please review the following error:");
+            console.error(e); // <-- change_me: handle gracefully
+            throw e;
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE mergeCustomer -->
 
 ### Parameters
 
@@ -1359,28 +2058,13 @@ Searches for all matching values (using POST)
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchCustomerProfileValues -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let lookup_request = new UltraCartRestApiV2.LookupRequest(); // LookupRequest | LookupRequest
-apiInstance.searchCustomerProfileValues(lookup_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This is an internal method used by our Customer management screen.  It only searches customer tags and is geared
+// towards our UI needs, so it's inflexible.  We're not including a sample for it because we don't envision it
+// being valuable to a merchant.
+// getCustomersByQuery is the merchant's search method.  It is completely full-featured and easy to use.
 ```
 
-<!-- UC_END_EXAMPLE searchCustomerProfileValues -->
 
 ### Parameters
 
@@ -1414,37 +2098,9 @@ Retrieves customers from the account by matching the search value against most c
 
 ### Example
 
-<!-- UC_START_EXAMPLE searchCustomers -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let opts = {
-  'search_string': "search_string_example", // String | Search
-  'signup_dts_start': "signup_dts_start_example", // String | Signup date start
-  'signup_dts_end': "signup_dts_end_example", // String | Signup date end
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch customers that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the customers.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.searchCustomers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE searchCustomers -->
 
 ### Parameters
 
@@ -1485,32 +2141,71 @@ Update a customer on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomer -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateCustomer {
+    /**
+     * Executes a customer update workflow
+     * Inserts a sample customer, updates their billing address,
+     * and then deletes the sample customer
+     */
+    static async Execute() {
+        try {
+            // Insert a sample customer and get their OID
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
 
-let customer_profile_oid = 56; // Number | The customer_profile_oid to update.
-let customer = new UltraCartRestApiV2.Customer(); // Customer | Customer to update
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateCustomer(customer_profile_oid, customer, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // just want address fields. see https://www.ultracart.com/api/#resource_customer.html for all expansion values
+            const expand = "billing,shipping";
+
+            // Retrieve the customer
+            const customerResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomer(customerOid, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const customer = customerResponse.customer;
+
+            if (customer === undefined) {
+                console.error("getCustomer returned undefined, cannot update.");
+                process.exit(1);
+            }
+
+            // TODO: do some edits to the customer. Here we will change some billing fields.
+            if (customer.billing && customer.billing.length > 0) {
+                customer.billing[0].address2 = "Apartment 101";
+            }
+
+            // notice expand is passed to update as well since it returns back an updated customer object.
+            // we use the same expansion, so we get back the same fields and can do comparisons.
+            const apiResponse = await new Promise((resolve, reject) => {
+                customerApi.updateCustomer(customerOid, customer, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // verify the update
+            console.log(apiResponse.customer);
+
+            // Delete the sample customer
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+        } catch (e) {
+            console.error("An unexpected error occurred:", e);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateCustomer -->
 
 ### Parameters
 
@@ -1546,29 +2241,12 @@ Update email list subscriptions for a customer
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomerEmailLists -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer_profile_oid = 56; // Number | The customer profile oid
-let list_changes = new UltraCartRestApiV2.CustomerEmailListChanges(); // CustomerEmailListChanges | List changes
-apiInstance.updateCustomerEmailLists(customer_profile_oid, list_changes, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This is an internal method used by our Email workflow engines.  It allows for updating the email lists a customer
+// is currently subscribed to.  It's geared towards our UI needs, so its usage may appear cryptic.
+//  We're not including a sample for it because we don't envision it being valuable to a merchant.
 ```
 
-<!-- UC_END_EXAMPLE updateCustomerEmailLists -->
 
 ### Parameters
 
@@ -1603,29 +2281,9 @@ Clears global unsubscribe, spam complaint and/or bounce suppression for a custom
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateCustomerEmailSuppression -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let customer_profile_oid = 56; // Number | The customer profile oid
-let suppression_changes = new UltraCartRestApiV2.CustomerEmailSuppressionRequest(); // CustomerEmailSuppressionRequest | Suppression changes
-apiInstance.updateCustomerEmailSuppression(customer_profile_oid, suppression_changes, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateCustomerEmailSuppression -->
 
 ### Parameters
 
@@ -1660,30 +2318,139 @@ Update a customer wishlist item
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateWishListItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
+import {ItemFunctions} from '../item/itemFunctions.js';
+import {CustomerFunctions} from './customerFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * The wishlist methods allow management of a customer's wishlist.
+ * This includes:
+ *     DeleteWishListItem
+ *     GetCustomerWishList
+ *     GetCustomerWishListItem
+ *     InsertWishListItem
+ *     UpdateWishListItem
+ * These methods provide a standard CRUD interface.
+ *
+ * You'll need merchant_item_oids to insert wishlist items. If you don't know the oids,
+ * call ItemApi.GetItemByMerchantItemId() to retrieve the item, then get item.MerchantItemOid
+ *
+ * Note: Priority of wishlist item, 3 being low priority and 5 is high priority.
+ */
+export class UpdateWishListItem {
+    static async execute() {
+        try {
+            // create a few items first.
+            const firstItemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            const secondItemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let customer_profile_oid = 56; // Number | The customer oid for this wishlist.
-let customer_wishlist_item_oid = 56; // Number | The wishlist oid for this wishlist item.
-let wishlist_item = new UltraCartRestApiV2.CustomerWishListItem(); // CustomerWishListItem | Wishlist item to update
-apiInstance.updateWishListItem(customer_profile_oid, customer_wishlist_item_oid, wishlist_item, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // create a customer
+            const customerOid = await CustomerFunctions.insertSampleCustomer();
+
+            // TODO: If you don't know the customer oid, use GetCustomerByEmail() to retrieve the customer.
+
+            // add some wish list items.
+            const firstWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: firstItemOid,
+                comments: "I really want this for my birthday",
+                priority: 3 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const firstCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, firstWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            const secondWishItem = {
+                customer_profile_oid: customerOid,
+                merchant_item_oid: secondItemOid,
+                comments: "Christmas Idea!",
+                priority: 5 // Priority of wishlist item, 3 being low priority and 5 is high priority.
+            };
+            const secondCreatedWishItem = await new Promise((resolve, reject) => {
+                customerApi.insertWishListItem(customerOid, secondWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            if (firstCreatedWishItem === undefined || firstCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("first wish list item is undefined.  update failed.");
+                return;
+            }
+
+            if (secondCreatedWishItem === undefined || secondCreatedWishItem.customer_profile_oid === undefined) {
+                console.error("second wish list item is undefined.  update failed.");
+                return;
+            }
+
+            // retrieve one wishlist item again
+            const firstCreatedWishItemCopyResponse = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const firstCreatedWishItemCopy = firstCreatedWishItemCopyResponse.wishlist_item;
+
+            // retrieve all wishlist items
+            const allWishListItems = await new Promise((resolve, reject) => {
+                customerApi.getCustomerWishList(customerOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // update an item.
+            const updatedSecondWishItem = await new Promise((resolve, reject) => {
+                customerApi.updateWishListItem(customerOid, secondCreatedWishItem.customer_wishlist_item_oid, secondCreatedWishItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // delete a wish list item
+            await new Promise((resolve, reject) => {
+                customerApi.deleteWishListItem(customerOid, firstCreatedWishItem.customer_wishlist_item_oid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            // Clean up
+            await CustomerFunctions.deleteSampleCustomer(customerOid);
+            await ItemFunctions.deleteSampleItemByOid(firstItemOid);
+            await ItemFunctions.deleteSampleItemByOid(secondItemOid);
+        } catch (ex) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(ex); // <-- change_me: handle gracefully
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateWishListItem -->
 
 ### Parameters
 
@@ -1719,28 +2486,74 @@ Validate a token that can be used to verify a customer email address.  The imple
 
 ### Example
 
-<!-- UC_START_EXAMPLE validateEmailVerificationToken -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.CustomerApi(apiClient);
+import {customerApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class ValidateEmailVerificationToken {
+    /**
+     * GetEmailVerificationToken and ValidateEmailVerificationToken are tandem functions that allow a merchant to verify
+     * a customer's email address. GetEmailVerificationToken returns back a token that the merchant can use however
+     * they wish to present to a customer. Usually this will be emailed to the customer within instructions to enter
+     * it back into a website.  Once the customer enters the token back into a site (along with their email),
+     * ValidateEmailVerificationToken will validate the token.
+     *
+     * Notice that GetEmailVerificationToken requires both the email and password.
+     */
+    static async Execute() {
+        const email = "test@ultracart.com";
+        const password = "squirrel";
 
-let validation_request = new UltraCartRestApiV2.EmailVerifyTokenValidateRequest(); // EmailVerifyTokenValidateRequest | Token validation request
-apiInstance.validateEmailVerificationToken(validation_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            // Create token request
+            const tokenRequest = {
+                email: email,
+                password: password
+            };
+
+            // Get email verification token
+            const tokenResponse = await new Promise((resolve, reject) => {
+                customerApi.getEmailVerificationToken(tokenRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const token = tokenResponse.token;
+
+            if (token == undefined) {
+                console.error("Token not found.");
+                return;
+            }
+
+            // TODO - email the token to the customer, have them enter it back into another page...
+            // TODO - verify the token with the following call
+
+            // Create verify request
+            const verifyRequest = {
+                token: token
+            };
+
+            // Validate email verification token
+            const verifyResponse = await new Promise((resolve, reject) => {
+                customerApi.validateEmailVerificationToken(verifyRequest, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+
+            console.log("Was the correct token provided? " + verifyResponse.success);
+        } catch (error) {
+            console.error("An error occurred during email verification:", error);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE validateEmailVerificationToken -->
 
 ### Parameters
 

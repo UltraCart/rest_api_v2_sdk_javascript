@@ -37,31 +37,9 @@ Attempts to rebill an auto order using the payment information already on the or
 
 ### Example
 
-<!-- UC_START_EXAMPLE attemptAutoOrderRebill -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to rebill.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.attemptAutoOrderRebill(auto_order_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE attemptAutoOrderRebill -->
 
 ### Parameters
 
@@ -96,33 +74,36 @@ Cancels a single item on an auto order identified by the original order id and t
 
 ### Example
 
-<!-- UC_START_EXAMPLE cancelAutoOrderItemByReferenceOrderId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import { autoOrderApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Cancel a single item on an auto order, identified by the reference (original) order id
+ * that placed the auto order and the original item id on that order. This is useful when
+ * you know the original UltraCart order id rather than the auto_order_oid.
+ */
+export async function execute() {
+  const referenceOrderId = "DEMO-12345678"; // the UltraCart order id that placed the auto order
+  const originalItemId   = "ITEM001";       // the merchant item id on that original order
+  const opts = {
+    '_expand': 'items' // see https://www.ultracart.com/api/#resource_auto_order.html for list
+  };
 
-let reference_order_id = "reference_order_id_example"; // String | The reference order id (original_order_id) of the auto order.
-let original_item_id = "original_item_id_example"; // String | The original_item_id (SKU) of the item to cancel.
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  'auto_order_item_cancel_request': new UltraCartRestApiV2.AutoOrderItemCancelRequest() // AutoOrderItemCancelRequest | Cancel request.  Body is optional; omit for default mode=end.
-};
-apiInstance.cancelAutoOrderItemByReferenceOrderId(reference_order_id, original_item_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+  const response = await new Promise((resolve, reject) => {
+    autoOrderApi.cancelAutoOrderItemByReferenceOrderId(referenceOrderId, originalItemId, opts, function (error, data, response) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(data, response);
+      }
+    });
+  });
+
+  const autoOrder = response.auto_order;
+  console.log(autoOrder);
+}
 ```
 
-<!-- UC_END_EXAMPLE cancelAutoOrderItemByReferenceOrderId -->
 
 ### Parameters
 
@@ -159,32 +140,59 @@ Consolidates mutliple auto orders on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE consolidateAutoOrders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Consolidate Auto Orders
+ *
+ * An auto order with no items, the original_order is used for shipping, billing, and payment information.
+ * Once you have your empty auto order, add items to it and call updateAutoOrder.
+ */
+export async function consolidateAutoOrders() {
+    console.log(`--- ${consolidateAutoOrders.name} ---`);
 
-let auto_order_oid = 56; // Number | The auto order oid to consolidate into.
-let auto_order_consolidate = new UltraCartRestApiV2.AutoOrderConsolidate(); // AutoOrderConsolidate | Auto orders to consolidate
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.consolidateAutoOrders(auto_order_oid, auto_order_consolidate, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    try {
+
+        // Expand parameter to include additional details
+        const expand = 'items,items.future_schedules,original_order,rebill_orders';
+        // See https://www.ultracart.com/api/#resource_auto_order.html for full list of expand options
+
+        // Target auto order OID (replace with actual value)
+        const targetAutoOrderOid = 123456789;
+
+        // Consolidate request object
+        const consolidateRequest = {
+            source_auto_order_oids: [23456789, 3456789] // Auto order OIDs to consolidate into the target
+        };
+
+        // Perform the consolidation
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.consolidateAutoOrders(targetAutoOrderOid, consolidateRequest, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        // Extracted consolidated auto order
+        const consolidatedAutoOrder = apiResponse.auto_order;
+
+        // TODO: Verify the consolidated order has all items and history from source orders
+        console.log(consolidatedAutoOrder);
+    } catch (error) {
+        // Error handling
+        console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        console.error(error instanceof Error ? error.stack : error);
+    }
+}
+
+// Optional: If you want to call the function
+// consolidateAutoOrders().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE consolidateAutoOrders -->
 
 ### Parameters
 
@@ -220,31 +228,85 @@ Establish an auto order by referencing a regular order id.  The result will be a
 
 ### Example
 
-<!-- UC_START_EXAMPLE establishAutoOrderByReferenceOrderId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This method takes a normal order id and creates an empty auto order from it.  While this might seem useless having
+ * an auto order with no items, the original_order is used for shipping, billing, and payment information.
+ * Once you have your empty auto order, add items to it and call updateAutoOrder.
+ */
+export async function establishAutoOrderByReferenceOrderId() {
+    console.log(`--- ${establishAutoOrderByReferenceOrderId.name} ---`);
 
-let reference_order_id = "reference_order_id_example"; // String | The order id to attach this auto order to
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.establishAutoOrderByReferenceOrderId(reference_order_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    try {
+        // Expand parameter to include additional details
+        const expand = 'items,items.future_schedules,original_order,rebill_orders';
+        // see https://www.ultracart.com/api/#resource_auto_order.html for list
+
+        const originalOrderId = 'DEMO-123457';
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.establishAutoOrderByReferenceOrderId(originalOrderId, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        const emptyAutoOrderOrUndefined = apiResponse.auto_order;
+        if (emptyAutoOrderOrUndefined !== undefined) {
+            let emptyAutoOrder = emptyAutoOrderOrUndefined;
+            const autoOrderOid = emptyAutoOrder.auto_order_oid || 0;
+
+            // Create items for the auto order
+            const items = [];
+            const item = {
+                original_item_id: 'ITEM_ABC', // This item should be configured with auto order features
+                original_quantity: 1,
+                arbitrary_unit_cost: 59.99,
+                // Valid Frequencies:
+                // "Weekly", "Biweekly", "Every...", "Every 10 Days", "Every 4 Weeks", "Every 6 Weeks", "Every 8 Weeks",
+                // "Every 24 Days", "Every 28 Days", "Monthly", "Every 45 Days", "Every 2 Months", "Every 3 Months",
+                // "Every 4 Months", "Every 5 Months", "Every 6 Months", "Yearly"
+                frequency: 'Monthly'
+            };
+            items.push(item);
+            emptyAutoOrder.items = items;
+
+            const validateOriginalOrder = 'No';
+            const updateResponse = await new Promise((resolve, reject) => {
+                autoOrderApi.updateAutoOrder(
+                    autoOrderOid,
+                    emptyAutoOrder, {validate_original_order: validateOriginalOrder, _expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            //     autoOrderOid: number;
+            // autoOrder: AutoOrder;
+            // validateOriginalOrder?: string;
+            // expand?: string;
+
+            const updatedAutoOrder = updateResponse.auto_order;
+            console.log(updatedAutoOrder);
+
+        }
+    } catch (error) {
+        // Error handling
+        console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        console.error(error instanceof Error ? error.stack : error);
+    }
+}
+
+// Optional: If you want to call the function
+// establishAutoOrderByReferenceOrderId().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE establishAutoOrderByReferenceOrderId -->
 
 ### Parameters
 
@@ -279,31 +341,46 @@ Retrieves a single auto order using the specified auto order oid.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import { autoOrderApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Retrieves an auto_order given the auto_order_oid.
+ */
+export async function getAutoOrder() {
+  console.log(`--- ${getAutoOrder.name} ---`);
 
-let auto_order_oid = 56; // Number | The auto order oid to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getAutoOrder(auto_order_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  try {
+    // Expand parameter to include additional details
+    const expand = 'items,items.future_schedules,original_order,rebill_orders';
+    // See https://www.ultracart.com/api/#resource_auto_order.html for list
+
+    // If you don't know the oid, use getAutoOrdersByQuery for retrieving auto orders
+    const autoOrderOid = 123456789;
+
+    const apiResponse = await new Promise((resolve, reject) => {
+      autoOrderApi.getAutoOrder(autoOrderOid, {_expand: expand}, function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+    const autoOrder = apiResponse.auto_order;
+
+    console.log(autoOrder);
+  } catch (error) {
+    // Error handling
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// getAutoOrder().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrder -->
 
 ### Parameters
 
@@ -338,31 +415,63 @@ Retrieves a single auto order using the specified reference (original) order id.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrderByCode -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This example illustrates how to query an auto order when you know the 'code'. Each AutoOrder has a unique
+ * identifier used by UltraCart called an OID (Object Identifier). AutoOrders also have a unique code which
+ * is (arguably) an easy way for customers to discuss a specific auto order with a merchant.
+ * The codes look like this: "RT2A9CBSX9"
+ *
+ * It is doubtful that an UltraCart merchant will ever make use of this method.
+ *
+ * IMPORTANT: The following is a comprehensive list of possible expansion values for auto orders.
+ * This list is taken from www.ultracart.com/api/ and may become stale.
+ * Please review the master website when in doubt.
+ *
+ * Expansion values include (but are not limited to):
+ * - items
+ * - items.future_schedules
+ * - items.sample_schedule
+ * - original_order
+ * - original_order.affiliate
+ * - original_order.affiliate.ledger
+ * ... (full list of expansions)
+ * - rebill_orders.taxes
+ */
+export async function getAutoOrderByCode() {
+    console.log(`--- ${getAutoOrderByCode.name} ---`);
 
-let auto_order_code = "auto_order_code_example"; // String | The auto order oid to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getAutoOrderByCode(auto_order_code, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    try {
+        // Contact UltraCart if you're unsure what expansions you need
+        const expand = 'items,items.future_schedules,original_order,rebill_orders';
+
+        const code = 'RT2A9CBSX9';
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.getAutoOrderByCode(code, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const autoOrder = apiResponse.auto_order;
+
+        // This will be verbose...
+        console.log(autoOrder);
+    } catch (error) {
+        // Error handling
+        console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        console.error(error instanceof Error ? error.stack : error);
+    }
+}
+
+// Optional: If you want to call the function
+// getAutoOrderByCode().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrderByCode -->
 
 ### Parameters
 
@@ -397,31 +506,56 @@ Retrieves a single auto order using the specified reference (original) order id.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrderByReferenceOrderId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This example illustrates how to query an auto order when you know the original order id.
+ * These are the possible expansion values for auto orders. This list is taken from www.ultracart.com/api/
+ * and may become stale. Please review the master website when in doubt.
+ *
+ * Expansion values include (but are not limited to):
+ * - items
+ * - items.future_schedules
+ * - items.sample_schedule
+ * - original_order
+ * - original_order.affiliate
+ * - original_order.affiliate.ledger
+ * ... (full list of expansions)
+ * - rebill_orders.taxes
+ */
+export async function getAutoOrderByReferenceOrderId() {
+    console.log(`--- ${getAutoOrderByReferenceOrderId.name} ---`);
 
-let reference_order_id = "reference_order_id_example"; // String | The auto order oid to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getAutoOrderByReferenceOrderId(reference_order_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    try {
+        // Contact UltraCart if you're unsure what expansions you need
+        const expand = 'items,items.future_schedules,original_order,rebill_orders';
+
+        const originalOrderId = 'DEMO-12345678';
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.getAutoOrderByReferenceOrderId(originalOrderId, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+        const autoOrder = apiResponse.auto_order;
+
+        // This will be verbose...
+        console.log(autoOrder);
+    } catch (error) {
+        // Error handling
+        console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        console.error(error instanceof Error ? error.stack : error);
+    }
+}
+
+// Optional: If you want to call the function
+// getAutoOrderByReferenceOrderId().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrderByReferenceOrderId -->
 
 ### Parameters
 
@@ -456,27 +590,43 @@ Retrieves auto order cancel reasons.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrderCancelReasons -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import { autoOrderApi } from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Retrieves the list of cancel reasons that can be presented to customers when
+ * cancelling an auto order (e.g., in MyAccount). Each reason includes the reason
+ * text, an optional MyAccount alternate description, and whether the reason is
+ * visible in MyAccount.
+ */
+export async function getAutoOrderCancelReasons() {
+  console.log(`--- ${getAutoOrderCancelReasons.name} ---`);
 
-apiInstance.getAutoOrderCancelReasons((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
+  try {
+    const apiResponse = await new Promise((resolve, reject) => {
+      autoOrderApi.getAutoOrderCancelReasons(function (error, data, response) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(data, response);
+        }
+      });
+    });
+
+    const cancelReasons = apiResponse.cancel_reasons || [];
+    cancelReasons.forEach((cancelReason) => {
+      console.log(cancelReason);
+    });
+  } catch (error) {
+    console.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    console.error(error instanceof Error ? error.stack : error);
   }
-});
+}
+
+// Optional: If you want to call the function
+// getAutoOrderCancelReasons().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrderCancelReasons -->
 
 ### Parameters
 
@@ -507,28 +657,9 @@ Retrieves email delivery records associated with the specified auto order.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrderEmails -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to retrieve email delivery information for.
-apiInstance.getAutoOrderEmails(auto_order_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAutoOrderEmails -->
 
 ### Parameters
 
@@ -562,52 +693,126 @@ Retrieves auto orders from the account.  If no parameters are specified, all aut
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrders -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * getAutoOrders provides a query service on AutoOrders (aka subscriptions or recurring orders) within the UltraCart
+ * system. It was the first query provided and the most cumbersome to use.  Please use getAutoOrdersByQuery for an
+ * easier query method.  If you have multiple auto_order_oids and need the corresponding objects, consider
+ * getAutoOrdersBatch() to reduce call count.
+ */
+export class GetAutoOrders {
+    /**
+     * Executes the auto orders retrieval process
+     */
+    static async execute() {
+        console.log(`--- ${this.name} ---`);
 
-let opts = {
-  'auto_order_code': "auto_order_code_example", // String | Auto order code
-  'original_order_id': "original_order_id_example", // String | Original order id
-  'first_name': "first_name_example", // String | First name
-  'last_name': "last_name_example", // String | Last name
-  'company': "company_example", // String | Company
-  'city': "city_example", // String | City
-  'state': "state_example", // String | State
-  'postal_code': "postal_code_example", // String | Postal code
-  'country_code': "country_code_example", // String | Country code (ISO-3166 two letter)
-  'phone': "phone_example", // String | Phone
-  'email': "email_example", // String | Email
-  'original_order_date_begin': "original_order_date_begin_example", // String | Original order date begin
-  'original_order_date_end': "original_order_date_end_example", // String | Original order date end
-  'next_shipment_date_begin': "next_shipment_date_begin_example", // String | Next shipment date begin
-  'next_shipment_date_end': "next_shipment_date_end_example", // String | Next shipment date end
-  'card_type': "card_type_example", // String | Card type
-  'item_id': "item_id_example", // String | Item ID
-  'status': "status_example", // String | Status
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Max 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch auto orders that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getAutoOrders(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            const autoOrders = [];
+
+            let iteration = 1;
+            let offset = 0;
+            const limit = 200;
+            let moreRecordsToFetch = true;
+
+            while (moreRecordsToFetch) {
+                console.log(`executing iteration ${iteration}`);
+                const chunkOfAutoOrders = await this.getAutoOrderChunk(offset, limit);
+                autoOrders.push(...chunkOfAutoOrders);
+                offset = offset + limit;
+                moreRecordsToFetch = chunkOfAutoOrders.length === limit;
+                iteration++;
+            }
+
+            // Display the auto orders
+            for (const autoOrder of autoOrders) {
+                console.log(autoOrder);
+            }
+
+            console.log(`Total auto orders retrieved: ${autoOrders.length}`);
+        } catch (ex) {
+            console.error(`Error: ${ex instanceof Error ? ex.message : String(ex)}`);
+            console.error(ex instanceof Error ? ex.stack : 'No stack trace available');
+        }
+    }
+
+    /**
+     * Returns a chunk of auto orders based on query parameters
+     * @param offset Pagination offset
+     * @param limit Maximum number of records to return
+     * @returns List of matching auto orders
+     */
+    static async getAutoOrderChunk(offset, limit) {
+        const expand = "items,original_order,rebill_orders";
+        /*
+        Possible Order Expansions:
+
+        add_ons                             items.sample_schedule	        original_order.buysafe	        original_order.payment.transaction
+        items	                            original_order	                original_order.channel_partner	original_order.quote
+        items.future_schedules	            original_order.affiliate	    original_order.checkout	        original_order.salesforce
+        original_order.affiliate.ledger	    original_order.coupon	        original_order.shipping
+        original_order.auto_order	        original_order.customer_profile	original_order.summary
+        original_order.billing	            original_order.digital_order	original_order.taxes
+        rebill_orders	                    original_order.edi	            rebill_orders.affiliate
+        rebill_orders.affiliate.ledger	    original_order.fraud_score	    rebill_orders.auto_order
+        rebill_orders.billing	            original_order.gift	            rebill_orders.buysafe
+        rebill_orders.channel_partner	    original_order.gift_certificate	rebill_orders.checkout
+        rebill_orders.coupon	            original_order.internal	        rebill_orders.customer_profile
+        rebill_orders.digital_order	        original_order.item	            rebill_orders.edi
+        rebill_orders.fraud_score	        original_order.linked_shipment	rebill_orders.gift
+        rebill_orders.gift_certificate      original_order.marketing	    rebill_orders.internal
+        rebill_orders.item	                original_order.payment	        rebill_orders.linked_shipment
+        rebill_orders.marketing	            rebill_orders.payment	        rebill_orders.quote
+        rebill_orders.payment.transaction	rebill_orders.salesforce	    rebill_orders.shipping
+        rebill_orders.summary	            rebill_orders.taxes
+        */
+
+        const queryParams = {
+            autoOrderCode: undefined,
+            originalOrderId: undefined,
+            firstName: undefined,
+            lastName: undefined,
+            company: undefined,
+            city: undefined,
+            state: undefined,
+            postalCode: undefined,
+            countryCode: undefined,
+            phone: undefined,
+            email: "test@ultracart.com", // for this example, we are only filtering on email address
+            originalOrderDateBegin: undefined,
+            originalOrderDateEnd: undefined,
+            nextShipmentDateBegin: undefined,
+            nextShipmentDateEnd: undefined,
+            cardType: undefined,
+            itemId: undefined,
+            status: undefined,
+            _limit: limit,
+            _offset: offset,
+            _since: undefined,
+            _sort: undefined,
+            _expand: expand
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.getAutoOrders(queryParams, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        return apiResponse.auto_orders ?? [];
+    }
+}
+
+// Define an object for the query parameters to make the code more structured
+// Note: In JavaScript, we don't need a separate interface definition
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrders -->
 
 ### Parameters
 
@@ -663,31 +868,71 @@ Retrieves a group of auto orders from the account based on an array of auto orde
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrdersBatch -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from "../api.js";
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This example illustrates how to retrieve auto orders when you have a list of auto_order_oid.
+ * These are the possible expansion values for auto orders.  This list is taken from www.ultracart.com/api/
+ * and may become stale. Please review the master website when in doubt.
+ *
+ * Possible expansion values include:
+ * - items
+ * - items.future_schedules
+ * - items.sample_schedule
+ * - original_order
+ * - original_order.affiliate
+ * ... (full list of expansions from original comment)
+ */
+export class GetAutoOrdersBatch {
+    /**
+     * Executes batch retrieval of auto orders
+     */
+    static async execute() {
+        console.log(`--- ${this.name} ---`);
 
-let auto_order_batch = new UltraCartRestApiV2.AutoOrderQueryBatch(); // AutoOrderQueryBatch | Auto order batch
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.
-};
-apiInstance.getAutoOrdersBatch(auto_order_batch, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            // Define expansion fields
+            const expand =
+                "items,items.future_schedules,original_order,rebill_orders"; // contact us if you're unsure what you need
+
+            // Define auto order OIDs (numbers)
+            const autoOrderOids = [123456, 234567, 345678, 456789];
+
+            // Create batch request
+            const batchRequest = {
+                auto_order_oids: autoOrderOids
+            };
+
+            // Retrieve auto orders
+            const apiResponse = await new Promise((resolve, reject) => {
+                autoOrderApi.getAutoOrdersBatch(batchRequest, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const autoOrders = apiResponse.auto_orders ?? [];
+
+            // Display auto orders
+            for (const autoOrder of autoOrders) {
+                console.log(autoOrder);
+            }
+
+            console.log(`Retrieved ${autoOrders.length} auto orders`);
+        } catch (ex) {
+            console.error(`Error: ${ex instanceof Error ? ex.message : String(ex)}`);
+            console.error(ex instanceof Error ? ex.stack : 'No stack trace available');
+        }
+    }
+}
+
+// Optionally, if you need to call this
+// GetAutoOrdersBatch.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrdersBatch -->
 
 ### Parameters
 
@@ -722,34 +967,177 @@ Retrieves a group of auto orders from the account based on a query object.  You 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAutoOrdersByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {DateTime} from 'luxon';
+import {autoOrderApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This example illustrates how to retrieve auto orders and handle pagination.
+ *
+ * These are the possible expansion values for auto orders. This list is taken from www.ultracart.com/api/
+ * and may become stale. Please review the master website when in doubt.
+ * Expansion options include:
+ *            items
+ *             items.future_schedules
+ *             items.sample_schedule
+ *             original_order
+ *             original_order.affiliate
+ *             original_order.affiliate.ledger
+ *             original_order.auto_order
+ *             original_order.billing
+ *             original_order.buysafe
+ *             original_order.channel_partner
+ *             original_order.checkout
+ *             original_order.coupon
+ *             original_order.customer_profile
+ *             original_order.digital_order
+ *             original_order.edi
+ *             original_order.fraud_score
+ *             original_order.gift
+ *             original_order.gift_certificate
+ *             original_order.internal
+ *             original_order.item
+ *             original_order.linked_shipment
+ *             original_order.marketing
+ *             original_order.payment
+ *             original_order.payment.transaction
+ *             original_order.quote
+ *             original_order.salesforce
+ *             original_order.shipping
+ *             original_order.summary
+ *             original_order.taxes
+ *             rebill_orders
+ *             rebill_orders.affiliate
+ *             rebill_orders.affiliate.ledger
+ *             rebill_orders.auto_order
+ *             rebill_orders.billing
+ *             rebill_orders.buysafe
+ *             rebill_orders.channel_partner
+ *             rebill_orders.checkout
+ *             rebill_orders.coupon
+ *             rebill_orders.customer_profile
+ *             rebill_orders.digital_order
+ *             rebill_orders.edi
+ *             rebill_orders.fraud_score
+ *             rebill_orders.gift
+ *             rebill_orders.gift_certificate
+ *             rebill_orders.internal
+ *             rebill_orders.item
+ *             rebill_orders.linked_shipment
+ *             rebill_orders.marketing
+ *             rebill_orders.payment
+ *             rebill_orders.payment.transaction
+ *             rebill_orders.quote
+ *             rebill_orders.salesforce
+ *             rebill_orders.shipping
+ *             rebill_orders.summary
+ *             rebill_orders.taxes
+ */
+export class GetAutoOrdersByQuery {
+    /**
+     * Executes the auto order retrieval process
+     */
+    static async execute() {
+        console.log(`--- ${this.name} ---`);
 
-let auto_order_query = new UltraCartRestApiV2.AutoOrderQuery(); // AutoOrderQuery | Auto order query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example", // String | The sort order of the auto orders.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.
-};
-apiInstance.getAutoOrdersByQuery(auto_order_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            const autoOrders = [];
+
+            let iteration = 1;
+            let offset = 0;
+            const limit = 200;
+            let moreRecordsToFetch = true;
+
+            while (moreRecordsToFetch) {
+                console.log(`executing iteration ${iteration}`);
+
+                const chunkOfOrders = await this.getAutoOrderChunk(offset, limit);
+                autoOrders.push(...chunkOfOrders);
+                offset = offset + limit;
+                moreRecordsToFetch = chunkOfOrders.length === limit;
+                iteration++;
+            }
+
+            // Display auto orders
+            for (const autoOrder of autoOrders) {
+                console.log(autoOrder);
+            }
+
+            console.log(`Retrieved ${autoOrders.length} auto orders`);
+        } catch (ex) {
+            console.error('ApiException occurred on iteration');
+            console.error(ex);
+            process.exit(1);
+        }
+    }
+
+    /**
+     * Returns a chunk of auto orders based on query parameters
+     * @param offset Pagination offset
+     * @param limit Maximum number of records to return
+     * @returns List of matching auto orders
+     */
+    static async getAutoOrderChunk(offset, limit) {
+        // Expansions for retrieving additional data
+        const expand =
+            "items,items.future_schedules,original_order,rebill_orders"; // contact us if you're unsure what you need
+
+        /*
+         * Supported sorting fields:
+         * auto_order_code
+         * order_id
+         * shipping.company
+         * shipping.first_name
+         * shipping.last_name
+         * shipping.city
+         * shipping.state_region
+         * shipping.postal_code
+         * shipping.country_code
+         * billing.phone
+         * billing.email
+         * billing.cc_email
+         * billing.company
+         * billing.first_name
+         * billing.last_name
+         * billing.city
+         * billing.state
+         * billing.postal_code
+         * billing.country_code
+         * creation_dts
+         * payment.payment_dts
+         * checkout.screen_branding_theme_code
+         * next_shipment_dts
+         */
+        const sort = "next_shipment_dts";
+
+        const query = {
+            email: "support@ultracart.com"
+        };
+
+        const apiResponse = await new Promise((resolve, reject) => {
+            autoOrderApi.getAutoOrdersByQuery(
+                query, {
+                    _limit: limit,
+                    _offset: offset,
+                    _sort: sort,
+                    _expand: expand
+                }, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+        });
+
+        return apiResponse.auto_orders ?? [];
+    }
+}
+
+// Example of how to call the method
+// GetAutoOrdersByQuery.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getAutoOrdersByQuery -->
 
 ### Parameters
 
@@ -787,32 +1175,57 @@ Completely pause an auto order
 
 ### Example
 
-<!-- UC_START_EXAMPLE pauseAutoOrder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import { autoOrderApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * This is a convenience method created for an UltraCart merchant to pause a large number of auto orders
+ * due to an inventory shortage. This is not new functionality and can be accomplished with the normal updateAutoOrder
+ * call. It does the following logic to an auto order:
+ * for each item in the auto order:
+ *    if the item is not paused, pause it, setPause(true)
+ * save the changes by calling updateAutoOrder()
+ *
+ * Some warnings if you choose to use this method.
+ * There are no convenience methods to unpause auto orders.
+ * There are no convenience methods to query which auto orders are paused.
+ * We do not recommend pausing auto orders and the merchant is on their own to manage auto order state if they
+ * choose to begin pausing orders. Keep good track of what you're doing.
+ */
+export async function execute() {
+  // see https://www.ultracart.com/api/#resource_auto_order.html for list
+  const expand = "items";
 
-let auto_order_oid = 56; // Number | The auto order oid to pause.
-let auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to pause
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.pauseAutoOrder(auto_order_oid, auto_order, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+  // get an auto order and update it. There are many ways to retrieve an auto order.
+  const autoOrderOid = 123456789;
+
+  const getResponse = await new Promise((resolve, reject) => {
+    autoOrderApi.getAutoOrder(autoOrderOid, function (error, data, response) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(data, response);
+      }
+    });
+  });
+
+  const autoOrder = getResponse.auto_order;
+
+  const pauseResponse = await new Promise((resolve, reject) => {
+    autoOrderApi.pauseAutoOrder(autoOrderOid, autoOrder, function (error, data, response) {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(data, response);
+      }
+    });
+  });
+
+  const pausedAutoOrder = pauseResponse.auto_order;
+  console.log(pausedAutoOrder);
+}
 ```
 
-<!-- UC_END_EXAMPLE pauseAutoOrder -->
 
 ### Parameters
 
@@ -848,33 +1261,76 @@ Update an auto order on the UltraCart account.  To cancel an auto order, set ena
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrder -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import {autoOrderApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateAutoOrder {
+    /*
+     *
+     * This method allows for updating an auto order.
+     * Warning: Take great care editing auto orders.  They are complex.
+     * Sometimes you must change the original_order to affect the auto_order.  If you have questions about what fields
+     * to update to achieve your desired change, contact UltraCart support.  Better to ask and get it right than to
+     * make a bad assumption and corrupt a thousand auto orders.  UltraCart support is ready to assist.
+     *
+     */
+    static async execute() {
+        console.log(`--- ${this.name} ---`);
 
-let auto_order_oid = 56; // Number | The auto order oid to update.
-let auto_order = new UltraCartRestApiV2.AutoOrder(); // AutoOrder | Auto order to update
-let opts = {
-  'validate_original_order': "validate_original_order_example", // String | Validate original order before updating
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAutoOrder(auto_order_oid, auto_order, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            // Create auto order API instance using API key
+            const expand = "items,items.future_schedules,original_order,rebill_orders"; // see https://www.ultracart.com/api/#resource_auto_order.html for list
+            const autoOrderOid = 123456789; // get an auto order and update it. There are many ways to retrieve an auto order.
+            const apiResponse = await new Promise((resolve, reject) => {
+                autoOrderApi.getAutoOrder(autoOrderOid, {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const autoOrderOrUndefined = apiResponse.auto_order;
+            const validateOriginalOrder = "No";
+
+            if (autoOrderOrUndefined !== undefined) {
+                const autoOrder = autoOrderOrUndefined;
+
+                // for this example, the customer supplied the wrong postal code when ordering. So to change the postal code for
+                // all subsequent auto orders, we change the original order.
+                if (autoOrder?.original_order && autoOrder.original_order.billing) {
+                    autoOrder.original_order.billing.postal_code = "44233";
+                }
+
+                const updateResponse = await new Promise((resolve, reject) => {
+                    autoOrderApi.updateAutoOrder(
+                        autoOrderOid,
+                        autoOrder, {
+                            validate_original_order: validateOriginalOrder,
+                            _expand: expand
+                        }, function (error, data, response) {
+                            if (error) {
+                                reject(error);
+                            } else {
+                                resolve(data, response);
+                            }
+                        });
+                });
+
+                const updatedAutoOrder = updateResponse.auto_order;
+                console.log(updatedAutoOrder);
+            }
+        } catch (ex) {
+            console.error(`Error: ${ex instanceof Error ? ex.message : 'Unknown error'}`);
+            console.error(ex instanceof Error ? ex.stack : ex);
+        }
+    }
+}
+
+// Example of how to call the method
+UpdateAutoOrder.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE updateAutoOrder -->
 
 ### Parameters
 
@@ -911,33 +1367,9 @@ Update an auto order item add ons.  Returns the auto order based upon expansion
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrderItemAddOns -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to update.
-let auto_order_item_oid = 56; // Number | The auto order item oid to update.
-let auto_order_add_ons_update_request = new UltraCartRestApiV2.AutoOrderAddonItemsUpdateRequest(); // AutoOrderAddonItemsUpdateRequest | Auto order add ons update request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAutoOrderItemAddOns(auto_order_oid, auto_order_item_oid, auto_order_add_ons_update_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAutoOrderItemAddOns -->
 
 ### Parameters
 
@@ -974,33 +1406,9 @@ Update an auto order item properties.  Returns the auto order based upon expansi
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrderItemProperties -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to update.
-let auto_order_item_oid = 56; // Number | The auto order item oid to update.
-let auto_order_properties_update_request = new UltraCartRestApiV2.AutoOrderPropertiesUpdateRequest(); // AutoOrderPropertiesUpdateRequest | Auto order property update request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAutoOrderItemProperties(auto_order_oid, auto_order_item_oid, auto_order_properties_update_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAutoOrderItemProperties -->
 
 ### Parameters
 
@@ -1037,32 +1445,9 @@ Updates the credit card on the original order behind an auto order, along with a
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrderPayment -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to update payment information on.
-let auto_order_payment_update_request = new UltraCartRestApiV2.AutoOrderPaymentUpdateRequest(); // AutoOrderPaymentUpdateRequest | Payment information to place on the auto order
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAutoOrderPayment(auto_order_oid, auto_order_payment_update_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAutoOrderPayment -->
 
 ### Parameters
 
@@ -1098,32 +1483,9 @@ Update an auto order properties.  Returns the auto order based upon expansion
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrderProperties -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let auto_order_oid = 56; // Number | The auto order oid to update.
-let auto_order_properties_update_request = new UltraCartRestApiV2.AutoOrderPropertiesUpdateRequest(); // AutoOrderPropertiesUpdateRequest | Auto order property update request
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAutoOrderProperties(auto_order_oid, auto_order_properties_update_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAutoOrderProperties -->
 
 ### Parameters
 
@@ -1159,33 +1521,67 @@ Update multiple auto orders on the UltraCart account.  To cancel an auto order, 
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAutoOrdersBatch -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AutoOrderApi(apiClient);
+import { autoOrderApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateAutoOrdersBatch {
+    /*
+     *
+     * This method allows for updating multiple auto orders.
+     * Warning: Take great care editing auto orders.  They are complex.
+     * Sometimes you must change the original_order to affect the auto_order.  If you have questions about what fields
+     * to update to achieve your desired change, contact UltraCart support.  Better to ask and get it right than to
+     * make a bad assumption and corrupt a thousand auto orders.  UltraCart support is ready to assist.
+     *
+     */
+    static async execute() {
+        console.log(`--- ${this.name} ---`);
 
-let auto_orders_request = new UltraCartRestApiV2.AutoOrdersRequest(); // AutoOrdersRequest | Auto orders to update (synchronous maximum 20 / asynchronous maximum 100)
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-  '_async': true // Boolean | True if the operation should be run async.  No result returned
-};
-apiInstance.updateAutoOrdersBatch(auto_orders_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        try {
+            // Create auto order API instance using API key
+
+            // The _async parameter is what it seems.  True if async.
+            // The max records allowed depends on the async flag.  Synch max is 20, Asynch max is 100.
+
+            const async = true; // if true, success returns back a 204 No Content. False returns back the updated orders.
+            const expand = undefined; // since we're async, nothing is returned, so we don't care about expansions.
+            // If you are doing a synchronous operation, then set your expand appropriately. set getAutoOrders()
+            // sample for expansion samples.
+            const placeholders = false; // mostly used for UI, not needed for a pure scripting operation.
+
+            const autoOrders = []; // TODO: This should be a list of auto orders that have been updated. See any getAutoOrders method for retrieval.
+            const autoOrdersRequest = {
+                autoOrders
+            };
+
+            const apiResponse = await new Promise((resolve, reject) => {
+                autoOrderApi.updateAutoOrdersBatch(
+                    autoOrdersRequest, {_expand: expand, _placeholders: placeholders, _async: async },
+                    function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data, response);
+                        }
+                    }
+                );
+            });
+
+            if (apiResponse) {
+                // something went wrong if we have a response.
+                console.log(apiResponse);
+            }
+        } catch (ex) {
+            console.error(`Error: ${ex instanceof Error ? ex.message : 'Unknown error'}`);
+            console.error(ex instanceof Error ? ex.stack : ex);
+        }
+    }
+}
+
+// Example of how to call the method
+// UpdateAutoOrdersBatch.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE updateAutoOrdersBatch -->
 
 ### Parameters
 

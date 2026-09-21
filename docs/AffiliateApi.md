@@ -26,28 +26,9 @@ Delete an affiliate on the UltraCart account.  The affiliate is disabled within 
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteAffiliate -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate_oid = 56; // Number | The affiliate oid to delete.
-apiInstance.deleteAffiliate(affiliate_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteAffiliate -->
 
 ### Parameters
 
@@ -81,31 +62,9 @@ Retrieves a single affiliate using the specified affiliate oid.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAffiliate -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate_oid = 56; // Number | The affiliate oid to retrieve.
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getAffiliate(affiliate_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAffiliate -->
 
 ### Parameters
 
@@ -140,33 +99,9 @@ Retrieves a group of affiliates from the account based on a query object.  If no
 
 ### Example
 
-<!-- UC_START_EXAMPLE getAffiliatesByQuery -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate_query = new UltraCartRestApiV2.AffiliateQuery(); // AffiliateQuery | Affiliate query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_sort': "_sort_example" // String | The sort order of the affiliates.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-};
-apiInstance.getAffiliatesByQuery(affiliate_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getAffiliatesByQuery -->
 
 ### Parameters
 
@@ -203,33 +138,10 @@ Retrieves a group of clicks from the account based on a query object.  If no par
 
 ### Example
 
-<!-- UC_START_EXAMPLE getClicksByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let click_query = new UltraCartRestApiV2.AffiliateClickQuery(); // AffiliateClickQuery | Click query
-let opts = {
-  '_limit': 10000, // Number | The maximum number of records to return on this one API call. (Maximum 10000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  Only option is link.
-};
-apiInstance.getClicksByQuery(click_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getClicksByQuery -->
 
 ### Parameters
 
@@ -266,33 +178,10 @@ Retrieves a group of ledger entries from the account based on a query object.  I
 
 ### Example
 
-<!-- UC_START_EXAMPLE getLedgersByQuery -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let ledger_query = new UltraCartRestApiV2.AffiliateLedgerQuery(); // AffiliateLedgerQuery | Ledger query
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Maximum 200)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  Only option is link.
-};
-apiInstance.getLedgersByQuery(ledger_query, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// Internal API. No sample provided.
 ```
 
-<!-- UC_END_EXAMPLE getLedgersByQuery -->
 
 ### Parameters
 
@@ -329,32 +218,9 @@ Insert an affiliate on the UltraCart account.  The affiliate is created within t
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertAffiliate -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate = new UltraCartRestApiV2.Affiliate(); // Affiliate | Affiliate to insert
-let opts = {
-  'send_welcome_email': false, // Boolean | Whether to send a welcome email to the affiliate after it is created.  Defaults to false.
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.insertAffiliate(affiliate, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertAffiliate -->
 
 ### Parameters
 
@@ -390,28 +256,9 @@ Sends a welcome email to the specified affiliate using the welcome letter config
 
 ### Example
 
-<!-- UC_START_EXAMPLE sendAffiliateWelcomeEmail -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate_oid = 56; // Number | The affiliate oid to send the welcome email to.
-apiInstance.sendAffiliateWelcomeEmail(affiliate_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE sendAffiliateWelcomeEmail -->
 
 ### Parameters
 
@@ -445,32 +292,9 @@ Update an affiliate on the UltraCart account.  This is a full replacement of the
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateAffiliate -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.AffiliateApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let affiliate_oid = 56; // Number | The affiliate oid to update.
-let affiliate = new UltraCartRestApiV2.Affiliate(); // Affiliate | Affiliate to update
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.updateAffiliate(affiliate_oid, affiliate, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE updateAffiliate -->
 
 ### Parameters
 

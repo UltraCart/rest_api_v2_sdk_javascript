@@ -47,28 +47,9 @@ Removes every gated access code currently configured for the item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteAllGatedCodes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-apiInstance.deleteAllGatedCodes(merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteAllGatedCodes -->
 
 ### Parameters
 
@@ -102,28 +83,23 @@ Delete a digital item on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteDigitalItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let digital_item_oid = 56; // Number | The digital item oid to delete.
-apiInstance.deleteDigitalItem(digital_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+export class DeleteDigitalItem {
+    static async execute() {
+        try {
+            const digitalItemOid = await ItemFunctions.insertSampleDigitalItem();
+            await ItemFunctions.deleteSampleDigitalItem(digitalItemOid);
+        } catch (e) {
+            console.log("An Exception occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            throw e; // Equivalent to Environment.Exit(1), but better for async context
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteDigitalItem -->
 
 ### Parameters
 
@@ -157,29 +133,9 @@ Delete a specific gated access code by its OID.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteGatedCode -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-let merchant_item_gated_code_oid = 56; // Number | The gated code oid.
-apiInstance.deleteGatedCode(merchant_item_oid, merchant_item_gated_code_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE deleteGatedCode -->
 
 ### Parameters
 
@@ -214,28 +170,23 @@ Delete an item on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {ItemFunctions} from './itemFunctions.js'; // Assuming ItemFunctions is in a separate file
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid to delete.
-apiInstance.deleteItem(merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+export class DeleteItem {
+    static async execute() {
+        try {
+            const itemOid = await ItemFunctions.insertSampleItemAndGetOid();
+            await ItemFunctions.deleteSampleItemByOid(itemOid);
+        } catch (e) {
+            console.log("An Exception occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            throw e; // Equivalent to Environment.Exit(1), but better for async context
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteItem -->
 
 ### Parameters
 
@@ -269,29 +220,38 @@ Delete an item review.
 
 ### Example
 
-<!-- UC_START_EXAMPLE deleteReview -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class DeleteReview {
+    /*
+        Deletes a specific user review for an item. This would most likely be used by a merchant who has cached all
+        reviews on a separate site and then wishes to remove a particular review.
 
-let review_oid = 56; // Number | The review oid to delete.
-let merchant_item_oid = 56; // Number | The item oid the review is associated with.
-apiInstance.deleteReview(review_oid, merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+        The merchant_item_oid is a unique identifier used by UltraCart. If you do not know your item's oid, call
+        ItemApi.GetItemByMerchantItemId() to retrieve the item, and then it's oid item.MerchantItemOid
+
+        The review_oid is a unique identifier used by UltraCart. If you do not know a review's oid, call
+        ItemApi.GetReviews() to get all reviews where you can then grab the oid from an item.
+
+        Success returns back a status code of 204 (No Content)
+     */
+    static async execute() {
+        const merchantItemOid = 123456;
+        const reviewOid = 987654;
+        const gcResponse = await new Promise((resolve, reject) => {
+            itemApi.deleteReview(reviewOid, merchantItemOid, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE deleteReview -->
 
 ### Parameters
 
@@ -326,29 +286,9 @@ Returns randomly generated codes using a profanity-safe charset (vowel-free, 0/1
 
 ### Example
 
-<!-- UC_START_EXAMPLE generateGatedCodes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-let generate_request = new UltraCartRestApiV2.ItemGenerateGatedCodesRequest(); // ItemGenerateGatedCodesRequest | Generate request.
-apiInstance.generateGatedCodes(merchant_item_oid, generate_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE generateGatedCodes -->
 
 ### Parameters
 
@@ -383,28 +323,45 @@ Retrieves a digital item (file information) from the account.  Be aware that the
 
 ### Example
 
-<!-- UC_START_EXAMPLE getDigitalItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
+import { ItemFunctions } from './itemFunctions.js'; // Assuming ItemFunctions is in a separate file
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetDigitalItem {
+    static async execute() {
+        try {
+            /*
+             * Please Note!
+             * Digital Items are not normal items you sell on your site. They are digital files that you may add to
+             * a library and then attach to a normal item as an accessory or the main item itself.
+             * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1376485/Digital+Items
+             */
 
-let digital_item_oid = 56; // Number | The digital item oid to retrieve.
-apiInstance.getDigitalItem(digital_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            const digitalItemOid = await ItemFunctions.insertSampleDigitalItem(); // create an item so I can get an item
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getDigitalItem(digitalItemOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const digitalItem = apiResponse.digital_item; // assuming this succeeded
+
+            console.log("The following item was retrieved via GetDigitalItem():");
+            console.log(digitalItem);
+
+            await ItemFunctions.deleteSampleDigitalItem(digitalItemOid);
+        } catch (e) {
+            console.log("An Exception occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            throw e; // Equivalent to Environment.Exit(1), but better for async context
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getDigitalItem -->
 
 ### Parameters
 
@@ -438,35 +395,65 @@ Retrieves a group of digital items (file information) from the account.  If no p
 
 ### Example
 
-<!-- UC_START_EXAMPLE getDigitalItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js'; // Assuming ItemFunctions is in a separate file
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetDigitalItems {
+    static async execute() {
+        try {
+            /*
+             * Please Note!
+             * Digital Items are not normal items you sell on your site. They are digital files that you may add to
+             * a library and then attach to a normal item as an accessory or the main item itself.
+             * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1376485/Digital+Items
+             */
 
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch items that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getDigitalItems(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            const digitalItemOid = await ItemFunctions.insertSampleDigitalItem(); // create an item so I can get an item
+
+            const limit = 100;
+            const offset = 0;
+            const since = undefined; // digital items do not use since. leave as undefined.
+            const sort = undefined; // if undefined, use default of original_filename
+            const expand = undefined; // digital items have no expansion. leave as undefined. this value is ignored
+            const placeholders = undefined; // digital items have no placeholders. leave as undefined.
+
+            const request = {
+                _limit: limit,
+                _offset: offset,
+                _since: since,
+                _sort: sort,
+                _expand: expand,
+                _placeholders: placeholders
+            };
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getDigitalItems(request, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const digitalItems = apiResponse.digital_items; // assuming this succeeded
+
+            if (digitalItems === undefined) {
+                console.error("Could not find digital items from the list");
+            } else {
+                console.log("The following items were retrieved via GetDigitalItems():");
+                for (const digitalItem of digitalItems) {
+                    console.log(digitalItem);
+                }
+            }
+        } catch (e) {
+            console.log("An Exception occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            throw e; // Equivalent to Environment.Exit(1), but better for async context
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getDigitalItems -->
 
 ### Parameters
 
@@ -505,28 +492,55 @@ Retrieves digital items from the digital library (which are digital files that m
 
 ### Example
 
-<!-- UC_START_EXAMPLE getDigitalItemsByExternalId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetDigitalItemsByExternalId {
+    /**
+     * Please Note!
+     * Digital Items are not normal items you sell on your site. They are digital files that you may add to
+     * a library and then attach to a normal item as an accessory or the main item itself.
+     * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1376485/Digital+Items
+     */
+    static async execute() {
+        try {
+            // Generate a random external ID (replacing Guid.NewGuid())
+            const externalId = crypto.randomUUID();
+            console.log(`My external id is ${externalId}`);
 
-let external_id = "external_id_example"; // String | The external id to match against.
-apiInstance.getDigitalItemsByExternalId(external_id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Insert sample digital item
+            const digitalItemOid = await ItemFunctions.insertSampleDigitalItem(externalId);
+
+            // Retrieve digital items by external ID
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getDigitalItemsByExternalId(externalId, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
+            const digitalItems = apiResponse.digital_items || []; // Use OR operator instead of nullish coalescing
+
+            console.log("The following item was retrieved via GetDigitalItem():");
+            console.log(digitalItems);
+
+            // Delete the sample digital item
+            await ItemFunctions.deleteSampleDigitalItem(digitalItemOid);
+        } catch (error) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(error);
+            process.exit(1);
+        }
+    }
+}
+
+// Optional: If you want to execute the method
+// GetDigitalItemsByExternalId.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getDigitalItemsByExternalId -->
 
 ### Parameters
 
@@ -560,28 +574,9 @@ Retrieve all unredeemed gated access codes configured for an item.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getGatedCodes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-apiInstance.getGatedCodes(merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE getGatedCodes -->
 
 ### Parameters
 
@@ -615,27 +610,44 @@ Retrieve a list of item inventories.  This method may be called once every 15 mi
 
 ### Example
 
-<!-- UC_START_EXAMPLE getInventorySnapshot -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetInventorySnapshot {
+    /**
+     * Retrieve a list of item inventories.
+     * Note: This method may be called once every 15 minutes.
+     * More frequent calls will result in a 429 response.
+     */
+    static async execute() {
+        try {
+            // Retrieve inventory snapshot
+            const snapshotResponse = await new Promise((resolve, reject) => {
+                itemApi.getInventorySnapshot(function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+            });
 
-apiInstance.getInventorySnapshot((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Iterate and log each inventory item
+            snapshotResponse.inventories?.forEach((inventory) => {
+                console.log(JSON.stringify(inventory, null, 2));
+            });
+        } catch (error) {
+            console.error("An Exception occurred. Please review the following error:");
+            console.error(error);
+            process.exit(1);
+        }
+    }
+}
+
+// Optional: If you want to execute the method
+// GetInventorySnapshot.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getInventorySnapshot -->
 
 ### Parameters
 
@@ -666,32 +678,153 @@ Retrieves a single item using the specified item oid.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {customerApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js'; // Assuming ItemFunctions is in a separate file
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetItem {
+    /// <summary>
+    /// Execute the item retrieval example
+    /// </summary>
+    static async execute() {
+        try {
+            const itemOid = await ItemFunctions.insertSampleItemAndGetOid();
 
-let merchant_item_oid = 56; // Number | The item oid to retrieve.
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getItem(merchant_item_oid, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Yes, I'm creating an item, getting that item in order to get the item id, then getting the item yet again
+            // using a different method. All to illustrate GetItemByMerchantItemId
+            const itemId = (await new Promise((resolve, reject) => {
+                itemApi.getItem(itemOid, {}, function (error, data, response) {
+                    if (error) reject(error);
+                    else resolve(data, response);
+                });
+            })).item?.merchant_item_id;
+
+            if (itemId === undefined) {
+                console.error("itemId should not be undefined.  Something went wrong with sample item creation most likely.");
+                return;
+            }
+
+            // the expand variable is undefined in the following call. we just need the base object this time.
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getItemByMerchantItemId(itemId, {}, function (error, data, response) {
+                    if (error) reject(error);
+                    else resolve(data, response);
+                });
+            });
+            const item = apiResponse.item; // assuming this succeeded
+
+            const merchantItemOid = item?.merchant_item_oid || 0;
+            if (merchantItemOid === 0) {
+                console.error("getItemByMerchantItemId failed.");
+                return;
+            }
+
+            // This is the actual call for this script.
+            // The real devil in the getItem calls is the expansion, making sure you return everything you need without
+            // returning everything since these objects are extremely large.
+            // These are the possible expansion values.
+            /*
+                accounting
+                amember
+                auto_order
+                auto_order.steps
+                ccbill
+                channel_partner_mappings
+                chargeback
+                checkout
+                content
+                content.assignments
+                content.attributes
+                content.multimedia
+                content.multimedia.thumbnails
+                digital_delivery
+                ebay
+                email_notifications
+                enrollment123
+                gift_certificate
+                google_product_search
+                kit_definition
+                identifiers
+                instant_payment_notifications
+                internal
+                options
+                payment_processing
+                physical
+                pricing
+                pricing.tiers
+                realtime_pricing
+                related
+                reporting
+                restriction
+                reviews
+                reviews.individual_reviews
+                salesforce
+                shipping
+                shipping.cases
+                shipping.destination_markups
+                shipping.destination_restrictions
+                shipping.distribution_centers
+                shipping.methods
+                shipping.package_requirements
+                tax
+                third_party_email_marketing
+                variations
+                wishlist_member
+            */
+            // const expand = "kit_definition,options,shipping,tax,variations"; // just some random ones. contact us if you're unsure
+            const expand = "reviews,reviews.individual_reviews";  // changed the random above to reviews to illustrate accessing product reviews.
+            const apiResponse2 = await new Promise((resolve, reject) => {
+                itemApi.getItem(merchantItemOid, {}, function (error, data, response) {
+                    if (error) reject(error);
+                    else resolve(data, response);
+                });
+            });
+            const itemWithReviews = apiResponse2.item;
+
+            const itemReviews = itemWithReviews?.reviews;
+            const individualReviews = itemReviews?.individual_reviews;
+
+            if (individualReviews !== undefined) {
+                // do whatever you wish with the reviews. iterate them, print them, etc.
+                // if you need the reviewer information
+                for (const individualReview of individualReviews) {
+                    // if you need reviewer profile questions, such as "How often do you use this product?", access the
+                    // rating names and scores. these are configurable by merchant, so we do not know what your questions may be.
+                    // See Home -> Configuration -> Items -> Reviews -> Settings
+                    // Or this URL: https://secure.ultracart.com/merchant/item/review/reviewSettingsLoad.do
+                    const ratingName1 = individualReview.rating_name1; // <-- this will not be the full question, but a key string.
+                    const ratingScore1 = individualReview.rating_score1;
+
+                    // if you need the review information, access that via their customer object. Be careful. This can result
+                    // in a LOT of API calls and exhaust your limit. You may wish to add 'Sleep' calls to your loop and cache
+                    // these results daily or weekly.
+                    if (individualReview.customer_profile_oid !== undefined) {
+                        const customerResponse = await new Promise((resolve, reject) => {
+                            customerApi.getCustomer(individualReview.customer_profile_oid, {_expand: "reviewer"}, function (error, data, response) {
+                                if (error) reject(error);
+                                else resolve(data, response);
+                            });
+                        });
+                        const customer = customerResponse.customer;
+                        const reviewer = customer?.reviewer;
+                    }
+                }
+            }
+
+            console.log("The following item was retrieved via getItem():");
+            console.log(itemWithReviews);
+
+            await ItemFunctions.deleteSampleItemByOid(itemOid);
+        } catch (e) {
+            console.log("An ApiException occurred. Please review the following error:");
+            console.log(e); // <-- change_me: handle gracefully
+            throw e; // Equivalent to Environment.Exit(1), but better suited for async context
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getItem -->
 
 ### Parameters
 
@@ -727,32 +860,101 @@ Retrieves a single item using the specified item id.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getItemByMerchantItemId -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetItemByMerchantItemId {
+    /**
+     * Execute the item retrieval example
+     *
+     * Of the two getItem methods, you'll probably always use getItemByMerchantItemId instead of this one.
+     * Most item work is done with the item id, not the item oid. The latter is only meaningful as a primary
+     * key in the UltraCart databases. But here is an example of using getItem(). We take the long route here
+     * of retrieving the item using getItemByMerchantItemId to obtain the oid rather than hard-coding it. We do this
+     * because these samples are used in our quality control system and run repeatedly.
+     */
+    static async execute() {
+        try {
+            // Insert a sample item
+            const itemId = await ItemFunctions.insertSampleItem();
 
-let merchant_item_id = "merchant_item_id_example"; // String | The item id to retrieve.
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getItemByMerchantItemId(merchant_item_id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Possible expansion values:
+            /*
+                accounting
+                amember
+                auto_order
+                auto_order.steps
+                ccbill
+                channel_partner_mappings
+                chargeback
+                checkout
+                content
+                content.assignments
+                content.attributes
+                content.multimedia
+                content.multimedia.thumbnails
+                digital_delivery
+                ebay
+                email_notifications
+                enrollment123
+                gift_certificate
+                google_product_search
+                kit_definition
+                identifiers
+                instant_payment_notifications
+                internal
+                options
+                payment_processing
+                physical
+                pricing
+                pricing.tiers
+                realtime_pricing
+                related
+                reporting
+                restriction
+                reviews
+                salesforce
+                shipping
+                shipping.cases
+                shipping.destination_markups
+                shipping.destination_restrictions
+                shipping.distribution_centers
+                shipping.methods
+                shipping.package_requirements
+                tax
+                third_party_email_marketing
+                variations
+                wishlist_member
+            */
+            const expand = "kit_definition,options,shipping,tax,variations"; // just some random ones. contact us if you're unsure
+
+            // Retrieve item by merchant item ID
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getItemByMerchantItemId(itemId, {_expand: expand}, function (error, data, response) {
+                    if (error) reject(error);
+                    else resolve(data, response);
+                });
+            });
+            const item = apiResponse.item;
+
+            console.log("The following item was retrieved via getItemByMerchantItemId():");
+            console.log(item ? item.toString() : undefined); // Handle toString() in JS
+
+            // Delete the sample item
+            await ItemFunctions.deleteSampleItem(itemId);
+        } catch (error) {
+            console.error("An ApiException occurred. Please review the following error:");
+            console.error(error);
+            process.exit(1);
+        }
+    }
+}
+
+// Optional: If you want to execute the method
+// GetItemByMerchantItemId.execute().catch(console.error);
 ```
 
-<!-- UC_END_EXAMPLE getItemByMerchantItemId -->
 
 ### Parameters
 
@@ -788,37 +990,112 @@ Retrieves a group of items from the account.  If no parameters are specified, al
 
 ### Example
 
-<!-- UC_START_EXAMPLE getItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class GetItems {
+    /// <summary>
+    /// Execute the item retrieval example
+    /// </summary>
+    static async execute() {
+        /*
+         * This example illustrates how to retrieve items. When dealing with items, please note that categories are
+         * essentially folders to organize and store items. They are only used for that purpose and play no role in
+         * the checkout process or in the storefront display of items. So you may organize your items as best serves
+         * you. We're often asked why was use the word 'category' instead of 'folder'. We started down the road of
+         * item management 27 years ago with the word 'category', and it's too much trouble to change. So items are
+         * managed by categories, not folders. But they are folders. :)
+         * The call takes two possible parameters:
+         * 1) parentCategoryId: This is a number which uniquely identifies a category in our system. Not easy to determine.
+         * 2) parentCategoryPath: This is the folder path you wish to retrieve, starting with a forward slash "/"
+         * If you provide neither of these values, all items are returned.
+         */
 
-let opts = {
-  'parent_category_id': 56, // Number | The parent category object id to retrieve items for.  Unspecified means all items on the account.  0 = root
-  'parent_category_path': "parent_category_path_example", // String | The parent category path to retrieve items for.  Unspecified means all items on the account.  / = root
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch items that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getItems(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        const items = [];
+
+        let iteration = 1;
+        let offset = 0;
+        const limit = 200;
+        let moreRecordsToFetch = true;
+
+        try {
+            while (moreRecordsToFetch) {
+                console.log(`executing iteration ${iteration}`);
+
+                const chunkOfItems = await this.getItemChunk(offset, limit);
+                items.push(...chunkOfItems);
+                offset += limit;
+                moreRecordsToFetch = chunkOfItems.length === limit;
+                iteration++;
+            }
+        } catch (e) {
+            console.log(`ApiException occurred on iteration ${iteration}`);
+            console.log(e);
+            throw e; // Equivalent to Environment.Exit(1), but better for async context
+        }
+
+        // this will be verbose...
+        for (const item of items) {
+            console.log(item);
+        }
+    }
+
+    /// <summary>
+    /// Get a chunk of items from the API
+    /// </summary>
+    /// <param name="offset">Starting offset for retrieval</param>
+    /// <param name="limit">Maximum number of records to retrieve</param>
+    /// <returns>List of retrieved items</returns>
+    static async getItemChunk(offset, limit) {
+        // The real devil in the getItem calls is the expansion, making sure you return everything you need without
+        // returning everything since these objects are extremely large.
+        // These are the possible expansion values.
+        /*
+        accounting                      amember                     auto_order                      auto_order.steps
+        ccbill                          channel_partner_mappings    chargeback                      checkout
+        content                         content.assignments         content.attributes              content.multimedia
+        content.multimedia.thumbnails   digital_delivery            ebay                            email_notifications
+        enrollment123                   gift_certificate            google_product_search           kit_definition
+        identifiers                     instant_payment_notifications   internal                    options
+        payment_processing              physical                    pricing                         pricing.tiers
+        realtime_pricing                related                     reporting                       restriction
+        reviews                         salesforce                  shipping                        shipping.cases
+        tax                             third_party_email_marketing variations                      wishlist_member
+        shipping.destination_markups
+        shipping.destination_restrictions
+        shipping.distribution_centers
+        shipping.methods
+        shipping.package_requirements
+        */
+        const expand = "kit_definition,options,shipping,tax,variations"; // just some random ones. contact us if you're unsure
+
+        const parentCategoryId = undefined;
+        const parentCategoryPath = undefined;
+        const since = undefined;
+        const sort = undefined;
+
+        const request = {
+            parentCategoryId: parentCategoryId,
+            parentCategoryPath: parentCategoryPath,
+            _limit: limit,
+            _offset: offset,
+            _since: since,
+            _sort: sort,
+            _expand: expand,
+            _placeholders: false
+        };
+        const apiResponse = await new Promise((resolve, reject) => {
+            itemApi.getItems(request, function (error, data, response) {
+                if (error) reject(error);
+                else resolve(data, response);
+            });
+        });
+
+        return apiResponse.items || [];
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getItems -->
 
 ### Parameters
 
@@ -859,30 +1136,39 @@ Retrieves the pricing tiers
 
 ### Example
 
-<!-- UC_START_EXAMPLE getPricingTiers -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    try {
+        /*
+         * Possible expansion values for PricingTier object:
+         * approval_notification
+         * signup_notification
+         */
+        const expand = "approval_notification,signup_notification";
+        const apiResponse = await new Promise((resolve, reject) => {
+            itemApi.getPricingTiers({_expand: expand}, function (error, data, response) {
+                if (error) reject(error);
+                else resolve(data, response);
+            });
+        });
 
-let opts = {
-  '_expand': "_expand_example" // String | The object expansion to perform on the result.  See documentation for examples
-};
-apiInstance.getPricingTiers(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        // Display pricing tiers
+        apiResponse.pricingTiers?.forEach((pricingTier) => {
+            console.log(pricingTier);
+        });
+    } catch (error) {
+        console.error("Exception occurred.");
+        console.error(error);
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getPricingTiers -->
 
 ### Parameters
 
@@ -916,29 +1202,52 @@ Retrieve an item review.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReview -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    /*
+     * Retrieves a specific user review for an item. This would most likely be used by a merchant who has cached all
+     * reviews on a separate site and then wishes to update a particular review. It's always best to "get" the object,
+     * make changes to it, then call the update instead of trying to recreate the object from scratch.
+     *
+     * The merchant_item_oid is a unique identifier used by UltraCart. If you do not know your item's oid, call
+     * ItemApi.GetItemByMerchantItemId() to retrieve the item, and then it's oid item.MerchantItemOid
+     *
+     * The review_oid is a unique identifier used by UltraCart. If you do not know a review's oid, call
+     * ItemApi.GetReviews() to get all reviews where you can then grab the oid from an item.
+     */
 
-let review_oid = 56; // Number | The review oid to retrieve.
-let merchant_item_oid = 56; // Number | The item oid the review is associated with.
-apiInstance.getReview(review_oid, merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    const merchantItemOid = 123456;
+    const reviewOid = 987654;
+
+    try {
+        const apiResponse = await new Promise((resolve, reject) => {
+            itemApi.getReview(reviewOid, merchantItemOid, function (error, data, response) {
+                if (error) reject(error);
+                else resolve(data, response);
+            });
+        });
+
+        if (apiResponse.error) {
+            console.error(apiResponse.error.developer_message);
+            console.error(apiResponse.error.user_message);
+            process.exit(1);
+        }
+
+        const review = apiResponse.review;
+
+        console.log(review ? review.toString() : undefined); // Handle toString() in JS
+    } catch (error) {
+        console.error("An error occurred while fetching the review:", error);
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getReview -->
 
 ### Parameters
 
@@ -973,28 +1282,48 @@ Retrieve item reviews.
 
 ### Example
 
-<!-- UC_START_EXAMPLE getReviews -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    /*
+     * Retrieves all user reviews for an item.
+     *
+     * The merchant_item_oid is a unique identifier used by UltraCart. If you do not know your item's oid, call
+     * ItemApi.GetItemByMerchantItemId() to retrieve the item, and then it's oid item.MerchantItemOid
+     */
 
-let merchant_item_oid = 56; // Number | The item oid the review is associated with.
-apiInstance.getReviews(merchant_item_oid, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+    const merchantItemOid = 123456;
+
+    try {
+        const apiResponse = await new Promise((resolve, reject) => {
+            itemApi.getReviews(merchantItemOid, function (error, data, response) {
+                if (error) reject(error);
+                else resolve(data, response);
+            });
+        });
+
+        if (apiResponse.error) {
+            console.error(apiResponse.error.developer_message);
+            console.error(apiResponse.error.user_message);
+            process.exit(1);
+        }
+
+        const reviews = apiResponse.reviews || [];
+
+        reviews.forEach((review) => {
+            console.log(review ? review.toString() : undefined); // Handle toString() in JS
+        });
+    } catch (error) {
+        console.error("An error occurred while fetching reviews:", error);
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getReviews -->
 
 ### Parameters
 
@@ -1028,35 +1357,69 @@ Retrieves a group of digital items (file information) from the account that are 
 
 ### Example
 
-<!-- UC_START_EXAMPLE getUnassociatedDigitalItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
+import { ItemFunctions } from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    try {
+        /*
+         * Please Note!
+         * Digital Items are not normal items you sell on your site. They are digital files that you may add to
+         * a library and then attach to a normal item as an accessory or the main item itself.
+         * See: https://ultracart.atlassian.net/wiki/spaces/ucdoc/pages/1376485/Digital+Items
+         *
+         * Retrieves a group of digital items (file information) from the account that are not yet associated with any
+         * actual items. If no parameters are specified, all digital items will be returned. Be aware that these are
+         * not normal items that can be added to a shopping cart. Rather, they are digital files that may be associated
+         * with normal items. You will need to make multiple API calls in order to retrieve the entire result set since
+         * this API performs result set pagination.
+         *
+         * Default sort order: original_filename
+         * Possible sort orders: original_filename, description, file_size
+         */
 
-let opts = {
-  '_limit': 100, // Number | The maximum number of records to return on this one API call. (Default 100, Max 2000)
-  '_offset': 0, // Number | Pagination of the record set.  Offset is a zero based index.
-  '_since': "_since_example", // String | Fetch items that have been created/modified since this date/time.
-  '_sort': "_sort_example", // String | The sort order of the items.  See Sorting documentation for examples of using multiple values and sorting by ascending and descending.
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.getUnassociatedDigitalItems(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        const digitalItemOid = await ItemFunctions.insertSampleDigitalItem(); // create an item that will be unassociated.
+
+        const limit = 100;
+        const offset = 0;
+        const since = undefined; // digital items do not use since. leave as undefined.
+        const sort = undefined; // if undefined, use default of original_filename
+        const expand = undefined; // digital items have no expansion. leave as undefined. this value is ignored
+        const placeholders = undefined; // digital items have no placeholders. leave as undefined.
+
+        const request = {
+            _limit: limit,
+            _offset: offset,
+            _since: since,
+            _sort: sort,
+            _expand: expand,
+            _placeholders: placeholders
+        };
+        const apiResponse = await new Promise((resolve, reject) => {
+            itemApi.getUnassociatedDigitalItems(request, function (error, data, response) {
+                if (error) reject(error);
+                else resolve(data, response);
+            });
+        });
+
+        const digitalItems = apiResponse.digital_items || [];
+
+        console.log("The following items were retrieved via getUnassociatedDigitalItems():");
+        digitalItems.forEach((digitalItem) => {
+            console.log(digitalItem ? digitalItem.toString() : undefined); // Handle toString() in JS
+        });
+    } catch (error) {
+        console.error("An Exception occurred. Please review the following error:");
+        console.error(error); // <-- change_me: handle gracefully
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE getUnassociatedDigitalItems -->
 
 ### Parameters
 
@@ -1095,28 +1458,24 @@ Create a file within the digital library.  This does not create an item, but mak
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertDigitalItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { ItemFunctions } from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let digital_item = new UltraCartRestApiV2.ItemDigitalItem(); // ItemDigitalItem | Digital item to create
-apiInstance.insertDigitalItem(digital_item, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    try {
+        const digitalItemOid = await ItemFunctions.insertSampleDigitalItem();
+        await ItemFunctions.deleteSampleDigitalItem(digitalItemOid);
+    } catch (error) {
+        console.error("An Exception occurred. Please review the following error:");
+        console.error(error); // <-- change_me: handle gracefully
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertDigitalItem -->
 
 ### Parameters
 
@@ -1150,29 +1509,9 @@ Insert a single gated access code; the server assigns the OID and created_dts.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertGatedCode -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-let gated_code = new UltraCartRestApiV2.ItemGatedCode(); // ItemGatedCode | Gated code to insert.
-apiInstance.insertGatedCode(merchant_item_oid, gated_code, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE insertGatedCode -->
 
 ### Parameters
 
@@ -1207,32 +1546,24 @@ Create a new item on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { ItemFunctions } from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let item = new UltraCartRestApiV2.Item(); // Item | Item to create
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.insertItem(item, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+/**
+ * Execute method containing all business logic
+ */
+export async function execute() {
+    try {
+        const itemId = await ItemFunctions.insertSampleItem();
+        await ItemFunctions.deleteSampleItem(itemId);
+    } catch (error) {
+        console.error("An Exception occurred. Please review the following error:");
+        console.error(error); // handle gracefully
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertItem -->
 
 ### Parameters
 
@@ -1268,29 +1599,114 @@ Insert a item review.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertReview -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+/**
+ * Sample code for inserting a product review
+ */
+export async function execute() {
+    try {
+        // To insert a review, you'll need an item's OID (Object Identifier) first. So for this example, we create
+        // a sample item first, then retrieve it by item id to fetch the item oid.
 
-let merchant_item_oid = 56; // Number | The item oid the review is associated with.
-let review = new UltraCartRestApiV2.ItemReview(); // ItemReview | Review to insert
-apiInstance.insertReview(merchant_item_oid, review, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+        const itemId = await ItemFunctions.insertSampleItem();
+
+        const expand = "reviews"; // expand string is 'reviews' because we'll need to update the sample item's review template below.
+        // list of expansions for item object: https://www.ultracart.com/api/#resource_item.html
+
+        const itemResponse = await new Promise((resolve, reject) => {
+            itemApi.getItemByMerchantItemId(itemId, {_expand: expand}, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        const item = itemResponse.item;
+
+        if (!item) {
+            throw new Error("Unable to retrieve item");
+        }
+
+        const itemOid = item.merchant_item_oid || 0; // TODO: In a real script, add logic for undefined.
+
+        // The target item must have a review template associated before you may attach a review.
+        // You may create a review template here:
+        // https://secure.ultracart.com/merchant/item/review/reviewTemplateListLoad.do
+        // We're using a review template from our development system and it will not work for you.
+        // Once you have a review template, update your item either via our gui or the rest api.
+        // GUI: secure.ultracart.com -> Home -> Items -> <your item> -> Edit -> Review tab
+        // Since we're using a sample item we just created above (line 17), we'll update via the rest api.
+        // The rest api requires the review template oid, which is found on the template screen (url on line 25 above)
+
+        const reviewTemplateOid = 402;
+        const reviews = {review_template_oid: reviewTemplateOid};
+        item.reviews = reviews;
+
+        const updatedItemResponse = await new Promise((resolve, reject) => {
+            itemApi.updateItem(
+                itemOid,
+                item,
+                {_expand: expand}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data, response);
+                    }
+                });
+        });
+
+        const updatedItemMaybe = updatedItemResponse.item;
+
+        // You will need to know what your product review looks like.
+        const review = {
+            title: "Best Product Ever!",
+            review: "I loved this product. I bought it for my wife and she was so happy she cried. blah blah blah",
+            reviewed_nickname: "Bob420",
+            featured: true, // featured? sure. why not? this is a great review.
+            rating_name1: "Durability",
+            rating_name2: "Price",
+            rating_name3: "Performance",
+            rating_name4: "Appearance",
+            rating_score1: 4.5,
+            rating_score2: 3.5,
+            rating_score3: 2.5,
+            rating_score4: 1.5,
+            overall: 5.0, // hooray!
+            reviewer_location: "Southside Chicago",
+            status: "Approved"
+        };
+
+        // insert the review and update our local variable to see how the review looks now.
+        const insertedReviewResponse = await new Promise((resolve, reject) => {
+            itemApi.insertReview(itemOid, review, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+
+        const insertedReview = insertedReviewResponse.review;
+
+        console.log("This is my review object:");
+        console.log(insertedReview?.toString());
+
+        // This will clean up the sample item, but you may wish to review the item in the backend or on your website first.
+        // await ItemFunctions.deleteSampleItem(itemId);
+    } catch (error) {
+        console.error("An Exception occurred. Please review the following error:");
+        console.error(error); // handle gracefully
+        process.exit(1);
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertReview -->
 
 ### Parameters
 
@@ -1325,29 +1741,49 @@ Update an item content attribute, creating it new if it does not yet exist.
 
 ### Example
 
-<!-- UC_START_EXAMPLE insertUpdateItemContentAttribute -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class InsertUpdateItemContentAttribute {
+    /**
+     * While UltraCart provides a means for updating item content, it is StoreFront specific. This method allows for
+     * item-wide update of content, such as SEO fields. The content attribute has three fields:
+     * 1) name
+     * 2) value
+     * 3) type: boolean,color,definitionlist,html,integer,mailinglist,multiline,rgba,simplelist,string,videolist
+     *
+     * The SEO content has the following names:
+     * Item Meta Title = "storefrontSEOTitle"
+     * Item Meta Description = "storefrontSEODescription"
+     * Item Meta Keywords = "storefrontSEOKeywords"
+     *
+     * The merchant_item_oid is a unique identifier used by UltraCart. If you do not know your item's oid, call
+     * ItemApi.GetItemByMerchantItemId() to retrieve the item, and then it's oid item.MerchantItemOid
+     *
+     * Success will return back a status code of 204 (No Content)
+     */
+    static async execute() {
+        const merchantItemOid = 12345;
 
-let merchant_item_oid = 56; // Number | The item oid to modify.
-let item_attribute = new UltraCartRestApiV2.ItemContentAttribute(); // ItemContentAttribute | Item content attribute to upsert
-apiInstance.insertUpdateItemContentAttribute(merchant_item_oid, item_attribute, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
+        const attribute = {
+            name: "storefrontSEOKeywords",
+            value: "dog,cat,fish",
+            type: "string"
+        };
+
+        await new Promise((resolve, reject) => {
+            itemApi.insertUpdateItemContentAttribute(merchantItemOid, attribute, function (error, data, response) {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(data, response);
+                }
+            });
+        });
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE insertUpdateItemContentAttribute -->
 
 ### Parameters
 
@@ -1382,29 +1818,9 @@ Existing codes not present in the request body are deleted. New codes are insert
 
 ### Example
 
-<!-- UC_START_EXAMPLE replaceGatedCodes -->
 
-```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+(No example for this operation).
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let merchant_item_oid = 56; // Number | The item oid.
-let gated_codes_request = new UltraCartRestApiV2.ItemGatedCodesRequest(); // ItemGatedCodesRequest | Codes to replace the existing list with.
-apiInstance.replaceGatedCodes(merchant_item_oid, gated_codes_request, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-<!-- UC_END_EXAMPLE replaceGatedCodes -->
 
 ### Parameters
 
@@ -1439,29 +1855,66 @@ Updates a file within the digital library.  This does not update an item, but up
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateDigitalItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateDigitalItem {
+    /**
+     * Updates a digital item by:
+     * 1. Inserting a sample digital item
+     * 2. Retrieving the item
+     * 3. Modifying its description and click-wrap agreement
+     * 4. Updating the item
+     * 5. Deleting the sample digital item
+     */
+    static async execute() {
+        try {
+            // Insert a sample digital item and get its OID
+            const digitalItemOid = await ItemFunctions.insertSampleDigitalItem();
 
-let digital_item_oid = 56; // Number | The digital item oid to update.
-let digital_item = new UltraCartRestApiV2.ItemDigitalItem(); // ItemDigitalItem | Digital item to update
-apiInstance.updateDigitalItem(digital_item_oid, digital_item, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Retrieve the digital item
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getDigitalItem(digitalItemOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+            const digitalItem = apiResponse.digital_item;
+
+            // Ensure the digital item exists before updating
+            if (!digitalItem) {
+                throw new Error('Digital item not found');
+            }
+
+            // Update the digital item details
+            digitalItem.description = "I have updated the description to this sentence.";
+            digitalItem.click_wrap_agreement = "You hereby agree that the earth is round.  No debate.";
+
+            // Update the digital item
+            await new Promise((resolve, reject) => {
+                itemApi.updateDigitalItem(digitalItemOid, digitalItem, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+
+            // Delete the sample digital item
+            await ItemFunctions.deleteSampleDigitalItem(digitalItemOid);
+        } catch (error) {
+            console.error("An error occurred while updating the digital item:", error);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateDigitalItem -->
 
 ### Parameters
 
@@ -1496,33 +1949,91 @@ Update a new item on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateItem -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateItem {
+    /**
+     * Updates an item by:
+     * 1. Inserting a sample item
+     * 2. Retrieving the item with pricing expansion
+     * 3. Updating the item's cost
+     * 4. Verifying the price update
+     * 5. Deleting the sample item
+     *
+     * See https://www.ultracart.com/api/#resource_item.html for possible expansion values
+     */
+    static async execute() {
+        try {
+            // Insert a sample item and get its merchant item ID
+            const itemId = await ItemFunctions.insertSampleItem();
 
-let merchant_item_oid = 56; // Number | The item oid to update.
-let item = new UltraCartRestApiV2.Item(); // Item | Item to update
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-};
-apiInstance.updateItem(merchant_item_oid, item, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Define expansion parameter
+            const expand = "pricing";
+
+            // Retrieve the item by merchant item ID
+            const apiResponse = await new Promise((resolve, reject) => {
+                itemApi.getItemByMerchantItemId(itemId,
+                    {_expand: expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+            const item = apiResponse.item;
+
+            if (item === undefined || item.merchant_item_oid === undefined) {
+                console.error("Unable to retrieve item for update");
+                return;
+            }
+            // Ensure the item exists
+            if (!item || !item.pricing) {
+                throw new Error('Item or pricing information not found');
+            }
+
+            // Store the original price
+            const originalPrice = item.pricing.cost ?? 0;
+
+            // Update the item's pricing
+            const itemPricing = item.pricing;
+            itemPricing.cost = 12.99;
+
+            // Update the item
+            const updatedApiResponse = await new Promise((resolve, reject) => {
+                itemApi.updateItem(
+                    item.merchant_item_oid,
+                    item,
+                    {_expand: expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+            const updatedItem = updatedApiResponse.item;
+
+            // Verify the price update
+            if (!updatedItem?.pricing) {
+                throw new Error('Updated item or pricing information not found');
+            }
+
+            console.log(`Original Price: ${originalPrice}`);
+            console.log(`Updated Price: ${updatedItem.pricing.cost}`);
+
+            // Delete the sample item
+            await ItemFunctions.deleteSampleItem(itemId);
+        } catch (error) {
+            console.error("An error occurred while updating the item:", error);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateItem -->
 
 ### Parameters
 
@@ -1559,33 +2070,94 @@ Update multiple item on the UltraCart account.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateItems -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import {itemApi} from '../api.js';
+import {ItemFunctions} from './itemFunctions.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateItems {
+    /**
+     * Updates multiple items by:
+     * 1. Inserting two sample items
+     * 2. Retrieving both items with pricing expansion
+     * 3. Updating the prices of both items
+     * 4. Performing a bulk update
+     * 5. Deleting the sample items
+     *
+     * See https://www.ultracart.com/api/#resource_item.html for possible expansion values
+     */
+    static async execute() {
+        try {
+            // Insert two sample items
+            const itemId1 = await ItemFunctions.insertSampleItem();
+            const itemId2 = await ItemFunctions.insertSampleItem();
 
-let items_request = new UltraCartRestApiV2.ItemsRequest(); // ItemsRequest | Items to update (synchronous maximum 20 / asynchronous maximum 100)
-let opts = {
-  '_expand': "_expand_example", // String | The object expansion to perform on the result.  See documentation for examples
-  '_placeholders': true, // Boolean | Whether or not placeholder values should be returned in the result.  Useful for UIs that consume this REST API.
-  '_async': true // Boolean | True if the operation should be run async.  No result returned
-};
-apiInstance.updateItems(items_request, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Define expansion parameter
+            const expand = "pricing";
+
+            // Retrieve the first item
+            const apiResponse1 = await new Promise((resolve, reject) => {
+                itemApi.getItemByMerchantItemId(itemId1,
+                    {_expand: expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+            const item1 = apiResponse1.item;
+
+            // Retrieve the second item
+            const apiResponse2 = await new Promise((resolve, reject) => {
+                itemApi.getItemByMerchantItemId(
+                    itemId2,
+                    {_expand: expand}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+            const item2 = apiResponse2.item;
+
+            // Ensure both items exist and have pricing
+            if (!item1 || !item1.pricing || !item2 || !item2.pricing) {
+                throw new Error('One or more items or their pricing information not found');
+            }
+
+            // Update the prices of the items
+            item1.pricing.cost = 12.99;
+            item2.pricing.cost = 14.99;
+
+            // Prepare items for bulk update
+            const updateItemsRequest = {
+                items: [item1, item2]
+            };
+
+            // Perform bulk update
+            const updateItemsResponse = await new Promise((resolve, reject) => {
+                itemApi.updateItems(updateItemsRequest,
+                    {_expand: expand, async: false}, function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+
+            // Delete the sample items
+            await ItemFunctions.deleteSampleItem(itemId1);
+            await ItemFunctions.deleteSampleItem(itemId2);
+        } catch (error) {
+            console.error("An error occurred while updating items:", error);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateItems -->
 
 ### Parameters
 
@@ -1622,30 +2194,90 @@ Update an item review.
 
 ### Example
 
-<!-- UC_START_EXAMPLE updateReview -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
+import { itemApi } from '../api.js';
 
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
+export class UpdateReview {
+    /**
+     * Updates an existing item review with new details
+     *
+     * Note: To update a review, you'll need:
+     * 1. The merchant item's OID (Object Identifier)
+     * 2. The specific review's OID you wish to update
+     *
+     * If you don't know the item's OID, call GetItemByMerchantItemId() to retrieve it
+     */
+    static async execute() {
+        try {
+            // Merchant item OID and review OID to update
+            const merchantItemOid = 99998888; // Replace with your actual merchant item OID
+            const reviewOid = 123456; // Replace with the specific review OID to update
 
-let review_oid = 56; // Number | The review oid to update.
-let merchant_item_oid = 56; // Number | The item oid the review is associated with.
-let review = new UltraCartRestApiV2.ItemReview(); // ItemReview | Review to update
-apiInstance.updateReview(review_oid, merchant_item_oid, review, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+            // Retrieve the existing review
+            const reviewResponse = await new Promise((resolve, reject) => {
+                itemApi.getReview(merchantItemOid, reviewOid, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+            const review = reviewResponse.review;
+
+            // Ensure the review exists before updating
+            if (!review) {
+                throw new Error('Review not found');
+            }
+
+            // Update review details
+            review.title = "Best Product Ever!";
+            review.review = "I loved this product. I bought it for my wife and she was so happy she cried. blah blah blah";
+            review.reviewed_nickname = "Bob420";
+            review.featured = true;
+
+            // Update rating details
+            review.rating_name1 = "Durability";
+            review.rating_name2 = "Price";
+            review.rating_name3 = "Performance";
+            review.rating_name4 = "Appearance";
+            review.rating_score1 = 4.5;
+            review.rating_score2 = 3.5;
+            review.rating_score3 = 2.5;
+            review.rating_score4 = 1.5;
+            review.overall = 5.0;
+
+            // Additional review metadata
+            review.reviewer_location = "Southside Chicago";
+            review.status = "Approved";
+
+            // Update the review and retrieve the updated version
+            const updatedReviewResponse = await new Promise((resolve, reject) => {
+                itemApi.updateReview(
+                    reviewOid,
+                    merchantItemOid,
+                    review
+                , function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+            const updatedReview = updatedReviewResponse.review;
+
+            // Log the updated review details
+            console.log("Updated Review Object:");
+            console.log(JSON.stringify(updatedReview, null, 2));
+        } catch (error) {
+            console.error("An error occurred while updating the review:", error);
+            process.exit(1);
+        }
+    }
+}
 ```
 
-<!-- UC_END_EXAMPLE updateReview -->
 
 ### Parameters
 
@@ -1681,28 +2313,13 @@ Uploads an image and returns back meta information about the image as well as th
 
 ### Example
 
-<!-- UC_START_EXAMPLE uploadTemporaryMultimedia -->
-
 ```javascript
-var ucApi = require('ultra_cart_rest_api_v2');
-const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
-let apiInstance = new ucApi.ItemApi(apiClient);
-
-// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
-// As such, this might not be the best way to use this object.
-// Please see https://github.com/UltraCart/sdk_samples for working examples.
-
-let file = "/path/to/file"; // File | File to upload
-apiInstance.uploadTemporaryMultimedia(file, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
+// This method is used internally by UltraCart.
+// We don't envision a scenario where a merchant would ever need to call this.
+// As such, we're not providing a sample for it.  If you can think of a use for this
+// method, contact us, and we'll help you work through it.
 ```
 
-<!-- UC_END_EXAMPLE uploadTemporaryMultimedia -->
 
 ### Parameters
 
