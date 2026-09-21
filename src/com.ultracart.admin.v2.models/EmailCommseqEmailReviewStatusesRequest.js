@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailCommseqEmailReviewStatusesRequest model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesRequest
- * @version 4.1.167
+ * @version 4.1.168
  */
 class EmailCommseqEmailReviewStatusesRequest {
     /**
