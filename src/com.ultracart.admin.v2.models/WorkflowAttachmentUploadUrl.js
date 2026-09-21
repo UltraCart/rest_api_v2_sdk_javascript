@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowAttachmentUploadUrl model module.
  * @module com.ultracart.admin.v2.models/WorkflowAttachmentUploadUrl
- * @version 4.1.163
+ * @version 4.1.164
  */
 class WorkflowAttachmentUploadUrl {
     /**
