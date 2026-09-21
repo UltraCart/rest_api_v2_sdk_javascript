@@ -17,7 +17,7 @@ import SfvbUpsellOffer from './SfvbUpsellOffer';
 /**
  * The SfvbUpsellOffersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffersResponse
- * @version 4.1.164
+ * @version 4.1.166
  */
 class SfvbUpsellOffersResponse {
     /**

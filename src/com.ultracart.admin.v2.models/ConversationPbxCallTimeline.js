@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallTimeline model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallTimeline
- * @version 4.1.164
+ * @version 4.1.166
  */
 class ConversationPbxCallTimeline {
     /**

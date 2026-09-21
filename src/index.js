@@ -505,6 +505,10 @@ import EmailClicksResponse from './com.ultracart.admin.v2.models/EmailClicksResp
 import EmailCommseq from './com.ultracart.admin.v2.models/EmailCommseq';
 import EmailCommseqEmail from './com.ultracart.admin.v2.models/EmailCommseqEmail';
 import EmailCommseqEmailResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailResponse';
+import EmailCommseqEmailReviewStatus from './com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatus';
+import EmailCommseqEmailReviewStatusResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusResponse';
+import EmailCommseqEmailReviewStatusesRequest from './com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesRequest';
+import EmailCommseqEmailReviewStatusesResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesResponse';
 import EmailCommseqEmailSendTestRequest from './com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest';
 import EmailCommseqEmailSendTestResponse from './com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse';
 import EmailCommseqEmailsRequest from './com.ultracart.admin.v2.models/EmailCommseqEmailsRequest';
@@ -1210,7 +1214,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.164
+* @version 4.1.166
 */
 export {
     /**
@@ -4170,6 +4174,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailResponse}
      */
     EmailCommseqEmailResponse,
+
+    /**
+     * The EmailCommseqEmailReviewStatus model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatus}
+     */
+    EmailCommseqEmailReviewStatus,
+
+    /**
+     * The EmailCommseqEmailReviewStatusResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusResponse}
+     */
+    EmailCommseqEmailReviewStatusResponse,
+
+    /**
+     * The EmailCommseqEmailReviewStatusesRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesRequest}
+     */
+    EmailCommseqEmailReviewStatusesRequest,
+
+    /**
+     * The EmailCommseqEmailReviewStatusesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesResponse}
+     */
+    EmailCommseqEmailReviewStatusesResponse,
 
     /**
      * The EmailCommseqEmailSendTestRequest model constructor.

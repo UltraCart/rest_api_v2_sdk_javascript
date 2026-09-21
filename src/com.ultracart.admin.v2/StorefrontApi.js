@@ -29,6 +29,9 @@ import EmailClicksResponse from '../com.ultracart.admin.v2.models/EmailClicksRes
 import EmailCommseq from '../com.ultracart.admin.v2.models/EmailCommseq';
 import EmailCommseqEmail from '../com.ultracart.admin.v2.models/EmailCommseqEmail';
 import EmailCommseqEmailResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailResponse';
+import EmailCommseqEmailReviewStatusResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusResponse';
+import EmailCommseqEmailReviewStatusesRequest from '../com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesRequest';
+import EmailCommseqEmailReviewStatusesResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesResponse';
 import EmailCommseqEmailSendTestRequest from '../com.ultracart.admin.v2.models/EmailCommseqEmailSendTestRequest';
 import EmailCommseqEmailSendTestResponse from '../com.ultracart.admin.v2.models/EmailCommseqEmailSendTestResponse';
 import EmailCommseqEmailsRequest from '../com.ultracart.admin.v2.models/EmailCommseqEmailsRequest';
@@ -169,7 +172,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.164
+* @version 4.1.166
 */
 export default class StorefrontApi {
 
@@ -4067,6 +4070,102 @@ export default class StorefrontApi {
       let returnType = EmailCommseqPostcardsResponse;
       return this.apiClient.callApi(
         '/storefront/{storefront_oid}/email/postcards/multiple', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailReviewStatus operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailReviewStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the review status of an email
+     * @param {Number} storefront_oid 
+     * @param {String} commseq_email_uuid 
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailReviewStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusResponse}
+     */
+    getEmailReviewStatus(storefront_oid, commseq_email_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailReviewStatus");
+      }
+      // verify the required parameter 'commseq_email_uuid' is set
+      if (commseq_email_uuid === undefined || commseq_email_uuid === null) {
+        throw new Error("Missing the required parameter 'commseq_email_uuid' when calling getEmailReviewStatus");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'commseq_email_uuid': commseq_email_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EmailCommseqEmailReviewStatusResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/review_status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEmailReviewStatusesMultiple operation.
+     * @callback module:com.ultracart.admin.v2/StorefrontApi~getEmailReviewStatusesMultipleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the review status of multiple emails
+     * Returns one entry per requested email, in the order requested, so a caller polling a campaign does not have to reconcile a short response. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesRequest} email_commseq_email_review_statuses_request Request of email uuids
+     * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailReviewStatusesMultipleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/EmailCommseqEmailReviewStatusesResponse}
+     */
+    getEmailReviewStatusesMultiple(storefront_oid, email_commseq_email_review_statuses_request, callback) {
+      let postBody = email_commseq_email_review_statuses_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getEmailReviewStatusesMultiple");
+      }
+      // verify the required parameter 'email_commseq_email_review_statuses_request' is set
+      if (email_commseq_email_review_statuses_request === undefined || email_commseq_email_review_statuses_request === null) {
+        throw new Error("Missing the required parameter 'email_commseq_email_review_statuses_request' when calling getEmailReviewStatusesMultiple");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartBrowserApiKey', 'ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EmailCommseqEmailReviewStatusesResponse;
+      return this.apiClient.callApi(
+        '/storefront/{storefront_oid}/email/emails/review_status/multiple', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

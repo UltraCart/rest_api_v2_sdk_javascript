@@ -86,6 +86,8 @@ Method | HTTP request | Description
 [**getEmailPostcard**](StorefrontApi.md#getEmailPostcard) | **GET** /storefront/{storefront_oid}/email/postcards/{commseq_postcard_uuid} | Get email postcard
 [**getEmailPostcards**](StorefrontApi.md#getEmailPostcards) | **GET** /storefront/{storefront_oid}/email/postcards | Get email postcards
 [**getEmailPostcardsMultiple**](StorefrontApi.md#getEmailPostcardsMultiple) | **POST** /storefront/{storefront_oid}/email/postcards/multiple | Get email postcards multiple
+[**getEmailReviewStatus**](StorefrontApi.md#getEmailReviewStatus) | **GET** /storefront/{storefront_oid}/email/emails/{commseq_email_uuid}/review_status | Get the review status of an email
+[**getEmailReviewStatusesMultiple**](StorefrontApi.md#getEmailReviewStatusesMultiple) | **POST** /storefront/{storefront_oid}/email/emails/review_status/multiple | Get the review status of multiple emails
 [**getEmailSegment**](StorefrontApi.md#getEmailSegment) | **GET** /storefront/{storefront_oid}/email/segments/{email_segment_uuid} | Get email segment
 [**getEmailSegmentCustomerEditorUrl**](StorefrontApi.md#getEmailSegmentCustomerEditorUrl) | **GET** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/customers/{email_customer_uuid}/editor_url | Get email segment customers editor URL
 [**getEmailSegmentCustomers**](StorefrontApi.md#getEmailSegmentCustomers) | **GET** /storefront/{storefront_oid}/email/segments/{email_segment_uuid}/customers | Get email segment customers
@@ -4736,6 +4738,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailCommseqPostcardsResponse**](EmailCommseqPostcardsResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getEmailReviewStatus
+
+> EmailCommseqEmailReviewStatusResponse getEmailReviewStatus(storefront_oid, commseq_email_uuid)
+
+Get the review status of an email
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailReviewStatus -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let commseq_email_uuid = "commseq_email_uuid_example"; // String | 
+apiInstance.getEmailReviewStatus(storefront_oid, commseq_email_uuid, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailReviewStatus -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **commseq_email_uuid** | **String**|  | 
+
+### Return type
+
+[**EmailCommseqEmailReviewStatusResponse**](EmailCommseqEmailReviewStatusResponse.md)
+
+### Authorization
+
+[ultraCartBrowserApiKey](../README.md#ultraCartBrowserApiKey), [ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEmailReviewStatusesMultiple
+
+> EmailCommseqEmailReviewStatusesResponse getEmailReviewStatusesMultiple(storefront_oid, email_commseq_email_review_statuses_request)
+
+Get the review status of multiple emails
+
+Returns one entry per requested email, in the order requested, so a caller polling a campaign does not have to reconcile a short response. 
+
+
+### Example
+
+<!-- UC_START_EXAMPLE getEmailReviewStatusesMultiple -->
+
+```javascript
+var ucApi = require('ultra_cart_rest_api_v2');
+const { apiClient } = require('../api.js'); // https://github.com/UltraCart/sdk_samples/blob/master/javascript/api.js
+let apiInstance = new ucApi.StorefrontApi(apiClient);
+
+// This example is based on our samples_sdk project, but still contains auto-generated content from our sdk generators.
+// As such, this might not be the best way to use this object.
+// Please see https://github.com/UltraCart/sdk_samples for working examples.
+
+let storefront_oid = 56; // Number | 
+let email_commseq_email_review_statuses_request = new UltraCartRestApiV2.EmailCommseqEmailReviewStatusesRequest(); // EmailCommseqEmailReviewStatusesRequest | Request of email uuids
+apiInstance.getEmailReviewStatusesMultiple(storefront_oid, email_commseq_email_review_statuses_request, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+<!-- UC_END_EXAMPLE getEmailReviewStatusesMultiple -->
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **email_commseq_email_review_statuses_request** | [**EmailCommseqEmailReviewStatusesRequest**](EmailCommseqEmailReviewStatusesRequest.md)| Request of email uuids | 
+
+### Return type
+
+[**EmailCommseqEmailReviewStatusesResponse**](EmailCommseqEmailReviewStatusesResponse.md)
 
 ### Authorization
 
