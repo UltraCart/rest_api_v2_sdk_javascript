@@ -1011,8 +1011,17 @@ import SfvbFileVersionsResponse from './com.ultracart.admin.v2.models/SfvbFileVe
 import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from './com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbItemAttribute from './com.ultracart.admin.v2.models/SfvbItemAttribute';
+import SfvbItemAttributeUpdate from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdate';
+import SfvbItemAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
 import SfvbItemContainer from './com.ultracart.admin.v2.models/SfvbItemContainer';
 import SfvbItemContainersResponse from './com.ultracart.admin.v2.models/SfvbItemContainersResponse';
+import SfvbItemContentRequest from './com.ultracart.admin.v2.models/SfvbItemContentRequest';
+import SfvbItemMultimedia from './com.ultracart.admin.v2.models/SfvbItemMultimedia';
+import SfvbItemMultimediaRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemResponse from './com.ultracart.admin.v2.models/SfvbItemResponse';
+import SfvbItemSeo from './com.ultracart.admin.v2.models/SfvbItemSeo';
+import SfvbItemSeoRequest from './com.ultracart.admin.v2.models/SfvbItemSeoRequest';
 import SfvbLibraryEntry from './com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryFacet from './com.ultracart.admin.v2.models/SfvbLibraryFacet';
 import SfvbLibraryResponse from './com.ultracart.admin.v2.models/SfvbLibraryResponse';
@@ -1216,7 +1225,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.169
+* @version 4.1.170
 */
 export {
     /**
@@ -7214,6 +7223,24 @@ export {
     SfvbFilesResponse,
 
     /**
+     * The SfvbItemAttribute model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemAttribute}
+     */
+    SfvbItemAttribute,
+
+    /**
+     * The SfvbItemAttributeUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemAttributeUpdate}
+     */
+    SfvbItemAttributeUpdate,
+
+    /**
+     * The SfvbItemAttributeUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest}
+     */
+    SfvbItemAttributeUpdateRequest,
+
+    /**
      * The SfvbItemContainer model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbItemContainer}
      */
@@ -7224,6 +7251,42 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemContainersResponse}
      */
     SfvbItemContainersResponse,
+
+    /**
+     * The SfvbItemContentRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemContentRequest}
+     */
+    SfvbItemContentRequest,
+
+    /**
+     * The SfvbItemMultimedia model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimedia}
+     */
+    SfvbItemMultimedia,
+
+    /**
+     * The SfvbItemMultimediaRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimediaRequest}
+     */
+    SfvbItemMultimediaRequest,
+
+    /**
+     * The SfvbItemResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    SfvbItemResponse,
+
+    /**
+     * The SfvbItemSeo model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemSeo}
+     */
+    SfvbItemSeo,
+
+    /**
+     * The SfvbItemSeoRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemSeoRequest}
+     */
+    SfvbItemSeoRequest,
 
     /**
      * The SfvbLibraryEntry model constructor.

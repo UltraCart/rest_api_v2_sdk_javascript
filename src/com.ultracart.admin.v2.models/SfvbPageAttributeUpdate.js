@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageAttributeUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbPageAttributeUpdate
- * @version 4.1.169
+ * @version 4.1.170
  */
 class SfvbPageAttributeUpdate {
     /**

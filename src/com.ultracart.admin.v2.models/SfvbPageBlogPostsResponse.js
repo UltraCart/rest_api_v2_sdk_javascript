@@ -17,7 +17,7 @@ import SfvbBlogPost from './SfvbBlogPost';
 /**
  * The SfvbPageBlogPostsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse
- * @version 4.1.169
+ * @version 4.1.170
  */
 class SfvbPageBlogPostsResponse {
     /**

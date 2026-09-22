@@ -17,7 +17,7 @@ import SfvbThemeAttribute from './SfvbThemeAttribute';
 /**
  * The SfvbThemeAttributesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeAttributesResponse
- * @version 4.1.169
+ * @version 4.1.170
  */
 class SfvbThemeAttributesResponse {
     /**

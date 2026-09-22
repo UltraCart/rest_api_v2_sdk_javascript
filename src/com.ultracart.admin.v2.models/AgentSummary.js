@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AgentSummary model module.
  * @module com.ultracart.admin.v2.models/AgentSummary
- * @version 4.1.169
+ * @version 4.1.170
  */
 class AgentSummary {
     /**

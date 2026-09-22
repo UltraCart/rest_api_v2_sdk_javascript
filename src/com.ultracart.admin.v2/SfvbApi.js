@@ -40,7 +40,12 @@ import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileV
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbItemAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
 import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbItemContainersResponse';
+import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemContentRequest';
+import SfvbItemMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemResponse from '../com.ultracart.admin.v2.models/SfvbItemResponse';
+import SfvbItemSeoRequest from '../com.ultracart.admin.v2.models/SfvbItemSeoRequest';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryResponse';
 import SfvbMenu from '../com.ultracart.admin.v2.models/SfvbMenu';
@@ -87,7 +92,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.169
+* @version 4.1.170
 */
 export default class SfvbApi {
 
@@ -389,6 +394,59 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbItemMultimedia operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbItemMultimediaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Detach an image from an item
+     * Removes the item's copy of the image in one slot.  The file you uploaded is left where it is, so the same source can be attached again or used elsewhere. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {String} opts.code The image code to detach
+     * @param {Boolean} opts._default Detach the default image instead of a coded one
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbItemMultimediaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    deleteSfvbItemMultimedia(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbItemMultimedia");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid'],
+        'code': opts['code'],
+        'default': opts['_default']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/multimedia', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1086,6 +1144,55 @@ export default class SfvbApi {
       let returnType = SfvbFileUploadUrlResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/upload_url/{extension}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbItem operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read an item's storefront facing content
+     * The attributes, images, title, description and search metadata a StoreFront element can render, reconciled against the templates behind the pages this item sits on.  An attribute a template declares but nothing has set comes back present with an empty value, which is how you discover what the page is asking for.  Pricing, shipping, inventory, tax, variants and kit structure are not here because no element reads them; use the item API for those.  Address by merchant_item_id, the value data-context-item-id carries, or by merchant_item_oid. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id The merchant item id, as a storefront carries it
+     * @param {Number} opts.merchant_item_oid The item oid.  Send this or merchant_item_id, not both
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    getSfvbItem(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbItem");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2585,6 +2692,222 @@ export default class SfvbApi {
       let returnType = SfvbFileWriteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/content', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemAttributes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemAttributesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change some of an item's attributes
+     * Partial - only the attributes named change, and an empty value clears one.  Every entry is validated before any is written, so a refusal leaves the item untouched.  The list types are checked against the shape their renderer actually parses, which matters more than it sounds: a definition list is a bare array with one letter keys, a video list is a wrapper object with keys spelled out, and an item set is comma separated text rather than JSON.  A shape the renderer cannot read is not reported at render time - it renders exactly like an attribute nobody ever set. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest} item_attribute_update_request Attributes to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    putSfvbItemAttributes(storefront_oid, item_attribute_update_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_attribute_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemAttributes");
+      }
+      // verify the required parameter 'item_attribute_update_request' is set
+      if (item_attribute_update_request === undefined || item_attribute_update_request === null) {
+        throw new Error("Missing the required parameter 'item_attribute_update_request' when calling putSfvbItemAttributes");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/attributes', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemContent operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemContentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an item's title or long description
+     * Partial - a field left out is untouched, a field sent empty is cleared, and those are different things.  These are what itemtitle and itemdescription render.  Writing the matching config keys into a container does nothing, because they are dialog buffers bound to the item and the render never reads them.  Both are the catalog's own fields, so a change here reaches the item everywhere, not only on this storefront. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemContentRequest} item_content_request Title and description to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemContentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    putSfvbItemContent(storefront_oid, item_content_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_content_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemContent");
+      }
+      // verify the required parameter 'item_content_request' is set
+      if (item_content_request === undefined || item_content_request === null) {
+        throw new Error("Missing the required parameter 'item_content_request' when calling putSfvbItemContent");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/content', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemMultimedia operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemMultimediaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attach an image to an item
+     * One slot at a time - the default image or one code - and every other image on the item is left alone.  That is the difference from the item API, where images are reachable only through a full item update whose multimedia array is reconciled destructively, so adding one means resending the rest or losing them.  Upload the file with files/upload first and name its storefront path here; unlike a page image it does not have to live in any particular folder, because the bytes are copied into the item's own storage on attach. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemMultimediaRequest} item_multimedia_request Image to attach
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemMultimediaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    putSfvbItemMultimedia(storefront_oid, item_multimedia_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_multimedia_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemMultimedia");
+      }
+      // verify the required parameter 'item_multimedia_request' is set
+      if (item_multimedia_request === undefined || item_multimedia_request === null) {
+        throw new Error("Missing the required parameter 'item_multimedia_request' when calling putSfvbItemMultimedia");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/multimedia', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemSeo operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemSeoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an item's search metadata
+     * Partial - a field left out is untouched, a field sent empty is cleared and the page falls back to what it fell back to before.  Underneath these are three item attributes with reserved names, so this and the attributes endpoint reach the same storage; it exists separately because the names are not discoverable from the templates.  Two things worth knowing.  A title set here changes the document title only - og:title and twitter:title render the item's description either way.  And there is no canonical or noindex field, because both are site wide switches rather than per item values. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemSeoRequest} item_seo_request Search metadata to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemSeoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    putSfvbItemSeo(storefront_oid, item_seo_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_seo_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemSeo");
+      }
+      // verify the required parameter 'item_seo_request' is set
+      if (item_seo_request === undefined || item_seo_request === null) {
+        throw new Error("Missing the required parameter 'item_seo_request' when calling putSfvbItemSeo");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/seo', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

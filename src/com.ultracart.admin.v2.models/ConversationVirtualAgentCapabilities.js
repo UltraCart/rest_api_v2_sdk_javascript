@@ -18,7 +18,7 @@ import ConversationVirtualAgentCapabilityZohoDeskDepartment from './Conversation
 /**
  * The ConversationVirtualAgentCapabilities model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilities
- * @version 4.1.169
+ * @version 4.1.170
  */
 class ConversationVirtualAgentCapabilities {
     /**
