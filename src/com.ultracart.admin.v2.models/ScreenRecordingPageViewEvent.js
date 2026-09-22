@@ -17,7 +17,7 @@ import ScreenRecordingPageViewEventParameter from './ScreenRecordingPageViewEven
 /**
  * The ScreenRecordingPageViewEvent model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewEvent
- * @version 4.1.168
+ * @version 4.1.169
  */
 class ScreenRecordingPageViewEvent {
     /**

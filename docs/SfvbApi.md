@@ -46,6 +46,7 @@ Method | HTTP request | Description
 [**listSfvbExperiments**](SfvbApi.md#listSfvbExperiments) | **GET** /sfvb/storefronts/{storefront_oid}/experiments | List the storefront&#39;s experiments
 [**listSfvbFileVersions**](SfvbApi.md#listSfvbFileVersions) | **GET** /sfvb/storefronts/{storefront_oid}/files/versions | Version history for a storefront file
 [**listSfvbFiles**](SfvbApi.md#listSfvbFiles) | **GET** /sfvb/storefronts/{storefront_oid}/files | List a storefront directory
+[**listSfvbItemContainers**](SfvbApi.md#listSfvbItemContainers) | **GET** /sfvb/storefronts/{storefront_oid}/item_containers | List the item containers on the account
 [**listSfvbPages**](SfvbApi.md#listSfvbPages) | **GET** /sfvb/storefronts/{storefront_oid}/pages/list | List the storefront&#39;s pages
 [**listSfvbStorefronts**](SfvbApi.md#listSfvbStorefronts) | **GET** /sfvb/storefronts | List storefronts
 [**listSfvbTemplates**](SfvbApi.md#listSfvbTemplates) | **GET** /sfvb/storefronts/{storefront_oid}/templates | List the active theme&#39;s templates
@@ -1621,6 +1622,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbFilesResponse**](SfvbFilesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSfvbItemContainers
+
+> SfvbItemContainersResponse listSfvbItemContainers(storefront_oid, opts)
+
+List the item containers on the account
+
+An itemcontainer element renders nothing of its own.  It names a slot, and a separate container is resolved per item for that slot, so a catalog of five hundred products with three slots is fifteen hundred containers.  This says which of them exist.  Filter by container_name to find every item carrying one slot, or by merchant_item_id to see what one item has.  Which items are missing a slot is a set difference against pages/items, because a listing can only report containers that exist.  Each row carries hash_sha256, so a listing is enough to start an If-Match write without reading the container first.  Item containers are stored per account rather than per storefront, so storefront_oid identifies the caller&#39;s storefront but does not narrow the result. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **merchant_item_id** | **String**| Restrict to one item, by the merchant item id a storefront carries | [optional] 
+ **merchant_item_oid** | **Number**| Restrict to one item, by oid.  Send this or merchant_item_id, not both | [optional] 
+ **container_name** | **String**| Restrict to one slot name, matched without regard to case | [optional] 
+ **max_results** | **Number**|  | [optional] 
+ **offset** | **Number**|  | [optional] 
+
+### Return type
+
+[**SfvbItemContainersResponse**](SfvbItemContainersResponse.md)
 
 ### Authorization
 

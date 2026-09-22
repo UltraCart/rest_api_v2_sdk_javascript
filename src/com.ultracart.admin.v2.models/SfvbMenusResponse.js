@@ -17,7 +17,7 @@ import SfvbMenu from './SfvbMenu';
 /**
  * The SfvbMenusResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbMenusResponse
- * @version 4.1.168
+ * @version 4.1.169
  */
 class SfvbMenusResponse {
     /**

@@ -40,6 +40,7 @@ import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileV
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryResponse';
 import SfvbMenu from '../com.ultracart.admin.v2.models/SfvbMenu';
@@ -86,7 +87,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.168
+* @version 4.1.169
 */
 export default class SfvbApi {
 
@@ -2125,6 +2126,61 @@ export default class SfvbApi {
       let returnType = SfvbFilesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbItemContainers operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbItemContainersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemContainersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the item containers on the account
+     * An itemcontainer element renders nothing of its own.  It names a slot, and a separate container is resolved per item for that slot, so a catalog of five hundred products with three slots is fifteen hundred containers.  This says which of them exist.  Filter by container_name to find every item carrying one slot, or by merchant_item_id to see what one item has.  Which items are missing a slot is a set difference against pages/items, because a listing can only report containers that exist.  Each row carries hash_sha256, so a listing is enough to start an If-Match write without reading the container first.  Item containers are stored per account rather than per storefront, so storefront_oid identifies the caller's storefront but does not narrow the result. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id Restrict to one item, by the merchant item id a storefront carries
+     * @param {Number} opts.merchant_item_oid Restrict to one item, by oid.  Send this or merchant_item_id, not both
+     * @param {String} opts.container_name Restrict to one slot name, matched without regard to case
+     * @param {Number} opts.max_results 
+     * @param {Number} opts.offset 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbItemContainersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemContainersResponse}
+     */
+    listSfvbItemContainers(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbItemContainers");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid'],
+        'container_name': opts['container_name'],
+        'max_results': opts['max_results'],
+        'offset': opts['offset']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemContainersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/item_containers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

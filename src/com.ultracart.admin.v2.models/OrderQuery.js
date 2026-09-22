@@ -17,7 +17,7 @@ import OrderQueryPaymentTransactionFilter from './OrderQueryPaymentTransactionFi
 /**
  * The OrderQuery model module.
  * @module com.ultracart.admin.v2.models/OrderQuery
- * @version 4.1.168
+ * @version 4.1.169
  */
 class OrderQuery {
     /**
