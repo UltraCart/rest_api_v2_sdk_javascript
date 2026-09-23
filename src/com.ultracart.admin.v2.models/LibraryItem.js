@@ -23,7 +23,7 @@ import LibraryItemScreenshot from './LibraryItemScreenshot';
 /**
  * The LibraryItem model module.
  * @module com.ultracart.admin.v2.models/LibraryItem
- * @version 4.1.170
+ * @version 4.1.171
  */
 class LibraryItem {
     /**

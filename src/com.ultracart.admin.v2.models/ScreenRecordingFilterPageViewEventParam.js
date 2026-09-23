@@ -19,7 +19,7 @@ import ScreenRecordingFilterStringSearch from './ScreenRecordingFilterStringSear
 /**
  * The ScreenRecordingFilterPageViewEventParam model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageViewEventParam
- * @version 4.1.170
+ * @version 4.1.171
  */
 class ScreenRecordingFilterPageViewEventParam {
     /**

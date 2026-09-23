@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemSeoRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbItemSeoRequest
- * @version 4.1.170
+ * @version 4.1.171
  */
 class SfvbItemSeoRequest {
     /**

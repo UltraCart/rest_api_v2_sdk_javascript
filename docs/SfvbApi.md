@@ -6,16 +6,22 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addSfvbPageBlogPosts**](SfvbApi.md#addSfvbPageBlogPosts) | **POST** /sfvb/storefronts/{storefront_oid}/pages/blog_posts/add | Assign blog posts to a page
 [**addSfvbPageItems**](SfvbApi.md#addSfvbPageItems) | **POST** /sfvb/storefronts/{storefront_oid}/pages/items/add | Assign items to a page
+[**archiveSfvbUpsellPath**](SfvbApi.md#archiveSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/archive | Archive an upsell path
 [**compileSfvbCjson**](SfvbApi.md#compileSfvbCjson) | **POST** /sfvb/cjson/compile | Compile CJSON to Velocity
 [**createSfvbPreviewAccess**](SfvbApi.md#createSfvbPreviewAccess) | **POST** /sfvb/storefronts/{storefront_oid}/preview_access | One time link that opens a preview in a browser with no UltraCart login
 [**createSfvbPreviewSession**](SfvbApi.md#createSfvbPreviewSession) | **POST** /sfvb/storefronts/{storefront_oid}/preview_sessions | Create a preview session
 [**deleteSfvbFile**](SfvbApi.md#deleteSfvbFile) | **DELETE** /sfvb/storefronts/{storefront_oid}/files | Delete a storefront file
+[**deleteSfvbItemAttribute**](SfvbApi.md#deleteSfvbItemAttribute) | **DELETE** /sfvb/storefronts/{storefront_oid}/items/attributes | Delete an attribute from an item
 [**deleteSfvbItemMultimedia**](SfvbApi.md#deleteSfvbItemMultimedia) | **DELETE** /sfvb/storefronts/{storefront_oid}/items/multimedia | Detach an image from an item
 [**deleteSfvbPageMultimedia**](SfvbApi.md#deleteSfvbPageMultimedia) | **DELETE** /sfvb/storefronts/{storefront_oid}/pages/multimedia | Detach an image from a page
 [**deleteSfvbPreviewSession**](SfvbApi.md#deleteSfvbPreviewSession) | **DELETE** /sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id} | Delete a preview session
+[**disableSfvbUpsellOffer**](SfvbApi.md#disableSfvbUpsellOffer) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_offers/{upsell_offer_oid}/disable | Disable an upsell offer
+[**disableSfvbUpsellPath**](SfvbApi.md#disableSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/disable | Disable an upsell path
 [**downloadSfvbFile**](SfvbApi.md#downloadSfvbFile) | **GET** /sfvb/storefronts/{storefront_oid}/files/download | Read a storefront file&#39;s raw bytes
 [**duplicateSfvbPage**](SfvbApi.md#duplicateSfvbPage) | **POST** /sfvb/storefronts/{storefront_oid}/pages/duplicate | Copy a page to a new path
 [**duplicateSfvbTheme**](SfvbApi.md#duplicateSfvbTheme) | **POST** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/duplicate | Duplicate a theme
+[**duplicateSfvbUpsellOffer**](SfvbApi.md#duplicateSfvbUpsellOffer) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_offers/{upsell_offer_oid}/duplicate | Duplicate an upsell offer
+[**duplicateSfvbUpsellPath**](SfvbApi.md#duplicateSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/duplicate | Duplicate an upsell path or one of its variations
 [**endSfvbExperiment**](SfvbApi.md#endSfvbExperiment) | **POST** /sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/end | End an experiment
 [**getSfvbCjsonUsedElements**](SfvbApi.md#getSfvbCjsonUsedElements) | **POST** /sfvb/cjson/elements | Element types used by a container
 [**getSfvbContainer**](SfvbApi.md#getSfvbContainer) | **GET** /sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id} | Read a container stored outside the file system
@@ -38,9 +44,13 @@ Method | HTTP request | Description
 [**getSfvbTheme**](SfvbApi.md#getSfvbTheme) | **GET** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid} | Get a theme
 [**getSfvbThemeAttributes**](SfvbApi.md#getSfvbThemeAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes | Read a theme&#39;s colors, fonts and settings
 [**getSfvbThemeJob**](SfvbApi.md#getSfvbThemeJob) | **GET** /sfvb/storefronts/{storefront_oid}/theme_jobs/{job_id} | Status of an asynchronous theme job
+[**getSfvbUpsellOffer**](SfvbApi.md#getSfvbUpsellOffer) | **GET** /sfvb/storefronts/{storefront_oid}/upsell_offers/{upsell_offer_oid} | Get an upsell offer
+[**getSfvbUpsellPath**](SfvbApi.md#getSfvbUpsellPath) | **GET** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid} | Get an upsell path
 [**getSfvbVersion**](SfvbApi.md#getSfvbVersion) | **GET** /sfvb/version | Compiler version for this merchant
 [**getSfvbWhoami**](SfvbApi.md#getSfvbWhoami) | **GET** /sfvb/whoami | Who this token is
 [**insertSfvbPage**](SfvbApi.md#insertSfvbPage) | **POST** /sfvb/storefronts/{storefront_oid}/pages | Create a page
+[**insertSfvbUpsellOffer**](SfvbApi.md#insertSfvbUpsellOffer) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_offers | Create an upsell offer
+[**insertSfvbUpsellPath**](SfvbApi.md#insertSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths | Create an upsell path
 [**installSfvbLibraryEntry**](SfvbApi.md#installSfvbLibraryEntry) | **POST** /sfvb/storefronts/{storefront_oid}/library/{library_oid}/install | Install a library entry into a storefront
 [**listSfvbBlogPosts**](SfvbApi.md#listSfvbBlogPosts) | **GET** /sfvb/storefronts/{storefront_oid}/blog_posts | List the storefront&#39;s blog posts
 [**listSfvbContainerVersions**](SfvbApi.md#listSfvbContainerVersions) | **GET** /sfvb/storefronts/{storefront_oid}/container_versions | Version history for a container stored outside the file system
@@ -54,6 +64,8 @@ Method | HTTP request | Description
 [**listSfvbTemplates**](SfvbApi.md#listSfvbTemplates) | **GET** /sfvb/storefronts/{storefront_oid}/templates | List the active theme&#39;s templates
 [**listSfvbThemes**](SfvbApi.md#listSfvbThemes) | **GET** /sfvb/storefronts/{storefront_oid}/themes | List themes for a storefront
 [**listSfvbUpsellOffers**](SfvbApi.md#listSfvbUpsellOffers) | **GET** /sfvb/storefronts/{storefront_oid}/upsell_offers | List upsell offers
+[**listSfvbUpsellPaths**](SfvbApi.md#listSfvbUpsellPaths) | **GET** /sfvb/storefronts/{storefront_oid}/upsell_paths | List upsell paths
+[**moveSfvbUpsellPath**](SfvbApi.md#moveSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/move | Move an upsell path
 [**putSfvbContainer**](SfvbApi.md#putSfvbContainer) | **PUT** /sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id} | Write a container stored outside the file system
 [**putSfvbExperimentVariation**](SfvbApi.md#putSfvbExperimentVariation) | **PUT** /sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/variations/{variation_number} | Pause or resume a variation
 [**putSfvbFileContent**](SfvbApi.md#putSfvbFileContent) | **PUT** /sfvb/storefronts/{storefront_oid}/files/content | Write a storefront file
@@ -78,6 +90,9 @@ Method | HTTP request | Description
 [**searchSfvbFiles**](SfvbApi.md#searchSfvbFiles) | **POST** /sfvb/storefronts/{storefront_oid}/files/search | Search storefront files
 [**searchSfvbLibrary**](SfvbApi.md#searchSfvbLibrary) | **GET** /sfvb/storefronts/{storefront_oid}/library | Search the element library
 [**startSfvbExperiment**](SfvbApi.md#startSfvbExperiment) | **POST** /sfvb/storefronts/{storefront_oid}/experiments | Start an experiment
+[**unarchiveSfvbUpsellPath**](SfvbApi.md#unarchiveSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/unarchive | Unarchive an upsell path
+[**updateSfvbUpsellOffer**](SfvbApi.md#updateSfvbUpsellOffer) | **PUT** /sfvb/storefronts/{storefront_oid}/upsell_offers/{upsell_offer_oid} | Update an upsell offer
+[**updateSfvbUpsellPath**](SfvbApi.md#updateSfvbUpsellPath) | **PUT** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid} | Update an upsell path
 [**uploadSfvbFile**](SfvbApi.md#uploadSfvbFile) | **POST** /sfvb/storefronts/{storefront_oid}/files/upload | Store a binary asset that was already uploaded
 [**validateSfvbCjson**](SfvbApi.md#validateSfvbCjson) | **POST** /sfvb/cjson/validate | Validate CJSON
 [**validateSfvbVelocity**](SfvbApi.md#validateSfvbVelocity) | **POST** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/velocity/validate | Validate a Velocity template against a theme
@@ -157,6 +172,43 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## archiveSfvbUpsellPath
+
+> SfvbUpsellPath archiveSfvbUpsellPath(storefront_oid, upsell_path_oid)
+
+Archive an upsell path
+
+Files the path out of the default list.  An archived path does not run.  Archiving one that is switched on is a live change and needs sfvb_publish. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -307,6 +359,45 @@ null (empty response body)
 - **Accept**: application/json
 
 
+## deleteSfvbItemAttribute
+
+> SfvbItemResponse deleteSfvbItemAttribute(storefront_oid, name, opts)
+
+Delete an attribute from an item
+
+Removes one attribute that no template on the item&#39;s pages declares - a test name, a misspelling, one a retired template used.  A declared attribute is refused, because the template would list it again, empty; send an empty value through the attributes update to clear one of those instead. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **name** | **String**| The attribute name, matched without regard to case | 
+ **merchant_item_id** | **String**|  | [optional] 
+ **merchant_item_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**SfvbItemResponse**](SfvbItemResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## deleteSfvbItemMultimedia
 
 > SfvbItemResponse deleteSfvbItemMultimedia(storefront_oid, opts)
@@ -412,6 +503,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## disableSfvbUpsellOffer
+
+> SfvbUpsellOffer disableSfvbUpsellOffer(storefront_oid, upsell_offer_oid)
+
+Disable an upsell offer
+
+Switches the offer off.  Disabling one that is switched on is a live change and needs sfvb_publish.  An offer that is already off is returned unchanged.  There is no delete. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_offer_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbUpsellOffer**](SfvbUpsellOffer.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## disableSfvbUpsellPath
+
+> SfvbUpsellPath disableSfvbUpsellPath(storefront_oid, upsell_path_oid)
+
+Disable an upsell path
+
+Switches the path off.  Disabling a running path is a live change and needs sfvb_publish.  A path that is already off is returned unchanged.  There is no delete. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
 
 ### Authorization
 
@@ -532,6 +697,81 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## duplicateSfvbUpsellOffer
+
+> SfvbUpsellOffer duplicateSfvbUpsellOffer(storefront_oid, upsell_offer_oid)
+
+Duplicate an upsell offer
+
+A copy named Copy of, switched off, with its own copy of the container.  Put it on a path with a path update to have it shown. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_offer_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbUpsellOffer**](SfvbUpsellOffer.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## duplicateSfvbUpsellPath
+
+> SfvbUpsellPath duplicateSfvbUpsellPath(storefront_oid, upsell_path_oid, opts)
+
+Duplicate an upsell path or one of its variations
+
+Without a variation, copies the whole path right after it, switched off.  With a variation, appends a copy of that variation to the same path, which needs sfvb_publish when the path is running.  Every offer the copy uses is copied too and switched off.  Within this storefront only. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+ **duplicate_request** | [**SfvbUpsellPathDuplicateRequest**](SfvbUpsellPathDuplicateRequest.md)| What to duplicate | [optional] 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
 - **Accept**: application/json
 
 
@@ -1350,6 +1590,88 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getSfvbUpsellOffer
+
+> SfvbUpsellOffer getSfvbUpsellOffer(storefront_oid, upsell_offer_oid, opts)
+
+Get an upsell offer
+
+The whole offer, with the hash an update sends back in If-Match, which upsell items are out of stock now, and whether loyalty, TowerData and Everflow are set up.  Stats as on the path list. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_offer_oid** | **Number**|  | 
+ **stats** | **Boolean**| Include stats | [optional] 
+ **stats_start** | **String**| Stats window start, YYYY-MM-DD | [optional] 
+ **stats_end** | **String**| Stats window end, YYYY-MM-DD | [optional] 
+ **stats_weekdays** | **String**| Only these weekdays, comma separated mon to sun | [optional] 
+
+### Return type
+
+[**SfvbUpsellOffer**](SfvbUpsellOffer.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbUpsellPath
+
+> SfvbUpsellPath getSfvbUpsellPath(storefront_oid, upsell_path_oid, opts)
+
+Get an upsell path
+
+The whole path, with the hash an update sends back in If-Match.  Stats as on the list. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+ **stats** | **Boolean**| Include stats | [optional] 
+ **stats_start** | **String**| Stats window start, YYYY-MM-DD | [optional] 
+ **stats_end** | **String**| Stats window end, YYYY-MM-DD | [optional] 
+ **stats_weekdays** | **String**| Only these weekdays, comma separated mon to sun | [optional] 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getSfvbVersion
 
 > SfvbVersionResponse getSfvbVersion()
@@ -1442,6 +1764,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbPageResponse**](SfvbPageResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## insertSfvbUpsellOffer
+
+> SfvbUpsellOffer insertSfvbUpsellOffer(storefront_oid, upsell_offer)
+
+Create an upsell offer
+
+Every item it names must exist, and every shipping method, payment method and loyalty tier must be one the merchant has.  Put it on a path with a path update to have it shown.  Creating it switched on, or with upsell_item_id_javascript or offsite_content_url, needs sfvb_publish.  Its page content is its container, written with the container endpoints and owner type upsell. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_offer** | [**SfvbUpsellOffer**](SfvbUpsellOffer.md)| The offer to create | 
+
+### Return type
+
+[**SfvbUpsellOffer**](SfvbUpsellOffer.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## insertSfvbUpsellPath
+
+> SfvbUpsellPath insertSfvbUpsellPath(storefront_oid, upsell_path)
+
+Create an upsell path
+
+Placed last in path order.  Every offer a step names must be an offer of this storefront, and every item in the item logic must exist.  Creating it switched on needs sfvb_publish; create it with active false to build it without that scope. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path** | [**SfvbUpsellPath**](SfvbUpsellPath.md)| The path to create | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
 
 ### Authorization
 
@@ -1901,11 +2297,11 @@ Name | Type | Description  | Notes
 
 ## listSfvbUpsellOffers
 
-> SfvbUpsellOffersResponse listSfvbUpsellOffers(storefront_oid)
+> SfvbUpsellOffersResponse listSfvbUpsellOffers(storefront_oid, opts)
 
 List upsell offers
 
-Without container JSON, so the funnel can be surveyed cheaply.  A large container size alongside a small element count is the signature of markup pasted into a single html element. 
+Every offer on one of this storefront&#39;s paths that are not archived, the same list the admin shows, with each offer&#39;s full settings but not its container JSON.  An offer on no path yet is still read by oid.  A large container size alongside a small element count is the signature of markup pasted into a single html element.  Stats as on the path list. 
 
 
 ### Example
@@ -1920,6 +2316,10 @@ Without container JSON, so the funnel can be surveyed cheaply.  A large containe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storefront_oid** | **Number**|  | 
+ **stats** | **Boolean**| Include stats | [optional] 
+ **stats_start** | **String**| Stats window start, YYYY-MM-DD | [optional] 
+ **stats_end** | **String**| Stats window end, YYYY-MM-DD | [optional] 
+ **stats_weekdays** | **String**| Only these weekdays, comma separated mon to sun | [optional] 
 
 ### Return type
 
@@ -1932,6 +2332,89 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSfvbUpsellPaths
+
+> SfvbUpsellPathsResponse listSfvbUpsellPaths(storefront_oid, opts)
+
+List upsell paths
+
+In path order, first to last.  status current (the default) leaves out archived paths.  Stats are computed only with stats&#x3D;true, over stats_start to stats_end (YYYY-MM-DD, the last 30 days when both are omitted, at most 366 days), because they are the expensive part of the read. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **status** | **String**| current, archived or all | [optional] 
+ **location** | **String**| pre checkout or post checkout | [optional] 
+ **search** | **String**| Only paths whose name contains this | [optional] 
+ **stats** | **Boolean**| Include stats | [optional] 
+ **stats_start** | **String**| Stats window start, YYYY-MM-DD | [optional] 
+ **stats_end** | **String**| Stats window end, YYYY-MM-DD | [optional] 
+ **stats_weekdays** | **String**| Only these weekdays, comma separated mon to sun | [optional] 
+ **max_results** | **Number**| Page size, 1 to 500, default 100 | [optional] 
+ **offset** | **Number**| Offset of the first path returned | [optional] 
+
+### Return type
+
+[**SfvbUpsellPathsResponse**](SfvbUpsellPathsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## moveSfvbUpsellPath
+
+> SfvbUpsellPath moveSfvbUpsellPath(storefront_oid, upsell_path_oid, move_request)
+
+Move an upsell path
+
+Up, down, to the top or to the bottom of the storefront&#39;s paths.  Order decides which running path a shopper meets first, so moving a running path needs sfvb_publish. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+ **move_request** | [**SfvbUpsellPathMoveRequest**](SfvbUpsellPathMoveRequest.md)| Where to move it | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
 - **Accept**: application/json
 
 
@@ -2060,7 +2543,7 @@ Name | Type | Description  | Notes
 
 Change some of an item&#39;s attributes
 
-Partial - only the attributes named change, and an empty value clears one.  Every entry is validated before any is written, so a refusal leaves the item untouched.  The list types are checked against the shape their renderer actually parses, which matters more than it sounds: a definition list is a bare array with one letter keys, a video list is a wrapper object with keys spelled out, and an item set is comma separated text rather than JSON.  A shape the renderer cannot read is not reported at render time - it renders exactly like an attribute nobody ever set. 
+Partial - only the attributes named change, and an empty value empties one but keeps it on the item.  To remove an attribute no template declares, use the attribute DELETE.  Every entry is validated before any is written, so a refusal leaves the item untouched.  The list types are checked against the shape their renderer actually parses, which matters more than it sounds: a definition list is a bare array with one letter keys, a video list is a wrapper object with keys spelled out, and an item set is comma separated text rather than JSON.  A shape the renderer cannot read is not reported at render time - it renders exactly like an attribute nobody ever set. 
 
 
 ### Example
@@ -2848,6 +3331,121 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbExperiment**](SfvbExperiment.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## unarchiveSfvbUpsellPath
+
+> SfvbUpsellPath unarchiveSfvbUpsellPath(storefront_oid, upsell_path_oid)
+
+Unarchive an upsell path
+
+Brings the path back into the default list.  Unarchiving one that is switched on starts it, so that needs sfvb_publish. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateSfvbUpsellOffer
+
+> SfvbUpsellOffer updateSfvbUpsellOffer(storefront_oid, upsell_offer_oid, If_Match, upsell_offer)
+
+Update an upsell offer
+
+A full replace.  Send back the whole offer you read, changed, with its hash_sha256 in If-Match.  Read only fields are ignored and a writable field left out is cleared.  Changing an offer that is switched on, switching one on, or changing upsell_item_id_javascript or offsite_content_url needs sfvb_publish.  Settings the API does not show, such as the offer&#39;s screenshots, are kept. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_offer_oid** | **Number**|  | 
+ **If_Match** | **String**| hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+ **upsell_offer** | [**SfvbUpsellOffer**](SfvbUpsellOffer.md)| The whole offer | 
+
+### Return type
+
+[**SfvbUpsellOffer**](SfvbUpsellOffer.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## updateSfvbUpsellPath
+
+> SfvbUpsellPath updateSfvbUpsellPath(storefront_oid, upsell_path_oid, If_Match, upsell_path)
+
+Update an upsell path
+
+A full replace.  Send back the whole path you read, changed, with its hash_sha256 in If-Match.  Read only fields are ignored and a writable field left out is cleared.  Order and archived keep their stored values; change them with the move, archive and unarchive calls.  Changing a running path, or switching one on, needs sfvb_publish. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **upsell_path_oid** | **Number**|  | 
+ **If_Match** | **String**| hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+ **upsell_path** | [**SfvbUpsellPath**](SfvbUpsellPath.md)| The whole path | 
+
+### Return type
+
+[**SfvbUpsellPath**](SfvbUpsellPath.md)
 
 ### Authorization
 

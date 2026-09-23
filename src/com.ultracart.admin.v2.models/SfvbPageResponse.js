@@ -18,7 +18,7 @@ import SfvbPageMultimedia from './SfvbPageMultimedia';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.170
+ * @version 4.1.171
  */
 class SfvbPageResponse {
     /**
@@ -51,6 +51,9 @@ class SfvbPageResponse {
 
             if (data.hasOwnProperty('attributes')) {
                 obj['attributes'] = ApiClient.convertToType(data['attributes'], [SfvbPageAttribute]);
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('exclude_from_sitemap')) {
                 obj['exclude_from_sitemap'] = ApiClient.convertToType(data['exclude_from_sitemap'], 'Boolean');
@@ -88,6 +91,12 @@ class SfvbPageResponse {
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageAttribute>} attributes
  */
 SfvbPageResponse.prototype['attributes'] = undefined;
+
+/**
+ * The page description, the text a page template renders as the page's description.  Omitted when empty.
+ * @member {String} description
+ */
+SfvbPageResponse.prototype['description'] = undefined;
 
 /**
  * True when the page is left out of the sitemap and marked noindex.

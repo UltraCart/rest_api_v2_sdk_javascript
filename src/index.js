@@ -1074,8 +1074,19 @@ import SfvbThemeFont from './com.ultracart.admin.v2.models/SfvbThemeFont';
 import SfvbThemeFontFamily from './com.ultracart.admin.v2.models/SfvbThemeFontFamily';
 import SfvbThemeJobResponse from './com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesResponse';
+import SfvbUpsellItemLogic from './com.ultracart.admin.v2.models/SfvbUpsellItemLogic';
+import SfvbUpsellItemLogicItem from './com.ultracart.admin.v2.models/SfvbUpsellItemLogicItem';
 import SfvbUpsellOffer from './com.ultracart.admin.v2.models/SfvbUpsellOffer';
 import SfvbUpsellOffersResponse from './com.ultracart.admin.v2.models/SfvbUpsellOffersResponse';
+import SfvbUpsellPath from './com.ultracart.admin.v2.models/SfvbUpsellPath';
+import SfvbUpsellPathDuplicateRequest from './com.ultracart.admin.v2.models/SfvbUpsellPathDuplicateRequest';
+import SfvbUpsellPathMoveRequest from './com.ultracart.admin.v2.models/SfvbUpsellPathMoveRequest';
+import SfvbUpsellPathsResponse from './com.ultracart.admin.v2.models/SfvbUpsellPathsResponse';
+import SfvbUpsellStats from './com.ultracart.admin.v2.models/SfvbUpsellStats';
+import SfvbUpsellStep from './com.ultracart.admin.v2.models/SfvbUpsellStep';
+import SfvbUpsellStepOffer from './com.ultracart.admin.v2.models/SfvbUpsellStepOffer';
+import SfvbUpsellTowerData from './com.ultracart.admin.v2.models/SfvbUpsellTowerData';
+import SfvbUpsellVariation from './com.ultracart.admin.v2.models/SfvbUpsellVariation';
 import SfvbValidateRequest from './com.ultracart.admin.v2.models/SfvbValidateRequest';
 import SfvbValidationResponse from './com.ultracart.admin.v2.models/SfvbValidationResponse';
 import SfvbVelocityValidateRequest from './com.ultracart.admin.v2.models/SfvbVelocityValidateRequest';
@@ -1225,7 +1236,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.170
+* @version 4.1.171
 */
 export {
     /**
@@ -7601,6 +7612,18 @@ export {
     SfvbThemesResponse,
 
     /**
+     * The SfvbUpsellItemLogic model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellItemLogic}
+     */
+    SfvbUpsellItemLogic,
+
+    /**
+     * The SfvbUpsellItemLogicItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellItemLogicItem}
+     */
+    SfvbUpsellItemLogicItem,
+
+    /**
      * The SfvbUpsellOffer model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbUpsellOffer}
      */
@@ -7611,6 +7634,60 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbUpsellOffersResponse}
      */
     SfvbUpsellOffersResponse,
+
+    /**
+     * The SfvbUpsellPath model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellPath}
+     */
+    SfvbUpsellPath,
+
+    /**
+     * The SfvbUpsellPathDuplicateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellPathDuplicateRequest}
+     */
+    SfvbUpsellPathDuplicateRequest,
+
+    /**
+     * The SfvbUpsellPathMoveRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellPathMoveRequest}
+     */
+    SfvbUpsellPathMoveRequest,
+
+    /**
+     * The SfvbUpsellPathsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellPathsResponse}
+     */
+    SfvbUpsellPathsResponse,
+
+    /**
+     * The SfvbUpsellStats model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellStats}
+     */
+    SfvbUpsellStats,
+
+    /**
+     * The SfvbUpsellStep model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellStep}
+     */
+    SfvbUpsellStep,
+
+    /**
+     * The SfvbUpsellStepOffer model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellStepOffer}
+     */
+    SfvbUpsellStepOffer,
+
+    /**
+     * The SfvbUpsellTowerData model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellTowerData}
+     */
+    SfvbUpsellTowerData,
+
+    /**
+     * The SfvbUpsellVariation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUpsellVariation}
+     */
+    SfvbUpsellVariation,
 
     /**
      * The SfvbValidateRequest model constructor.

@@ -17,7 +17,7 @@ import Country from './Country';
 /**
  * The CheckoutAllowedCountriesResponse model module.
  * @module com.ultracart.admin.v2.models/CheckoutAllowedCountriesResponse
- * @version 4.1.170
+ * @version 4.1.171
  */
 class CheckoutAllowedCountriesResponse {
     /**

@@ -12,11 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbUpsellItemLogic from './SfvbUpsellItemLogic';
+import SfvbUpsellStats from './SfvbUpsellStats';
 
 /**
  * The SfvbUpsellOffer model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellOffer
- * @version 4.1.170
+ * @version 4.1.171
  */
 class SfvbUpsellOffer {
     /**
@@ -53,23 +55,188 @@ class SfvbUpsellOffer {
             if (data.hasOwnProperty('active_overall')) {
                 obj['active_overall'] = ApiClient.convertToType(data['active_overall'], 'Boolean');
             }
+            if (data.hasOwnProperty('add_accessory_item_ids')) {
+                obj['add_accessory_item_ids'] = ApiClient.convertToType(data['add_accessory_item_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('adjust_trigger_item_option')) {
+                obj['adjust_trigger_item_option'] = ApiClient.convertToType(data['adjust_trigger_item_option'], 'String');
+            }
+            if (data.hasOwnProperty('allow_upsell_item_in_cart_already')) {
+                obj['allow_upsell_item_in_cart_already'] = ApiClient.convertToType(data['allow_upsell_item_in_cart_already'], 'Boolean');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost')) {
+                obj['arbitrary_unit_cost'] = ApiClient.convertToType(data['arbitrary_unit_cost'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_friday')) {
+                obj['arbitrary_unit_cost_friday'] = ApiClient.convertToType(data['arbitrary_unit_cost_friday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_monday')) {
+                obj['arbitrary_unit_cost_monday'] = ApiClient.convertToType(data['arbitrary_unit_cost_monday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_saturday')) {
+                obj['arbitrary_unit_cost_saturday'] = ApiClient.convertToType(data['arbitrary_unit_cost_saturday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_sunday')) {
+                obj['arbitrary_unit_cost_sunday'] = ApiClient.convertToType(data['arbitrary_unit_cost_sunday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_thursday')) {
+                obj['arbitrary_unit_cost_thursday'] = ApiClient.convertToType(data['arbitrary_unit_cost_thursday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_tuesday')) {
+                obj['arbitrary_unit_cost_tuesday'] = ApiClient.convertToType(data['arbitrary_unit_cost_tuesday'], 'Number');
+            }
+            if (data.hasOwnProperty('arbitrary_unit_cost_wednesday')) {
+                obj['arbitrary_unit_cost_wednesday'] = ApiClient.convertToType(data['arbitrary_unit_cost_wednesday'], 'Number');
+            }
             if (data.hasOwnProperty('cjson_size')) {
                 obj['cjson_size'] = ApiClient.convertToType(data['cjson_size'], 'Number');
+            }
+            if (data.hasOwnProperty('end_date')) {
+                obj['end_date'] = ApiClient.convertToType(data['end_date'], 'String');
+            }
+            if (data.hasOwnProperty('everflow_advertiser_event_id')) {
+                obj['everflow_advertiser_event_id'] = ApiClient.convertToType(data['everflow_advertiser_event_id'], 'String');
+            }
+            if (data.hasOwnProperty('first_time_item')) {
+                obj['first_time_item'] = ApiClient.convertToType(data['first_time_item'], 'Boolean');
+            }
+            if (data.hasOwnProperty('first_time_store')) {
+                obj['first_time_store'] = ApiClient.convertToType(data['first_time_store'], 'Boolean');
+            }
+            if (data.hasOwnProperty('free_shipping')) {
+                obj['free_shipping'] = ApiClient.convertToType(data['free_shipping'], 'Boolean');
             }
             if (data.hasOwnProperty('has_container')) {
                 obj['has_container'] = ApiClient.convertToType(data['has_container'], 'Boolean');
             }
+            if (data.hasOwnProperty('has_everflow_configured')) {
+                obj['has_everflow_configured'] = ApiClient.convertToType(data['has_everflow_configured'], 'Boolean');
+            }
+            if (data.hasOwnProperty('has_loyalty_configured')) {
+                obj['has_loyalty_configured'] = ApiClient.convertToType(data['has_loyalty_configured'], 'Boolean');
+            }
+            if (data.hasOwnProperty('has_towerdata_configured')) {
+                obj['has_towerdata_configured'] = ApiClient.convertToType(data['has_towerdata_configured'], 'Boolean');
+            }
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('item_logic_suppression')) {
+                obj['item_logic_suppression'] = SfvbUpsellItemLogic.constructFromObject(data['item_logic_suppression']);
+            }
+            if (data.hasOwnProperty('item_logic_trigger')) {
+                obj['item_logic_trigger'] = SfvbUpsellItemLogic.constructFromObject(data['item_logic_trigger']);
+            }
+            if (data.hasOwnProperty('lock_shipping')) {
+                obj['lock_shipping'] = ApiClient.convertToType(data['lock_shipping'], 'Boolean');
+            }
+            if (data.hasOwnProperty('max_quantity')) {
+                obj['max_quantity'] = ApiClient.convertToType(data['max_quantity'], 'Number');
+            }
+            if (data.hasOwnProperty('migrate_accessory_item_ids_from')) {
+                obj['migrate_accessory_item_ids_from'] = ApiClient.convertToType(data['migrate_accessory_item_ids_from'], ['String']);
+            }
+            if (data.hasOwnProperty('migrate_accessory_item_ids_to')) {
+                obj['migrate_accessory_item_ids_to'] = ApiClient.convertToType(data['migrate_accessory_item_ids_to'], ['String']);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('offsite_content_url')) {
+                obj['offsite_content_url'] = ApiClient.convertToType(data['offsite_content_url'], 'String');
+            }
+            if (data.hasOwnProperty('out_of_stock_upsell_item_ids')) {
+                obj['out_of_stock_upsell_item_ids'] = ApiClient.convertToType(data['out_of_stock_upsell_item_ids'], ['String']);
             }
             if (data.hasOwnProperty('path_name')) {
                 obj['path_name'] = ApiClient.convertToType(data['path_name'], 'String');
             }
+            if (data.hasOwnProperty('record_as_regular_item')) {
+                obj['record_as_regular_item'] = ApiClient.convertToType(data['record_as_regular_item'], 'Boolean');
+            }
+            if (data.hasOwnProperty('referenced_by_path_oids')) {
+                obj['referenced_by_path_oids'] = ApiClient.convertToType(data['referenced_by_path_oids'], ['Number']);
+            }
+            if (data.hasOwnProperty('removable_on_confirmation')) {
+                obj['removable_on_confirmation'] = ApiClient.convertToType(data['removable_on_confirmation'], 'Boolean');
+            }
+            if (data.hasOwnProperty('remove_accessory_item_ids')) {
+                obj['remove_accessory_item_ids'] = ApiClient.convertToType(data['remove_accessory_item_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('remove_trigger_item')) {
+                obj['remove_trigger_item'] = ApiClient.convertToType(data['remove_trigger_item'], 'Boolean');
+            }
+            if (data.hasOwnProperty('skip_previous_customers')) {
+                obj['skip_previous_customers'] = ApiClient.convertToType(data['skip_previous_customers'], 'Boolean');
+            }
+            if (data.hasOwnProperty('start_date')) {
+                obj['start_date'] = ApiClient.convertToType(data['start_date'], 'String');
+            }
+            if (data.hasOwnProperty('stats')) {
+                obj['stats'] = SfvbUpsellStats.constructFromObject(data['stats']);
+            }
             if (data.hasOwnProperty('storefront_oid')) {
                 obj['storefront_oid'] = ApiClient.convertToType(data['storefront_oid'], 'Number');
             }
+            if (data.hasOwnProperty('suppress_large')) {
+                obj['suppress_large'] = ApiClient.convertToType(data['suppress_large'], 'Boolean');
+            }
+            if (data.hasOwnProperty('suppress_medium')) {
+                obj['suppress_medium'] = ApiClient.convertToType(data['suppress_medium'], 'Boolean');
+            }
+            if (data.hasOwnProperty('suppress_small')) {
+                obj['suppress_small'] = ApiClient.convertToType(data['suppress_small'], 'Boolean');
+            }
+            if (data.hasOwnProperty('suppression_country_codes')) {
+                obj['suppression_country_codes'] = ApiClient.convertToType(data['suppression_country_codes'], ['String']);
+            }
+            if (data.hasOwnProperty('suppression_loyalty_tier_oids')) {
+                obj['suppression_loyalty_tier_oids'] = ApiClient.convertToType(data['suppression_loyalty_tier_oids'], ['Number']);
+            }
+            if (data.hasOwnProperty('suppression_payment_methods')) {
+                obj['suppression_payment_methods'] = ApiClient.convertToType(data['suppression_payment_methods'], ['String']);
+            }
+            if (data.hasOwnProperty('suppression_shipping_methods')) {
+                obj['suppression_shipping_methods'] = ApiClient.convertToType(data['suppression_shipping_methods'], ['String']);
+            }
+            if (data.hasOwnProperty('suppression_state_codes')) {
+                obj['suppression_state_codes'] = ApiClient.convertToType(data['suppression_state_codes'], ['String']);
+            }
+            if (data.hasOwnProperty('suppression_tags')) {
+                obj['suppression_tags'] = ApiClient.convertToType(data['suppression_tags'], ['String']);
+            }
             if (data.hasOwnProperty('test_only')) {
                 obj['test_only'] = ApiClient.convertToType(data['test_only'], 'Boolean');
+            }
+            if (data.hasOwnProperty('trigger_ages')) {
+                obj['trigger_ages'] = ApiClient.convertToType(data['trigger_ages'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_country_codes')) {
+                obj['trigger_country_codes'] = ApiClient.convertToType(data['trigger_country_codes'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_genders')) {
+                obj['trigger_genders'] = ApiClient.convertToType(data['trigger_genders'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_loyalty_tier_oids')) {
+                obj['trigger_loyalty_tier_oids'] = ApiClient.convertToType(data['trigger_loyalty_tier_oids'], ['Number']);
+            }
+            if (data.hasOwnProperty('trigger_payment_methods')) {
+                obj['trigger_payment_methods'] = ApiClient.convertToType(data['trigger_payment_methods'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_shipping_methods')) {
+                obj['trigger_shipping_methods'] = ApiClient.convertToType(data['trigger_shipping_methods'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_state_codes')) {
+                obj['trigger_state_codes'] = ApiClient.convertToType(data['trigger_state_codes'], ['String']);
+            }
+            if (data.hasOwnProperty('trigger_tags')) {
+                obj['trigger_tags'] = ApiClient.convertToType(data['trigger_tags'], ['String']);
+            }
+            if (data.hasOwnProperty('upsell_item_id_javascript')) {
+                obj['upsell_item_id_javascript'] = ApiClient.convertToType(data['upsell_item_id_javascript'], 'String');
+            }
+            if (data.hasOwnProperty('upsell_item_ids')) {
+                obj['upsell_item_ids'] = ApiClient.convertToType(data['upsell_item_ids'], ['String']);
             }
             if (data.hasOwnProperty('upsell_offer_oid')) {
                 obj['upsell_offer_oid'] = ApiClient.convertToType(data['upsell_offer_oid'], 'Number');
@@ -82,46 +249,313 @@ class SfvbUpsellOffer {
 }
 
 /**
- * Whether the offer is switched on.
+ * Whether the offer is switched on.  Setting it true, or changing an offer that is active overall, needs the sfvb_publish scope.
  * @member {Boolean} active
  */
 SfvbUpsellOffer.prototype['active'] = undefined;
 
 /**
- * Whether the offer is active once its date window and daily pricing are taken into account.  This is the one that says whether shoppers are actually seeing it.
+ * Read only.  Whether the offer is active once its date window and daily pricing are taken into account.  This is the one that says whether shoppers are actually seeing it.
  * @member {Boolean} active_overall
  */
 SfvbUpsellOffer.prototype['active_overall'] = undefined;
 
 /**
- * Size of the offer's container JSON in bytes.  A large value here alongside a low element count is the signature of a hand pasted HTML dump.
+ * Accessory items added when the offer is accepted.
+ * @member {Array.<String>} add_accessory_item_ids
+ */
+SfvbUpsellOffer.prototype['add_accessory_item_ids'] = undefined;
+
+/**
+ * Option on the trigger item to adjust when the offer is accepted.  Omitted or null for none.
+ * @member {String} adjust_trigger_item_option
+ */
+SfvbUpsellOffer.prototype['adjust_trigger_item_option'] = undefined;
+
+/**
+ * Whether to show the offer when the upsell item is already in the cart.
+ * @member {Boolean} allow_upsell_item_in_cart_already
+ */
+SfvbUpsellOffer.prototype['allow_upsell_item_in_cart_already'] = undefined;
+
+/**
+ * Price per unit when the offer is accepted.  Omitted or null to charge the item's own price.
+ * @member {Number} arbitrary_unit_cost
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost'] = undefined;
+
+/**
+ * Price on Fridays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_friday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_friday'] = undefined;
+
+/**
+ * Price on Mondays, overriding arbitrary_unit_cost.  Omitted or null for no override.
+ * @member {Number} arbitrary_unit_cost_monday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_monday'] = undefined;
+
+/**
+ * Price on Saturdays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_saturday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_saturday'] = undefined;
+
+/**
+ * Price on Sundays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_sunday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_sunday'] = undefined;
+
+/**
+ * Price on Thursdays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_thursday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_thursday'] = undefined;
+
+/**
+ * Price on Tuesdays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_tuesday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_tuesday'] = undefined;
+
+/**
+ * Price on Wednesdays, overriding arbitrary_unit_cost.
+ * @member {Number} arbitrary_unit_cost_wednesday
+ */
+SfvbUpsellOffer.prototype['arbitrary_unit_cost_wednesday'] = undefined;
+
+/**
+ * Read only.  Size of the offer's container JSON in bytes.  A large value here alongside a low element count is the signature of a hand pasted HTML dump.
  * @member {Number} cjson_size
  */
 SfvbUpsellOffer.prototype['cjson_size'] = undefined;
 
 /**
- * Whether a container has been authored for this offer.
+ * Last day the offer runs, as YYYY-MM-DD, inclusive.  Omitted or null for no end.
+ * @member {String} end_date
+ */
+SfvbUpsellOffer.prototype['end_date'] = undefined;
+
+/**
+ * Everflow advertiser event id recorded when the offer is accepted.  Omitted or null for none.
+ * @member {String} everflow_advertiser_event_id
+ */
+SfvbUpsellOffer.prototype['everflow_advertiser_event_id'] = undefined;
+
+/**
+ * Show only to shoppers who have not bought the upsell item before.
+ * @member {Boolean} first_time_item
+ */
+SfvbUpsellOffer.prototype['first_time_item'] = undefined;
+
+/**
+ * Show only to shoppers buying from this store for the first time.
+ * @member {Boolean} first_time_store
+ */
+SfvbUpsellOffer.prototype['first_time_store'] = undefined;
+
+/**
+ * Whether the upsell item ships free.
+ * @member {Boolean} free_shipping
+ */
+SfvbUpsellOffer.prototype['free_shipping'] = undefined;
+
+/**
+ * Read only.  Whether a container has been authored for this offer.
  * @member {Boolean} has_container
  */
 SfvbUpsellOffer.prototype['has_container'] = undefined;
 
 /**
- * Offer name.
+ * Read only.  Whether the merchant has Everflow set up.
+ * @member {Boolean} has_everflow_configured
+ */
+SfvbUpsellOffer.prototype['has_everflow_configured'] = undefined;
+
+/**
+ * Read only.  Whether the merchant has loyalty set up, so the loyalty tier lists apply.
+ * @member {Boolean} has_loyalty_configured
+ */
+SfvbUpsellOffer.prototype['has_loyalty_configured'] = undefined;
+
+/**
+ * Read only.  Whether the merchant has TowerData set up, so the age and gender lists apply.
+ * @member {Boolean} has_towerdata_configured
+ */
+SfvbUpsellOffer.prototype['has_towerdata_configured'] = undefined;
+
+/**
+ * Read only.  Hash of the offer's writable fields.  Send it in If-Match on an update.
+ * @member {String} hash_sha256
+ */
+SfvbUpsellOffer.prototype['hash_sha256'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbUpsellItemLogic} item_logic_suppression
+ */
+SfvbUpsellOffer.prototype['item_logic_suppression'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbUpsellItemLogic} item_logic_trigger
+ */
+SfvbUpsellOffer.prototype['item_logic_trigger'] = undefined;
+
+/**
+ * Whether the shipping method is locked once the offer is accepted.
+ * @member {Boolean} lock_shipping
+ */
+SfvbUpsellOffer.prototype['lock_shipping'] = undefined;
+
+/**
+ * Most units a shopper can take.  Omitted or null for no limit.
+ * @member {Number} max_quantity
+ */
+SfvbUpsellOffer.prototype['max_quantity'] = undefined;
+
+/**
+ * Accessory items to migrate from, paired by position with migrate_accessory_item_ids_to.
+ * @member {Array.<String>} migrate_accessory_item_ids_from
+ */
+SfvbUpsellOffer.prototype['migrate_accessory_item_ids_from'] = undefined;
+
+/**
+ * Accessory items to migrate to, paired by position with migrate_accessory_item_ids_from.
+ * @member {Array.<String>} migrate_accessory_item_ids_to
+ */
+SfvbUpsellOffer.prototype['migrate_accessory_item_ids_to'] = undefined;
+
+/**
+ * Offer name, at most 50 characters.
  * @member {String} name
  */
 SfvbUpsellOffer.prototype['name'] = undefined;
 
 /**
- * Name of the upsell path this offer sits on.
+ * URL of offsite content shown instead of the container.  Omitted or null for none.
+ * @member {String} offsite_content_url
+ */
+SfvbUpsellOffer.prototype['offsite_content_url'] = undefined;
+
+/**
+ * Read only.  Upsell items that are out of stock now, so the offer would not be shown.
+ * @member {Array.<String>} out_of_stock_upsell_item_ids
+ */
+SfvbUpsellOffer.prototype['out_of_stock_upsell_item_ids'] = undefined;
+
+/**
+ * Read only.  Name of the upsell path this offer was last served on.  Written by checkout traffic, so it is empty until shoppers have seen the offer and can be stale.  Use referenced_by_path_oids for the configured answer.
  * @member {String} path_name
  */
 SfvbUpsellOffer.prototype['path_name'] = undefined;
 
 /**
- * Storefront oid.
+ * Whether the accepted item is recorded as a regular item rather than an upsell.
+ * @member {Boolean} record_as_regular_item
+ */
+SfvbUpsellOffer.prototype['record_as_regular_item'] = undefined;
+
+/**
+ * Read only.  The storefront's upsell paths whose steps use this offer, as an offer or a downsell.
+ * @member {Array.<Number>} referenced_by_path_oids
+ */
+SfvbUpsellOffer.prototype['referenced_by_path_oids'] = undefined;
+
+/**
+ * Whether the shopper can remove the accepted item on the confirmation step.
+ * @member {Boolean} removable_on_confirmation
+ */
+SfvbUpsellOffer.prototype['removable_on_confirmation'] = undefined;
+
+/**
+ * Accessory items removed when the offer is accepted.
+ * @member {Array.<String>} remove_accessory_item_ids
+ */
+SfvbUpsellOffer.prototype['remove_accessory_item_ids'] = undefined;
+
+/**
+ * Whether accepting the offer removes the item that triggered it (a swap rather than an add).
+ * @member {Boolean} remove_trigger_item
+ */
+SfvbUpsellOffer.prototype['remove_trigger_item'] = undefined;
+
+/**
+ * Do not show to previous customers.
+ * @member {Boolean} skip_previous_customers
+ */
+SfvbUpsellOffer.prototype['skip_previous_customers'] = undefined;
+
+/**
+ * First day the offer runs, as YYYY-MM-DD.  Omitted or null for no start.
+ * @member {String} start_date
+ */
+SfvbUpsellOffer.prototype['start_date'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbUpsellStats} stats
+ */
+SfvbUpsellOffer.prototype['stats'] = undefined;
+
+/**
+ * Read only.  Storefront oid.
  * @member {Number} storefront_oid
  */
 SfvbUpsellOffer.prototype['storefront_oid'] = undefined;
+
+/**
+ * Do not show on large screens.
+ * @member {Boolean} suppress_large
+ */
+SfvbUpsellOffer.prototype['suppress_large'] = undefined;
+
+/**
+ * Do not show on medium screens.
+ * @member {Boolean} suppress_medium
+ */
+SfvbUpsellOffer.prototype['suppress_medium'] = undefined;
+
+/**
+ * Do not show on small screens.
+ * @member {Boolean} suppress_small
+ */
+SfvbUpsellOffer.prototype['suppress_small'] = undefined;
+
+/**
+ * Shipping countries that stop the offer from showing.
+ * @member {Array.<String>} suppression_country_codes
+ */
+SfvbUpsellOffer.prototype['suppression_country_codes'] = undefined;
+
+/**
+ * Loyalty tiers that stop the offer from showing.
+ * @member {Array.<Number>} suppression_loyalty_tier_oids
+ */
+SfvbUpsellOffer.prototype['suppression_loyalty_tier_oids'] = undefined;
+
+/**
+ * Payment methods that stop the offer from showing.
+ * @member {Array.<String>} suppression_payment_methods
+ */
+SfvbUpsellOffer.prototype['suppression_payment_methods'] = undefined;
+
+/**
+ * Shipping methods that stop the offer from showing.
+ * @member {Array.<String>} suppression_shipping_methods
+ */
+SfvbUpsellOffer.prototype['suppression_shipping_methods'] = undefined;
+
+/**
+ * Shipping states that stop the offer from showing.
+ * @member {Array.<String>} suppression_state_codes
+ */
+SfvbUpsellOffer.prototype['suppression_state_codes'] = undefined;
+
+/**
+ * Customer tags that stop the offer from showing.
+ * @member {Array.<String>} suppression_tags
+ */
+SfvbUpsellOffer.prototype['suppression_tags'] = undefined;
 
 /**
  * Whether the offer is restricted to test traffic.
@@ -130,7 +564,67 @@ SfvbUpsellOffer.prototype['storefront_oid'] = undefined;
 SfvbUpsellOffer.prototype['test_only'] = undefined;
 
 /**
- * Upsell offer oid.
+ * TowerData age bands the offer is shown to.  18-20, 21-24, 25-34, 35-44, 45-54, 55-64, 65+ or Unknown.
+ * @member {Array.<String>} trigger_ages
+ */
+SfvbUpsellOffer.prototype['trigger_ages'] = undefined;
+
+/**
+ * Shipping countries (ISO 3166 two letter codes) that trigger the offer.
+ * @member {Array.<String>} trigger_country_codes
+ */
+SfvbUpsellOffer.prototype['trigger_country_codes'] = undefined;
+
+/**
+ * TowerData genders the offer is shown to.  Male, Female or Unknown.
+ * @member {Array.<String>} trigger_genders
+ */
+SfvbUpsellOffer.prototype['trigger_genders'] = undefined;
+
+/**
+ * Loyalty tiers that trigger the offer.  Each must be one of the merchant's loyalty tiers.
+ * @member {Array.<Number>} trigger_loyalty_tier_oids
+ */
+SfvbUpsellOffer.prototype['trigger_loyalty_tier_oids'] = undefined;
+
+/**
+ * Payment methods that trigger the offer.  Each must be one of the merchant's payment methods.
+ * @member {Array.<String>} trigger_payment_methods
+ */
+SfvbUpsellOffer.prototype['trigger_payment_methods'] = undefined;
+
+/**
+ * Shipping methods that trigger the offer.  Each must be one of the merchant's shipping methods.
+ * @member {Array.<String>} trigger_shipping_methods
+ */
+SfvbUpsellOffer.prototype['trigger_shipping_methods'] = undefined;
+
+/**
+ * Shipping states that trigger the offer.
+ * @member {Array.<String>} trigger_state_codes
+ */
+SfvbUpsellOffer.prototype['trigger_state_codes'] = undefined;
+
+/**
+ * Customer tags that trigger the offer.
+ * @member {Array.<String>} trigger_tags
+ */
+SfvbUpsellOffer.prototype['trigger_tags'] = undefined;
+
+/**
+ * JavaScript that chooses the upsell item at runtime.  Omitted or null for none.
+ * @member {String} upsell_item_id_javascript
+ */
+SfvbUpsellOffer.prototype['upsell_item_id_javascript'] = undefined;
+
+/**
+ * The items offered.  Every item id must exist on the merchant account.
+ * @member {Array.<String>} upsell_item_ids
+ */
+SfvbUpsellOffer.prototype['upsell_item_ids'] = undefined;
+
+/**
+ * Read only.  Upsell offer oid.
  * @member {Number} upsell_offer_oid
  */
 SfvbUpsellOffer.prototype['upsell_offer_oid'] = undefined;
