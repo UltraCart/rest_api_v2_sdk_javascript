@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The CustomDashboardSchedulesResponse model module.
  * @module com.ultracart.admin.v2.models/CustomDashboardSchedulesResponse
- * @version 4.1.171
+ * @version 4.1.172
  */
 class CustomDashboardSchedulesResponse {
     /**

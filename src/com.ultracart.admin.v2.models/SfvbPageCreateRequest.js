@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPageCreateRequest
- * @version 4.1.171
+ * @version 4.1.172
  */
 class SfvbPageCreateRequest {
     /**
