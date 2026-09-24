@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportsExecutionReportData model module.
  * @module com.ultracart.admin.v2.models/CustomReportsExecutionReportData
- * @version 4.1.172
+ * @version 4.1.173
  */
 class CustomReportsExecutionReportData {
     /**

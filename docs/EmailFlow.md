@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **merchant_id** | **String** | Merchant ID | [optional] 
 **name** | **String** | Name of email flow | [optional] 
 **open_rate_formatted** | **String** | Open rate of emails, formatted | [optional] 
+**reentry_delay_days** | **Number** | Number of days after the last enrollment before a customer may enter this flow again.  Only used when reentry_policy is after_days.  Maximum 1095. | [optional] 
+**reentry_policy** | **String** | Whether a customer may enter this flow again after a previous enrollment.  anytime (default), after_days (see reentry_delay_days), or never.  Enrollment history is kept for 3 years, so never means not within 3 years of the last enrollment. | [optional] 
 **revenue_formatted** | **String** | Revenue, formatted | [optional] 
 **revenue_per_customer_formatted** | **String** | Revenue per customer, formatted | [optional] 
 **screenshot_large_full_url** | **String** | URL to a large full length screenshot | [optional] 
@@ -35,5 +37,18 @@ Name | Type | Description | Notes
 **trigger_parameter** | **String** | Trigger parameter | [optional] 
 **trigger_parameter_name** | **String** | Trigger parameter name | [optional] 
 **trigger_type** | **String** | Trigger type | [optional] 
+
+
+
+## Enum: ReentryPolicyEnum
+
+
+* `anytime` (value: `"anytime"`)
+
+* `after_days` (value: `"after_days"`)
+
+* `never` (value: `"never"`)
+
+
 
 

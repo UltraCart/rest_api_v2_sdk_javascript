@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailFlow model module.
  * @module com.ultracart.admin.v2.models/EmailFlow
- * @version 4.1.172
+ * @version 4.1.173
  */
 class EmailFlow {
     /**
@@ -106,6 +106,12 @@ class EmailFlow {
             }
             if (data.hasOwnProperty('open_rate_formatted')) {
                 obj['open_rate_formatted'] = ApiClient.convertToType(data['open_rate_formatted'], 'String');
+            }
+            if (data.hasOwnProperty('reentry_delay_days')) {
+                obj['reentry_delay_days'] = ApiClient.convertToType(data['reentry_delay_days'], 'Number');
+            }
+            if (data.hasOwnProperty('reentry_policy')) {
+                obj['reentry_policy'] = ApiClient.convertToType(data['reentry_policy'], 'String');
             }
             if (data.hasOwnProperty('revenue_formatted')) {
                 obj['revenue_formatted'] = ApiClient.convertToType(data['revenue_formatted'], 'String');
@@ -268,6 +274,18 @@ EmailFlow.prototype['name'] = undefined;
 EmailFlow.prototype['open_rate_formatted'] = undefined;
 
 /**
+ * Number of days after the last enrollment before a customer may enter this flow again.  Only used when reentry_policy is after_days.  Maximum 1095.
+ * @member {Number} reentry_delay_days
+ */
+EmailFlow.prototype['reentry_delay_days'] = undefined;
+
+/**
+ * Whether a customer may enter this flow again after a previous enrollment.  anytime (default), after_days (see reentry_delay_days), or never.  Enrollment history is kept for 3 years, so never means not within 3 years of the last enrollment.
+ * @member {module:com.ultracart.admin.v2.models/EmailFlow.ReentryPolicyEnum} reentry_policy
+ */
+EmailFlow.prototype['reentry_policy'] = undefined;
+
+/**
  * Revenue, formatted
  * @member {String} revenue_formatted
  */
@@ -335,6 +353,33 @@ EmailFlow.prototype['trigger_type'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>reentry_policy</code> property.
+ * @enum {String}
+ * @readonly
+ */
+EmailFlow['ReentryPolicyEnum'] = {
+
+    /**
+     * value: "anytime"
+     * @const
+     */
+    "anytime": "anytime",
+
+    /**
+     * value: "after_days"
+     * @const
+     */
+    "after_days": "after_days",
+
+    /**
+     * value: "never"
+     * @const
+     */
+    "never": "never"
+};
 
 
 

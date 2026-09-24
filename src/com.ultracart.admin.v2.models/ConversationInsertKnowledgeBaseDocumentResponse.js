@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationInsertKnowledgeBaseDocumentResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationInsertKnowledgeBaseDocumentResponse
- * @version 4.1.172
+ * @version 4.1.173
  */
 class ConversationInsertKnowledgeBaseDocumentResponse {
     /**

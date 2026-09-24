@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryFacet model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryFacet
- * @version 4.1.172
+ * @version 4.1.173
  */
 class SfvbLibraryFacet {
     /**

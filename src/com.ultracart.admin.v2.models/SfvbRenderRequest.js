@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRenderRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderRequest
- * @version 4.1.172
+ * @version 4.1.173
  */
 class SfvbRenderRequest {
     /**
