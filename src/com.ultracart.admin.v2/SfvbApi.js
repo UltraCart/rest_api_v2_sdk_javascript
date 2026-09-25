@@ -74,6 +74,7 @@ import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderRespo
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
+import SfvbTemplateResolveResponse from '../com.ultracart.admin.v2.models/SfvbTemplateResolveResponse';
 import SfvbTemplatesResponse from '../com.ultracart.admin.v2.models/SfvbTemplatesResponse';
 import SfvbTheme from '../com.ultracart.admin.v2.models/SfvbTheme';
 import SfvbThemeAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest';
@@ -97,7 +98,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.173
+* @version 4.1.174
 */
 export default class SfvbApi {
 
@@ -1021,7 +1022,7 @@ export default class SfvbApi {
 
     /**
      * End an experiment
-     * Ends a running experiment.  With winner_variation_number the winner gets all new visitors, and a page experiment's winning content is promoted into the page by the completion job on its next run, which also emails the merchant.  Without a winner a page experiment's id is cleared from its page body so the page shows variation 0, and a url experiment sends everyone to variation 0.  Visitors already assigned to a url experiment keep their page for up to 30 days.  Always needs sfvb_publish. 
+     * Ends a running experiment.  With winner_variation_number the winner gets every visitor, including visitors already assigned to another variation, and a page experiment's winning content is promoted into the page by the completion job on its next run, which also emails the merchant.  Without a winner a page experiment's id is cleared from its page body so the page shows variation 0, and a url experiment sends everyone to variation 0.  Always needs sfvb_publish. 
      * @param {Number} storefront_oid 
      * @param {Number} experiment_oid 
      * @param {Object} opts Optional parameters
@@ -4200,6 +4201,59 @@ export default class SfvbApi {
       let returnType = SfvbWidgetIdsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/widget_ids', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the resolveSfvbTemplate operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~resolveSfvbTemplateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTemplateResolveResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Resolve a template name to the file a page renders
+     * A page stores only its template's file name.  This runs the storefront's own template search for that name and returns the file a page naming it renders, relative to the theme.  It also lists the theme's resource paths in search order with every file of that name below each, so a theme copy overriding a shared core copy, or a copy in a snippets folder that is never used, is visible.  exists is false when a page naming the template cannot render. 
+     * @param {Number} storefront_oid 
+     * @param {String} name The template file name, such as catalog.vm
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid Resolve in this theme instead of the active theme
+     * @param {module:com.ultracart.admin.v2/SfvbApi~resolveSfvbTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTemplateResolveResponse}
+     */
+    resolveSfvbTemplate(storefront_oid, name, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling resolveSfvbTemplate");
+      }
+      // verify the required parameter 'name' is set
+      if (name === undefined || name === null) {
+        throw new Error("Missing the required parameter 'name' when calling resolveSfvbTemplate");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'name': name,
+        'theme_oid': opts['theme_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTemplateResolveResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/templates/resolve', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

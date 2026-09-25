@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationAgentStatusHistorySearchResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentStatusHistorySearchResponse
- * @version 4.1.173
+ * @version 4.1.174
  */
 class ConversationAgentStatusHistorySearchResponse {
     /**

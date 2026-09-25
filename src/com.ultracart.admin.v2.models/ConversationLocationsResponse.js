@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationLocationsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationLocationsResponse
- * @version 4.1.173
+ * @version 4.1.174
  */
 class ConversationLocationsResponse {
     /**

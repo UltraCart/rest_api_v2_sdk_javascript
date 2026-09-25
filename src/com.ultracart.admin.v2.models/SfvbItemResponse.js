@@ -19,7 +19,7 @@ import SfvbItemSeo from './SfvbItemSeo';
 /**
  * The SfvbItemResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbItemResponse
- * @version 4.1.173
+ * @version 4.1.174
  */
 class SfvbItemResponse {
     /**

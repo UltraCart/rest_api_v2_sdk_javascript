@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BulkRecord model module.
  * @module com.ultracart.admin.v2.models/BulkRecord
- * @version 4.1.173
+ * @version 4.1.174
  */
 class BulkRecord {
     /**

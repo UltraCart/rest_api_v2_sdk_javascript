@@ -1063,6 +1063,9 @@ import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSite
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplate from './com.ultracart.admin.v2.models/SfvbTemplate';
+import SfvbTemplateResolveCandidate from './com.ultracart.admin.v2.models/SfvbTemplateResolveCandidate';
+import SfvbTemplateResolvePath from './com.ultracart.admin.v2.models/SfvbTemplateResolvePath';
+import SfvbTemplateResolveResponse from './com.ultracart.admin.v2.models/SfvbTemplateResolveResponse';
 import SfvbTemplatesResponse from './com.ultracart.admin.v2.models/SfvbTemplatesResponse';
 import SfvbTheme from './com.ultracart.admin.v2.models/SfvbTheme';
 import SfvbThemeAttribute from './com.ultracart.admin.v2.models/SfvbThemeAttribute';
@@ -1236,7 +1239,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.173
+* @version 4.1.174
 */
 export {
     /**
@@ -7544,6 +7547,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbTemplate}
      */
     SfvbTemplate,
+
+    /**
+     * The SfvbTemplateResolveCandidate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTemplateResolveCandidate}
+     */
+    SfvbTemplateResolveCandidate,
+
+    /**
+     * The SfvbTemplateResolvePath model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTemplateResolvePath}
+     */
+    SfvbTemplateResolvePath,
+
+    /**
+     * The SfvbTemplateResolveResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTemplateResolveResponse}
+     */
+    SfvbTemplateResolveResponse,
 
     /**
      * The SfvbTemplatesResponse model constructor.
