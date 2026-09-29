@@ -1120,6 +1120,7 @@ docs/StoreFrontsResponse.md
 docs/StorefrontApi.md
 docs/TaxApi.md
 docs/TaxCity.md
+docs/TaxCloudConfig.md
 docs/TaxCountry.md
 docs/TaxCountryCode.md
 docs/TaxCounty.md
@@ -1127,6 +1128,8 @@ docs/TaxJarConfig.md
 docs/TaxPostalCode.md
 docs/TaxProviderActivateResult.md
 docs/TaxProviderAnrok.md
+docs/TaxProviderAnrokProduct.md
+docs/TaxProviderAnrokTestResult.md
 docs/TaxProviderAvalara.md
 docs/TaxProviderAvalaraCompaniesResult.md
 docs/TaxProviderAvalaraCompany.md
@@ -1134,6 +1137,7 @@ docs/TaxProviderSelf.md
 docs/TaxProviderSelfCountriesResponse.md
 docs/TaxProviderSelfRegionsResponse.md
 docs/TaxProviderSovos.md
+docs/TaxProviderTaxCloud.md
 docs/TaxProviderTaxJar.md
 docs/TaxProviderTestResult.md
 docs/TaxProviderUltraCart.md
@@ -2300,6 +2304,7 @@ src/com.ultracart.admin.v2.models/StoreFront.js
 src/com.ultracart.admin.v2.models/StoreFrontPageContentAttribute.js
 src/com.ultracart.admin.v2.models/StoreFrontsResponse.js
 src/com.ultracart.admin.v2.models/TaxCity.js
+src/com.ultracart.admin.v2.models/TaxCloudConfig.js
 src/com.ultracart.admin.v2.models/TaxCountry.js
 src/com.ultracart.admin.v2.models/TaxCountryCode.js
 src/com.ultracart.admin.v2.models/TaxCounty.js
@@ -2307,6 +2312,8 @@ src/com.ultracart.admin.v2.models/TaxJarConfig.js
 src/com.ultracart.admin.v2.models/TaxPostalCode.js
 src/com.ultracart.admin.v2.models/TaxProviderActivateResult.js
 src/com.ultracart.admin.v2.models/TaxProviderAnrok.js
+src/com.ultracart.admin.v2.models/TaxProviderAnrokProduct.js
+src/com.ultracart.admin.v2.models/TaxProviderAnrokTestResult.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalara.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult.js
 src/com.ultracart.admin.v2.models/TaxProviderAvalaraCompany.js
@@ -2314,6 +2321,7 @@ src/com.ultracart.admin.v2.models/TaxProviderSelf.js
 src/com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse.js
 src/com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse.js
 src/com.ultracart.admin.v2.models/TaxProviderSovos.js
+src/com.ultracart.admin.v2.models/TaxProviderTaxCloud.js
 src/com.ultracart.admin.v2.models/TaxProviderTaxJar.js
 src/com.ultracart.admin.v2.models/TaxProviderTestResult.js
 src/com.ultracart.admin.v2.models/TaxProviderUltraCart.js

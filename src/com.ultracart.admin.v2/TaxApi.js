@@ -20,12 +20,14 @@ import TaxCounty from '../com.ultracart.admin.v2.models/TaxCounty';
 import TaxPostalCode from '../com.ultracart.admin.v2.models/TaxPostalCode';
 import TaxProviderActivateResult from '../com.ultracart.admin.v2.models/TaxProviderActivateResult';
 import TaxProviderAnrok from '../com.ultracart.admin.v2.models/TaxProviderAnrok';
+import TaxProviderAnrokTestResult from '../com.ultracart.admin.v2.models/TaxProviderAnrokTestResult';
 import TaxProviderAvalara from '../com.ultracart.admin.v2.models/TaxProviderAvalara';
 import TaxProviderAvalaraCompaniesResult from '../com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult';
 import TaxProviderSelf from '../com.ultracart.admin.v2.models/TaxProviderSelf';
 import TaxProviderSelfCountriesResponse from '../com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse';
 import TaxProviderSelfRegionsResponse from '../com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse';
 import TaxProviderSovos from '../com.ultracart.admin.v2.models/TaxProviderSovos';
+import TaxProviderTaxCloud from '../com.ultracart.admin.v2.models/TaxProviderTaxCloud';
 import TaxProviderTaxJar from '../com.ultracart.admin.v2.models/TaxProviderTaxJar';
 import TaxProviderTestResult from '../com.ultracart.admin.v2.models/TaxProviderTestResult';
 import TaxProviderUltraCart from '../com.ultracart.admin.v2.models/TaxProviderUltraCart';
@@ -35,7 +37,7 @@ import TaxState from '../com.ultracart.admin.v2.models/TaxState';
 /**
 * Tax service.
 * @module com.ultracart.admin.v2/TaxApi
-* @version 4.1.175
+* @version 4.1.176
 */
 export default class TaxApi {
 
@@ -327,15 +329,15 @@ export default class TaxApi {
      * Callback function to receive the result of the getTaxProviderAnrokTest operation.
      * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokTestCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/TaxProviderTestResult} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderAnrokTestResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Attempts to connect to Anrok and returns back the response
-     * Attempts to connect to Anrok and returns back the response. 
+     * Attempts to connect to Anrok and returns back the response, including the products configured on the merchant's Anrok account. 
      * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderAnrokTestCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTestResult}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderAnrokTestResult}
      */
     getTaxProviderAnrokTest(callback) {
       let postBody = null;
@@ -352,7 +354,7 @@ export default class TaxApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = TaxProviderTestResult;
+      let returnType = TaxProviderAnrokTestResult;
       return this.apiClient.callApi(
         '/tax/providers/anrok/test', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -662,6 +664,80 @@ export default class TaxApi {
       let returnType = TaxProviderTestResult;
       return this.apiClient.callApi(
         '/tax/providers/sovos/test', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderTaxCloud operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderTaxCloudCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTaxCloud} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve the TaxCloud tax provider
+     * Retrieves the TaxCloud tax provider. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderTaxCloudCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTaxCloud}
+     */
+    getTaxProviderTaxCloud(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderTaxCloud;
+      return this.apiClient.callApi(
+        '/tax/providers/taxcloud', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getTaxProviderTaxCloudTest operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~getTaxProviderTaxCloudTestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTestResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attempts to connect to TaxCloud and returns back the response
+     * Attempts to connect to TaxCloud with the saved API key and Connection ID and returns back the response. 
+     * @param {module:com.ultracart.admin.v2/TaxApi~getTaxProviderTaxCloudTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTestResult}
+     */
+    getTaxProviderTaxCloudTest(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderTestResult;
+      return this.apiClient.callApi(
+        '/tax/providers/taxcloud/test', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1269,6 +1345,48 @@ export default class TaxApi {
       let returnType = TaxProviderSovos;
       return this.apiClient.callApi(
         '/tax/providers/sovos', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateTaxProviderTaxCloud operation.
+     * @callback module:com.ultracart.admin.v2/TaxApi~updateTaxProviderTaxCloudCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTaxCloud} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the TaxCloud tax provider
+     * Update the TaxCloud tax provider. 
+     * @param {module:com.ultracart.admin.v2.models/TaxProviderTaxCloud} tax_provider_taxcloud TaxProviderTaxCloud object
+     * @param {module:com.ultracart.admin.v2/TaxApi~updateTaxProviderTaxCloudCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/TaxProviderTaxCloud}
+     */
+    updateTaxProviderTaxCloud(tax_provider_taxcloud, callback) {
+      let postBody = tax_provider_taxcloud;
+      // verify the required parameter 'tax_provider_taxcloud' is set
+      if (tax_provider_taxcloud === undefined || tax_provider_taxcloud === null) {
+        throw new Error("Missing the required parameter 'tax_provider_taxcloud' when calling updateTaxProviderTaxCloud");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TaxProviderTaxCloud;
+      return this.apiClient.callApi(
+        '/tax/providers/taxcloud', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

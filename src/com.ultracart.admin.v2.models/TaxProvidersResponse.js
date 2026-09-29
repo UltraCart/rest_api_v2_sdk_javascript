@@ -18,6 +18,7 @@ import TaxProviderAnrok from './TaxProviderAnrok';
 import TaxProviderAvalara from './TaxProviderAvalara';
 import TaxProviderSelf from './TaxProviderSelf';
 import TaxProviderSovos from './TaxProviderSovos';
+import TaxProviderTaxCloud from './TaxProviderTaxCloud';
 import TaxProviderTaxJar from './TaxProviderTaxJar';
 import TaxProviderUltraCart from './TaxProviderUltraCart';
 import Warning from './Warning';
@@ -25,7 +26,7 @@ import Warning from './Warning';
 /**
  * The TaxProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/TaxProvidersResponse
- * @version 4.1.175
+ * @version 4.1.176
  */
 class TaxProvidersResponse {
     /**
@@ -76,6 +77,9 @@ class TaxProvidersResponse {
             }
             if (data.hasOwnProperty('success')) {
                 obj['success'] = ApiClient.convertToType(data['success'], 'Boolean');
+            }
+            if (data.hasOwnProperty('taxcloud')) {
+                obj['taxcloud'] = TaxProviderTaxCloud.constructFromObject(data['taxcloud']);
             }
             if (data.hasOwnProperty('taxjar')) {
                 obj['taxjar'] = TaxProviderTaxJar.constructFromObject(data['taxjar']);
@@ -128,6 +132,11 @@ TaxProvidersResponse.prototype['sovos'] = undefined;
  * @member {Boolean} success
  */
 TaxProvidersResponse.prototype['success'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/TaxProviderTaxCloud} taxcloud
+ */
+TaxProvidersResponse.prototype['taxcloud'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/TaxProviderTaxJar} taxjar

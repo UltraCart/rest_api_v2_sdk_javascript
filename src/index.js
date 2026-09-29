@@ -1110,6 +1110,7 @@ import StoreFront from './com.ultracart.admin.v2.models/StoreFront';
 import StoreFrontPageContentAttribute from './com.ultracart.admin.v2.models/StoreFrontPageContentAttribute';
 import StoreFrontsResponse from './com.ultracart.admin.v2.models/StoreFrontsResponse';
 import TaxCity from './com.ultracart.admin.v2.models/TaxCity';
+import TaxCloudConfig from './com.ultracart.admin.v2.models/TaxCloudConfig';
 import TaxCountry from './com.ultracart.admin.v2.models/TaxCountry';
 import TaxCountryCode from './com.ultracart.admin.v2.models/TaxCountryCode';
 import TaxCounty from './com.ultracart.admin.v2.models/TaxCounty';
@@ -1117,6 +1118,8 @@ import TaxJarConfig from './com.ultracart.admin.v2.models/TaxJarConfig';
 import TaxPostalCode from './com.ultracart.admin.v2.models/TaxPostalCode';
 import TaxProviderActivateResult from './com.ultracart.admin.v2.models/TaxProviderActivateResult';
 import TaxProviderAnrok from './com.ultracart.admin.v2.models/TaxProviderAnrok';
+import TaxProviderAnrokProduct from './com.ultracart.admin.v2.models/TaxProviderAnrokProduct';
+import TaxProviderAnrokTestResult from './com.ultracart.admin.v2.models/TaxProviderAnrokTestResult';
 import TaxProviderAvalara from './com.ultracart.admin.v2.models/TaxProviderAvalara';
 import TaxProviderAvalaraCompaniesResult from './com.ultracart.admin.v2.models/TaxProviderAvalaraCompaniesResult';
 import TaxProviderAvalaraCompany from './com.ultracart.admin.v2.models/TaxProviderAvalaraCompany';
@@ -1124,6 +1127,7 @@ import TaxProviderSelf from './com.ultracart.admin.v2.models/TaxProviderSelf';
 import TaxProviderSelfCountriesResponse from './com.ultracart.admin.v2.models/TaxProviderSelfCountriesResponse';
 import TaxProviderSelfRegionsResponse from './com.ultracart.admin.v2.models/TaxProviderSelfRegionsResponse';
 import TaxProviderSovos from './com.ultracart.admin.v2.models/TaxProviderSovos';
+import TaxProviderTaxCloud from './com.ultracart.admin.v2.models/TaxProviderTaxCloud';
 import TaxProviderTaxJar from './com.ultracart.admin.v2.models/TaxProviderTaxJar';
 import TaxProviderTestResult from './com.ultracart.admin.v2.models/TaxProviderTestResult';
 import TaxProviderUltraCart from './com.ultracart.admin.v2.models/TaxProviderUltraCart';
@@ -1241,7 +1245,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.175
+* @version 4.1.176
 */
 export {
     /**
@@ -7833,6 +7837,12 @@ export {
     TaxCity,
 
     /**
+     * The TaxCloudConfig model constructor.
+     * @property {module:com.ultracart.admin.v2.models/TaxCloudConfig}
+     */
+    TaxCloudConfig,
+
+    /**
      * The TaxCountry model constructor.
      * @property {module:com.ultracart.admin.v2.models/TaxCountry}
      */
@@ -7875,6 +7885,18 @@ export {
     TaxProviderAnrok,
 
     /**
+     * The TaxProviderAnrokProduct model constructor.
+     * @property {module:com.ultracart.admin.v2.models/TaxProviderAnrokProduct}
+     */
+    TaxProviderAnrokProduct,
+
+    /**
+     * The TaxProviderAnrokTestResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/TaxProviderAnrokTestResult}
+     */
+    TaxProviderAnrokTestResult,
+
+    /**
      * The TaxProviderAvalara model constructor.
      * @property {module:com.ultracart.admin.v2.models/TaxProviderAvalara}
      */
@@ -7915,6 +7937,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/TaxProviderSovos}
      */
     TaxProviderSovos,
+
+    /**
+     * The TaxProviderTaxCloud model constructor.
+     * @property {module:com.ultracart.admin.v2.models/TaxProviderTaxCloud}
+     */
+    TaxProviderTaxCloud,
 
     /**
      * The TaxProviderTaxJar model constructor.
