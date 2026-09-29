@@ -1045,6 +1045,8 @@ import SfvbPageItemsResponse from './com.ultracart.admin.v2.models/SfvbPageItems
 import SfvbPageListResponse from './com.ultracart.admin.v2.models/SfvbPageListResponse';
 import SfvbPageMultimedia from './com.ultracart.admin.v2.models/SfvbPageMultimedia';
 import SfvbPageMultimediaRequest from './com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
+import SfvbPageRefreshRequest from './com.ultracart.admin.v2.models/SfvbPageRefreshRequest';
+import SfvbPageRefreshResponse from './com.ultracart.admin.v2.models/SfvbPageRefreshResponse';
 import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPageSelectors from './com.ultracart.admin.v2.models/SfvbPageSelectors';
 import SfvbPageSettingsRequest from './com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
@@ -1239,7 +1241,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.174
+* @version 4.1.175
 */
 export {
     /**
@@ -7439,6 +7441,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPageMultimediaRequest}
      */
     SfvbPageMultimediaRequest,
+
+    /**
+     * The SfvbPageRefreshRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageRefreshRequest}
+     */
+    SfvbPageRefreshRequest,
+
+    /**
+     * The SfvbPageRefreshResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageRefreshResponse}
+     */
+    SfvbPageRefreshResponse,
 
     /**
      * The SfvbPageResponse model constructor.

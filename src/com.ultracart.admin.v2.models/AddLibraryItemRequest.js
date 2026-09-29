@@ -18,7 +18,7 @@ import LibraryItemScreenshot from './LibraryItemScreenshot';
 /**
  * The AddLibraryItemRequest model module.
  * @module com.ultracart.admin.v2.models/AddLibraryItemRequest
- * @version 4.1.174
+ * @version 4.1.175
  */
 class AddLibraryItemRequest {
     /**

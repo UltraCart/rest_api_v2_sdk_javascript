@@ -61,6 +61,8 @@ import SfvbPageItemsRemoveRequest from '../com.ultracart.admin.v2.models/SfvbPag
 import SfvbPageItemsResponse from '../com.ultracart.admin.v2.models/SfvbPageItemsResponse';
 import SfvbPageListResponse from '../com.ultracart.admin.v2.models/SfvbPageListResponse';
 import SfvbPageMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
+import SfvbPageRefreshRequest from '../com.ultracart.admin.v2.models/SfvbPageRefreshRequest';
+import SfvbPageRefreshResponse from '../com.ultracart.admin.v2.models/SfvbPageRefreshResponse';
 import SfvbPageResponse from '../com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPageSelectors from '../com.ultracart.admin.v2.models/SfvbPageSelectors';
 import SfvbPageSettingsRequest from '../com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
@@ -98,7 +100,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.174
+* @version 4.1.175
 */
 export default class SfvbApi {
 
@@ -3992,6 +3994,54 @@ export default class SfvbApi {
       let returnType = SfvbThemeAttributesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the refreshSfvbPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~refreshSfvbPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageRefreshResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Drop one page's cached copy
+     * The next request renders the page fresh.  Use it when a write succeeded, a read shows the new value, and the public page still shows the old one.  Writes normally refresh the pages they affect, so a stale page after a write is a bug worth reporting with its URL.  One page per request.  The response says whether the page had a cached copy and whether anything was dropped. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageRefreshRequest} page_refresh_request The page to refresh
+     * @param {module:com.ultracart.admin.v2/SfvbApi~refreshSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageRefreshResponse}
+     */
+    refreshSfvbPage(storefront_oid, page_refresh_request, callback) {
+      let postBody = page_refresh_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling refreshSfvbPage");
+      }
+      // verify the required parameter 'page_refresh_request' is set
+      if (page_refresh_request === undefined || page_refresh_request === null) {
+        throw new Error("Missing the required parameter 'page_refresh_request' when calling refreshSfvbPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageRefreshResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages/refresh', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
