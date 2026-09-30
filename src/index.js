@@ -1062,6 +1062,10 @@ import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPrev
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
+import SfvbServerLogDetail from './com.ultracart.admin.v2.models/SfvbServerLogDetail';
+import SfvbServerLogEntry from './com.ultracart.admin.v2.models/SfvbServerLogEntry';
+import SfvbServerLogsResponse from './com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttribute from './com.ultracart.admin.v2.models/SfvbSiteAttribute';
 import SfvbSiteAttributeUpdate from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate';
 import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
@@ -1249,7 +1253,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.177
+* @version 4.1.178
 */
 export {
     /**
@@ -7551,6 +7555,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRenderResponse}
      */
     SfvbRenderResponse,
+
+    /**
+     * The SfvbServerLog model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbServerLog}
+     */
+    SfvbServerLog,
+
+    /**
+     * The SfvbServerLogDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbServerLogDetail}
+     */
+    SfvbServerLogDetail,
+
+    /**
+     * The SfvbServerLogEntry model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbServerLogEntry}
+     */
+    SfvbServerLogEntry,
+
+    /**
+     * The SfvbServerLogsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbServerLogsResponse}
+     */
+    SfvbServerLogsResponse,
 
     /**
      * The SfvbSiteAttribute model constructor.

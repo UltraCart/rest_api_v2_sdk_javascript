@@ -76,6 +76,8 @@ import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPre
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
+import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
@@ -103,7 +105,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.177
+* @version 4.1.178
 */
 export default class SfvbApi {
 
@@ -2108,6 +2110,59 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbServerLog operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbServerLogCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbServerLogDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get one storefront render log
+     * One render's server log with its lines, each with a level, a category such as VELOCITY or FLOW, and the message.  log_id comes from the list, or from the X-UltraCart-Storefront-Log-Id header a page sends inside an SFVB preview session.  min_level is debug, info, warn or error, default debug. 
+     * @param {Number} storefront_oid 
+     * @param {String} log_id 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.min_level 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbServerLogCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbServerLogDetail}
+     */
+    getSfvbServerLog(storefront_oid, log_id, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbServerLog");
+      }
+      // verify the required parameter 'log_id' is set
+      if (log_id === undefined || log_id === null) {
+        throw new Error("Missing the required parameter 'log_id' when calling getSfvbServerLog");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'log_id': log_id
+      };
+      let queryParams = {
+        'min_level': opts['min_level']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbServerLogDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/logs/{log_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbSiteAttributes operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback
      * @param {String} error Error message, if any.
@@ -3116,6 +3171,59 @@ export default class SfvbApi {
       let returnType = SfvbPageListResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/pages/list', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbServerLogs operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbServerLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbServerLogsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List recent storefront render logs
+     * The server log the storefront Developer Tools panel shows, one per page render, newest first and without the log text.  Each carries counts of error and warning lines, including Velocity problems such as a null #set, so a failing render stands out without reading every log.  Filter by uri (a case insensitive contains match on the rendered address) and errors_only.  since is 15m, 2h or 1d, or an ISO-8601 time, default 1h; logs are kept for seven days and only the newest 1000.  With a filter the newest 200 logs in the window are searched, and more_available says whether older ones were left unread. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.uri 
+     * @param {String} opts.since 
+     * @param {Boolean} opts.errors_only 
+     * @param {Number} opts.limit 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbServerLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbServerLogsResponse}
+     */
+    listSfvbServerLogs(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbServerLogs");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'uri': opts['uri'],
+        'since': opts['since'],
+        'errors_only': opts['errors_only'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbServerLogsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
