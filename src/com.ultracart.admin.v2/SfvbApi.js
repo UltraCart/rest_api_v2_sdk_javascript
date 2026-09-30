@@ -14,6 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import SfvbBlogPostDetail from '../com.ultracart.admin.v2.models/SfvbBlogPostDetail';
+import SfvbBlogPostImageRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
+import SfvbBlogPostRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
 import SfvbCompileRequest from '../com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from '../com.ultracart.admin.v2.models/SfvbCompileResponse';
@@ -100,7 +103,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.176
+* @version 4.1.177
 */
 export default class SfvbApi {
 
@@ -274,6 +277,60 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the attachSfvbBlogPostImage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~attachSfvbBlogPostImageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Attach an image to a blog post
+     * Three calls, like the admin blog editor's upload.  Request an upload URL with files/upload_url, send the bytes to it, then attach with the key and a filename.  No storefront file is created, and the key is redeemed, so it cannot be used twice.  default_image replaces the post's default image and code replaces the image with that code; with neither, the image is added for use in the body at the url the response reports.  JPEG, PNG, GIF or WebP, checked by content.  A post that is not a draft needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} blog_post_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostImageRequest} blog_post_image_request Image to attach
+     * @param {module:com.ultracart.admin.v2/SfvbApi~attachSfvbBlogPostImageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    attachSfvbBlogPostImage(storefront_oid, blog_post_oid, blog_post_image_request, callback) {
+      let postBody = blog_post_image_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling attachSfvbBlogPostImage");
+      }
+      // verify the required parameter 'blog_post_oid' is set
+      if (blog_post_oid === undefined || blog_post_oid === null) {
+        throw new Error("Missing the required parameter 'blog_post_oid' when calling attachSfvbBlogPostImage");
+      }
+      // verify the required parameter 'blog_post_image_request' is set
+      if (blog_post_image_request === undefined || blog_post_image_request === null) {
+        throw new Error("Missing the required parameter 'blog_post_image_request' when calling attachSfvbBlogPostImage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'blog_post_oid': blog_post_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbBlogPostDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}/images/attach', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the compileSfvbCjson operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback
      * @param {String} error Error message, if any.
@@ -399,6 +456,54 @@ export default class SfvbApi {
       let returnType = SfvbPreviewSessionResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbBlogPost operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbBlogPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a blog post
+     * Takes the post off every page and deletes it.  There is no undo.  A post that is not a draft needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} blog_post_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbBlogPostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbBlogPost(storefront_oid, blog_post_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbBlogPost");
+      }
+      // verify the required parameter 'blog_post_oid' is set
+      if (blog_post_oid === undefined || blog_post_oid === null) {
+        throw new Error("Missing the required parameter 'blog_post_oid' when calling deleteSfvbBlogPost");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'blog_post_oid': blog_post_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -662,6 +767,60 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the detachSfvbBlogPostImage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~detachSfvbBlogPostImageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Detach an image from a blog post
+     * Name exactly one of default_image, code or blog_post_multimedia_oid.  Removes the image from the post and deletes its stored copy.  Take it out of the body too, or the body keeps a broken image.  A post that is not a draft needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} blog_post_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostImageRequest} blog_post_image_request Image to detach
+     * @param {module:com.ultracart.admin.v2/SfvbApi~detachSfvbBlogPostImageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    detachSfvbBlogPostImage(storefront_oid, blog_post_oid, blog_post_image_request, callback) {
+      let postBody = blog_post_image_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling detachSfvbBlogPostImage");
+      }
+      // verify the required parameter 'blog_post_oid' is set
+      if (blog_post_oid === undefined || blog_post_oid === null) {
+        throw new Error("Missing the required parameter 'blog_post_oid' when calling detachSfvbBlogPostImage");
+      }
+      // verify the required parameter 'blog_post_image_request' is set
+      if (blog_post_image_request === undefined || blog_post_image_request === null) {
+        throw new Error("Missing the required parameter 'blog_post_image_request' when calling detachSfvbBlogPostImage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'blog_post_oid': blog_post_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbBlogPostDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}/images/detach', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1061,6 +1220,55 @@ export default class SfvbApi {
       let returnType = SfvbExperiment;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/end', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbBlogPost operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbBlogPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a blog post
+     * The whole post - body, excerpt, tags, images and where it is shown.  An image's url is the address to use for it in the body. 
+     * @param {Number} storefront_oid 
+     * @param {Number} blog_post_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbBlogPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    getSfvbBlogPost(storefront_oid, blog_post_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbBlogPost");
+      }
+      // verify the required parameter 'blog_post_oid' is set
+      if (blog_post_oid === undefined || blog_post_oid === null) {
+        throw new Error("Missing the required parameter 'blog_post_oid' when calling getSfvbBlogPost");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'blog_post_oid': blog_post_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbBlogPostDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2275,6 +2483,54 @@ export default class SfvbApi {
       let returnType = SfvbWhoamiResponse;
       return this.apiClient.callApi(
         '/sfvb/whoami', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbBlogPost operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbBlogPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a blog post
+     * title and url_part are required.  The post is a draft unless visibility says otherwise, and anything but a draft needs sfvb_publish.  The body and excerpt are refused with sfvb.unsafe_html if they could run script, and a url_part another post uses is refused with a 409 and sfvb.blog_post_exists.  Assign the post to a page with pages/blog_posts/add, or let the page's selectors choose it. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostRequest} blog_post_request The blog post to create
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbBlogPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    insertSfvbBlogPost(storefront_oid, blog_post_request, callback) {
+      let postBody = blog_post_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbBlogPost");
+      }
+      // verify the required parameter 'blog_post_request' is set
+      if (blog_post_request === undefined || blog_post_request === null) {
+        throw new Error("Missing the required parameter 'blog_post_request' when calling insertSfvbBlogPost");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbBlogPostDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4626,6 +4882,60 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/unarchive', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbBlogPost operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbBlogPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a blog post
+     * Only the fields sent change; tags, when sent, replaces every tag.  The post's images and attributes are left alone.  Publish or unpublish with visibility.  A post that is not a draft before or after the change needs sfvb_publish.  The same content rules as create apply. 
+     * @param {Number} storefront_oid 
+     * @param {Number} blog_post_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbBlogPostRequest} blog_post_request The fields to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbBlogPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    updateSfvbBlogPost(storefront_oid, blog_post_oid, blog_post_request, callback) {
+      let postBody = blog_post_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbBlogPost");
+      }
+      // verify the required parameter 'blog_post_oid' is set
+      if (blog_post_oid === undefined || blog_post_oid === null) {
+        throw new Error("Missing the required parameter 'blog_post_oid' when calling updateSfvbBlogPost");
+      }
+      // verify the required parameter 'blog_post_request' is set
+      if (blog_post_request === undefined || blog_post_request === null) {
+        throw new Error("Missing the required parameter 'blog_post_request' when calling updateSfvbBlogPost");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'blog_post_oid': blog_post_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbBlogPostDetail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

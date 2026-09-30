@@ -979,6 +979,10 @@ import ScreenRecordingUserProperty from './com.ultracart.admin.v2.models/ScreenR
 import ScreenshotsResponse from './com.ultracart.admin.v2.models/ScreenshotsResponse';
 import SelfConfig from './com.ultracart.admin.v2.models/SelfConfig';
 import SfvbBlogPost from './com.ultracart.admin.v2.models/SfvbBlogPost';
+import SfvbBlogPostDetail from './com.ultracart.admin.v2.models/SfvbBlogPostDetail';
+import SfvbBlogPostImage from './com.ultracart.admin.v2.models/SfvbBlogPostImage';
+import SfvbBlogPostImageRequest from './com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
+import SfvbBlogPostRequest from './com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from './com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
 import SfvbCompileRequest from './com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from './com.ultracart.admin.v2.models/SfvbCompileResponse';
@@ -1245,7 +1249,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.176
+* @version 4.1.177
 */
 export {
     /**
@@ -7049,6 +7053,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbBlogPost}
      */
     SfvbBlogPost,
+
+    /**
+     * The SfvbBlogPostDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostDetail}
+     */
+    SfvbBlogPostDetail,
+
+    /**
+     * The SfvbBlogPostImage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostImage}
+     */
+    SfvbBlogPostImage,
+
+    /**
+     * The SfvbBlogPostImageRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostImageRequest}
+     */
+    SfvbBlogPostImageRequest,
+
+    /**
+     * The SfvbBlogPostRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostRequest}
+     */
+    SfvbBlogPostRequest,
 
     /**
      * The SfvbBlogPostsResponse model constructor.

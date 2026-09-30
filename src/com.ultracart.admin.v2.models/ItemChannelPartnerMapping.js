@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemChannelPartnerMapping model module.
  * @module com.ultracart.admin.v2.models/ItemChannelPartnerMapping
- * @version 4.1.176
+ * @version 4.1.177
  */
 class ItemChannelPartnerMapping {
     /**

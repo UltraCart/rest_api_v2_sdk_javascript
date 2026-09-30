@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageAttributeUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbPageAttributeUpdate
- * @version 4.1.176
+ * @version 4.1.177
  */
 class SfvbPageAttributeUpdate {
     /**
@@ -76,7 +76,7 @@ SfvbPageAttributeUpdate.prototype['name'] = undefined;
 SfvbPageAttributeUpdate.prototype['type'] = undefined;
 
 /**
- * The value to store.  An empty string clears it.  For html the markup is stored as given and rendered as given.  For boolean send the text true or false.
+ * The value to store.  An empty string clears it.  For html the markup is stored as given and rendered as given.  For boolean send the text true or false.  For itemset send a comma separated list of merchant item ids in display order, not JSON.  An id that does not resolve is dropped.
  * @member {String} value
  */
 SfvbPageAttributeUpdate.prototype['value'] = undefined;
