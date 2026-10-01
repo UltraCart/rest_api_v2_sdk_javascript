@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemRestrictionItem model module.
  * @module com.ultracart.admin.v2.models/ItemRestrictionItem
- * @version 4.1.178
+ * @version 4.1.179
  */
 class ItemRestrictionItem {
     /**

@@ -20,7 +20,7 @@ import WebhookReflow from './WebhookReflow';
 /**
  * The WebhookReflowResponse model module.
  * @module com.ultracart.admin.v2.models/WebhookReflowResponse
- * @version 4.1.178
+ * @version 4.1.179
  */
 class WebhookReflowResponse {
     /**

@@ -74,6 +74,8 @@ import SfvbPreviewAccessResponse from '../com.ultracart.admin.v2.models/SfvbPrev
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
+import SfvbRecordingEventsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingEventsResponse';
+import SfvbRecordingResponse from '../com.ultracart.admin.v2.models/SfvbRecordingResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
@@ -105,7 +107,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.178
+* @version 4.1.179
 */
 export default class SfvbApi {
 
@@ -2104,6 +2106,110 @@ export default class SfvbApi {
       let returnType = SfvbPreviewUrlResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}/url', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbRecording operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRecordingResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a screen recording
+     * One recorded visitor session and its page views, with each page view's named events such as rage clicks, script errors and checkout errors, but without the replay data.  Fetch a page view's replay events separately.  Find recordings to look at from the heatmaps or the analytics warehouse.  The visitor's email, IP address and visitor id are not returned, nor what they typed into form fields.  Reading a recording does not mark it watched. 
+     * @param {Number} storefront_oid 
+     * @param {String} screen_recording_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRecordingResponse}
+     */
+    getSfvbRecording(storefront_oid, screen_recording_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbRecording");
+      }
+      // verify the required parameter 'screen_recording_uuid' is set
+      if (screen_recording_uuid === undefined || screen_recording_uuid === null) {
+        throw new Error("Missing the required parameter 'screen_recording_uuid' when calling getSfvbRecording");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'screen_recording_uuid': screen_recording_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRecordingResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/recordings/{screen_recording_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbRecordingPageViewEvents operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingPageViewEventsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRecordingEventsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get one recorded page view's replay events
+     * The rrweb events for one page view, as a JSON array in a string, for replaying on the caller's own machine.  Card fields are masked by the recorder, but other text the visitor typed can appear.  Limited per account to 30 page views a minute, 300 an hour and 1000 a day.  Reading the events does not mark the recording watched. 
+     * @param {Number} storefront_oid 
+     * @param {String} screen_recording_uuid 
+     * @param {String} screen_recording_page_view_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingPageViewEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRecordingEventsResponse}
+     */
+    getSfvbRecordingPageViewEvents(storefront_oid, screen_recording_uuid, screen_recording_page_view_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbRecordingPageViewEvents");
+      }
+      // verify the required parameter 'screen_recording_uuid' is set
+      if (screen_recording_uuid === undefined || screen_recording_uuid === null) {
+        throw new Error("Missing the required parameter 'screen_recording_uuid' when calling getSfvbRecordingPageViewEvents");
+      }
+      // verify the required parameter 'screen_recording_page_view_uuid' is set
+      if (screen_recording_page_view_uuid === undefined || screen_recording_page_view_uuid === null) {
+        throw new Error("Missing the required parameter 'screen_recording_page_view_uuid' when calling getSfvbRecordingPageViewEvents");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'screen_recording_uuid': screen_recording_uuid,
+        'screen_recording_page_view_uuid': screen_recording_page_view_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRecordingEventsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/recordings/{screen_recording_uuid}/page_views/{screen_recording_page_view_uuid}/events', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

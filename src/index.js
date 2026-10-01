@@ -1060,6 +1060,12 @@ import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPrevi
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
+import SfvbRecording from './com.ultracart.admin.v2.models/SfvbRecording';
+import SfvbRecordingEvent from './com.ultracart.admin.v2.models/SfvbRecordingEvent';
+import SfvbRecordingEventsResponse from './com.ultracart.admin.v2.models/SfvbRecordingEventsResponse';
+import SfvbRecordingPageView from './com.ultracart.admin.v2.models/SfvbRecordingPageView';
+import SfvbRecordingParameter from './com.ultracart.admin.v2.models/SfvbRecordingParameter';
+import SfvbRecordingResponse from './com.ultracart.admin.v2.models/SfvbRecordingResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1253,7 +1259,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.178
+* @version 4.1.179
 */
 export {
     /**
@@ -7543,6 +7549,42 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPreviewUrlResponse}
      */
     SfvbPreviewUrlResponse,
+
+    /**
+     * The SfvbRecording model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecording}
+     */
+    SfvbRecording,
+
+    /**
+     * The SfvbRecordingEvent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingEvent}
+     */
+    SfvbRecordingEvent,
+
+    /**
+     * The SfvbRecordingEventsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingEventsResponse}
+     */
+    SfvbRecordingEventsResponse,
+
+    /**
+     * The SfvbRecordingPageView model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingPageView}
+     */
+    SfvbRecordingPageView,
+
+    /**
+     * The SfvbRecordingParameter model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingParameter}
+     */
+    SfvbRecordingParameter,
+
+    /**
+     * The SfvbRecordingResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingResponse}
+     */
+    SfvbRecordingResponse,
 
     /**
      * The SfvbRenderRequest model constructor.

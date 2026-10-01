@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportTooltip model module.
  * @module com.ultracart.admin.v2.models/CustomReportTooltip
- * @version 4.1.178
+ * @version 4.1.179
  */
 class CustomReportTooltip {
     /**

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailCommseqEnrollmentResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqEnrollmentResponse
- * @version 4.1.178
+ * @version 4.1.179
  */
 class EmailCommseqEnrollmentResponse {
     /**

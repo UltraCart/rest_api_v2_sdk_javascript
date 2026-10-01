@@ -17,7 +17,7 @@ import AutoOrderItem from './AutoOrderItem';
 /**
  * The AutoOrderItemCancelRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemCancelRequest
- * @version 4.1.178
+ * @version 4.1.179
  */
 class AutoOrderItemCancelRequest {
     /**

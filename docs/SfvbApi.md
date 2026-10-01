@@ -44,6 +44,8 @@ Method | HTTP request | Description
 [**getSfvbPageItems**](SfvbApi.md#getSfvbPageItems) | **GET** /sfvb/storefronts/{storefront_oid}/pages/items | Read the items assigned to a page
 [**getSfvbPageSelectors**](SfvbApi.md#getSfvbPageSelectors) | **GET** /sfvb/storefronts/{storefront_oid}/pages/selectors | Read a page&#39;s selectors
 [**getSfvbPreviewUrl**](SfvbApi.md#getSfvbPreviewUrl) | **GET** /sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}/url | URL that renders a preview session
+[**getSfvbRecording**](SfvbApi.md#getSfvbRecording) | **GET** /sfvb/storefronts/{storefront_oid}/recordings/{screen_recording_uuid} | Get a screen recording
+[**getSfvbRecordingPageViewEvents**](SfvbApi.md#getSfvbRecordingPageViewEvents) | **GET** /sfvb/storefronts/{storefront_oid}/recordings/{screen_recording_uuid}/page_views/{screen_recording_page_view_uuid}/events | Get one recorded page view&#39;s replay events
 [**getSfvbServerLog**](SfvbApi.md#getSfvbServerLog) | **GET** /sfvb/storefronts/{storefront_oid}/logs/{log_id} | Get one storefront render log
 [**getSfvbSiteAttributes**](SfvbApi.md#getSfvbSiteAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/attributes | Read a storefront&#39;s site attributes
 [**getSfvbTheme**](SfvbApi.md#getSfvbTheme) | **GET** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid} | Get a theme
@@ -1594,6 +1596,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbPreviewUrlResponse**](SfvbPreviewUrlResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbRecording
+
+> SfvbRecordingResponse getSfvbRecording(storefront_oid, screen_recording_uuid)
+
+Get a screen recording
+
+One recorded visitor session and its page views, with each page view&#39;s named events such as rage clicks, script errors and checkout errors, but without the replay data.  Fetch a page view&#39;s replay events separately.  Find recordings to look at from the heatmaps or the analytics warehouse.  The visitor&#39;s email, IP address and visitor id are not returned, nor what they typed into form fields.  Reading a recording does not mark it watched. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **screen_recording_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbRecordingResponse**](SfvbRecordingResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbRecordingPageViewEvents
+
+> SfvbRecordingEventsResponse getSfvbRecordingPageViewEvents(storefront_oid, screen_recording_uuid, screen_recording_page_view_uuid)
+
+Get one recorded page view&#39;s replay events
+
+The rrweb events for one page view, as a JSON array in a string, for replaying on the caller&#39;s own machine.  Card fields are masked by the recorder, but other text the visitor typed can appear.  Limited per account to 30 page views a minute, 300 an hour and 1000 a day.  Reading the events does not mark the recording watched. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **screen_recording_uuid** | **String**|  | 
+ **screen_recording_page_view_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbRecordingEventsResponse**](SfvbRecordingEventsResponse.md)
 
 ### Authorization
 

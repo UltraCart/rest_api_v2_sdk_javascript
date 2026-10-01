@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The AutoOrderCancelReasonsResponse model module.
  * @module com.ultracart.admin.v2.models/AutoOrderCancelReasonsResponse
- * @version 4.1.178
+ * @version 4.1.179
  */
 class AutoOrderCancelReasonsResponse {
     /**
