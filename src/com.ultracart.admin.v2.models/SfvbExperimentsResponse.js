@@ -17,7 +17,7 @@ import SfvbExperiment from './SfvbExperiment';
 /**
  * The SfvbExperimentsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbExperimentsResponse
- * @version 4.1.179
+ * @version 4.1.180
  */
 class SfvbExperimentsResponse {
     /**

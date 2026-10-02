@@ -803,8 +803,10 @@ import Order from './com.ultracart.admin.v2.models/Order';
 import OrderAddItemsAndReleaseRequest from './com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest';
 import OrderAffiliate from './com.ultracart.admin.v2.models/OrderAffiliate';
 import OrderAffiliateLedger from './com.ultracart.admin.v2.models/OrderAffiliateLedger';
+import OrderAssignRmaRequest from './com.ultracart.admin.v2.models/OrderAssignRmaRequest';
 import OrderAssignToAffiliateRequest from './com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderAutoOrder from './com.ultracart.admin.v2.models/OrderAutoOrder';
+import OrderAutoOrderUpdateBillingUrlResponse from './com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse';
 import OrderBilling from './com.ultracart.admin.v2.models/OrderBilling';
 import OrderBuysafe from './com.ultracart.admin.v2.models/OrderBuysafe';
 import OrderByTokenQuery from './com.ultracart.admin.v2.models/OrderByTokenQuery';
@@ -1259,7 +1261,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.179
+* @version 4.1.180
 */
 export {
     /**
@@ -6009,6 +6011,12 @@ export {
     OrderAffiliateLedger,
 
     /**
+     * The OrderAssignRmaRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderAssignRmaRequest}
+     */
+    OrderAssignRmaRequest,
+
+    /**
      * The OrderAssignToAffiliateRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest}
      */
@@ -6019,6 +6027,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderAutoOrder}
      */
     OrderAutoOrder,
+
+    /**
+     * The OrderAutoOrderUpdateBillingUrlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse}
+     */
+    OrderAutoOrderUpdateBillingUrlResponse,
 
     /**
      * The OrderBilling model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderProperty model module.
  * @module com.ultracart.admin.v2.models/AutoOrderProperty
- * @version 4.1.179
+ * @version 4.1.180
  */
 class AutoOrderProperty {
     /**

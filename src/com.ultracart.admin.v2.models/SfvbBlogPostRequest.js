@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbBlogPostRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbBlogPostRequest
- * @version 4.1.179
+ * @version 4.1.180
  */
 class SfvbBlogPostRequest {
     /**
@@ -61,6 +61,15 @@ class SfvbBlogPostRequest {
             }
             if (data.hasOwnProperty('publication_dts')) {
                 obj['publication_dts'] = ApiClient.convertToType(data['publication_dts'], 'String');
+            }
+            if (data.hasOwnProperty('seo_description')) {
+                obj['seo_description'] = ApiClient.convertToType(data['seo_description'], 'String');
+            }
+            if (data.hasOwnProperty('seo_keywords')) {
+                obj['seo_keywords'] = ApiClient.convertToType(data['seo_keywords'], 'String');
+            }
+            if (data.hasOwnProperty('seo_title')) {
+                obj['seo_title'] = ApiClient.convertToType(data['seo_title'], 'String');
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
@@ -110,6 +119,24 @@ SfvbBlogPostRequest.prototype['excerpt'] = undefined;
  * @member {String} publication_dts
  */
 SfvbBlogPostRequest.prototype['publication_dts'] = undefined;
+
+/**
+ * The meta description (storefrontSEODescription), the search result snippet.  Plain text with no angle brackets or double quotes, up to 1000 characters.  Left out, it is unchanged; an empty string clears it, and the head falls back to the site's description.
+ * @member {String} seo_description
+ */
+SfvbBlogPostRequest.prototype['seo_description'] = undefined;
+
+/**
+ * The meta keywords (storefrontSEOKeywords).  Plain text with no angle brackets or double quotes, up to 1000 characters.  Left out, it is unchanged; an empty string clears it, and the head falls back to the site's keywords.
+ * @member {String} seo_keywords
+ */
+SfvbBlogPostRequest.prototype['seo_keywords'] = undefined;
+
+/**
+ * The page head title (storefrontSEOTitle), used in place of the post title in the browser tab and search results.  Plain text with no angle brackets or double quotes, up to 1000 characters.  Left out, it is unchanged; an empty string clears it, and the head falls back to the post title.
+ * @member {String} seo_title
+ */
+SfvbBlogPostRequest.prototype['seo_title'] = undefined;
 
 /**
  * The post's tags as plain text, up to 100 characters each, with no quotes or angle brackets and no repeats.  On an update the list replaces every tag, and an empty list clears them.

@@ -20,7 +20,9 @@ import BaseResponse from '../com.ultracart.admin.v2.models/BaseResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 import Order from '../com.ultracart.admin.v2.models/Order';
 import OrderAddItemsAndReleaseRequest from '../com.ultracart.admin.v2.models/OrderAddItemsAndReleaseRequest';
+import OrderAssignRmaRequest from '../com.ultracart.admin.v2.models/OrderAssignRmaRequest';
 import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
+import OrderAutoOrderUpdateBillingUrlResponse from '../com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
 import OrderCustomerActivityResponse from '../com.ultracart.admin.v2.models/OrderCustomerActivityResponse';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
@@ -48,7 +50,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.179
+* @version 4.1.180
 */
 export default class OrderApi {
 
@@ -108,6 +110,58 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/adjust_order_total/{desired_total}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the assignRma operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~assignRmaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Associates an RMA with an order
+     * Associates an RMA number with an order.  Any existing RMA on the order is replaced. 
+     * @param {String} order_id The order id to associate the RMA with.
+     * @param {module:com.ultracart.admin.v2.models/OrderAssignRmaRequest} assign_rma_request Assign RMA request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~assignRmaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderResponse}
+     */
+    assignRma(order_id, assign_rma_request, opts, callback) {
+      opts = opts || {};
+      let postBody = assign_rma_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling assignRma");
+      }
+      // verify the required parameter 'assign_rma_request' is set
+      if (assign_rma_request === undefined || assign_rma_request === null) {
+        throw new Error("Missing the required parameter 'assign_rma_request' when calling assignRma");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = OrderResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/rma', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1248,6 +1302,96 @@ export default class OrderApi {
       let returnType = OrdersResponse;
       return this.apiClient.callApi(
         '/order/orders/query', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrdersByRma operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getOrdersByRmaCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrdersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve orders by RMA
+     * Retrieves the orders associated with the specified RMA number.  The RMA must be an exact value; wildcards are not permitted. 
+     * @param {String} rma The RMA number to search for.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts._expand The object expansion to perform on the result.  See documentation for examples
+     * @param {module:com.ultracart.admin.v2/OrderApi~getOrdersByRmaCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrdersResponse}
+     */
+    getOrdersByRma(rma, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'rma' is set
+      if (rma === undefined || rma === null) {
+        throw new Error("Missing the required parameter 'rma' when calling getOrdersByRma");
+      }
+
+      let pathParams = {
+        'rma': rma
+      };
+      let queryParams = {
+        '_expand': opts['_expand']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrdersResponse;
+      return this.apiClient.callApi(
+        '/order/orders/rma/{rma}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getUpdateBillingUrl operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~getUpdateBillingUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate an auto order update billing url
+     * Generates the url a customer can use to update the billing information on the auto order associated with this order.  This is the same url sent in the auto order update billing email. 
+     * @param {String} order_id The order id to generate the update billing url for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~getUpdateBillingUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse}
+     */
+    getUpdateBillingUrl(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling getUpdateBillingUrl");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderAutoOrderUpdateBillingUrlResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/auto_order_update_billing_url', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -17,7 +17,7 @@ import SfvbBlogPostImage from './SfvbBlogPostImage';
 /**
  * The SfvbBlogPostDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbBlogPostDetail
- * @version 4.1.179
+ * @version 4.1.180
  */
 class SfvbBlogPostDetail {
     /**
@@ -75,6 +75,15 @@ class SfvbBlogPostDetail {
             if (data.hasOwnProperty('publication_dts')) {
                 obj['publication_dts'] = ApiClient.convertToType(data['publication_dts'], 'String');
             }
+            if (data.hasOwnProperty('seo_description')) {
+                obj['seo_description'] = ApiClient.convertToType(data['seo_description'], 'String');
+            }
+            if (data.hasOwnProperty('seo_keywords')) {
+                obj['seo_keywords'] = ApiClient.convertToType(data['seo_keywords'], 'String');
+            }
+            if (data.hasOwnProperty('seo_title')) {
+                obj['seo_title'] = ApiClient.convertToType(data['seo_title'], 'String');
+            }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
@@ -101,7 +110,7 @@ class SfvbBlogPostDetail {
 }
 
 /**
- * Whether shoppers may comment.
+ * Whether shoppers may comment.  Like every false value here, false is left out of the response.
  * @member {Boolean} allow_comments
  */
 SfvbBlogPostDetail.prototype['allow_comments'] = undefined;
@@ -155,7 +164,25 @@ SfvbBlogPostDetail.prototype['last_modified_dts'] = undefined;
 SfvbBlogPostDetail.prototype['publication_dts'] = undefined;
 
 /**
- * The post's tags.
+ * The meta description (storefrontSEODescription).  Absent when not set.
+ * @member {String} seo_description
+ */
+SfvbBlogPostDetail.prototype['seo_description'] = undefined;
+
+/**
+ * The meta keywords (storefrontSEOKeywords).  Absent when not set.
+ * @member {String} seo_keywords
+ */
+SfvbBlogPostDetail.prototype['seo_keywords'] = undefined;
+
+/**
+ * The page head title (storefrontSEOTitle).  Absent when not set, and the head then uses the post title.
+ * @member {String} seo_title
+ */
+SfvbBlogPostDetail.prototype['seo_title'] = undefined;
+
+/**
+ * The post's tags, in alphabetical order.  The order they were sent in is not kept.
  * @member {Array.<String>} tags
  */
 SfvbBlogPostDetail.prototype['tags'] = undefined;

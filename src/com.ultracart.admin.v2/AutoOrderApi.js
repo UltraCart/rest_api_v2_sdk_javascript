@@ -28,11 +28,12 @@ import AutoOrderResponse from '../com.ultracart.admin.v2.models/AutoOrderRespons
 import AutoOrdersRequest from '../com.ultracart.admin.v2.models/AutoOrdersRequest';
 import AutoOrdersResponse from '../com.ultracart.admin.v2.models/AutoOrdersResponse';
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import OrderAutoOrderUpdateBillingUrlResponse from '../com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse';
 
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.179
+* @version 4.1.180
 */
 export default class AutoOrderApi {
 
@@ -464,6 +465,49 @@ export default class AutoOrderApi {
       let returnType = AutoOrderEmailsResponse;
       return this.apiClient.callApi(
         '/auto_order/auto_orders/{auto_order_oid}/emails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAutoOrderUpdateBillingUrl operation.
+     * @callback module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderUpdateBillingUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate an auto order update billing url
+     * Generates the url a customer can use to update the billing information on this auto order.  This is the same url sent in the auto order update billing email. 
+     * @param {Number} auto_order_oid The auto order oid to generate the update billing url for.
+     * @param {module:com.ultracart.admin.v2/AutoOrderApi~getAutoOrderUpdateBillingUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse}
+     */
+    getAutoOrderUpdateBillingUrl(auto_order_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'auto_order_oid' is set
+      if (auto_order_oid === undefined || auto_order_oid === null) {
+        throw new Error("Missing the required parameter 'auto_order_oid' when calling getAutoOrderUpdateBillingUrl");
+      }
+
+      let pathParams = {
+        'auto_order_oid': auto_order_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrderAutoOrderUpdateBillingUrlResponse;
+      return this.apiClient.callApi(
+        '/auto_order/auto_orders/{auto_order_oid}/update_billing_url', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

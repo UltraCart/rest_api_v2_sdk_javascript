@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getAutoOrderByReferenceOrderId**](AutoOrderApi.md#getAutoOrderByReferenceOrderId) | **GET** /auto_order/auto_orders/reference_order_id/{reference_order_id} | Retrieve an auto order by order id
 [**getAutoOrderCancelReasons**](AutoOrderApi.md#getAutoOrderCancelReasons) | **GET** /auto_order/auto_orders/cancel_reasons | Retrieve auto order cancel reasons.
 [**getAutoOrderEmails**](AutoOrderApi.md#getAutoOrderEmails) | **GET** /auto_order/auto_orders/{auto_order_oid}/emails | Retrieve email delivery information for this auto order.
+[**getAutoOrderUpdateBillingUrl**](AutoOrderApi.md#getAutoOrderUpdateBillingUrl) | **GET** /auto_order/auto_orders/{auto_order_oid}/update_billing_url | Generate an auto order update billing url
 [**getAutoOrders**](AutoOrderApi.md#getAutoOrders) | **GET** /auto_order/auto_orders | Retrieve auto orders
 [**getAutoOrdersBatch**](AutoOrderApi.md#getAutoOrdersBatch) | **POST** /auto_order/auto_orders/batch | Retrieve auto order batch
 [**getAutoOrdersByQuery**](AutoOrderApi.md#getAutoOrdersByQuery) | **POST** /auto_order/auto_orders/query | Retrieve auto orders by query
@@ -671,6 +672,42 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AutoOrderEmailsResponse**](AutoOrderEmailsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAutoOrderUpdateBillingUrl
+
+> OrderAutoOrderUpdateBillingUrlResponse getAutoOrderUpdateBillingUrl(auto_order_oid)
+
+Generate an auto order update billing url
+
+Generates the url a customer can use to update the billing information on this auto order.  This is the same url sent in the auto order update billing email. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **auto_order_oid** | **Number**| The auto order oid to generate the update billing url for. | 
+
+### Return type
+
+[**OrderAutoOrderUpdateBillingUrlResponse**](OrderAutoOrderUpdateBillingUrlResponse.md)
 
 ### Authorization
 

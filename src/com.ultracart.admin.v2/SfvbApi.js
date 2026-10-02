@@ -107,7 +107,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.179
+* @version 4.1.180
 */
 export default class SfvbApi {
 
