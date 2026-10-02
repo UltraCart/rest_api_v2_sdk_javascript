@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRenderRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderRequest
- * @version 4.1.181
+ * @version 4.1.182
  */
 class SfvbRenderRequest {
     /**
@@ -76,6 +76,9 @@ class SfvbRenderRequest {
             }
             if (data.hasOwnProperty('context_upsell_offer_oid')) {
                 obj['context_upsell_offer_oid'] = ApiClient.convertToType(data['context_upsell_offer_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('edit_mode')) {
+                obj['edit_mode'] = ApiClient.convertToType(data['edit_mode'], 'Boolean');
             }
             if (data.hasOwnProperty('language_iso_code')) {
                 obj['language_iso_code'] = ApiClient.convertToType(data['language_iso_code'], 'String');
@@ -149,6 +152,12 @@ SfvbRenderRequest.prototype['context_page_number'] = undefined;
  * @member {Number} context_upsell_offer_oid
  */
 SfvbRenderRequest.prototype['context_upsell_offer_oid'] = undefined;
+
+/**
+ * True renders every branch the way the builder shows it, for styling content a shopper only sometimes sees.  Omitted or false renders what a shopper sees, with conditions, prices and sale state evaluated against the context item.
+ * @member {Boolean} edit_mode
+ */
+SfvbRenderRequest.prototype['edit_mode'] = undefined;
 
 /**
  * Language ISO code.  Defaults to ENG.

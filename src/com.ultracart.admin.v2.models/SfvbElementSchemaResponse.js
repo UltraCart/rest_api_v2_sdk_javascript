@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbElementSchemaResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbElementSchemaResponse
- * @version 4.1.181
+ * @version 4.1.182
  */
 class SfvbElementSchemaResponse {
     /**

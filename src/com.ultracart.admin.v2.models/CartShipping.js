@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartShipping model module.
  * @module com.ultracart.admin.v2.models/CartShipping
- * @version 4.1.181
+ * @version 4.1.182
  */
 class CartShipping {
     /**
