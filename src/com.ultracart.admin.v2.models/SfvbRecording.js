@@ -18,7 +18,7 @@ import SfvbRecordingPageView from './SfvbRecordingPageView';
 /**
  * The SfvbRecording model module.
  * @module com.ultracart.admin.v2.models/SfvbRecording
- * @version 4.1.180
+ * @version 4.1.181
  */
 class SfvbRecording {
     /**

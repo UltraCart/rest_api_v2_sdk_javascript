@@ -18,7 +18,7 @@ import Weight from './Weight';
 /**
  * The CartItemOptionValue model module.
  * @module com.ultracart.admin.v2.models/CartItemOptionValue
- * @version 4.1.180
+ * @version 4.1.181
  */
 class CartItemOptionValue {
     /**

@@ -76,6 +76,8 @@ import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPre
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRecordingEventsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingEventsResponse';
 import SfvbRecordingResponse from '../com.ultracart.admin.v2.models/SfvbRecordingResponse';
+import SfvbRecordingSettingsRequest from '../com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest';
+import SfvbRecordingSettingsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
@@ -107,7 +109,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.180
+* @version 4.1.181
 */
 export default class SfvbApi {
 
@@ -2210,6 +2212,49 @@ export default class SfvbApi {
       let returnType = SfvbRecordingEventsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/recordings/{screen_recording_uuid}/page_views/{screen_recording_page_view_uuid}/events', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbRecordingSettings operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the storefront's screen recording settings
+     * Whether real shoppers' sessions on this storefront are being recorded, what recording costs per 1,000 sessions after the 14 day free trial, how long recordings are kept, and how many sessions were recorded in the current and last billing periods.  Recording only collects from the moment it is turned on, so when it is on but was turned on recently, check the analytics warehouse for rows before reporting that there is no data. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbRecordingSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse}
+     */
+    getSfvbRecordingSettings(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbRecordingSettings");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRecordingSettingsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/recording_settings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4362,6 +4407,54 @@ export default class SfvbApi {
       let returnType = SfvbPreviewSessionResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbRecordingSettings operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbRecordingSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Turn the storefront's screen recording on or off
+     * Turning it on records real shoppers' sessions from that moment, with no history before it.  The first time starts a 14 day free trial, after which recorded sessions are billed per 1,000.  Only change it when the merchant has asked for it.  Asking for the state it is already in changes nothing, and changed comes back false.  Always needs sfvb_publish, in both directions, because it decides whether live shoppers are recorded.  Limited per storefront to 5 changes a minute, 20 an hour and 50 a day. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest} recording_settings_request Whether to record
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbRecordingSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse}
+     */
+    putSfvbRecordingSettings(storefront_oid, recording_settings_request, callback) {
+      let postBody = recording_settings_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbRecordingSettings");
+      }
+      // verify the required parameter 'recording_settings_request' is set
+      if (recording_settings_request === undefined || recording_settings_request === null) {
+        throw new Error("Missing the required parameter 'recording_settings_request' when calling putSfvbRecordingSettings");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRecordingSettingsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/recording_settings', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

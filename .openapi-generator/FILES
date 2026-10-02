@@ -1075,6 +1075,9 @@ docs/SfvbRecordingEventsResponse.md
 docs/SfvbRecordingPageView.md
 docs/SfvbRecordingParameter.md
 docs/SfvbRecordingResponse.md
+docs/SfvbRecordingSettings.md
+docs/SfvbRecordingSettingsRequest.md
+docs/SfvbRecordingSettingsResponse.md
 docs/SfvbRenderRequest.md
 docs/SfvbRenderResponse.md
 docs/SfvbServerLog.md
@@ -2278,6 +2281,9 @@ src/com.ultracart.admin.v2.models/SfvbRecordingEventsResponse.js
 src/com.ultracart.admin.v2.models/SfvbRecordingPageView.js
 src/com.ultracart.admin.v2.models/SfvbRecordingParameter.js
 src/com.ultracart.admin.v2.models/SfvbRecordingResponse.js
+src/com.ultracart.admin.v2.models/SfvbRecordingSettings.js
+src/com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest.js
+src/com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse.js
 src/com.ultracart.admin.v2.models/SfvbRenderRequest.js
 src/com.ultracart.admin.v2.models/SfvbRenderResponse.js
 src/com.ultracart.admin.v2.models/SfvbServerLog.js

@@ -1068,6 +1068,9 @@ import SfvbRecordingEventsResponse from './com.ultracart.admin.v2.models/SfvbRec
 import SfvbRecordingPageView from './com.ultracart.admin.v2.models/SfvbRecordingPageView';
 import SfvbRecordingParameter from './com.ultracart.admin.v2.models/SfvbRecordingParameter';
 import SfvbRecordingResponse from './com.ultracart.admin.v2.models/SfvbRecordingResponse';
+import SfvbRecordingSettings from './com.ultracart.admin.v2.models/SfvbRecordingSettings';
+import SfvbRecordingSettingsRequest from './com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest';
+import SfvbRecordingSettingsResponse from './com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1261,7 +1264,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.180
+* @version 4.1.181
 */
 export {
     /**
@@ -7599,6 +7602,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRecordingResponse}
      */
     SfvbRecordingResponse,
+
+    /**
+     * The SfvbRecordingSettings model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingSettings}
+     */
+    SfvbRecordingSettings,
+
+    /**
+     * The SfvbRecordingSettingsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest}
+     */
+    SfvbRecordingSettingsRequest,
+
+    /**
+     * The SfvbRecordingSettingsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse}
+     */
+    SfvbRecordingSettingsResponse,
 
     /**
      * The SfvbRenderRequest model constructor.
