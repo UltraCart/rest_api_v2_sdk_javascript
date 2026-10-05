@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryParameter model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryParameter
- * @version 4.1.186
+ * @version 4.1.188
  */
 class SfvbLibraryParameter {
     /**
@@ -47,8 +47,8 @@ class SfvbLibraryParameter {
         if (data) {
             obj = obj || new SfvbLibraryParameter();
 
-            if (data.hasOwnProperty('default')) {
-                obj['default'] = ApiClient.convertToType(data['default'], 'String');
+            if (data.hasOwnProperty('default_value')) {
+                obj['default_value'] = ApiClient.convertToType(data['default_value'], 'String');
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -71,9 +71,9 @@ class SfvbLibraryParameter {
 
 /**
  * The value used when none is supplied.
- * @member {String} default
+ * @member {String} default_value
  */
-SfvbLibraryParameter.prototype['default'] = undefined;
+SfvbLibraryParameter.prototype['default_value'] = undefined;
 
 /**
  * What the value is used for.

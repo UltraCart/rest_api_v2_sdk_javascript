@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The CustomReportChartPngUploadResponse model module.
  * @module com.ultracart.admin.v2.models/CustomReportChartPngUploadResponse
- * @version 4.1.186
+ * @version 4.1.188
  */
 class CustomReportChartPngUploadResponse {
     /**
