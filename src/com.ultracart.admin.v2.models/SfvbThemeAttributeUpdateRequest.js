@@ -17,7 +17,7 @@ import SfvbThemeAttributeUpdate from './SfvbThemeAttributeUpdate';
 /**
  * The SfvbThemeAttributeUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest
- * @version 4.1.183
+ * @version 4.1.184
  */
 class SfvbThemeAttributeUpdateRequest {
     /**

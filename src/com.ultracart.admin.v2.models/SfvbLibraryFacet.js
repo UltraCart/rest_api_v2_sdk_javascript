@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryFacet model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryFacet
- * @version 4.1.183
+ * @version 4.1.184
  */
 class SfvbLibraryFacet {
     /**
@@ -70,13 +70,13 @@ class SfvbLibraryFacet {
 SfvbLibraryFacet.prototype['display_name'] = undefined;
 
 /**
- * Facet key.  Pass a chosen option back as facet_{name}={option}.
+ * Facet key, such as facet_purpose.  To select an option, add a query parameter named after the key whose value is the key, a colon and the option.
  * @member {String} name
  */
 SfvbLibraryFacet.prototype['name'] = undefined;
 
 /**
- * Available values for this facet.
+ * Values present in the results.  A facet with only one value is left out unless it is selected.
  * @member {Array.<String>} options
  */
 SfvbLibraryFacet.prototype['options'] = undefined;

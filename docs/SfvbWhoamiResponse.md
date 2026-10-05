@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **application_name** | **String** | Description of the application this credential belongs to. | [optional] 
 **authentication_type** | **String** | How this token authenticated - Oauth2, Simple Key, Public/Private Key or Browser Key. | [optional] 
 **can_publish** | **Boolean** | True when this token may write a target that is currently live - an active upsell offer, an email on a delivering flow, the active theme, the storefront root.  Never infer this; it is the difference between a draft edit and a shopper visible change. | [optional] 
+**can_publish_public** | **Boolean** | True when this account may publish library entries to the public library.  Set by UltraCart staff only. | [optional] 
 **can_read** | **Boolean** | True when this token may read.  Do not infer this from the requested scope name. | [optional] 
 **can_write** | **Boolean** | True when this token may write.  Writing a target that is not currently live needs only this. | [optional] 
 **device_scope** | **String** | Device scope name, when this is a device flow token. | [optional] 

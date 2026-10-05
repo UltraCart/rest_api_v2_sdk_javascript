@@ -17,7 +17,7 @@ import SfvbStorefront from './SfvbStorefront';
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.183
+ * @version 4.1.184
  */
 class SfvbWhoamiResponse {
     /**
@@ -59,6 +59,9 @@ class SfvbWhoamiResponse {
             }
             if (data.hasOwnProperty('can_publish')) {
                 obj['can_publish'] = ApiClient.convertToType(data['can_publish'], 'Boolean');
+            }
+            if (data.hasOwnProperty('can_publish_public')) {
+                obj['can_publish_public'] = ApiClient.convertToType(data['can_publish_public'], 'Boolean');
             }
             if (data.hasOwnProperty('can_read')) {
                 obj['can_read'] = ApiClient.convertToType(data['can_read'], 'Boolean');
@@ -117,6 +120,12 @@ SfvbWhoamiResponse.prototype['authentication_type'] = undefined;
  * @member {Boolean} can_publish
  */
 SfvbWhoamiResponse.prototype['can_publish'] = undefined;
+
+/**
+ * True when this account may publish library entries to the public library.  Set by UltraCart staff only.
+ * @member {Boolean} can_publish_public
+ */
+SfvbWhoamiResponse.prototype['can_publish_public'] = undefined;
 
 /**
  * True when this token may read.  Do not infer this from the requested scope name.

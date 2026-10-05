@@ -12,11 +12,15 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbLibraryContentManifest from './SfvbLibraryContentManifest';
+import SfvbLibraryParameter from './SfvbLibraryParameter';
+import SfvbLibraryShareTarget from './SfvbLibraryShareTarget';
+import SfvbLibraryTaxonomy from './SfvbLibraryTaxonomy';
 
 /**
  * The SfvbLibraryEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryEntry
- * @version 4.1.183
+ * @version 4.1.184
  */
 class SfvbLibraryEntry {
     /**
@@ -53,8 +57,17 @@ class SfvbLibraryEntry {
             if (data.hasOwnProperty('cjson')) {
                 obj['cjson'] = ApiClient.convertToType(data['cjson'], 'String');
             }
+            if (data.hasOwnProperty('content_manifest')) {
+                obj['content_manifest'] = SfvbLibraryContentManifest.constructFromObject(data['content_manifest']);
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('last_modified_dts')) {
+                obj['last_modified_dts'] = ApiClient.convertToType(data['last_modified_dts'], 'String');
             }
             if (data.hasOwnProperty('library_oid')) {
                 obj['library_oid'] = ApiClient.convertToType(data['library_oid'], 'Number');
@@ -65,17 +78,50 @@ class SfvbLibraryEntry {
             if (data.hasOwnProperty('owned')) {
                 obj['owned'] = ApiClient.convertToType(data['owned'], 'Boolean');
             }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [SfvbLibraryParameter]);
+            }
+            if (data.hasOwnProperty('published_revision_number')) {
+                obj['published_revision_number'] = ApiClient.convertToType(data['published_revision_number'], 'Number');
+            }
             if (data.hasOwnProperty('referenced_files')) {
                 obj['referenced_files'] = ApiClient.convertToType(data['referenced_files'], ['String']);
+            }
+            if (data.hasOwnProperty('retired')) {
+                obj['retired'] = ApiClient.convertToType(data['retired'], 'Boolean');
+            }
+            if (data.hasOwnProperty('revision_number')) {
+                obj['revision_number'] = ApiClient.convertToType(data['revision_number'], 'Number');
+            }
+            if (data.hasOwnProperty('screenshot_height')) {
+                obj['screenshot_height'] = ApiClient.convertToType(data['screenshot_height'], 'Number');
             }
             if (data.hasOwnProperty('screenshot_key')) {
                 obj['screenshot_key'] = ApiClient.convertToType(data['screenshot_key'], 'String');
             }
+            if (data.hasOwnProperty('screenshot_sha256')) {
+                obj['screenshot_sha256'] = ApiClient.convertToType(data['screenshot_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('screenshot_stale')) {
+                obj['screenshot_stale'] = ApiClient.convertToType(data['screenshot_stale'], 'Boolean');
+            }
+            if (data.hasOwnProperty('screenshot_width')) {
+                obj['screenshot_width'] = ApiClient.convertToType(data['screenshot_width'], 'Number');
+            }
             if (data.hasOwnProperty('share_with_account')) {
                 obj['share_with_account'] = ApiClient.convertToType(data['share_with_account'], 'Boolean');
             }
+            if (data.hasOwnProperty('shared_with')) {
+                obj['shared_with'] = ApiClient.convertToType(data['shared_with'], [SfvbLibraryShareTarget]);
+            }
+            if (data.hasOwnProperty('taxonomy')) {
+                obj['taxonomy'] = SfvbLibraryTaxonomy.constructFromObject(data['taxonomy']);
+            }
             if (data.hasOwnProperty('thumbnail_key')) {
                 obj['thumbnail_key'] = ApiClient.convertToType(data['thumbnail_key'], 'String');
+            }
+            if (data.hasOwnProperty('visibility')) {
+                obj['visibility'] = ApiClient.convertToType(data['visibility'], 'String');
             }
             if (data.hasOwnProperty('widget_type')) {
                 obj['widget_type'] = ApiClient.convertToType(data['widget_type'], 'String');
@@ -100,10 +146,27 @@ SfvbLibraryEntry.prototype['bookmarked'] = undefined;
 SfvbLibraryEntry.prototype['cjson'] = undefined;
 
 /**
+ * @member {module:com.ultracart.admin.v2.models/SfvbLibraryContentManifest} content_manifest
+ */
+SfvbLibraryEntry.prototype['content_manifest'] = undefined;
+
+/**
  * What this fragment is for.
  * @member {String} description
  */
 SfvbLibraryEntry.prototype['description'] = undefined;
+
+/**
+ * Hash of the draft's writable fields.  Send it back as If-Match to update, delete or publish.  Present only for the owner.
+ * @member {String} hash_sha256
+ */
+SfvbLibraryEntry.prototype['hash_sha256'] = undefined;
+
+/**
+ * When the draft was last saved, ISO 8601.
+ * @member {String} last_modified_dts
+ */
+SfvbLibraryEntry.prototype['last_modified_dts'] = undefined;
 
 /**
  * Library entry oid.
@@ -124,10 +187,40 @@ SfvbLibraryEntry.prototype['name'] = undefined;
 SfvbLibraryEntry.prototype['owned'] = undefined;
 
 /**
+ * Named values the fragment expects the installer to supply.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryParameter>} parameters
+ */
+SfvbLibraryEntry.prototype['parameters'] = undefined;
+
+/**
+ * The latest published revision, or null when the entry has never been published.
+ * @member {Number} published_revision_number
+ */
+SfvbLibraryEntry.prototype['published_revision_number'] = undefined;
+
+/**
  * Storefront file paths this fragment references.  Installing the fragment copies them into the storefront; reading it does not.
  * @member {Array.<String>} referenced_files
  */
 SfvbLibraryEntry.prototype['referenced_files'] = undefined;
+
+/**
+ * True when the owner deleted an entry that had been published or installed.  It is kept so existing installs still resolve, and it leaves search.
+ * @member {Boolean} retired
+ */
+SfvbLibraryEntry.prototype['retired'] = undefined;
+
+/**
+ * The revision returned.  For the owner this is the draft, which every save increments.  For anyone else it is the published revision.
+ * @member {Number} revision_number
+ */
+SfvbLibraryEntry.prototype['revision_number'] = undefined;
+
+/**
+ * Screenshot height in pixels.
+ * @member {Number} screenshot_height
+ */
+SfvbLibraryEntry.prototype['screenshot_height'] = undefined;
 
 /**
  * S3 listing key for the large screenshot, when one has been generated.
@@ -136,16 +229,51 @@ SfvbLibraryEntry.prototype['referenced_files'] = undefined;
 SfvbLibraryEntry.prototype['screenshot_key'] = undefined;
 
 /**
+ * Hash of the uploaded screenshot.
+ * @member {String} screenshot_sha256
+ */
+SfvbLibraryEntry.prototype['screenshot_sha256'] = undefined;
+
+/**
+ * True on an update that changed the fragment of an entry with a screenshot.  Retake it and set it again with the library screenshot endpoint.
+ * @member {Boolean} screenshot_stale
+ */
+SfvbLibraryEntry.prototype['screenshot_stale'] = undefined;
+
+/**
+ * Screenshot width in pixels.
+ * @member {Number} screenshot_width
+ */
+SfvbLibraryEntry.prototype['screenshot_width'] = undefined;
+
+/**
  * True when the entry is shared across the merchant account.
  * @member {Boolean} share_with_account
  */
 SfvbLibraryEntry.prototype['share_with_account'] = undefined;
 
 /**
+ * Linked accounts the entry is shared with.  Present only for the owner.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget>} shared_with
+ */
+SfvbLibraryEntry.prototype['shared_with'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomy} taxonomy
+ */
+SfvbLibraryEntry.prototype['taxonomy'] = undefined;
+
+/**
  * S3 listing key for the medium thumbnail, when one has been generated.  Thumbnails are produced asynchronously and can lag a save by a minute or two.
  * @member {String} thumbnail_key
  */
 SfvbLibraryEntry.prototype['thumbnail_key'] = undefined;
+
+/**
+ * private, shared or public.
+ * @member {module:com.ultracart.admin.v2.models/SfvbLibraryEntry.VisibilityEnum} visibility
+ */
+SfvbLibraryEntry.prototype['visibility'] = undefined;
 
 /**
  * Element type at the root of the fragment.
@@ -155,6 +283,33 @@ SfvbLibraryEntry.prototype['widget_type'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>visibility</code> property.
+ * @enum {String}
+ * @readonly
+ */
+SfvbLibraryEntry['VisibilityEnum'] = {
+
+    /**
+     * value: "private"
+     * @const
+     */
+    "private": "private",
+
+    /**
+     * value: "shared"
+     * @const
+     */
+    "shared": "shared",
+
+    /**
+     * value: "public"
+     * @const
+     */
+    "public": "public"
+};
 
 
 

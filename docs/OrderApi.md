@@ -138,8 +138,65 @@ Associates an RMA number with an order.  Any existing RMA on the order is replac
 
 ### Example
 
+```javascript
+import {orderApi} from '../api.js';
 
-(No example for this operation).
+export class AssignRma {
+    /**
+     * OrderApi.assignRma() associates an RMA (return merchandise authorization) number with an order.
+     *
+     * Notes:
+     * 1. The rma value is required, is trimmed, and may be at most 30 characters.
+     * 2. Any existing RMA on the order is replaced.
+     * 3. A merchant note is added to the order recording the RMA assignment.
+     * 4. The optional _expand parameter controls how much of the updated order is returned.
+     * 5. Requires the order_write scope.
+     *
+     * Use OrderApi.getOrdersByRma() to look up orders by RMA later.
+     */
+    static async execute() {
+        const orderId = 'DEMO-0009104436';
+        const assignRmaRequest = {
+            rma: 'RMA-12345'
+        };
+
+        // see www.ultracart.com/api/ for all the expansion fields available
+        const expansion = 'item,summary';
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                orderApi.assignRma(orderId, assignRmaRequest, {_expand: expansion}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+
+            if (apiResponse.error) {
+                console.error('Developer Message:', apiResponse.error.developer_message);
+                console.error('User Message:', apiResponse.error.user_message);
+                throw new Error('Failed to assign RMA');
+            }
+
+            console.log(JSON.stringify(apiResponse.order, null, 2));
+
+            return apiResponse.order;
+        } catch (error) {
+            console.error('Error assigning RMA:', error);
+            throw error;
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// AssignRma.execute().then(order => {
+//     // Do something with the order
+// }).catch(error => {
+//     // Handle any errors
+// });
+```
 
 
 ### Parameters
@@ -2284,8 +2341,64 @@ Retrieves the orders associated with the specified RMA number.  The RMA must be 
 
 ### Example
 
+```javascript
+import {orderApi} from '../api.js';
 
-(No example for this operation).
+export class GetOrdersByRma {
+    /**
+     * OrderApi.getOrdersByRma() retrieves the orders associated with an RMA number.
+     *
+     * Notes:
+     * 1. The RMA must be an exact match.  Wildcards (*) are not permitted and will return a 400 error.
+     * 2. More than one order may share the same RMA, so a list of orders is returned.
+     * 3. This lookup is backed by a search index, so an RMA that was just assigned with OrderApi.assignRma()
+     *    may take a short time to appear in the results.
+     * 4. Requires the order_read scope.
+     */
+    static async execute() {
+        const rma = 'RMA-12345';
+
+        // see www.ultracart.com/api/ for all the expansion fields available
+        const expansion = 'item,summary,billing,shipping';
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                orderApi.getOrdersByRma(rma, {_expand: expansion}, function (error, data, response) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(data);
+                    }
+                });
+            });
+
+            if (apiResponse.error) {
+                console.error('Developer Message:', apiResponse.error.developer_message);
+                console.error('User Message:', apiResponse.error.user_message);
+                throw new Error('Failed to retrieve orders by RMA');
+            }
+
+            const orders = apiResponse.orders || [];
+            console.log(`Found ${orders.length} order(s) for RMA ${rma}`);
+            orders.forEach(order => {
+                console.log(JSON.stringify(order, null, 2));
+            });
+
+            return orders;
+        } catch (error) {
+            console.error('Error retrieving orders by RMA:', error);
+            throw error;
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// GetOrdersByRma.execute().then(orders => {
+//     // Do something with the orders
+// }).catch(error => {
+//     // Handle any errors
+// });
+```
 
 
 ### Parameters
@@ -2321,8 +2434,62 @@ Generates the url a customer can use to update the billing information on the au
 
 ### Example
 
+```javascript
+import {orderApi} from '../api.js';
 
-(No example for this operation).
+export class GetUpdateBillingUrl {
+    /**
+     * OrderApi.getUpdateBillingUrl() generates the url a customer can use to update the billing information
+     * on the auto order associated with an order.  This is the same url sent in the auto order update billing email.
+     *
+     * Notes:
+     * 1. The order must belong to an auto order, otherwise a 400 error is returned.
+     * 2. Either the original order or any rebill order of the auto order may be used.
+     * 3. Requires the order_write scope because the url carries a customer access token.
+     *
+     * If you have the auto_order_oid instead of an order id, see AutoOrderApi.getAutoOrderUpdateBillingUrl()
+     */
+    static async execute() {
+        const orderId = 'DEMO-0009104436';
+
+        try {
+            const apiResponse = await new Promise((resolve, reject) => {
+                orderApi.getUpdateBillingUrl(
+                    orderId
+                    , function (error, data, response) {
+                        if (error) {
+                            reject(error);
+                        } else {
+                            resolve(data);
+                        }
+                    });
+            });
+
+            if (apiResponse.error) {
+                console.error('Developer Message:', apiResponse.error.developer_message);
+                console.error('User Message:', apiResponse.error.user_message);
+                throw new Error('Failed to generate update billing url');
+            }
+
+            // WARNING: The update billing url grants access to the customer's billing information.
+            // Do not log it or expose it publicly in production.  It is printed here for demonstration only.
+            console.log(`Update Billing Url: ${apiResponse.update_billing_url}`);
+
+            return apiResponse.update_billing_url;
+        } catch (error) {
+            console.error('Error generating update billing url:', error);
+            throw error;
+        }
+    }
+}
+
+// Optional: If you want to call the method
+// GetUpdateBillingUrl.execute().then(url => {
+//     // Send the url to the customer through a secure channel
+// }).catch(error => {
+//     // Handle any errors
+// });
+```
 
 
 ### Parameters

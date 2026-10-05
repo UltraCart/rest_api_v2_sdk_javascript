@@ -49,8 +49,20 @@ import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemCon
 import SfvbItemMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
 import SfvbItemResponse from '../com.ultracart.admin.v2.models/SfvbItemResponse';
 import SfvbItemSeoRequest from '../com.ultracart.admin.v2.models/SfvbItemSeoRequest';
+import SfvbLibraryDeleteResult from '../com.ultracart.admin.v2.models/SfvbLibraryDeleteResult';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
+import SfvbLibraryEntryRequest from '../com.ultracart.admin.v2.models/SfvbLibraryEntryRequest';
+import SfvbLibraryHistoryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry';
+import SfvbLibraryInstallReceipt from '../com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt';
+import SfvbLibraryInstallRecord from '../com.ultracart.admin.v2.models/SfvbLibraryInstallRecord';
+import SfvbLibraryInstallRequest from '../com.ultracart.admin.v2.models/SfvbLibraryInstallRequest';
+import SfvbLibraryPublishRequest from '../com.ultracart.admin.v2.models/SfvbLibraryPublishRequest';
 import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryResponse';
+import SfvbLibraryScreenshotRequest from '../com.ultracart.admin.v2.models/SfvbLibraryScreenshotRequest';
+import SfvbLibraryShareRequest from '../com.ultracart.admin.v2.models/SfvbLibraryShareRequest';
+import SfvbLibraryShareTarget from '../com.ultracart.admin.v2.models/SfvbLibraryShareTarget';
+import SfvbLibraryTaxonomyCatalog from '../com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog';
+import SfvbLibraryUnshareResult from '../com.ultracart.admin.v2.models/SfvbLibraryUnshareResult';
 import SfvbMenu from '../com.ultracart.admin.v2.models/SfvbMenu';
 import SfvbMenuWriteRequest from '../com.ultracart.admin.v2.models/SfvbMenuWriteRequest';
 import SfvbMenusResponse from '../com.ultracart.admin.v2.models/SfvbMenusResponse';
@@ -109,7 +121,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.183
+* @version 4.1.184
 */
 export default class SfvbApi {
 
@@ -337,6 +349,61 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the clearSfvbLibraryScreenshot operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~clearSfvbLibraryScreenshotCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a library entry's screenshot
+     * Owner only, with the draft's hash_sha256 as If-Match.  Clears the screenshot and thumbnail.  Published revisions and copies that used the image keep it. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~clearSfvbLibraryScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    clearSfvbLibraryScreenshot(storefront_oid, library_oid, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling clearSfvbLibraryScreenshot");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling clearSfvbLibraryScreenshot");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling clearSfvbLibraryScreenshot");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/screenshot', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the compileSfvbCjson operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~compileSfvbCjsonCallback
      * @param {String} error Error message, if any.
@@ -373,6 +440,54 @@ export default class SfvbApi {
       let returnType = SfvbCompileResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/compile', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the createSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~createSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Save a fragment to the library
+     * Creates a private draft owned by the calling user.  The fragment is one widget and its children, and it must validate.  Images it references on this storefront are copied into the entry before this returns, so it installs anywhere with its images.  The fragment is scanned; card skimming or obfuscation signals are refused outright.  Nothing other merchants or shoppers see changes, so sfvb_write is enough.  Publish it to share it.  An optional screenshot takes a staged PNG key, exactly as the library screenshot endpoint does; a refused screenshot refuses the whole create. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntryRequest} library_entry The entry
+     * @param {module:com.ultracart.admin.v2/SfvbApi~createSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    createSfvbLibraryEntry(storefront_oid, library_entry, callback) {
+      let postBody = library_entry;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling createSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_entry' is set
+      if (library_entry === undefined || library_entry === null) {
+        throw new Error("Missing the required parameter 'library_entry' when calling createSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -670,6 +785,61 @@ export default class SfvbApi {
       let returnType = SfvbItemResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/multimedia', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryDeleteResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete or retire a library entry
+     * Owner only, with the draft's hash_sha256 as If-Match.  An entry that was never published, installed or shared is deleted.  Anything else is retired - kept so the storefronts that installed it still resolve, but out of search and refusing new installs and publishes.  The result says which happened. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryDeleteResult}
+     */
+    deleteSfvbLibraryEntry(storefront_oid, library_oid, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling deleteSfvbLibraryEntry");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryDeleteResult;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -977,6 +1147,59 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the duplicateSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Copy a library entry into a new private entry
+     * The copy is owned by the calling user and private.  From an entry you own it copies the draft; from one shared with you it copies the published revision.  It is scanned on its own and inherits nothing but content, its images and its screenshot. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name Name for the copy.  Defaults to Copy of and the source name.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    duplicateSfvbLibraryEntry(storefront_oid, library_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling duplicateSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling duplicateSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+        'name': opts['name']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/duplicate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the duplicateSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~duplicateSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -1226,6 +1449,54 @@ export default class SfvbApi {
       let returnType = SfvbExperiment;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/experiments/{experiment_oid}/end', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the favoriteSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~favoriteSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Favorite a library entry
+     * Bookmarks the entry for the calling user.  Idempotent.  Owner or anyone the entry is shared with. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~favoriteSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    favoriteSfvbLibraryEntry(storefront_oid, library_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling favoriteSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling favoriteSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/favorite', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1733,13 +2004,16 @@ export default class SfvbApi {
 
     /**
      * Read one library entry including its CJSON
-     * Returns the fragment as authored.  If it references images or other storefront files those paths will not resolve on this storefront until the entry is installed, so use install rather than this when the intent is to place the fragment. 
+     * The owner gets the draft with its hash_sha256, which an update, delete or publish sends back as If-Match.  Everyone else gets the latest published revision.  Pin a published revision with revision_number.  Read content_manifest before installing.  If the fragment references images or other storefront files those paths will not resolve on this storefront until the entry is installed, so use install rather than this when the intent is to place the fragment. 
      * @param {Number} storefront_oid 
      * @param {Number} library_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.revision_number A published revision to read instead of the default.
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
      */
-    getSfvbLibraryEntry(storefront_oid, library_oid, callback) {
+    getSfvbLibraryEntry(storefront_oid, library_oid, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -1748,6 +2022,56 @@ export default class SfvbApi {
       // verify the required parameter 'library_oid' is set
       if (library_oid === undefined || library_oid === null) {
         throw new Error("Missing the required parameter 'library_oid' when calling getSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+        'revision_number': opts['revision_number']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbLibraryHistory operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryHistoryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a library entry's published revisions
+     * Newest first, each with its release notes and hash.  Read one with getSfvbLibraryEntry and revision_number.  The owner and anyone the entry is shared with can list it. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry}
+     */
+    getSfvbLibraryHistory(storefront_oid, library_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbLibraryHistory");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling getSfvbLibraryHistory");
       }
 
       let pathParams = {
@@ -1764,9 +2088,95 @@ export default class SfvbApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SfvbLibraryEntry;
+      let returnType = SfvbLibraryHistoryEntry;
       return this.apiClient.callApi(
-        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'GET',
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/history', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbLibraryShareTargets operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryShareTargetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the accounts a library entry can be shared with
+     * The calling account's linked accounts, each with its merchant id and company.  These are the only merchants a share can name. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryShareTargetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget}
+     */
+    getSfvbLibraryShareTargets(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbLibraryShareTargets");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryShareTarget;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/share_targets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbLibraryTaxonomy operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryTaxonomyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the allowed library tags
+     * The fixed tag list for purpose, section, industry and style, each tag with a one line description.  Saving an entry refuses any tag not on it with sfvb.library_taxonomy_unknown, naming the closest one.  The same tags are the facet_purpose, facet_section, facet_industry and facet_style search facets. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryTaxonomyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog}
+     */
+    getSfvbLibraryTaxonomy(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbLibraryTaxonomy");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryTaxonomyCatalog;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/taxonomy', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2890,20 +3300,23 @@ export default class SfvbApi {
      * Callback function to receive the result of the installSfvbLibraryEntry operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~installSfvbLibraryEntryCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Install a library entry into a storefront
-     * Copies the fragment's referenced assets into the storefront file system and returns the CJSON with its paths resolved, ready to place.  This writes, which is why it is a POST rather than the GET the internal admin endpoint uses.  It also requires sfvb_publish, because the assets land in the shared storefront file system, which is served to shoppers regardless of which theme is active, so no amount of working inside a duplicate theme isolates them. 
+     * Copies the fragment's referenced files into the storefront file system and returns a receipt with the CJSON's paths resolved, ready to place.  It never places the CJSON.  Read content_manifest first; executable content needs acknowledge_executable true.  A file that already exists with different content is a conflict - on_conflict fail (the default) refuses with 409 and writes nothing, skip keeps the existing file, overwrite replaces it.  A recipient installs a published revision.  This writes, which is why it is a POST, and it requires sfvb_publish because the files land in the shared storefront file system, which is served to shoppers whichever theme is active. 
      * @param {Number} storefront_oid 
      * @param {Number} library_oid 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryInstallRequest} opts.install_request Revision, conflict handling and acknowledgement
      * @param {module:com.ultracart.admin.v2/SfvbApi~installSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt}
      */
-    installSfvbLibraryEntry(storefront_oid, library_oid, callback) {
-      let postBody = null;
+    installSfvbLibraryEntry(storefront_oid, library_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['install_request'];
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
         throw new Error("Missing the required parameter 'storefront_oid' when calling installSfvbLibraryEntry");
@@ -2925,9 +3338,9 @@ export default class SfvbApi {
       };
 
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = [];
+      let contentTypes = ['application/json; charset=UTF-8'];
       let accepts = ['application/json'];
-      let returnType = SfvbLibraryEntry;
+      let returnType = SfvbLibraryInstallReceipt;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/install', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -3275,6 +3688,49 @@ export default class SfvbApi {
       let returnType = SfvbItemContainersResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/item_containers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbLibraryInstalls operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbLibraryInstallsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryInstallRecord} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the library entries installed on a storefront
+     * Each entry's most recently installed revision, its latest published revision and update_available.  Nothing updates automatically.  An entry this account can no longer see is listed without its name. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbLibraryInstallsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryInstallRecord}
+     */
+    listSfvbLibraryInstalls(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbLibraryInstalls");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryInstallRecord;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/installs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3671,6 +4127,66 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/move', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the publishSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~publishSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Publish a library entry's draft
+     * Freezes the draft as a published revision at its revision_number and sets who can see it.  Owner only, with the draft's hash_sha256 as If-Match.  Always needs sfvb_publish, because it changes what other merchants can install.  Images, fonts, stylesheets and media must be relative paths, and credential shaped strings are refused.  Public also needs the library publisher property on the account and no executable content at all - no script, html, embed, css or velocity elements.  After those checks an automated AI review reads the fragment, which can take up to about a minute.  A clear violation both of its models agree on refuses any publish with sfvb.library_ai_review_blocked.  A public publish also needs its approval, otherwise sfvb.library_ai_review_inconclusive.  The result is in content_manifest.ai_review. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryPublishRequest} publish_request Visibility and release notes
+     * @param {module:com.ultracart.admin.v2/SfvbApi~publishSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    publishSfvbLibraryEntry(storefront_oid, library_oid, If_Match, publish_request, callback) {
+      let postBody = publish_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling publishSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling publishSfvbLibraryEntry");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling publishSfvbLibraryEntry");
+      }
+      // verify the required parameter 'publish_request' is set
+      if (publish_request === undefined || publish_request === null) {
+        throw new Error("Missing the required parameter 'publish_request' when calling publishSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/publish', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5054,7 +5570,7 @@ export default class SfvbApi {
 
     /**
      * Search the element library
-     * Known-good CJSON fragments a human already built out of real elements.  This is what a lint warning about a monolithic html element should point at - a warning that names a fragment solving the same problem is an instruction, where a warning on its own is only criticism.  Results are terse; fetch a single entry for its CJSON.  Narrow with facet_{name}={option} query parameters. 
+     * Known-good CJSON fragments a human already built out of real elements.  This is what a lint warning about a monolithic html element should point at - a warning that names a fragment solving the same problem is an instruction, where a warning on its own is only criticism.  Results are terse; fetch a single entry for its CJSON.  Narrow with a query parameter named after a facet, such as facet_purpose, whose value is the facet name, a colon and one of its options.  Besides element type and author, the facets include purpose, section, industry and style from library/taxonomy, and the search text matches those tags too.  Results follow the same rules as reading one entry, so others see published revisions only. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.segment 
@@ -5092,6 +5608,120 @@ export default class SfvbApi {
       let returnType = SfvbLibraryResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the setSfvbLibraryScreenshot operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~setSfvbLibraryScreenshotCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Set a library entry's screenshot
+     * Three calls, like the other uploads.  Request an upload URL with files/upload_url/png, PUT the PNG bytes to it, then call this with the key, the sha256 of those bytes and where the image came from.  Owner only, with the draft's hash_sha256 as If-Match.  The PNG must be at most 5 MB and 4096 pixels a side; it is re-encoded, which drops any metadata, and a thumbnail is made from it before this returns.  Capture it with test data only.  A refused image leaves the previous screenshot in place.  Other merchants see a new screenshot only after the next publish, whose review checks it. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryScreenshotRequest} screenshot_request The staged PNG
+     * @param {module:com.ultracart.admin.v2/SfvbApi~setSfvbLibraryScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    setSfvbLibraryScreenshot(storefront_oid, library_oid, If_Match, screenshot_request, callback) {
+      let postBody = screenshot_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling setSfvbLibraryScreenshot");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling setSfvbLibraryScreenshot");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling setSfvbLibraryScreenshot");
+      }
+      // verify the required parameter 'screenshot_request' is set
+      if (screenshot_request === undefined || screenshot_request === null) {
+        throw new Error("Missing the required parameter 'screenshot_request' when calling setSfvbLibraryScreenshot");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/screenshot', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the shareSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~shareSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Share a published library entry with a linked account
+     * Owner only, and always needs sfvb_publish.  The merchant must be one share_targets lists, and the entry must have a published revision, which is what the recipient sees.  The published revision is checked again for absolute asset URLs and credentials.  Idempotent. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryShareRequest} share_request The linked account
+     * @param {module:com.ultracart.admin.v2/SfvbApi~shareSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    shareSfvbLibraryEntry(storefront_oid, library_oid, share_request, callback) {
+      let postBody = share_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling shareSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling shareSfvbLibraryEntry");
+      }
+      // verify the required parameter 'share_request' is set
+      if (share_request === undefined || share_request === null) {
+        throw new Error("Missing the required parameter 'share_request' when calling shareSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/shares', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5195,6 +5825,163 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the unfavoriteSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~unfavoriteSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a library entry from favorites
+     * Removes the calling user's bookmark.  Idempotent. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~unfavoriteSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    unfavoriteSfvbLibraryEntry(storefront_oid, library_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling unfavoriteSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling unfavoriteSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/favorite', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the unpublishSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~unpublishSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Narrow who can see a library entry
+     * Sets visibility to shared or private.  Owner only, and always needs sfvb_publish.  Published revisions are kept and storefronts that already installed the entry keep their copies. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryPublishRequest} unpublish_request The narrower visibility
+     * @param {module:com.ultracart.admin.v2/SfvbApi~unpublishSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    unpublishSfvbLibraryEntry(storefront_oid, library_oid, unpublish_request, callback) {
+      let postBody = unpublish_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling unpublishSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling unpublishSfvbLibraryEntry");
+      }
+      // verify the required parameter 'unpublish_request' is set
+      if (unpublish_request === undefined || unpublish_request === null) {
+        throw new Error("Missing the required parameter 'unpublish_request' when calling unpublishSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/unpublish', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the unshareSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~unshareSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryUnshareResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Stop sharing a library entry with an account
+     * Owner only, and always needs sfvb_publish.  Stops further installs by that account.  Its existing installs keep their copies and are listed in the result.  Idempotent, and still works while the library is turned off. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} merchant_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~unshareSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryUnshareResult}
+     */
+    unshareSfvbLibraryEntry(storefront_oid, library_oid, merchant_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling unshareSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling unshareSfvbLibraryEntry");
+      }
+      // verify the required parameter 'merchant_id' is set
+      if (merchant_id === undefined || merchant_id === null) {
+        throw new Error("Missing the required parameter 'merchant_id' when calling unshareSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid,
+        'merchant_id': merchant_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryUnshareResult;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/shares/{merchant_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateSfvbBlogPost operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbBlogPostCallback
      * @param {String} error Error message, if any.
@@ -5243,6 +6030,66 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbLibraryEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbLibraryEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a library entry's draft
+     * A full replace of the draft's fields.  Owner only.  Send the hash_sha256 you read as If-Match.  Every save increments revision_number; nothing other merchants see changes until the draft is published.  A changed fragment is re-scanned and its images copied again, and screenshot_stale tells you to retake the screenshot. 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_oid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryEntryRequest} library_entry The whole entry
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbLibraryEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryEntry}
+     */
+    updateSfvbLibraryEntry(storefront_oid, library_oid, If_Match, library_entry, callback) {
+      let postBody = library_entry;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_oid' is set
+      if (library_oid === undefined || library_oid === null) {
+        throw new Error("Missing the required parameter 'library_oid' when calling updateSfvbLibraryEntry");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbLibraryEntry");
+      }
+      // verify the required parameter 'library_entry' is set
+      if (library_entry === undefined || library_entry === null) {
+        throw new Error("Missing the required parameter 'library_entry' when calling updateSfvbLibraryEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_oid': library_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbLibraryEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
