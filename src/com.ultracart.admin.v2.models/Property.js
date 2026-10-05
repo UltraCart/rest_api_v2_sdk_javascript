@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Property model module.
  * @module com.ultracart.admin.v2.models/Property
- * @version 4.1.185
+ * @version 4.1.186
  */
 class Property {
     /**

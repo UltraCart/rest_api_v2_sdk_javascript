@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbLibraryManifestFinding from './SfvbLibraryManifestFinding';
 
 /**
  * The SfvbLibraryAiReview model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryAiReview
- * @version 4.1.185
+ * @version 4.1.186
  */
 class SfvbLibraryAiReview {
     /**
@@ -48,7 +49,7 @@ class SfvbLibraryAiReview {
             obj = obj || new SfvbLibraryAiReview();
 
             if (data.hasOwnProperty('findings')) {
-                obj['findings'] = ApiClient.convertToType(data['findings'], Object);
+                obj['findings'] = ApiClient.convertToType(data['findings'], [SfvbLibraryManifestFinding]);
             }
             if (data.hasOwnProperty('prompt_version')) {
                 obj['prompt_version'] = ApiClient.convertToType(data['prompt_version'], 'String');
@@ -74,7 +75,7 @@ class SfvbLibraryAiReview {
 
 /**
  * What the reviewers found.  detail is the category followed by the quoted evidence.
- * @member {Object} findings
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding>} findings
  */
 SfvbLibraryAiReview.prototype['findings'] = undefined;
 

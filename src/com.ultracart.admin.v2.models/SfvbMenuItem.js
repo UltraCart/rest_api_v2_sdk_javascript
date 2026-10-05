@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbMenuItem model module.
  * @module com.ultracart.admin.v2.models/SfvbMenuItem
- * @version 4.1.185
+ * @version 4.1.186
  */
 class SfvbMenuItem {
     /**

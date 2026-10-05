@@ -1048,6 +1048,7 @@ docs/SfvbLibraryInstallReceipt.md
 docs/SfvbLibraryInstallRecord.md
 docs/SfvbLibraryInstallRequest.md
 docs/SfvbLibraryInstallsResponse.md
+docs/SfvbLibraryManifestFinding.md
 docs/SfvbLibraryParameter.md
 docs/SfvbLibraryPublishRequest.md
 docs/SfvbLibraryResponse.md
@@ -1057,6 +1058,8 @@ docs/SfvbLibraryShareTarget.md
 docs/SfvbLibraryShareTargetsResponse.md
 docs/SfvbLibraryTaxonomy.md
 docs/SfvbLibraryTaxonomyCatalog.md
+docs/SfvbLibraryTaxonomyDimension.md
+docs/SfvbLibraryTaxonomyTag.md
 docs/SfvbLibraryUnshareResult.md
 docs/SfvbMenu.md
 docs/SfvbMenuItem.md
@@ -2274,6 +2277,7 @@ src/com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt.js
 src/com.ultracart.admin.v2.models/SfvbLibraryInstallRecord.js
 src/com.ultracart.admin.v2.models/SfvbLibraryInstallRequest.js
 src/com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse.js
+src/com.ultracart.admin.v2.models/SfvbLibraryManifestFinding.js
 src/com.ultracart.admin.v2.models/SfvbLibraryParameter.js
 src/com.ultracart.admin.v2.models/SfvbLibraryPublishRequest.js
 src/com.ultracart.admin.v2.models/SfvbLibraryResponse.js
@@ -2283,6 +2287,8 @@ src/com.ultracart.admin.v2.models/SfvbLibraryShareTarget.js
 src/com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse.js
 src/com.ultracart.admin.v2.models/SfvbLibraryTaxonomy.js
 src/com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog.js
+src/com.ultracart.admin.v2.models/SfvbLibraryTaxonomyDimension.js
+src/com.ultracart.admin.v2.models/SfvbLibraryTaxonomyTag.js
 src/com.ultracart.admin.v2.models/SfvbLibraryUnshareResult.js
 src/com.ultracart.admin.v2.models/SfvbMenu.js
 src/com.ultracart.admin.v2.models/SfvbMenuItem.js

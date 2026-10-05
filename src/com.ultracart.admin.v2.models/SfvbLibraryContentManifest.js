@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import SfvbLibraryAiReview from './SfvbLibraryAiReview';
+import SfvbLibraryManifestFinding from './SfvbLibraryManifestFinding';
 
 /**
  * The SfvbLibraryContentManifest model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryContentManifest
- * @version 4.1.185
+ * @version 4.1.186
  */
 class SfvbLibraryContentManifest {
     /**
@@ -49,19 +50,19 @@ class SfvbLibraryContentManifest {
             obj = obj || new SfvbLibraryContentManifest();
 
             if (data.hasOwnProperty('absolute_asset_urls')) {
-                obj['absolute_asset_urls'] = ApiClient.convertToType(data['absolute_asset_urls'], Object);
+                obj['absolute_asset_urls'] = ApiClient.convertToType(data['absolute_asset_urls'], [SfvbLibraryManifestFinding]);
             }
             if (data.hasOwnProperty('ai_review')) {
                 obj['ai_review'] = SfvbLibraryAiReview.constructFromObject(data['ai_review']);
             }
             if (data.hasOwnProperty('executable')) {
-                obj['executable'] = ApiClient.convertToType(data['executable'], Object);
+                obj['executable'] = ApiClient.convertToType(data['executable'], [SfvbLibraryManifestFinding]);
             }
             if (data.hasOwnProperty('rejected')) {
-                obj['rejected'] = ApiClient.convertToType(data['rejected'], Object);
+                obj['rejected'] = ApiClient.convertToType(data['rejected'], [SfvbLibraryManifestFinding]);
             }
             if (data.hasOwnProperty('secrets')) {
-                obj['secrets'] = ApiClient.convertToType(data['secrets'], Object);
+                obj['secrets'] = ApiClient.convertToType(data['secrets'], [SfvbLibraryManifestFinding]);
             }
         }
         return obj;
@@ -72,7 +73,7 @@ class SfvbLibraryContentManifest {
 
 /**
  * Images, fonts, stylesheets, scripts or media loaded from an absolute URL.  A shared or public entry must use relative paths so it never pulls files from another storefront or site.
- * @member {Object} absolute_asset_urls
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding>} absolute_asset_urls
  */
 SfvbLibraryContentManifest.prototype['absolute_asset_urls'] = undefined;
 
@@ -83,19 +84,19 @@ SfvbLibraryContentManifest.prototype['ai_review'] = undefined;
 
 /**
  * Content that runs in a shopper's browser or on the server.  Script, html, embed, css and velocity elements, script in markup, Velocity, script bearing CSS and unsafe URL schemes.  An entry with any of these cannot be made public, and installing it needs an explicit acknowledgement.
- * @member {Object} executable
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding>} executable
  */
 SfvbLibraryContentManifest.prototype['executable'] = undefined;
 
 /**
  * Card skimming and obfuscation signals.  An entry with any is refused outright, whoever owns it.
- * @member {Object} rejected
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding>} rejected
  */
 SfvbLibraryContentManifest.prototype['rejected'] = undefined;
 
 /**
  * Strings shaped like credentials, by kind only.  An entry with any cannot be shared or made public.
- * @member {Object} secrets
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding>} secrets
  */
 SfvbLibraryContentManifest.prototype['secrets'] = undefined;
 

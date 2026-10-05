@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbLibraryTaxonomyDimension from './SfvbLibraryTaxonomyDimension';
 
 /**
  * The SfvbLibraryTaxonomyCatalog model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog
- * @version 4.1.185
+ * @version 4.1.186
  */
 class SfvbLibraryTaxonomyCatalog {
     /**
@@ -48,7 +49,7 @@ class SfvbLibraryTaxonomyCatalog {
             obj = obj || new SfvbLibraryTaxonomyCatalog();
 
             if (data.hasOwnProperty('dimensions')) {
-                obj['dimensions'] = ApiClient.convertToType(data['dimensions'], Object);
+                obj['dimensions'] = ApiClient.convertToType(data['dimensions'], [SfvbLibraryTaxonomyDimension]);
             }
         }
         return obj;
@@ -59,7 +60,7 @@ class SfvbLibraryTaxonomyCatalog {
 
 /**
  * purpose, section, industry and style, each with its allowed tags.
- * @member {Object} dimensions
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyDimension>} dimensions
  */
 SfvbLibraryTaxonomyCatalog.prototype['dimensions'] = undefined;
 

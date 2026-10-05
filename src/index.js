@@ -1041,6 +1041,7 @@ import SfvbLibraryInstallReceipt from './com.ultracart.admin.v2.models/SfvbLibra
 import SfvbLibraryInstallRecord from './com.ultracart.admin.v2.models/SfvbLibraryInstallRecord';
 import SfvbLibraryInstallRequest from './com.ultracart.admin.v2.models/SfvbLibraryInstallRequest';
 import SfvbLibraryInstallsResponse from './com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse';
+import SfvbLibraryManifestFinding from './com.ultracart.admin.v2.models/SfvbLibraryManifestFinding';
 import SfvbLibraryParameter from './com.ultracart.admin.v2.models/SfvbLibraryParameter';
 import SfvbLibraryPublishRequest from './com.ultracart.admin.v2.models/SfvbLibraryPublishRequest';
 import SfvbLibraryResponse from './com.ultracart.admin.v2.models/SfvbLibraryResponse';
@@ -1050,6 +1051,8 @@ import SfvbLibraryShareTarget from './com.ultracart.admin.v2.models/SfvbLibraryS
 import SfvbLibraryShareTargetsResponse from './com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse';
 import SfvbLibraryTaxonomy from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomy';
 import SfvbLibraryTaxonomyCatalog from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog';
+import SfvbLibraryTaxonomyDimension from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomyDimension';
+import SfvbLibraryTaxonomyTag from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomyTag';
 import SfvbLibraryUnshareResult from './com.ultracart.admin.v2.models/SfvbLibraryUnshareResult';
 import SfvbMenu from './com.ultracart.admin.v2.models/SfvbMenu';
 import SfvbMenuItem from './com.ultracart.admin.v2.models/SfvbMenuItem';
@@ -1284,7 +1287,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.185
+* @version 4.1.186
 */
 export {
     /**
@@ -7462,6 +7465,12 @@ export {
     SfvbLibraryInstallsResponse,
 
     /**
+     * The SfvbLibraryManifestFinding model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryManifestFinding}
+     */
+    SfvbLibraryManifestFinding,
+
+    /**
      * The SfvbLibraryParameter model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryParameter}
      */
@@ -7514,6 +7523,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog}
      */
     SfvbLibraryTaxonomyCatalog,
+
+    /**
+     * The SfvbLibraryTaxonomyDimension model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyDimension}
+     */
+    SfvbLibraryTaxonomyDimension,
+
+    /**
+     * The SfvbLibraryTaxonomyTag model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryTaxonomyTag}
+     */
+    SfvbLibraryTaxonomyTag,
 
     /**
      * The SfvbLibraryUnshareResult model constructor.

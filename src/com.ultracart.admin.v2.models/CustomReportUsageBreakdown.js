@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportUsageBreakdown model module.
  * @module com.ultracart.admin.v2.models/CustomReportUsageBreakdown
- * @version 4.1.185
+ * @version 4.1.186
  */
 class CustomReportUsageBreakdown {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellPathMoveRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellPathMoveRequest
- * @version 4.1.185
+ * @version 4.1.186
  */
 class SfvbUpsellPathMoveRequest {
     /**

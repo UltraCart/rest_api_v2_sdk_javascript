@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailCommseqStepLogsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqStepLogsResponse
- * @version 4.1.185
+ * @version 4.1.186
  */
 class EmailCommseqStepLogsResponse {
     /**
