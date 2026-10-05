@@ -17,7 +17,7 @@ import SfvbUpsellItemLogicItem from './SfvbUpsellItemLogicItem';
 /**
  * The SfvbUpsellItemLogic model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellItemLogic
- * @version 4.1.182
+ * @version 4.1.183
  */
 class SfvbUpsellItemLogic {
     /**
