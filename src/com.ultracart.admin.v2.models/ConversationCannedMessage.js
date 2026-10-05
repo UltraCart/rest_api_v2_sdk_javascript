@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationCannedMessage model module.
  * @module com.ultracart.admin.v2.models/ConversationCannedMessage
- * @version 4.1.184
+ * @version 4.1.185
  */
 class ConversationCannedMessage {
     /**

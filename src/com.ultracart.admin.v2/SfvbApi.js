@@ -52,15 +52,15 @@ import SfvbItemSeoRequest from '../com.ultracart.admin.v2.models/SfvbItemSeoRequ
 import SfvbLibraryDeleteResult from '../com.ultracart.admin.v2.models/SfvbLibraryDeleteResult';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryEntryRequest from '../com.ultracart.admin.v2.models/SfvbLibraryEntryRequest';
-import SfvbLibraryHistoryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry';
+import SfvbLibraryHistoryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse';
 import SfvbLibraryInstallReceipt from '../com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt';
-import SfvbLibraryInstallRecord from '../com.ultracart.admin.v2.models/SfvbLibraryInstallRecord';
 import SfvbLibraryInstallRequest from '../com.ultracart.admin.v2.models/SfvbLibraryInstallRequest';
+import SfvbLibraryInstallsResponse from '../com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse';
 import SfvbLibraryPublishRequest from '../com.ultracart.admin.v2.models/SfvbLibraryPublishRequest';
 import SfvbLibraryResponse from '../com.ultracart.admin.v2.models/SfvbLibraryResponse';
 import SfvbLibraryScreenshotRequest from '../com.ultracart.admin.v2.models/SfvbLibraryScreenshotRequest';
 import SfvbLibraryShareRequest from '../com.ultracart.admin.v2.models/SfvbLibraryShareRequest';
-import SfvbLibraryShareTarget from '../com.ultracart.admin.v2.models/SfvbLibraryShareTarget';
+import SfvbLibraryShareTargetsResponse from '../com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse';
 import SfvbLibraryTaxonomyCatalog from '../com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog';
 import SfvbLibraryUnshareResult from '../com.ultracart.admin.v2.models/SfvbLibraryUnshareResult';
 import SfvbMenu from '../com.ultracart.admin.v2.models/SfvbMenu';
@@ -121,7 +121,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.184
+* @version 4.1.185
 */
 export default class SfvbApi {
 
@@ -2051,7 +2051,7 @@ export default class SfvbApi {
      * Callback function to receive the result of the getSfvbLibraryHistory operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryHistoryCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2061,7 +2061,7 @@ export default class SfvbApi {
      * @param {Number} storefront_oid 
      * @param {Number} library_oid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryHistoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse}
      */
     getSfvbLibraryHistory(storefront_oid, library_oid, callback) {
       let postBody = null;
@@ -2088,7 +2088,7 @@ export default class SfvbApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SfvbLibraryHistoryEntry;
+      let returnType = SfvbLibraryHistoryResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -2100,7 +2100,7 @@ export default class SfvbApi {
      * Callback function to receive the result of the getSfvbLibraryShareTargets operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryShareTargetsCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2109,7 +2109,7 @@ export default class SfvbApi {
      * The calling account's linked accounts, each with its merchant id and company.  These are the only merchants a share can name. 
      * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbLibraryShareTargetsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse}
      */
     getSfvbLibraryShareTargets(storefront_oid, callback) {
       let postBody = null;
@@ -2131,7 +2131,7 @@ export default class SfvbApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SfvbLibraryShareTarget;
+      let returnType = SfvbLibraryShareTargetsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/share_targets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -3697,7 +3697,7 @@ export default class SfvbApi {
      * Callback function to receive the result of the listSfvbLibraryInstalls operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbLibraryInstallsCallback
      * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryInstallRecord} data The data returned by the service call.
+     * @param {module:com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -3706,7 +3706,7 @@ export default class SfvbApi {
      * Each entry's most recently installed revision, its latest published revision and update_available.  Nothing updates automatically.  An entry this account can no longer see is listed without its name. 
      * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbLibraryInstallsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryInstallRecord}
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse}
      */
     listSfvbLibraryInstalls(storefront_oid, callback) {
       let postBody = null;
@@ -3728,7 +3728,7 @@ export default class SfvbApi {
       let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = SfvbLibraryInstallRecord;
+      let returnType = SfvbLibraryInstallsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/installs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

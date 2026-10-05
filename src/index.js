@@ -1035,16 +1035,19 @@ import SfvbLibraryEntry from './com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryEntryRequest from './com.ultracart.admin.v2.models/SfvbLibraryEntryRequest';
 import SfvbLibraryFacet from './com.ultracart.admin.v2.models/SfvbLibraryFacet';
 import SfvbLibraryHistoryEntry from './com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry';
+import SfvbLibraryHistoryResponse from './com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse';
 import SfvbLibraryInstallConflict from './com.ultracart.admin.v2.models/SfvbLibraryInstallConflict';
 import SfvbLibraryInstallReceipt from './com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt';
 import SfvbLibraryInstallRecord from './com.ultracart.admin.v2.models/SfvbLibraryInstallRecord';
 import SfvbLibraryInstallRequest from './com.ultracart.admin.v2.models/SfvbLibraryInstallRequest';
+import SfvbLibraryInstallsResponse from './com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse';
 import SfvbLibraryParameter from './com.ultracart.admin.v2.models/SfvbLibraryParameter';
 import SfvbLibraryPublishRequest from './com.ultracart.admin.v2.models/SfvbLibraryPublishRequest';
 import SfvbLibraryResponse from './com.ultracart.admin.v2.models/SfvbLibraryResponse';
 import SfvbLibraryScreenshotRequest from './com.ultracart.admin.v2.models/SfvbLibraryScreenshotRequest';
 import SfvbLibraryShareRequest from './com.ultracart.admin.v2.models/SfvbLibraryShareRequest';
 import SfvbLibraryShareTarget from './com.ultracart.admin.v2.models/SfvbLibraryShareTarget';
+import SfvbLibraryShareTargetsResponse from './com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse';
 import SfvbLibraryTaxonomy from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomy';
 import SfvbLibraryTaxonomyCatalog from './com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog';
 import SfvbLibraryUnshareResult from './com.ultracart.admin.v2.models/SfvbLibraryUnshareResult';
@@ -1281,7 +1284,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.184
+* @version 4.1.185
 */
 export {
     /**
@@ -7423,6 +7426,12 @@ export {
     SfvbLibraryHistoryEntry,
 
     /**
+     * The SfvbLibraryHistoryResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse}
+     */
+    SfvbLibraryHistoryResponse,
+
+    /**
      * The SfvbLibraryInstallConflict model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryInstallConflict}
      */
@@ -7445,6 +7454,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryInstallRequest}
      */
     SfvbLibraryInstallRequest,
+
+    /**
+     * The SfvbLibraryInstallsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse}
+     */
+    SfvbLibraryInstallsResponse,
 
     /**
      * The SfvbLibraryParameter model constructor.
@@ -7481,6 +7496,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbLibraryShareTarget}
      */
     SfvbLibraryShareTarget,
+
+    /**
+     * The SfvbLibraryShareTargetsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse}
+     */
+    SfvbLibraryShareTargetsResponse,
 
     /**
      * The SfvbLibraryTaxonomy model constructor.

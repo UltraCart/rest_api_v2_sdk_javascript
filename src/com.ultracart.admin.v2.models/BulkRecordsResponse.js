@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The BulkRecordsResponse model module.
  * @module com.ultracart.admin.v2.models/BulkRecordsResponse
- * @version 4.1.184
+ * @version 4.1.185
  */
 class BulkRecordsResponse {
     /**

@@ -17,7 +17,7 @@ import SfvbStorefront from './SfvbStorefront';
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.184
+ * @version 4.1.185
  */
 class SfvbWhoamiResponse {
     /**

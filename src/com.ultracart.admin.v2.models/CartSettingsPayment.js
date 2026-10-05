@@ -19,7 +19,7 @@ import CartSettingsPaymentPayPal from './CartSettingsPaymentPayPal';
 /**
  * The CartSettingsPayment model module.
  * @module com.ultracart.admin.v2.models/CartSettingsPayment
- * @version 4.1.184
+ * @version 4.1.185
  */
 class CartSettingsPayment {
     /**

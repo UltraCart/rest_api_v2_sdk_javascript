@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The HitPageViewMetaData model module.
  * @module com.ultracart.admin.v2.models/HitPageViewMetaData
- * @version 4.1.184
+ * @version 4.1.185
  */
 class HitPageViewMetaData {
     /**

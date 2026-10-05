@@ -17,7 +17,7 @@ import TaxState from './TaxState';
 /**
  * The TaxCountry model module.
  * @module com.ultracart.admin.v2.models/TaxCountry
- * @version 4.1.184
+ * @version 4.1.185
  */
 class TaxCountry {
     /**

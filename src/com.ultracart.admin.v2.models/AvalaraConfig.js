@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AvalaraConfig model module.
  * @module com.ultracart.admin.v2.models/AvalaraConfig
- * @version 4.1.184
+ * @version 4.1.185
  */
 class AvalaraConfig {
     /**

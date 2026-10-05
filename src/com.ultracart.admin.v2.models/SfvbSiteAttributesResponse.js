@@ -17,7 +17,7 @@ import SfvbSiteAttribute from './SfvbSiteAttribute';
 /**
  * The SfvbSiteAttributesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSiteAttributesResponse
- * @version 4.1.184
+ * @version 4.1.185
  */
 class SfvbSiteAttributesResponse {
     /**

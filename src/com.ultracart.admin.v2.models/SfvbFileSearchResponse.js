@@ -17,7 +17,7 @@ import SfvbFileEntry from './SfvbFileEntry';
 /**
  * The SfvbFileSearchResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchResponse
- * @version 4.1.184
+ * @version 4.1.185
  */
 class SfvbFileSearchResponse {
     /**

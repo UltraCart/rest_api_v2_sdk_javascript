@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxJarConfig model module.
  * @module com.ultracart.admin.v2.models/TaxJarConfig
- * @version 4.1.184
+ * @version 4.1.185
  */
 class TaxJarConfig {
     /**
