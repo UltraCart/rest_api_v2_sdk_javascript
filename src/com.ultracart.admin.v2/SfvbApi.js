@@ -43,6 +43,15 @@ import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileV
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbI18nGlossary from '../com.ultracart.admin.v2.models/SfvbI18nGlossary';
+import SfvbI18nGlossaryRequest from '../com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest';
+import SfvbI18nLanguageEnableRequest from '../com.ultracart.admin.v2.models/SfvbI18nLanguageEnableRequest';
+import SfvbI18nLanguagesResponse from '../com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse';
+import SfvbI18nMachineTranslationsResponse from '../com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse';
+import SfvbI18nMessage from '../com.ultracart.admin.v2.models/SfvbI18nMessage';
+import SfvbI18nMessageWriteRequest from '../com.ultracart.admin.v2.models/SfvbI18nMessageWriteRequest';
+import SfvbI18nMessagesResponse from '../com.ultracart.admin.v2.models/SfvbI18nMessagesResponse';
+import SfvbI18nResetResponse from '../com.ultracart.admin.v2.models/SfvbI18nResetResponse';
 import SfvbItemAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
 import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemContentRequest';
@@ -121,7 +130,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.189
+* @version 4.1.190
 */
 export default class SfvbApi {
 
@@ -1003,6 +1012,61 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the disableSfvbI18nLanguage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~disableSfvbI18nLanguageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Disable a language
+     * Stops serving a language.  Its hand and machine translations are kept and come back when it is enabled again.  The default language cannot be disabled.  Already disabled answers changed false.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} code 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~disableSfvbI18nLanguageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse}
+     */
+    disableSfvbI18nLanguage(storefront_oid, code, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling disableSfvbI18nLanguage");
+      }
+      // verify the required parameter 'code' is set
+      if (code === undefined || code === null) {
+        throw new Error("Missing the required parameter 'code' when calling disableSfvbI18nLanguage");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling disableSfvbI18nLanguage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'code': code
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nLanguagesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/languages/{code}/disable', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the disableSfvbUpsellOffer operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~disableSfvbUpsellOfferCallback
      * @param {String} error Error message, if any.
@@ -1397,6 +1461,66 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/duplicate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the enableSfvbI18nLanguage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~enableSfvbI18nLanguageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Enable a language
+     * Turns a language on.  It is served to shoppers and machine translated, which is billed per character, so acknowledge_cost must be true and the caller must be a person (device authorization).  Records the same billing note as the merchant admin.  Already enabled answers changed false.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} code 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nLanguageEnableRequest} language_enable_request The cost acknowledgement
+     * @param {module:com.ultracart.admin.v2/SfvbApi~enableSfvbI18nLanguageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse}
+     */
+    enableSfvbI18nLanguage(storefront_oid, code, If_Match, language_enable_request, callback) {
+      let postBody = language_enable_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling enableSfvbI18nLanguage");
+      }
+      // verify the required parameter 'code' is set
+      if (code === undefined || code === null) {
+        throw new Error("Missing the required parameter 'code' when calling enableSfvbI18nLanguage");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling enableSfvbI18nLanguage");
+      }
+      // verify the required parameter 'language_enable_request' is set
+      if (language_enable_request === undefined || language_enable_request === null) {
+        throw new Error("Missing the required parameter 'language_enable_request' when calling enableSfvbI18nLanguage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'code': code
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nLanguagesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/languages/{code}/enable', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1940,6 +2064,249 @@ export default class SfvbApi {
       let returnType = SfvbFileUploadUrlResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/upload_url/{extension}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbI18nGlossary operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nGlossaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nGlossary} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the storefront's translation glossary
+     * The storefront's glossary, plain markdown with terms not to translate, required translations, tone and words to avoid.  Read it before translating anything.  Empty when none has been saved.  Each storefront has its own, because a storefront is often its own brand. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nGlossaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nGlossary}
+     */
+    getSfvbI18nGlossary(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbI18nGlossary");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nGlossary;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/glossary', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbI18nLanguages operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nLanguagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's languages
+     * Every language the storefront can be translated into, with UltraCart's three-letter code (ESP for Spanish), the other spellings accepted, whether it is enabled, the default and right to left.  Language maps in CJSON and render take the code.  English is the source of every string.  Also gives the machine translation estimate for one more language, and the hash_sha256 an enable or disable sends back. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nLanguagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse}
+     */
+    getSfvbI18nLanguages(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbI18nLanguages");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nLanguagesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/languages', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbI18nMachineTranslations operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMachineTranslationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read where a widget setting's translations come from
+     * For one multilingual widget setting, named by widget_id and property on a theme (the active theme unless theme_oid is given), each enabled language's text and whether a shopper sees a hand translation from the language map, a machine translation, one still queued (pending) or none yet.  The setting is registered when its container is saved.  Nothing is generated by reading it. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {String} opts.widget_id 
+     * @param {String} opts.property 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMachineTranslationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse}
+     */
+    getSfvbI18nMachineTranslations(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbI18nMachineTranslations");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid'],
+        'widget_id': opts['widget_id'],
+        'property': opts['property']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nMachineTranslationsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/machine_translations', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbI18nMessage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMessage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one built-in message
+     * One message by key, with the hash_sha256 a set or reset sends back. 
+     * @param {Number} storefront_oid 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nMessage}
+     */
+    getSfvbI18nMessage(storefront_oid, key, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbI18nMessage");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling getSfvbI18nMessage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'key': key
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nMessage;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/messages/{key}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbI18nMessageMachineTranslations operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMessageMachineTranslationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read where a message's translations come from
+     * For one message, each enabled language's text and whether a shopper sees a hand translation, a machine translation, one still queued (pending) or none yet.  Nothing is generated by reading it. 
+     * @param {Number} storefront_oid 
+     * @param {String} key 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbI18nMessageMachineTranslationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse}
+     */
+    getSfvbI18nMessageMachineTranslations(storefront_oid, key, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbI18nMessageMachineTranslations");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling getSfvbI18nMessageMachineTranslations");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'key': key
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nMachineTranslationsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/messages/{key}/machine_translations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3639,6 +4006,63 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the listSfvbI18nMessages operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbI18nMessagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMessagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List built-in messages
+     * The system text templates render by key, such as checkout labels, for one theme (the active theme unless theme_oid is given).  Each message has its English, whether it was edited, and each enabled language's text with its source (hand, machine, pending or none).  A message appears the first time a page renders it.  q matches the key or the English.  overridden keeps messages with an edited English or a hand translation.  Paged by offset and limit (default 200, at most 500). 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {String} opts.q 
+     * @param {String} opts.language 
+     * @param {Boolean} opts.overridden 
+     * @param {Number} opts.offset 
+     * @param {Number} opts.limit 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbI18nMessagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nMessagesResponse}
+     */
+    listSfvbI18nMessages(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbI18nMessages");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid'],
+        'q': opts['q'],
+        'language': opts['language'],
+        'overridden': opts['overridden'],
+        'offset': opts['offset'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nMessagesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/messages', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listSfvbItemContainers operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbItemContainersCallback
      * @param {String} error Error message, if any.
@@ -4375,6 +4799,122 @@ export default class SfvbApi {
       let returnType = SfvbFileWriteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/content', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbI18nGlossary operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbI18nGlossaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nGlossary} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace the storefront's translation glossary
+     * Replaces the whole glossary, plain markdown up to 64 KB.  The server stores it and never interprets it; the agent follows it.  Send the hash_sha256 you read as If-Match, except for the first save.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest} glossary_request The glossary
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.If_Match hash_sha256 from the last read.  Not needed for the first save; otherwise 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbI18nGlossaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nGlossary}
+     */
+    putSfvbI18nGlossary(storefront_oid, glossary_request, opts, callback) {
+      opts = opts || {};
+      let postBody = glossary_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbI18nGlossary");
+      }
+      // verify the required parameter 'glossary_request' is set
+      if (glossary_request === undefined || glossary_request === null) {
+        throw new Error("Missing the required parameter 'glossary_request' when calling putSfvbI18nGlossary");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': opts['If_Match']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nGlossary;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/glossary', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbI18nMessage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbI18nMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMessage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change one built-in message
+     * Sets one message in any number of languages.  ENG replaces the English, which drops its machine translations so they regenerate.  Any other language becomes a hand translation.  Languages not named are left alone; empty text is refused.  Shoppers see it at once.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} key 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nMessageWriteRequest} message_write_request The languages to change
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbI18nMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nMessage}
+     */
+    putSfvbI18nMessage(storefront_oid, key, If_Match, message_write_request, opts, callback) {
+      opts = opts || {};
+      let postBody = message_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbI18nMessage");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling putSfvbI18nMessage");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling putSfvbI18nMessage");
+      }
+      // verify the required parameter 'message_write_request' is set
+      if (message_write_request === undefined || message_write_request === null) {
+        throw new Error("Missing the required parameter 'message_write_request' when calling putSfvbI18nMessage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'key': key
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid']
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nMessage;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/messages/{key}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5330,6 +5870,65 @@ export default class SfvbApi {
       let returnType = SfvbWidgetIdsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/widget_ids', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the resetSfvbI18nMessage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~resetSfvbI18nMessageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbI18nResetResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reset one built-in message
+     * Puts a message back to the template's text.  The merchant's English edit and hand translations stop serving at once and every language falls back to machine translation; the message comes back the next time a page renders it.  A message imported from an older theme's locale file is refused.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} key 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.theme_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~resetSfvbI18nMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbI18nResetResponse}
+     */
+    resetSfvbI18nMessage(storefront_oid, key, If_Match, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling resetSfvbI18nMessage");
+      }
+      // verify the required parameter 'key' is set
+      if (key === undefined || key === null) {
+        throw new Error("Missing the required parameter 'key' when calling resetSfvbI18nMessage");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling resetSfvbI18nMessage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'key': key
+      };
+      let queryParams = {
+        'theme_oid': opts['theme_oid']
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbI18nResetResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/i18n/messages/{key}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

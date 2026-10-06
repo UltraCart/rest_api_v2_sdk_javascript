@@ -1017,6 +1017,18 @@ import SfvbFileVersionsResponse from './com.ultracart.admin.v2.models/SfvbFileVe
 import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from './com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbI18nGlossary from './com.ultracart.admin.v2.models/SfvbI18nGlossary';
+import SfvbI18nGlossaryRequest from './com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest';
+import SfvbI18nLanguage from './com.ultracart.admin.v2.models/SfvbI18nLanguage';
+import SfvbI18nLanguageEnableRequest from './com.ultracart.admin.v2.models/SfvbI18nLanguageEnableRequest';
+import SfvbI18nLanguagesResponse from './com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse';
+import SfvbI18nMachineTranslationsResponse from './com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse';
+import SfvbI18nMessage from './com.ultracart.admin.v2.models/SfvbI18nMessage';
+import SfvbI18nMessageValue from './com.ultracart.admin.v2.models/SfvbI18nMessageValue';
+import SfvbI18nMessageWriteRequest from './com.ultracart.admin.v2.models/SfvbI18nMessageWriteRequest';
+import SfvbI18nMessagesResponse from './com.ultracart.admin.v2.models/SfvbI18nMessagesResponse';
+import SfvbI18nResetResponse from './com.ultracart.admin.v2.models/SfvbI18nResetResponse';
+import SfvbI18nTranslation from './com.ultracart.admin.v2.models/SfvbI18nTranslation';
 import SfvbItemAttribute from './com.ultracart.admin.v2.models/SfvbItemAttribute';
 import SfvbItemAttributeUpdate from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdate';
 import SfvbItemAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
@@ -1287,7 +1299,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.189
+* @version 4.1.190
 */
 export {
     /**
@@ -7319,6 +7331,78 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbFilesResponse}
      */
     SfvbFilesResponse,
+
+    /**
+     * The SfvbI18nGlossary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nGlossary}
+     */
+    SfvbI18nGlossary,
+
+    /**
+     * The SfvbI18nGlossaryRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest}
+     */
+    SfvbI18nGlossaryRequest,
+
+    /**
+     * The SfvbI18nLanguage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nLanguage}
+     */
+    SfvbI18nLanguage,
+
+    /**
+     * The SfvbI18nLanguageEnableRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nLanguageEnableRequest}
+     */
+    SfvbI18nLanguageEnableRequest,
+
+    /**
+     * The SfvbI18nLanguagesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse}
+     */
+    SfvbI18nLanguagesResponse,
+
+    /**
+     * The SfvbI18nMachineTranslationsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse}
+     */
+    SfvbI18nMachineTranslationsResponse,
+
+    /**
+     * The SfvbI18nMessage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nMessage}
+     */
+    SfvbI18nMessage,
+
+    /**
+     * The SfvbI18nMessageValue model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nMessageValue}
+     */
+    SfvbI18nMessageValue,
+
+    /**
+     * The SfvbI18nMessageWriteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nMessageWriteRequest}
+     */
+    SfvbI18nMessageWriteRequest,
+
+    /**
+     * The SfvbI18nMessagesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nMessagesResponse}
+     */
+    SfvbI18nMessagesResponse,
+
+    /**
+     * The SfvbI18nResetResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nResetResponse}
+     */
+    SfvbI18nResetResponse,
+
+    /**
+     * The SfvbI18nTranslation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbI18nTranslation}
+     */
+    SfvbI18nTranslation,
 
     /**
      * The SfvbItemAttribute model constructor.
