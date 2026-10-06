@@ -19,7 +19,7 @@ import ConversationPbxCallAiWhisper from './ConversationPbxCallAiWhisper';
 /**
  * The ConversationPbxCallAiEngagement model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallAiEngagement
- * @version 4.1.191
+ * @version 4.1.192
  */
 class ConversationPbxCallAiEngagement {
     /**

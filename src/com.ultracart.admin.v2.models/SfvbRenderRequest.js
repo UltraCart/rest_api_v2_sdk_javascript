@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRenderRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderRequest
- * @version 4.1.191
+ * @version 4.1.192
  */
 class SfvbRenderRequest {
     /**
@@ -160,7 +160,7 @@ SfvbRenderRequest.prototype['context_upsell_offer_oid'] = undefined;
 SfvbRenderRequest.prototype['edit_mode'] = undefined;
 
 /**
- * UltraCart language code such as ESP, enabled on the storefront.  Two-letter codes and English names are accepted.  Defaults to ENG.
+ * Three-letter ISO 639-2 language code in the bibliographic form (GER, FRE, CHI), with UltraCart exceptions such as ESP for Spanish.  Must be enabled on the storefront.  Defaults to ENG.
  * @member {String} language_iso_code
  */
 SfvbRenderRequest.prototype['language_iso_code'] = undefined;

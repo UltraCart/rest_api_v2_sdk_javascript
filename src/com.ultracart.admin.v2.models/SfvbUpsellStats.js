@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellStats model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellStats
- * @version 4.1.191
+ * @version 4.1.192
  */
 class SfvbUpsellStats {
     /**

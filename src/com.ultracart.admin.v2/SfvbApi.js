@@ -75,6 +75,10 @@ import SfvbLibraryUnshareResult from '../com.ultracart.admin.v2.models/SfvbLibra
 import SfvbMenu from '../com.ultracart.admin.v2.models/SfvbMenu';
 import SfvbMenuWriteRequest from '../com.ultracart.admin.v2.models/SfvbMenuWriteRequest';
 import SfvbMenusResponse from '../com.ultracart.admin.v2.models/SfvbMenusResponse';
+import SfvbNotFoundEntry from '../com.ultracart.admin.v2.models/SfvbNotFoundEntry';
+import SfvbNotFoundEntryResponse from '../com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse';
+import SfvbNotFoundPage from '../com.ultracart.admin.v2.models/SfvbNotFoundPage';
+import SfvbNotFoundResponse from '../com.ultracart.admin.v2.models/SfvbNotFoundResponse';
 import SfvbPageAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
 import SfvbPageBlogPostsRequest from '../com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest';
 import SfvbPageBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse';
@@ -99,6 +103,14 @@ import SfvbRecordingEventsResponse from '../com.ultracart.admin.v2.models/SfvbRe
 import SfvbRecordingResponse from '../com.ultracart.admin.v2.models/SfvbRecordingResponse';
 import SfvbRecordingSettingsRequest from '../com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest';
 import SfvbRecordingSettingsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
+import SfvbRedirect from '../com.ultracart.admin.v2.models/SfvbRedirect';
+import SfvbRedirectCheckResponse from '../com.ultracart.admin.v2.models/SfvbRedirectCheckResponse';
+import SfvbRedirectImportRequest from '../com.ultracart.admin.v2.models/SfvbRedirectImportRequest';
+import SfvbRedirectImportResponse from '../com.ultracart.admin.v2.models/SfvbRedirectImportResponse';
+import SfvbRedirectRequest from '../com.ultracart.admin.v2.models/SfvbRedirectRequest';
+import SfvbRedirectResolveResponse from '../com.ultracart.admin.v2.models/SfvbRedirectResolveResponse';
+import SfvbRedirectResponse from '../com.ultracart.admin.v2.models/SfvbRedirectResponse';
+import SfvbRedirectsResponse from '../com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
@@ -130,7 +142,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.191
+* @version 4.1.192
 */
 export default class SfvbApi {
 
@@ -352,6 +364,54 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}/images/attach', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the checkSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~checkSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectCheckResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a redirect rule without creating it
+     * Runs every check a create runs (loops, chains, duplicates, missing or external targets, system paths, live pages, the rule limit) and returns the findings.  Writes nothing. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectRequest} redirect_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~checkSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectCheckResponse}
+     */
+    checkSfvbRedirect(storefront_oid, redirect_request, callback) {
+      let postBody = redirect_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling checkSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_request' is set
+      if (redirect_request === undefined || redirect_request === null) {
+        throw new Error("Missing the required parameter 'redirect_request' when calling checkSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectCheckResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/check', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -958,6 +1018,60 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a redirect rule
+     * Deletes one rule.  The source path answers again as it would without the rule.  Send the hash_sha256 you read as If-Match.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} redirect_id 
+     * @param {String} If_Match hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbRedirect(storefront_oid, redirect_id, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_id' is set
+      if (redirect_id === undefined || redirect_id === null) {
+        throw new Error("Missing the required parameter 'redirect_id' when calling deleteSfvbRedirect");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'redirect_id': redirect_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/{redirect_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the detachSfvbBlogPostImage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~detachSfvbBlogPostImageCallback
      * @param {String} error Error message, if any.
@@ -1205,6 +1319,54 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/download', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dryRunSfvbRedirectImport operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbRedirectImportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectImportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a redirect import without writing it
+     * Checks up to 5,000 rows against the existing rules and each other, and returns the findings per row with a plan_hash.  Writes nothing.  Rows are merged with the existing rules; nothing is ever deleted. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectImportRequest} redirect_import_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbRedirectImportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectImportResponse}
+     */
+    dryRunSfvbRedirectImport(storefront_oid, redirect_import_request, callback) {
+      let postBody = redirect_import_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling dryRunSfvbRedirectImport");
+      }
+      // verify the required parameter 'redirect_import_request' is set
+      if (redirect_import_request === undefined || redirect_import_request === null) {
+        throw new Error("Missing the required parameter 'redirect_import_request' when calling dryRunSfvbRedirectImport");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectImportResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/import/dry_run', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2642,6 +2804,159 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbNotFound operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the paths that answered 404
+     * The paths shoppers asked for that answered 404, most hits first or by last_seen.  Paths only, never query strings.  Bots are left out unless include_bots.  Token-like path segments show as {token} unless include_tokens.  limit is 1 to 100, default 50. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.since 
+     * @param {String} opts.sort 
+     * @param {Boolean} opts.include_bots 
+     * @param {Boolean} opts.include_tokens 
+     * @param {String} opts.q 
+     * @param {Number} opts.limit 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundResponse}
+     */
+    getSfvbNotFound(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbNotFound");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'since': opts['since'],
+        'sort': opts['sort'],
+        'include_bots': opts['include_bots'],
+        'include_tokens': opts['include_tokens'],
+        'q': opts['q'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbNotFoundEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one 404 path with its recent hits
+     * One entry with up to 100 recent hits, each with its time, the linking host, the user agent and whether it was a bot.  Client IP addresses are never returned. 
+     * @param {Number} storefront_oid 
+     * @param {String} not_found_id 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.include_tokens 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse}
+     */
+    getSfvbNotFoundEntry(storefront_oid, not_found_id, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbNotFoundEntry");
+      }
+      // verify the required parameter 'not_found_id' is set
+      if (not_found_id === undefined || not_found_id === null) {
+        throw new Error("Missing the required parameter 'not_found_id' when calling getSfvbNotFoundEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'not_found_id': not_found_id
+      };
+      let queryParams = {
+        'include_tokens': opts['include_tokens']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundEntryResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbNotFoundPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundPage} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * What renders the storefront's 404 page
+     * The site_404.vm the active theme renders for a 404, found the way the storefront finds it, and whether it exists.  Without it the storefront serves a plain fallback.  Edit it with the file endpoints. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundPage}
+     */
+    getSfvbNotFoundPage(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbNotFoundPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundPage;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found_page', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -3032,6 +3347,106 @@ export default class SfvbApi {
       let returnType = SfvbRecordingSettingsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/recording_settings', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirect} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one redirect rule
+     * One rule, with the hash_sha256 to send as If-Match when updating or deleting it. 
+     * @param {Number} storefront_oid 
+     * @param {Number} redirect_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirect}
+     */
+    getSfvbRedirect(storefront_oid, redirect_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_id' is set
+      if (redirect_id === undefined || redirect_id === null) {
+        throw new Error("Missing the required parameter 'redirect_id' when calling getSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'redirect_id': redirect_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirect;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/{redirect_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbRedirects operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbRedirectsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's redirect rules
+     * Every redirect rule, exact and pattern.  Filter with q (searches source, target and note), type (exact or pattern) and status (301, 302 or rewrite).  count and limit say how close the storefront is to its rule limit. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.q 
+     * @param {String} opts.type 
+     * @param {String} opts.status 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbRedirectsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectsResponse}
+     */
+    getSfvbRedirects(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbRedirects");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'q': opts['q'],
+        'type': opts['type'],
+        'status': opts['status']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3472,6 +3887,103 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the ignoreSfvbNotFoundEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~ignoreSfvbNotFoundEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Ignore a 404 path
+     * Hides one path from the list and stops counting its hits, for example scanner noise.  Reversible. 
+     * @param {Number} storefront_oid 
+     * @param {String} not_found_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~ignoreSfvbNotFoundEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundEntry}
+     */
+    ignoreSfvbNotFoundEntry(storefront_oid, not_found_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling ignoreSfvbNotFoundEntry");
+      }
+      // verify the required parameter 'not_found_id' is set
+      if (not_found_id === undefined || not_found_id === null) {
+        throw new Error("Missing the required parameter 'not_found_id' when calling ignoreSfvbNotFoundEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'not_found_id': not_found_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}/ignore', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the importSfvbRedirects operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~importSfvbRedirectsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectImportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Apply a reviewed redirect import
+     * Applies exactly the rows of a dry run, given its plan_hash, in one transaction.  Refused with 412 when the rows or the storefront's rules changed since the dry run, and refused when any row has a blocking finding.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectImportRequest} redirect_import_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~importSfvbRedirectsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectImportResponse}
+     */
+    importSfvbRedirects(storefront_oid, redirect_import_request, callback) {
+      let postBody = redirect_import_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling importSfvbRedirects");
+      }
+      // verify the required parameter 'redirect_import_request' is set
+      if (redirect_import_request === undefined || redirect_import_request === null) {
+        throw new Error("Missing the required parameter 'redirect_import_request' when calling importSfvbRedirects");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectImportResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/import', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertSfvbBlogPost operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbBlogPostCallback
      * @param {String} error Error message, if any.
@@ -3562,6 +4074,54 @@ export default class SfvbApi {
       let returnType = SfvbPageResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/pages', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a 301 redirect rule
+     * Creates one permanent (301) redirect, live for shoppers at once.  Refused for a loop, a chain longer than the storefront follows, a duplicate source, a target that is missing or on another site, a system path, a live page (unless over_live_page) and a full storefront.  A chain is allowed with a warning naming the final target.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectRequest} redirect_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectResponse}
+     */
+    insertSfvbRedirect(storefront_oid, redirect_request, callback) {
+      let postBody = redirect_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_request' is set
+      if (redirect_request === undefined || redirect_request === null) {
+        throw new Error("Missing the required parameter 'redirect_request' when calling insertSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5935,6 +6495,53 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the resolveSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~resolveSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectResolveResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * What a shopper gets for a path
+     * Follows the redirect rules for a path exactly as the storefront does and reports each step, the final path, its status and what it lands on (a live page, a hidden page, an item, a 404 or something else).  Read only.  Use it to check every change. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.path 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~resolveSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectResolveResponse}
+     */
+    resolveSfvbRedirect(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling resolveSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': opts['path']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectResolveResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/resolve', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the resolveSfvbTemplate operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~resolveSfvbTemplateCallback
      * @param {String} error Error message, if any.
@@ -6472,6 +7079,55 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the unignoreSfvbNotFoundEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~unignoreSfvbNotFoundEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Stop ignoring a 404 path
+     * The path lists and counts hits again. 
+     * @param {Number} storefront_oid 
+     * @param {String} not_found_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~unignoreSfvbNotFoundEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundEntry}
+     */
+    unignoreSfvbNotFoundEntry(storefront_oid, not_found_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling unignoreSfvbNotFoundEntry");
+      }
+      // verify the required parameter 'not_found_id' is set
+      if (not_found_id === undefined || not_found_id === null) {
+        throw new Error("Missing the required parameter 'not_found_id' when calling unignoreSfvbNotFoundEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'not_found_id': not_found_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}/ignore', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the unpublishSfvbLibraryEntry operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~unpublishSfvbLibraryEntryCallback
      * @param {String} error Error message, if any.
@@ -6689,6 +7345,66 @@ export default class SfvbApi {
       let returnType = SfvbLibraryEntry;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbRedirect operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbRedirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a redirect rule
+     * Changes the source, target or note, and can turn an admin rule into a 301.  Fields left out keep their value.  A changed source or target is checked like a new rule.  Send the hash_sha256 you read as If-Match.  Always needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} redirect_id 
+     * @param {String} If_Match hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectRequest} redirect_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbRedirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectResponse}
+     */
+    updateSfvbRedirect(storefront_oid, redirect_id, If_Match, redirect_request, callback) {
+      let postBody = redirect_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_id' is set
+      if (redirect_id === undefined || redirect_id === null) {
+        throw new Error("Missing the required parameter 'redirect_id' when calling updateSfvbRedirect");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbRedirect");
+      }
+      // verify the required parameter 'redirect_request' is set
+      if (redirect_request === undefined || redirect_request === null) {
+        throw new Error("Missing the required parameter 'redirect_request' when calling updateSfvbRedirect");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'redirect_id': redirect_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/{redirect_id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

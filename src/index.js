@@ -1070,6 +1070,11 @@ import SfvbMenu from './com.ultracart.admin.v2.models/SfvbMenu';
 import SfvbMenuItem from './com.ultracart.admin.v2.models/SfvbMenuItem';
 import SfvbMenuWriteRequest from './com.ultracart.admin.v2.models/SfvbMenuWriteRequest';
 import SfvbMenusResponse from './com.ultracart.admin.v2.models/SfvbMenusResponse';
+import SfvbNotFoundEntry from './com.ultracart.admin.v2.models/SfvbNotFoundEntry';
+import SfvbNotFoundEntryResponse from './com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse';
+import SfvbNotFoundHit from './com.ultracart.admin.v2.models/SfvbNotFoundHit';
+import SfvbNotFoundPage from './com.ultracart.admin.v2.models/SfvbNotFoundPage';
+import SfvbNotFoundResponse from './com.ultracart.admin.v2.models/SfvbNotFoundResponse';
 import SfvbPageAttribute from './com.ultracart.admin.v2.models/SfvbPageAttribute';
 import SfvbPageAttributeUpdate from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdate';
 import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
@@ -1106,6 +1111,17 @@ import SfvbRecordingResponse from './com.ultracart.admin.v2.models/SfvbRecording
 import SfvbRecordingSettings from './com.ultracart.admin.v2.models/SfvbRecordingSettings';
 import SfvbRecordingSettingsRequest from './com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest';
 import SfvbRecordingSettingsResponse from './com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
+import SfvbRedirect from './com.ultracart.admin.v2.models/SfvbRedirect';
+import SfvbRedirectCheckResponse from './com.ultracart.admin.v2.models/SfvbRedirectCheckResponse';
+import SfvbRedirectImportRequest from './com.ultracart.admin.v2.models/SfvbRedirectImportRequest';
+import SfvbRedirectImportResponse from './com.ultracart.admin.v2.models/SfvbRedirectImportResponse';
+import SfvbRedirectImportRow from './com.ultracart.admin.v2.models/SfvbRedirectImportRow';
+import SfvbRedirectImportRowResult from './com.ultracart.admin.v2.models/SfvbRedirectImportRowResult';
+import SfvbRedirectRequest from './com.ultracart.admin.v2.models/SfvbRedirectRequest';
+import SfvbRedirectResolveResponse from './com.ultracart.admin.v2.models/SfvbRedirectResolveResponse';
+import SfvbRedirectResolveStep from './com.ultracart.admin.v2.models/SfvbRedirectResolveStep';
+import SfvbRedirectResponse from './com.ultracart.admin.v2.models/SfvbRedirectResponse';
+import SfvbRedirectsResponse from './com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1299,7 +1315,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.191
+* @version 4.1.192
 */
 export {
     /**
@@ -7651,6 +7667,36 @@ export {
     SfvbMenusResponse,
 
     /**
+     * The SfvbNotFoundEntry model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundEntry}
+     */
+    SfvbNotFoundEntry,
+
+    /**
+     * The SfvbNotFoundEntryResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse}
+     */
+    SfvbNotFoundEntryResponse,
+
+    /**
+     * The SfvbNotFoundHit model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundHit}
+     */
+    SfvbNotFoundHit,
+
+    /**
+     * The SfvbNotFoundPage model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundPage}
+     */
+    SfvbNotFoundPage,
+
+    /**
+     * The SfvbNotFoundResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundResponse}
+     */
+    SfvbNotFoundResponse,
+
+    /**
      * The SfvbPageAttribute model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPageAttribute}
      */
@@ -7865,6 +7911,72 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse}
      */
     SfvbRecordingSettingsResponse,
+
+    /**
+     * The SfvbRedirect model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirect}
+     */
+    SfvbRedirect,
+
+    /**
+     * The SfvbRedirectCheckResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectCheckResponse}
+     */
+    SfvbRedirectCheckResponse,
+
+    /**
+     * The SfvbRedirectImportRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectImportRequest}
+     */
+    SfvbRedirectImportRequest,
+
+    /**
+     * The SfvbRedirectImportResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectImportResponse}
+     */
+    SfvbRedirectImportResponse,
+
+    /**
+     * The SfvbRedirectImportRow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectImportRow}
+     */
+    SfvbRedirectImportRow,
+
+    /**
+     * The SfvbRedirectImportRowResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectImportRowResult}
+     */
+    SfvbRedirectImportRowResult,
+
+    /**
+     * The SfvbRedirectRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectRequest}
+     */
+    SfvbRedirectRequest,
+
+    /**
+     * The SfvbRedirectResolveResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResolveResponse}
+     */
+    SfvbRedirectResolveResponse,
+
+    /**
+     * The SfvbRedirectResolveStep model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResolveStep}
+     */
+    SfvbRedirectResolveStep,
+
+    /**
+     * The SfvbRedirectResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResponse}
+     */
+    SfvbRedirectResponse,
+
+    /**
+     * The SfvbRedirectsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectsResponse}
+     */
+    SfvbRedirectsResponse,
 
     /**
      * The SfvbRenderRequest model constructor.
