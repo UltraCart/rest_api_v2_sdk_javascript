@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRedirect model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirect
- * @version 4.1.192
+ * @version 4.1.193
  */
 class SfvbRedirect {
     /**

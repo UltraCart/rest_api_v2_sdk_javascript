@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTemplateResolveCandidate model module.
  * @module com.ultracart.admin.v2.models/SfvbTemplateResolveCandidate
- * @version 4.1.192
+ * @version 4.1.193
  */
 class SfvbTemplateResolveCandidate {
     /**

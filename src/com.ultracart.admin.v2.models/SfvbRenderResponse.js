@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbRenderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRenderResponse
- * @version 4.1.192
+ * @version 4.1.193
  */
 class SfvbRenderResponse {
     /**
@@ -63,6 +63,9 @@ class SfvbRenderResponse {
             if (data.hasOwnProperty('truncated')) {
                 obj['truncated'] = ApiClient.convertToType(data['truncated'], 'Boolean');
             }
+            if (data.hasOwnProperty('untranslated_count')) {
+                obj['untranslated_count'] = ApiClient.convertToType(data['untranslated_count'], 'Number');
+            }
             if (data.hasOwnProperty('warnings')) {
                 obj['warnings'] = ApiClient.convertToType(data['warnings'], [SfvbErrorDetail]);
             }
@@ -102,6 +105,12 @@ SfvbRenderResponse.prototype['success'] = undefined;
  * @member {Boolean} truncated
  */
 SfvbRenderResponse.prototype['truncated'] = undefined;
+
+/**
+ * Strings rendered in English because no translation is stored for the requested language yet.  A render never translates, so re-rendering does not change this.  Push the page to store its hand translations; machine translations are made when shoppers first view it in that language.
+ * @member {Number} untranslated_count
+ */
+SfvbRenderResponse.prototype['untranslated_count'] = undefined;
 
 /**
  * Quality warnings about the rendered node.

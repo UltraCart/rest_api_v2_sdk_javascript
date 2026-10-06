@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryTaxonomyTag model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryTaxonomyTag
- * @version 4.1.192
+ * @version 4.1.193
  */
 class SfvbLibraryTaxonomyTag {
     /**
