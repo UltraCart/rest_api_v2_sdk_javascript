@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbValidationResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbValidationResponse
- * @version 4.1.190
+ * @version 4.1.191
  */
 class SfvbValidationResponse {
     /**

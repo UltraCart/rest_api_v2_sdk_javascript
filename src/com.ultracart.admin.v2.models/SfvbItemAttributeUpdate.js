@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemAttributeUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbItemAttributeUpdate
- * @version 4.1.190
+ * @version 4.1.191
  */
 class SfvbItemAttributeUpdate {
     /**
