@@ -17,7 +17,7 @@ import SfvbLibraryHistoryEntry from './SfvbLibraryHistoryEntry';
 /**
  * The SfvbLibraryHistoryResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryHistoryResponse
- * @version 4.1.188
+ * @version 4.1.189
  */
 class SfvbLibraryHistoryResponse {
     /**
