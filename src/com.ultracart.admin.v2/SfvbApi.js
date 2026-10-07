@@ -120,6 +120,7 @@ import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSit
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplateResolveResponse from '../com.ultracart.admin.v2.models/SfvbTemplateResolveResponse';
 import SfvbTemplatesResponse from '../com.ultracart.admin.v2.models/SfvbTemplatesResponse';
+import SfvbTestOrdersResponse from '../com.ultracart.admin.v2.models/SfvbTestOrdersResponse';
 import SfvbTheme from '../com.ultracart.admin.v2.models/SfvbTheme';
 import SfvbThemeAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest';
 import SfvbThemeAttributesResponse from '../com.ultracart.admin.v2.models/SfvbThemeAttributesResponse';
@@ -142,7 +143,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.193
+* @version 4.1.194
 */
 export default class SfvbApi {
 
@@ -3543,6 +3544,57 @@ export default class SfvbApi {
       let returnType = SfvbSiteAttributesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/attributes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTestOrders operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTestOrdersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTestOrdersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List recent test orders
+     * Test orders on this account only, newest first, with no customer details, so an agent can render the order pages (receipt, order tracking, digital downloads, auto order pages) with one.  Use an order_id as a render's context_order_id; a real customer's order is refused there.  The last 7 days are searched, widening to 30 and then 90 until enough are found.  digital_items and auto_order keep only orders with downloads or an auto order.  limit is 1 to 25, default 10. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.limit 
+     * @param {Boolean} opts.digital_items 
+     * @param {Boolean} opts.auto_order 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTestOrdersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTestOrdersResponse}
+     */
+    getSfvbTestOrders(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTestOrders");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'limit': opts['limit'],
+        'digital_items': opts['digital_items'],
+        'auto_order': opts['auto_order']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTestOrdersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/test_orders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

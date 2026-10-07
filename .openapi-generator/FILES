@@ -1146,6 +1146,8 @@ docs/SfvbTemplateResolveCandidate.md
 docs/SfvbTemplateResolvePath.md
 docs/SfvbTemplateResolveResponse.md
 docs/SfvbTemplatesResponse.md
+docs/SfvbTestOrder.md
+docs/SfvbTestOrdersResponse.md
 docs/SfvbTheme.md
 docs/SfvbThemeAttribute.md
 docs/SfvbThemeAttributeUpdate.md
@@ -2403,6 +2405,8 @@ src/com.ultracart.admin.v2.models/SfvbTemplateResolveCandidate.js
 src/com.ultracart.admin.v2.models/SfvbTemplateResolvePath.js
 src/com.ultracart.admin.v2.models/SfvbTemplateResolveResponse.js
 src/com.ultracart.admin.v2.models/SfvbTemplatesResponse.js
+src/com.ultracart.admin.v2.models/SfvbTestOrder.js
+src/com.ultracart.admin.v2.models/SfvbTestOrdersResponse.js
 src/com.ultracart.admin.v2.models/SfvbTheme.js
 src/com.ultracart.admin.v2.models/SfvbThemeAttribute.js
 src/com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate.js

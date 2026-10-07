@@ -72,6 +72,7 @@ Method | HTTP request | Description
 [**getSfvbRedirects**](SfvbApi.md#getSfvbRedirects) | **GET** /sfvb/storefronts/{storefront_oid}/redirects | List the storefront&#39;s redirect rules
 [**getSfvbServerLog**](SfvbApi.md#getSfvbServerLog) | **GET** /sfvb/storefronts/{storefront_oid}/logs/{log_id} | Get one storefront render log
 [**getSfvbSiteAttributes**](SfvbApi.md#getSfvbSiteAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/attributes | Read a storefront&#39;s site attributes
+[**getSfvbTestOrders**](SfvbApi.md#getSfvbTestOrders) | **GET** /sfvb/storefronts/{storefront_oid}/test_orders | List recent test orders
 [**getSfvbTheme**](SfvbApi.md#getSfvbTheme) | **GET** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid} | Get a theme
 [**getSfvbThemeAttributes**](SfvbApi.md#getSfvbThemeAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/attributes | Read a theme&#39;s colors, fonts and settings
 [**getSfvbThemeJob**](SfvbApi.md#getSfvbThemeJob) | **GET** /sfvb/storefronts/{storefront_oid}/theme_jobs/{job_id} | Status of an asynchronous theme job
@@ -2690,6 +2691,45 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbSiteAttributesResponse**](SfvbSiteAttributesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbTestOrders
+
+> SfvbTestOrdersResponse getSfvbTestOrders(storefront_oid, opts)
+
+List recent test orders
+
+Test orders on this account only, newest first, with no customer details, so an agent can render the order pages (receipt, order tracking, digital downloads, auto order pages) with one.  Use an order_id as a render&#39;s context_order_id; a real customer&#39;s order is refused there.  The last 7 days are searched, widening to 30 and then 90 until enough are found.  digital_items and auto_order keep only orders with downloads or an auto order.  limit is 1 to 25, default 10. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **limit** | **Number**|  | [optional] 
+ **digital_items** | **Boolean**|  | [optional] 
+ **auto_order** | **Boolean**|  | [optional] 
+
+### Return type
+
+[**SfvbTestOrdersResponse**](SfvbTestOrdersResponse.md)
 
 ### Authorization
 

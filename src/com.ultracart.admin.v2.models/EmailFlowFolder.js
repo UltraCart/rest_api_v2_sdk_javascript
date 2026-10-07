@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailFlowFolder model module.
  * @module com.ultracart.admin.v2.models/EmailFlowFolder
- * @version 4.1.193
+ * @version 4.1.194
  */
 class EmailFlowFolder {
     /**

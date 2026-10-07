@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbRedirectCheckResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectCheckResponse
- * @version 4.1.193
+ * @version 4.1.194
  */
 class SfvbRedirectCheckResponse {
     /**

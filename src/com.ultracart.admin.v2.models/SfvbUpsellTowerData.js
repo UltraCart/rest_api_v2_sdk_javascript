@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellTowerData model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellTowerData
- * @version 4.1.193
+ * @version 4.1.194
  */
 class SfvbUpsellTowerData {
     /**
