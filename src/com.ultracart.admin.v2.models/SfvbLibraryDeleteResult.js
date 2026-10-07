@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryDeleteResult model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryDeleteResult
- * @version 4.1.194
+ * @version 4.1.195
  */
 class SfvbLibraryDeleteResult {
     /**

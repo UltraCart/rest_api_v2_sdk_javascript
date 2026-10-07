@@ -17,7 +17,7 @@ import SfvbTestOrder from './SfvbTestOrder';
 /**
  * The SfvbTestOrdersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTestOrdersResponse
- * @version 4.1.194
+ * @version 4.1.195
  */
 class SfvbTestOrdersResponse {
     /**
@@ -51,9 +51,6 @@ class SfvbTestOrdersResponse {
             if (data.hasOwnProperty('hint')) {
                 obj['hint'] = ApiClient.convertToType(data['hint'], 'String');
             }
-            if (data.hasOwnProperty('searched_days')) {
-                obj['searched_days'] = ApiClient.convertToType(data['searched_days'], 'Number');
-            }
             if (data.hasOwnProperty('test_orders')) {
                 obj['test_orders'] = ApiClient.convertToType(data['test_orders'], [SfvbTestOrder]);
             }
@@ -65,16 +62,10 @@ class SfvbTestOrdersResponse {
 }
 
 /**
- * Present when nothing matched.  Says how to place a test order.
+ * Present when nothing matched.
  * @member {String} hint
  */
 SfvbTestOrdersResponse.prototype['hint'] = undefined;
-
-/**
- * How many days back were searched, 7, 30 or 90, widening until enough test orders were found.
- * @member {Number} searched_days
- */
-SfvbTestOrdersResponse.prototype['searched_days'] = undefined;
 
 /**
  * Test orders, newest first.  Only orders marked as test orders are ever listed.
