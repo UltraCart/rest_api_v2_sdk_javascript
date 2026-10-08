@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import SfvbApprovalParams from './SfvbApprovalParams';
+import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.198
+ * @version 4.1.199
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -51,11 +52,17 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
             }
+            if (data.hasOwnProperty('content')) {
+                obj['content'] = ApiClient.convertToType(data['content'], 'String');
+            }
             if (data.hasOwnProperty('params')) {
                 obj['params'] = SfvbApprovalParams.constructFromObject(data['params']);
             }
             if (data.hasOwnProperty('reason')) {
                 obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
+            }
+            if (data.hasOwnProperty('redirect_rows')) {
+                obj['redirect_rows'] = ApiClient.convertToType(data['redirect_rows'], [SfvbRedirectDeleteRow]);
             }
         }
         return obj;
@@ -71,6 +78,12 @@ class SfvbApprovalCreateRequest {
 SfvbApprovalCreateRequest.prototype['action'] = undefined;
 
 /**
+ * For a file.put_script write, the exact script to be written, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
+ * @member {String} content
+ */
+SfvbApprovalCreateRequest.prototype['content'] = undefined;
+
+/**
  * @member {module:com.ultracart.admin.v2.models/SfvbApprovalParams} params
  */
 SfvbApprovalCreateRequest.prototype['params'] = undefined;
@@ -80,6 +93,12 @@ SfvbApprovalCreateRequest.prototype['params'] = undefined;
  * @member {String} reason
  */
 SfvbApprovalCreateRequest.prototype['reason'] = undefined;
+
+/**
+ * For redirect.delete_batch, exactly the rows the batch delete will send, up to 5,000, each with its hash_sha256.  UltraCart keeps only their hash.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRow>} redirect_rows
+ */
+SfvbApprovalCreateRequest.prototype['redirect_rows'] = undefined;
 
 
 
@@ -102,7 +121,19 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "blog_post.delete"
      * @const
      */
-    "blog_post.delete": "blog_post.delete"
+    "blog_post.delete": "blog_post.delete",
+
+    /**
+     * value: "file.put_script"
+     * @const
+     */
+    "file.put_script": "file.put_script",
+
+    /**
+     * value: "redirect.delete_batch"
+     * @const
+     */
+    "redirect.delete_batch": "redirect.delete_batch"
 };
 
 

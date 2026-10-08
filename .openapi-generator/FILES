@@ -990,6 +990,8 @@ docs/SfvbApi.md
 docs/SfvbApproval.md
 docs/SfvbApprovalCreateRequest.md
 docs/SfvbApprovalParams.md
+docs/SfvbApprovalReview.md
+docs/SfvbApprovalReviewFinding.md
 docs/SfvbApprovalsResponse.md
 docs/SfvbBlogPost.md
 docs/SfvbBlogPostDetail.md
@@ -1124,6 +1126,10 @@ docs/SfvbRecordingSettingsRequest.md
 docs/SfvbRecordingSettingsResponse.md
 docs/SfvbRedirect.md
 docs/SfvbRedirectCheckResponse.md
+docs/SfvbRedirectDeleteRequest.md
+docs/SfvbRedirectDeleteResponse.md
+docs/SfvbRedirectDeleteRow.md
+docs/SfvbRedirectDeleteRowResult.md
 docs/SfvbRedirectImportRequest.md
 docs/SfvbRedirectImportResponse.md
 docs/SfvbRedirectImportRow.md
@@ -2253,6 +2259,8 @@ src/com.ultracart.admin.v2.models/SelfConfig.js
 src/com.ultracart.admin.v2.models/SfvbApproval.js
 src/com.ultracart.admin.v2.models/SfvbApprovalCreateRequest.js
 src/com.ultracart.admin.v2.models/SfvbApprovalParams.js
+src/com.ultracart.admin.v2.models/SfvbApprovalReview.js
+src/com.ultracart.admin.v2.models/SfvbApprovalReviewFinding.js
 src/com.ultracart.admin.v2.models/SfvbApprovalsResponse.js
 src/com.ultracart.admin.v2.models/SfvbBlogPost.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostDetail.js
@@ -2387,6 +2395,10 @@ src/com.ultracart.admin.v2.models/SfvbRecordingSettingsRequest.js
 src/com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse.js
 src/com.ultracart.admin.v2.models/SfvbRedirect.js
 src/com.ultracart.admin.v2.models/SfvbRedirectCheckResponse.js
+src/com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest.js
+src/com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse.js
+src/com.ultracart.admin.v2.models/SfvbRedirectDeleteRow.js
+src/com.ultracart.admin.v2.models/SfvbRedirectDeleteRowResult.js
 src/com.ultracart.admin.v2.models/SfvbRedirectImportRequest.js
 src/com.ultracart.admin.v2.models/SfvbRedirectImportResponse.js
 src/com.ultracart.admin.v2.models/SfvbRedirectImportRow.js

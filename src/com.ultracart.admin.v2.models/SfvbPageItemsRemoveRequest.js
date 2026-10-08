@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageItemsRemoveRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest
- * @version 4.1.198
+ * @version 4.1.199
  */
 class SfvbPageItemsRemoveRequest {
     /**

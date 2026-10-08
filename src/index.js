@@ -983,6 +983,8 @@ import SelfConfig from './com.ultracart.admin.v2.models/SelfConfig';
 import SfvbApproval from './com.ultracart.admin.v2.models/SfvbApproval';
 import SfvbApprovalCreateRequest from './com.ultracart.admin.v2.models/SfvbApprovalCreateRequest';
 import SfvbApprovalParams from './com.ultracart.admin.v2.models/SfvbApprovalParams';
+import SfvbApprovalReview from './com.ultracart.admin.v2.models/SfvbApprovalReview';
+import SfvbApprovalReviewFinding from './com.ultracart.admin.v2.models/SfvbApprovalReviewFinding';
 import SfvbApprovalsResponse from './com.ultracart.admin.v2.models/SfvbApprovalsResponse';
 import SfvbBlogPost from './com.ultracart.admin.v2.models/SfvbBlogPost';
 import SfvbBlogPostDetail from './com.ultracart.admin.v2.models/SfvbBlogPostDetail';
@@ -1117,6 +1119,10 @@ import SfvbRecordingSettingsRequest from './com.ultracart.admin.v2.models/SfvbRe
 import SfvbRecordingSettingsResponse from './com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
 import SfvbRedirect from './com.ultracart.admin.v2.models/SfvbRedirect';
 import SfvbRedirectCheckResponse from './com.ultracart.admin.v2.models/SfvbRedirectCheckResponse';
+import SfvbRedirectDeleteRequest from './com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest';
+import SfvbRedirectDeleteResponse from './com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse';
+import SfvbRedirectDeleteRow from './com.ultracart.admin.v2.models/SfvbRedirectDeleteRow';
+import SfvbRedirectDeleteRowResult from './com.ultracart.admin.v2.models/SfvbRedirectDeleteRowResult';
 import SfvbRedirectImportRequest from './com.ultracart.admin.v2.models/SfvbRedirectImportRequest';
 import SfvbRedirectImportResponse from './com.ultracart.admin.v2.models/SfvbRedirectImportResponse';
 import SfvbRedirectImportRow from './com.ultracart.admin.v2.models/SfvbRedirectImportRow';
@@ -1321,7 +1327,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.198
+* @version 4.1.199
 */
 export {
     /**
@@ -7151,6 +7157,18 @@ export {
     SfvbApprovalParams,
 
     /**
+     * The SfvbApprovalReview model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApprovalReview}
+     */
+    SfvbApprovalReview,
+
+    /**
+     * The SfvbApprovalReviewFinding model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApprovalReviewFinding}
+     */
+    SfvbApprovalReviewFinding,
+
+    /**
      * The SfvbApprovalsResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbApprovalsResponse}
      */
@@ -7953,6 +7971,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRedirectCheckResponse}
      */
     SfvbRedirectCheckResponse,
+
+    /**
+     * The SfvbRedirectDeleteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest}
+     */
+    SfvbRedirectDeleteRequest,
+
+    /**
+     * The SfvbRedirectDeleteResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse}
+     */
+    SfvbRedirectDeleteResponse,
+
+    /**
+     * The SfvbRedirectDeleteRow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRow}
+     */
+    SfvbRedirectDeleteRow,
+
+    /**
+     * The SfvbRedirectDeleteRowResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRowResult}
+     */
+    SfvbRedirectDeleteRowResult,
 
     /**
      * The SfvbRedirectImportRequest model constructor.

@@ -108,6 +108,8 @@ import SfvbRecordingSettingsRequest from '../com.ultracart.admin.v2.models/SfvbR
 import SfvbRecordingSettingsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse';
 import SfvbRedirect from '../com.ultracart.admin.v2.models/SfvbRedirect';
 import SfvbRedirectCheckResponse from '../com.ultracart.admin.v2.models/SfvbRedirectCheckResponse';
+import SfvbRedirectDeleteRequest from '../com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest';
+import SfvbRedirectDeleteResponse from '../com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse';
 import SfvbRedirectImportRequest from '../com.ultracart.admin.v2.models/SfvbRedirectImportRequest';
 import SfvbRedirectImportResponse from '../com.ultracart.admin.v2.models/SfvbRedirectImportResponse';
 import SfvbRedirectRequest from '../com.ultracart.admin.v2.models/SfvbRedirectRequest';
@@ -146,7 +148,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.198
+* @version 4.1.199
 */
 export default class SfvbApi {
 
@@ -1124,6 +1126,58 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteSfvbRedirects operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbRedirectsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete up to 5,000 redirect rules in one call
+     * Deletes exactly the rows of a dry run, given its plan_hash, in one transaction.  Every row needs its hash_sha256.  A rule changed since its hash was read is skipped and reported as stale, and a missing one as not_found; the other rows still go through.  Needs the approval of the person who signed in the CLI, as an approved redirect.delete_batch request for exactly these rows in the Approval-Id header, and sfvb_publish.  Deleting rules lets add and import work again once the storefront is back under 5,000 rules. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest} redirect_delete_request The request
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved redirect.delete_batch request for exactly these rows.  Required.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbRedirectsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse}
+     */
+    deleteSfvbRedirects(storefront_oid, redirect_delete_request, opts, callback) {
+      opts = opts || {};
+      let postBody = redirect_delete_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbRedirects");
+      }
+      // verify the required parameter 'redirect_delete_request' is set
+      if (redirect_delete_request === undefined || redirect_delete_request === null) {
+        throw new Error("Missing the required parameter 'redirect_delete_request' when calling deleteSfvbRedirects");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectDeleteResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the detachSfvbBlogPostImage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~detachSfvbBlogPostImageCallback
      * @param {String} error Error message, if any.
@@ -1371,6 +1425,54 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/download', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dryRunSfvbRedirectDelete operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbRedirectDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a batch delete of redirect rules without writing it
+     * Checks up to 5,000 rules by redirect_id and returns each one as deletable, stale (its hash_sha256 differs from the one sent) or not_found, with its current hash, source, target, status, type and note, and a plan_hash.  Writes nothing.  Rows may leave out hash_sha256; the result carries the current one to send when deleting. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRequest} redirect_delete_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbRedirectDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse}
+     */
+    dryRunSfvbRedirectDelete(storefront_oid, redirect_delete_request, callback) {
+      let postBody = redirect_delete_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling dryRunSfvbRedirectDelete");
+      }
+      // verify the required parameter 'redirect_delete_request' is set
+      if (redirect_delete_request === undefined || redirect_delete_request === null) {
+        throw new Error("Missing the required parameter 'redirect_delete_request' when calling dryRunSfvbRedirectDelete");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectDeleteResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/delete/dry_run', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4176,7 +4278,7 @@ export default class SfvbApi {
 
     /**
      * Request a human approval
-     * Asks the person who signed in the CLI to approve one gated action on one exact target.  Name the storefront with the storefront_oid query parameter.  The target is checked the way the action will check it, so nobody is asked to approve a call that would fail.  Show the person approval_url and user_code, poll GET approvals/{approval_id} every interval_seconds, and once it is approved repeat the gated call with the approval_id in the Approval-Id header.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  A request lapses after 10 minutes.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * Asks the person who signed in the CLI to approve one gated action on one exact target.  Name the storefront with the storefront_oid query parameter.  The target is checked the way the action will check it, so nobody is asked to approve a call that would fail.  Show the person approval_url and user_code, poll GET approvals/{approval_id} every interval_seconds, and once it is approved repeat the gated call with the approval_id in the Approval-Id header.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  A request lapses after 10 minutes.  Requires a token that resolves to a user, so use the device authorization flow.  For file.put_script send the script as content, or params.version for a revert.  The request starts as reviewing while UltraCart's scanner and two AI models read it, then becomes pending with the review attached, or refused.  Keep polling, and show approval_url only once it is pending.  Only the hash is kept, so the write must send the same bytes. 
      * @param {module:com.ultracart.admin.v2.models/SfvbApprovalCreateRequest} approval_request The request
      * @param {Object} opts Optional parameters
      * @param {Number} opts.storefront_oid The storefront the action runs on.  Required for storefront actions, left out for account-wide ones.
@@ -5551,6 +5653,7 @@ export default class SfvbApi {
      * @param {module:com.ultracart.admin.v2.models/SfvbFileWriteRequest} file_write_request File content to write
      * @param {Object} opts Optional parameters
      * @param {String} opts.path 
+     * @param {String} opts.Approval_Id For a .js or .mjs file, the approval_id of an approved file.put_script request for exactly these bytes.  Required for scripts.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbFileContentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFileWriteResponse}
      */
@@ -5577,7 +5680,8 @@ export default class SfvbApi {
         'path': opts['path']
       };
       let headerParams = {
-        'If-Match': If_Match
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };
@@ -6907,10 +7011,13 @@ export default class SfvbApi {
      * @param {Number} storefront_oid 
      * @param {String} If_Match Content hash of the file being reverted.  Required; 428 when absent, 412 when stale.
      * @param {module:com.ultracart.admin.v2.models/SfvbFileRevertRequest} file_revert_request Version to revert the file to
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id For a .js or .mjs file, the approval_id of an approved file.put_script request naming this version.  Required for scripts.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~revertSfvbFileCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFileWriteResponse}
      */
-    revertSfvbFile(storefront_oid, If_Match, file_revert_request, callback) {
+    revertSfvbFile(storefront_oid, If_Match, file_revert_request, opts, callback) {
+      opts = opts || {};
       let postBody = file_revert_request;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -6931,7 +7038,8 @@ export default class SfvbApi {
       let queryParams = {
       };
       let headerParams = {
-        'If-Match': If_Match
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };

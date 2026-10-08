@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailSmsOrdersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailSmsOrdersResponse
- * @version 4.1.198
+ * @version 4.1.199
  */
 class EmailSmsOrdersResponse {
     /**

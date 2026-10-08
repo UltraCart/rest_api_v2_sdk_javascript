@@ -13,11 +13,12 @@
 
 import ApiClient from '../ApiClient';
 import SfvbApprovalParams from './SfvbApprovalParams';
+import SfvbApprovalReview from './SfvbApprovalReview';
 
 /**
  * The SfvbApproval model module.
  * @module com.ultracart.admin.v2.models/SfvbApproval
- * @version 4.1.198
+ * @version 4.1.199
  */
 class SfvbApproval {
     /**
@@ -89,6 +90,9 @@ class SfvbApproval {
             }
             if (data.hasOwnProperty('reason')) {
                 obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
+            }
+            if (data.hasOwnProperty('review')) {
+                obj['review'] = SfvbApprovalReview.constructFromObject(data['review']);
             }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
@@ -196,13 +200,18 @@ SfvbApproval.prototype['params'] = undefined;
 SfvbApproval.prototype['reason'] = undefined;
 
 /**
+ * @member {module:com.ultracart.admin.v2.models/SfvbApprovalReview} review
+ */
+SfvbApproval.prototype['review'] = undefined;
+
+/**
  * Where the action applies.  The storefront host name, or account for account-wide actions.
  * @member {String} scope
  */
 SfvbApproval.prototype['scope'] = undefined;
 
 /**
- * pending, approved, denied, cancelled, expired or used.  Only approved may be sent with the gated call.
+ * reviewing, pending, approved, denied, cancelled, expired, used or refused.  Only approved may be sent with the gated call.  A script write starts as reviewing while UltraCart reviews it; keep polling, and show approval_url only once it is pending.  refused means the review refused the script; outcome_code and review say why.
  * @member {module:com.ultracart.admin.v2.models/SfvbApproval.StatusEnum} status
  */
 SfvbApproval.prototype['status'] = undefined;
@@ -258,6 +267,12 @@ SfvbApproval['OutcomeEnum'] = {
 SfvbApproval['StatusEnum'] = {
 
     /**
+     * value: "reviewing"
+     * @const
+     */
+    "reviewing": "reviewing",
+
+    /**
      * value: "pending"
      * @const
      */
@@ -291,7 +306,13 @@ SfvbApproval['StatusEnum'] = {
      * value: "used"
      * @const
      */
-    "used": "used"
+    "used": "used",
+
+    /**
+     * value: "refused"
+     * @const
+     */
+    "refused": "refused"
 };
 
 

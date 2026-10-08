@@ -17,7 +17,7 @@ import SfvbSiteAttributeUpdate from './SfvbSiteAttributeUpdate';
 /**
  * The SfvbSiteAttributeUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest
- * @version 4.1.198
+ * @version 4.1.199
  */
 class SfvbSiteAttributeUpdateRequest {
     /**

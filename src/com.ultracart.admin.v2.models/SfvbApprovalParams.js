@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.198
+ * @version 4.1.199
  */
 class SfvbApprovalParams {
     /**
@@ -50,8 +50,20 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('blog_post_oid')) {
                 obj['blog_post_oid'] = ApiClient.convertToType(data['blog_post_oid'], 'Number');
             }
+            if (data.hasOwnProperty('content_sha256')) {
+                obj['content_sha256'] = ApiClient.convertToType(data['content_sha256'], 'String');
+            }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('rows_sha256')) {
+                obj['rows_sha256'] = ApiClient.convertToType(data['rows_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('rule_count')) {
+                obj['rule_count'] = ApiClient.convertToType(data['rule_count'], 'Number');
+            }
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'Number');
             }
         }
         return obj;
@@ -67,10 +79,34 @@ class SfvbApprovalParams {
 SfvbApprovalParams.prototype['blog_post_oid'] = undefined;
 
 /**
- * The file path, for file.delete.  Exactly as the delete call will send it.
+ * For file.put_script, the SHA-256 of the exact bytes approved.  Set by the server, never by the caller.  The write must send bytes with this hash.
+ * @member {String} content_sha256
+ */
+SfvbApprovalParams.prototype['content_sha256'] = undefined;
+
+/**
+ * The file path, for file.delete and file.put_script.  Exactly as the gated call will send it.
  * @member {String} path
  */
 SfvbApprovalParams.prototype['path'] = undefined;
+
+/**
+ * For redirect.delete_batch, the plan_hash of the exact rows approved.  Set by the server.  The batch delete must send rows with this hash.
+ * @member {String} rows_sha256
+ */
+SfvbApprovalParams.prototype['rows_sha256'] = undefined;
+
+/**
+ * For redirect.delete_batch, how many rules the batch would delete when it was requested.  Set by the server.
+ * @member {Number} rule_count
+ */
+SfvbApprovalParams.prototype['rule_count'] = undefined;
+
+/**
+ * For file.put_script, the history version a revert restores.  Leave it out, and send content instead, for a write.
+ * @member {Number} version
+ */
+SfvbApprovalParams.prototype['version'] = undefined;
 
 
 
