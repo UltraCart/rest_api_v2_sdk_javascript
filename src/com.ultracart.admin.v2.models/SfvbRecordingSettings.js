@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRecordingSettings model module.
  * @module com.ultracart.admin.v2.models/SfvbRecordingSettings
- * @version 4.1.196
+ * @version 4.1.197
  */
 class SfvbRecordingSettings {
     /**

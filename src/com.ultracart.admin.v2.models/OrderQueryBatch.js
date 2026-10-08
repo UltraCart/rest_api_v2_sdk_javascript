@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderQueryBatch model module.
  * @module com.ultracart.admin.v2.models/OrderQueryBatch
- * @version 4.1.196
+ * @version 4.1.197
  */
 class OrderQueryBatch {
     /**
