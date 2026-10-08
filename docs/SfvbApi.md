@@ -3185,7 +3185,7 @@ Name | Type | Description  | Notes
 
 ## insertSfvbApproval
 
-> insertSfvbApproval(approval_request, opts)
+> SfvbApproval insertSfvbApproval(approval_request, opts)
 
 Request a human approval
 
@@ -3208,7 +3208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**SfvbApproval**](SfvbApproval.md)
 
 ### Authorization
 

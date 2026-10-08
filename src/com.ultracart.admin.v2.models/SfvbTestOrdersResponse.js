@@ -17,7 +17,7 @@ import SfvbTestOrder from './SfvbTestOrder';
 /**
  * The SfvbTestOrdersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTestOrdersResponse
- * @version 4.1.197
+ * @version 4.1.198
  */
 class SfvbTestOrdersResponse {
     /**

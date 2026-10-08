@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxDefaultTimezoneResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxDefaultTimezoneResponse
- * @version 4.1.197
+ * @version 4.1.198
  */
 class ConversationPbxDefaultTimezoneResponse {
     /**

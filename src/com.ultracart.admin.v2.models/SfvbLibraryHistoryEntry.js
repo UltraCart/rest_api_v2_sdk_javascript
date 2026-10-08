@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryHistoryEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryHistoryEntry
- * @version 4.1.197
+ * @version 4.1.198
  */
 class SfvbLibraryHistoryEntry {
     /**

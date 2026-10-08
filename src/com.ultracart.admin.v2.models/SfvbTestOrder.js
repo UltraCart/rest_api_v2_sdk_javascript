@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTestOrder model module.
  * @module com.ultracart.admin.v2.models/SfvbTestOrder
- * @version 4.1.197
+ * @version 4.1.198
  */
 class SfvbTestOrder {
     /**
