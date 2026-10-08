@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderTag model module.
  * @module com.ultracart.admin.v2.models/OrderTag
- * @version 4.1.195
+ * @version 4.1.196
  */
 class OrderTag {
     /**

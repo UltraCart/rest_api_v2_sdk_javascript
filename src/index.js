@@ -980,6 +980,10 @@ import ScreenRecordingUserAgentOS from './com.ultracart.admin.v2.models/ScreenRe
 import ScreenRecordingUserProperty from './com.ultracart.admin.v2.models/ScreenRecordingUserProperty';
 import ScreenshotsResponse from './com.ultracart.admin.v2.models/ScreenshotsResponse';
 import SelfConfig from './com.ultracart.admin.v2.models/SelfConfig';
+import SfvbApproval from './com.ultracart.admin.v2.models/SfvbApproval';
+import SfvbApprovalCreateRequest from './com.ultracart.admin.v2.models/SfvbApprovalCreateRequest';
+import SfvbApprovalParams from './com.ultracart.admin.v2.models/SfvbApprovalParams';
+import SfvbApprovalsResponse from './com.ultracart.admin.v2.models/SfvbApprovalsResponse';
 import SfvbBlogPost from './com.ultracart.admin.v2.models/SfvbBlogPost';
 import SfvbBlogPostDetail from './com.ultracart.admin.v2.models/SfvbBlogPostDetail';
 import SfvbBlogPostImage from './com.ultracart.admin.v2.models/SfvbBlogPostImage';
@@ -1317,7 +1321,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.195
+* @version 4.1.196
 */
 export {
     /**
@@ -7127,6 +7131,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SelfConfig}
      */
     SelfConfig,
+
+    /**
+     * The SfvbApproval model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApproval}
+     */
+    SfvbApproval,
+
+    /**
+     * The SfvbApprovalCreateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApprovalCreateRequest}
+     */
+    SfvbApprovalCreateRequest,
+
+    /**
+     * The SfvbApprovalParams model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApprovalParams}
+     */
+    SfvbApprovalParams,
+
+    /**
+     * The SfvbApprovalsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbApprovalsResponse}
+     */
+    SfvbApprovalsResponse,
 
     /**
      * The SfvbBlogPost model constructor.

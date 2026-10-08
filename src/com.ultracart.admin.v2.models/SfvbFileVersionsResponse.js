@@ -17,7 +17,7 @@ import SfvbFileVersion from './SfvbFileVersion';
 /**
  * The SfvbFileVersionsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileVersionsResponse
- * @version 4.1.195
+ * @version 4.1.196
  */
 class SfvbFileVersionsResponse {
     /**

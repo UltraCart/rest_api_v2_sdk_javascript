@@ -987,6 +987,10 @@ docs/ScreenRecordingUserProperty.md
 docs/ScreenshotsResponse.md
 docs/SelfConfig.md
 docs/SfvbApi.md
+docs/SfvbApproval.md
+docs/SfvbApprovalCreateRequest.md
+docs/SfvbApprovalParams.md
+docs/SfvbApprovalsResponse.md
 docs/SfvbBlogPost.md
 docs/SfvbBlogPostDetail.md
 docs/SfvbBlogPostImage.md
@@ -2246,6 +2250,10 @@ src/com.ultracart.admin.v2.models/ScreenRecordingUserAgentOS.js
 src/com.ultracart.admin.v2.models/ScreenRecordingUserProperty.js
 src/com.ultracart.admin.v2.models/ScreenshotsResponse.js
 src/com.ultracart.admin.v2.models/SelfConfig.js
+src/com.ultracart.admin.v2.models/SfvbApproval.js
+src/com.ultracart.admin.v2.models/SfvbApprovalCreateRequest.js
+src/com.ultracart.admin.v2.models/SfvbApprovalParams.js
+src/com.ultracart.admin.v2.models/SfvbApprovalsResponse.js
 src/com.ultracart.admin.v2.models/SfvbBlogPost.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostDetail.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostImage.js

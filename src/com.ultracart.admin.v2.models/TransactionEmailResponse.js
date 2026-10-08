@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The TransactionEmailResponse model module.
  * @module com.ultracart.admin.v2.models/TransactionEmailResponse
- * @version 4.1.195
+ * @version 4.1.196
  */
 class TransactionEmailResponse {
     /**

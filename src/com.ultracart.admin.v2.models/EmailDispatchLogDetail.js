@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailDispatchLogDetail model module.
  * @module com.ultracart.admin.v2.models/EmailDispatchLogDetail
- * @version 4.1.195
+ * @version 4.1.196
  */
 class EmailDispatchLogDetail {
     /**

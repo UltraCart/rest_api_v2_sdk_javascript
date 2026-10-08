@@ -14,6 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import SfvbApproval from '../com.ultracart.admin.v2.models/SfvbApproval';
+import SfvbApprovalCreateRequest from '../com.ultracart.admin.v2.models/SfvbApprovalCreateRequest';
+import SfvbApprovalsResponse from '../com.ultracart.admin.v2.models/SfvbApprovalsResponse';
 import SfvbBlogPostDetail from '../com.ultracart.admin.v2.models/SfvbBlogPostDetail';
 import SfvbBlogPostImageRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
 import SfvbBlogPostRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostRequest';
@@ -143,7 +146,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.195
+* @version 4.1.196
 */
 export default class SfvbApi {
 
@@ -653,6 +656,48 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteSfvbApproval operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbApprovalCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel a pending approval request
+     * Withdraws a request nobody has decided yet, which frees one of the five pending slots a sign-in has.  A request that was already decided, used or expired cannot be cancelled. 
+     * @param {String} approval_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbApprovalCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbApproval(approval_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'approval_id' is set
+      if (approval_id === undefined || approval_id === null) {
+        throw new Error("Missing the required parameter 'approval_id' when calling deleteSfvbApproval");
+      }
+
+      let pathParams = {
+        'approval_id': approval_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/approvals/{approval_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteSfvbBlogPost operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbBlogPostCallback
      * @param {String} error Error message, if any.
@@ -665,9 +710,12 @@ export default class SfvbApi {
      * Takes the post off every page and deletes it.  There is no undo.  A post that is not a draft needs sfvb_publish. 
      * @param {Number} storefront_oid 
      * @param {Number} blog_post_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved blog_post.delete request for this post.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbBlogPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteSfvbBlogPost(storefront_oid, blog_post_oid, callback) {
+    deleteSfvbBlogPost(storefront_oid, blog_post_oid, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -685,6 +733,7 @@ export default class SfvbApi {
       let queryParams = {
       };
       let headerParams = {
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };
@@ -715,6 +764,7 @@ export default class SfvbApi {
      * @param {String} If_Match Content hash of the file being deleted.  Required; 428 when absent, 412 when stale.
      * @param {Object} opts Optional parameters
      * @param {String} opts.path 
+     * @param {String} opts.Approval_Id The approval_id of an approved file.delete request for this exact path.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbFileCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteSfvbFile(storefront_oid, If_Match, opts, callback) {
@@ -736,7 +786,8 @@ export default class SfvbApi {
         'path': opts['path']
       };
       let headerParams = {
-        'If-Match': If_Match
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };
@@ -1784,6 +1835,86 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/favorite', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbApproval operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbApprovalCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbApproval} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one approval request
+     * Poll this every interval_seconds after requesting an approval.  status is pending until the person decides, then approved or denied, and expired if nobody acts in 10 minutes.  Once the gated call has used it, status is used and outcome says whether the call succeeded.  Used with no outcome means the result is unknown, so check the target - never repeat the call. 
+     * @param {String} approval_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbApprovalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbApproval}
+     */
+    getSfvbApproval(approval_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'approval_id' is set
+      if (approval_id === undefined || approval_id === null) {
+        throw new Error("Missing the required parameter 'approval_id' when calling getSfvbApproval");
+      }
+
+      let pathParams = {
+        'approval_id': approval_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbApproval;
+      return this.apiClient.callApi(
+        '/sfvb/approvals/{approval_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbApprovals operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbApprovalsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbApprovalsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List this sign-in's approval requests
+     * Requests made with this sign-in in the last 24 hours, newest first, at most 50, with their status and outcome.  Use it to find a request whose id was lost, or to see what an earlier run did. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbApprovalsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbApprovalsResponse}
+     */
+    getSfvbApprovals(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbApprovalsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/approvals', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4030,6 +4161,51 @@ export default class SfvbApi {
       let returnType = SfvbRedirectImportResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/redirects/import', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbApproval operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbApprovalCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Request a human approval
+     * Asks the person who signed in the CLI to approve one gated action on one exact target.  Name the storefront with the storefront_oid query parameter.  The target is checked the way the action will check it, so nobody is asked to approve a call that would fail.  Show the person approval_url and user_code, poll GET approvals/{approval_id} every interval_seconds, and once it is approved repeat the gated call with the approval_id in the Approval-Id header.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  A request lapses after 10 minutes.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbApprovalCreateRequest} approval_request The request
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.storefront_oid The storefront the action runs on.  Required for storefront actions, left out for account-wide ones.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbApprovalCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    insertSfvbApproval(approval_request, opts, callback) {
+      opts = opts || {};
+      let postBody = approval_request;
+      // verify the required parameter 'approval_request' is set
+      if (approval_request === undefined || approval_request === null) {
+        throw new Error("Missing the required parameter 'approval_request' when calling insertSfvbApproval");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'storefront_oid': opts['storefront_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/approvals', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
