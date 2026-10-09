@@ -17,7 +17,7 @@ import SfvbRedirectResolveStep from './SfvbRedirectResolveStep';
 /**
  * The SfvbRedirectResolveResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectResolveResponse
- * @version 4.1.199
+ * @version 4.1.200
  */
 class SfvbRedirectResolveResponse {
     /**

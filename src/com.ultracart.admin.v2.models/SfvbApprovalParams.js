@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.199
+ * @version 4.1.200
  */
 class SfvbApprovalParams {
     /**
@@ -47,14 +47,29 @@ class SfvbApprovalParams {
         if (data) {
             obj = obj || new SfvbApprovalParams();
 
+            if (data.hasOwnProperty('attribute_names')) {
+                obj['attribute_names'] = ApiClient.convertToType(data['attribute_names'], ['String']);
+            }
             if (data.hasOwnProperty('blog_post_oid')) {
                 obj['blog_post_oid'] = ApiClient.convertToType(data['blog_post_oid'], 'Number');
             }
             if (data.hasOwnProperty('content_sha256')) {
                 obj['content_sha256'] = ApiClient.convertToType(data['content_sha256'], 'String');
             }
+            if (data.hasOwnProperty('experiment_oid')) {
+                obj['experiment_oid'] = ApiClient.convertToType(data['experiment_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('item_count')) {
+                obj['item_count'] = ApiClient.convertToType(data['item_count'], 'Number');
+            }
+            if (data.hasOwnProperty('merchant_item_oid')) {
+                obj['merchant_item_oid'] = ApiClient.convertToType(data['merchant_item_oid'], 'Number');
+            }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('request_sha256')) {
+                obj['request_sha256'] = ApiClient.convertToType(data['request_sha256'], 'String');
             }
             if (data.hasOwnProperty('rows_sha256')) {
                 obj['rows_sha256'] = ApiClient.convertToType(data['rows_sha256'], 'String');
@@ -62,8 +77,23 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('rule_count')) {
                 obj['rule_count'] = ApiClient.convertToType(data['rule_count'], 'Number');
             }
+            if (data.hasOwnProperty('slot')) {
+                obj['slot'] = ApiClient.convertToType(data['slot'], 'String');
+            }
+            if (data.hasOwnProperty('upsell_kind')) {
+                obj['upsell_kind'] = ApiClient.convertToType(data['upsell_kind'], 'String');
+            }
+            if (data.hasOwnProperty('upsell_oid')) {
+                obj['upsell_oid'] = ApiClient.convertToType(data['upsell_oid'], 'Number');
+            }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'Number');
+            }
+            if (data.hasOwnProperty('widget_id')) {
+                obj['widget_id'] = ApiClient.convertToType(data['widget_id'], 'String');
+            }
+            if (data.hasOwnProperty('winner_variation_number')) {
+                obj['winner_variation_number'] = ApiClient.convertToType(data['winner_variation_number'], 'Number');
             }
         }
         return obj;
@@ -71,6 +101,12 @@ class SfvbApprovalParams {
 
 
 }
+
+/**
+ * For item.attribute_batch, the attributes the batch would change.  Set by the server.
+ * @member {Array.<String>} attribute_names
+ */
+SfvbApprovalParams.prototype['attribute_names'] = undefined;
 
 /**
  * The blog post, for blog_post.delete.
@@ -85,13 +121,37 @@ SfvbApprovalParams.prototype['blog_post_oid'] = undefined;
 SfvbApprovalParams.prototype['content_sha256'] = undefined;
 
 /**
- * The file path, for file.delete and file.put_script.  Exactly as the gated call will send it.
+ * For experiment.end, the experiment to end.
+ * @member {Number} experiment_oid
+ */
+SfvbApprovalParams.prototype['experiment_oid'] = undefined;
+
+/**
+ * For item.attribute_batch, how many items the batch would change when it was requested.  Set by the server.
+ * @member {Number} item_count
+ */
+SfvbApprovalParams.prototype['item_count'] = undefined;
+
+/**
+ * For item.pricing, the item whose pricing changes.
+ * @member {Number} merchant_item_oid
+ */
+SfvbApprovalParams.prototype['merchant_item_oid'] = undefined;
+
+/**
+ * The file path, for file.delete and file.put_script, or the page path for experiment.start of a page experiment.  Exactly as the gated call will send it.
  * @member {String} path
  */
 SfvbApprovalParams.prototype['path'] = undefined;
 
 /**
- * For redirect.delete_batch, the plan_hash of the exact rows approved.  Set by the server.  The batch delete must send rows with this hash.
+ * For experiment.start of a url experiment, the hash of the checked experiment approved, and for item.pricing the hash of the change.  Set by the server.  The gated call must send the same.
+ * @member {String} request_sha256
+ */
+SfvbApprovalParams.prototype['request_sha256'] = undefined;
+
+/**
+ * For redirect.delete_batch and item.attribute_batch, the plan_hash of the exact rows approved.  Set by the server.  The batch must send rows with this hash.
  * @member {String} rows_sha256
  */
 SfvbApprovalParams.prototype['rows_sha256'] = undefined;
@@ -103,13 +163,64 @@ SfvbApprovalParams.prototype['rows_sha256'] = undefined;
 SfvbApprovalParams.prototype['rule_count'] = undefined;
 
 /**
+ * For experiment.start of a page experiment, the page body name.  Defaults to body.
+ * @member {String} slot
+ */
+SfvbApprovalParams.prototype['slot'] = undefined;
+
+/**
+ * For upsell.enable, what to switch on.
+ * @member {module:com.ultracart.admin.v2.models/SfvbApprovalParams.UpsellKindEnum} upsell_kind
+ */
+SfvbApprovalParams.prototype['upsell_kind'] = undefined;
+
+/**
+ * For upsell.enable, the oid of the offer or path to switch on.
+ * @member {Number} upsell_oid
+ */
+SfvbApprovalParams.prototype['upsell_oid'] = undefined;
+
+/**
  * For file.put_script, the history version a revert restores.  Leave it out, and send content instead, for a write.
  * @member {Number} version
  */
 SfvbApprovalParams.prototype['version'] = undefined;
 
+/**
+ * For experiment.start of a page experiment, the id of the experiment element.
+ * @member {String} widget_id
+ */
+SfvbApprovalParams.prototype['widget_id'] = undefined;
+
+/**
+ * For experiment.end, the winning variation.  Leave it out to end without a winner, and leave it out of the end call too.
+ * @member {Number} winner_variation_number
+ */
+SfvbApprovalParams.prototype['winner_variation_number'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>upsell_kind</code> property.
+ * @enum {String}
+ * @readonly
+ */
+SfvbApprovalParams['UpsellKindEnum'] = {
+
+    /**
+     * value: "offer"
+     * @const
+     */
+    "offer": "offer",
+
+    /**
+     * value: "path"
+     * @const
+     */
+    "path": "path"
+};
 
 
 

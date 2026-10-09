@@ -13,12 +13,15 @@
 
 import ApiClient from '../ApiClient';
 import SfvbApprovalParams from './SfvbApprovalParams';
+import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
+import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
+import SfvbItemPricingRequest from './SfvbItemPricingRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.199
+ * @version 4.1.200
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -55,6 +58,15 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
             }
+            if (data.hasOwnProperty('experiment_start')) {
+                obj['experiment_start'] = SfvbExperimentStartRequest.constructFromObject(data['experiment_start']);
+            }
+            if (data.hasOwnProperty('item_attribute_rows')) {
+                obj['item_attribute_rows'] = ApiClient.convertToType(data['item_attribute_rows'], [SfvbItemAttributeBatchRow]);
+            }
+            if (data.hasOwnProperty('item_pricing')) {
+                obj['item_pricing'] = SfvbItemPricingRequest.constructFromObject(data['item_pricing']);
+            }
             if (data.hasOwnProperty('params')) {
                 obj['params'] = SfvbApprovalParams.constructFromObject(data['params']);
             }
@@ -82,6 +94,22 @@ SfvbApprovalCreateRequest.prototype['action'] = undefined;
  * @member {String} content
  */
 SfvbApprovalCreateRequest.prototype['content'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbExperimentStartRequest} experiment_start
+ */
+SfvbApprovalCreateRequest.prototype['experiment_start'] = undefined;
+
+/**
+ * For item.attribute_batch, exactly the rows the batch will send - the dry run's change rows, each with merchant_item_oid and current_sha256.  UltraCart keeps only their hash.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbItemAttributeBatchRow>} item_attribute_rows
+ */
+SfvbApprovalCreateRequest.prototype['item_attribute_rows'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemPricingRequest} item_pricing
+ */
+SfvbApprovalCreateRequest.prototype['item_pricing'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbApprovalParams} params
@@ -133,7 +161,37 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "redirect.delete_batch"
      * @const
      */
-    "redirect.delete_batch": "redirect.delete_batch"
+    "redirect.delete_batch": "redirect.delete_batch",
+
+    /**
+     * value: "experiment.start"
+     * @const
+     */
+    "experiment.start": "experiment.start",
+
+    /**
+     * value: "experiment.end"
+     * @const
+     */
+    "experiment.end": "experiment.end",
+
+    /**
+     * value: "upsell.enable"
+     * @const
+     */
+    "upsell.enable": "upsell.enable",
+
+    /**
+     * value: "item.attribute_batch"
+     * @const
+     */
+    "item.attribute_batch": "item.attribute_batch",
+
+    /**
+     * value: "item.pricing"
+     * @const
+     */
+    "item.pricing": "item.pricing"
 };
 
 

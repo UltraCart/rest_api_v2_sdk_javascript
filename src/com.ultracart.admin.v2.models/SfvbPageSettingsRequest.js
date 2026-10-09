@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageSettingsRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPageSettingsRequest
- * @version 4.1.199
+ * @version 4.1.200
  */
 class SfvbPageSettingsRequest {
     /**
