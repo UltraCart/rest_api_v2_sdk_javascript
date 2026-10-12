@@ -1010,6 +1010,10 @@ docs/SfvbElement.md
 docs/SfvbElementSchemaResponse.md
 docs/SfvbElementsResponse.md
 docs/SfvbErrorDetail.md
+docs/SfvbEvent.md
+docs/SfvbEventsAuthRequest.md
+docs/SfvbEventsAuthResponse.md
+docs/SfvbEventsResponse.md
 docs/SfvbExperiment.md
 docs/SfvbExperimentEndRequest.md
 docs/SfvbExperimentObjective.md
@@ -2289,6 +2293,10 @@ src/com.ultracart.admin.v2.models/SfvbElement.js
 src/com.ultracart.admin.v2.models/SfvbElementSchemaResponse.js
 src/com.ultracart.admin.v2.models/SfvbElementsResponse.js
 src/com.ultracart.admin.v2.models/SfvbErrorDetail.js
+src/com.ultracart.admin.v2.models/SfvbEvent.js
+src/com.ultracart.admin.v2.models/SfvbEventsAuthRequest.js
+src/com.ultracart.admin.v2.models/SfvbEventsAuthResponse.js
+src/com.ultracart.admin.v2.models/SfvbEventsResponse.js
 src/com.ultracart.admin.v2.models/SfvbExperiment.js
 src/com.ultracart.admin.v2.models/SfvbExperimentEndRequest.js
 src/com.ultracart.admin.v2.models/SfvbExperimentObjective.js

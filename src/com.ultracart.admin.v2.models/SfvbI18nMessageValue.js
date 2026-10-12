@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbI18nMessageValue model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMessageValue
- * @version 4.1.200
+ * @version 4.1.201
  */
 class SfvbI18nMessageValue {
     /**
@@ -67,7 +67,7 @@ class SfvbI18nMessageValue {
 SfvbI18nMessageValue.prototype['language'] = undefined;
 
 /**
- * The new text.  Empty text is refused; reset the message instead.
+ * The new text.  Empty text removes this language's translation, so it goes back to machine translation.  Empty English text is refused.
  * @member {String} text
  */
 SfvbI18nMessageValue.prototype['text'] = undefined;

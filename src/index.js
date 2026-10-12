@@ -1003,6 +1003,10 @@ import SfvbElement from './com.ultracart.admin.v2.models/SfvbElement';
 import SfvbElementSchemaResponse from './com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from './com.ultracart.admin.v2.models/SfvbElementsResponse';
 import SfvbErrorDetail from './com.ultracart.admin.v2.models/SfvbErrorDetail';
+import SfvbEvent from './com.ultracart.admin.v2.models/SfvbEvent';
+import SfvbEventsAuthRequest from './com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
+import SfvbEventsAuthResponse from './com.ultracart.admin.v2.models/SfvbEventsAuthResponse';
+import SfvbEventsResponse from './com.ultracart.admin.v2.models/SfvbEventsResponse';
 import SfvbExperiment from './com.ultracart.admin.v2.models/SfvbExperiment';
 import SfvbExperimentEndRequest from './com.ultracart.admin.v2.models/SfvbExperimentEndRequest';
 import SfvbExperimentObjective from './com.ultracart.admin.v2.models/SfvbExperimentObjective';
@@ -1337,7 +1341,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.200
+* @version 4.1.201
 */
 export {
     /**
@@ -7285,6 +7289,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbErrorDetail}
      */
     SfvbErrorDetail,
+
+    /**
+     * The SfvbEvent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEvent}
+     */
+    SfvbEvent,
+
+    /**
+     * The SfvbEventsAuthRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEventsAuthRequest}
+     */
+    SfvbEventsAuthRequest,
+
+    /**
+     * The SfvbEventsAuthResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEventsAuthResponse}
+     */
+    SfvbEventsAuthResponse,
+
+    /**
+     * The SfvbEventsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEventsResponse}
+     */
+    SfvbEventsResponse,
 
     /**
      * The SfvbExperiment model constructor.

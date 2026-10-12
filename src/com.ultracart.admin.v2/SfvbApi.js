@@ -30,6 +30,9 @@ import SfvbContainerVersionsResponse from '../com.ultracart.admin.v2.models/Sfvb
 import SfvbContainerWriteRequest from '../com.ultracart.admin.v2.models/SfvbContainerWriteRequest';
 import SfvbElementSchemaResponse from '../com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from '../com.ultracart.admin.v2.models/SfvbElementsResponse';
+import SfvbEventsAuthRequest from '../com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
+import SfvbEventsAuthResponse from '../com.ultracart.admin.v2.models/SfvbEventsAuthResponse';
+import SfvbEventsResponse from '../com.ultracart.admin.v2.models/SfvbEventsResponse';
 import SfvbExperiment from '../com.ultracart.admin.v2.models/SfvbExperiment';
 import SfvbExperimentEndRequest from '../com.ultracart.admin.v2.models/SfvbExperimentEndRequest';
 import SfvbExperimentObjectivesResponse from '../com.ultracart.admin.v2.models/SfvbExperimentObjectivesResponse';
@@ -154,7 +157,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.200
+* @version 4.1.201
 */
 export default class SfvbApi {
 
@@ -2012,7 +2015,7 @@ export default class SfvbApi {
 
     /**
      * End an experiment
-     * Ends a running experiment.  With winner_variation_number the winner gets every visitor, including visitors already assigned to another variation, and a page experiment's winning content is promoted into the page by the completion job on its next run, which also emails the merchant.  Without a winner a page experiment's id is cleared from its page body so the page shows variation 0, and a url experiment sends everyone to variation 0.  Always needs sfvb_publish, and the approval of the person who signed in the CLI - an approved experiment.end request for this experiment and winner, which always needs a fresh authenticator code (see POST /sfvb/approvals). 
+     * Ends a running experiment.  With winner_variation_number the winner gets every visitor, including visitors already assigned to another variation, and a page experiment's winning content is promoted into the page by the completion job on its next run, which also emails the merchant.  Without a winner a page experiment's id is cleared from its page body so the page shows variation 0, and a url experiment sends everyone to variation 0.  Always needs sfvb_publish, and the approval of the person who signed in the CLI - an approved experiment.end request for this experiment and winner.  An end with a winner always needs a fresh authenticator code; an end without a winner can be covered by the person's approval session (see POST /sfvb/approvals). 
      * @param {Number} storefront_oid 
      * @param {Number} experiment_oid 
      * @param {Object} opts Optional parameters
@@ -2428,6 +2431,91 @@ export default class SfvbApi {
       let returnType = SfvbElementSchemaResponse;
       return this.apiClient.callApi(
         '/sfvb/elements/{element_type}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbEvents operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbEventsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEventsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replay events
+     * The signed-in person's events after the cursor, oldest first.  Events are kept 72 hours; an older cursor returns resync_required, and then the caller re-lists what it was waiting on.  Events about one sign-in's requests, such as approvals, are only returned to that sign-in.  limit is 1 to 500, default 100. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.after Return events after this event_id.  Leave it out for every event kept.
+     * @param {Number} opts.storefront_oid Only events about this storefront, plus merchant-level ones.
+     * @param {Number} opts.limit At most this many events, 1 to 500.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbEventsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEventsResponse}
+     */
+    getSfvbEvents(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'after': opts['after'],
+        'storefront_oid': opts['storefront_oid'],
+        'limit': opts['limit']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbEventsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/events', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbEventsAuthorization operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbEventsAuthorizationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEventsAuthResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Open the event stream
+     * Returns a websocket URL and a single-use token, valid for 5 minutes, for the signed-in person's event stream.  Events are thin hints, type and ids only, and the stream is at most once.  Re-read the object before acting, and after every reconnect replay from the last event_id with GET events.  Send ping messages to keep the connection open, and reconnect with a new token before two hours.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * @param {Object} opts Optional parameters
+     * @param {module:com.ultracart.admin.v2.models/SfvbEventsAuthRequest} opts.events_auth_request Optional storefront filter
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbEventsAuthorizationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEventsAuthResponse}
+     */
+    getSfvbEventsAuthorization(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['events_auth_request'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbEventsAuthResponse;
+      return this.apiClient.callApi(
+        '/sfvb/events/auth', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3307,7 +3395,7 @@ export default class SfvbApi {
 
     /**
      * List the paths that answered 404
-     * The paths shoppers asked for that answered 404, most hits first or by last_seen.  Paths only, never query strings.  Bots are left out unless include_bots.  Token-like path segments show as {token} unless include_tokens.  limit is 1 to 100, default 50. 
+     * The paths shoppers asked for that answered 404, most hits first or by last_seen.  Paths only, never query strings.  Bots are left out unless include_bots.  Token-like path segments show as {token} unless include_tokens.  A path stays listed after a redirect rule catches it, with redirected_to set.  redirected=false lists only paths no rule catches yet, and redirected=true only those one does.  limit is 1 to 100, default 50. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.since 
@@ -3316,6 +3404,7 @@ export default class SfvbApi {
      * @param {Boolean} opts.include_tokens 
      * @param {String} opts.q 
      * @param {Number} opts.limit 
+     * @param {Boolean} opts.redirected 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundResponse}
      */
@@ -3336,7 +3425,8 @@ export default class SfvbApi {
         'include_bots': opts['include_bots'],
         'include_tokens': opts['include_tokens'],
         'q': opts['q'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'redirected': opts['redirected']
       };
       let headerParams = {
       };
@@ -6019,7 +6109,7 @@ export default class SfvbApi {
 
     /**
      * Change one built-in message
-     * Sets one message in any number of languages.  ENG replaces the English, which drops its machine translations so they regenerate.  Any other language becomes a hand translation.  Languages not named are left alone; empty text is refused.  Shoppers see it at once.  Always needs sfvb_publish. 
+     * Sets one message in any number of languages.  ENG replaces the English, which drops its machine translations so they regenerate.  Any other language becomes a hand translation.  Languages not named are left alone.  Empty text removes that language's translation so machine translation fills it again (not allowed for ENG); it is the undo for an imported message, which can't be reset.  Shoppers see it at once.  Always needs sfvb_publish. 
      * @param {Number} storefront_oid 
      * @param {String} key 
      * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.

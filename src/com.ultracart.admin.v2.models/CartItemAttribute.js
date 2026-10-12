@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CartItemAttribute model module.
  * @module com.ultracart.admin.v2.models/CartItemAttribute
- * @version 4.1.200
+ * @version 4.1.201
  */
 class CartItemAttribute {
     /**

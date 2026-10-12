@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.200
+ * @version 4.1.201
  */
 class SfvbThemeJobResponse {
     /**
@@ -109,7 +109,7 @@ SfvbThemeJobResponse.prototype['description'] = undefined;
 SfvbThemeJobResponse.prototype['error_message'] = undefined;
 
 /**
- * When the job stopped.  Null until it does.
+ * When the job stopped, ISO 8601 UTC.  Null until it does.
  * @member {String} finished_dts
  */
 SfvbThemeJobResponse.prototype['finished_dts'] = undefined;
@@ -133,7 +133,7 @@ SfvbThemeJobResponse.prototype['progress'] = undefined;
 SfvbThemeJobResponse.prototype['progress_description'] = undefined;
 
 /**
- * When the job started running.  Null until it does.
+ * When the job started running, ISO 8601 UTC.  Null until it does.
  * @member {String} started_dts
  */
 SfvbThemeJobResponse.prototype['started_dts'] = undefined;
@@ -145,7 +145,7 @@ SfvbThemeJobResponse.prototype['started_dts'] = undefined;
 SfvbThemeJobResponse.prototype['status'] = undefined;
 
 /**
- * When the job was queued.
+ * When the job was queued, ISO 8601 UTC.
  * @member {String} submitted_dts
  */
 SfvbThemeJobResponse.prototype['submitted_dts'] = undefined;

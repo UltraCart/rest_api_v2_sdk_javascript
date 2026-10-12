@@ -18,7 +18,7 @@ import SfvbPageMultimedia from './SfvbPageMultimedia';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.200
+ * @version 4.1.201
  */
 class SfvbPageResponse {
     /**

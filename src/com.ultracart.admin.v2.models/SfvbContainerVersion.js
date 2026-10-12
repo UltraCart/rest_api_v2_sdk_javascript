@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersion
- * @version 4.1.200
+ * @version 4.1.201
  */
 class SfvbContainerVersion {
     /**
@@ -115,7 +115,7 @@ SfvbContainerVersion.prototype['container_history_oid'] = undefined;
 SfvbContainerVersion.prototype['container_name'] = undefined;
 
 /**
- * When this snapshot was taken.
+ * When this snapshot was taken, ISO 8601 UTC.
  * @member {String} created_dts
  */
 SfvbContainerVersion.prototype['created_dts'] = undefined;
