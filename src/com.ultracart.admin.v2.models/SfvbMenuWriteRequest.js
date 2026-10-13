@@ -17,7 +17,7 @@ import SfvbMenuItem from './SfvbMenuItem';
 /**
  * The SfvbMenuWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbMenuWriteRequest
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbMenuWriteRequest {
     /**

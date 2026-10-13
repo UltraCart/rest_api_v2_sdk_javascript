@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemMultimedia model module.
  * @module com.ultracart.admin.v2.models/SfvbItemMultimedia
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbItemMultimedia {
     /**
@@ -59,6 +59,12 @@ class SfvbItemMultimedia {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('description_sha256')) {
+                obj['description_sha256'] = ApiClient.convertToType(data['description_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('description_source')) {
+                obj['description_source'] = ApiClient.convertToType(data['description_source'], 'String');
+            }
             if (data.hasOwnProperty('dimensions')) {
                 obj['dimensions'] = ApiClient.convertToType(data['dimensions'], 'String');
             }
@@ -67,6 +73,12 @@ class SfvbItemMultimedia {
             }
             if (data.hasOwnProperty('filename')) {
                 obj['filename'] = ApiClient.convertToType(data['filename'], 'String');
+            }
+            if (data.hasOwnProperty('merchant_item_multimedia_oid')) {
+                obj['merchant_item_multimedia_oid'] = ApiClient.convertToType(data['merchant_item_multimedia_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('rekognition_description')) {
+                obj['rekognition_description'] = ApiClient.convertToType(data['rekognition_description'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -100,10 +112,22 @@ SfvbItemMultimedia.prototype['declared'] = undefined;
 SfvbItemMultimedia.prototype['default'] = undefined;
 
 /**
- * Stored with the image and rendered as its alt text.  When it is empty the render falls back to the item's own description, so an empty value here is not an empty alt attribute.
+ * The merchant's description, stored with the image and rendered as its alt text.  When it is empty the render falls back to rekognition_description or to text built from the item's title, depending on the element, so an empty value here is not an empty alt attribute.
  * @member {String} description
  */
 SfvbItemMultimedia.prototype['description'] = undefined;
+
+/**
+ * SHA-256 of description (empty when there is none).  Send it as current_sha256 when changing the description so a change made since you read it is not overwritten.
+ * @member {String} description_sha256
+ */
+SfvbItemMultimedia.prototype['description_sha256'] = undefined;
+
+/**
+ * Where the alt text comes from now.  merchant when description is set, rekognition when only rekognition_description is, none otherwise.
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemMultimedia.DescriptionSourceEnum} description_source
+ */
+SfvbItemMultimedia.prototype['description_source'] = undefined;
 
 /**
  * Width x height in pixels, when the storage measured the file.
@@ -124,6 +148,18 @@ SfvbItemMultimedia.prototype['exclude_from_gallery'] = undefined;
 SfvbItemMultimedia.prototype['filename'] = undefined;
 
 /**
+ * The stored image's id.  Name it to change this image's description when it has no code.
+ * @member {Number} merchant_item_multimedia_oid
+ */
+SfvbItemMultimedia.prototype['merchant_item_multimedia_oid'] = undefined;
+
+/**
+ * The machine description image recognition produced for the stored image, if any.  It is used only while description is empty, and a description written here or in the admin always takes its place.
+ * @member {String} rekognition_description
+ */
+SfvbItemMultimedia.prototype['rekognition_description'] = undefined;
+
+/**
  * The media type the storage recorded.
  * @member {module:com.ultracart.admin.v2.models/SfvbItemMultimedia.TypeEnum} type
  */
@@ -137,6 +173,33 @@ SfvbItemMultimedia.prototype['view_url'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>description_source</code> property.
+ * @enum {String}
+ * @readonly
+ */
+SfvbItemMultimedia['DescriptionSourceEnum'] = {
+
+    /**
+     * value: "merchant"
+     * @const
+     */
+    "merchant": "merchant",
+
+    /**
+     * value: "rekognition"
+     * @const
+     */
+    "rekognition": "rekognition",
+
+    /**
+     * value: "none"
+     * @const
+     */
+    "none": "none"
+};
 
 
 /**

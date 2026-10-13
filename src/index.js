@@ -1050,6 +1050,7 @@ import SfvbItemContainer from './com.ultracart.admin.v2.models/SfvbItemContainer
 import SfvbItemContainersResponse from './com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbItemContentRequest from './com.ultracart.admin.v2.models/SfvbItemContentRequest';
 import SfvbItemMultimedia from './com.ultracart.admin.v2.models/SfvbItemMultimedia';
+import SfvbItemMultimediaDescriptionRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
 import SfvbItemPricing from './com.ultracart.admin.v2.models/SfvbItemPricing';
 import SfvbItemPricingRequest from './com.ultracart.admin.v2.models/SfvbItemPricingRequest';
@@ -1341,7 +1342,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.201
+* @version 4.1.202
 */
 export {
     /**
@@ -7571,6 +7572,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimedia}
      */
     SfvbItemMultimedia,
+
+    /**
+     * The SfvbItemMultimediaDescriptionRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest}
+     */
+    SfvbItemMultimediaDescriptionRequest,
 
     /**
      * The SfvbItemMultimediaRequest model constructor.

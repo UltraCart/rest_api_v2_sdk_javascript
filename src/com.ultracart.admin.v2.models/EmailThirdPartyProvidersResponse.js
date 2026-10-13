@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailThirdPartyProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/EmailThirdPartyProvidersResponse
- * @version 4.1.201
+ * @version 4.1.202
  */
 class EmailThirdPartyProvidersResponse {
     /**

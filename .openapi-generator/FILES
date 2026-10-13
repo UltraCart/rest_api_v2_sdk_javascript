@@ -1057,6 +1057,7 @@ docs/SfvbItemContainer.md
 docs/SfvbItemContainersResponse.md
 docs/SfvbItemContentRequest.md
 docs/SfvbItemMultimedia.md
+docs/SfvbItemMultimediaDescriptionRequest.md
 docs/SfvbItemMultimediaRequest.md
 docs/SfvbItemPricing.md
 docs/SfvbItemPricingRequest.md
@@ -2340,6 +2341,7 @@ src/com.ultracart.admin.v2.models/SfvbItemContainer.js
 src/com.ultracart.admin.v2.models/SfvbItemContainersResponse.js
 src/com.ultracart.admin.v2.models/SfvbItemContentRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemMultimedia.js
+src/com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemMultimediaRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemPricing.js
 src/com.ultracart.admin.v2.models/SfvbItemPricingRequest.js

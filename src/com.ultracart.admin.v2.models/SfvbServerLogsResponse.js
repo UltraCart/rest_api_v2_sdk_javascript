@@ -17,7 +17,7 @@ import SfvbServerLog from './SfvbServerLog';
 /**
  * The SfvbServerLogsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbServerLogsResponse
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbServerLogsResponse {
     /**

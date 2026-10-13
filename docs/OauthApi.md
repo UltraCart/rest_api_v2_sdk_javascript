@@ -284,7 +284,7 @@ OauthRevoke.execute().catch(console.error);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **client_id** | **String**| The OAuth application client_id. | 
- **token** | **String**| The OAuth access token that is to be revoked.. | 
+ **token** | **String**| The OAuth access token or refresh token that is to be revoked. | 
 
 ### Return type
 

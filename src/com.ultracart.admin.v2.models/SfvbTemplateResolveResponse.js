@@ -17,7 +17,7 @@ import SfvbTemplateResolvePath from './SfvbTemplateResolvePath';
 /**
  * The SfvbTemplateResolveResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTemplateResolveResponse
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbTemplateResolveResponse {
     /**

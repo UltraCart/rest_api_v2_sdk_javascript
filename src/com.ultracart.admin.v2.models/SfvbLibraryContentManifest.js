@@ -18,7 +18,7 @@ import SfvbLibraryManifestFinding from './SfvbLibraryManifestFinding';
 /**
  * The SfvbLibraryContentManifest model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryContentManifest
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbLibraryContentManifest {
     /**

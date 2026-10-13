@@ -18,7 +18,7 @@ import SfvbRedirect from './SfvbRedirect';
 /**
  * The SfvbRedirectResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectResponse
- * @version 4.1.201
+ * @version 4.1.202
  */
 class SfvbRedirectResponse {
     /**

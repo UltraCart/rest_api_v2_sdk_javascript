@@ -19,7 +19,7 @@ import FraudRuleStorefrontFilter from './FraudRuleStorefrontFilter';
 /**
  * The FraudRulePublic model module.
  * @module com.ultracart.admin.v2.models/FraudRulePublic
- * @version 4.1.201
+ * @version 4.1.202
  */
 class FraudRulePublic {
     /**

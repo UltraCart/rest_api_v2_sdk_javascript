@@ -21,7 +21,7 @@ import OauthTokenResponse from '../com.ultracart.admin.v2.models/OauthTokenRespo
 /**
 * Oauth service.
 * @module com.ultracart.admin.v2/OauthApi
-* @version 4.1.201
+* @version 4.1.202
 */
 export default class OauthApi {
 
@@ -193,7 +193,7 @@ export default class OauthApi {
      * Revoke this OAuth application.
      * Revokes the OAuth application associated with the specified client_id and token. 
      * @param {String} client_id The OAuth application client_id.
-     * @param {String} token The OAuth access token that is to be revoked..
+     * @param {String} token The OAuth access token or refresh token that is to be revoked.
      * @param {module:com.ultracart.admin.v2/OauthApi~oauthRevokeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/OauthRevokeSuccessResponse}
      */

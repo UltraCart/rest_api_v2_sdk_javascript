@@ -63,6 +63,7 @@ import SfvbItemAttributeBatchResponse from '../com.ultracart.admin.v2.models/Sfv
 import SfvbItemAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
 import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemContentRequest';
+import SfvbItemMultimediaDescriptionRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
 import SfvbItemPricing from '../com.ultracart.admin.v2.models/SfvbItemPricing';
 import SfvbItemPricingRequest from '../com.ultracart.admin.v2.models/SfvbItemPricingRequest';
@@ -157,7 +158,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.201
+* @version 4.1.202
 */
 export default class SfvbApi {
 
@@ -6320,6 +6321,60 @@ export default class SfvbApi {
       let returnType = SfvbItemResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/multimedia', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemMultimediaDescription operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemMultimediaDescriptionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an item image's description
+     * Changes the description (alt text) of one image already attached to the item, in place.  The image is not touched.  Name it by merchant_item_multimedia_oid, or by exactly one of code or default; gallery images often have no code.  An empty description clears it, so the render falls back again.  Send the description_sha256 you read as current_sha256 so a change made since is not overwritten.  A description written here takes the place of the machine description, and image recognition never overwrites it. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest} item_multimedia_description_request The image and its new description
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemMultimediaDescriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemResponse}
+     */
+    putSfvbItemMultimediaDescription(storefront_oid, item_multimedia_description_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_multimedia_description_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemMultimediaDescription");
+      }
+      // verify the required parameter 'item_multimedia_description_request' is set
+      if (item_multimedia_description_request === undefined || item_multimedia_description_request === null) {
+        throw new Error("Missing the required parameter 'item_multimedia_description_request' when calling putSfvbItemMultimediaDescription");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/multimedia/description', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
