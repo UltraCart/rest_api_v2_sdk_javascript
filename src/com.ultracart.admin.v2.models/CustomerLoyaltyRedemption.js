@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerLoyaltyRedemption model module.
  * @module com.ultracart.admin.v2.models/CustomerLoyaltyRedemption
- * @version 4.1.204
+ * @version 4.1.205
  */
 class CustomerLoyaltyRedemption {
     /**

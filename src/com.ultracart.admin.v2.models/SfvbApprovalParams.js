@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.204
+ * @version 4.1.205
  */
 class SfvbApprovalParams {
     /**

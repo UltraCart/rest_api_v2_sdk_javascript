@@ -17,7 +17,7 @@ import Customer from './Customer';
 /**
  * The DataTablesServerSideResponse model module.
  * @module com.ultracart.admin.v2.models/DataTablesServerSideResponse
- * @version 4.1.204
+ * @version 4.1.205
  */
 class DataTablesServerSideResponse {
     /**

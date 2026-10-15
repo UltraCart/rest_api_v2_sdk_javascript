@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbBlogPostImage model module.
  * @module com.ultracart.admin.v2.models/SfvbBlogPostImage
- * @version 4.1.204
+ * @version 4.1.205
  */
 class SfvbBlogPostImage {
     /**

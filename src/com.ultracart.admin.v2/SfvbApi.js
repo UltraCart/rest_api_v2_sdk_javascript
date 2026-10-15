@@ -34,6 +34,8 @@ import SfvbContainerVersionsResponse from '../com.ultracart.admin.v2.models/Sfvb
 import SfvbContainerWriteRequest from '../com.ultracart.admin.v2.models/SfvbContainerWriteRequest';
 import SfvbElementSchemaResponse from '../com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from '../com.ultracart.admin.v2.models/SfvbElementsResponse';
+import SfvbEmailRenderRequest from '../com.ultracart.admin.v2.models/SfvbEmailRenderRequest';
+import SfvbEmailRenderResponse from '../com.ultracart.admin.v2.models/SfvbEmailRenderResponse';
 import SfvbEventsAuthRequest from '../com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
 import SfvbEventsAuthResponse from '../com.ultracart.admin.v2.models/SfvbEventsAuthResponse';
 import SfvbEventsResponse from '../com.ultracart.admin.v2.models/SfvbEventsResponse';
@@ -150,6 +152,7 @@ import SfvbThemeAttributesResponse from '../com.ultracart.admin.v2.models/SfvbTh
 import SfvbThemeDuplicateRequest from '../com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest';
 import SfvbThemeJobResponse from '../com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from '../com.ultracart.admin.v2.models/SfvbThemesResponse';
+import SfvbTransactionalEmailsResponse from '../com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
 import SfvbUpsellOffer from '../com.ultracart.admin.v2.models/SfvbUpsellOffer';
 import SfvbUpsellOffersResponse from '../com.ultracart.admin.v2.models/SfvbUpsellOffersResponse';
 import SfvbUpsellPath from '../com.ultracart.admin.v2.models/SfvbUpsellPath';
@@ -166,7 +169,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.204
+* @version 4.1.205
 */
 export default class SfvbApi {
 
@@ -4702,6 +4705,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbTransactionalEmails operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTransactionalEmailsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the transactional emails a storefront sends
+     * The order, shipment, auto order and other transactional emails this storefront sends, with their template files and the body container a draft replaces.  Forgot password and chat verification are not listed, because they have no preview. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTransactionalEmailsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse}
+     */
+    getSfvbTransactionalEmails(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTransactionalEmails");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTransactionalEmailsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/transactional_emails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbUpsellOffer operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbUpsellOfferCallback
      * @param {String} error Error message, if any.
@@ -7729,6 +7775,114 @@ export default class SfvbApi {
       let returnType = SfvbPageItemsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/pages/items/remove', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the renderSfvbEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~renderSfvbEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Render a flow or campaign email without sending it
+     * Renders a flow or campaign email exactly as its send would, and returns the subject, preview text, HTML and text.  Nothing is sent, saved or created.  A unique coupon code, click id and magic link token are placeholders.  A missing footer token, which a send skips the email for, is a warning.  Give cjson to render an unsaved draft of the email container in place of the saved one.  An order must be a test order.  cart_item_ids fills the cart a cart flow email shows. 
+     * @param {Number} storefront_oid 
+     * @param {String} email_uuid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailRenderRequest} email_render_request What to render the email with
+     * @param {module:com.ultracart.admin.v2/SfvbApi~renderSfvbEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse}
+     */
+    renderSfvbEmail(storefront_oid, email_uuid, email_render_request, callback) {
+      let postBody = email_render_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling renderSfvbEmail");
+      }
+      // verify the required parameter 'email_uuid' is set
+      if (email_uuid === undefined || email_uuid === null) {
+        throw new Error("Missing the required parameter 'email_uuid' when calling renderSfvbEmail");
+      }
+      // verify the required parameter 'email_render_request' is set
+      if (email_render_request === undefined || email_render_request === null) {
+        throw new Error("Missing the required parameter 'email_render_request' when calling renderSfvbEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_uuid': email_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbEmailRenderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/emails/{email_uuid}/render', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the renderSfvbTransactionalEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~renderSfvbTransactionalEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Render a transactional email without sending it
+     * Renders a transactional email, such as the order receipt, exactly as it is sent, and returns the subject, HTML and text.  Nothing is sent or saved.  file_name is the template file, such as receipt_html.vm, or the display name.  Give cjson to render an unsaved draft of the email's body container in place of the saved one.  The order must be a test order.  Without one the email renders with a made up order. 
+     * @param {Number} storefront_oid 
+     * @param {String} file_name 
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailRenderRequest} email_render_request What to render the email with
+     * @param {module:com.ultracart.admin.v2/SfvbApi~renderSfvbTransactionalEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse}
+     */
+    renderSfvbTransactionalEmail(storefront_oid, file_name, email_render_request, callback) {
+      let postBody = email_render_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling renderSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'file_name' is set
+      if (file_name === undefined || file_name === null) {
+        throw new Error("Missing the required parameter 'file_name' when calling renderSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'email_render_request' is set
+      if (email_render_request === undefined || email_render_request === null) {
+        throw new Error("Missing the required parameter 'email_render_request' when calling renderSfvbTransactionalEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'file_name': file_name
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbEmailRenderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/transactional_emails/{file_name}/render', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemContainer model module.
  * @module com.ultracart.admin.v2.models/SfvbItemContainer
- * @version 4.1.204
+ * @version 4.1.205
  */
 class SfvbItemContainer {
     /**

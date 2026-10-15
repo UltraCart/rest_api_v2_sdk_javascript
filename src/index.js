@@ -1007,6 +1007,8 @@ import SfvbContainerWriteRequest from './com.ultracart.admin.v2.models/SfvbConta
 import SfvbElement from './com.ultracart.admin.v2.models/SfvbElement';
 import SfvbElementSchemaResponse from './com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from './com.ultracart.admin.v2.models/SfvbElementsResponse';
+import SfvbEmailRenderRequest from './com.ultracart.admin.v2.models/SfvbEmailRenderRequest';
+import SfvbEmailRenderResponse from './com.ultracart.admin.v2.models/SfvbEmailRenderResponse';
 import SfvbErrorDetail from './com.ultracart.admin.v2.models/SfvbErrorDetail';
 import SfvbEvent from './com.ultracart.admin.v2.models/SfvbEvent';
 import SfvbEventsAuthRequest from './com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
@@ -1188,6 +1190,8 @@ import SfvbThemeFont from './com.ultracart.admin.v2.models/SfvbThemeFont';
 import SfvbThemeFontFamily from './com.ultracart.admin.v2.models/SfvbThemeFontFamily';
 import SfvbThemeJobResponse from './com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesResponse';
+import SfvbTransactionalEmail from './com.ultracart.admin.v2.models/SfvbTransactionalEmail';
+import SfvbTransactionalEmailsResponse from './com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
 import SfvbUpsellItemLogic from './com.ultracart.admin.v2.models/SfvbUpsellItemLogic';
 import SfvbUpsellItemLogicItem from './com.ultracart.admin.v2.models/SfvbUpsellItemLogicItem';
 import SfvbUpsellOffer from './com.ultracart.admin.v2.models/SfvbUpsellOffer';
@@ -1354,7 +1358,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.204
+* @version 4.1.205
 */
 export {
     /**
@@ -7328,6 +7332,18 @@ export {
     SfvbElementsResponse,
 
     /**
+     * The SfvbEmailRenderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEmailRenderRequest}
+     */
+    SfvbEmailRenderRequest,
+
+    /**
+     * The SfvbEmailRenderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse}
+     */
+    SfvbEmailRenderResponse,
+
+    /**
      * The SfvbErrorDetail model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbErrorDetail}
      */
@@ -8412,6 +8428,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbThemesResponse}
      */
     SfvbThemesResponse,
+
+    /**
+     * The SfvbTransactionalEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmail}
+     */
+    SfvbTransactionalEmail,
+
+    /**
+     * The SfvbTransactionalEmailsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse}
+     */
+    SfvbTransactionalEmailsResponse,
 
     /**
      * The SfvbUpsellItemLogic model constructor.

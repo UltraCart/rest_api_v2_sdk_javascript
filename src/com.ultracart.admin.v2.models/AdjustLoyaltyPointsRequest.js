@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AdjustLoyaltyPointsRequest model module.
  * @module com.ultracart.admin.v2.models/AdjustLoyaltyPointsRequest
- * @version 4.1.204
+ * @version 4.1.205
  */
 class AdjustLoyaltyPointsRequest {
     /**
