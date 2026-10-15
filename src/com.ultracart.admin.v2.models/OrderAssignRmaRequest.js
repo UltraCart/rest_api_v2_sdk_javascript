@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderAssignRmaRequest model module.
  * @module com.ultracart.admin.v2.models/OrderAssignRmaRequest
- * @version 4.1.202
+ * @version 4.1.203
  */
 class OrderAssignRmaRequest {
     /**

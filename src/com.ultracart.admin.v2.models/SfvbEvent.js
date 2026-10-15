@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbEvent model module.
  * @module com.ultracart.admin.v2.models/SfvbEvent
- * @version 4.1.202
+ * @version 4.1.203
  */
 class SfvbEvent {
     /**
@@ -91,7 +91,7 @@ SfvbEvent.prototype['event_id'] = undefined;
 SfvbEvent.prototype['object_id'] = undefined;
 
 /**
- * What changed, such as approval.
+ * What changed, such as approval or secret_sink.
  * @member {String} object_type
  */
 SfvbEvent.prototype['object_type'] = undefined;
@@ -103,7 +103,7 @@ SfvbEvent.prototype['object_type'] = undefined;
 SfvbEvent.prototype['storefront_oid'] = undefined;
 
 /**
- * approval.decided (approved, denied, cancelled or refused by the script review) or approval.ready (the review finished and the person can decide).
+ * approval.decided (approved, denied, cancelled or refused by the script review), approval.ready (the review finished and the person can decide) or secret_sink.completed (a person entered the values of a secret request; object_id is the request id).
  * @member {String} type
  */
 SfvbEvent.prototype['type'] = undefined;

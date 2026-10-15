@@ -17,7 +17,7 @@ import SfvbI18nTranslation from './SfvbI18nTranslation';
 /**
  * The SfvbI18nMessage model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMessage
- * @version 4.1.202
+ * @version 4.1.203
  */
 class SfvbI18nMessage {
     /**

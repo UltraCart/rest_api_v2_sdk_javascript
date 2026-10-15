@@ -128,6 +128,10 @@ import SfvbRedirectResponse from '../com.ultracart.admin.v2.models/SfvbRedirectR
 import SfvbRedirectsResponse from '../com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbSecretKindsResponse from '../com.ultracart.admin.v2.models/SfvbSecretKindsResponse';
+import SfvbSecretRequest from '../com.ultracart.admin.v2.models/SfvbSecretRequest';
+import SfvbSecretRequestCreate from '../com.ultracart.admin.v2.models/SfvbSecretRequestCreate';
+import SfvbSecretRequestsResponse from '../com.ultracart.admin.v2.models/SfvbSecretRequestsResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
@@ -158,7 +162,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.202
+* @version 4.1.203
 */
 export default class SfvbApi {
 
@@ -588,7 +592,7 @@ export default class SfvbApi {
 
     /**
      * One time link that opens a preview in a browser with no UltraCart login
-     * The preview URL only works in a browser already signed in to UltraCart on the storefront's own host, and an agent's built in browser never is.  This returns a single use access_url on the storefront host instead.  Opening it gets past the storefront lock, shows the requested theme and applies the requested preview session for the rest of that browser session, then redirects to path.  It expires two minutes after issue or on first use.  Pages opened afterwards carry an X-UltraCart-Preview header of applied or not-applied.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * The preview URL only works in a browser already signed in to UltraCart on the storefront's own host, and an agent's built in browser never is.  This returns a single use access_url on the storefront host instead.  Opening it gets past the storefront lock, shows the requested theme and applies the requested preview session for the rest of that browser session, then redirects to path.  It expires two minutes after issue or on first use.  With a preview session, pages opened afterwards carry an X-UltraCart-Preview header of applied or not-applied.  Without one, the pages are the live content and carry no X-UltraCart-Preview header.  Requires a token that resolves to a user, so use the device authorization flow. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {module:com.ultracart.admin.v2.models/SfvbPreviewAccessRequest} opts.preview_access What the browser should see
@@ -1182,6 +1186,49 @@ export default class SfvbApi {
       let returnType = SfvbRedirectDeleteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/redirects/delete', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbSecretRequest operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSecretRequestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequest} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel a pending secret request
+     * Withdraws a request nobody has filled in yet, with its handles, which frees one of the five pending slots a sign-in has.  A fulfilled request cannot be cancelled; revoke its handles instead. 
+     * @param {String} request_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSecretRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretRequest}
+     */
+    deleteSfvbSecretRequest(request_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'request_id' is set
+      if (request_id === undefined || request_id === null) {
+        throw new Error("Missing the required parameter 'request_id' when calling deleteSfvbSecretRequest");
+      }
+
+      let pathParams = {
+        'request_id': request_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretRequest;
+      return this.apiClient.callApi(
+        '/sfvb/secrets/{request_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4038,6 +4085,123 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbSecretKinds operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretKindsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretKindsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the secrets this server collects
+     * The kinds of secret value, with what each looks like, and the secret fields (sinks) a handle can be written to.  Request a handle for a sink with POST secrets. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretKindsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretKindsResponse}
+     */
+    getSfvbSecretKinds(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretKindsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/secrets/kinds', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSecretRequest operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretRequestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequest} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one secret request
+     * Poll this every interval_seconds after making a request.  status is pending until a person enters the values, then fulfilled, and expired if nobody does within 24 hours.  handles lists each handle with its own status, and a fingerprint (the last few characters as a mask shows them) once its value is entered.  Never a value. 
+     * @param {String} request_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretRequest}
+     */
+    getSfvbSecretRequest(request_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'request_id' is set
+      if (request_id === undefined || request_id === null) {
+        throw new Error("Missing the required parameter 'request_id' when calling getSfvbSecretRequest");
+      }
+
+      let pathParams = {
+        'request_id': request_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretRequest;
+      return this.apiClient.callApi(
+        '/sfvb/secrets/{request_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSecretRequests operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretRequestsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequestsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List this sign-in's secret requests
+     * Requests made with this sign-in in the last 24 hours, newest first, at most 50, without their handles.  Read one request for its handles. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretRequestsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretRequestsResponse}
+     */
+    getSfvbSecretRequests(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretRequestsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/secrets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbServerLog operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbServerLogCallback
      * @param {String} error Error message, if any.
@@ -4804,6 +4968,48 @@ export default class SfvbApi {
       let returnType = SfvbRedirectResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/redirects', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbSecretRequest operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbSecretRequestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequest} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Ask a person to enter secret values
+     * Never ask for a credential in the conversation.  This makes a handle for each sink (and each key, for a bulk request) at once, pending until a person enters the values on request_url.  Show the person request_url and user_code and never open or fill in the page yourself.  Poll GET secrets/{request_id} every interval_seconds until status is fulfilled, then send each handle in its secret field.  The server writes the value in its place.  A handle works only for this sign-in, its sink and its target, for ttl_seconds and uses writes.  A request lapses after 24 hours, and shares the five pending requests a sign-in has with approvals.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  Requires a token that resolves to a user, so use the device authorization flow.  A secret request is never an approval. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequestCreate} secret_request The request
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbSecretRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretRequest}
+     */
+    insertSfvbSecretRequest(secret_request, callback) {
+      let postBody = secret_request;
+      // verify the required parameter 'secret_request' is set
+      if (secret_request === undefined || secret_request === null) {
+        throw new Error("Missing the required parameter 'secret_request' when calling insertSfvbSecretRequest");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretRequest;
+      return this.apiClient.callApi(
+        '/sfvb/secrets', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -7577,6 +7783,49 @@ export default class SfvbApi {
       let returnType = SfvbFileWriteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/revert', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the revokeSfvbSecretRequest operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~revokeSfvbSecretRequestCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSecretRequest} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Revoke a fulfilled request's unused handles
+     * Every handle of the request that no write has used up stops working at once, and its value is deleted.  A handle a write is using right now is left to that write.  Use it when the plan changed, or a handle may have leaked. 
+     * @param {String} request_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~revokeSfvbSecretRequestCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSecretRequest}
+     */
+    revokeSfvbSecretRequest(request_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'request_id' is set
+      if (request_id === undefined || request_id === null) {
+        throw new Error("Missing the required parameter 'request_id' when calling revokeSfvbSecretRequest");
+      }
+
+      let pathParams = {
+        'request_id': request_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSecretRequest;
+      return this.apiClient.callApi(
+        '/sfvb/secrets/{request_id}/revoke', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemVolumeDiscount model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVolumeDiscount
- * @version 4.1.202
+ * @version 4.1.203
  */
 class SfvbItemVolumeDiscount {
     /**

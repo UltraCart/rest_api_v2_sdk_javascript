@@ -1149,6 +1149,13 @@ import SfvbRedirectResponse from './com.ultracart.admin.v2.models/SfvbRedirectRe
 import SfvbRedirectsResponse from './com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbSecretHandle from './com.ultracart.admin.v2.models/SfvbSecretHandle';
+import SfvbSecretKind from './com.ultracart.admin.v2.models/SfvbSecretKind';
+import SfvbSecretKindsResponse from './com.ultracart.admin.v2.models/SfvbSecretKindsResponse';
+import SfvbSecretRequest from './com.ultracart.admin.v2.models/SfvbSecretRequest';
+import SfvbSecretRequestCreate from './com.ultracart.admin.v2.models/SfvbSecretRequestCreate';
+import SfvbSecretRequestsResponse from './com.ultracart.admin.v2.models/SfvbSecretRequestsResponse';
+import SfvbSecretSink from './com.ultracart.admin.v2.models/SfvbSecretSink';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
 import SfvbServerLogDetail from './com.ultracart.admin.v2.models/SfvbServerLogDetail';
 import SfvbServerLogEntry from './com.ultracart.admin.v2.models/SfvbServerLogEntry';
@@ -1342,7 +1349,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.202
+* @version 4.1.203
 */
 export {
     /**
@@ -8166,6 +8173,48 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRenderResponse}
      */
     SfvbRenderResponse,
+
+    /**
+     * The SfvbSecretHandle model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretHandle}
+     */
+    SfvbSecretHandle,
+
+    /**
+     * The SfvbSecretKind model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretKind}
+     */
+    SfvbSecretKind,
+
+    /**
+     * The SfvbSecretKindsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretKindsResponse}
+     */
+    SfvbSecretKindsResponse,
+
+    /**
+     * The SfvbSecretRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretRequest}
+     */
+    SfvbSecretRequest,
+
+    /**
+     * The SfvbSecretRequestCreate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretRequestCreate}
+     */
+    SfvbSecretRequestCreate,
+
+    /**
+     * The SfvbSecretRequestsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretRequestsResponse}
+     */
+    SfvbSecretRequestsResponse,
+
+    /**
+     * The SfvbSecretSink model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSecretSink}
+     */
+    SfvbSecretSink,
 
     /**
      * The SfvbServerLog model constructor.
