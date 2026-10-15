@@ -17,7 +17,7 @@ import SfvbItemContainer from './SfvbItemContainer';
 /**
  * The SfvbItemContainersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbItemContainersResponse
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbItemContainersResponse {
     /**

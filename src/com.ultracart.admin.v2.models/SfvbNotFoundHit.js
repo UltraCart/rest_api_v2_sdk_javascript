@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbNotFoundHit model module.
  * @module com.ultracart.admin.v2.models/SfvbNotFoundHit
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbNotFoundHit {
     /**

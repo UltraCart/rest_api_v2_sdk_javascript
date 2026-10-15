@@ -999,6 +999,11 @@ docs/SfvbBlogPostImage.md
 docs/SfvbBlogPostImageRequest.md
 docs/SfvbBlogPostRequest.md
 docs/SfvbBlogPostsResponse.md
+docs/SfvbCommsDnsRecord.md
+docs/SfvbCommsSendingDomain.md
+docs/SfvbCommsSendingDomainsResponse.md
+docs/SfvbCommsTwilioAccount.md
+docs/SfvbCommsTwilioAccountResponse.md
 docs/SfvbCompileRequest.md
 docs/SfvbCompileResponse.md
 docs/SfvbContainerResponse.md
@@ -2290,6 +2295,11 @@ src/com.ultracart.admin.v2.models/SfvbBlogPostImage.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostImageRequest.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostRequest.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostsResponse.js
+src/com.ultracart.admin.v2.models/SfvbCommsDnsRecord.js
+src/com.ultracart.admin.v2.models/SfvbCommsSendingDomain.js
+src/com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse.js
+src/com.ultracart.admin.v2.models/SfvbCommsTwilioAccount.js
+src/com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse.js
 src/com.ultracart.admin.v2.models/SfvbCompileRequest.js
 src/com.ultracart.admin.v2.models/SfvbCompileResponse.js
 src/com.ultracart.admin.v2.models/SfvbContainerResponse.js

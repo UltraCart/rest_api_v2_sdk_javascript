@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbApprovalParams {
     /**
@@ -55,6 +55,12 @@ class SfvbApprovalParams {
             }
             if (data.hasOwnProperty('content_sha256')) {
                 obj['content_sha256'] = ApiClient.convertToType(data['content_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('domain')) {
+                obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
+            }
+            if (data.hasOwnProperty('esp_twilio_uuid')) {
+                obj['esp_twilio_uuid'] = ApiClient.convertToType(data['esp_twilio_uuid'], 'String');
             }
             if (data.hasOwnProperty('experiment_oid')) {
                 obj['experiment_oid'] = ApiClient.convertToType(data['experiment_oid'], 'Number');
@@ -119,6 +125,18 @@ SfvbApprovalParams.prototype['blog_post_oid'] = undefined;
  * @member {String} content_sha256
  */
 SfvbApprovalParams.prototype['content_sha256'] = undefined;
+
+/**
+ * For sending_domain.delete, the sending domain.
+ * @member {String} domain
+ */
+SfvbApprovalParams.prototype['domain'] = undefined;
+
+/**
+ * For twilio_account.delete, the Twilio account's esp_twilio_uuid, as GET comms/twilio_account returns it.
+ * @member {String} esp_twilio_uuid
+ */
+SfvbApprovalParams.prototype['esp_twilio_uuid'] = undefined;
 
 /**
  * For experiment.end, the experiment to end.

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxPayConnectorsResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPayConnectorsResponse
- * @version 4.1.203
+ * @version 4.1.204
  */
 class ConversationPbxPayConnectorsResponse {
     /**

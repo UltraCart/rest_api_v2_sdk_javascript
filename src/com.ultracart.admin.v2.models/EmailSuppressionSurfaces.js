@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSuppressionSurfaces model module.
  * @module com.ultracart.admin.v2.models/EmailSuppressionSurfaces
- * @version 4.1.203
+ * @version 4.1.204
  */
 class EmailSuppressionSurfaces {
     /**

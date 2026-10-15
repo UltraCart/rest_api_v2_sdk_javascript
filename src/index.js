@@ -992,6 +992,11 @@ import SfvbBlogPostImage from './com.ultracart.admin.v2.models/SfvbBlogPostImage
 import SfvbBlogPostImageRequest from './com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
 import SfvbBlogPostRequest from './com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from './com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
+import SfvbCommsDnsRecord from './com.ultracart.admin.v2.models/SfvbCommsDnsRecord';
+import SfvbCommsSendingDomain from './com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
+import SfvbCommsSendingDomainsResponse from './com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
+import SfvbCommsTwilioAccount from './com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
+import SfvbCommsTwilioAccountResponse from './com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse';
 import SfvbCompileRequest from './com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from './com.ultracart.admin.v2.models/SfvbCompileResponse';
 import SfvbContainerResponse from './com.ultracart.admin.v2.models/SfvbContainerResponse';
@@ -1349,7 +1354,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.203
+* @version 4.1.204
 */
 export {
     /**
@@ -7231,6 +7236,36 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbBlogPostsResponse}
      */
     SfvbBlogPostsResponse,
+
+    /**
+     * The SfvbCommsDnsRecord model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsDnsRecord}
+     */
+    SfvbCommsDnsRecord,
+
+    /**
+     * The SfvbCommsSendingDomain model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain}
+     */
+    SfvbCommsSendingDomain,
+
+    /**
+     * The SfvbCommsSendingDomainsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse}
+     */
+    SfvbCommsSendingDomainsResponse,
+
+    /**
+     * The SfvbCommsTwilioAccount model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccount}
+     */
+    SfvbCommsTwilioAccount,
+
+    /**
+     * The SfvbCommsTwilioAccountResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse}
+     */
+    SfvbCommsTwilioAccountResponse,
 
     /**
      * The SfvbCompileRequest model constructor.

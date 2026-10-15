@@ -17,7 +17,7 @@ import SfvbI18nMessage from './SfvbI18nMessage';
 /**
  * The SfvbI18nMessagesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMessagesResponse
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbI18nMessagesResponse {
     /**

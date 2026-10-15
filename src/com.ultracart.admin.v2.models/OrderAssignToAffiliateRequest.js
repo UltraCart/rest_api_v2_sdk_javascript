@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderAssignToAffiliateRequest model module.
  * @module com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest
- * @version 4.1.203
+ * @version 4.1.204
  */
 class OrderAssignToAffiliateRequest {
     /**

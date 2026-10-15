@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSecretRequestCreate model module.
  * @module com.ultracart.admin.v2.models/SfvbSecretRequestCreate
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbSecretRequestCreate {
     /**
@@ -100,7 +100,7 @@ SfvbSecretRequestCreate.prototype['reason'] = undefined;
 SfvbSecretRequestCreate.prototype['sinks'] = undefined;
 
 /**
- * The object the values are for, such as a Twilio account uuid.  Required for sinks that need an authenticator code, unless keys names the targets.  Leave it out when keys is sent.
+ * The object the values are for.  A Twilio account by its account SID (AC followed by 32 hex digits), and a sending domain by the domain name, which may be one not added yet.  Required for sinks that need an authenticator code, unless keys names the targets.  Leave it out when keys is sent.
  * @member {String} target_id
  */
 SfvbSecretRequestCreate.prototype['target_id'] = undefined;

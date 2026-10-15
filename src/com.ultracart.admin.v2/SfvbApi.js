@@ -21,6 +21,10 @@ import SfvbBlogPostDetail from '../com.ultracart.admin.v2.models/SfvbBlogPostDet
 import SfvbBlogPostImageRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
 import SfvbBlogPostRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
+import SfvbCommsSendingDomain from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
+import SfvbCommsSendingDomainsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
+import SfvbCommsTwilioAccount from '../com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
+import SfvbCommsTwilioAccountResponse from '../com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse';
 import SfvbCompileRequest from '../com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from '../com.ultracart.admin.v2.models/SfvbCompileResponse';
 import SfvbContainerResponse from '../com.ultracart.admin.v2.models/SfvbContainerResponse';
@@ -162,7 +166,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.203
+* @version 4.1.204
 */
 export default class SfvbApi {
 
@@ -760,6 +764,92 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbCommsSendingDomain operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsSendingDomainCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a sending domain
+     * Removes the domain from UltraCart and from Amazon SES.  Needs an approved sending_domain.delete request for it (POST approvals, params.domain). 
+     * @param {String} domain 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved sending_domain.delete request for this domain.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsSendingDomainCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbCommsSendingDomain(domain, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling deleteSfvbCommsSendingDomain");
+      }
+
+      let pathParams = {
+        'domain': domain
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains/{domain}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbCommsTwilioAccount operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsTwilioAccountCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove the Twilio account
+     * Removes the account's Twilio account and its credentials from UltraCart.  The account stays at Twilio.  Needs an approved twilio_account.delete request for it (POST approvals, params.esp_twilio_uuid). 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved twilio_account.delete request for this account.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsTwilioAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbCommsTwilioAccount(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/comms/twilio_account', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2320,6 +2410,123 @@ export default class SfvbApi {
       let returnType = SfvbElementsResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/elements', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsSendingDomain operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSendingDomainCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a sending domain
+     * One sending domain as stored.  To check an amazon domain's DNS again, use the status call. 
+     * @param {String} domain 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSendingDomainCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain}
+     */
+    getSfvbCommsSendingDomain(domain, callback) {
+      let postBody = null;
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling getSfvbCommsSendingDomain");
+      }
+
+      let pathParams = {
+        'domain': domain
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSendingDomain;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains/{domain}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsSendingDomains operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSendingDomainsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the sending domains
+     * Every domain the account sends email from, with its provider, verification status and the DNS records an amazon domain needs.  mailgun_api_key is always a mask. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSendingDomainsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse}
+     */
+    getSfvbCommsSendingDomains(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSendingDomainsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsTwilioAccount operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsTwilioAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the Twilio account
+     * The account's Twilio account, used for SMS and the phone system, or none.  An account has at most one.  auth_token is always a mask. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsTwilioAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse}
+     */
+    getSfvbCommsTwilioAccount(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsTwilioAccountResponse;
+      return this.apiClient.callApi(
+        '/sfvb/comms/twilio_account', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4878,6 +5085,90 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the insertSfvbCommsSendingDomain operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsSendingDomainCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add a sending domain
+     * Adds a domain to send email from.  An amazon domain starts verification with Amazon SES and returns the DNS records to publish; the person signed in also gets them by email.  A mailgun domain needs mailgun_api_key as a secret handle made for the domain (POST secrets, sink mailgun.domain.api_key), never the key itself.  UltraCart sets up its webhooks on the Mailgun domain with the key; if Mailgun refuses, nothing is saved and the handle is given back unused. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} sending_domain The sending domain
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsSendingDomainCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain}
+     */
+    insertSfvbCommsSendingDomain(sending_domain, callback) {
+      let postBody = sending_domain;
+      // verify the required parameter 'sending_domain' is set
+      if (sending_domain === undefined || sending_domain === null) {
+        throw new Error("Missing the required parameter 'sending_domain' when calling insertSfvbCommsSendingDomain");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSendingDomain;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbCommsTwilioAccount operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsTwilioAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Connect the Twilio account
+     * Connects the account's Twilio account with account_sid and auth_token.  Send auth_token as a secret handle made for that account SID (POST secrets, sink twilio.account.auth_token), never the token itself.  UltraCart checks the token with Twilio, then makes its API key, TwiML apps and voice encryption key on the account, as the admin does.  If Twilio refuses, nothing is saved and the handle is given back unused.  An account has at most one Twilio account, so this is refused when one exists; update it instead. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccount} twilio_account The Twilio account
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsTwilioAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse}
+     */
+    insertSfvbCommsTwilioAccount(twilio_account, callback) {
+      let postBody = twilio_account;
+      // verify the required parameter 'twilio_account' is set
+      if (twilio_account === undefined || twilio_account === null) {
+        throw new Error("Missing the required parameter 'twilio_account' when calling insertSfvbCommsTwilioAccount");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsTwilioAccountResponse;
+      return this.apiClient.callApi(
+        '/sfvb/comms/twilio_account', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -7245,6 +7536,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the refreshSfvbCommsSendingDomainStatus operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~refreshSfvbCommsSendingDomainStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check a sending domain's verification
+     * Asks Amazon SES again whether an amazon domain's DNS records are in place, and restarts a verification that failed (its records then change).  A mailgun domain comes back as it is; Mailgun checks its own records. 
+     * @param {String} domain 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~refreshSfvbCommsSendingDomainStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain}
+     */
+    refreshSfvbCommsSendingDomainStatus(domain, callback) {
+      let postBody = null;
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling refreshSfvbCommsSendingDomainStatus");
+      }
+
+      let pathParams = {
+        'domain': domain
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSendingDomain;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains/{domain}/status', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the refreshSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~refreshSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -8402,6 +8736,96 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbCommsSendingDomain operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsSendingDomainCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a sending domain
+     * Only a mailgun domain's mailgun_api_key can change.  Send it as a secret handle made for the domain to replace it, or as the mask it was read with to keep it.  A new key sets up UltraCart's webhooks again with it; if Mailgun refuses, nothing is saved and the handle is given back unused. 
+     * @param {String} domain 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain} sending_domain The changes
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsSendingDomainCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSendingDomain}
+     */
+    updateSfvbCommsSendingDomain(domain, sending_domain, callback) {
+      let postBody = sending_domain;
+      // verify the required parameter 'domain' is set
+      if (domain === undefined || domain === null) {
+        throw new Error("Missing the required parameter 'domain' when calling updateSfvbCommsSendingDomain");
+      }
+      // verify the required parameter 'sending_domain' is set
+      if (sending_domain === undefined || sending_domain === null) {
+        throw new Error("Missing the required parameter 'sending_domain' when calling updateSfvbCommsSendingDomain");
+      }
+
+      let pathParams = {
+        'domain': domain
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSendingDomain;
+      return this.apiClient.callApi(
+        '/sfvb/comms/sending_domains/{domain}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbCommsTwilioAccount operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsTwilioAccountCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update the Twilio account
+     * Changes the account's Twilio account.  Leave a field out to keep it.  Send auth_token as the mask it was read with to keep it, or as a secret handle made for the account SID to replace it.  A new account_sid needs a new auth_token with it.  A new token is checked with Twilio and UltraCart's API key, TwiML apps and voice encryption key are made again; if Twilio refuses, nothing is saved and the handle is given back unused.  phone_numbers, when sent, replaces the list. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccount} twilio_account The changes
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsTwilioAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse}
+     */
+    updateSfvbCommsTwilioAccount(twilio_account, callback) {
+      let postBody = twilio_account;
+      // verify the required parameter 'twilio_account' is set
+      if (twilio_account === undefined || twilio_account === null) {
+        throw new Error("Missing the required parameter 'twilio_account' when calling updateSfvbCommsTwilioAccount");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsTwilioAccountResponse;
+      return this.apiClient.callApi(
+        '/sfvb/comms/twilio_account', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

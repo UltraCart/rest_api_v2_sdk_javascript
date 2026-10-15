@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbEventsAuthResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbEventsAuthResponse
- * @version 4.1.203
+ * @version 4.1.204
  */
 class SfvbEventsAuthResponse {
     /**
