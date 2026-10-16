@@ -992,7 +992,11 @@ import SfvbBlogPostImage from './com.ultracart.admin.v2.models/SfvbBlogPostImage
 import SfvbBlogPostImageRequest from './com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
 import SfvbBlogPostRequest from './com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from './com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
+import SfvbCampaign from './com.ultracart.admin.v2.models/SfvbCampaign';
+import SfvbCampaignsResponse from './com.ultracart.admin.v2.models/SfvbCampaignsResponse';
 import SfvbCommsDnsRecord from './com.ultracart.admin.v2.models/SfvbCommsDnsRecord';
+import SfvbCommsEmail from './com.ultracart.admin.v2.models/SfvbCommsEmail';
+import SfvbCommsPostcard from './com.ultracart.admin.v2.models/SfvbCommsPostcard';
 import SfvbCommsSendingDomain from './com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from './com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
 import SfvbCommsTwilioAccount from './com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
@@ -1034,6 +1038,8 @@ import SfvbFileVersionsResponse from './com.ultracart.admin.v2.models/SfvbFileVe
 import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from './com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbFlow from './com.ultracart.admin.v2.models/SfvbFlow';
+import SfvbFlowsResponse from './com.ultracart.admin.v2.models/SfvbFlowsResponse';
 import SfvbI18nGlossary from './com.ultracart.admin.v2.models/SfvbI18nGlossary';
 import SfvbI18nGlossaryRequest from './com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest';
 import SfvbI18nLanguage from './com.ultracart.admin.v2.models/SfvbI18nLanguage';
@@ -1358,7 +1364,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.206
+* @version 4.1.207
 */
 export {
     /**
@@ -7242,10 +7248,34 @@ export {
     SfvbBlogPostsResponse,
 
     /**
+     * The SfvbCampaign model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCampaign}
+     */
+    SfvbCampaign,
+
+    /**
+     * The SfvbCampaignsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCampaignsResponse}
+     */
+    SfvbCampaignsResponse,
+
+    /**
      * The SfvbCommsDnsRecord model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsDnsRecord}
      */
     SfvbCommsDnsRecord,
+
+    /**
+     * The SfvbCommsEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsEmail}
+     */
+    SfvbCommsEmail,
+
+    /**
+     * The SfvbCommsPostcard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsPostcard}
+     */
+    SfvbCommsPostcard,
 
     /**
      * The SfvbCommsSendingDomain model constructor.
@@ -7492,6 +7522,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbFilesResponse}
      */
     SfvbFilesResponse,
+
+    /**
+     * The SfvbFlow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFlow}
+     */
+    SfvbFlow,
+
+    /**
+     * The SfvbFlowsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFlowsResponse}
+     */
+    SfvbFlowsResponse,
 
     /**
      * The SfvbI18nGlossary model constructor.

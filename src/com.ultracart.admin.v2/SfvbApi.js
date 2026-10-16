@@ -21,6 +21,8 @@ import SfvbBlogPostDetail from '../com.ultracart.admin.v2.models/SfvbBlogPostDet
 import SfvbBlogPostImageRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostImageRequest';
 import SfvbBlogPostRequest from '../com.ultracart.admin.v2.models/SfvbBlogPostRequest';
 import SfvbBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbBlogPostsResponse';
+import SfvbCampaign from '../com.ultracart.admin.v2.models/SfvbCampaign';
+import SfvbCampaignsResponse from '../com.ultracart.admin.v2.models/SfvbCampaignsResponse';
 import SfvbCommsSendingDomain from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
 import SfvbCommsTwilioAccount from '../com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
@@ -55,6 +57,8 @@ import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileV
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
+import SfvbFlow from '../com.ultracart.admin.v2.models/SfvbFlow';
+import SfvbFlowsResponse from '../com.ultracart.admin.v2.models/SfvbFlowsResponse';
 import SfvbI18nGlossary from '../com.ultracart.admin.v2.models/SfvbI18nGlossary';
 import SfvbI18nGlossaryRequest from '../com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest';
 import SfvbI18nLanguageEnableRequest from '../com.ultracart.admin.v2.models/SfvbI18nLanguageEnableRequest';
@@ -169,7 +173,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.206
+* @version 4.1.207
 */
 export default class SfvbApi {
 
@@ -2378,6 +2382,55 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbCampaign operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCampaignCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCampaign} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a campaign
+     * One campaign, the same object as its list entry, with its emails and postcards in step order.  A deleted campaign is returned with deleted true. 
+     * @param {Number} storefront_oid 
+     * @param {String} campaign_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCampaignCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCampaign}
+     */
+    getSfvbCampaign(storefront_oid, campaign_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCampaign");
+      }
+      // verify the required parameter 'campaign_uuid' is set
+      if (campaign_uuid === undefined || campaign_uuid === null) {
+        throw new Error("Missing the required parameter 'campaign_uuid' when calling getSfvbCampaign");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'campaign_uuid': campaign_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCampaign;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbCjsonUsedElements operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCjsonUsedElementsCallback
      * @param {String} error Error message, if any.
@@ -2968,6 +3021,55 @@ export default class SfvbApi {
       let returnType = SfvbFileUploadUrlResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/upload_url/{extension}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbFlow operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbFlowCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFlow} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a flow
+     * One flow, the same object as its list entry, with its emails and postcards in step order.  A deleted flow is returned with deleted true. 
+     * @param {Number} storefront_oid 
+     * @param {String} flow_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbFlowCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFlow}
+     */
+    getSfvbFlow(storefront_oid, flow_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbFlow");
+      }
+      // verify the required parameter 'flow_uuid' is set
+      if (flow_uuid === undefined || flow_uuid === null) {
+        throw new Error("Missing the required parameter 'flow_uuid' when calling getSfvbFlow");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'flow_uuid': flow_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbFlow;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flows/{flow_uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5552,6 +5654,59 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the listSfvbCampaigns operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbCampaignsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCampaignsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's campaigns
+     * One page of campaigns, newest first, each with its emails and postcards in step order, without their container JSON.  search matches the campaign name.  Deleted campaigns are left out unless include_deleted is true.  live is true unless the status sends nothing (draft or archived), so a change to one of its emails reaches customers at once. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search Text to search for in the name
+     * @param {Number} opts.page Page number, starting at 1
+     * @param {Number} opts.page_size Campaigns per page, 1 to 100, default 50
+     * @param {Boolean} opts.include_deleted Include deleted campaigns
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbCampaignsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCampaignsResponse}
+     */
+    listSfvbCampaigns(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbCampaigns");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'search': opts['search'],
+        'page': opts['page'],
+        'page_size': opts['page_size'],
+        'include_deleted': opts['include_deleted']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCampaignsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaigns', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listSfvbContainerVersions operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbContainerVersionsCallback
      * @param {String} error Error message, if any.
@@ -5785,6 +5940,59 @@ export default class SfvbApi {
       let returnType = SfvbFilesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbFlows operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbFlowsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFlowsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the storefront's flows
+     * One page of flows, newest first, each with its trigger and its emails and postcards in step order, without their container JSON.  search matches the flow name.  Deleted flows are left out unless include_deleted is true.  live is true unless the status sends nothing (draft or inactive); a paused flow still holds enrolled customers, so it counts as live. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search Text to search for in the name
+     * @param {Number} opts.page Page number, starting at 1
+     * @param {Number} opts.page_size Flows per page, 1 to 100, default 50
+     * @param {Boolean} opts.include_deleted Include deleted flows
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbFlowsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFlowsResponse}
+     */
+    listSfvbFlows(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbFlows");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'search': opts['search'],
+        'page': opts['page'],
+        'page_size': opts['page_size'],
+        'include_deleted': opts['include_deleted']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbFlowsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flows', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

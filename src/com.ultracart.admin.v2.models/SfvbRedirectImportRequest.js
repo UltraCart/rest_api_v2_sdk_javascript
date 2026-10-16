@@ -17,7 +17,7 @@ import SfvbRedirectImportRow from './SfvbRedirectImportRow';
 /**
  * The SfvbRedirectImportRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectImportRequest
- * @version 4.1.206
+ * @version 4.1.207
  */
 class SfvbRedirectImportRequest {
     /**

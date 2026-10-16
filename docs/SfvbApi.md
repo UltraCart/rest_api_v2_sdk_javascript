@@ -48,6 +48,7 @@ Method | HTTP request | Description
 [**getSfvbApproval**](SfvbApi.md#getSfvbApproval) | **GET** /sfvb/approvals/{approval_id} | Read one approval request
 [**getSfvbApprovals**](SfvbApi.md#getSfvbApprovals) | **GET** /sfvb/approvals | List this sign-in&#39;s approval requests
 [**getSfvbBlogPost**](SfvbApi.md#getSfvbBlogPost) | **GET** /sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid} | Read a blog post
+[**getSfvbCampaign**](SfvbApi.md#getSfvbCampaign) | **GET** /sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid} | Get a campaign
 [**getSfvbCjsonUsedElements**](SfvbApi.md#getSfvbCjsonUsedElements) | **POST** /sfvb/cjson/elements | Element types used by a container
 [**getSfvbCommsSendingDomain**](SfvbApi.md#getSfvbCommsSendingDomain) | **GET** /sfvb/comms/sending_domains/{domain} | Read a sending domain
 [**getSfvbCommsSendingDomains**](SfvbApi.md#getSfvbCommsSendingDomains) | **GET** /sfvb/comms/sending_domains | List the sending domains
@@ -61,6 +62,7 @@ Method | HTTP request | Description
 [**getSfvbExperimentObjectives**](SfvbApi.md#getSfvbExperimentObjectives) | **GET** /sfvb/storefronts/{storefront_oid}/experiments/objectives | List the objectives an experiment can optimize
 [**getSfvbFileContent**](SfvbApi.md#getSfvbFileContent) | **GET** /sfvb/storefronts/{storefront_oid}/files/content | Read a storefront file
 [**getSfvbFileUploadUrl**](SfvbApi.md#getSfvbFileUploadUrl) | **GET** /sfvb/storefronts/{storefront_oid}/files/upload_url/{extension} | Get a URL to upload a binary asset to
+[**getSfvbFlow**](SfvbApi.md#getSfvbFlow) | **GET** /sfvb/storefronts/{storefront_oid}/flows/{flow_uuid} | Get a flow
 [**getSfvbI18nGlossary**](SfvbApi.md#getSfvbI18nGlossary) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/glossary | Read the storefront&#39;s translation glossary
 [**getSfvbI18nLanguages**](SfvbApi.md#getSfvbI18nLanguages) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/languages | List a storefront&#39;s languages
 [**getSfvbI18nMachineTranslations**](SfvbApi.md#getSfvbI18nMachineTranslations) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/machine_translations | Read where a widget setting&#39;s translations come from
@@ -115,11 +117,13 @@ Method | HTTP request | Description
 [**insertSfvbUpsellPath**](SfvbApi.md#insertSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths | Create an upsell path
 [**installSfvbLibraryEntry**](SfvbApi.md#installSfvbLibraryEntry) | **POST** /sfvb/storefronts/{storefront_oid}/library/{library_oid}/install | Install a library entry into a storefront
 [**listSfvbBlogPosts**](SfvbApi.md#listSfvbBlogPosts) | **GET** /sfvb/storefronts/{storefront_oid}/blog_posts | List the storefront&#39;s blog posts
+[**listSfvbCampaigns**](SfvbApi.md#listSfvbCampaigns) | **GET** /sfvb/storefronts/{storefront_oid}/campaigns | List the storefront&#39;s campaigns
 [**listSfvbContainerVersions**](SfvbApi.md#listSfvbContainerVersions) | **GET** /sfvb/storefronts/{storefront_oid}/container_versions | Version history for a container stored outside the file system
 [**listSfvbElements**](SfvbApi.md#listSfvbElements) | **GET** /sfvb/elements | List every SFVB element type
 [**listSfvbExperiments**](SfvbApi.md#listSfvbExperiments) | **GET** /sfvb/storefronts/{storefront_oid}/experiments | List the storefront&#39;s experiments
 [**listSfvbFileVersions**](SfvbApi.md#listSfvbFileVersions) | **GET** /sfvb/storefronts/{storefront_oid}/files/versions | Version history for a storefront file
 [**listSfvbFiles**](SfvbApi.md#listSfvbFiles) | **GET** /sfvb/storefronts/{storefront_oid}/files | List a storefront directory
+[**listSfvbFlows**](SfvbApi.md#listSfvbFlows) | **GET** /sfvb/storefronts/{storefront_oid}/flows | List the storefront&#39;s flows
 [**listSfvbI18nMessages**](SfvbApi.md#listSfvbI18nMessages) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/messages | List built-in messages
 [**listSfvbItemContainers**](SfvbApi.md#listSfvbItemContainers) | **GET** /sfvb/storefronts/{storefront_oid}/item_containers | List the item containers on the account
 [**listSfvbLibraryInstalls**](SfvbApi.md#listSfvbLibraryInstalls) | **GET** /sfvb/storefronts/{storefront_oid}/library/installs | List the library entries installed on a storefront
@@ -1837,6 +1841,43 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getSfvbCampaign
+
+> SfvbCampaign getSfvbCampaign(storefront_oid, campaign_uuid)
+
+Get a campaign
+
+One campaign, the same object as its list entry, with its emails and postcards in step order.  A deleted campaign is returned with deleted true. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **campaign_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbCampaign**](SfvbCampaign.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getSfvbCjsonUsedElements
 
 > SfvbElementsResponse getSfvbCjsonUsedElements(compile_request)
@@ -2300,6 +2341,43 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbFileUploadUrlResponse**](SfvbFileUploadUrlResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbFlow
+
+> SfvbFlow getSfvbFlow(storefront_oid, flow_uuid)
+
+Get a flow
+
+One flow, the same object as its list entry, with its emails and postcards in step order.  A deleted flow is returned with deleted true. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **flow_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbFlow**](SfvbFlow.md)
 
 ### Authorization
 
@@ -4311,6 +4389,46 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## listSfvbCampaigns
+
+> SfvbCampaignsResponse listSfvbCampaigns(storefront_oid, opts)
+
+List the storefront&#39;s campaigns
+
+One page of campaigns, newest first, each with its emails and postcards in step order, without their container JSON.  search matches the campaign name.  Deleted campaigns are left out unless include_deleted is true.  live is true unless the status sends nothing (draft or archived), so a change to one of its emails reaches customers at once. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **search** | **String**| Text to search for in the name | [optional] 
+ **page** | **Number**| Page number, starting at 1 | [optional] 
+ **page_size** | **Number**| Campaigns per page, 1 to 100, default 50 | [optional] 
+ **include_deleted** | **Boolean**| Include deleted campaigns | [optional] 
+
+### Return type
+
+[**SfvbCampaignsResponse**](SfvbCampaignsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listSfvbContainerVersions
 
 > SfvbContainerVersionsResponse listSfvbContainerVersions(storefront_oid, opts)
@@ -4488,6 +4606,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbFilesResponse**](SfvbFilesResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSfvbFlows
+
+> SfvbFlowsResponse listSfvbFlows(storefront_oid, opts)
+
+List the storefront&#39;s flows
+
+One page of flows, newest first, each with its trigger and its emails and postcards in step order, without their container JSON.  search matches the flow name.  Deleted flows are left out unless include_deleted is true.  live is true unless the status sends nothing (draft or inactive); a paused flow still holds enrolled customers, so it counts as live. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **search** | **String**| Text to search for in the name | [optional] 
+ **page** | **Number**| Page number, starting at 1 | [optional] 
+ **page_size** | **Number**| Flows per page, 1 to 100, default 50 | [optional] 
+ **include_deleted** | **Boolean**| Include deleted flows | [optional] 
+
+### Return type
+
+[**SfvbFlowsResponse**](SfvbFlowsResponse.md)
 
 ### Authorization
 
