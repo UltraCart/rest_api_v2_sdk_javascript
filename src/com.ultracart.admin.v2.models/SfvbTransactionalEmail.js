@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTransactionalEmail model module.
  * @module com.ultracart.admin.v2.models/SfvbTransactionalEmail
- * @version 4.1.205
+ * @version 4.1.206
  */
 class SfvbTransactionalEmail {
     /**
@@ -50,6 +50,9 @@ class SfvbTransactionalEmail {
             if (data.hasOwnProperty('body_file_name')) {
                 obj['body_file_name'] = ApiClient.convertToType(data['body_file_name'], 'String');
             }
+            if (data.hasOwnProperty('body_path')) {
+                obj['body_path'] = ApiClient.convertToType(data['body_path'], 'String');
+            }
             if (data.hasOwnProperty('file_name')) {
                 obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
             }
@@ -67,10 +70,16 @@ class SfvbTransactionalEmail {
 }
 
 /**
- * The body container a draft replaces, such as receipt_body.cjson.
+ * The body container a draft replaces, such as receipt_body.cjson.  Present only when the theme has the file.
  * @member {String} body_file_name
  */
 SfvbTransactionalEmail.prototype['body_file_name'] = undefined;
+
+/**
+ * The full theme file path of the body container, such as /themes/Elements/core/emails/receipt_body.cjson.  Read it with the files endpoint.  Present only when the theme has the file.
+ * @member {String} body_path
+ */
+SfvbTransactionalEmail.prototype['body_path'] = undefined;
 
 /**
  * The HTML template file, such as receipt_html.vm.

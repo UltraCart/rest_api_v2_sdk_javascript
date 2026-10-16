@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryScreenshotRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryScreenshotRequest
- * @version 4.1.205
+ * @version 4.1.206
  */
 class SfvbLibraryScreenshotRequest {
     /**

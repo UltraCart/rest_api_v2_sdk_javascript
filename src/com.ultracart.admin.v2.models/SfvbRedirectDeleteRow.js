@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRedirectDeleteRow model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectDeleteRow
- * @version 4.1.205
+ * @version 4.1.206
  */
 class SfvbRedirectDeleteRow {
     /**
