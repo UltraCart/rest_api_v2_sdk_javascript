@@ -31,10 +31,6 @@ Name | Type | Description | Notes
 
 * `Klaviyo` (value: `"Klaviyo"`)
 
-* `Lyris` (value: `"Lyris"`)
-
-* `LyrisHQ` (value: `"LyrisHQ"`)
-
 * `MailChimp` (value: `"MailChimp"`)
 
 

@@ -36,8 +36,10 @@ import SfvbContainerVersionsResponse from '../com.ultracart.admin.v2.models/Sfvb
 import SfvbContainerWriteRequest from '../com.ultracart.admin.v2.models/SfvbContainerWriteRequest';
 import SfvbElementSchemaResponse from '../com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from '../com.ultracart.admin.v2.models/SfvbElementsResponse';
+import SfvbEmail from '../com.ultracart.admin.v2.models/SfvbEmail';
 import SfvbEmailRenderRequest from '../com.ultracart.admin.v2.models/SfvbEmailRenderRequest';
 import SfvbEmailRenderResponse from '../com.ultracart.admin.v2.models/SfvbEmailRenderResponse';
+import SfvbEmailUpdateRequest from '../com.ultracart.admin.v2.models/SfvbEmailUpdateRequest';
 import SfvbEventsAuthRequest from '../com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
 import SfvbEventsAuthResponse from '../com.ultracart.admin.v2.models/SfvbEventsAuthResponse';
 import SfvbEventsResponse from '../com.ultracart.admin.v2.models/SfvbEventsResponse';
@@ -173,7 +175,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.207
+* @version 4.1.208
 */
 export default class SfvbApi {
 
@@ -2742,6 +2744,55 @@ export default class SfvbApi {
       let returnType = SfvbElementSchemaResponse;
       return this.apiClient.callApi(
         '/sfvb/elements/{element_type}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a flow or campaign email's subject and preview text
+     * The subject, preview text and hash_sha256 to send as If-Match when updating them, with whether the email is live and its review state.  The body is the email container (owner type email).  Find the uuid in the storefront's campaigns and flows. 
+     * @param {Number} storefront_oid 
+     * @param {String} email_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEmail}
+     */
+    getSfvbEmail(storefront_oid, email_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbEmail");
+      }
+      // verify the required parameter 'email_uuid' is set
+      if (email_uuid === undefined || email_uuid === null) {
+        throw new Error("Missing the required parameter 'email_uuid' when calling getSfvbEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_uuid': email_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbEmail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/emails/{email_uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -9188,6 +9239,66 @@ export default class SfvbApi {
       let returnType = SfvbCommsTwilioAccountResponse;
       return this.apiClient.callApi(
         '/sfvb/comms/twilio_account', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a flow or campaign email's subject or preview text
+     * A field left out keeps its value.  Each is 5 to 150 characters on one line.  Send the hash_sha256 you read as If-Match.  An email in a sending flow or campaign needs sfvb_publish, as a body push does.  The merchant's content review rule applies, so an email waiting for review or rejected goes back to needing review.  An email suspended for spam is refused with sfvb.email_suspended. 
+     * @param {Number} storefront_oid 
+     * @param {String} email_uuid 
+     * @param {String} If_Match hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailUpdateRequest} email_update_request The subject or preview text to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEmail}
+     */
+    updateSfvbEmail(storefront_oid, email_uuid, If_Match, email_update_request, callback) {
+      let postBody = email_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbEmail");
+      }
+      // verify the required parameter 'email_uuid' is set
+      if (email_uuid === undefined || email_uuid === null) {
+        throw new Error("Missing the required parameter 'email_uuid' when calling updateSfvbEmail");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbEmail");
+      }
+      // verify the required parameter 'email_update_request' is set
+      if (email_update_request === undefined || email_update_request === null) {
+        throw new Error("Missing the required parameter 'email_update_request' when calling updateSfvbEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_uuid': email_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbEmail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/emails/{email_uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

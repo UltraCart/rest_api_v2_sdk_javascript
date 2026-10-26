@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemThirdPartyEmailMarketing model module.
  * @module com.ultracart.admin.v2.models/ItemThirdPartyEmailMarketing
- * @version 4.1.207
+ * @version 4.1.208
  */
 class ItemThirdPartyEmailMarketing {
     /**
@@ -157,18 +157,6 @@ ItemThirdPartyEmailMarketing['ProviderNameEnum'] = {
      * @const
      */
     "Klaviyo": "Klaviyo",
-
-    /**
-     * value: "Lyris"
-     * @const
-     */
-    "Lyris": "Lyris",
-
-    /**
-     * value: "LyrisHQ"
-     * @const
-     */
-    "LyrisHQ": "LyrisHQ",
 
     /**
      * value: "MailChimp"
