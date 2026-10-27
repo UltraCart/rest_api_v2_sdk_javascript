@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudRuleStorefrontFilter model module.
  * @module com.ultracart.admin.v2.models/FraudRuleStorefrontFilter
- * @version 4.1.211
+ * @version 4.1.212
  */
 class FraudRuleStorefrontFilter {
     /**

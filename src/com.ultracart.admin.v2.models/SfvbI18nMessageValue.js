@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbI18nMessageValue model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMessageValue
- * @version 4.1.211
+ * @version 4.1.212
  */
 class SfvbI18nMessageValue {
     /**

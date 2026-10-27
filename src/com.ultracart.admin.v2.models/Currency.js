@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Currency model module.
  * @module com.ultracart.admin.v2.models/Currency
- * @version 4.1.211
+ * @version 4.1.212
  */
 class Currency {
     /**

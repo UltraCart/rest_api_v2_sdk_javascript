@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxAgent model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAgent
- * @version 4.1.211
+ * @version 4.1.212
  */
 class ConversationPbxAgent {
     /**
@@ -91,6 +91,9 @@ class ConversationPbxAgent {
             }
             if (data.hasOwnProperty('shared_conversation_pbx_voicemail_mailbox_uuid')) {
                 obj['shared_conversation_pbx_voicemail_mailbox_uuid'] = ApiClient.convertToType(data['shared_conversation_pbx_voicemail_mailbox_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('startup_activity')) {
+                obj['startup_activity'] = ApiClient.convertToType(data['startup_activity'], 'String');
             }
             if (data.hasOwnProperty('twilio_taskrouter_worker_id')) {
                 obj['twilio_taskrouter_worker_id'] = ApiClient.convertToType(data['twilio_taskrouter_worker_id'], 'String');
@@ -214,6 +217,12 @@ ConversationPbxAgent.prototype['record_outgoing_automatically'] = undefined;
 ConversationPbxAgent.prototype['shared_conversation_pbx_voicemail_mailbox_uuid'] = undefined;
 
 /**
+ * Status the agent starts in when the CRM loads. Missing means available.
+ * @member {module:com.ultracart.admin.v2.models/ConversationPbxAgent.StartupActivityEnum} startup_activity
+ */
+ConversationPbxAgent.prototype['startup_activity'] = undefined;
+
+/**
  * Twilio taskrouter worker Id
  * @member {String} twilio_taskrouter_worker_id
  */
@@ -289,6 +298,27 @@ ConversationPbxAgent['CallRoutingPreferenceEnum'] = {
      * @const
      */
     "cellphone": "cellphone"
+};
+
+
+/**
+ * Allowed values for the <code>startup_activity</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationPbxAgent['StartupActivityEnum'] = {
+
+    /**
+     * value: "available"
+     * @const
+     */
+    "available": "available",
+
+    /**
+     * value: "unavailable"
+     * @const
+     */
+    "unavailable": "unavailable"
 };
 
 

@@ -18,7 +18,7 @@ import ConversationTwilioAccount from './ConversationTwilioAccount';
 /**
  * The ConversationAgentAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuth
- * @version 4.1.211
+ * @version 4.1.212
  */
 class ConversationAgentAuth {
     /**
@@ -87,6 +87,9 @@ class ConversationAgentAuth {
             }
             if (data.hasOwnProperty('pbx_jwt')) {
                 obj['pbx_jwt'] = ApiClient.convertToType(data['pbx_jwt'], 'String');
+            }
+            if (data.hasOwnProperty('pbx_startup_activity')) {
+                obj['pbx_startup_activity'] = ApiClient.convertToType(data['pbx_startup_activity'], 'String');
             }
             if (data.hasOwnProperty('pbx_supervisor')) {
                 obj['pbx_supervisor'] = ApiClient.convertToType(data['pbx_supervisor'], 'Boolean');
@@ -192,6 +195,12 @@ ConversationAgentAuth.prototype['pbx_admin'] = undefined;
 ConversationAgentAuth.prototype['pbx_jwt'] = undefined;
 
 /**
+ * Status the agent starts in when the CRM loads
+ * @member {module:com.ultracart.admin.v2.models/ConversationAgentAuth.PbxStartupActivityEnum} pbx_startup_activity
+ */
+ConversationAgentAuth.prototype['pbx_startup_activity'] = undefined;
+
+/**
  * @member {Boolean} pbx_supervisor
  */
 ConversationAgentAuth.prototype['pbx_supervisor'] = undefined;
@@ -239,6 +248,27 @@ ConversationAgentAuth.prototype['websocket_url'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>pbx_startup_activity</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ConversationAgentAuth['PbxStartupActivityEnum'] = {
+
+    /**
+     * value: "available"
+     * @const
+     */
+    "available": "available",
+
+    /**
+     * value: "unavailable"
+     * @const
+     */
+    "unavailable": "unavailable"
+};
 
 
 

@@ -17,7 +17,7 @@ import SfvbItemRelatedItem from './SfvbItemRelatedItem';
 /**
  * The SfvbItemRelated model module.
  * @module com.ultracart.admin.v2.models/SfvbItemRelated
- * @version 4.1.211
+ * @version 4.1.212
  */
 class SfvbItemRelated {
     /**

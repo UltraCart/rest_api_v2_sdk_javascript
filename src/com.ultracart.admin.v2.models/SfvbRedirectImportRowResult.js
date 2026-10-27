@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbRedirectImportRowResult model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectImportRowResult
- * @version 4.1.211
+ * @version 4.1.212
  */
 class SfvbRedirectImportRowResult {
     /**

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **parent_merchant_id** | **String** | The parent merchant ID for PBX. For non-linked merchants, equals merchant_id. | [optional] 
 **pbx_admin** | **Boolean** |  | [optional] 
 **pbx_jwt** | **String** |  | [optional] 
+**pbx_startup_activity** | **String** | Status the agent starts in when the CRM loads | [optional] 
 **pbx_supervisor** | **Boolean** |  | [optional] 
 **pbx_user** | **Boolean** |  | [optional] 
 **pbx_voice_identity** | **String** |  | [optional] 
@@ -26,5 +27,16 @@ Name | Type | Description | Notes
 **twilio_accounts** | [**[ConversationTwilioAccount]**](ConversationTwilioAccount.md) |  | [optional] 
 **user_id** | **Number** | UltraCart User ID | [optional] 
 **websocket_url** | **String** |  | [optional] 
+
+
+
+## Enum: PbxStartupActivityEnum
+
+
+* `available` (value: `"available"`)
+
+* `unavailable` (value: `"unavailable"`)
+
+
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemAttributeBatchRowResult model module.
  * @module com.ultracart.admin.v2.models/SfvbItemAttributeBatchRowResult
- * @version 4.1.211
+ * @version 4.1.212
  */
 class SfvbItemAttributeBatchRowResult {
     /**
