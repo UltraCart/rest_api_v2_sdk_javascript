@@ -19,7 +19,7 @@ import Order from './Order';
 /**
  * The AffiliateLedger model module.
  * @module com.ultracart.admin.v2.models/AffiliateLedger
- * @version 4.1.208
+ * @version 4.1.209
  */
 class AffiliateLedger {
     /**

@@ -993,6 +993,7 @@ docs/SfvbApprovalParams.md
 docs/SfvbApprovalReview.md
 docs/SfvbApprovalReviewFinding.md
 docs/SfvbApprovalsResponse.md
+docs/SfvbArchiveRequest.md
 docs/SfvbBlogPost.md
 docs/SfvbBlogPostDetail.md
 docs/SfvbBlogPostImage.md
@@ -1000,10 +1001,16 @@ docs/SfvbBlogPostImageRequest.md
 docs/SfvbBlogPostRequest.md
 docs/SfvbBlogPostsResponse.md
 docs/SfvbCampaign.md
+docs/SfvbCampaignMembership.md
+docs/SfvbCampaignWriteRequest.md
 docs/SfvbCampaignsResponse.md
 docs/SfvbCommsDnsRecord.md
 docs/SfvbCommsEmail.md
+docs/SfvbCommsList.md
+docs/SfvbCommsListsResponse.md
 docs/SfvbCommsPostcard.md
+docs/SfvbCommsSegment.md
+docs/SfvbCommsSegmentsResponse.md
 docs/SfvbCommsSendingDomain.md
 docs/SfvbCommsSendingDomainsResponse.md
 docs/SfvbCommsTwilioAccount.md
@@ -1048,6 +1055,8 @@ docs/SfvbFileWriteRequest.md
 docs/SfvbFileWriteResponse.md
 docs/SfvbFilesResponse.md
 docs/SfvbFlow.md
+docs/SfvbFlowStatusRequest.md
+docs/SfvbFlowWriteRequest.md
 docs/SfvbFlowsResponse.md
 docs/SfvbI18nGlossary.md
 docs/SfvbI18nGlossaryRequest.md
@@ -2301,6 +2310,7 @@ src/com.ultracart.admin.v2.models/SfvbApprovalParams.js
 src/com.ultracart.admin.v2.models/SfvbApprovalReview.js
 src/com.ultracart.admin.v2.models/SfvbApprovalReviewFinding.js
 src/com.ultracart.admin.v2.models/SfvbApprovalsResponse.js
+src/com.ultracart.admin.v2.models/SfvbArchiveRequest.js
 src/com.ultracart.admin.v2.models/SfvbBlogPost.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostDetail.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostImage.js
@@ -2308,10 +2318,16 @@ src/com.ultracart.admin.v2.models/SfvbBlogPostImageRequest.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostRequest.js
 src/com.ultracart.admin.v2.models/SfvbBlogPostsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCampaign.js
+src/com.ultracart.admin.v2.models/SfvbCampaignMembership.js
+src/com.ultracart.admin.v2.models/SfvbCampaignWriteRequest.js
 src/com.ultracart.admin.v2.models/SfvbCampaignsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCommsDnsRecord.js
 src/com.ultracart.admin.v2.models/SfvbCommsEmail.js
+src/com.ultracart.admin.v2.models/SfvbCommsList.js
+src/com.ultracart.admin.v2.models/SfvbCommsListsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCommsPostcard.js
+src/com.ultracart.admin.v2.models/SfvbCommsSegment.js
+src/com.ultracart.admin.v2.models/SfvbCommsSegmentsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCommsSendingDomain.js
 src/com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCommsTwilioAccount.js
@@ -2356,6 +2372,8 @@ src/com.ultracart.admin.v2.models/SfvbFileWriteRequest.js
 src/com.ultracart.admin.v2.models/SfvbFileWriteResponse.js
 src/com.ultracart.admin.v2.models/SfvbFilesResponse.js
 src/com.ultracart.admin.v2.models/SfvbFlow.js
+src/com.ultracart.admin.v2.models/SfvbFlowStatusRequest.js
+src/com.ultracart.admin.v2.models/SfvbFlowWriteRequest.js
 src/com.ultracart.admin.v2.models/SfvbFlowsResponse.js
 src/com.ultracart.admin.v2.models/SfvbI18nGlossary.js
 src/com.ultracart.admin.v2.models/SfvbI18nGlossaryRequest.js

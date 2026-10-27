@@ -12,13 +12,14 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbCampaignMembership from './SfvbCampaignMembership';
 import SfvbCommsEmail from './SfvbCommsEmail';
 import SfvbCommsPostcard from './SfvbCommsPostcard';
 
 /**
  * The SfvbCampaign model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaign
- * @version 4.1.208
+ * @version 4.1.209
  */
 class SfvbCampaign {
     /**
@@ -64,17 +65,41 @@ class SfvbCampaign {
             if (data.hasOwnProperty('emails')) {
                 obj['emails'] = ApiClient.convertToType(data['emails'], [SfvbCommsEmail]);
             }
+            if (data.hasOwnProperty('end_once_customer_purchases')) {
+                obj['end_once_customer_purchases'] = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
+            }
+            if (data.hasOwnProperty('end_once_customer_purchases_anywhere')) {
+                obj['end_once_customer_purchases_anywhere'] = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
+            }
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
+            }
             if (data.hasOwnProperty('live')) {
                 obj['live'] = ApiClient.convertToType(data['live'], 'Boolean');
             }
+            if (data.hasOwnProperty('memberships')) {
+                obj['memberships'] = ApiClient.convertToType(data['memberships'], [SfvbCampaignMembership]);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('notes')) {
+                obj['notes'] = ApiClient.convertToType(data['notes'], ['String']);
             }
             if (data.hasOwnProperty('postcards')) {
                 obj['postcards'] = ApiClient.convertToType(data['postcards'], [SfvbCommsPostcard]);
             }
             if (data.hasOwnProperty('scheduled_dts')) {
                 obj['scheduled_dts'] = ApiClient.convertToType(data['scheduled_dts'], 'String');
+            }
+            if (data.hasOwnProperty('sending_domain_uuid')) {
+                obj['sending_domain_uuid'] = ApiClient.convertToType(data['sending_domain_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('sending_name')) {
+                obj['sending_name'] = ApiClient.convertToType(data['sending_name'], 'String');
+            }
+            if (data.hasOwnProperty('sending_user')) {
+                obj['sending_user'] = ApiClient.convertToType(data['sending_user'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -120,16 +145,46 @@ SfvbCampaign.prototype['deleted'] = undefined;
 SfvbCampaign.prototype['emails'] = undefined;
 
 /**
+ * True when a customer leaves the campaign once they buy from one of its emails.
+ * @member {Boolean} end_once_customer_purchases
+ */
+SfvbCampaign.prototype['end_once_customer_purchases'] = undefined;
+
+/**
+ * True when a customer leaves the campaign once they buy from any source.
+ * @member {Boolean} end_once_customer_purchases_anywhere
+ */
+SfvbCampaign.prototype['end_once_customer_purchases_anywhere'] = undefined;
+
+/**
+ * Send this as If-Match when changing or archiving the campaign.
+ * @member {String} hash_sha256
+ */
+SfvbCampaign.prototype['hash_sha256'] = undefined;
+
+/**
  * True when the emails and postcards reach customers now, so a change to one shows at once.  False only in a status that sends nothing.
  * @member {Boolean} live
  */
 SfvbCampaign.prototype['live'] = undefined;
 
 /**
+ * The lists and segments it sends to or leaves out.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbCampaignMembership>} memberships
+ */
+SfvbCampaign.prototype['memberships'] = undefined;
+
+/**
  * The campaign name.
  * @member {String} name
  */
 SfvbCampaign.prototype['name'] = undefined;
+
+/**
+ * What a write did beyond the fields it was asked to change, such as putting emails back to needing review or setting a scheduled campaign back to draft.  Only on a write.
+ * @member {Array.<String>} notes
+ */
+SfvbCampaign.prototype['notes'] = undefined;
 
 /**
  * Its postcards, in step order.
@@ -142,6 +197,24 @@ SfvbCampaign.prototype['postcards'] = undefined;
  * @member {String} scheduled_dts
  */
 SfvbCampaign.prototype['scheduled_dts'] = undefined;
+
+/**
+ * The sending domain uuid.  Defaults to the storefront's marketing sending domain.
+ * @member {String} sending_domain_uuid
+ */
+SfvbCampaign.prototype['sending_domain_uuid'] = undefined;
+
+/**
+ * The from name.  Defaults to the storefront's marketing setting.
+ * @member {String} sending_name
+ */
+SfvbCampaign.prototype['sending_name'] = undefined;
+
+/**
+ * The part of the from address before the at sign.  Defaults to the storefront's marketing setting.
+ * @member {String} sending_user
+ */
+SfvbCampaign.prototype['sending_user'] = undefined;
 
 /**
  * The status, such as draft, scheduled, sending, sent or archived.

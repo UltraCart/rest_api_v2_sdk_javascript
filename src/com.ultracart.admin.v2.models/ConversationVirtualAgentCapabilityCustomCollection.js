@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationVirtualAgentCapabilityCustomCollection model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentCapabilityCustomCollection
- * @version 4.1.208
+ * @version 4.1.209
  */
 class ConversationVirtualAgentCapabilityCustomCollection {
     /**

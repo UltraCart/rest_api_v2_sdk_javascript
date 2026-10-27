@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsEmail model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsEmail
- * @version 4.1.208
+ * @version 4.1.209
  */
 class SfvbCommsEmail {
     /**
@@ -76,6 +76,15 @@ class SfvbCommsEmail {
             }
             if (data.hasOwnProperty('transactional')) {
                 obj['transactional'] = ApiClient.convertToType(data['transactional'], 'Boolean');
+            }
+            if (data.hasOwnProperty('variant_name')) {
+                obj['variant_name'] = ApiClient.convertToType(data['variant_name'], 'String');
+            }
+            if (data.hasOwnProperty('variant_percentage')) {
+                obj['variant_percentage'] = ApiClient.convertToType(data['variant_percentage'], 'Number');
+            }
+            if (data.hasOwnProperty('variant_winner')) {
+                obj['variant_winner'] = ApiClient.convertToType(data['variant_winner'], 'Boolean');
             }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'Number');
@@ -146,6 +155,24 @@ SfvbCommsEmail.prototype['subject'] = undefined;
  * @member {Boolean} transactional
  */
 SfvbCommsEmail.prototype['transactional'] = undefined;
+
+/**
+ * For an email in an experiment step, the variant name.  Absent otherwise.
+ * @member {String} variant_name
+ */
+SfvbCommsEmail.prototype['variant_name'] = undefined;
+
+/**
+ * For an email in an experiment step, the share of customers it is sent to.
+ * @member {Number} variant_percentage
+ */
+SfvbCommsEmail.prototype['variant_percentage'] = undefined;
+
+/**
+ * For an email in an experiment step, true when the experiment chose it as the winner.
+ * @member {Boolean} variant_winner
+ */
+SfvbCommsEmail.prototype['variant_winner'] = undefined;
 
 /**
  * The email version.

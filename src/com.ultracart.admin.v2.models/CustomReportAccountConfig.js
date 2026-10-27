@@ -17,7 +17,7 @@ import CustomReportUsageBreakdown from './CustomReportUsageBreakdown';
 /**
  * The CustomReportAccountConfig model module.
  * @module com.ultracart.admin.v2.models/CustomReportAccountConfig
- * @version 4.1.208
+ * @version 4.1.209
  */
 class CustomReportAccountConfig {
     /**

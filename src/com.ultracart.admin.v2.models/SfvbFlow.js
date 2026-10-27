@@ -18,7 +18,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbFlow model module.
  * @module com.ultracart.admin.v2.models/SfvbFlow
- * @version 4.1.208
+ * @version 4.1.209
  */
 class SfvbFlow {
     /**
@@ -49,6 +49,9 @@ class SfvbFlow {
         if (data) {
             obj = obj || new SfvbFlow();
 
+            if (data.hasOwnProperty('allow_multiple_concurrent_enrollments')) {
+                obj['allow_multiple_concurrent_enrollments'] = ApiClient.convertToType(data['allow_multiple_concurrent_enrollments'], 'Boolean');
+            }
             if (data.hasOwnProperty('communication_sequence_uuid')) {
                 obj['communication_sequence_uuid'] = ApiClient.convertToType(data['communication_sequence_uuid'], 'String');
             }
@@ -61,8 +64,17 @@ class SfvbFlow {
             if (data.hasOwnProperty('emails')) {
                 obj['emails'] = ApiClient.convertToType(data['emails'], [SfvbCommsEmail]);
             }
+            if (data.hasOwnProperty('end_once_customer_purchases')) {
+                obj['end_once_customer_purchases'] = ApiClient.convertToType(data['end_once_customer_purchases'], 'Boolean');
+            }
+            if (data.hasOwnProperty('end_once_customer_purchases_anywhere')) {
+                obj['end_once_customer_purchases_anywhere'] = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
+            }
             if (data.hasOwnProperty('flow_uuid')) {
                 obj['flow_uuid'] = ApiClient.convertToType(data['flow_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
             if (data.hasOwnProperty('live')) {
                 obj['live'] = ApiClient.convertToType(data['live'], 'Boolean');
@@ -70,14 +82,35 @@ class SfvbFlow {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('notes')) {
+                obj['notes'] = ApiClient.convertToType(data['notes'], ['String']);
+            }
             if (data.hasOwnProperty('postcards')) {
                 obj['postcards'] = ApiClient.convertToType(data['postcards'], [SfvbCommsPostcard]);
+            }
+            if (data.hasOwnProperty('reentry_delay_days')) {
+                obj['reentry_delay_days'] = ApiClient.convertToType(data['reentry_delay_days'], 'Number');
+            }
+            if (data.hasOwnProperty('reentry_policy')) {
+                obj['reentry_policy'] = ApiClient.convertToType(data['reentry_policy'], 'String');
+            }
+            if (data.hasOwnProperty('sending_domain_uuid')) {
+                obj['sending_domain_uuid'] = ApiClient.convertToType(data['sending_domain_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('sending_name')) {
+                obj['sending_name'] = ApiClient.convertToType(data['sending_name'], 'String');
+            }
+            if (data.hasOwnProperty('sending_user')) {
+                obj['sending_user'] = ApiClient.convertToType(data['sending_user'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('status_dts')) {
                 obj['status_dts'] = ApiClient.convertToType(data['status_dts'], 'String');
+            }
+            if (data.hasOwnProperty('trigger_parameter')) {
+                obj['trigger_parameter'] = ApiClient.convertToType(data['trigger_parameter'], 'String');
             }
             if (data.hasOwnProperty('trigger_parameter_name')) {
                 obj['trigger_parameter_name'] = ApiClient.convertToType(data['trigger_parameter_name'], 'String');
@@ -91,6 +124,12 @@ class SfvbFlow {
 
 
 }
+
+/**
+ * True when a customer may be in this flow more than once at a time.
+ * @member {Boolean} allow_multiple_concurrent_enrollments
+ */
+SfvbFlow.prototype['allow_multiple_concurrent_enrollments'] = undefined;
 
 /**
  * The communication sequence the steps belong to.
@@ -117,10 +156,28 @@ SfvbFlow.prototype['deleted'] = undefined;
 SfvbFlow.prototype['emails'] = undefined;
 
 /**
+ * True when a customer leaves the flow once they buy from one of its emails.
+ * @member {Boolean} end_once_customer_purchases
+ */
+SfvbFlow.prototype['end_once_customer_purchases'] = undefined;
+
+/**
+ * True when a customer leaves the flow once they buy from any source.
+ * @member {Boolean} end_once_customer_purchases_anywhere
+ */
+SfvbFlow.prototype['end_once_customer_purchases_anywhere'] = undefined;
+
+/**
  * The flow uuid.
  * @member {String} flow_uuid
  */
 SfvbFlow.prototype['flow_uuid'] = undefined;
+
+/**
+ * Send this as If-Match when changing, archiving or turning the flow on or off.
+ * @member {String} hash_sha256
+ */
+SfvbFlow.prototype['hash_sha256'] = undefined;
 
 /**
  * True when the emails and postcards reach customers now, so a change to one shows at once.  False only in a status that sends nothing.
@@ -135,10 +192,46 @@ SfvbFlow.prototype['live'] = undefined;
 SfvbFlow.prototype['name'] = undefined;
 
 /**
+ * What a write did beyond the fields it was asked to change, such as putting emails back to needing review or setting a scheduled campaign back to draft.  Only on a write.
+ * @member {Array.<String>} notes
+ */
+SfvbFlow.prototype['notes'] = undefined;
+
+/**
  * Its postcards, in step order.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbCommsPostcard>} postcards
  */
 SfvbFlow.prototype['postcards'] = undefined;
+
+/**
+ * Days before a customer may enter again, with after_days.
+ * @member {Number} reentry_delay_days
+ */
+SfvbFlow.prototype['reentry_delay_days'] = undefined;
+
+/**
+ * Whether a customer may enter again, anytime, after_days or never.
+ * @member {String} reentry_policy
+ */
+SfvbFlow.prototype['reentry_policy'] = undefined;
+
+/**
+ * The sending domain uuid.  Defaults to the storefront's marketing sending domain.
+ * @member {String} sending_domain_uuid
+ */
+SfvbFlow.prototype['sending_domain_uuid'] = undefined;
+
+/**
+ * The from name.  Defaults to the storefront's marketing setting.
+ * @member {String} sending_name
+ */
+SfvbFlow.prototype['sending_name'] = undefined;
+
+/**
+ * The part of the from address before the at sign.  Defaults to the storefront's marketing setting.
+ * @member {String} sending_user
+ */
+SfvbFlow.prototype['sending_user'] = undefined;
 
 /**
  * The status, such as draft, active, paused, draining or inactive.
@@ -151,6 +244,12 @@ SfvbFlow.prototype['status'] = undefined;
  * @member {String} status_dts
  */
 SfvbFlow.prototype['status_dts'] = undefined;
+
+/**
+ * The list or segment uuid, or other value, the trigger is limited to.
+ * @member {String} trigger_parameter
+ */
+SfvbFlow.prototype['trigger_parameter'] = undefined;
 
 /**
  * The name of the trigger parameter, when the trigger takes one.

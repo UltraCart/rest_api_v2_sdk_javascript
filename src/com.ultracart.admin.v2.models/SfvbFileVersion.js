@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbFileVersion
- * @version 4.1.208
+ * @version 4.1.209
  */
 class SfvbFileVersion {
     /**
