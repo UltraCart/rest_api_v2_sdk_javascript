@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ChanelPartnerReasonCodesResponse model module.
  * @module com.ultracart.admin.v2.models/ChanelPartnerReasonCodesResponse
- * @version 4.1.210
+ * @version 4.1.211
  */
 class ChanelPartnerReasonCodesResponse {
     /**

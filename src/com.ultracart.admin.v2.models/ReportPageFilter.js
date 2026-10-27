@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ReportPageFilter model module.
  * @module com.ultracart.admin.v2.models/ReportPageFilter
- * @version 4.1.210
+ * @version 4.1.211
  */
 class ReportPageFilter {
     /**

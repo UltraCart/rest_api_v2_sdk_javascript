@@ -1188,6 +1188,9 @@ docs/SfvbSecretRequest.md
 docs/SfvbSecretRequestCreate.md
 docs/SfvbSecretRequestsResponse.md
 docs/SfvbSecretSink.md
+docs/SfvbSequence.md
+docs/SfvbSequenceBranch.md
+docs/SfvbSequenceStep.md
 docs/SfvbServerLog.md
 docs/SfvbServerLogDetail.md
 docs/SfvbServerLogEntry.md
@@ -2506,6 +2509,9 @@ src/com.ultracart.admin.v2.models/SfvbSecretRequest.js
 src/com.ultracart.admin.v2.models/SfvbSecretRequestCreate.js
 src/com.ultracart.admin.v2.models/SfvbSecretRequestsResponse.js
 src/com.ultracart.admin.v2.models/SfvbSecretSink.js
+src/com.ultracart.admin.v2.models/SfvbSequence.js
+src/com.ultracart.admin.v2.models/SfvbSequenceBranch.js
+src/com.ultracart.admin.v2.models/SfvbSequenceStep.js
 src/com.ultracart.admin.v2.models/SfvbServerLog.js
 src/com.ultracart.admin.v2.models/SfvbServerLogDetail.js
 src/com.ultracart.admin.v2.models/SfvbServerLogEntry.js

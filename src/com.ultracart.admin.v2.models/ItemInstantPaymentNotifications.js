@@ -17,7 +17,7 @@ import ItemInstantPaymentNotification from './ItemInstantPaymentNotification';
 /**
  * The ItemInstantPaymentNotifications model module.
  * @module com.ultracart.admin.v2.models/ItemInstantPaymentNotifications
- * @version 4.1.210
+ * @version 4.1.211
  */
 class ItemInstantPaymentNotifications {
     /**

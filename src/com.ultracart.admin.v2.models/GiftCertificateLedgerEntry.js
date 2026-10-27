@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GiftCertificateLedgerEntry model module.
  * @module com.ultracart.admin.v2.models/GiftCertificateLedgerEntry
- * @version 4.1.210
+ * @version 4.1.211
  */
 class GiftCertificateLedgerEntry {
     /**

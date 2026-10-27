@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderCurrentStageHistory model module.
  * @module com.ultracart.admin.v2.models/OrderCurrentStageHistory
- * @version 4.1.210
+ * @version 4.1.211
  */
 class OrderCurrentStageHistory {
     /**

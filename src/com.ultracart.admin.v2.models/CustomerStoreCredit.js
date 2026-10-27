@@ -17,7 +17,7 @@ import CustomerStoreCreditLedgerEntry from './CustomerStoreCreditLedgerEntry';
 /**
  * The CustomerStoreCredit model module.
  * @module com.ultracart.admin.v2.models/CustomerStoreCredit
- * @version 4.1.210
+ * @version 4.1.211
  */
 class CustomerStoreCredit {
     /**

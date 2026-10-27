@@ -100,6 +100,7 @@ Method | HTTP request | Description
 [**getSfvbSecretKinds**](SfvbApi.md#getSfvbSecretKinds) | **GET** /sfvb/secrets/kinds | List the secrets this server collects
 [**getSfvbSecretRequest**](SfvbApi.md#getSfvbSecretRequest) | **GET** /sfvb/secrets/{request_id} | Read one secret request
 [**getSfvbSecretRequests**](SfvbApi.md#getSfvbSecretRequests) | **GET** /sfvb/secrets | List this sign-in&#39;s secret requests
+[**getSfvbSequence**](SfvbApi.md#getSfvbSequence) | **GET** /sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid} | Get a campaign&#39;s or flow&#39;s steps as a tree
 [**getSfvbServerLog**](SfvbApi.md#getSfvbServerLog) | **GET** /sfvb/storefronts/{storefront_oid}/logs/{log_id} | Get one storefront render log
 [**getSfvbSiteAttributes**](SfvbApi.md#getSfvbSiteAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/attributes | Read a storefront&#39;s site attributes
 [**getSfvbTestOrders**](SfvbApi.md#getSfvbTestOrders) | **GET** /sfvb/storefronts/{storefront_oid}/test_orders | List recent test orders
@@ -3768,6 +3769,44 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**SfvbSecretRequestsResponse**](SfvbSecretRequestsResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbSequence
+
+> SfvbSequence getSfvbSequence(storefront_oid, sequence_uuid, opts)
+
+Get a campaign&#39;s or flow&#39;s steps as a tree
+
+The communication sequence named by a campaign&#39;s or flow&#39;s communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin&#39;s label, its settings (a webhook&#39;s header and parameter values masked), its audience filter, and the emails, postcard, lists or items it names.  waiting adds how many customers are waiting on each step now.  Read only. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **sequence_uuid** | **String**|  | 
+ **waiting** | **Boolean**| Include how many customers are waiting on each step | [optional] 
+
+### Return type
+
+[**SfvbSequence**](SfvbSequence.md)
 
 ### Authorization
 

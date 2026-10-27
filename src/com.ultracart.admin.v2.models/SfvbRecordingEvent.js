@@ -17,7 +17,7 @@ import SfvbRecordingParameter from './SfvbRecordingParameter';
 /**
  * The SfvbRecordingEvent model module.
  * @module com.ultracart.admin.v2.models/SfvbRecordingEvent
- * @version 4.1.210
+ * @version 4.1.211
  */
 class SfvbRecordingEvent {
     /**

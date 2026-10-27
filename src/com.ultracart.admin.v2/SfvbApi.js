@@ -151,6 +151,7 @@ import SfvbSecretKindsResponse from '../com.ultracart.admin.v2.models/SfvbSecret
 import SfvbSecretRequest from '../com.ultracart.admin.v2.models/SfvbSecretRequest';
 import SfvbSecretRequestCreate from '../com.ultracart.admin.v2.models/SfvbSecretRequestCreate';
 import SfvbSecretRequestsResponse from '../com.ultracart.admin.v2.models/SfvbSecretRequestsResponse';
+import SfvbSequence from '../com.ultracart.admin.v2.models/SfvbSequence';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
@@ -182,7 +183,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.210
+* @version 4.1.211
 */
 export default class SfvbApi {
 
@@ -4880,6 +4881,59 @@ export default class SfvbApi {
       let returnType = SfvbSecretRequestsResponse;
       return this.apiClient.callApi(
         '/sfvb/secrets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSequence operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSequenceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequence} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a campaign's or flow's steps as a tree
+     * The communication sequence named by a campaign's or flow's communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin's label, its settings (a webhook's header and parameter values masked), its audience filter, and the emails, postcard, lists or items it names.  waiting adds how many customers are waiting on each step now.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.waiting Include how many customers are waiting on each step
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSequenceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequence}
+     */
+    getSfvbSequence(storefront_oid, sequence_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSequence");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling getSfvbSequence");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid
+      };
+      let queryParams = {
+        'waiting': opts['waiting']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSequence;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

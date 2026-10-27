@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxAudioUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAudioUploadUrlResponse
- * @version 4.1.210
+ * @version 4.1.211
  */
 class ConversationPbxAudioUploadUrlResponse {
     /**
