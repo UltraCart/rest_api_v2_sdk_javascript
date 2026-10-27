@@ -1028,6 +1028,7 @@ docs/SfvbElementsResponse.md
 docs/SfvbEmail.md
 docs/SfvbEmailRenderRequest.md
 docs/SfvbEmailRenderResponse.md
+docs/SfvbEmailReviewRequest.md
 docs/SfvbEmailUpdateRequest.md
 docs/SfvbErrorDetail.md
 docs/SfvbEvent.md
@@ -2345,6 +2346,7 @@ src/com.ultracart.admin.v2.models/SfvbElementsResponse.js
 src/com.ultracart.admin.v2.models/SfvbEmail.js
 src/com.ultracart.admin.v2.models/SfvbEmailRenderRequest.js
 src/com.ultracart.admin.v2.models/SfvbEmailRenderResponse.js
+src/com.ultracart.admin.v2.models/SfvbEmailReviewRequest.js
 src/com.ultracart.admin.v2.models/SfvbEmailUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbErrorDetail.js
 src/com.ultracart.admin.v2.models/SfvbEvent.js

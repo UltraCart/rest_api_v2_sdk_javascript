@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPreviewAccessResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewAccessResponse
- * @version 4.1.209
+ * @version 4.1.210
  */
 class SfvbPreviewAccessResponse {
     /**

@@ -43,6 +43,7 @@ import SfvbElementsResponse from '../com.ultracart.admin.v2.models/SfvbElementsR
 import SfvbEmail from '../com.ultracart.admin.v2.models/SfvbEmail';
 import SfvbEmailRenderRequest from '../com.ultracart.admin.v2.models/SfvbEmailRenderRequest';
 import SfvbEmailRenderResponse from '../com.ultracart.admin.v2.models/SfvbEmailRenderResponse';
+import SfvbEmailReviewRequest from '../com.ultracart.admin.v2.models/SfvbEmailReviewRequest';
 import SfvbEmailUpdateRequest from '../com.ultracart.admin.v2.models/SfvbEmailUpdateRequest';
 import SfvbEventsAuthRequest from '../com.ultracart.admin.v2.models/SfvbEventsAuthRequest';
 import SfvbEventsAuthResponse from '../com.ultracart.admin.v2.models/SfvbEventsAuthResponse';
@@ -181,7 +182,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.209
+* @version 4.1.210
 */
 export default class SfvbApi {
 
@@ -8936,6 +8937,60 @@ export default class SfvbApi {
       let returnType = SfvbFileWriteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/files/revert', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the reviewSfvbEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~reviewSfvbEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmail} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Request a content review of a flow or campaign email
+     * Starts a review the way the admin's Request Review does.  One test copy of the email goes to the signed-in user, and to no one else, and the review runs in the background, so read the email again for pending_review and then the ruling.  Refused with sfvb.review_not_needed when it doesn't need review, is already waiting for one, or was rejected and not changed since.  An email in a flow triggered by an order or an auto order needs order_id, a test order.  Needs a signed-in user, not an API key alone. 
+     * @param {Number} storefront_oid 
+     * @param {String} email_uuid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbEmailReviewRequest} email_review_request The test order, for an email in an order-triggered flow
+     * @param {module:com.ultracart.admin.v2/SfvbApi~reviewSfvbEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbEmail}
+     */
+    reviewSfvbEmail(storefront_oid, email_uuid, email_review_request, callback) {
+      let postBody = email_review_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling reviewSfvbEmail");
+      }
+      // verify the required parameter 'email_uuid' is set
+      if (email_uuid === undefined || email_uuid === null) {
+        throw new Error("Missing the required parameter 'email_uuid' when calling reviewSfvbEmail");
+      }
+      // verify the required parameter 'email_review_request' is set
+      if (email_review_request === undefined || email_review_request === null) {
+        throw new Error("Missing the required parameter 'email_review_request' when calling reviewSfvbEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'email_uuid': email_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbEmail;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/emails/{email_uuid}/review', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

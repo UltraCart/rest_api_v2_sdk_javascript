@@ -179,6 +179,7 @@ Method | HTTP request | Description
 [**resolveSfvbTemplate**](SfvbApi.md#resolveSfvbTemplate) | **GET** /sfvb/storefronts/{storefront_oid}/templates/resolve | Resolve a template name to the file a page renders
 [**revertSfvbContainer**](SfvbApi.md#revertSfvbContainer) | **POST** /sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id}/revert | Revert a container stored outside the file system
 [**revertSfvbFile**](SfvbApi.md#revertSfvbFile) | **POST** /sfvb/storefronts/{storefront_oid}/files/revert | Revert a storefront file to an earlier version
+[**reviewSfvbEmail**](SfvbApi.md#reviewSfvbEmail) | **POST** /sfvb/storefronts/{storefront_oid}/emails/{email_uuid}/review | Request a content review of a flow or campaign email
 [**revokeSfvbSecretRequest**](SfvbApi.md#revokeSfvbSecretRequest) | **POST** /sfvb/secrets/{request_id}/revoke | Revoke a fulfilled request&#39;s unused handles
 [**searchSfvbFiles**](SfvbApi.md#searchSfvbFiles) | **POST** /sfvb/storefronts/{storefront_oid}/files/search | Search storefront files
 [**searchSfvbLibrary**](SfvbApi.md#searchSfvbLibrary) | **GET** /sfvb/storefronts/{storefront_oid}/library | Search the element library
@@ -6766,6 +6767,44 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbFileWriteResponse**](SfvbFileWriteResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## reviewSfvbEmail
+
+> SfvbEmail reviewSfvbEmail(storefront_oid, email_uuid, email_review_request)
+
+Request a content review of a flow or campaign email
+
+Starts a review the way the admin&#39;s Request Review does.  One test copy of the email goes to the signed-in user, and to no one else, and the review runs in the background, so read the email again for pending_review and then the ruling.  Refused with sfvb.review_not_needed when it doesn&#39;t need review, is already waiting for one, or was rejected and not changed since.  An email in a flow triggered by an order or an auto order needs order_id, a test order.  Needs a signed-in user, not an API key alone. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **email_uuid** | **String**|  | 
+ **email_review_request** | [**SfvbEmailReviewRequest**](SfvbEmailReviewRequest.md)| The test order, for an email in an order-triggered flow | 
+
+### Return type
+
+[**SfvbEmail**](SfvbEmail.md)
 
 ### Authorization
 

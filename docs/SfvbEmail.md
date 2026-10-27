@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **email_uuid** | **String** | The email uuid.  The same uuid the email container (owner type email) and the email render take. | [optional] 
 **hash_sha256** | **String** | Hash of the subject and preview text.  Send it as If-Match when updating.  A change to the email body does not change it. | [optional] 
 **live** | **Boolean** | True when the email is in a flow or campaign that is sending, so a change reaches customers and needs sfvb_publish.  An email in neither is reported live. | [optional] 
+**notes** | **[String]** | What a write did beyond the fields asked for, such as a step label it could not refresh.  Only on a write. | [optional] 
 **pending_review** | **Boolean** | True while a change waits for review.  An edit puts it back to needing review. | [optional] 
 **preview_text** | **String** | The preview text an inbox shows after the subject. | [optional] 
 **rejected** | **Boolean** | True when review rejected the email.  An edit puts it back to needing review. | [optional] 

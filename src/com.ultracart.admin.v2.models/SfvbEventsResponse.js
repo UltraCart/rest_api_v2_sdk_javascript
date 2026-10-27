@@ -17,7 +17,7 @@ import SfvbEvent from './SfvbEvent';
 /**
  * The SfvbEventsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbEventsResponse
- * @version 4.1.209
+ * @version 4.1.210
  */
 class SfvbEventsResponse {
     /**

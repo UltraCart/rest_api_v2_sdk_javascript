@@ -1021,6 +1021,7 @@ import SfvbElementsResponse from './com.ultracart.admin.v2.models/SfvbElementsRe
 import SfvbEmail from './com.ultracart.admin.v2.models/SfvbEmail';
 import SfvbEmailRenderRequest from './com.ultracart.admin.v2.models/SfvbEmailRenderRequest';
 import SfvbEmailRenderResponse from './com.ultracart.admin.v2.models/SfvbEmailRenderResponse';
+import SfvbEmailReviewRequest from './com.ultracart.admin.v2.models/SfvbEmailReviewRequest';
 import SfvbEmailUpdateRequest from './com.ultracart.admin.v2.models/SfvbEmailUpdateRequest';
 import SfvbErrorDetail from './com.ultracart.admin.v2.models/SfvbErrorDetail';
 import SfvbEvent from './com.ultracart.admin.v2.models/SfvbEvent';
@@ -1375,7 +1376,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.209
+* @version 4.1.210
 */
 export {
     /**
@@ -7431,6 +7432,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbEmailRenderResponse}
      */
     SfvbEmailRenderResponse,
+
+    /**
+     * The SfvbEmailReviewRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbEmailReviewRequest}
+     */
+    SfvbEmailReviewRequest,
 
     /**
      * The SfvbEmailUpdateRequest model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbEmail model module.
  * @module com.ultracart.admin.v2.models/SfvbEmail
- * @version 4.1.209
+ * @version 4.1.210
  */
 class SfvbEmail {
     /**
@@ -58,6 +58,9 @@ class SfvbEmail {
             }
             if (data.hasOwnProperty('live')) {
                 obj['live'] = ApiClient.convertToType(data['live'], 'Boolean');
+            }
+            if (data.hasOwnProperty('notes')) {
+                obj['notes'] = ApiClient.convertToType(data['notes'], ['String']);
             }
             if (data.hasOwnProperty('pending_review')) {
                 obj['pending_review'] = ApiClient.convertToType(data['pending_review'], 'Boolean');
@@ -113,6 +116,12 @@ SfvbEmail.prototype['hash_sha256'] = undefined;
  * @member {Boolean} live
  */
 SfvbEmail.prototype['live'] = undefined;
+
+/**
+ * What a write did beyond the fields asked for, such as a step label it could not refresh.  Only on a write.
+ * @member {Array.<String>} notes
+ */
+SfvbEmail.prototype['notes'] = undefined;
 
 /**
  * True while a change waits for review.  An edit puts it back to needing review.
