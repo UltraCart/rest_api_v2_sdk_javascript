@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import SfvbItemAttribute from './SfvbItemAttribute';
 import SfvbItemMultimedia from './SfvbItemMultimedia';
 import SfvbItemSeo from './SfvbItemSeo';
+import SfvbItemTags from './SfvbItemTags';
 
 /**
  * The SfvbItemResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbItemResponse
- * @version 4.1.214
+ * @version 4.1.215
  */
 class SfvbItemResponse {
     /**
@@ -71,6 +72,9 @@ class SfvbItemResponse {
             if (data.hasOwnProperty('seo')) {
                 obj['seo'] = SfvbItemSeo.constructFromObject(data['seo']);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = SfvbItemTags.constructFromObject(data['tags']);
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -121,6 +125,11 @@ SfvbItemResponse.prototype['multimedia'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbItemSeo} seo
  */
 SfvbItemResponse.prototype['seo'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemTags} tags
+ */
+SfvbItemResponse.prototype['tags'] = undefined;
 
 /**
  * What an itemtitle element renders.  This is the item's short description in the catalog, not a storefront only field, so changing it changes the item everywhere.

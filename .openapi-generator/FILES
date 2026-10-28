@@ -1092,6 +1092,7 @@ docs/SfvbItemRelatedRequest.md
 docs/SfvbItemResponse.md
 docs/SfvbItemSeo.md
 docs/SfvbItemSeoRequest.md
+docs/SfvbItemTags.md
 docs/SfvbItemVolumeDiscount.md
 docs/SfvbLibraryAiReview.md
 docs/SfvbLibraryContentManifest.md
@@ -2415,6 +2416,7 @@ src/com.ultracart.admin.v2.models/SfvbItemRelatedRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemResponse.js
 src/com.ultracart.admin.v2.models/SfvbItemSeo.js
 src/com.ultracart.admin.v2.models/SfvbItemSeoRequest.js
+src/com.ultracart.admin.v2.models/SfvbItemTags.js
 src/com.ultracart.admin.v2.models/SfvbItemVolumeDiscount.js
 src/com.ultracart.admin.v2.models/SfvbLibraryAiReview.js
 src/com.ultracart.admin.v2.models/SfvbLibraryContentManifest.js

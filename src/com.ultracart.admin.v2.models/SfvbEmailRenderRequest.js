@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbEmailRenderRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbEmailRenderRequest
- * @version 4.1.214
+ * @version 4.1.215
  */
 class SfvbEmailRenderRequest {
     /**

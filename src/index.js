@@ -1085,6 +1085,7 @@ import SfvbItemRelatedRequest from './com.ultracart.admin.v2.models/SfvbItemRela
 import SfvbItemResponse from './com.ultracart.admin.v2.models/SfvbItemResponse';
 import SfvbItemSeo from './com.ultracart.admin.v2.models/SfvbItemSeo';
 import SfvbItemSeoRequest from './com.ultracart.admin.v2.models/SfvbItemSeoRequest';
+import SfvbItemTags from './com.ultracart.admin.v2.models/SfvbItemTags';
 import SfvbItemVolumeDiscount from './com.ultracart.admin.v2.models/SfvbItemVolumeDiscount';
 import SfvbLibraryAiReview from './com.ultracart.admin.v2.models/SfvbLibraryAiReview';
 import SfvbLibraryContentManifest from './com.ultracart.admin.v2.models/SfvbLibraryContentManifest';
@@ -1381,7 +1382,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.214
+* @version 4.1.215
 */
 export {
     /**
@@ -7821,6 +7822,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemSeoRequest}
      */
     SfvbItemSeoRequest,
+
+    /**
+     * The SfvbItemTags model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemTags}
+     */
+    SfvbItemTags,
 
     /**
      * The SfvbItemVolumeDiscount model constructor.

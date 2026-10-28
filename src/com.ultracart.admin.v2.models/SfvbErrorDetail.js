@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbErrorDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbErrorDetail
- * @version 4.1.214
+ * @version 4.1.215
  */
 class SfvbErrorDetail {
     /**

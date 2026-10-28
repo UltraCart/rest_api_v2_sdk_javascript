@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbFileEntry
- * @version 4.1.214
+ * @version 4.1.215
  */
 class SfvbFileEntry {
     /**
