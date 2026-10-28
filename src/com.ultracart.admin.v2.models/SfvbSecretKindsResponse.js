@@ -18,7 +18,7 @@ import SfvbSecretSink from './SfvbSecretSink';
 /**
  * The SfvbSecretKindsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSecretKindsResponse
- * @version 4.1.213
+ * @version 4.1.214
  */
 class SfvbSecretKindsResponse {
     /**

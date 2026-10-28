@@ -202,6 +202,7 @@ Method | HTTP request | Description
 [**updateSfvbItemAttributeBatch**](SfvbApi.md#updateSfvbItemAttributeBatch) | **POST** /sfvb/storefronts/{storefront_oid}/items/attributes/batch | Change attributes across many items in one call
 [**updateSfvbLibraryEntry**](SfvbApi.md#updateSfvbLibraryEntry) | **PUT** /sfvb/storefronts/{storefront_oid}/library/{library_oid} | Update a library entry&#39;s draft
 [**updateSfvbRedirect**](SfvbApi.md#updateSfvbRedirect) | **PUT** /sfvb/storefronts/{storefront_oid}/redirects/{redirect_id} | Change a redirect rule
+[**updateSfvbSequenceStep**](SfvbApi.md#updateSfvbSequenceStep) | **PUT** /sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid} | Change one step&#39;s settings or audience filter
 [**updateSfvbUpsellOffer**](SfvbApi.md#updateSfvbUpsellOffer) | **PUT** /sfvb/storefronts/{storefront_oid}/upsell_offers/{upsell_offer_oid} | Update an upsell offer
 [**updateSfvbUpsellPath**](SfvbApi.md#updateSfvbUpsellPath) | **PUT** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid} | Update an upsell path
 [**uploadSfvbFile**](SfvbApi.md#uploadSfvbFile) | **POST** /sfvb/storefronts/{storefront_oid}/files/upload | Store a binary asset that was already uploaded
@@ -3786,7 +3787,7 @@ This endpoint does not need any parameter.
 
 Get a campaign&#39;s or flow&#39;s steps as a tree
 
-The communication sequence named by a campaign&#39;s or flow&#39;s communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin&#39;s label, its settings (a webhook&#39;s header and parameter values masked), its audience filter, and the emails, postcard, lists or items it names.  waiting adds how many customers are waiting on each step now.  Read only. 
+The communication sequence named by a campaign&#39;s or flow&#39;s communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin&#39;s label, its settings (a webhook&#39;s header and parameter values masked), its audience filter, the emails, postcard, lists or items it names, and the hash_sha256 to send as If-Match when changing it.  waiting adds how many customers are waiting on each step now.  Read only. 
 
 
 ### Example
@@ -7650,6 +7651,46 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## updateSfvbSequenceStep
+
+> SfvbSequenceStepUpdateResponse updateSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, sequence_step_update_request)
+
+Change one step&#39;s settings or audience filter
+
+Replaces the step&#39;s settings (config_json), its audience filter (filter_profile_equation_json), or both.  Nothing else about the step or the sequence changes.  Send the step&#39;s hash_sha256 as If-Match; the write only lands if the step is still what you read.  Email, postcard, experiment, resend, webhook, begin, end, continue and merge steps are refused.  A sequence whose campaign or flow is live needs sfvb_publish. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **sequence_uuid** | **String**|  | 
+ **step_uuid** | **String**|  | 
+ **If_Match** | **String**| The step&#39;s hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+ **sequence_step_update_request** | [**SfvbSequenceStepUpdateRequest**](SfvbSequenceStepUpdateRequest.md)| The settings, the filter, or both | 
+
+### Return type
+
+[**SfvbSequenceStepUpdateResponse**](SfvbSequenceStepUpdateResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 

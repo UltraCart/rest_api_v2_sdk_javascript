@@ -152,6 +152,8 @@ import SfvbSecretRequest from '../com.ultracart.admin.v2.models/SfvbSecretReques
 import SfvbSecretRequestCreate from '../com.ultracart.admin.v2.models/SfvbSecretRequestCreate';
 import SfvbSecretRequestsResponse from '../com.ultracart.admin.v2.models/SfvbSecretRequestsResponse';
 import SfvbSequence from '../com.ultracart.admin.v2.models/SfvbSequence';
+import SfvbSequenceStepUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
+import SfvbSequenceStepUpdateResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
@@ -183,7 +185,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.213
+* @version 4.1.214
 */
 export default class SfvbApi {
 
@@ -4896,7 +4898,7 @@ export default class SfvbApi {
 
     /**
      * Get a campaign's or flow's steps as a tree
-     * The communication sequence named by a campaign's or flow's communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin's label, its settings (a webhook's header and parameter values masked), its audience filter, and the emails, postcard, lists or items it names.  waiting adds how many customers are waiting on each step now.  Read only. 
+     * The communication sequence named by a campaign's or flow's communication_sequence_uuid, with its steps from the start in order.  Only condition, split and InboxGeek steps branch, and each holds its two sides in branches.  Each step has its type, the admin's label, its settings (a webhook's header and parameter values masked), its audience filter, the emails, postcard, lists or items it names, and the hash_sha256 to send as If-Match when changing it.  waiting adds how many customers are waiting on each step now.  Read only. 
      * @param {Number} storefront_oid 
      * @param {String} sequence_uuid 
      * @param {Object} opts Optional parameters
@@ -10166,6 +10168,72 @@ export default class SfvbApi {
       let returnType = SfvbRedirectResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/redirects/{redirect_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbSequenceStep operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbSequenceStepCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change one step's settings or audience filter
+     * Replaces the step's settings (config_json), its audience filter (filter_profile_equation_json), or both.  Nothing else about the step or the sequence changes.  Send the step's hash_sha256 as If-Match; the write only lands if the step is still what you read.  Email, postcard, experiment, resend, webhook, begin, end, continue and merge steps are refused.  A sequence whose campaign or flow is live needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {String} step_uuid 
+     * @param {String} If_Match The step's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest} sequence_step_update_request The settings, the filter, or both
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse}
+     */
+    updateSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, sequence_step_update_request, callback) {
+      let postBody = sequence_step_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbSequenceStep");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling updateSfvbSequenceStep");
+      }
+      // verify the required parameter 'step_uuid' is set
+      if (step_uuid === undefined || step_uuid === null) {
+        throw new Error("Missing the required parameter 'step_uuid' when calling updateSfvbSequenceStep");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbSequenceStep");
+      }
+      // verify the required parameter 'sequence_step_update_request' is set
+      if (sequence_step_update_request === undefined || sequence_step_update_request === null) {
+        throw new Error("Missing the required parameter 'sequence_step_update_request' when calling updateSfvbSequenceStep");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid,
+        'step_uuid': step_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSequenceStepUpdateResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

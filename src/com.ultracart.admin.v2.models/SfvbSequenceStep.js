@@ -17,7 +17,7 @@ import SfvbSequenceBranch from './SfvbSequenceBranch';
 /**
  * The SfvbSequenceStep model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStep
- * @version 4.1.213
+ * @version 4.1.214
  */
 class SfvbSequenceStep {
     /**
@@ -68,6 +68,9 @@ class SfvbSequenceStep {
             }
             if (data.hasOwnProperty('filter_profile_equation_json')) {
                 obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
+            }
+            if (data.hasOwnProperty('hash_sha256')) {
+                obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
             }
             if (data.hasOwnProperty('item_ids')) {
                 obj['item_ids'] = ApiClient.convertToType(data['item_ids'], ['String']);
@@ -147,6 +150,12 @@ SfvbSequenceStep.prototype['email_uuids'] = undefined;
  * @member {String} filter_profile_equation_json
  */
 SfvbSequenceStep.prototype['filter_profile_equation_json'] = undefined;
+
+/**
+ * The hash of the step's type, stored settings and audience filter.  Send it back as If-Match when changing the step.
+ * @member {String} hash_sha256
+ */
+SfvbSequenceStep.prototype['hash_sha256'] = undefined;
 
 /**
  * The items it names, for a cart or rate limiter step.
