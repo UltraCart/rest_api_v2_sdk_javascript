@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsPostcard model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsPostcard
- * @version 4.1.212
+ * @version 4.1.213
  */
 class SfvbCommsPostcard {
     /**

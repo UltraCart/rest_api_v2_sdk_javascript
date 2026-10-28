@@ -21,7 +21,7 @@ import AutoOrderProperty from './AutoOrderProperty';
 /**
  * The AutoOrderItem model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItem
- * @version 4.1.212
+ * @version 4.1.213
  */
 class AutoOrderItem {
     /**
@@ -174,7 +174,7 @@ AutoOrderItem.prototype['arbitrary_item_id'] = undefined;
 AutoOrderItem.prototype['arbitrary_percentage_discount'] = undefined;
 
 /**
- * Arbitrary quantity to rebill
+ * Quantity to rebill.  When set, every rebill uses this quantity instead of original_quantity.  Set this field to change the quantity on an active auto order; the merchant auto order editor updates this same field.  Each rebill charges the unit price multiplied by this quantity.
  * @member {Number} arbitrary_quantity
  */
 AutoOrderItem.prototype['arbitrary_quantity'] = undefined;
@@ -186,7 +186,7 @@ AutoOrderItem.prototype['arbitrary_quantity'] = undefined;
 AutoOrderItem.prototype['arbitrary_schedule_days'] = undefined;
 
 /**
- * Arbitrary unit cost that rebills of this item should occur at
+ * Arbitrary unit cost that rebills of this item should occur at.  This is a price per unit.  Each rebill charges it multiplied by the rebill quantity (arbitrary_quantity, or original_quantity when arbitrary_quantity is null).
  * @member {Number} arbitrary_unit_cost
  */
 AutoOrderItem.prototype['arbitrary_unit_cost'] = undefined;
@@ -294,7 +294,7 @@ AutoOrderItem.prototype['options'] = undefined;
 AutoOrderItem.prototype['original_item_id'] = undefined;
 
 /**
- * The original quantity purchased
+ * The quantity purchased on the original order.  Rebills use this quantity only when arbitrary_quantity is null.  To change the quantity on future rebills, set arbitrary_quantity instead.
  * @member {Number} original_quantity
  */
 AutoOrderItem.prototype['original_quantity'] = undefined;

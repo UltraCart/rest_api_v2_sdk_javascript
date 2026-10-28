@@ -19,7 +19,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbCampaign model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaign
- * @version 4.1.212
+ * @version 4.1.213
  */
 class SfvbCampaign {
     /**

@@ -17,7 +17,7 @@ import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 /**
  * The SfvbItemAttributeBatchRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbItemAttributeBatchRequest
- * @version 4.1.212
+ * @version 4.1.213
  */
 class SfvbItemAttributeBatchRequest {
     /**
