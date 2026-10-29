@@ -36,6 +36,12 @@ Name | Type | Description | Notes
 
 * `item.pricing` (value: `"item.pricing"`)
 
+* `twilio_account.delete` (value: `"twilio_account.delete"`)
+
+* `sending_domain.delete` (value: `"sending_domain.delete"`)
+
+* `sequence_step.delete` (value: `"sequence_step.delete"`)
+
 
 
 

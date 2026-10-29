@@ -1194,6 +1194,7 @@ docs/SfvbSequenceBranch.md
 docs/SfvbSequenceStep.md
 docs/SfvbSequenceStepCreateRequest.md
 docs/SfvbSequenceStepCreateResponse.md
+docs/SfvbSequenceStepDeleteResponse.md
 docs/SfvbSequenceStepUpdateRequest.md
 docs/SfvbSequenceStepUpdateResponse.md
 docs/SfvbServerLog.md
@@ -2520,6 +2521,7 @@ src/com.ultracart.admin.v2.models/SfvbSequenceBranch.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStep.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse.js
+src/com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse.js
 src/com.ultracart.admin.v2.models/SfvbServerLog.js

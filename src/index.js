@@ -1187,6 +1187,7 @@ import SfvbSequenceBranch from './com.ultracart.admin.v2.models/SfvbSequenceBran
 import SfvbSequenceStep from './com.ultracart.admin.v2.models/SfvbSequenceStep';
 import SfvbSequenceStepCreateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest';
 import SfvbSequenceStepCreateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse';
+import SfvbSequenceStepDeleteResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse';
 import SfvbSequenceStepUpdateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
 import SfvbSequenceStepUpdateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1384,7 +1385,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.216
+* @version 4.1.217
 */
 export {
     /**
@@ -8436,6 +8437,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse}
      */
     SfvbSequenceStepCreateResponse,
+
+    /**
+     * The SfvbSequenceStepDeleteResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse}
+     */
+    SfvbSequenceStepDeleteResponse,
 
     /**
      * The SfvbSequenceStepUpdateRequest model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.216
+ * @version 4.1.217
  */
 class SfvbApprovalParams {
     /**
@@ -83,8 +83,14 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('rule_count')) {
                 obj['rule_count'] = ApiClient.convertToType(data['rule_count'], 'Number');
             }
+            if (data.hasOwnProperty('sequence_uuid')) {
+                obj['sequence_uuid'] = ApiClient.convertToType(data['sequence_uuid'], 'String');
+            }
             if (data.hasOwnProperty('slot')) {
                 obj['slot'] = ApiClient.convertToType(data['slot'], 'String');
+            }
+            if (data.hasOwnProperty('step_uuid')) {
+                obj['step_uuid'] = ApiClient.convertToType(data['step_uuid'], 'String');
             }
             if (data.hasOwnProperty('upsell_kind')) {
                 obj['upsell_kind'] = ApiClient.convertToType(data['upsell_kind'], 'String');
@@ -181,10 +187,22 @@ SfvbApprovalParams.prototype['rows_sha256'] = undefined;
 SfvbApprovalParams.prototype['rule_count'] = undefined;
 
 /**
+ * The communication sequence, for sequence_step.delete.
+ * @member {String} sequence_uuid
+ */
+SfvbApprovalParams.prototype['sequence_uuid'] = undefined;
+
+/**
  * For experiment.start of a page experiment, the page body name.  Defaults to body.
  * @member {String} slot
  */
 SfvbApprovalParams.prototype['slot'] = undefined;
+
+/**
+ * The step to remove, for sequence_step.delete.
+ * @member {String} step_uuid
+ */
+SfvbApprovalParams.prototype['step_uuid'] = undefined;
 
 /**
  * For upsell.enable, what to switch on.

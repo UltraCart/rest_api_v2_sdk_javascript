@@ -154,6 +154,7 @@ import SfvbSecretRequestsResponse from '../com.ultracart.admin.v2.models/SfvbSec
 import SfvbSequence from '../com.ultracart.admin.v2.models/SfvbSequence';
 import SfvbSequenceStepCreateRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest';
 import SfvbSequenceStepCreateResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse';
+import SfvbSequenceStepDeleteResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse';
 import SfvbSequenceStepUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
 import SfvbSequenceStepUpdateResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
@@ -187,7 +188,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.216
+* @version 4.1.217
 */
 export default class SfvbApi {
 
@@ -1654,6 +1655,71 @@ export default class SfvbApi {
       let returnType = SfvbSecretRequest;
       return this.apiClient.callApi(
         '/sfvb/secrets/{request_id}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbSequenceStep operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSequenceStepCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove one step
+     * Removes the step from its list and links the step before it to the step after it, in one transaction.  An email, experiment or postcard step's email or postcard is archived with it.  Refused while any customer is waiting on the step, for the begin, end, continue and merge markers, for a condition, split or inboxgeek step with steps on a side, and for a step whose email a resend step re-sends.  Send the step's hash_sha256 as If-Match.  A sequence whose campaign or flow is live needs sfvb_publish and an approved sequence_step.delete approval (Approval-Id); a draft or inactive one needs neither.  An email or postcard another step still uses is left as it is. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {String} step_uuid 
+     * @param {String} If_Match The step's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the sequence is live, the approval_id of an approved sequence_step.delete request for this step.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse}
+     */
+    deleteSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbSequenceStep");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling deleteSfvbSequenceStep");
+      }
+      // verify the required parameter 'step_uuid' is set
+      if (step_uuid === undefined || step_uuid === null) {
+        throw new Error("Missing the required parameter 'step_uuid' when calling deleteSfvbSequenceStep");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbSequenceStep");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid,
+        'step_uuid': step_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSequenceStepDeleteResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5894,10 +5960,10 @@ export default class SfvbApi {
 
     /**
      * Add an email step, with its new email
-     * Creates a new email with the subject and preview text and adds the email step that sends it, together, so a failure leaves neither.  It goes right after after_step_uuid, or first on one side of a condition, split or inboxgeek step (branch_step_uuid with side).  Send that step's hash_sha256 as If-Match.  The email has no body yet, and gets the content review flags the admin gives a new email here.  A sequence whose campaign or flow is live needs sfvb_publish. 
+     * Creates a new email with the subject and preview text and adds the email step that sends it, together, so a failure leaves neither.  It goes right after after_step_uuid, or first on one side of a condition, split or inboxgeek step (branch_step_uuid with side).  Send that step's hash_sha256 as If-Match.  A sequence with no steps yet takes neither place and If-Match *, and gets begin and end steps around the email, as the admin's editor adds them.  The email has no body yet, and gets the content review flags the admin gives a new email here.  A sequence whose campaign or flow is live needs sfvb_publish. 
      * @param {Number} storefront_oid 
      * @param {String} sequence_uuid 
-     * @param {String} If_Match The hash_sha256 of the step it goes after, or of the branching step.  Required; 428 when absent, 412 when stale.
+     * @param {String} If_Match The hash_sha256 of the step it goes after, or of the branching step, or * for the first step of a sequence with no steps.  Required; 428 when absent, 412 when stale.
      * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest} sequence_step_create_request Where the step goes, and the new email's subject and preview text
      * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse}

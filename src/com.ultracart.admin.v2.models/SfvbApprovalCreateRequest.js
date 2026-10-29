@@ -21,7 +21,7 @@ import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.216
+ * @version 4.1.217
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -191,7 +191,25 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "item.pricing"
      * @const
      */
-    "item.pricing": "item.pricing"
+    "item.pricing": "item.pricing",
+
+    /**
+     * value: "twilio_account.delete"
+     * @const
+     */
+    "twilio_account.delete": "twilio_account.delete",
+
+    /**
+     * value: "sending_domain.delete"
+     * @const
+     */
+    "sending_domain.delete": "sending_domain.delete",
+
+    /**
+     * value: "sequence_step.delete"
+     * @const
+     */
+    "sequence_step.delete": "sequence_step.delete"
 };
 
 
