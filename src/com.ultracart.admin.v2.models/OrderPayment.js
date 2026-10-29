@@ -25,7 +25,7 @@ import OrderPaymentTransaction from './OrderPaymentTransaction';
 /**
  * The OrderPayment model module.
  * @module com.ultracart.admin.v2.models/OrderPayment
- * @version 4.1.215
+ * @version 4.1.216
  */
 class OrderPayment {
     /**
@@ -401,6 +401,12 @@ OrderPayment['PaymentMethodEnum'] = {
      * @const
      */
     "Sezzle": "Sezzle",
+
+    /**
+     * value: "Truemed"
+     * @const
+     */
+    "Truemed": "Truemed",
 
     /**
      * value: "Venmo"

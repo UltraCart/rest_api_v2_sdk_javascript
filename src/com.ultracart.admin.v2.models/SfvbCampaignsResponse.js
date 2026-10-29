@@ -17,7 +17,7 @@ import SfvbCampaign from './SfvbCampaign';
 /**
  * The SfvbCampaignsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaignsResponse
- * @version 4.1.215
+ * @version 4.1.216
  */
 class SfvbCampaignsResponse {
     /**

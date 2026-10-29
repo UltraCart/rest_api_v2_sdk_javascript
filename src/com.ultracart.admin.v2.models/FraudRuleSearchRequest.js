@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudRuleSearchRequest model module.
  * @module com.ultracart.admin.v2.models/FraudRuleSearchRequest
- * @version 4.1.215
+ * @version 4.1.216
  */
 class FraudRuleSearchRequest {
     /**

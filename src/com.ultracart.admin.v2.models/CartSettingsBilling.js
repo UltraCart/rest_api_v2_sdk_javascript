@@ -17,7 +17,7 @@ import CartSettingsProvince from './CartSettingsProvince';
 /**
  * The CartSettingsBilling model module.
  * @module com.ultracart.admin.v2.models/CartSettingsBilling
- * @version 4.1.215
+ * @version 4.1.216
  */
 class CartSettingsBilling {
     /**

@@ -82,6 +82,8 @@ Name | Type | Description | Notes
 
 * `Sezzle` (value: `"Sezzle"`)
 
+* `Truemed` (value: `"Truemed"`)
+
 * `Venmo` (value: `"Venmo"`)
 
 * `Apple Pay` (value: `"Apple Pay"`)

@@ -21,7 +21,7 @@ import ScreenRecordingFilterStringSearch from './ScreenRecordingFilterStringSear
 /**
  * The ScreenRecordingFilterPageView model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingFilterPageView
- * @version 4.1.215
+ * @version 4.1.216
  */
 class ScreenRecordingFilterPageView {
     /**

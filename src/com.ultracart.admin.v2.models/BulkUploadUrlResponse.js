@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The BulkUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/BulkUploadUrlResponse
- * @version 4.1.215
+ * @version 4.1.216
  */
 class BulkUploadUrlResponse {
     /**

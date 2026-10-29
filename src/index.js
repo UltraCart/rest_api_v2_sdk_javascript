@@ -1185,6 +1185,8 @@ import SfvbSecretSink from './com.ultracart.admin.v2.models/SfvbSecretSink';
 import SfvbSequence from './com.ultracart.admin.v2.models/SfvbSequence';
 import SfvbSequenceBranch from './com.ultracart.admin.v2.models/SfvbSequenceBranch';
 import SfvbSequenceStep from './com.ultracart.admin.v2.models/SfvbSequenceStep';
+import SfvbSequenceStepCreateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest';
+import SfvbSequenceStepCreateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse';
 import SfvbSequenceStepUpdateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
 import SfvbSequenceStepUpdateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1382,7 +1384,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.215
+* @version 4.1.216
 */
 export {
     /**
@@ -8422,6 +8424,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStep}
      */
     SfvbSequenceStep,
+
+    /**
+     * The SfvbSequenceStepCreateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest}
+     */
+    SfvbSequenceStepCreateRequest,
+
+    /**
+     * The SfvbSequenceStepCreateResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse}
+     */
+    SfvbSequenceStepCreateResponse,
 
     /**
      * The SfvbSequenceStepUpdateRequest model constructor.
