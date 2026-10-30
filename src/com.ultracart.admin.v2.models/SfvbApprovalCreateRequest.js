@@ -22,7 +22,7 @@ import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.218
+ * @version 4.1.219
  */
 class SfvbApprovalCreateRequest {
     /**

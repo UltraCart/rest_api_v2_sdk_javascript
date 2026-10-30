@@ -17,7 +17,7 @@ import WebhookEventSubscription from './WebhookEventSubscription';
 /**
  * The WebhookEventCategory model module.
  * @module com.ultracart.admin.v2.models/WebhookEventCategory
- * @version 4.1.218
+ * @version 4.1.219
  */
 class WebhookEventCategory {
     /**

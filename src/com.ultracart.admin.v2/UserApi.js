@@ -25,7 +25,7 @@ import UsersResponse from '../com.ultracart.admin.v2.models/UsersResponse';
 /**
 * User service.
 * @module com.ultracart.admin.v2/UserApi
-* @version 4.1.218
+* @version 4.1.219
 */
 export default class UserApi {
 

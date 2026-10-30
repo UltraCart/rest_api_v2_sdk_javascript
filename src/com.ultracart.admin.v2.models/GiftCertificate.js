@@ -17,7 +17,7 @@ import GiftCertificateLedgerEntry from './GiftCertificateLedgerEntry';
 /**
  * The GiftCertificate model module.
  * @module com.ultracart.admin.v2.models/GiftCertificate
- * @version 4.1.218
+ * @version 4.1.219
  */
 class GiftCertificate {
     /**

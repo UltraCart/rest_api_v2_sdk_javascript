@@ -20,7 +20,7 @@ import SfvbLibraryTaxonomy from './SfvbLibraryTaxonomy';
 /**
  * The SfvbLibraryEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryEntry
- * @version 4.1.218
+ * @version 4.1.219
  */
 class SfvbLibraryEntry {
     /**

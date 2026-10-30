@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemPaymentProcessing model module.
  * @module com.ultracart.admin.v2.models/ItemPaymentProcessing
- * @version 4.1.218
+ * @version 4.1.219
  */
 class ItemPaymentProcessing {
     /**
@@ -56,6 +56,9 @@ class ItemPaymentProcessing {
             if (data.hasOwnProperty('credit_card_transaction_type')) {
                 obj['credit_card_transaction_type'] = ApiClient.convertToType(data['credit_card_transaction_type'], 'String');
             }
+            if (data.hasOwnProperty('hsa_fsa_eligibility')) {
+                obj['hsa_fsa_eligibility'] = ApiClient.convertToType(data['hsa_fsa_eligibility'], 'String');
+            }
             if (data.hasOwnProperty('no_realtime_charge')) {
                 obj['no_realtime_charge'] = ApiClient.convertToType(data['no_realtime_charge'], 'Boolean');
             }
@@ -89,6 +92,12 @@ ItemPaymentProcessing.prototype['block_refunds'] = undefined;
  * @member {String} credit_card_transaction_type
  */
 ItemPaymentProcessing.prototype['credit_card_transaction_type'] = undefined;
+
+/**
+ * HSA/FSA eligibility. eligible_with_lmn means the customer needs a Letter of Medical Necessity. Kept in sync automatically when Truemed is configured. Empty string clears it, null value will not update the field
+ * @member {String} hsa_fsa_eligibility
+ */
+ItemPaymentProcessing.prototype['hsa_fsa_eligibility'] = undefined;
 
 /**
  * True if no real-time charge should be performed on this item.

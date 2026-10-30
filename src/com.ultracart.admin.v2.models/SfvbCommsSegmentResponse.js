@@ -17,7 +17,7 @@ import SfvbCommsSegmentDetail from './SfvbCommsSegmentDetail';
 /**
  * The SfvbCommsSegmentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSegmentResponse
- * @version 4.1.218
+ * @version 4.1.219
  */
 class SfvbCommsSegmentResponse {
     /**
