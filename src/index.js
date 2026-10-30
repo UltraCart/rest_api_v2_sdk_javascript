@@ -1003,6 +1003,10 @@ import SfvbCommsList from './com.ultracart.admin.v2.models/SfvbCommsList';
 import SfvbCommsListsResponse from './com.ultracart.admin.v2.models/SfvbCommsListsResponse';
 import SfvbCommsPostcard from './com.ultracart.admin.v2.models/SfvbCommsPostcard';
 import SfvbCommsSegment from './com.ultracart.admin.v2.models/SfvbCommsSegment';
+import SfvbCommsSegmentDetail from './com.ultracart.admin.v2.models/SfvbCommsSegmentDetail';
+import SfvbCommsSegmentResponse from './com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
+import SfvbCommsSegmentUsedBy from './com.ultracart.admin.v2.models/SfvbCommsSegmentUsedBy';
+import SfvbCommsSegmentWriteRequest from './com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest';
 import SfvbCommsSegmentsResponse from './com.ultracart.admin.v2.models/SfvbCommsSegmentsResponse';
 import SfvbCommsSendingDomain from './com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from './com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
@@ -1385,7 +1389,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.217
+* @version 4.1.218
 */
 export {
     /**
@@ -7333,6 +7337,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegment}
      */
     SfvbCommsSegment,
+
+    /**
+     * The SfvbCommsSegmentDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegmentDetail}
+     */
+    SfvbCommsSegmentDetail,
+
+    /**
+     * The SfvbCommsSegmentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse}
+     */
+    SfvbCommsSegmentResponse,
+
+    /**
+     * The SfvbCommsSegmentUsedBy model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegmentUsedBy}
+     */
+    SfvbCommsSegmentUsedBy,
+
+    /**
+     * The SfvbCommsSegmentWriteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest}
+     */
+    SfvbCommsSegmentWriteRequest,
 
     /**
      * The SfvbCommsSegmentsResponse model constructor.

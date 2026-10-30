@@ -35,7 +35,7 @@ import CartUtm from './CartUtm';
 /**
  * The Cart model module.
  * @module com.ultracart.admin.v2.models/Cart
- * @version 4.1.217
+ * @version 4.1.218
  */
 class Cart {
     /**

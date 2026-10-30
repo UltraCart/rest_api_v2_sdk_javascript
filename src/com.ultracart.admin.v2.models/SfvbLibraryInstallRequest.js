@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryInstallRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryInstallRequest
- * @version 4.1.217
+ * @version 4.1.218
  */
 class SfvbLibraryInstallRequest {
     /**

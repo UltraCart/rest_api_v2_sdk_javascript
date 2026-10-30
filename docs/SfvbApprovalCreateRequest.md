@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **params** | [**SfvbApprovalParams**](SfvbApprovalParams.md) |  | [optional] 
 **reason** | **String** | Why the agent wants to do this, in a sentence.  Shown to the person as unverified text, capped at 500 characters. | [optional] 
 **redirect_rows** | [**[SfvbRedirectDeleteRow]**](SfvbRedirectDeleteRow.md) | For redirect.delete_batch, exactly the rows the batch delete will send, up to 5,000, each with its hash_sha256.  UltraCart keeps only their hash. | [optional] 
+**segment_update** | [**SfvbCommsSegmentWriteRequest**](SfvbCommsSegmentWriteRequest.md) |  | [optional] 
 
 
 
@@ -41,6 +42,8 @@ Name | Type | Description | Notes
 * `sending_domain.delete` (value: `"sending_domain.delete"`)
 
 * `sequence_step.delete` (value: `"sequence_step.delete"`)
+
+* `segment.update` (value: `"segment.update"`)
 
 
 

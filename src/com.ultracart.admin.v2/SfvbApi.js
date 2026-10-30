@@ -26,6 +26,8 @@ import SfvbCampaign from '../com.ultracart.admin.v2.models/SfvbCampaign';
 import SfvbCampaignWriteRequest from '../com.ultracart.admin.v2.models/SfvbCampaignWriteRequest';
 import SfvbCampaignsResponse from '../com.ultracart.admin.v2.models/SfvbCampaignsResponse';
 import SfvbCommsListsResponse from '../com.ultracart.admin.v2.models/SfvbCommsListsResponse';
+import SfvbCommsSegmentResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
+import SfvbCommsSegmentWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest';
 import SfvbCommsSegmentsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentsResponse';
 import SfvbCommsSendingDomain from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
@@ -188,7 +190,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.217
+* @version 4.1.218
 */
 export default class SfvbApi {
 
@@ -2860,6 +2862,55 @@ export default class SfvbApi {
       let returnType = SfvbElementsResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/elements', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsSegment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSegmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one segment, with its rule
+     * The segment's name, folder, rule, member count at its last rebuild, whether a rebuild is still due, and the campaigns and flows that use it, each with whether it is live.  hash_sha256 is the If-Match for an update.  Never its members, its Facebook audience, its ranking or its third party sync settings. 
+     * @param {Number} storefront_oid 
+     * @param {String} segment_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSegmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse}
+     */
+    getSfvbCommsSegment(storefront_oid, segment_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsSegment");
+      }
+      // verify the required parameter 'segment_uuid' is set
+      if (segment_uuid === undefined || segment_uuid === null) {
+        throw new Error("Missing the required parameter 'segment_uuid' when calling getSfvbCommsSegment");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'segment_uuid': segment_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSegmentResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/segments/{segment_uuid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5723,6 +5774,54 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbCommsSegment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsSegmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a segment
+     * A new segment with the name, rule and folder given.  The rule needs at least one group, each with at least one function of a rule type the segment rebuild knows, and any list or segment it names must be on this storefront.  The segment starts empty and rebuilds in the background; member_count is out of date until rebuild_required is false. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest} segment_write_request The new segment's name, rule and folder
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsSegmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse}
+     */
+    insertSfvbCommsSegment(storefront_oid, segment_write_request, callback) {
+      let postBody = segment_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbCommsSegment");
+      }
+      // verify the required parameter 'segment_write_request' is set
+      if (segment_write_request === undefined || segment_write_request === null) {
+        throw new Error("Missing the required parameter 'segment_write_request' when calling insertSfvbCommsSegment");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSegmentResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/segments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -9854,6 +9953,70 @@ export default class SfvbApi {
       let returnType = SfvbCampaign;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbCommsSegment operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsSegmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a segment's name, rule or folder
+     * A field left out stays as it is.  Send the segment's hash_sha256 as If-Match; the change applies only while the name, rule and folder are still what was read.  A changed rule is checked as on a create and starts a rebuild.  Changing the rule of a segment a live campaign or flow uses needs sfvb_publish and an approved segment.update approval (Approval-Id); a name or folder change, or a segment nothing live uses, needs neither. 
+     * @param {Number} storefront_oid 
+     * @param {String} segment_uuid 
+     * @param {String} If_Match The segment's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest} segment_write_request The fields to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the rule changes and a live campaign or flow uses the segment, the approval_id of an approved segment.update request for this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsSegmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSegmentResponse}
+     */
+    updateSfvbCommsSegment(storefront_oid, segment_uuid, If_Match, segment_write_request, opts, callback) {
+      opts = opts || {};
+      let postBody = segment_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbCommsSegment");
+      }
+      // verify the required parameter 'segment_uuid' is set
+      if (segment_uuid === undefined || segment_uuid === null) {
+        throw new Error("Missing the required parameter 'segment_uuid' when calling updateSfvbCommsSegment");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbCommsSegment");
+      }
+      // verify the required parameter 'segment_write_request' is set
+      if (segment_write_request === undefined || segment_write_request === null) {
+        throw new Error("Missing the required parameter 'segment_write_request' when calling updateSfvbCommsSegment");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'segment_uuid': segment_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSegmentResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/segments/{segment_uuid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

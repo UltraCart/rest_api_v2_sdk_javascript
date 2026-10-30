@@ -17,7 +17,7 @@ import SfvbRecordingSettings from './SfvbRecordingSettings';
 /**
  * The SfvbRecordingSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRecordingSettingsResponse
- * @version 4.1.217
+ * @version 4.1.218
  */
 class SfvbRecordingSettingsResponse {
     /**

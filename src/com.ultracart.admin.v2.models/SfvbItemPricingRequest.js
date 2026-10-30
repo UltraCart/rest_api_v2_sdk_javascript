@@ -17,7 +17,7 @@ import SfvbItemVolumeDiscount from './SfvbItemVolumeDiscount';
 /**
  * The SfvbItemPricingRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPricingRequest
- * @version 4.1.217
+ * @version 4.1.218
  */
 class SfvbItemPricingRequest {
     /**

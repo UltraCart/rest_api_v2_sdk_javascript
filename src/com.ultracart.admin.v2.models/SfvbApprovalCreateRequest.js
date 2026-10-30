@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import SfvbApprovalParams from './SfvbApprovalParams';
+import SfvbCommsSegmentWriteRequest from './SfvbCommsSegmentWriteRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
@@ -21,7 +22,7 @@ import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.217
+ * @version 4.1.218
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -76,6 +77,9 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('redirect_rows')) {
                 obj['redirect_rows'] = ApiClient.convertToType(data['redirect_rows'], [SfvbRedirectDeleteRow]);
             }
+            if (data.hasOwnProperty('segment_update')) {
+                obj['segment_update'] = SfvbCommsSegmentWriteRequest.constructFromObject(data['segment_update']);
+            }
         }
         return obj;
     }
@@ -127,6 +131,11 @@ SfvbApprovalCreateRequest.prototype['reason'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbRedirectDeleteRow>} redirect_rows
  */
 SfvbApprovalCreateRequest.prototype['redirect_rows'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest} segment_update
+ */
+SfvbApprovalCreateRequest.prototype['segment_update'] = undefined;
 
 
 
@@ -209,7 +218,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "sequence_step.delete"
      * @const
      */
-    "sequence_step.delete": "sequence_step.delete"
+    "sequence_step.delete": "sequence_step.delete",
+
+    /**
+     * value: "segment.update"
+     * @const
+     */
+    "segment.update": "segment.update"
 };
 
 

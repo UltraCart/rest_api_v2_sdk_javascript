@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.217
+ * @version 4.1.218
  */
 class SfvbApprovalParams {
     /**
@@ -82,6 +82,9 @@ class SfvbApprovalParams {
             }
             if (data.hasOwnProperty('rule_count')) {
                 obj['rule_count'] = ApiClient.convertToType(data['rule_count'], 'Number');
+            }
+            if (data.hasOwnProperty('segment_uuid')) {
+                obj['segment_uuid'] = ApiClient.convertToType(data['segment_uuid'], 'String');
             }
             if (data.hasOwnProperty('sequence_uuid')) {
                 obj['sequence_uuid'] = ApiClient.convertToType(data['sequence_uuid'], 'String');
@@ -185,6 +188,12 @@ SfvbApprovalParams.prototype['rows_sha256'] = undefined;
  * @member {Number} rule_count
  */
 SfvbApprovalParams.prototype['rule_count'] = undefined;
+
+/**
+ * The segment whose rule changes, for segment.update.
+ * @member {String} segment_uuid
+ */
+SfvbApprovalParams.prototype['segment_uuid'] = undefined;
 
 /**
  * The communication sequence, for sequence_step.delete.
