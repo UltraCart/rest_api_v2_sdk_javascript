@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSequenceStepCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest
- * @version 4.1.219
+ * @version 4.1.220
  */
 class SfvbSequenceStepCreateRequest {
     /**
@@ -47,11 +47,23 @@ class SfvbSequenceStepCreateRequest {
         if (data) {
             obj = obj || new SfvbSequenceStepCreateRequest();
 
+            if (data.hasOwnProperty('acknowledge_executable')) {
+                obj['acknowledge_executable'] = ApiClient.convertToType(data['acknowledge_executable'], 'Boolean');
+            }
             if (data.hasOwnProperty('after_step_uuid')) {
                 obj['after_step_uuid'] = ApiClient.convertToType(data['after_step_uuid'], 'String');
             }
             if (data.hasOwnProperty('branch_step_uuid')) {
                 obj['branch_step_uuid'] = ApiClient.convertToType(data['branch_step_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('config_json')) {
+                obj['config_json'] = ApiClient.convertToType(data['config_json'], 'String');
+            }
+            if (data.hasOwnProperty('library_item_oid')) {
+                obj['library_item_oid'] = ApiClient.convertToType(data['library_item_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('preview_text')) {
                 obj['preview_text'] = ApiClient.convertToType(data['preview_text'], 'String');
@@ -73,6 +85,12 @@ class SfvbSequenceStepCreateRequest {
 }
 
 /**
+ * With library_item_oid, true once the caller has seen that the item carries executable content (script, html, embed, css or velocity elements) and still wants it.  An item with any is refused without it.
+ * @member {Boolean} acknowledge_executable
+ */
+SfvbSequenceStepCreateRequest.prototype['acknowledge_executable'] = undefined;
+
+/**
  * The step the new step follows, in the same list.  Not an end, continue or merge step.
  * @member {String} after_step_uuid
  */
@@ -85,7 +103,25 @@ SfvbSequenceStepCreateRequest.prototype['after_step_uuid'] = undefined;
 SfvbSequenceStepCreateRequest.prototype['branch_step_uuid'] = undefined;
 
 /**
- * The new email's preview text, 5 to 150 characters.
+ * A wait step's settings, as the admin saves them and set-config changes them, namely delay_duration and delay_duration_unit (minutes, hours, days, weeks or months), and optionally the delay_until_* options.  Not for an email step.
+ * @member {String} config_json
+ */
+SfvbSequenceStepCreateRequest.prototype['config_json'] = undefined;
+
+/**
+ * An email item from the code library (#1589) to start the new email from, taking its body, with new element ids, and its subject and preview text unless subject or preview_text is given.  The item must be this account's own, shared with it, or published, approved by UltraCart and free.  Only for an email step.  The items are listed by the code library email read.
+ * @member {Number} library_item_oid
+ */
+SfvbSequenceStepCreateRequest.prototype['library_item_oid'] = undefined;
+
+/**
+ * A post_card step's name, shown in the admin, 1 to 100 characters on one line.  Postcard by default.  Only for a post_card step.
+ * @member {String} name
+ */
+SfvbSequenceStepCreateRequest.prototype['name'] = undefined;
+
+/**
+ * The new email's preview text, 5 to 150 characters.  Optional with library_item_oid, whose preview text is used when this is left out.
  * @member {String} preview_text
  */
 SfvbSequenceStepCreateRequest.prototype['preview_text'] = undefined;
@@ -97,13 +133,13 @@ SfvbSequenceStepCreateRequest.prototype['preview_text'] = undefined;
 SfvbSequenceStepCreateRequest.prototype['side'] = undefined;
 
 /**
- * The new email's subject line, 5 to 150 characters.
+ * The new email's subject line, 5 to 150 characters.  Optional with library_item_oid, whose subject is used when this is left out.
  * @member {String} subject
  */
 SfvbSequenceStepCreateRequest.prototype['subject'] = undefined;
 
 /**
- * The kind of step.  Only email for now.
+ * The kind of step, one of email (the default), wait or post_card.
  * @member {String} type
  */
 SfvbSequenceStepCreateRequest.prototype['type'] = undefined;

@@ -997,6 +997,8 @@ import SfvbCampaign from './com.ultracart.admin.v2.models/SfvbCampaign';
 import SfvbCampaignMembership from './com.ultracart.admin.v2.models/SfvbCampaignMembership';
 import SfvbCampaignWriteRequest from './com.ultracart.admin.v2.models/SfvbCampaignWriteRequest';
 import SfvbCampaignsResponse from './com.ultracart.admin.v2.models/SfvbCampaignsResponse';
+import SfvbCodeLibraryEmail from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmail';
+import SfvbCodeLibraryEmailsResponse from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
 import SfvbCommsDnsRecord from './com.ultracart.admin.v2.models/SfvbCommsDnsRecord';
 import SfvbCommsEmail from './com.ultracart.admin.v2.models/SfvbCommsEmail';
 import SfvbCommsList from './com.ultracart.admin.v2.models/SfvbCommsList';
@@ -1192,6 +1194,8 @@ import SfvbSequenceStep from './com.ultracart.admin.v2.models/SfvbSequenceStep';
 import SfvbSequenceStepCreateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest';
 import SfvbSequenceStepCreateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse';
 import SfvbSequenceStepDeleteResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse';
+import SfvbSequenceStepMoveRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest';
+import SfvbSequenceStepMoveResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse';
 import SfvbSequenceStepUpdateRequest from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
 import SfvbSequenceStepUpdateResponse from './com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLog from './com.ultracart.admin.v2.models/SfvbServerLog';
@@ -1389,7 +1393,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.219
+* @version 4.1.220
 */
 export {
     /**
@@ -7303,6 +7307,18 @@ export {
     SfvbCampaignsResponse,
 
     /**
+     * The SfvbCodeLibraryEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmail}
+     */
+    SfvbCodeLibraryEmail,
+
+    /**
+     * The SfvbCodeLibraryEmailsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse}
+     */
+    SfvbCodeLibraryEmailsResponse,
+
+    /**
      * The SfvbCommsDnsRecord model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsDnsRecord}
      */
@@ -8471,6 +8487,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse}
      */
     SfvbSequenceStepDeleteResponse,
+
+    /**
+     * The SfvbSequenceStepMoveRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest}
+     */
+    SfvbSequenceStepMoveRequest,
+
+    /**
+     * The SfvbSequenceStepMoveResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse}
+     */
+    SfvbSequenceStepMoveResponse,
 
     /**
      * The SfvbSequenceStepUpdateRequest model constructor.

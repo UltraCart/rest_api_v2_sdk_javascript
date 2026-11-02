@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**after_step_uuid** | **String** | For sequence_step.move, the step it moves after.  Or branch_step_uuid with side. | [optional] 
 **attribute_names** | **[String]** | For item.attribute_batch, the attributes the batch would change.  Set by the server. | [optional] 
 **blog_post_oid** | **Number** | The blog post, for blog_post.delete. | [optional] 
+**branch_step_uuid** | **String** | For sequence_step.move, the condition, split or inboxgeek step it moves to the start of a side of. | [optional] 
 **content_sha256** | **String** | For file.put_script, the SHA-256 of the exact bytes approved.  Set by the server, never by the caller.  The write must send bytes with this hash. | [optional] 
 **domain** | **String** | For sending_domain.delete, the sending domain. | [optional] 
 **esp_twilio_uuid** | **String** | For twilio_account.delete, the Twilio account&#39;s esp_twilio_uuid, as GET comms/twilio_account returns it. | [optional] 
@@ -17,9 +19,10 @@ Name | Type | Description | Notes
 **rows_sha256** | **String** | For redirect.delete_batch and item.attribute_batch, the plan_hash of the exact rows approved.  Set by the server.  The batch must send rows with this hash. | [optional] 
 **rule_count** | **Number** | For redirect.delete_batch, how many rules the batch would delete when it was requested.  Set by the server. | [optional] 
 **segment_uuid** | **String** | The segment whose rule changes, for segment.update. | [optional] 
-**sequence_uuid** | **String** | The communication sequence, for sequence_step.delete. | [optional] 
+**sequence_uuid** | **String** | The communication sequence, for sequence_step.delete and sequence_step.move. | [optional] 
+**side** | **String** | For sequence_step.move with branch_step_uuid, the side&#39;s label from the sequence read. | [optional] 
 **slot** | **String** | For experiment.start of a page experiment, the page body name.  Defaults to body. | [optional] 
-**step_uuid** | **String** | The step to remove, for sequence_step.delete. | [optional] 
+**step_uuid** | **String** | The step to remove, for sequence_step.delete, or to move, for sequence_step.move. | [optional] 
 **upsell_kind** | **String** | For upsell.enable, what to switch on. | [optional] 
 **upsell_oid** | **Number** | For upsell.enable, the oid of the offer or path to switch on. | [optional] 
 **version** | **Number** | For file.put_script, the history version a revert restores.  Leave it out, and send content instead, for a write. | [optional] 

@@ -172,7 +172,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.219
+* @version 4.1.220
 */
 export default class StorefrontApi {
 
@@ -2002,6 +2002,7 @@ export default class StorefrontApi {
 
     /**
      * Get email campaigns with stats
+     * Lists only the campaigns with stats recorded in the last stat_days days, with those stats summed.  A campaign with no stats in that window isn't listed; getEmailCampaigns lists every campaign. 
      * @param {Number} storefront_oid 
      * @param {String} stat_days 
      * @param {module:com.ultracart.admin.v2/StorefrontApi~getEmailCampaignsWithStatsCallback} callback The callback function, accepting three arguments: error, data, response

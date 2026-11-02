@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.219
+ * @version 4.1.220
  */
 class SfvbApprovalParams {
     /**
@@ -47,11 +47,17 @@ class SfvbApprovalParams {
         if (data) {
             obj = obj || new SfvbApprovalParams();
 
+            if (data.hasOwnProperty('after_step_uuid')) {
+                obj['after_step_uuid'] = ApiClient.convertToType(data['after_step_uuid'], 'String');
+            }
             if (data.hasOwnProperty('attribute_names')) {
                 obj['attribute_names'] = ApiClient.convertToType(data['attribute_names'], ['String']);
             }
             if (data.hasOwnProperty('blog_post_oid')) {
                 obj['blog_post_oid'] = ApiClient.convertToType(data['blog_post_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('branch_step_uuid')) {
+                obj['branch_step_uuid'] = ApiClient.convertToType(data['branch_step_uuid'], 'String');
             }
             if (data.hasOwnProperty('content_sha256')) {
                 obj['content_sha256'] = ApiClient.convertToType(data['content_sha256'], 'String');
@@ -89,6 +95,9 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('sequence_uuid')) {
                 obj['sequence_uuid'] = ApiClient.convertToType(data['sequence_uuid'], 'String');
             }
+            if (data.hasOwnProperty('side')) {
+                obj['side'] = ApiClient.convertToType(data['side'], 'String');
+            }
             if (data.hasOwnProperty('slot')) {
                 obj['slot'] = ApiClient.convertToType(data['slot'], 'String');
             }
@@ -118,6 +127,12 @@ class SfvbApprovalParams {
 }
 
 /**
+ * For sequence_step.move, the step it moves after.  Or branch_step_uuid with side.
+ * @member {String} after_step_uuid
+ */
+SfvbApprovalParams.prototype['after_step_uuid'] = undefined;
+
+/**
  * For item.attribute_batch, the attributes the batch would change.  Set by the server.
  * @member {Array.<String>} attribute_names
  */
@@ -128,6 +143,12 @@ SfvbApprovalParams.prototype['attribute_names'] = undefined;
  * @member {Number} blog_post_oid
  */
 SfvbApprovalParams.prototype['blog_post_oid'] = undefined;
+
+/**
+ * For sequence_step.move, the condition, split or inboxgeek step it moves to the start of a side of.
+ * @member {String} branch_step_uuid
+ */
+SfvbApprovalParams.prototype['branch_step_uuid'] = undefined;
 
 /**
  * For file.put_script, the SHA-256 of the exact bytes approved.  Set by the server, never by the caller.  The write must send bytes with this hash.
@@ -196,10 +217,16 @@ SfvbApprovalParams.prototype['rule_count'] = undefined;
 SfvbApprovalParams.prototype['segment_uuid'] = undefined;
 
 /**
- * The communication sequence, for sequence_step.delete.
+ * The communication sequence, for sequence_step.delete and sequence_step.move.
  * @member {String} sequence_uuid
  */
 SfvbApprovalParams.prototype['sequence_uuid'] = undefined;
+
+/**
+ * For sequence_step.move with branch_step_uuid, the side's label from the sequence read.
+ * @member {String} side
+ */
+SfvbApprovalParams.prototype['side'] = undefined;
 
 /**
  * For experiment.start of a page experiment, the page body name.  Defaults to body.
@@ -208,7 +235,7 @@ SfvbApprovalParams.prototype['sequence_uuid'] = undefined;
 SfvbApprovalParams.prototype['slot'] = undefined;
 
 /**
- * The step to remove, for sequence_step.delete.
+ * The step to remove, for sequence_step.delete, or to move, for sequence_step.move.
  * @member {String} step_uuid
  */
 SfvbApprovalParams.prototype['step_uuid'] = undefined;

@@ -25,6 +25,7 @@ import SfvbBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbBlogPost
 import SfvbCampaign from '../com.ultracart.admin.v2.models/SfvbCampaign';
 import SfvbCampaignWriteRequest from '../com.ultracart.admin.v2.models/SfvbCampaignWriteRequest';
 import SfvbCampaignsResponse from '../com.ultracart.admin.v2.models/SfvbCampaignsResponse';
+import SfvbCodeLibraryEmailsResponse from '../com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
 import SfvbCommsListsResponse from '../com.ultracart.admin.v2.models/SfvbCommsListsResponse';
 import SfvbCommsSegmentResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
 import SfvbCommsSegmentWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest';
@@ -157,6 +158,8 @@ import SfvbSequence from '../com.ultracart.admin.v2.models/SfvbSequence';
 import SfvbSequenceStepCreateRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest';
 import SfvbSequenceStepCreateResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse';
 import SfvbSequenceStepDeleteResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse';
+import SfvbSequenceStepMoveRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest';
+import SfvbSequenceStepMoveResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse';
 import SfvbSequenceStepUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest';
 import SfvbSequenceStepUpdateResponse from '../com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse';
 import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogDetail';
@@ -190,7 +193,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.219
+* @version 4.1.220
 */
 export default class SfvbApi {
 
@@ -6058,12 +6061,12 @@ export default class SfvbApi {
      */
 
     /**
-     * Add an email step, with its new email
-     * Creates a new email with the subject and preview text and adds the email step that sends it, together, so a failure leaves neither.  It goes right after after_step_uuid, or first on one side of a condition, split or inboxgeek step (branch_step_uuid with side).  Send that step's hash_sha256 as If-Match.  A sequence with no steps yet takes neither place and If-Match *, and gets begin and end steps around the email, as the admin's editor adds them.  The email has no body yet, and gets the content review flags the admin gives a new email here.  A sequence whose campaign or flow is live needs sfvb_publish. 
+     * Add an email step, with its new email, a wait step, or a postcard step, with its new postcard
+     * type email (the default) creates a new email with the subject and preview text and adds the email step that sends it, together, so a failure leaves neither.  The email has no body yet, and gets the content review flags the admin gives a new email here.  With library_item_oid the email starts from a code library email item instead (listSfvbCodeLibraryEmails): its body with new element ids, and its subject and preview text where the request gives none.  The item must be this account's own, shared with it, or published, approved by UltraCart and free; it must pass the library content scanner and the email container rules, and executable elements need acknowledge_executable true.  Its PNG, JPEG and GIF image files are copied into the storefront first, never over an existing file; any other file is skipped and listed.  type wait adds a wait step with config_json as its settings: delay_duration and delay_duration_unit (minutes, hours, days, weeks or months), or a delay_until option; a wait that would pass customers on at once is refused.  type post_card creates a new postcard with the admin's default front and back and adds the postcard step that mails it, together; the step starts disabled, so nothing is printed or mailed until it is turned on with set-config, and the response names the front and back containers.  Any goes right after after_step_uuid, or first on one side of a condition, split or inboxgeek step (branch_step_uuid with side).  Send that step's hash_sha256 as If-Match.  A sequence with no steps yet takes neither place and If-Match *, and gets begin and end steps around the new step, as the admin's editor adds them.  A sequence whose campaign or flow is live needs sfvb_publish. 
      * @param {Number} storefront_oid 
      * @param {String} sequence_uuid 
      * @param {String} If_Match The hash_sha256 of the step it goes after, or of the branching step, or * for the first step of a sequence with no steps.  Required; 428 when absent, 412 when stale.
-     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest} sequence_step_create_request Where the step goes, and the new email's subject and preview text
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest} sequence_step_create_request Where the step goes, and the new email's subject and preview text or code library item, the wait's config_json, or the postcard step's name
      * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse}
      */
@@ -6356,6 +6359,53 @@ export default class SfvbApi {
       let returnType = SfvbCampaignsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/campaigns', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSfvbCodeLibraryEmails operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~listSfvbCodeLibraryEmailsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Email items from the code library that can start a new email step
+     * The code library is the one the admin's \"start from library\" uses; it isn't the Visual Builder element library.  Lists the email items this account may use, by title: its own (source owned), those shared with it (shared), and those published for everyone, approved by UltraCart and free (public).  search matches part of the title, with case.  Each kind is capped at 100 items, and truncated says when there were more.  Send an item's library_item_oid on the step insert to start a new email from it. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.search Part of the title to match, with case.  Up to 100 characters.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbCodeLibraryEmailsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse}
+     */
+    listSfvbCodeLibraryEmails(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling listSfvbCodeLibraryEmails");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'search': opts['search']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCodeLibraryEmailsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/code_library/emails', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -7231,6 +7281,76 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPathsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the moveSfvbSequenceStep operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~moveSfvbSequenceStepCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Move one step
+     * Moves the step, in one transaction, to right after after_step_uuid (the begin step puts it first in the sequence) or to the start of one side of a condition, split or inboxgeek step (branch_step_uuid with side).  The step keeps its uuid, settings and the email or postcard it sends: nothing is archived or created.  Refused for the begin, end, continue and merge markers, for a condition, split or inboxgeek step, while any customer is waiting on the step, and when the new place is the one it is in.  Send the step's hash_sha256 as If-Match, and the hash_sha256 of after_step_uuid or branch_step_uuid as anchor_hash_sha256.  A sequence whose campaign or flow is live needs sfvb_publish and an approved sequence_step.move approval (Approval-Id); a draft or inactive one needs neither. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {String} step_uuid 
+     * @param {String} If_Match The moved step's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest} sequence_step_move_request Where the step moves, and the hash of the step it goes next to
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the sequence is live, the approval_id of an approved sequence_step.move request for exactly this move.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~moveSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse}
+     */
+    moveSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, sequence_step_move_request, opts, callback) {
+      opts = opts || {};
+      let postBody = sequence_step_move_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling moveSfvbSequenceStep");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling moveSfvbSequenceStep");
+      }
+      // verify the required parameter 'step_uuid' is set
+      if (step_uuid === undefined || step_uuid === null) {
+        throw new Error("Missing the required parameter 'step_uuid' when calling moveSfvbSequenceStep");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling moveSfvbSequenceStep");
+      }
+      // verify the required parameter 'sequence_step_move_request' is set
+      if (sequence_step_move_request === undefined || sequence_step_move_request === null) {
+        throw new Error("Missing the required parameter 'sequence_step_move_request' when calling moveSfvbSequenceStep");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid,
+        'step_uuid': step_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSequenceStepMoveResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}/move', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -10474,16 +10594,19 @@ export default class SfvbApi {
 
     /**
      * Change one step's settings or audience filter
-     * Replaces the step's settings (config_json), its audience filter (filter_profile_equation_json), or both.  Nothing else about the step or the sequence changes.  Send the step's hash_sha256 as If-Match; the write only lands if the step is still what you read.  Email, postcard, experiment, resend, webhook, begin, end, continue and merge steps are refused.  A sequence whose campaign or flow is live needs sfvb_publish. 
+     * Replaces the step's settings (config_json), its audience filter (filter_profile_equation_json), or both.  Nothing else about the step or the sequence changes.  Send the step's hash_sha256 as If-Match; the write only lands if the step is still what you read.  Email, experiment, resend, webhook, begin, end, continue and merge steps are refused.  On a post_card step only disabled, name and info change, and not its filter.  A sequence whose campaign or flow is live needs sfvb_publish.  Turning a post_card step on, live or not, needs an approved sequence_step.enable_postcard approval (Approval-Id): once on, it mails printed cards whenever the campaign or flow runs. 
      * @param {Number} storefront_oid 
      * @param {String} sequence_uuid 
      * @param {String} step_uuid 
      * @param {String} If_Match The step's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
      * @param {module:com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest} sequence_step_update_request The settings, the filter, or both
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the change turns a post_card step on, the approval_id of an approved sequence_step.enable_postcard request for this step.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbSequenceStepCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse}
      */
-    updateSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, sequence_step_update_request, callback) {
+    updateSfvbSequenceStep(storefront_oid, sequence_uuid, step_uuid, If_Match, sequence_step_update_request, opts, callback) {
+      opts = opts || {};
       let postBody = sequence_step_update_request;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -10514,7 +10637,8 @@ export default class SfvbApi {
       let queryParams = {
       };
       let headerParams = {
-        'If-Match': If_Match
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };

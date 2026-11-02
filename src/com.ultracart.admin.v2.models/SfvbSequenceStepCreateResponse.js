@@ -17,7 +17,7 @@ import SfvbSequenceStep from './SfvbSequenceStep';
 /**
  * The SfvbSequenceStepCreateResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse
- * @version 4.1.219
+ * @version 4.1.220
  */
 class SfvbSequenceStepCreateResponse {
     /**
@@ -48,11 +48,32 @@ class SfvbSequenceStepCreateResponse {
         if (data) {
             obj = obj || new SfvbSequenceStepCreateResponse();
 
+            if (data.hasOwnProperty('back_container_uuid')) {
+                obj['back_container_uuid'] = ApiClient.convertToType(data['back_container_uuid'], 'String');
+            }
             if (data.hasOwnProperty('email_uuid')) {
                 obj['email_uuid'] = ApiClient.convertToType(data['email_uuid'], 'String');
             }
+            if (data.hasOwnProperty('front_container_uuid')) {
+                obj['front_container_uuid'] = ApiClient.convertToType(data['front_container_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('library_files_kept')) {
+                obj['library_files_kept'] = ApiClient.convertToType(data['library_files_kept'], ['String']);
+            }
+            if (data.hasOwnProperty('library_files_skipped')) {
+                obj['library_files_skipped'] = ApiClient.convertToType(data['library_files_skipped'], ['String']);
+            }
+            if (data.hasOwnProperty('library_files_written')) {
+                obj['library_files_written'] = ApiClient.convertToType(data['library_files_written'], ['String']);
+            }
+            if (data.hasOwnProperty('library_item_oid')) {
+                obj['library_item_oid'] = ApiClient.convertToType(data['library_item_oid'], 'Number');
+            }
             if (data.hasOwnProperty('notes')) {
                 obj['notes'] = ApiClient.convertToType(data['notes'], ['String']);
+            }
+            if (data.hasOwnProperty('postcard_uuid')) {
+                obj['postcard_uuid'] = ApiClient.convertToType(data['postcard_uuid'], 'String');
             }
             if (data.hasOwnProperty('requires_review')) {
                 obj['requires_review'] = ApiClient.convertToType(data['requires_review'], 'Boolean');
@@ -68,16 +89,58 @@ class SfvbSequenceStepCreateResponse {
 }
 
 /**
+ * A post_card step's back, the container with owner type postcardback and this owner id.
+ * @member {String} back_container_uuid
+ */
+SfvbSequenceStepCreateResponse.prototype['back_container_uuid'] = undefined;
+
+/**
  * The new email's uuid.  Its body is the email container with this owner id.
  * @member {String} email_uuid
  */
 SfvbSequenceStepCreateResponse.prototype['email_uuid'] = undefined;
 
 /**
+ * A post_card step's front, the container with owner type postcardfront and this owner id.
+ * @member {String} front_container_uuid
+ */
+SfvbSequenceStepCreateResponse.prototype['front_container_uuid'] = undefined;
+
+/**
+ * The library item's files whose path already held a file, which was kept, not replaced.
+ * @member {Array.<String>} library_files_kept
+ */
+SfvbSequenceStepCreateResponse.prototype['library_files_kept'] = undefined;
+
+/**
+ * The library item's files that weren't written because they aren't a PNG, JPEG or GIF image whose bytes match its name.  Only those images are copied from a library item.
+ * @member {Array.<String>} library_files_skipped
+ */
+SfvbSequenceStepCreateResponse.prototype['library_files_skipped'] = undefined;
+
+/**
+ * Storefront file paths the library item's files were written to.  A file already at its path is kept as it is and listed in library_files_kept instead.
+ * @member {Array.<String>} library_files_written
+ */
+SfvbSequenceStepCreateResponse.prototype['library_files_written'] = undefined;
+
+/**
+ * The code library email item the new email started from (#1589), when one was given.
+ * @member {Number} library_item_oid
+ */
+SfvbSequenceStepCreateResponse.prototype['library_item_oid'] = undefined;
+
+/**
  * What to do next, such as writing the body, and customers already waiting on the step before it.
  * @member {Array.<String>} notes
  */
 SfvbSequenceStepCreateResponse.prototype['notes'] = undefined;
+
+/**
+ * A post_card step's new postcard (#1644).
+ * @member {String} postcard_uuid
+ */
+SfvbSequenceStepCreateResponse.prototype['postcard_uuid'] = undefined;
 
 /**
  * True when the new email must pass content review before it sends.

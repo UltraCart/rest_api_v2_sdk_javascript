@@ -1004,6 +1004,8 @@ docs/SfvbCampaign.md
 docs/SfvbCampaignMembership.md
 docs/SfvbCampaignWriteRequest.md
 docs/SfvbCampaignsResponse.md
+docs/SfvbCodeLibraryEmail.md
+docs/SfvbCodeLibraryEmailsResponse.md
 docs/SfvbCommsDnsRecord.md
 docs/SfvbCommsEmail.md
 docs/SfvbCommsList.md
@@ -1199,6 +1201,8 @@ docs/SfvbSequenceStep.md
 docs/SfvbSequenceStepCreateRequest.md
 docs/SfvbSequenceStepCreateResponse.md
 docs/SfvbSequenceStepDeleteResponse.md
+docs/SfvbSequenceStepMoveRequest.md
+docs/SfvbSequenceStepMoveResponse.md
 docs/SfvbSequenceStepUpdateRequest.md
 docs/SfvbSequenceStepUpdateResponse.md
 docs/SfvbServerLog.md
@@ -2335,6 +2339,8 @@ src/com.ultracart.admin.v2.models/SfvbCampaign.js
 src/com.ultracart.admin.v2.models/SfvbCampaignMembership.js
 src/com.ultracart.admin.v2.models/SfvbCampaignWriteRequest.js
 src/com.ultracart.admin.v2.models/SfvbCampaignsResponse.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmail.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse.js
 src/com.ultracart.admin.v2.models/SfvbCommsDnsRecord.js
 src/com.ultracart.admin.v2.models/SfvbCommsEmail.js
 src/com.ultracart.admin.v2.models/SfvbCommsList.js
@@ -2530,6 +2536,8 @@ src/com.ultracart.admin.v2.models/SfvbSequenceStep.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepCreateResponse.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse.js
+src/com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest.js
+src/com.ultracart.admin.v2.models/SfvbSequenceStepMoveResponse.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbSequenceStepUpdateResponse.js
 src/com.ultracart.admin.v2.models/SfvbServerLog.js
