@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudRuleFromOrderRequest model module.
  * @module com.ultracart.admin.v2.models/FraudRuleFromOrderRequest
- * @version 4.1.220
+ * @version 4.1.221
  */
 class FraudRuleFromOrderRequest {
     /**

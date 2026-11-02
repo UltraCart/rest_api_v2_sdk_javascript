@@ -129,6 +129,8 @@ import SfvbPageRefreshResponse from '../com.ultracart.admin.v2.models/SfvbPageRe
 import SfvbPageResponse from '../com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPageSelectors from '../com.ultracart.admin.v2.models/SfvbPageSelectors';
 import SfvbPageSettingsRequest from '../com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
+import SfvbPostcardProofRequest from '../com.ultracart.admin.v2.models/SfvbPostcardProofRequest';
+import SfvbPostcardProofResponse from '../com.ultracart.admin.v2.models/SfvbPostcardProofResponse';
 import SfvbPreviewAccessRequest from '../com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
 import SfvbPreviewAccessResponse from '../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
@@ -193,7 +195,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.220
+* @version 4.1.221
 */
 export default class SfvbApi {
 
@@ -7405,6 +7407,66 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/move', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the proofSfvbSequencePostcard operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~proofSfvbSequencePostcardCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPostcardProofResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Proof a postcard step without mailing it
+     * Renders both sides of the step's postcard as a send renders them, then has the print vendor render the card as a dry run.  Returns the HTML of each side, the PNG image of each side that the vendor prints from, the vendor's thumbnails and its proof PDF.  The QR code is the short link a send prints.  No card is printed or mailed, nothing is billed, the step is not changed, and no coupon is created.  A unique coupon code shows as PREVIEW-UNIQUE.  The image urls are public.  html_only returns the HTML alone, with no vendor render.  An order must be a test order.  cart_item_ids fills the cart a cart flow card shows.  Works whether the step is on or off. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {String} step_uuid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPostcardProofRequest} postcard_proof_request Who the card is addressed to, and the order or cart it shows
+     * @param {module:com.ultracart.admin.v2/SfvbApi~proofSfvbSequencePostcardCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPostcardProofResponse}
+     */
+    proofSfvbSequencePostcard(storefront_oid, sequence_uuid, step_uuid, postcard_proof_request, callback) {
+      let postBody = postcard_proof_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling proofSfvbSequencePostcard");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling proofSfvbSequencePostcard");
+      }
+      // verify the required parameter 'step_uuid' is set
+      if (step_uuid === undefined || step_uuid === null) {
+        throw new Error("Missing the required parameter 'step_uuid' when calling proofSfvbSequencePostcard");
+      }
+      // verify the required parameter 'postcard_proof_request' is set
+      if (postcard_proof_request === undefined || postcard_proof_request === null) {
+        throw new Error("Missing the required parameter 'postcard_proof_request' when calling proofSfvbSequencePostcard");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid,
+        'step_uuid': step_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPostcardProofResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}/postcard_proof', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

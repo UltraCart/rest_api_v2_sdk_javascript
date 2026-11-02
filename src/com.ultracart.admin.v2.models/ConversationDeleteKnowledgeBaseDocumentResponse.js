@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ConversationDeleteKnowledgeBaseDocumentResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationDeleteKnowledgeBaseDocumentResponse
- * @version 4.1.220
+ * @version 4.1.221
  */
 class ConversationDeleteKnowledgeBaseDocumentResponse {
     /**

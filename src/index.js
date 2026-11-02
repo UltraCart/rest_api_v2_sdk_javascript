@@ -1150,6 +1150,8 @@ import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPageSelectors from './com.ultracart.admin.v2.models/SfvbPageSelectors';
 import SfvbPageSettingsRequest from './com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
 import SfvbPageSummary from './com.ultracart.admin.v2.models/SfvbPageSummary';
+import SfvbPostcardProofRequest from './com.ultracart.admin.v2.models/SfvbPostcardProofRequest';
+import SfvbPostcardProofResponse from './com.ultracart.admin.v2.models/SfvbPostcardProofResponse';
 import SfvbPreviewAccessRequest from './com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
 import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
@@ -1393,7 +1395,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.220
+* @version 4.1.221
 */
 export {
     /**
@@ -8223,6 +8225,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPageSummary}
      */
     SfvbPageSummary,
+
+    /**
+     * The SfvbPostcardProofRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPostcardProofRequest}
+     */
+    SfvbPostcardProofRequest,
+
+    /**
+     * The SfvbPostcardProofResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPostcardProofResponse}
+     */
+    SfvbPostcardProofResponse,
 
     /**
      * The SfvbPreviewAccessRequest model constructor.
