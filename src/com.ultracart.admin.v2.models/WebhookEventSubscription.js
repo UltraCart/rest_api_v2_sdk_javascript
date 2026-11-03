@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookEventSubscription model module.
  * @module com.ultracart.admin.v2.models/WebhookEventSubscription
- * @version 4.1.224
+ * @version 4.1.225
  */
 class WebhookEventSubscription {
     /**

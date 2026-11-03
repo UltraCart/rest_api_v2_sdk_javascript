@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderConsent model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderConsent
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbTrackingProviderConsent {
     /**
@@ -47,8 +47,8 @@ class SfvbTrackingProviderConsent {
         if (data) {
             obj = obj || new SfvbTrackingProviderConsent();
 
-            if (data.hasOwnProperty('false')) {
-                obj['false'] = ApiClient.convertToType(data['false'], 'Boolean');
+            if (data.hasOwnProperty('disabled')) {
+                obj['disabled'] = ApiClient.convertToType(data['disabled'], 'Boolean');
             }
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
@@ -65,9 +65,9 @@ class SfvbTrackingProviderConsent {
 
 /**
  * On a write, true to remove the gate.  Not with type or region.
- * @member {Boolean} false
+ * @member {Boolean} disabled
  */
-SfvbTrackingProviderConsent.prototype['false'] = undefined;
+SfvbTrackingProviderConsent.prototype['disabled'] = undefined;
 
 /**
  * Which shoppers the gate applies to.  all, eea or non_us.

@@ -23,7 +23,7 @@ import IntegrationLogSummaryQueryResponse from '../com.ultracart.admin.v2.models
 /**
 * IntegrationLog service.
 * @module com.ultracart.admin.v2/IntegrationLogApi
-* @version 4.1.224
+* @version 4.1.225
 */
 export default class IntegrationLogApi {
 

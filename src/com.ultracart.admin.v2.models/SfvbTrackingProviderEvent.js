@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderEvent model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderEvent
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbTrackingProviderEvent {
     /**
@@ -47,11 +47,11 @@ class SfvbTrackingProviderEvent {
         if (data) {
             obj = obj || new SfvbTrackingProviderEvent();
 
+            if (data.hasOwnProperty('enabled')) {
+                obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('true')) {
-                obj['true'] = ApiClient.convertToType(data['true'], 'Boolean');
             }
         }
         return obj;
@@ -61,16 +61,16 @@ class SfvbTrackingProviderEvent {
 }
 
 /**
+ * True when the event is sent to the provider.
+ * @member {Boolean} enabled
+ */
+SfvbTrackingProviderEvent.prototype['enabled'] = undefined;
+
+/**
  * AddPaymentInfo, AddToCart, AddToWishlist, CompleteRegistration, InitiateCheckout, Lead, Search or ViewContent.
  * @member {String} name
  */
 SfvbTrackingProviderEvent.prototype['name'] = undefined;
-
-/**
- * True when the event is sent to the provider.
- * @member {Boolean} true
- */
-SfvbTrackingProviderEvent.prototype['true'] = undefined;
 
 
 

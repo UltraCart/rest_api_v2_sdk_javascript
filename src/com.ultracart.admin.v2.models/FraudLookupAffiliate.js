@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FraudLookupAffiliate model module.
  * @module com.ultracart.admin.v2.models/FraudLookupAffiliate
- * @version 4.1.224
+ * @version 4.1.225
  */
 class FraudLookupAffiliate {
     /**

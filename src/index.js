@@ -1422,7 +1422,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.224
+* @version 4.1.225
 */
 export {
     /**

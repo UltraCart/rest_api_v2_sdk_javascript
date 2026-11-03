@@ -17,7 +17,7 @@ import HitPageViewMetaData from './HitPageViewMetaData';
 /**
  * The HitPageView model module.
  * @module com.ultracart.admin.v2.models/HitPageView
- * @version 4.1.224
+ * @version 4.1.225
  */
 class HitPageView {
     /**

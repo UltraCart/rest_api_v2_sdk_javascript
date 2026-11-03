@@ -25,7 +25,7 @@ import SfvbTrackingProviderRequest from './SfvbTrackingProviderRequest';
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbApprovalCreateRequest {
     /**

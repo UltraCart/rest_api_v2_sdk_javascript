@@ -17,7 +17,7 @@ import SfvbRedirectDeleteRowResult from './SfvbRedirectDeleteRowResult';
 /**
  * The SfvbRedirectDeleteResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectDeleteResponse
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbRedirectDeleteResponse {
     /**

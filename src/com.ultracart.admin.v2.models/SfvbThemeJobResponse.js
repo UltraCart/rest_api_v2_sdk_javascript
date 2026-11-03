@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbThemeJobResponse {
     /**

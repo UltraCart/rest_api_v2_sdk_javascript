@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderPaymentUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/AutoOrderPaymentUpdateRequest
- * @version 4.1.224
+ * @version 4.1.225
  */
 class AutoOrderPaymentUpdateRequest {
     /**

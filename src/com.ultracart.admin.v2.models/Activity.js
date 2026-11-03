@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Activity model module.
  * @module com.ultracart.admin.v2.models/Activity
- * @version 4.1.224
+ * @version 4.1.225
  */
 class Activity {
     /**

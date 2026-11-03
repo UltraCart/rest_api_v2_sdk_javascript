@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbServerLogEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbServerLogEntry
- * @version 4.1.224
+ * @version 4.1.225
  */
 class SfvbServerLogEntry {
     /**
