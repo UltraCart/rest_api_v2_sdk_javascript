@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbApprovalParams {
     /**
@@ -217,7 +217,7 @@ SfvbApprovalParams.prototype['rule_count'] = undefined;
 SfvbApprovalParams.prototype['segment_uuid'] = undefined;
 
 /**
- * The communication sequence, for sequence_step.delete and sequence_step.move.
+ * The communication sequence, for sequence_step.delete, sequence_step.move and sequence_step.enable_postcard.
  * @member {String} sequence_uuid
  */
 SfvbApprovalParams.prototype['sequence_uuid'] = undefined;
@@ -235,7 +235,7 @@ SfvbApprovalParams.prototype['side'] = undefined;
 SfvbApprovalParams.prototype['slot'] = undefined;
 
 /**
- * The step to remove, for sequence_step.delete, or to move, for sequence_step.move.
+ * The step to remove, for sequence_step.delete, to move, for sequence_step.move, or to turn on, for sequence_step.enable_postcard.
  * @member {String} step_uuid
  */
 SfvbApprovalParams.prototype['step_uuid'] = undefined;

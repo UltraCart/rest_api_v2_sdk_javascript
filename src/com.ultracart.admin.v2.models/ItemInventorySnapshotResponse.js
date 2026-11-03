@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ItemInventorySnapshotResponse model module.
  * @module com.ultracart.admin.v2.models/ItemInventorySnapshotResponse
- * @version 4.1.221
+ * @version 4.1.222
  */
 class ItemInventorySnapshotResponse {
     /**

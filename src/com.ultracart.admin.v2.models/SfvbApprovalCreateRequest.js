@@ -22,7 +22,7 @@ import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -219,6 +219,18 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * @const
      */
     "sequence_step.delete": "sequence_step.delete",
+
+    /**
+     * value: "sequence_step.move"
+     * @const
+     */
+    "sequence_step.move": "sequence_step.move",
+
+    /**
+     * value: "sequence_step.enable_postcard"
+     * @const
+     */
+    "sequence_step.enable_postcard": "sequence_step.enable_postcard",
 
     /**
      * value: "segment.update"

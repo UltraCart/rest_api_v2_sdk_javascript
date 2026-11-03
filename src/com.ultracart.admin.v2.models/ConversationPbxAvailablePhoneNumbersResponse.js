@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxAvailablePhoneNumbersResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxAvailablePhoneNumbersResponse
- * @version 4.1.221
+ * @version 4.1.222
  */
 class ConversationPbxAvailablePhoneNumbersResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationVirtualAgentBudget model module.
  * @module com.ultracart.admin.v2.models/ConversationVirtualAgentBudget
- * @version 4.1.221
+ * @version 4.1.222
  */
 class ConversationVirtualAgentBudget {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AffiliateMarketingStrategy model module.
  * @module com.ultracart.admin.v2.models/AffiliateMarketingStrategy
- * @version 4.1.221
+ * @version 4.1.222
  */
 class AffiliateMarketingStrategy {
     /**

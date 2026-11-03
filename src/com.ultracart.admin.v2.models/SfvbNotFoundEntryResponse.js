@@ -18,7 +18,7 @@ import SfvbNotFoundHit from './SfvbNotFoundHit';
 /**
  * The SfvbNotFoundEntryResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbNotFoundEntryResponse {
     /**

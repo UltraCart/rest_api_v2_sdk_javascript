@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderPageViewParam model module.
  * @module com.ultracart.admin.v2.models/OrderPageViewParam
- * @version 4.1.221
+ * @version 4.1.222
  */
 class OrderPageViewParam {
     /**

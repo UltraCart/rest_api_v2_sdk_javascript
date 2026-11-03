@@ -33,7 +33,7 @@ import OrderAutoOrderUpdateBillingUrlResponse from '../com.ultracart.admin.v2.mo
 /**
 * AutoOrder service.
 * @module com.ultracart.admin.v2/AutoOrderApi
-* @version 4.1.221
+* @version 4.1.222
 */
 export default class AutoOrderApi {
 

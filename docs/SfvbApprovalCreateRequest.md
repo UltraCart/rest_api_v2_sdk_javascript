@@ -43,6 +43,10 @@ Name | Type | Description | Notes
 
 * `sequence_step.delete` (value: `"sequence_step.delete"`)
 
+* `sequence_step.move` (value: `"sequence_step.move"`)
+
+* `sequence_step.enable_postcard` (value: `"sequence_step.enable_postcard"`)
+
 * `segment.update` (value: `"segment.update"`)
 
 

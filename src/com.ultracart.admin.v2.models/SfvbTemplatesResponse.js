@@ -17,7 +17,7 @@ import SfvbTemplate from './SfvbTemplate';
 /**
  * The SfvbTemplatesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTemplatesResponse
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbTemplatesResponse {
     /**

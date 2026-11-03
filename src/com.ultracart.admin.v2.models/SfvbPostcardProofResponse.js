@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbPostcardProofResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPostcardProofResponse
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbPostcardProofResponse {
     /**

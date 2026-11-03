@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxPostalCode model module.
  * @module com.ultracart.admin.v2.models/TaxPostalCode
- * @version 4.1.221
+ * @version 4.1.222
  */
 class TaxPostalCode {
     /**

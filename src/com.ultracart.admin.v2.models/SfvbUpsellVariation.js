@@ -18,7 +18,7 @@ import SfvbUpsellStep from './SfvbUpsellStep';
 /**
  * The SfvbUpsellVariation model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellVariation
- * @version 4.1.221
+ * @version 4.1.222
  */
 class SfvbUpsellVariation {
     /**
