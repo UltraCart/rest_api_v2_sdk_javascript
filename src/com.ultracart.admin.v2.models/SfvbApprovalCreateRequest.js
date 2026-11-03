@@ -12,17 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbAffiliateNetworkRequest from './SfvbAffiliateNetworkRequest';
 import SfvbApprovalParams from './SfvbApprovalParams';
 import SfvbCommsSegmentWriteRequest from './SfvbCommsSegmentWriteRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
+import SfvbSmartAttributionRequest from './SfvbSmartAttributionRequest';
+import SfvbTrackingProviderRequest from './SfvbTrackingProviderRequest';
 
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.223
+ * @version 4.1.224
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -56,6 +59,9 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('action')) {
                 obj['action'] = ApiClient.convertToType(data['action'], 'String');
             }
+            if (data.hasOwnProperty('affiliate_network')) {
+                obj['affiliate_network'] = SfvbAffiliateNetworkRequest.constructFromObject(data['affiliate_network']);
+            }
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
             }
@@ -80,6 +86,12 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('segment_update')) {
                 obj['segment_update'] = SfvbCommsSegmentWriteRequest.constructFromObject(data['segment_update']);
             }
+            if (data.hasOwnProperty('smart_attribution')) {
+                obj['smart_attribution'] = SfvbSmartAttributionRequest.constructFromObject(data['smart_attribution']);
+            }
+            if (data.hasOwnProperty('tracking_provider')) {
+                obj['tracking_provider'] = SfvbTrackingProviderRequest.constructFromObject(data['tracking_provider']);
+            }
         }
         return obj;
     }
@@ -94,7 +106,12 @@ class SfvbApprovalCreateRequest {
 SfvbApprovalCreateRequest.prototype['action'] = undefined;
 
 /**
- * For a file.put_script write, the exact script to be written, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
+ * @member {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest} affiliate_network
+ */
+SfvbApprovalCreateRequest.prototype['affiliate_network'] = undefined;
+
+/**
+ * For a file.put_script write, the exact script to be written, at most 256 KB.  For tracking_html.put, the exact HTML the write will send, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
  * @member {String} content
  */
 SfvbApprovalCreateRequest.prototype['content'] = undefined;
@@ -136,6 +153,16 @@ SfvbApprovalCreateRequest.prototype['redirect_rows'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest} segment_update
  */
 SfvbApprovalCreateRequest.prototype['segment_update'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbSmartAttributionRequest} smart_attribution
+ */
+SfvbApprovalCreateRequest.prototype['smart_attribution'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbTrackingProviderRequest} tracking_provider
+ */
+SfvbApprovalCreateRequest.prototype['tracking_provider'] = undefined;
 
 
 
@@ -236,7 +263,43 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "segment.update"
      * @const
      */
-    "segment.update": "segment.update"
+    "segment.update": "segment.update",
+
+    /**
+     * value: "smart_attribution.change"
+     * @const
+     */
+    "smart_attribution.change": "smart_attribution.change",
+
+    /**
+     * value: "smart_attribution.delete"
+     * @const
+     */
+    "smart_attribution.delete": "smart_attribution.delete",
+
+    /**
+     * value: "tracking_provider.change"
+     * @const
+     */
+    "tracking_provider.change": "tracking_provider.change",
+
+    /**
+     * value: "tracking_html.put"
+     * @const
+     */
+    "tracking_html.put": "tracking_html.put",
+
+    /**
+     * value: "affiliate_network.change"
+     * @const
+     */
+    "affiliate_network.change": "affiliate_network.change",
+
+    /**
+     * value: "affiliate_network.delete"
+     * @const
+     */
+    "affiliate_network.delete": "affiliate_network.delete"
 };
 
 

@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbErrorDetail from './SfvbErrorDetail';
 
 /**
  * The SfvbContainerResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerResponse
- * @version 4.1.223
+ * @version 4.1.224
  */
 class SfvbContainerResponse {
     /**
@@ -68,6 +69,9 @@ class SfvbContainerResponse {
             if (data.hasOwnProperty('owner_type')) {
                 obj['owner_type'] = ApiClient.convertToType(data['owner_type'], 'String');
             }
+            if (data.hasOwnProperty('warnings')) {
+                obj['warnings'] = ApiClient.convertToType(data['warnings'], [SfvbErrorDetail]);
+            }
         }
         return obj;
     }
@@ -116,6 +120,12 @@ SfvbContainerResponse.prototype['owner_object_id'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbContainerResponse.OwnerTypeEnum} owner_type
  */
 SfvbContainerResponse.prototype['owner_type'] = undefined;
+
+/**
+ * Quality warnings from validating this write.  The write succeeded; each one says what to look at, such as a postcard QR code URL with a fragment.  Absent when there are none.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbErrorDetail>} warnings
+ */
+SfvbContainerResponse.prototype['warnings'] = undefined;
 
 
 

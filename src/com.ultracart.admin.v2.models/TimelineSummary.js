@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TimelineSummary model module.
  * @module com.ultracart.admin.v2.models/TimelineSummary
- * @version 4.1.223
+ * @version 4.1.224
  */
 class TimelineSummary {
     /**

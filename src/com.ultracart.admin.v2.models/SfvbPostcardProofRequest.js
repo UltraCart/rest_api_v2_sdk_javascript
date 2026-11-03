@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPostcardProofRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPostcardProofRequest
- * @version 4.1.223
+ * @version 4.1.224
  */
 class SfvbPostcardProofRequest {
     /**

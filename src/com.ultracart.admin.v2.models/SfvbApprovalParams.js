@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.223
+ * @version 4.1.224
  */
 class SfvbApprovalParams {
     /**
@@ -47,6 +47,9 @@ class SfvbApprovalParams {
         if (data) {
             obj = obj || new SfvbApprovalParams();
 
+            if (data.hasOwnProperty('affiliate_network_oid')) {
+                obj['affiliate_network_oid'] = ApiClient.convertToType(data['affiliate_network_oid'], 'Number');
+            }
             if (data.hasOwnProperty('after_step_uuid')) {
                 obj['after_step_uuid'] = ApiClient.convertToType(data['after_step_uuid'], 'String');
             }
@@ -104,6 +107,9 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('step_uuid')) {
                 obj['step_uuid'] = ApiClient.convertToType(data['step_uuid'], 'String');
             }
+            if (data.hasOwnProperty('tracking_provider')) {
+                obj['tracking_provider'] = ApiClient.convertToType(data['tracking_provider'], 'String');
+            }
             if (data.hasOwnProperty('upsell_kind')) {
                 obj['upsell_kind'] = ApiClient.convertToType(data['upsell_kind'], 'String');
             }
@@ -125,6 +131,12 @@ class SfvbApprovalParams {
 
 
 }
+
+/**
+ * The affiliate network, for affiliate_network.change and affiliate_network.delete.  0 or left out for affiliate_network.change of a network the create call will add.
+ * @member {Number} affiliate_network_oid
+ */
+SfvbApprovalParams.prototype['affiliate_network_oid'] = undefined;
 
 /**
  * For sequence_step.move, the step it moves after.  Or branch_step_uuid with side.
@@ -151,7 +163,7 @@ SfvbApprovalParams.prototype['blog_post_oid'] = undefined;
 SfvbApprovalParams.prototype['branch_step_uuid'] = undefined;
 
 /**
- * For file.put_script, the SHA-256 of the exact bytes approved.  Set by the server, never by the caller.  The write must send bytes with this hash.
+ * For file.put_script and tracking_html.put, the SHA-256 of the exact bytes approved, and for affiliate_network.change the SHA-256 of the conversion pixel.  Set by the server, never by the caller.  The write must send bytes with this hash.
  * @member {String} content_sha256
  */
 SfvbApprovalParams.prototype['content_sha256'] = undefined;
@@ -193,7 +205,7 @@ SfvbApprovalParams.prototype['merchant_item_oid'] = undefined;
 SfvbApprovalParams.prototype['path'] = undefined;
 
 /**
- * For experiment.start of a url experiment, the hash of the checked experiment approved, and for item.pricing the hash of the change.  Set by the server.  The gated call must send the same.
+ * For experiment.start of a url experiment, the hash of the checked experiment approved, for item.pricing, tracking_provider.change and affiliate_network.change the hash of the change, and for smart_attribution.change the hash of the configuration the change would store.  Set by the server.  The gated call must send the same.
  * @member {String} request_sha256
  */
 SfvbApprovalParams.prototype['request_sha256'] = undefined;
@@ -229,7 +241,7 @@ SfvbApprovalParams.prototype['sequence_uuid'] = undefined;
 SfvbApprovalParams.prototype['side'] = undefined;
 
 /**
- * For experiment.start of a page experiment, the page body name.  Defaults to body.
+ * For experiment.start of a page experiment, the page body name, which defaults to body.  For tracking_html.put, tracking or conversion.
  * @member {String} slot
  */
 SfvbApprovalParams.prototype['slot'] = undefined;
@@ -239,6 +251,12 @@ SfvbApprovalParams.prototype['slot'] = undefined;
  * @member {String} step_uuid
  */
 SfvbApprovalParams.prototype['step_uuid'] = undefined;
+
+/**
+ * The tracking provider key, for tracking_provider.change.
+ * @member {String} tracking_provider
+ */
+SfvbApprovalParams.prototype['tracking_provider'] = undefined;
 
 /**
  * For upsell.enable, what to switch on.

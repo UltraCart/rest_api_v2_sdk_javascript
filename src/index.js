@@ -980,6 +980,9 @@ import ScreenRecordingUserAgentOS from './com.ultracart.admin.v2.models/ScreenRe
 import ScreenRecordingUserProperty from './com.ultracart.admin.v2.models/ScreenRecordingUserProperty';
 import ScreenshotsResponse from './com.ultracart.admin.v2.models/ScreenshotsResponse';
 import SelfConfig from './com.ultracart.admin.v2.models/SelfConfig';
+import SfvbAffiliateNetwork from './com.ultracart.admin.v2.models/SfvbAffiliateNetwork';
+import SfvbAffiliateNetworkRequest from './com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest';
+import SfvbAffiliateNetworksResponse from './com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse';
 import SfvbApproval from './com.ultracart.admin.v2.models/SfvbApproval';
 import SfvbApprovalCreateRequest from './com.ultracart.admin.v2.models/SfvbApprovalCreateRequest';
 import SfvbApprovalParams from './com.ultracart.admin.v2.models/SfvbApprovalParams';
@@ -1208,6 +1211,9 @@ import SfvbSiteAttribute from './com.ultracart.admin.v2.models/SfvbSiteAttribute
 import SfvbSiteAttributeUpdate from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate';
 import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSmartAttribution from './com.ultracart.admin.v2.models/SfvbSmartAttribution';
+import SfvbSmartAttributionPlatform from './com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform';
+import SfvbSmartAttributionRequest from './com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplate from './com.ultracart.admin.v2.models/SfvbTemplate';
@@ -1227,6 +1233,24 @@ import SfvbThemeFont from './com.ultracart.admin.v2.models/SfvbThemeFont';
 import SfvbThemeFontFamily from './com.ultracart.admin.v2.models/SfvbThemeFontFamily';
 import SfvbThemeJobResponse from './com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesResponse';
+import SfvbTrackingAdvanced from './com.ultracart.admin.v2.models/SfvbTrackingAdvanced';
+import SfvbTrackingAdvancedRequest from './com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
+import SfvbTrackingChange from './com.ultracart.admin.v2.models/SfvbTrackingChange';
+import SfvbTrackingHtml from './com.ultracart.admin.v2.models/SfvbTrackingHtml';
+import SfvbTrackingHtmlRequest from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest';
+import SfvbTrackingHtmlResponse from './com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse';
+import SfvbTrackingPrivacy from './com.ultracart.admin.v2.models/SfvbTrackingPrivacy';
+import SfvbTrackingPrivacyRequest from './com.ultracart.admin.v2.models/SfvbTrackingPrivacyRequest';
+import SfvbTrackingProvider from './com.ultracart.admin.v2.models/SfvbTrackingProvider';
+import SfvbTrackingProviderConsent from './com.ultracart.admin.v2.models/SfvbTrackingProviderConsent';
+import SfvbTrackingProviderEvent from './com.ultracart.admin.v2.models/SfvbTrackingProviderEvent';
+import SfvbTrackingProviderField from './com.ultracart.admin.v2.models/SfvbTrackingProviderField';
+import SfvbTrackingProviderOauth from './com.ultracart.admin.v2.models/SfvbTrackingProviderOauth';
+import SfvbTrackingProviderRequest from './com.ultracart.admin.v2.models/SfvbTrackingProviderRequest';
+import SfvbTrackingProviderSecrets from './com.ultracart.admin.v2.models/SfvbTrackingProviderSecrets';
+import SfvbTrackingProvidersResponse from './com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse';
+import SfvbTrackingSettingsResponse from './com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse';
+import SfvbTrackingWholesaleTier from './com.ultracart.admin.v2.models/SfvbTrackingWholesaleTier';
 import SfvbTransactionalEmail from './com.ultracart.admin.v2.models/SfvbTransactionalEmail';
 import SfvbTransactionalEmailsResponse from './com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
 import SfvbUpsellItemLogic from './com.ultracart.admin.v2.models/SfvbUpsellItemLogic';
@@ -1242,6 +1266,9 @@ import SfvbUpsellStep from './com.ultracart.admin.v2.models/SfvbUpsellStep';
 import SfvbUpsellStepOffer from './com.ultracart.admin.v2.models/SfvbUpsellStepOffer';
 import SfvbUpsellTowerData from './com.ultracart.admin.v2.models/SfvbUpsellTowerData';
 import SfvbUpsellVariation from './com.ultracart.admin.v2.models/SfvbUpsellVariation';
+import SfvbUtmShortcode from './com.ultracart.admin.v2.models/SfvbUtmShortcode';
+import SfvbUtmShortcodeRequest from './com.ultracart.admin.v2.models/SfvbUtmShortcodeRequest';
+import SfvbUtmShortcodesResponse from './com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse';
 import SfvbValidateRequest from './com.ultracart.admin.v2.models/SfvbValidateRequest';
 import SfvbValidationResponse from './com.ultracart.admin.v2.models/SfvbValidationResponse';
 import SfvbVelocityValidateRequest from './com.ultracart.admin.v2.models/SfvbVelocityValidateRequest';
@@ -1395,7 +1422,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.223
+* @version 4.1.224
 */
 export {
     /**
@@ -7207,6 +7234,24 @@ export {
     SelfConfig,
 
     /**
+     * The SfvbAffiliateNetwork model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork}
+     */
+    SfvbAffiliateNetwork,
+
+    /**
+     * The SfvbAffiliateNetworkRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest}
+     */
+    SfvbAffiliateNetworkRequest,
+
+    /**
+     * The SfvbAffiliateNetworksResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse}
+     */
+    SfvbAffiliateNetworksResponse,
+
+    /**
      * The SfvbApproval model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbApproval}
      */
@@ -8575,6 +8620,24 @@ export {
     SfvbSiteAttributesResponse,
 
     /**
+     * The SfvbSmartAttribution model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSmartAttribution}
+     */
+    SfvbSmartAttribution,
+
+    /**
+     * The SfvbSmartAttributionPlatform model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform}
+     */
+    SfvbSmartAttributionPlatform,
+
+    /**
+     * The SfvbSmartAttributionRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSmartAttributionRequest}
+     */
+    SfvbSmartAttributionRequest,
+
+    /**
      * The SfvbStorefront model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbStorefront}
      */
@@ -8689,6 +8752,114 @@ export {
     SfvbThemesResponse,
 
     /**
+     * The SfvbTrackingAdvanced model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingAdvanced}
+     */
+    SfvbTrackingAdvanced,
+
+    /**
+     * The SfvbTrackingAdvancedRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest}
+     */
+    SfvbTrackingAdvancedRequest,
+
+    /**
+     * The SfvbTrackingChange model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingChange}
+     */
+    SfvbTrackingChange,
+
+    /**
+     * The SfvbTrackingHtml model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtml}
+     */
+    SfvbTrackingHtml,
+
+    /**
+     * The SfvbTrackingHtmlRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest}
+     */
+    SfvbTrackingHtmlRequest,
+
+    /**
+     * The SfvbTrackingHtmlResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse}
+     */
+    SfvbTrackingHtmlResponse,
+
+    /**
+     * The SfvbTrackingPrivacy model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingPrivacy}
+     */
+    SfvbTrackingPrivacy,
+
+    /**
+     * The SfvbTrackingPrivacyRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingPrivacyRequest}
+     */
+    SfvbTrackingPrivacyRequest,
+
+    /**
+     * The SfvbTrackingProvider model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProvider}
+     */
+    SfvbTrackingProvider,
+
+    /**
+     * The SfvbTrackingProviderConsent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderConsent}
+     */
+    SfvbTrackingProviderConsent,
+
+    /**
+     * The SfvbTrackingProviderEvent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderEvent}
+     */
+    SfvbTrackingProviderEvent,
+
+    /**
+     * The SfvbTrackingProviderField model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderField}
+     */
+    SfvbTrackingProviderField,
+
+    /**
+     * The SfvbTrackingProviderOauth model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderOauth}
+     */
+    SfvbTrackingProviderOauth,
+
+    /**
+     * The SfvbTrackingProviderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderRequest}
+     */
+    SfvbTrackingProviderRequest,
+
+    /**
+     * The SfvbTrackingProviderSecrets model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProviderSecrets}
+     */
+    SfvbTrackingProviderSecrets,
+
+    /**
+     * The SfvbTrackingProvidersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse}
+     */
+    SfvbTrackingProvidersResponse,
+
+    /**
+     * The SfvbTrackingSettingsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse}
+     */
+    SfvbTrackingSettingsResponse,
+
+    /**
+     * The SfvbTrackingWholesaleTier model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingWholesaleTier}
+     */
+    SfvbTrackingWholesaleTier,
+
+    /**
      * The SfvbTransactionalEmail model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmail}
      */
@@ -8777,6 +8948,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbUpsellVariation}
      */
     SfvbUpsellVariation,
+
+    /**
+     * The SfvbUtmShortcode model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUtmShortcode}
+     */
+    SfvbUtmShortcode,
+
+    /**
+     * The SfvbUtmShortcodeRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUtmShortcodeRequest}
+     */
+    SfvbUtmShortcodeRequest,
+
+    /**
+     * The SfvbUtmShortcodesResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse}
+     */
+    SfvbUtmShortcodesResponse,
 
     /**
      * The SfvbValidateRequest model constructor.

@@ -14,6 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
+import SfvbAffiliateNetwork from '../com.ultracart.admin.v2.models/SfvbAffiliateNetwork';
+import SfvbAffiliateNetworkRequest from '../com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest';
+import SfvbAffiliateNetworksResponse from '../com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse';
 import SfvbApproval from '../com.ultracart.admin.v2.models/SfvbApproval';
 import SfvbApprovalCreateRequest from '../com.ultracart.admin.v2.models/SfvbApprovalCreateRequest';
 import SfvbApprovalsResponse from '../com.ultracart.admin.v2.models/SfvbApprovalsResponse';
@@ -168,6 +171,8 @@ import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogD
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSmartAttribution from '../com.ultracart.admin.v2.models/SfvbSmartAttribution';
+import SfvbSmartAttributionRequest from '../com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplateResolveResponse from '../com.ultracart.admin.v2.models/SfvbTemplateResolveResponse';
 import SfvbTemplatesResponse from '../com.ultracart.admin.v2.models/SfvbTemplatesResponse';
@@ -178,6 +183,15 @@ import SfvbThemeAttributesResponse from '../com.ultracart.admin.v2.models/SfvbTh
 import SfvbThemeDuplicateRequest from '../com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest';
 import SfvbThemeJobResponse from '../com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from '../com.ultracart.admin.v2.models/SfvbThemesResponse';
+import SfvbTrackingAdvancedRequest from '../com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
+import SfvbTrackingHtml from '../com.ultracart.admin.v2.models/SfvbTrackingHtml';
+import SfvbTrackingHtmlRequest from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest';
+import SfvbTrackingHtmlResponse from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse';
+import SfvbTrackingPrivacyRequest from '../com.ultracart.admin.v2.models/SfvbTrackingPrivacyRequest';
+import SfvbTrackingProvider from '../com.ultracart.admin.v2.models/SfvbTrackingProvider';
+import SfvbTrackingProviderRequest from '../com.ultracart.admin.v2.models/SfvbTrackingProviderRequest';
+import SfvbTrackingProvidersResponse from '../com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse';
+import SfvbTrackingSettingsResponse from '../com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse';
 import SfvbTransactionalEmailsResponse from '../com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
 import SfvbUpsellOffer from '../com.ultracart.admin.v2.models/SfvbUpsellOffer';
 import SfvbUpsellOffersResponse from '../com.ultracart.admin.v2.models/SfvbUpsellOffersResponse';
@@ -185,6 +199,9 @@ import SfvbUpsellPath from '../com.ultracart.admin.v2.models/SfvbUpsellPath';
 import SfvbUpsellPathDuplicateRequest from '../com.ultracart.admin.v2.models/SfvbUpsellPathDuplicateRequest';
 import SfvbUpsellPathMoveRequest from '../com.ultracart.admin.v2.models/SfvbUpsellPathMoveRequest';
 import SfvbUpsellPathsResponse from '../com.ultracart.admin.v2.models/SfvbUpsellPathsResponse';
+import SfvbUtmShortcode from '../com.ultracart.admin.v2.models/SfvbUtmShortcode';
+import SfvbUtmShortcodeRequest from '../com.ultracart.admin.v2.models/SfvbUtmShortcodeRequest';
+import SfvbUtmShortcodesResponse from '../com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse';
 import SfvbValidateRequest from '../com.ultracart.admin.v2.models/SfvbValidateRequest';
 import SfvbValidationResponse from '../com.ultracart.admin.v2.models/SfvbValidationResponse';
 import SfvbVelocityValidateRequest from '../com.ultracart.admin.v2.models/SfvbVelocityValidateRequest';
@@ -195,7 +212,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.223
+* @version 4.1.224
 */
 export default class SfvbApi {
 
@@ -1019,6 +1036,66 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteSfvbAffiliateNetwork operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbAffiliateNetworkCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete an affiliate network
+     * Visits from the network stop being recognized and its pixel stops firing.  Refused with 409 while Smart Attribution names the network as a platform.  Send the network's hash_sha256 as If-Match.  Needs sfvb_publish and an approved affiliate_network.delete request (Approval-Id). 
+     * @param {Number} storefront_oid 
+     * @param {Number} affiliate_network_oid 
+     * @param {String} If_Match The network's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {String} Approval_Id The approval_id of an approved affiliate_network.delete request for this network.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbAffiliateNetworkCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbAffiliateNetwork(storefront_oid, affiliate_network_oid, If_Match, Approval_Id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'affiliate_network_oid' is set
+      if (affiliate_network_oid === undefined || affiliate_network_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_network_oid' when calling deleteSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'Approval_Id' is set
+      if (Approval_Id === undefined || Approval_Id === null) {
+        throw new Error("Missing the required parameter 'Approval_Id' when calling deleteSfvbAffiliateNetwork");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'affiliate_network_oid': affiliate_network_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': Approval_Id
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks/{affiliate_network_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteSfvbApproval operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbApprovalCallback
      * @param {String} error Error message, if any.
@@ -1727,6 +1804,167 @@ export default class SfvbApi {
       let returnType = SfvbSequenceStepDeleteResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbSmartAttribution operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSmartAttributionCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a storefront's Smart Attribution configuration
+     * Every platform goes back to being sent conversions as it was before Smart Attribution, and the settings are gone.  Send the hash_sha256 you read as If-Match.  Needs sfvb_publish and an approved smart_attribution.delete request (Approval-Id).  An unconfigured storefront is 404. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match hash_sha256 from the Smart Attribution read.  428 when absent, 412 when stale.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved smart_attribution.delete request.  Required.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbSmartAttributionCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbSmartAttribution(storefront_oid, If_Match, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbSmartAttribution");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbSmartAttribution");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/smart_attribution', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbTrackingProvider operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbTrackingProviderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingProvider} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clear one tracking provider
+     * Clears every field and secret the API can change, the consent gate and the events, and turns off Google Tag Gateway.  The provider stops being sent anything.  An OAuth connection is left alone, and notes say to disconnect it in the admin.  Send the provider's hash_sha256 as If-Match.  Needs sfvb_publish.  No approval. 
+     * @param {Number} storefront_oid 
+     * @param {String} provider 
+     * @param {String} If_Match The provider's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbTrackingProviderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingProvider}
+     */
+    deleteSfvbTrackingProvider(storefront_oid, provider, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbTrackingProvider");
+      }
+      // verify the required parameter 'provider' is set
+      if (provider === undefined || provider === null) {
+        throw new Error("Missing the required parameter 'provider' when calling deleteSfvbTrackingProvider");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbTrackingProvider");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'provider': provider
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingProvider;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/providers/{provider}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbUtmShortcode operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbUtmShortcodeCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a UTM shortcode
+     * The shortcode stops attributing at once.  A link that uses it as a path segment still opens its page, without the UTM values.  Send the hash_sha256 you read as If-Match.  Needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {Number} shortcode_oid 
+     * @param {String} If_Match The shortcode's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbUtmShortcodeCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbUtmShortcode(storefront_oid, shortcode_oid, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbUtmShortcode");
+      }
+      // verify the required parameter 'shortcode_oid' is set
+      if (shortcode_oid === undefined || shortcode_oid === null) {
+        throw new Error("Missing the required parameter 'shortcode_oid' when calling deleteSfvbUtmShortcode");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbUtmShortcode");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'shortcode_oid': shortcode_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/utm_shortcodes/{shortcode_oid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2446,6 +2684,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the enableSfvbSmartAttribution operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~enableSfvbSmartAttributionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSmartAttribution} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Turn Smart Attribution on in report_only mode
+     * What the admin's Enable button saves: report_only, position_based, a 40/20/40 split, a 7 day lookback and every detected platform.  report_only records decisions and changes nothing any platform is sent.  A storefront that already has a configuration is 409 sfvb.smart_attribution_configured.  Needs sfvb_publish. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~enableSfvbSmartAttributionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSmartAttribution}
+     */
+    enableSfvbSmartAttribution(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling enableSfvbSmartAttribution");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSmartAttribution;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/smart_attribution/enable', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the enableSfvbUpsellOffer operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~enableSfvbUpsellOfferCallback
      * @param {String} error Error message, if any.
@@ -2648,6 +2929,98 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/favorite', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbAffiliateNetwork operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbAffiliateNetworkCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one affiliate network
+     * The network with its conversion_pixel, and the hash_sha256 an update or delete sends back as If-Match. 
+     * @param {Number} storefront_oid 
+     * @param {Number} affiliate_network_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbAffiliateNetworkCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork}
+     */
+    getSfvbAffiliateNetwork(storefront_oid, affiliate_network_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'affiliate_network_oid' is set
+      if (affiliate_network_oid === undefined || affiliate_network_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_network_oid' when calling getSfvbAffiliateNetwork");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'affiliate_network_oid': affiliate_network_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbAffiliateNetwork;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks/{affiliate_network_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbAffiliateNetworks operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbAffiliateNetworksCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's affiliate networks
+     * Every affiliate network pixel, by name, with its settings and hash_sha256.  conversion_pixel is left out; its size and hash are shown.  Read one network for it. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbAffiliateNetworksCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse}
+     */
+    getSfvbAffiliateNetworks(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbAffiliateNetworks");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbAffiliateNetworksResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5162,6 +5535,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbSmartAttribution operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSmartAttributionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSmartAttribution} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's Smart Attribution configuration
+     * The mode, model, global credit split, lookback and platforms, the platforms detected from the tracking integrations that are not configured yet, and the hash_sha256 a change or delete sends back as If-Match.  When configured is false the values are the defaults an enable would save. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSmartAttributionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSmartAttribution}
+     */
+    getSfvbSmartAttribution(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSmartAttribution");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSmartAttribution;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/smart_attribution', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbTestOrders operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTestOrdersCallback
      * @param {String} error Error message, if any.
@@ -5359,6 +5775,237 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbTrackingHtml operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtml} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one custom tracking HTML slot
+     * The HTML with its Velocity tokens as stored, and the hash_sha256 a write sends back as If-Match. 
+     * @param {Number} storefront_oid 
+     * @param {String} slot tracking or conversion
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingHtml}
+     */
+    getSfvbTrackingHtml(storefront_oid, slot, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingHtml");
+      }
+      // verify the required parameter 'slot' is set
+      if (slot === undefined || slot === null) {
+        throw new Error("Missing the required parameter 'slot' when calling getSfvbTrackingHtml");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'slot': slot
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingHtml;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/html/{slot}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTrackingHtmlSlots operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingHtmlSlotsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's custom tracking HTML slots
+     * tracking (every page but the receipt) and conversion (the receipt only), each with its size and hash_sha256.  Read one slot for its content. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingHtmlSlotsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse}
+     */
+    getSfvbTrackingHtmlSlots(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingHtmlSlots");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingHtmlResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/html', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTrackingProvider operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingProviderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingProvider} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one tracking provider
+     * The provider as the list shows it, with the hash_sha256 a change or clear sends back as If-Match. 
+     * @param {Number} storefront_oid 
+     * @param {String} provider 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingProviderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingProvider}
+     */
+    getSfvbTrackingProvider(storefront_oid, provider, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingProvider");
+      }
+      // verify the required parameter 'provider' is set
+      if (provider === undefined || provider === null) {
+        throw new Error("Missing the required parameter 'provider' when calling getSfvbTrackingProvider");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'provider': provider
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingProvider;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/providers/{provider}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTrackingProviders operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingProvidersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's tracking providers
+     * Every provider on the admin's Google and Other tabs, with each field's type and value, its consent gate, events, OAuth connection state and hash_sha256.  A secret's value is never returned, only whether one is set, its mask and the sink to request a handle for.  configured=true lists only the providers that are on. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.configured 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingProvidersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse}
+     */
+    getSfvbTrackingProviders(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingProviders");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'configured': opts['configured']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingProvidersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/providers', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTrackingSettings operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's privacy rules and advanced conversion settings
+     * The five privacy rules (which shoppers each applies to) and the advanced conversion settings, each section with the hash_sha256 a write sends back as If-Match.  The order hash secret key is shared by every storefront on the account and is reported only as set or not. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse}
+     */
+    getSfvbTrackingSettings(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingSettings");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingSettingsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbTransactionalEmails operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTransactionalEmailsCallback
      * @param {String} error Error message, if any.
@@ -5514,6 +6161,102 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbUtmShortcode operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbUtmShortcodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcode} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one UTM shortcode
+     * The shortcode with the hash_sha256 an update or delete sends back as If-Match.  A deleted shortcode is 404. 
+     * @param {Number} storefront_oid 
+     * @param {Number} shortcode_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbUtmShortcodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbUtmShortcode}
+     */
+    getSfvbUtmShortcode(storefront_oid, shortcode_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbUtmShortcode");
+      }
+      // verify the required parameter 'shortcode_oid' is set
+      if (shortcode_oid === undefined || shortcode_oid === null) {
+        throw new Error("Missing the required parameter 'shortcode_oid' when calling getSfvbUtmShortcode");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'shortcode_oid': shortcode_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbUtmShortcode;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/utm_shortcodes/{shortcode_oid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbUtmShortcodes operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbUtmShortcodesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List a storefront's UTM shortcodes
+     * Every live shortcode, sorted by code, each with its hash_sha256.  q matches the code or the description, ignoring case. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.q 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbUtmShortcodesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse}
+     */
+    getSfvbUtmShortcodes(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbUtmShortcodes");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'q': opts['q']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbUtmShortcodesResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/utm_shortcodes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5691,6 +6434,58 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the insertSfvbAffiliateNetwork operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbAffiliateNetworkCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add an affiliate network
+     * network_name, parameter_name and parameter_value are required; the rest start from the admin's defaults.  Internal affiliate oids must be the account's own.  Needs sfvb_publish.  A network with a conversion_pixel that a custom or server_to_server network will use needs an approved affiliate_network.change request for exactly this create (Approval-Id), which UltraCart reviews first.  dry_run says whether it needs one, without saving. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest} affiliate_network_request The network
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id For a network with a conversion pixel it will use, the approval_id of an approved affiliate_network.change request for exactly this create.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbAffiliateNetworkCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork}
+     */
+    insertSfvbAffiliateNetwork(storefront_oid, affiliate_network_request, opts, callback) {
+      opts = opts || {};
+      let postBody = affiliate_network_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'affiliate_network_request' is set
+      if (affiliate_network_request === undefined || affiliate_network_request === null) {
+        throw new Error("Missing the required parameter 'affiliate_network_request' when calling insertSfvbAffiliateNetwork");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbAffiliateNetwork;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertSfvbApproval operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbApprovalCallback
      * @param {String} error Error message, if any.
@@ -5700,7 +6495,7 @@ export default class SfvbApi {
 
     /**
      * Request a human approval
-     * Asks the person who signed in the CLI to approve one gated action on one exact target.  Name the storefront with the storefront_oid query parameter.  The target is checked the way the action will check it, so nobody is asked to approve a call that would fail.  Show the person approval_url and user_code, poll GET approvals/{approval_id} every interval_seconds, and once it is approved repeat the gated call with the approval_id in the Approval-Id header.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  A request lapses after 10 minutes.  Requires a token that resolves to a user, so use the device authorization flow.  For file.put_script send the script as content, or params.version for a revert.  The request starts as reviewing while UltraCart's scanner and two AI models read it, then becomes pending with the review attached, or refused.  Keep polling, and show approval_url only once it is pending.  Only the hash is kept, so the write must send the same bytes. 
+     * Asks the person who signed in the CLI to approve one gated action on one exact target.  Name the storefront with the storefront_oid query parameter.  The target is checked the way the action will check it, so nobody is asked to approve a call that would fail.  Show the person approval_url and user_code, poll GET approvals/{approval_id} every interval_seconds, and once it is approved repeat the gated call with the approval_id in the Approval-Id header.  Asking again for the same thing returns the pending request (200) rather than a new one (201).  A request lapses after 10 minutes.  Requires a token that resolves to a user, so use the device authorization flow.  For file.put_script send the script as content, or params.version for a revert; for tracking_html.put send the HTML as content and params.slot; for affiliate_network.change send affiliate_network.  These three start as reviewing while UltraCart's scanner and two AI models read the content, then become pending with the review attached, or refused.  Keep polling, and show approval_url only once it is pending.  Only the hash is kept, so the write must send the same content. 
      * @param {module:com.ultracart.admin.v2.models/SfvbApprovalCreateRequest} approval_request The request
      * @param {Object} opts Optional parameters
      * @param {Number} opts.storefront_oid The storefront the action runs on.  Required for storefront actions, left out for account-wide ones.
@@ -6205,6 +7000,54 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbUtmShortcode operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbUtmShortcodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcode} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a UTM shortcode
+     * code is letters, digits, underscore and hyphen, 1 to 50 characters, and at least one UTM or ITM value is required.  A code another live shortcode has, ignoring case, is 409 sfvb.utm_shortcode_exists.  A code that is one of the account's affiliate short codes is 409 sfvb.utm_shortcode_affiliate_conflict, because the storefront checks those first and this one would never fire.  Up to 5,000 per storefront.  Needs sfvb_write only, because no link sent before it existed changes. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcodeRequest} utm_shortcode_request The shortcode
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbUtmShortcodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbUtmShortcode}
+     */
+    insertSfvbUtmShortcode(storefront_oid, utm_shortcode_request, callback) {
+      let postBody = utm_shortcode_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbUtmShortcode");
+      }
+      // verify the required parameter 'utm_shortcode_request' is set
+      if (utm_shortcode_request === undefined || utm_shortcode_request === null) {
+        throw new Error("Missing the required parameter 'utm_shortcode_request' when calling insertSfvbUtmShortcode");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbUtmShortcode;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/utm_shortcodes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -10027,6 +10870,70 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the updateSfvbAffiliateNetwork operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbAffiliateNetworkCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an affiliate network
+     * A partial update: only the fields sent change.  Send the network's hash_sha256 as If-Match.  Needs sfvb_publish.  Changing the conversion_pixel, or the conversion_type, of a network whose pixel will be used needs an approved affiliate_network.change request for exactly this change (Approval-Id), which UltraCart reviews first.  Other fields, and emptying the pixel, need none.  dry_run says whether it needs one, without saving. 
+     * @param {Number} storefront_oid 
+     * @param {Number} affiliate_network_oid 
+     * @param {String} If_Match The network's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbAffiliateNetworkRequest} affiliate_network_request The change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the change sets a conversion pixel the network will use, the approval_id of an approved affiliate_network.change request for exactly this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbAffiliateNetworkCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbAffiliateNetwork}
+     */
+    updateSfvbAffiliateNetwork(storefront_oid, affiliate_network_oid, If_Match, affiliate_network_request, opts, callback) {
+      opts = opts || {};
+      let postBody = affiliate_network_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'affiliate_network_oid' is set
+      if (affiliate_network_oid === undefined || affiliate_network_oid === null) {
+        throw new Error("Missing the required parameter 'affiliate_network_oid' when calling updateSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbAffiliateNetwork");
+      }
+      // verify the required parameter 'affiliate_network_request' is set
+      if (affiliate_network_request === undefined || affiliate_network_request === null) {
+        throw new Error("Missing the required parameter 'affiliate_network_request' when calling updateSfvbAffiliateNetwork");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'affiliate_network_oid': affiliate_network_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbAffiliateNetwork;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks/{affiliate_network_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateSfvbBlogPost operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbBlogPostCallback
      * @param {String} error Error message, if any.
@@ -10717,6 +11624,300 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the updateSfvbSmartAttribution operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbSmartAttributionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSmartAttribution} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's Smart Attribution configuration
+     * A partial update of the mode, model, global split and lookback.  platforms, when sent, replaces the whole list.  The global split must total exactly 1 and the lookback is 7 to 365.  On an unconfigured storefront it creates the configuration.  Send the hash_sha256 you read as If-Match.  Needs sfvb_publish, and when the mode is active or the change makes it active, an approved smart_attribution.change request for exactly this change (Approval-Id), because active mode decides which conversions each platform is sent.  A change that stores what is already stored returns the configuration unchanged and uses no approval. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match hash_sha256 from the Smart Attribution read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSmartAttributionRequest} smart_attribution_request The change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the mode is or becomes active, the approval_id of an approved smart_attribution.change request for this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbSmartAttributionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSmartAttribution}
+     */
+    updateSfvbSmartAttribution(storefront_oid, If_Match, smart_attribution_request, opts, callback) {
+      opts = opts || {};
+      let postBody = smart_attribution_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbSmartAttribution");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbSmartAttribution");
+      }
+      // verify the required parameter 'smart_attribution_request' is set
+      if (smart_attribution_request === undefined || smart_attribution_request === null) {
+        throw new Error("Missing the required parameter 'smart_attribution_request' when calling updateSfvbSmartAttribution");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSmartAttribution;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/smart_attribution', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbTrackingAdvanced operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingAdvancedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's advanced conversion settings
+     * A partial update.  Fields left out keep their value, and a text setting is cleared by naming it in unset.  URLs are a path starting with / or an absolute http or https URL, and one over its limit is refused rather than cut short.  The currency must be one the read lists.  The order hash secret key cannot be changed here.  Every field is checked before any is written.  Send the advanced hash_sha256 you read as If-Match.  dry_run reports the changes without saving.  Always needs sfvb_publish, because the settings apply to shoppers as soon as they are saved.  The admin saves the whole tab, so a merchant with it open can still overwrite a change made here. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match The advanced hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest} tracking_advanced_request The settings to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingAdvancedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse}
+     */
+    updateSfvbTrackingAdvanced(storefront_oid, If_Match, tracking_advanced_request, callback) {
+      let postBody = tracking_advanced_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbTrackingAdvanced");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbTrackingAdvanced");
+      }
+      // verify the required parameter 'tracking_advanced_request' is set
+      if (tracking_advanced_request === undefined || tracking_advanced_request === null) {
+        throw new Error("Missing the required parameter 'tracking_advanced_request' when calling updateSfvbTrackingAdvanced");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingSettingsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/advanced', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbTrackingHtml operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtml} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Write one custom tracking HTML slot
+     * Replaces the whole slot, at most 256 KB.  Content the storefront's templates may not use is refused with its lines.  Send the slot's hash_sha256 as If-Match.  Needs sfvb_publish.  Any HTML but an empty string needs an approved tracking_html.put request for exactly this content (Approval-Id), which UltraCart reviews first.  An empty string empties the slot without one.  dry_run says whether the write needs one, without saving. 
+     * @param {Number} storefront_oid 
+     * @param {String} slot tracking or conversion
+     * @param {String} If_Match The slot's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest} tracking_html_request The content
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id For any content but an empty string, the approval_id of an approved tracking_html.put request for exactly this content.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingHtml}
+     */
+    updateSfvbTrackingHtml(storefront_oid, slot, If_Match, tracking_html_request, opts, callback) {
+      opts = opts || {};
+      let postBody = tracking_html_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbTrackingHtml");
+      }
+      // verify the required parameter 'slot' is set
+      if (slot === undefined || slot === null) {
+        throw new Error("Missing the required parameter 'slot' when calling updateSfvbTrackingHtml");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbTrackingHtml");
+      }
+      // verify the required parameter 'tracking_html_request' is set
+      if (tracking_html_request === undefined || tracking_html_request === null) {
+        throw new Error("Missing the required parameter 'tracking_html_request' when calling updateSfvbTrackingHtml");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'slot': slot
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingHtml;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/html/{slot}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbTrackingPrivacy operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingPrivacyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's privacy rules
+     * A partial update.  Each rule named is set to all, eea, non_us or off, and rules left out keep their value.  Every rule is checked before any is written.  Send the privacy hash_sha256 you read as If-Match.  dry_run reports the changes without saving.  Always needs sfvb_publish, because the rules apply to shoppers as soon as they are saved.  The admin saves the whole tab, so a merchant with it open can still overwrite a change made here. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match The privacy hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingPrivacyRequest} tracking_privacy_request The rules to change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingPrivacyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse}
+     */
+    updateSfvbTrackingPrivacy(storefront_oid, If_Match, tracking_privacy_request, callback) {
+      let postBody = tracking_privacy_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbTrackingPrivacy");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbTrackingPrivacy");
+      }
+      // verify the required parameter 'tracking_privacy_request' is set
+      if (tracking_privacy_request === undefined || tracking_privacy_request === null) {
+        throw new Error("Missing the required parameter 'tracking_privacy_request' when calling updateSfvbTrackingPrivacy");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingSettingsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/privacy', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbTrackingProvider operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingProviderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingProvider} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change one tracking provider
+     * A partial update of the provider's fields, secrets (as secret handles), consent gate, events and, for google_analytics, wholesale account numbers.  Every value is checked for its field's type before anything is written.  Send the provider's hash_sha256 as If-Match.  dry_run reports the changes without saving.  Needs sfvb_publish.  Turning the provider on, loosening its consent gate, or turning on Google Tag Gateway (which also needs accept_cost true) needs an approved tracking_provider.change request for exactly this change (Approval-Id).  OAuth connections are made in the admin. 
+     * @param {Number} storefront_oid 
+     * @param {String} provider 
+     * @param {String} If_Match The provider's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingProviderRequest} tracking_provider_request The change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the change turns the provider on, loosens its consent gate or turns on Google Tag Gateway, the approval_id of an approved tracking_provider.change request for this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbTrackingProviderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingProvider}
+     */
+    updateSfvbTrackingProvider(storefront_oid, provider, If_Match, tracking_provider_request, opts, callback) {
+      opts = opts || {};
+      let postBody = tracking_provider_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbTrackingProvider");
+      }
+      // verify the required parameter 'provider' is set
+      if (provider === undefined || provider === null) {
+        throw new Error("Missing the required parameter 'provider' when calling updateSfvbTrackingProvider");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbTrackingProvider");
+      }
+      // verify the required parameter 'tracking_provider_request' is set
+      if (tracking_provider_request === undefined || tracking_provider_request === null) {
+        throw new Error("Missing the required parameter 'tracking_provider_request' when calling updateSfvbTrackingProvider");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'provider': provider
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingProvider;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/providers/{provider}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateSfvbUpsellOffer operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbUpsellOfferCallback
      * @param {String} error Error message, if any.
@@ -10831,6 +12032,66 @@ export default class SfvbApi {
       let returnType = SfvbUpsellPath;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbUtmShortcode operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbUtmShortcodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcode} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a UTM shortcode
+     * A partial update.  Fields left out keep their value, and an empty string clears a value.  A changed code is checked like a new one.  The creation date is kept.  Send the hash_sha256 you read as If-Match.  Needs sfvb_publish, because links already in emails and ads that use the code are attributed differently from now on. 
+     * @param {Number} storefront_oid 
+     * @param {Number} shortcode_oid 
+     * @param {String} If_Match The shortcode's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbUtmShortcodeRequest} utm_shortcode_request The change
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbUtmShortcodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbUtmShortcode}
+     */
+    updateSfvbUtmShortcode(storefront_oid, shortcode_oid, If_Match, utm_shortcode_request, callback) {
+      let postBody = utm_shortcode_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbUtmShortcode");
+      }
+      // verify the required parameter 'shortcode_oid' is set
+      if (shortcode_oid === undefined || shortcode_oid === null) {
+        throw new Error("Missing the required parameter 'shortcode_oid' when calling updateSfvbUtmShortcode");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbUtmShortcode");
+      }
+      // verify the required parameter 'utm_shortcode_request' is set
+      if (utm_shortcode_request === undefined || utm_shortcode_request === null) {
+        throw new Error("Missing the required parameter 'utm_shortcode_request' when calling updateSfvbUtmShortcode");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'shortcode_oid': shortcode_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbUtmShortcode;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/utm_shortcodes/{shortcode_oid}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
