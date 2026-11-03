@@ -17,7 +17,7 @@ import ConversationDepartmentMember from './ConversationDepartmentMember';
 /**
  * The ConversationDepartment model module.
  * @module com.ultracart.admin.v2.models/ConversationDepartment
- * @version 4.1.222
+ * @version 4.1.223
  */
 class ConversationDepartment {
     /**

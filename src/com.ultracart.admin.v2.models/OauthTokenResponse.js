@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OauthTokenResponse
- * @version 4.1.222
+ * @version 4.1.223
  */
 class OauthTokenResponse {
     /**
@@ -67,6 +67,9 @@ class OauthTokenResponse {
             }
             if (data.hasOwnProperty('refresh_token')) {
                 obj['refresh_token'] = ApiClient.convertToType(data['refresh_token'], 'String');
+            }
+            if (data.hasOwnProperty('refresh_token_expires_in')) {
+                obj['refresh_token_expires_in'] = ApiClient.convertToType(data['refresh_token_expires_in'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
@@ -119,6 +122,12 @@ OauthTokenResponse.prototype['merchant_id'] = undefined;
  * @member {String} refresh_token
  */
 OauthTokenResponse.prototype['refresh_token'] = undefined;
+
+/**
+ * Seconds until the refresh token expires.  Returned only by applications that rotate refresh tokens, which return a new refresh token on every refresh.
+ * @member {String} refresh_token_expires_in
+ */
+OauthTokenResponse.prototype['refresh_token_expires_in'] = undefined;
 
 /**
  * The scope of permissions associated with teh access token

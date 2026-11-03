@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxCloudConfig model module.
  * @module com.ultracart.admin.v2.models/TaxCloudConfig
- * @version 4.1.222
+ * @version 4.1.223
  */
 class TaxCloudConfig {
     /**

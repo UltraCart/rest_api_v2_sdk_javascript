@@ -17,7 +17,7 @@ import SfvbSequenceStep from './SfvbSequenceStep';
 /**
  * The SfvbSequence model module.
  * @module com.ultracart.admin.v2.models/SfvbSequence
- * @version 4.1.222
+ * @version 4.1.223
  */
 class SfvbSequence {
     /**

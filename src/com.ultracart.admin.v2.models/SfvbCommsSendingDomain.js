@@ -17,7 +17,7 @@ import SfvbCommsDnsRecord from './SfvbCommsDnsRecord';
 /**
  * The SfvbCommsSendingDomain model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSendingDomain
- * @version 4.1.222
+ * @version 4.1.223
  */
 class SfvbCommsSendingDomain {
     /**

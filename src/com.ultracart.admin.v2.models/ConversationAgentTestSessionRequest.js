@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentTestSessionRequest model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentTestSessionRequest
- * @version 4.1.222
+ * @version 4.1.223
  */
 class ConversationAgentTestSessionRequest {
     /**

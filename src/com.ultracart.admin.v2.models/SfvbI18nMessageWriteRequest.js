@@ -17,7 +17,7 @@ import SfvbI18nMessageValue from './SfvbI18nMessageValue';
 /**
  * The SfvbI18nMessageWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMessageWriteRequest
- * @version 4.1.222
+ * @version 4.1.223
  */
 class SfvbI18nMessageWriteRequest {
     /**
