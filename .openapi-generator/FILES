@@ -1138,6 +1138,7 @@ docs/SfvbNotFoundEntryResponse.md
 docs/SfvbNotFoundHit.md
 docs/SfvbNotFoundPage.md
 docs/SfvbNotFoundResponse.md
+docs/SfvbNotFoundSummary.md
 docs/SfvbPageAttribute.md
 docs/SfvbPageAttributeUpdate.md
 docs/SfvbPageAttributeUpdateRequest.md
@@ -1187,6 +1188,8 @@ docs/SfvbRedirectImportResponse.md
 docs/SfvbRedirectImportRow.md
 docs/SfvbRedirectImportRowResult.md
 docs/SfvbRedirectRequest.md
+docs/SfvbRedirectResolveBatchRequest.md
+docs/SfvbRedirectResolveBatchResponse.md
 docs/SfvbRedirectResolveResponse.md
 docs/SfvbRedirectResolveStep.md
 docs/SfvbRedirectResponse.md
@@ -1219,6 +1222,9 @@ docs/SfvbSiteAttribute.md
 docs/SfvbSiteAttributeUpdate.md
 docs/SfvbSiteAttributeUpdateRequest.md
 docs/SfvbSiteAttributesResponse.md
+docs/SfvbSiteSeo.md
+docs/SfvbSiteSeoChange.md
+docs/SfvbSiteSeoRequest.md
 docs/SfvbSitemap.md
 docs/SfvbSitemapFile.md
 docs/SfvbSitemapsResponse.md
@@ -2509,6 +2515,7 @@ src/com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse.js
 src/com.ultracart.admin.v2.models/SfvbNotFoundHit.js
 src/com.ultracart.admin.v2.models/SfvbNotFoundPage.js
 src/com.ultracart.admin.v2.models/SfvbNotFoundResponse.js
+src/com.ultracart.admin.v2.models/SfvbNotFoundSummary.js
 src/com.ultracart.admin.v2.models/SfvbPageAttribute.js
 src/com.ultracart.admin.v2.models/SfvbPageAttributeUpdate.js
 src/com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest.js
@@ -2558,6 +2565,8 @@ src/com.ultracart.admin.v2.models/SfvbRedirectImportResponse.js
 src/com.ultracart.admin.v2.models/SfvbRedirectImportRow.js
 src/com.ultracart.admin.v2.models/SfvbRedirectImportRowResult.js
 src/com.ultracart.admin.v2.models/SfvbRedirectRequest.js
+src/com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest.js
+src/com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse.js
 src/com.ultracart.admin.v2.models/SfvbRedirectResolveResponse.js
 src/com.ultracart.admin.v2.models/SfvbRedirectResolveStep.js
 src/com.ultracart.admin.v2.models/SfvbRedirectResponse.js
@@ -2590,6 +2599,9 @@ src/com.ultracart.admin.v2.models/SfvbSiteAttribute.js
 src/com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate.js
 src/com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbSiteAttributesResponse.js
+src/com.ultracart.admin.v2.models/SfvbSiteSeo.js
+src/com.ultracart.admin.v2.models/SfvbSiteSeoChange.js
+src/com.ultracart.admin.v2.models/SfvbSiteSeoRequest.js
 src/com.ultracart.admin.v2.models/SfvbSitemap.js
 src/com.ultracart.admin.v2.models/SfvbSitemapFile.js
 src/com.ultracart.admin.v2.models/SfvbSitemapsResponse.js

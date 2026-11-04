@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRedirectImportRow model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectImportRow
- * @version 4.1.228
+ * @version 4.1.229
  */
 class SfvbRedirectImportRow {
     /**
@@ -47,6 +47,9 @@ class SfvbRedirectImportRow {
         if (data) {
             obj = obj || new SfvbRedirectImportRow();
 
+            if (data.hasOwnProperty('exclude_from_sitemap')) {
+                obj['exclude_from_sitemap'] = ApiClient.convertToType(data['exclude_from_sitemap'], 'Boolean');
+            }
             if (data.hasOwnProperty('note')) {
                 obj['note'] = ApiClient.convertToType(data['note'], 'String');
             }
@@ -62,6 +65,12 @@ class SfvbRedirectImportRow {
 
 
 }
+
+/**
+ * True to leave the rule's source out of the generated sitemap.  Left out means false, as in the admin.
+ * @member {Boolean} exclude_from_sitemap
+ */
+SfvbRedirectImportRow.prototype['exclude_from_sitemap'] = undefined;
 
 /**
  * Why the rule exists.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbNotFoundEntry model module.
  * @module com.ultracart.admin.v2.models/SfvbNotFoundEntry
- * @version 4.1.228
+ * @version 4.1.229
  */
 class SfvbNotFoundEntry {
     /**
@@ -58,6 +58,9 @@ class SfvbNotFoundEntry {
             }
             if (data.hasOwnProperty('first_seen_dts')) {
                 obj['first_seen_dts'] = ApiClient.convertToType(data['first_seen_dts'], 'String');
+            }
+            if (data.hasOwnProperty('fixed')) {
+                obj['fixed'] = ApiClient.convertToType(data['fixed'], 'Boolean');
             }
             if (data.hasOwnProperty('hits')) {
                 obj['hits'] = ApiClient.convertToType(data['hits'], 'Number');
@@ -110,6 +113,12 @@ SfvbNotFoundEntry.prototype['counted_hits'] = undefined;
  * @member {String} first_seen_dts
  */
 SfvbNotFoundEntry.prototype['first_seen_dts'] = undefined;
+
+/**
+ * True when the entry is marked fixed or mapped.  The next hit on the path clears it.
+ * @member {Boolean} fixed
+ */
+SfvbNotFoundEntry.prototype['fixed'] = undefined;
 
 /**
  * Every recorded hit, bots included.

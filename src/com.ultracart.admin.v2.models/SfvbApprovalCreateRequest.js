@@ -19,13 +19,14 @@ import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
+import SfvbSiteSeoRequest from './SfvbSiteSeoRequest';
 import SfvbSmartAttributionRequest from './SfvbSmartAttributionRequest';
 import SfvbTrackingProviderRequest from './SfvbTrackingProviderRequest';
 
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.228
+ * @version 4.1.229
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -85,6 +86,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('segment_update')) {
                 obj['segment_update'] = SfvbCommsSegmentWriteRequest.constructFromObject(data['segment_update']);
+            }
+            if (data.hasOwnProperty('site_seo')) {
+                obj['site_seo'] = SfvbSiteSeoRequest.constructFromObject(data['site_seo']);
             }
             if (data.hasOwnProperty('smart_attribution')) {
                 obj['smart_attribution'] = SfvbSmartAttributionRequest.constructFromObject(data['smart_attribution']);
@@ -153,6 +157,11 @@ SfvbApprovalCreateRequest.prototype['redirect_rows'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest} segment_update
  */
 SfvbApprovalCreateRequest.prototype['segment_update'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbSiteSeoRequest} site_seo
+ */
+SfvbApprovalCreateRequest.prototype['site_seo'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbSmartAttributionRequest} smart_attribution
@@ -299,7 +308,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "affiliate_network.delete"
      * @const
      */
-    "affiliate_network.delete": "affiliate_network.delete"
+    "affiliate_network.delete": "affiliate_network.delete",
+
+    /**
+     * value: "site_seo.change"
+     * @const
+     */
+    "site_seo.change": "site_seo.change"
 };
 
 

@@ -1131,6 +1131,7 @@ import SfvbNotFoundEntryResponse from './com.ultracart.admin.v2.models/SfvbNotFo
 import SfvbNotFoundHit from './com.ultracart.admin.v2.models/SfvbNotFoundHit';
 import SfvbNotFoundPage from './com.ultracart.admin.v2.models/SfvbNotFoundPage';
 import SfvbNotFoundResponse from './com.ultracart.admin.v2.models/SfvbNotFoundResponse';
+import SfvbNotFoundSummary from './com.ultracart.admin.v2.models/SfvbNotFoundSummary';
 import SfvbPageAttribute from './com.ultracart.admin.v2.models/SfvbPageAttribute';
 import SfvbPageAttributeUpdate from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdate';
 import SfvbPageAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
@@ -1180,6 +1181,8 @@ import SfvbRedirectImportResponse from './com.ultracart.admin.v2.models/SfvbRedi
 import SfvbRedirectImportRow from './com.ultracart.admin.v2.models/SfvbRedirectImportRow';
 import SfvbRedirectImportRowResult from './com.ultracart.admin.v2.models/SfvbRedirectImportRowResult';
 import SfvbRedirectRequest from './com.ultracart.admin.v2.models/SfvbRedirectRequest';
+import SfvbRedirectResolveBatchRequest from './com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest';
+import SfvbRedirectResolveBatchResponse from './com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse';
 import SfvbRedirectResolveResponse from './com.ultracart.admin.v2.models/SfvbRedirectResolveResponse';
 import SfvbRedirectResolveStep from './com.ultracart.admin.v2.models/SfvbRedirectResolveStep';
 import SfvbRedirectResponse from './com.ultracart.admin.v2.models/SfvbRedirectResponse';
@@ -1212,6 +1215,9 @@ import SfvbSiteAttribute from './com.ultracart.admin.v2.models/SfvbSiteAttribute
 import SfvbSiteAttributeUpdate from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate';
 import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSiteSeo from './com.ultracart.admin.v2.models/SfvbSiteSeo';
+import SfvbSiteSeoChange from './com.ultracart.admin.v2.models/SfvbSiteSeoChange';
+import SfvbSiteSeoRequest from './com.ultracart.admin.v2.models/SfvbSiteSeoRequest';
 import SfvbSitemap from './com.ultracart.admin.v2.models/SfvbSitemap';
 import SfvbSitemapFile from './com.ultracart.admin.v2.models/SfvbSitemapFile';
 import SfvbSitemapsResponse from './com.ultracart.admin.v2.models/SfvbSitemapsResponse';
@@ -1429,7 +1435,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.228
+* @version 4.1.229
 */
 export {
     /**
@@ -8147,6 +8153,12 @@ export {
     SfvbNotFoundResponse,
 
     /**
+     * The SfvbNotFoundSummary model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbNotFoundSummary}
+     */
+    SfvbNotFoundSummary,
+
+    /**
      * The SfvbPageAttribute model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPageAttribute}
      */
@@ -8441,6 +8453,18 @@ export {
     SfvbRedirectRequest,
 
     /**
+     * The SfvbRedirectResolveBatchRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest}
+     */
+    SfvbRedirectResolveBatchRequest,
+
+    /**
+     * The SfvbRedirectResolveBatchResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse}
+     */
+    SfvbRedirectResolveBatchResponse,
+
+    /**
      * The SfvbRedirectResolveResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbRedirectResolveResponse}
      */
@@ -8631,6 +8655,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
      */
     SfvbSiteAttributesResponse,
+
+    /**
+     * The SfvbSiteSeo model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteSeo}
+     */
+    SfvbSiteSeo,
+
+    /**
+     * The SfvbSiteSeoChange model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteSeoChange}
+     */
+    SfvbSiteSeoChange,
+
+    /**
+     * The SfvbSiteSeoRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSiteSeoRequest}
+     */
+    SfvbSiteSeoRequest,
 
     /**
      * The SfvbSitemap model constructor.

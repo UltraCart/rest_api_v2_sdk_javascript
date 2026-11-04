@@ -117,6 +117,7 @@ import SfvbNotFoundEntry from '../com.ultracart.admin.v2.models/SfvbNotFoundEntr
 import SfvbNotFoundEntryResponse from '../com.ultracart.admin.v2.models/SfvbNotFoundEntryResponse';
 import SfvbNotFoundPage from '../com.ultracart.admin.v2.models/SfvbNotFoundPage';
 import SfvbNotFoundResponse from '../com.ultracart.admin.v2.models/SfvbNotFoundResponse';
+import SfvbNotFoundSummary from '../com.ultracart.admin.v2.models/SfvbNotFoundSummary';
 import SfvbPageAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbPageAttributeUpdateRequest';
 import SfvbPageBlogPostsRequest from '../com.ultracart.admin.v2.models/SfvbPageBlogPostsRequest';
 import SfvbPageBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbPageBlogPostsResponse';
@@ -150,6 +151,8 @@ import SfvbRedirectDeleteResponse from '../com.ultracart.admin.v2.models/SfvbRed
 import SfvbRedirectImportRequest from '../com.ultracart.admin.v2.models/SfvbRedirectImportRequest';
 import SfvbRedirectImportResponse from '../com.ultracart.admin.v2.models/SfvbRedirectImportResponse';
 import SfvbRedirectRequest from '../com.ultracart.admin.v2.models/SfvbRedirectRequest';
+import SfvbRedirectResolveBatchRequest from '../com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest';
+import SfvbRedirectResolveBatchResponse from '../com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse';
 import SfvbRedirectResolveResponse from '../com.ultracart.admin.v2.models/SfvbRedirectResolveResponse';
 import SfvbRedirectResponse from '../com.ultracart.admin.v2.models/SfvbRedirectResponse';
 import SfvbRedirectsResponse from '../com.ultracart.admin.v2.models/SfvbRedirectsResponse';
@@ -171,6 +174,8 @@ import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogD
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSiteSeo from '../com.ultracart.admin.v2.models/SfvbSiteSeo';
+import SfvbSiteSeoRequest from '../com.ultracart.admin.v2.models/SfvbSiteSeoRequest';
 import SfvbSitemapsResponse from '../com.ultracart.admin.v2.models/SfvbSitemapsResponse';
 import SfvbSmartAttribution from '../com.ultracart.admin.v2.models/SfvbSmartAttribution';
 import SfvbSmartAttributionRequest from '../com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
@@ -214,7 +219,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.228
+* @version 4.1.229
 */
 export default class SfvbApi {
 
@@ -1489,6 +1494,54 @@ export default class SfvbApi {
       let returnType = SfvbLibraryDeleteResult;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbNotFoundEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbNotFoundEntryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a 404 path from the log
+     * The admin's Permanent Ignore button.  Despite that label, the next hit on the path records it again as a new entry.  To stop counting a path, ignore it instead. 
+     * @param {Number} storefront_oid 
+     * @param {String} not_found_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbNotFoundEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSfvbNotFoundEntry(storefront_oid, not_found_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbNotFoundEntry");
+      }
+      // verify the required parameter 'not_found_id' is set
+      if (not_found_id === undefined || not_found_id === null) {
+        throw new Error("Missing the required parameter 'not_found_id' when calling deleteSfvbNotFoundEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'not_found_id': not_found_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -2889,6 +2942,55 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the exportSfvbNotFound operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~exportSfvbNotFoundCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Export the open 404 paths
+     * Up to 5,000 open paths, most hits first, as the admin's mapping spreadsheet reads them, each with where a redirect rule already sends it.  Fixed, mapped and ignored paths are never included.  Paths only bots have hit are left out unless include_bots is true.  Tokens in paths are redacted unless include_tokens is true.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.include_bots 
+     * @param {Boolean} opts.include_tokens 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~exportSfvbNotFoundCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundResponse}
+     */
+    exportSfvbNotFound(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling exportSfvbNotFound");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'include_bots': opts['include_bots'],
+        'include_tokens': opts['include_tokens']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/export', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the favoriteSfvbLibraryEntry operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~favoriteSfvbLibraryEntryCallback
      * @param {String} error Error message, if any.
@@ -2931,6 +3033,55 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/library/{library_oid}/favorite', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the fixSfvbNotFoundEntry operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~fixSfvbNotFoundEntryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundEntry} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Mark a 404 path fixed
+     * For a path fixed by creating the page rather than a redirect.  It leaves the list; the next hit on the path clears the mark and lists it again.  The admin's Mark Fixed. 
+     * @param {Number} storefront_oid 
+     * @param {String} not_found_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~fixSfvbNotFoundEntryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundEntry}
+     */
+    fixSfvbNotFoundEntry(storefront_oid, not_found_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling fixSfvbNotFoundEntry");
+      }
+      // verify the required parameter 'not_found_id' is set
+      if (not_found_id === undefined || not_found_id === null) {
+        throw new Error("Missing the required parameter 'not_found_id' when calling fixSfvbNotFoundEntry");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'not_found_id': not_found_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundEntry;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}/fixed', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4775,6 +4926,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbNotFoundSummary operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundSummaryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbNotFoundSummary} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * The 404 log's trend
+     * The admin's 404 charts: hits per day for 30 and 7 days and per hour for 24 hours, bots included, plus up to 10 open paths first seen in the last 30 days.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbNotFoundSummaryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbNotFoundSummary}
+     */
+    getSfvbNotFoundSummary(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbNotFoundSummary");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbNotFoundSummary;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/not_found/summary', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -5594,6 +5788,49 @@ export default class SfvbApi {
       let returnType = SfvbSiteAttributesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/attributes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSiteSeo operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteSeoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteSeo} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's search engine settings
+     * Canonical Links, Schema.org and Prevent Indexing as true or false, with the default meta description and keywords and the hash to send as If-Match on a change. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteSeoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteSeo}
+     */
+    getSfvbSiteSeo(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSiteSeo");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSiteSeo;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/seo', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -10178,6 +10415,54 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the resolveSfvbRedirectBatch operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~resolveSfvbRedirectBatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * What a shopper gets for each of many paths
+     * Up to 1,000 paths in one call, each followed through the redirect rules exactly as the single resolve does, with counts of how many redirect and how many end on a 404.  For checking every old URL of a migrated store.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest} redirect_resolve_batch_request The paths
+     * @param {module:com.ultracart.admin.v2/SfvbApi~resolveSfvbRedirectBatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse}
+     */
+    resolveSfvbRedirectBatch(storefront_oid, redirect_resolve_batch_request, callback) {
+      let postBody = redirect_resolve_batch_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling resolveSfvbRedirectBatch");
+      }
+      // verify the required parameter 'redirect_resolve_batch_request' is set
+      if (redirect_resolve_batch_request === undefined || redirect_resolve_batch_request === null) {
+        throw new Error("Missing the required parameter 'redirect_resolve_batch_request' when calling resolveSfvbRedirectBatch");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbRedirectResolveBatchResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/redirects/resolve_batch', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the resolveSfvbTemplate operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~resolveSfvbTemplateCallback
      * @param {String} error Error message, if any.
@@ -11726,6 +12011,64 @@ export default class SfvbApi {
       let returnType = SfvbSequenceStepUpdateResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbSiteSeo operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbSiteSeoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteSeo} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a storefront's search engine settings
+     * A partial update of Canonical Links, Schema.org and Prevent Indexing.  Send the hash_sha256 you read as If-Match.  dry_run reports each change, whether it needs approval and whether that approval needs a fresh code, without saving.  Turning Canonical Links or Schema.org on needs no approval.  Turning either off, or turning Prevent Indexing on or off, needs an approved site_seo.change request for exactly this change (Approval-Id), and turning Prevent Indexing on asks for an authenticator code even inside an approval session.  Always needs sfvb_publish, because the settings apply to every page as soon as they are saved.  The admin saves the whole storefront, so a merchant with the screen open can still overwrite a change made here. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match The hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSiteSeoRequest} site_seo_request The switches to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id When the change turns Canonical Links or Schema.org off, or turns Prevent Indexing on or off, the approval_id of an approved site_seo.change request for this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbSiteSeoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSiteSeo}
+     */
+    updateSfvbSiteSeo(storefront_oid, If_Match, site_seo_request, opts, callback) {
+      opts = opts || {};
+      let postBody = site_seo_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbSiteSeo");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbSiteSeo");
+      }
+      // verify the required parameter 'site_seo_request' is set
+      if (site_seo_request === undefined || site_seo_request === null) {
+        throw new Error("Missing the required parameter 'site_seo_request' when calling updateSfvbSiteSeo");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSiteSeo;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/seo', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

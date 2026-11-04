@@ -18,7 +18,7 @@ import SfvbLibraryInstallConflict from './SfvbLibraryInstallConflict';
 /**
  * The SfvbLibraryInstallReceipt model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryInstallReceipt
- * @version 4.1.228
+ * @version 4.1.229
  */
 class SfvbLibraryInstallReceipt {
     /**
