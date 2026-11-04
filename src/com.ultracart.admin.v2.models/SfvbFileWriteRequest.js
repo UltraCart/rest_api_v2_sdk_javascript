@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileWriteRequest
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbFileWriteRequest {
     /**

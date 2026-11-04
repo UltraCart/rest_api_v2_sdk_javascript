@@ -23,7 +23,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * Bulk service.
 * @module com.ultracart.admin.v2/BulkApi
-* @version 4.1.227
+* @version 4.1.228
 */
 export default class BulkApi {
 

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The AdjustLoyaltyPointsResponse model module.
  * @module com.ultracart.admin.v2.models/AdjustLoyaltyPointsResponse
- * @version 4.1.227
+ * @version 4.1.228
  */
 class AdjustLoyaltyPointsResponse {
     /**

@@ -17,7 +17,7 @@ import ConversationPbxCallTranscript from './ConversationPbxCallTranscript';
 /**
  * The ConversationPbxCallRecording model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallRecording
- * @version 4.1.227
+ * @version 4.1.228
  */
 class ConversationPbxCallRecording {
     /**

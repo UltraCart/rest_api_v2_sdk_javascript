@@ -17,7 +17,7 @@ import SfvbTrackingHtml from './SfvbTrackingHtml';
 /**
  * The SfvbTrackingHtmlResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbTrackingHtmlResponse {
     /**

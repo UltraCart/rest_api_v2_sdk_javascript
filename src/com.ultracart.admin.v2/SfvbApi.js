@@ -174,6 +174,7 @@ import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSit
 import SfvbSitemapsResponse from '../com.ultracart.admin.v2.models/SfvbSitemapsResponse';
 import SfvbSmartAttribution from '../com.ultracart.admin.v2.models/SfvbSmartAttribution';
 import SfvbSmartAttributionRequest from '../com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
+import SfvbStepDispatchLogsResponse from '../com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplateResolveResponse from '../com.ultracart.admin.v2.models/SfvbTemplateResolveResponse';
 import SfvbTemplatesResponse from '../com.ultracart.admin.v2.models/SfvbTemplatesResponse';
@@ -213,7 +214,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.227
+* @version 4.1.228
 */
 export default class SfvbApi {
 
@@ -5434,6 +5435,69 @@ export default class SfvbApi {
       let returnType = SfvbSequence;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSequenceStepDispatchLogs operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSequenceStepDispatchLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a flow or campaign step's dispatch log and counts
+     * Why customers were sent, skipped or ended at this step, newest first, as the admin's Dispatch Logs screen shows it, with the step's counts.  An email step's counts are its email's; any other step's are its own over 90 days.  Email addresses and phone numbers in the text are masked.  since is 15m, 2h or 7d, or an ISO-8601 time, default 7d; entries are kept 90 days.  limit is 1 to 200, default 50; send next_offset as offset for the next page.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {String} sequence_uuid 
+     * @param {String} step_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.since 
+     * @param {Number} opts.limit 
+     * @param {Number} opts.offset 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSequenceStepDispatchLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse}
+     */
+    getSfvbSequenceStepDispatchLogs(storefront_oid, sequence_uuid, step_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSequenceStepDispatchLogs");
+      }
+      // verify the required parameter 'sequence_uuid' is set
+      if (sequence_uuid === undefined || sequence_uuid === null) {
+        throw new Error("Missing the required parameter 'sequence_uuid' when calling getSfvbSequenceStepDispatchLogs");
+      }
+      // verify the required parameter 'step_uuid' is set
+      if (step_uuid === undefined || step_uuid === null) {
+        throw new Error("Missing the required parameter 'step_uuid' when calling getSfvbSequenceStepDispatchLogs");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'sequence_uuid': sequence_uuid,
+        'step_uuid': step_uuid
+      };
+      let queryParams = {
+        'since': opts['since'],
+        'limit': opts['limit'],
+        'offset': opts['offset']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbStepDispatchLogsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}/dispatch_logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

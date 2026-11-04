@@ -17,7 +17,7 @@ import SfvbLibraryTaxonomyDimension from './SfvbLibraryTaxonomyDimension';
 /**
  * The SfvbLibraryTaxonomyCatalog model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryTaxonomyCatalog
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbLibraryTaxonomyCatalog {
     /**

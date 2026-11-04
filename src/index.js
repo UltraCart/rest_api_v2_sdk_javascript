@@ -1218,6 +1218,9 @@ import SfvbSitemapsResponse from './com.ultracart.admin.v2.models/SfvbSitemapsRe
 import SfvbSmartAttribution from './com.ultracart.admin.v2.models/SfvbSmartAttribution';
 import SfvbSmartAttributionPlatform from './com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform';
 import SfvbSmartAttributionRequest from './com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
+import SfvbStepCounts from './com.ultracart.admin.v2.models/SfvbStepCounts';
+import SfvbStepDispatchLog from './com.ultracart.admin.v2.models/SfvbStepDispatchLog';
+import SfvbStepDispatchLogsResponse from './com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse';
 import SfvbStorefront from './com.ultracart.admin.v2.models/SfvbStorefront';
 import SfvbStorefrontsResponse from './com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
 import SfvbTemplate from './com.ultracart.admin.v2.models/SfvbTemplate';
@@ -1426,7 +1429,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.227
+* @version 4.1.228
 */
 export {
     /**
@@ -8664,6 +8667,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSmartAttributionRequest}
      */
     SfvbSmartAttributionRequest,
+
+    /**
+     * The SfvbStepCounts model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbStepCounts}
+     */
+    SfvbStepCounts,
+
+    /**
+     * The SfvbStepDispatchLog model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbStepDispatchLog}
+     */
+    SfvbStepDispatchLog,
+
+    /**
+     * The SfvbStepDispatchLogsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse}
+     */
+    SfvbStepDispatchLogsResponse,
 
     /**
      * The SfvbStorefront model constructor.

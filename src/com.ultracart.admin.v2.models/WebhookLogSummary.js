@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookLogSummary model module.
  * @module com.ultracart.admin.v2.models/WebhookLogSummary
- * @version 4.1.227
+ * @version 4.1.228
  */
 class WebhookLogSummary {
     /**

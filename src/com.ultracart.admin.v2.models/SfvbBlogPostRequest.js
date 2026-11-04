@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbBlogPostRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbBlogPostRequest
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbBlogPostRequest {
     /**
@@ -55,6 +55,9 @@ class SfvbBlogPostRequest {
             }
             if (data.hasOwnProperty('body')) {
                 obj['body'] = ApiClient.convertToType(data['body'], 'String');
+            }
+            if (data.hasOwnProperty('dry_run')) {
+                obj['dry_run'] = ApiClient.convertToType(data['dry_run'], 'Boolean');
             }
             if (data.hasOwnProperty('excerpt')) {
                 obj['excerpt'] = ApiClient.convertToType(data['excerpt'], 'String');
@@ -107,6 +110,12 @@ SfvbBlogPostRequest.prototype['author'] = undefined;
  * @member {String} body
  */
 SfvbBlogPostRequest.prototype['body'] = undefined;
+
+/**
+ * On an update, true to run every check the write would run and save nothing.  A refusal comes back exactly as it would on the real write.
+ * @member {Boolean} dry_run
+ */
+SfvbBlogPostRequest.prototype['dry_run'] = undefined;
 
 /**
  * The post excerpt as HTML, up to 256 KB.  Held to the same rule as body.

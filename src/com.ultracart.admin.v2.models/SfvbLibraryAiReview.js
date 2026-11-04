@@ -17,7 +17,7 @@ import SfvbLibraryManifestFinding from './SfvbLibraryManifestFinding';
 /**
  * The SfvbLibraryAiReview model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryAiReview
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbLibraryAiReview {
     /**

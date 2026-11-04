@@ -110,6 +110,7 @@ Method | HTTP request | Description
 [**getSfvbSecretRequest**](SfvbApi.md#getSfvbSecretRequest) | **GET** /sfvb/secrets/{request_id} | Read one secret request
 [**getSfvbSecretRequests**](SfvbApi.md#getSfvbSecretRequests) | **GET** /sfvb/secrets | List this sign-in&#39;s secret requests
 [**getSfvbSequence**](SfvbApi.md#getSfvbSequence) | **GET** /sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid} | Get a campaign&#39;s or flow&#39;s steps as a tree
+[**getSfvbSequenceStepDispatchLogs**](SfvbApi.md#getSfvbSequenceStepDispatchLogs) | **GET** /sfvb/storefronts/{storefront_oid}/sequences/{sequence_uuid}/steps/{step_uuid}/dispatch_logs | Read a flow or campaign step&#39;s dispatch log and counts
 [**getSfvbServerLog**](SfvbApi.md#getSfvbServerLog) | **GET** /sfvb/storefronts/{storefront_oid}/logs/{log_id} | Get one storefront render log
 [**getSfvbSiteAttributes**](SfvbApi.md#getSfvbSiteAttributes) | **GET** /sfvb/storefronts/{storefront_oid}/attributes | Read a storefront&#39;s site attributes
 [**getSfvbSitemaps**](SfvbApi.md#getSfvbSitemaps) | **GET** /sfvb/storefronts/{storefront_oid}/sitemaps | Read a storefront&#39;s sitemaps and robots.txt
@@ -4180,6 +4181,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbSequence**](SfvbSequence.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbSequenceStepDispatchLogs
+
+> SfvbStepDispatchLogsResponse getSfvbSequenceStepDispatchLogs(storefront_oid, sequence_uuid, step_uuid, opts)
+
+Read a flow or campaign step&#39;s dispatch log and counts
+
+Why customers were sent, skipped or ended at this step, newest first, as the admin&#39;s Dispatch Logs screen shows it, with the step&#39;s counts.  An email step&#39;s counts are its email&#39;s; any other step&#39;s are its own over 90 days.  Email addresses and phone numbers in the text are masked.  since is 15m, 2h or 7d, or an ISO-8601 time, default 7d; entries are kept 90 days.  limit is 1 to 200, default 50; send next_offset as offset for the next page.  Read only. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **sequence_uuid** | **String**|  | 
+ **step_uuid** | **String**|  | 
+ **since** | **String**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
+ **offset** | **Number**|  | [optional] 
+
+### Return type
+
+[**SfvbStepDispatchLogsResponse**](SfvbStepDispatchLogsResponse.md)
 
 ### Authorization
 

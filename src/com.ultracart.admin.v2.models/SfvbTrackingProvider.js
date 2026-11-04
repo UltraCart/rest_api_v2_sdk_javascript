@@ -22,7 +22,7 @@ import SfvbTrackingWholesaleTier from './SfvbTrackingWholesaleTier';
 /**
  * The SfvbTrackingProvider model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProvider
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbTrackingProvider {
     /**

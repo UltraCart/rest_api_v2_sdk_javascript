@@ -18,7 +18,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbCommsTwilioAccountResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbCommsTwilioAccountResponse {
     /**

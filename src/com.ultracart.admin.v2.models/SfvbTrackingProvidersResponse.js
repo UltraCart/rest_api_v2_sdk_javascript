@@ -17,7 +17,7 @@ import SfvbTrackingProvider from './SfvbTrackingProvider';
 /**
  * The SfvbTrackingProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbTrackingProvidersResponse {
     /**

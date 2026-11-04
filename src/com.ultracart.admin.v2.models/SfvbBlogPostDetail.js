@@ -17,7 +17,7 @@ import SfvbBlogPostImage from './SfvbBlogPostImage';
 /**
  * The SfvbBlogPostDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbBlogPostDetail
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbBlogPostDetail {
     /**
@@ -62,6 +62,9 @@ class SfvbBlogPostDetail {
             }
             if (data.hasOwnProperty('created_dts')) {
                 obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
+            }
+            if (data.hasOwnProperty('dry_run')) {
+                obj['dry_run'] = ApiClient.convertToType(data['dry_run'], 'Boolean');
             }
             if (data.hasOwnProperty('excerpt')) {
                 obj['excerpt'] = ApiClient.convertToType(data['excerpt'], 'String');
@@ -138,6 +141,12 @@ SfvbBlogPostDetail.prototype['body'] = undefined;
  * @member {String} created_dts
  */
 SfvbBlogPostDetail.prototype['created_dts'] = undefined;
+
+/**
+ * True when this is the result of a dry run and nothing was saved.  The post is shown as it is stored.
+ * @member {Boolean} dry_run
+ */
+SfvbBlogPostDetail.prototype['dry_run'] = undefined;
 
 /**
  * The post excerpt as HTML, exactly as stored.

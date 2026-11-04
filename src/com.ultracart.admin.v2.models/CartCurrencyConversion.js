@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartCurrencyConversion model module.
  * @module com.ultracart.admin.v2.models/CartCurrencyConversion
- * @version 4.1.227
+ * @version 4.1.228
  */
 class CartCurrencyConversion {
     /**

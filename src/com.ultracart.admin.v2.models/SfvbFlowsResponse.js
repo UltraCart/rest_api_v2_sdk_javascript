@@ -17,7 +17,7 @@ import SfvbFlow from './SfvbFlow';
 /**
  * The SfvbFlowsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFlowsResponse
- * @version 4.1.227
+ * @version 4.1.228
  */
 class SfvbFlowsResponse {
     /**

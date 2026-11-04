@@ -1225,6 +1225,9 @@ docs/SfvbSitemapsResponse.md
 docs/SfvbSmartAttribution.md
 docs/SfvbSmartAttributionPlatform.md
 docs/SfvbSmartAttributionRequest.md
+docs/SfvbStepCounts.md
+docs/SfvbStepDispatchLog.md
+docs/SfvbStepDispatchLogsResponse.md
 docs/SfvbStorefront.md
 docs/SfvbStorefrontsResponse.md
 docs/SfvbTemplate.md
@@ -2593,6 +2596,9 @@ src/com.ultracart.admin.v2.models/SfvbSitemapsResponse.js
 src/com.ultracart.admin.v2.models/SfvbSmartAttribution.js
 src/com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform.js
 src/com.ultracart.admin.v2.models/SfvbSmartAttributionRequest.js
+src/com.ultracart.admin.v2.models/SfvbStepCounts.js
+src/com.ultracart.admin.v2.models/SfvbStepDispatchLog.js
+src/com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse.js
 src/com.ultracart.admin.v2.models/SfvbStorefront.js
 src/com.ultracart.admin.v2.models/SfvbStorefrontsResponse.js
 src/com.ultracart.admin.v2.models/SfvbTemplate.js
