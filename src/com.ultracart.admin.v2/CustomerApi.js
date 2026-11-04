@@ -48,7 +48,7 @@ import QuickBooksOnlineCustomersResponse from '../com.ultracart.admin.v2.models/
 /**
 * Customer service.
 * @module com.ultracart.admin.v2/CustomerApi
-* @version 4.1.225
+* @version 4.1.226
 */
 export default class CustomerApi {
 

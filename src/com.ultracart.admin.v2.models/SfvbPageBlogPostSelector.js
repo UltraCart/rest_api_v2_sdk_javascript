@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageBlogPostSelector model module.
  * @module com.ultracart.admin.v2.models/SfvbPageBlogPostSelector
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbPageBlogPostSelector {
     /**

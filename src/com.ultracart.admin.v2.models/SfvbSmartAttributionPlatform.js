@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSmartAttributionPlatform model module.
  * @module com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbSmartAttributionPlatform {
     /**

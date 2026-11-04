@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FulfillmentInventory model module.
  * @module com.ultracart.admin.v2.models/FulfillmentInventory
- * @version 4.1.225
+ * @version 4.1.226
  */
 class FulfillmentInventory {
     /**

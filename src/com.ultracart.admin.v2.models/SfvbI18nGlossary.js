@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbI18nGlossary model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nGlossary
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbI18nGlossary {
     /**

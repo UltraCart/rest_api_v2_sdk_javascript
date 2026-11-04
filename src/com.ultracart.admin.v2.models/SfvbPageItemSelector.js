@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageItemSelector model module.
  * @module com.ultracart.admin.v2.models/SfvbPageItemSelector
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbPageItemSelector {
     /**

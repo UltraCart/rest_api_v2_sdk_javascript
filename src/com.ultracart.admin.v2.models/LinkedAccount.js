@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LinkedAccount model module.
  * @module com.ultracart.admin.v2.models/LinkedAccount
- * @version 4.1.225
+ * @version 4.1.226
  */
 class LinkedAccount {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderOauth model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderOauth
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbTrackingProviderOauth {
     /**

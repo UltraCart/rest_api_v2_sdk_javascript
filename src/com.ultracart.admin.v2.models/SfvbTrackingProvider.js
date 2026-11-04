@@ -22,7 +22,7 @@ import SfvbTrackingWholesaleTier from './SfvbTrackingWholesaleTier';
 /**
  * The SfvbTrackingProvider model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProvider
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbTrackingProvider {
     /**
@@ -55,6 +55,9 @@ class SfvbTrackingProvider {
 
             if (data.hasOwnProperty('admin_path')) {
                 obj['admin_path'] = ApiClient.convertToType(data['admin_path'], 'String');
+            }
+            if (data.hasOwnProperty('approval_needed')) {
+                obj['approval_needed'] = ApiClient.convertToType(data['approval_needed'], 'Boolean');
             }
             if (data.hasOwnProperty('changes')) {
                 obj['changes'] = ApiClient.convertToType(data['changes'], [SfvbTrackingChange]);
@@ -113,6 +116,12 @@ class SfvbTrackingProvider {
  * @member {String} admin_path
  */
 SfvbTrackingProvider.prototype['admin_path'] = undefined;
+
+/**
+ * On a dry run, whether the real write needs an approved tracking_provider.change request.
+ * @member {Boolean} approval_needed
+ */
+SfvbTrackingProvider.prototype['approval_needed'] = undefined;
 
 /**
  * On a write, each setting it changed, or would change on a dry run.  Secrets read only set or cleared.

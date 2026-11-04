@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Country model module.
  * @module com.ultracart.admin.v2.models/Country
- * @version 4.1.225
+ * @version 4.1.226
  */
 class Country {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CouponNoDiscount model module.
  * @module com.ultracart.admin.v2.models/CouponNoDiscount
- * @version 4.1.225
+ * @version 4.1.226
  */
 class CouponNoDiscount {
     /**

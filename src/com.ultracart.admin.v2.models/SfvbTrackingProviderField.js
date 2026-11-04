@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderField model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderField
- * @version 4.1.225
+ * @version 4.1.226
  */
 class SfvbTrackingProviderField {
     /**
@@ -79,6 +79,9 @@ class SfvbTrackingProviderField {
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('unavailable_reason')) {
+                obj['unavailable_reason'] = ApiClient.convertToType(data['unavailable_reason'], 'String');
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
@@ -158,6 +161,12 @@ SfvbTrackingProviderField.prototype['sink'] = undefined;
  * @member {String} type
  */
 SfvbTrackingProviderField.prototype['type'] = undefined;
+
+/**
+ * Present only when this storefront can't turn the field on, and why.  Turning it off still works.
+ * @member {String} unavailable_reason
+ */
+SfvbTrackingProviderField.prototype['unavailable_reason'] = undefined;
 
 /**
  * The stored value.  Booleans are true or false.  Null when blank.  Never present for a secret.
