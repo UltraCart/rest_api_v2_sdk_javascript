@@ -171,6 +171,7 @@ import SfvbServerLogDetail from '../com.ultracart.admin.v2.models/SfvbServerLogD
 import SfvbServerLogsResponse from '../com.ultracart.admin.v2.models/SfvbServerLogsResponse';
 import SfvbSiteAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from '../com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSitemapsResponse from '../com.ultracart.admin.v2.models/SfvbSitemapsResponse';
 import SfvbSmartAttribution from '../com.ultracart.admin.v2.models/SfvbSmartAttribution';
 import SfvbSmartAttributionRequest from '../com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
 import SfvbStorefrontsResponse from '../com.ultracart.admin.v2.models/SfvbStorefrontsResponse';
@@ -212,7 +213,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.226
+* @version 4.1.227
 */
 export default class SfvbApi {
 
@@ -5529,6 +5530,49 @@ export default class SfvbApi {
       let returnType = SfvbSiteAttributesResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/attributes', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbSitemaps operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSitemapsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSitemapsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a storefront's sitemaps and robots.txt
+     * The sitemaps the admin SEO Sitemaps screen lists, with their child files and build times, the Sitemap lines robots.txt serves, and whether Prevent Indexing is on.  Read only.  The files are rebuilt nightly, so a page change shows in them after the next build. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSitemapsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSitemapsResponse}
+     */
+    getSfvbSitemaps(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSitemaps");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSitemapsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/sitemaps', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

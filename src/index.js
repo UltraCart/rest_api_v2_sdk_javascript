@@ -1186,6 +1186,7 @@ import SfvbRedirectResponse from './com.ultracart.admin.v2.models/SfvbRedirectRe
 import SfvbRedirectsResponse from './com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbRobotsTxt from './com.ultracart.admin.v2.models/SfvbRobotsTxt';
 import SfvbSecretHandle from './com.ultracart.admin.v2.models/SfvbSecretHandle';
 import SfvbSecretKind from './com.ultracart.admin.v2.models/SfvbSecretKind';
 import SfvbSecretKindsResponse from './com.ultracart.admin.v2.models/SfvbSecretKindsResponse';
@@ -1211,6 +1212,9 @@ import SfvbSiteAttribute from './com.ultracart.admin.v2.models/SfvbSiteAttribute
 import SfvbSiteAttributeUpdate from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdate';
 import SfvbSiteAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbSiteAttributeUpdateRequest';
 import SfvbSiteAttributesResponse from './com.ultracart.admin.v2.models/SfvbSiteAttributesResponse';
+import SfvbSitemap from './com.ultracart.admin.v2.models/SfvbSitemap';
+import SfvbSitemapFile from './com.ultracart.admin.v2.models/SfvbSitemapFile';
+import SfvbSitemapsResponse from './com.ultracart.admin.v2.models/SfvbSitemapsResponse';
 import SfvbSmartAttribution from './com.ultracart.admin.v2.models/SfvbSmartAttribution';
 import SfvbSmartAttributionPlatform from './com.ultracart.admin.v2.models/SfvbSmartAttributionPlatform';
 import SfvbSmartAttributionRequest from './com.ultracart.admin.v2.models/SfvbSmartAttributionRequest';
@@ -1422,7 +1426,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.226
+* @version 4.1.227
 */
 export {
     /**
@@ -8470,6 +8474,12 @@ export {
     SfvbRenderResponse,
 
     /**
+     * The SfvbRobotsTxt model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbRobotsTxt}
+     */
+    SfvbRobotsTxt,
+
+    /**
      * The SfvbSecretHandle model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbSecretHandle}
      */
@@ -8618,6 +8628,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbSiteAttributesResponse}
      */
     SfvbSiteAttributesResponse,
+
+    /**
+     * The SfvbSitemap model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSitemap}
+     */
+    SfvbSitemap,
+
+    /**
+     * The SfvbSitemapFile model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSitemapFile}
+     */
+    SfvbSitemapFile,
+
+    /**
+     * The SfvbSitemapsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSitemapsResponse}
+     */
+    SfvbSitemapsResponse,
 
     /**
      * The SfvbSmartAttribution model constructor.
