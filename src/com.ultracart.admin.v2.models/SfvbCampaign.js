@@ -19,7 +19,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbCampaign model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaign
- * @version 4.1.230
+ * @version 4.1.231
  */
 class SfvbCampaign {
     /**
@@ -100,6 +100,9 @@ class SfvbCampaign {
             }
             if (data.hasOwnProperty('sending_user')) {
                 obj['sending_user'] = ApiClient.convertToType(data['sending_user'], 'String');
+            }
+            if (data.hasOwnProperty('sms_phone_number')) {
+                obj['sms_phone_number'] = ApiClient.convertToType(data['sms_phone_number'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -215,6 +218,12 @@ SfvbCampaign.prototype['sending_name'] = undefined;
  * @member {String} sending_user
  */
 SfvbCampaign.prototype['sending_user'] = undefined;
+
+/**
+ * The number this campaign's SMS steps send from.  Without one, every SMS step skips every customer, whatever the account's SMS settings say.
+ * @member {String} sms_phone_number
+ */
+SfvbCampaign.prototype['sms_phone_number'] = undefined;
 
 /**
  * The status, such as draft, scheduled, sending, sent or archived.

@@ -17,7 +17,7 @@ import SfvbCommsSendingDomain from './SfvbCommsSendingDomain';
 /**
  * The SfvbCommsSendingDomainsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse
- * @version 4.1.230
+ * @version 4.1.231
  */
 class SfvbCommsSendingDomainsResponse {
     /**

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The OrderAutoOrderUpdateBillingUrlResponse model module.
  * @module com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse
- * @version 4.1.230
+ * @version 4.1.231
  */
 class OrderAutoOrderUpdateBillingUrlResponse {
     /**

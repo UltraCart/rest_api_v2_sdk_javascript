@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **site_seo** | [**SfvbSiteSeoRequest**](SfvbSiteSeoRequest.md) |  | [optional] 
 **smart_attribution** | [**SfvbSmartAttributionRequest**](SfvbSmartAttributionRequest.md) |  | [optional] 
 **tracking_provider** | [**SfvbTrackingProviderRequest**](SfvbTrackingProviderRequest.md) |  | [optional] 
+**transactional_email** | [**SfvbTransactionalEmailUpdateRequest**](SfvbTransactionalEmailUpdateRequest.md) |  | [optional] 
 
 
 
@@ -66,6 +67,8 @@ Name | Type | Description | Notes
 * `affiliate_network.delete` (value: `"affiliate_network.delete"`)
 
 * `site_seo.change` (value: `"site_seo.change"`)
+
+* `transactional_email.update` (value: `"transactional_email.update"`)
 
 
 

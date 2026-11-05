@@ -17,7 +17,7 @@ import SfvbExperimentStartVariation from './SfvbExperimentStartVariation';
 /**
  * The SfvbExperimentStartRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbExperimentStartRequest
- * @version 4.1.230
+ * @version 4.1.231
  */
 class SfvbExperimentStartRequest {
     /**

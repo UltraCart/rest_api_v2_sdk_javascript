@@ -18,7 +18,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbFlow model module.
  * @module com.ultracart.admin.v2.models/SfvbFlow
- * @version 4.1.230
+ * @version 4.1.231
  */
 class SfvbFlow {
     /**
@@ -102,6 +102,9 @@ class SfvbFlow {
             }
             if (data.hasOwnProperty('sending_user')) {
                 obj['sending_user'] = ApiClient.convertToType(data['sending_user'], 'String');
+            }
+            if (data.hasOwnProperty('sms_phone_number')) {
+                obj['sms_phone_number'] = ApiClient.convertToType(data['sms_phone_number'], 'String');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -232,6 +235,12 @@ SfvbFlow.prototype['sending_name'] = undefined;
  * @member {String} sending_user
  */
 SfvbFlow.prototype['sending_user'] = undefined;
+
+/**
+ * The number this flow's SMS steps send from.  Without one, every SMS step skips every customer, whatever the account's SMS settings say.
+ * @member {String} sms_phone_number
+ */
+SfvbFlow.prototype['sms_phone_number'] = undefined;
 
 /**
  * The status, such as draft, active, paused, draining or inactive.

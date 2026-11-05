@@ -22,11 +22,12 @@ import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 import SfvbSiteSeoRequest from './SfvbSiteSeoRequest';
 import SfvbSmartAttributionRequest from './SfvbSmartAttributionRequest';
 import SfvbTrackingProviderRequest from './SfvbTrackingProviderRequest';
+import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateRequest';
 
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.230
+ * @version 4.1.231
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -95,6 +96,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('tracking_provider')) {
                 obj['tracking_provider'] = SfvbTrackingProviderRequest.constructFromObject(data['tracking_provider']);
+            }
+            if (data.hasOwnProperty('transactional_email')) {
+                obj['transactional_email'] = SfvbTransactionalEmailUpdateRequest.constructFromObject(data['transactional_email']);
             }
         }
         return obj;
@@ -172,6 +176,11 @@ SfvbApprovalCreateRequest.prototype['smart_attribution'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbTrackingProviderRequest} tracking_provider
  */
 SfvbApprovalCreateRequest.prototype['tracking_provider'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest} transactional_email
+ */
+SfvbApprovalCreateRequest.prototype['transactional_email'] = undefined;
 
 
 
@@ -314,7 +323,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "site_seo.change"
      * @const
      */
-    "site_seo.change": "site_seo.change"
+    "site_seo.change": "site_seo.change",
+
+    /**
+     * value: "transactional_email.update"
+     * @const
+     */
+    "transactional_email.update": "transactional_email.update"
 };
 
 

@@ -17,7 +17,7 @@ import ItemAutoOrderStep from './ItemAutoOrderStep';
 /**
  * The ItemAutoOrder model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrder
- * @version 4.1.230
+ * @version 4.1.231
  */
 class ItemAutoOrder {
     /**
@@ -197,7 +197,7 @@ ItemAutoOrder.prototype['auto_order_downgrade_items'] = undefined;
 ItemAutoOrder.prototype['auto_order_myaccount_frequency_day_counts'] = undefined;
 
 /**
- * True if the MyAccount frequency change is only offered once the item is on its last auto order step.  Omit to leave unchanged.
+ * True if the MyAccount frequency change is only offered once the item is on its last auto order step.  If auto_order_myaccount_frequency_schedules or auto_order_myaccount_frequency_day_counts is sent without this property, it is set to false; if none of the three are sent, it is left unchanged.
  * @member {Boolean} auto_order_myaccount_frequency_last_step_only
  */
 ItemAutoOrder.prototype['auto_order_myaccount_frequency_last_step_only'] = undefined;

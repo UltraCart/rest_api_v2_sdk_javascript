@@ -35,6 +35,7 @@ import SfvbCommsFoldersResponse from '../com.ultracart.admin.v2.models/SfvbComms
 import SfvbCommsListResponse from '../com.ultracart.admin.v2.models/SfvbCommsListResponse';
 import SfvbCommsListWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsListWriteRequest';
 import SfvbCommsListsResponse from '../com.ultracart.admin.v2.models/SfvbCommsListsResponse';
+import SfvbCommsMembersResponse from '../com.ultracart.admin.v2.models/SfvbCommsMembersResponse';
 import SfvbCommsSegmentResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
 import SfvbCommsSegmentWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest';
 import SfvbCommsSegmentsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentsResponse';
@@ -140,6 +141,7 @@ import SfvbPageSelectors from '../com.ultracart.admin.v2.models/SfvbPageSelector
 import SfvbPageSettingsRequest from '../com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
 import SfvbPostcardProofRequest from '../com.ultracart.admin.v2.models/SfvbPostcardProofRequest';
 import SfvbPostcardProofResponse from '../com.ultracart.admin.v2.models/SfvbPostcardProofResponse';
+import SfvbPostcardTrackingResponse from '../com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse';
 import SfvbPreviewAccessRequest from '../com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
 import SfvbPreviewAccessResponse from '../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
@@ -204,6 +206,8 @@ import SfvbTrackingProvider from '../com.ultracart.admin.v2.models/SfvbTrackingP
 import SfvbTrackingProviderRequest from '../com.ultracart.admin.v2.models/SfvbTrackingProviderRequest';
 import SfvbTrackingProvidersResponse from '../com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse';
 import SfvbTrackingSettingsResponse from '../com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse';
+import SfvbTransactionalEmailResponse from '../com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse';
+import SfvbTransactionalEmailUpdateRequest from '../com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest';
 import SfvbTransactionalEmailsResponse from '../com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
 import SfvbUpsellOffer from '../com.ultracart.admin.v2.models/SfvbUpsellOffer';
 import SfvbUpsellOffersResponse from '../com.ultracart.admin.v2.models/SfvbUpsellOffersResponse';
@@ -224,7 +228,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.230
+* @version 4.1.231
 */
 export default class SfvbApi {
 
@@ -3710,6 +3714,63 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbCommsListMembers operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsListMembersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsMembersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one page of a list's members
+     * Each member's customer uuid, email and the date they joined.  Email addresses are masked (w***a@example.com) and customer_data is masked, unless show_customer_data is true, which returns the real addresses and needs the sfvb_publish scope.  Every such read is logged.  Ask for them only when the merchant needs a person's address.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {String} list_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page The page, from 1
+     * @param {Number} opts.page_size Members per page, 1 to 100 (default 50)
+     * @param {Boolean} opts.show_customer_data True to return the real email addresses instead of masked ones
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsListMembersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsMembersResponse}
+     */
+    getSfvbCommsListMembers(storefront_oid, list_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsListMembers");
+      }
+      // verify the required parameter 'list_uuid' is set
+      if (list_uuid === undefined || list_uuid === null) {
+        throw new Error("Missing the required parameter 'list_uuid' when calling getSfvbCommsListMembers");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'list_uuid': list_uuid
+      };
+      let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['page_size'],
+        'show_customer_data': opts['show_customer_data']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsMembersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/lists/{list_uuid}/members', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbCommsSegment operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSegmentCallback
      * @param {String} error Error message, if any.
@@ -3753,6 +3814,63 @@ export default class SfvbApi {
       let returnType = SfvbCommsSegmentResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/segments/{segment_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsSegmentMembers operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSegmentMembersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsMembersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one page of a segment's members
+     * Each member's customer uuid, email and the date they joined.  Email addresses are masked (w***a@example.com) and customer_data is masked, unless show_customer_data is true, which returns the real addresses and needs the sfvb_publish scope.  Every such read is logged.  Ask for them only when the merchant needs a person's address.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {String} segment_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page The page, from 1
+     * @param {Number} opts.page_size Members per page, 1 to 100 (default 50)
+     * @param {Boolean} opts.show_customer_data True to return the real email addresses instead of masked ones
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsSegmentMembersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsMembersResponse}
+     */
+    getSfvbCommsSegmentMembers(storefront_oid, segment_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsSegmentMembers");
+      }
+      // verify the required parameter 'segment_uuid' is set
+      if (segment_uuid === undefined || segment_uuid === null) {
+        throw new Error("Missing the required parameter 'segment_uuid' when calling getSfvbCommsSegmentMembers");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'segment_uuid': segment_uuid
+      };
+      let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['page_size'],
+        'show_customer_data': opts['show_customer_data']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsMembersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/segments/{segment_uuid}/members', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5476,6 +5594,63 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbPostcardTracking operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPostcardTrackingCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one page of the cards mailed for a postcard
+     * Every printed card mailed for the postcard, newest first, with its status, cost, dates and the order it converted to.  Recipients are masked (the name an initial, the street lines hidden, city, state and postal code kept) and the vendor's status text is left out, unless show_customer_data is true, which needs the sfvb_publish scope and is logged.  The return address is the merchant's own.  Read only. 
+     * @param {Number} storefront_oid 
+     * @param {String} postcard_uuid 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.page The page, from 1
+     * @param {Number} opts.page_size Cards per page, 1 to 100 (default 50)
+     * @param {Boolean} opts.show_customer_data True to return the recipients' real names and street addresses
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPostcardTrackingCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse}
+     */
+    getSfvbPostcardTracking(storefront_oid, postcard_uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPostcardTracking");
+      }
+      // verify the required parameter 'postcard_uuid' is set
+      if (postcard_uuid === undefined || postcard_uuid === null) {
+        throw new Error("Missing the required parameter 'postcard_uuid' when calling getSfvbPostcardTracking");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'postcard_uuid': postcard_uuid
+      };
+      let queryParams = {
+        'page': opts['page'],
+        'page_size': opts['page_size'],
+        'show_customer_data': opts['show_customer_data']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbPostcardTrackingResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/postcards/{postcard_uuid}/tracking', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbPreviewUrl operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbPreviewUrlCallback
      * @param {String} error Error message, if any.
@@ -6656,6 +6831,55 @@ export default class SfvbApi {
       let returnType = SfvbTrackingSettingsResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/tracking', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTransactionalEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTransactionalEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read a transactional email's subject, delivery options and sender
+     * file_name is the template file from the transactional email list, such as receipt_html.vm, or its display name.  The sender is shared by every storefront on the same screen branding theme (sender_shared_with); a sender that sends through the merchant's own mail server shows smtp true and never its credentials.  hash_sha256 is the If-Match for an update.  The template itself is a theme file. 
+     * @param {Number} storefront_oid 
+     * @param {String} file_name 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTransactionalEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse}
+     */
+    getSfvbTransactionalEmail(storefront_oid, file_name, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'file_name' is set
+      if (file_name === undefined || file_name === null) {
+        throw new Error("Missing the required parameter 'file_name' when calling getSfvbTransactionalEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'file_name': file_name
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTransactionalEmailResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/transactional_emails/{file_name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -12890,6 +13114,70 @@ export default class SfvbApi {
       let returnType = SfvbTrackingProvider;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/tracking/providers/{provider}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbTransactionalEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbTransactionalEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change a transactional email's subject, delivery options or sender
+     * A field left out stays as it is.  It goes to every matching order from the moment it is saved, so every change needs sfvb_publish, the email's hash_sha256 as If-Match, and an approved transactional_email.update request for exactly this change (params.path the template file).  dry_run checks and shows the change without writing or using an approval.  Delivery options are named by name.  A sender change reaches every storefront on the same screen branding theme, and is refused for one that sends through the merchant's own mail server. 
+     * @param {Number} storefront_oid 
+     * @param {String} file_name 
+     * @param {String} If_Match The email's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest} transactional_email_update_request The fields to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved transactional_email.update request for exactly this change.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbTransactionalEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse}
+     */
+    updateSfvbTransactionalEmail(storefront_oid, file_name, If_Match, transactional_email_update_request, opts, callback) {
+      opts = opts || {};
+      let postBody = transactional_email_update_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'file_name' is set
+      if (file_name === undefined || file_name === null) {
+        throw new Error("Missing the required parameter 'file_name' when calling updateSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbTransactionalEmail");
+      }
+      // verify the required parameter 'transactional_email_update_request' is set
+      if (transactional_email_update_request === undefined || transactional_email_update_request === null) {
+        throw new Error("Missing the required parameter 'transactional_email_update_request' when calling updateSfvbTransactionalEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'file_name': file_name
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTransactionalEmailResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/transactional_emails/{file_name}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

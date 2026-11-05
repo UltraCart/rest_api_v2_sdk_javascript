@@ -1014,6 +1014,8 @@ import SfvbCommsListDetail from './com.ultracart.admin.v2.models/SfvbCommsListDe
 import SfvbCommsListResponse from './com.ultracart.admin.v2.models/SfvbCommsListResponse';
 import SfvbCommsListWriteRequest from './com.ultracart.admin.v2.models/SfvbCommsListWriteRequest';
 import SfvbCommsListsResponse from './com.ultracart.admin.v2.models/SfvbCommsListsResponse';
+import SfvbCommsMember from './com.ultracart.admin.v2.models/SfvbCommsMember';
+import SfvbCommsMembersResponse from './com.ultracart.admin.v2.models/SfvbCommsMembersResponse';
 import SfvbCommsPostcard from './com.ultracart.admin.v2.models/SfvbCommsPostcard';
 import SfvbCommsSegment from './com.ultracart.admin.v2.models/SfvbCommsSegment';
 import SfvbCommsSegmentDetail from './com.ultracart.admin.v2.models/SfvbCommsSegmentDetail';
@@ -1162,8 +1164,11 @@ import SfvbPageResponse from './com.ultracart.admin.v2.models/SfvbPageResponse';
 import SfvbPageSelectors from './com.ultracart.admin.v2.models/SfvbPageSelectors';
 import SfvbPageSettingsRequest from './com.ultracart.admin.v2.models/SfvbPageSettingsRequest';
 import SfvbPageSummary from './com.ultracart.admin.v2.models/SfvbPageSummary';
+import SfvbPostcardAddress from './com.ultracart.admin.v2.models/SfvbPostcardAddress';
+import SfvbPostcardCard from './com.ultracart.admin.v2.models/SfvbPostcardCard';
 import SfvbPostcardProofRequest from './com.ultracart.admin.v2.models/SfvbPostcardProofRequest';
 import SfvbPostcardProofResponse from './com.ultracart.admin.v2.models/SfvbPostcardProofResponse';
+import SfvbPostcardTrackingResponse from './com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse';
 import SfvbPreviewAccessRequest from './com.ultracart.admin.v2.models/SfvbPreviewAccessRequest';
 import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
@@ -1272,8 +1277,14 @@ import SfvbTrackingProviderSecrets from './com.ultracart.admin.v2.models/SfvbTra
 import SfvbTrackingProvidersResponse from './com.ultracart.admin.v2.models/SfvbTrackingProvidersResponse';
 import SfvbTrackingSettingsResponse from './com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse';
 import SfvbTrackingWholesaleTier from './com.ultracart.admin.v2.models/SfvbTrackingWholesaleTier';
+import SfvbTransactionalChange from './com.ultracart.admin.v2.models/SfvbTransactionalChange';
+import SfvbTransactionalDeliveryOption from './com.ultracart.admin.v2.models/SfvbTransactionalDeliveryOption';
 import SfvbTransactionalEmail from './com.ultracart.admin.v2.models/SfvbTransactionalEmail';
+import SfvbTransactionalEmailDetail from './com.ultracart.admin.v2.models/SfvbTransactionalEmailDetail';
+import SfvbTransactionalEmailResponse from './com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse';
+import SfvbTransactionalEmailUpdateRequest from './com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest';
 import SfvbTransactionalEmailsResponse from './com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse';
+import SfvbTransactionalSender from './com.ultracart.admin.v2.models/SfvbTransactionalSender';
 import SfvbUpsellItemLogic from './com.ultracart.admin.v2.models/SfvbUpsellItemLogic';
 import SfvbUpsellItemLogicItem from './com.ultracart.admin.v2.models/SfvbUpsellItemLogicItem';
 import SfvbUpsellOffer from './com.ultracart.admin.v2.models/SfvbUpsellOffer';
@@ -1443,7 +1454,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.230
+* @version 4.1.231
 */
 export {
     /**
@@ -7459,6 +7470,18 @@ export {
     SfvbCommsListsResponse,
 
     /**
+     * The SfvbCommsMember model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsMember}
+     */
+    SfvbCommsMember,
+
+    /**
+     * The SfvbCommsMembersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsMembersResponse}
+     */
+    SfvbCommsMembersResponse,
+
+    /**
      * The SfvbCommsPostcard model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsPostcard}
      */
@@ -8347,6 +8370,18 @@ export {
     SfvbPageSummary,
 
     /**
+     * The SfvbPostcardAddress model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPostcardAddress}
+     */
+    SfvbPostcardAddress,
+
+    /**
+     * The SfvbPostcardCard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPostcardCard}
+     */
+    SfvbPostcardCard,
+
+    /**
      * The SfvbPostcardProofRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPostcardProofRequest}
      */
@@ -8357,6 +8392,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbPostcardProofResponse}
      */
     SfvbPostcardProofResponse,
+
+    /**
+     * The SfvbPostcardTrackingResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse}
+     */
+    SfvbPostcardTrackingResponse,
 
     /**
      * The SfvbPreviewAccessRequest model constructor.
@@ -9007,16 +9048,52 @@ export {
     SfvbTrackingWholesaleTier,
 
     /**
+     * The SfvbTransactionalChange model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalChange}
+     */
+    SfvbTransactionalChange,
+
+    /**
+     * The SfvbTransactionalDeliveryOption model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalDeliveryOption}
+     */
+    SfvbTransactionalDeliveryOption,
+
+    /**
      * The SfvbTransactionalEmail model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmail}
      */
     SfvbTransactionalEmail,
 
     /**
+     * The SfvbTransactionalEmailDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailDetail}
+     */
+    SfvbTransactionalEmailDetail,
+
+    /**
+     * The SfvbTransactionalEmailResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse}
+     */
+    SfvbTransactionalEmailResponse,
+
+    /**
+     * The SfvbTransactionalEmailUpdateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest}
+     */
+    SfvbTransactionalEmailUpdateRequest,
+
+    /**
      * The SfvbTransactionalEmailsResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalEmailsResponse}
      */
     SfvbTransactionalEmailsResponse,
+
+    /**
+     * The SfvbTransactionalSender model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTransactionalSender}
+     */
+    SfvbTransactionalSender,
 
     /**
      * The SfvbUpsellItemLogic model constructor.
