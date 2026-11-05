@@ -17,7 +17,7 @@ import ItemContentMultimediaThumbnail from './ItemContentMultimediaThumbnail';
 /**
  * The ItemContentMultimedia model module.
  * @module com.ultracart.admin.v2.models/ItemContentMultimedia
- * @version 4.1.231
+ * @version 4.1.232
  */
 class ItemContentMultimedia {
     /**
@@ -48,6 +48,9 @@ class ItemContentMultimedia {
         if (data) {
             obj = obj || new ItemContentMultimedia();
 
+            if (data.hasOwnProperty('ai_alt_text')) {
+                obj['ai_alt_text'] = ApiClient.convertToType(data['ai_alt_text'], 'String');
+            }
             if (data.hasOwnProperty('cloud_url')) {
                 obj['cloud_url'] = ApiClient.convertToType(data['cloud_url'], 'String');
             }
@@ -102,6 +105,12 @@ class ItemContentMultimedia {
 
 
 }
+
+/**
+ * AI generated alt text for the image.  StoreFront uses this when description is empty.
+ * @member {String} ai_alt_text
+ */
+ItemContentMultimedia.prototype['ai_alt_text'] = undefined;
 
 /**
  * URL where the image can be downloaded from the cloud

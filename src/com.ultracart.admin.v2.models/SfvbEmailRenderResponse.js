@@ -18,7 +18,7 @@ import SfvbValidationResponse from './SfvbValidationResponse';
 /**
  * The SfvbEmailRenderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbEmailRenderResponse
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbEmailRenderResponse {
     /**

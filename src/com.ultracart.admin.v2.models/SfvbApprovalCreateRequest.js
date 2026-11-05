@@ -14,7 +14,10 @@
 import ApiClient from '../ApiClient';
 import SfvbAffiliateNetworkRequest from './SfvbAffiliateNetworkRequest';
 import SfvbApprovalParams from './SfvbApprovalParams';
+import SfvbCommsProviderImportRequest from './SfvbCommsProviderImportRequest';
 import SfvbCommsSegmentWriteRequest from './SfvbCommsSegmentWriteRequest';
+import SfvbCommsSettingsUpdateRequest from './SfvbCommsSettingsUpdateRequest';
+import SfvbCommsTestPostcardRequest from './SfvbCommsTestPostcardRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
@@ -27,7 +30,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -64,6 +67,12 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('affiliate_network')) {
                 obj['affiliate_network'] = SfvbAffiliateNetworkRequest.constructFromObject(data['affiliate_network']);
             }
+            if (data.hasOwnProperty('comms_list_import')) {
+                obj['comms_list_import'] = SfvbCommsProviderImportRequest.constructFromObject(data['comms_list_import']);
+            }
+            if (data.hasOwnProperty('comms_settings')) {
+                obj['comms_settings'] = SfvbCommsSettingsUpdateRequest.constructFromObject(data['comms_settings']);
+            }
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
             }
@@ -78,6 +87,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('params')) {
                 obj['params'] = SfvbApprovalParams.constructFromObject(data['params']);
+            }
+            if (data.hasOwnProperty('postcard_test_mail')) {
+                obj['postcard_test_mail'] = SfvbCommsTestPostcardRequest.constructFromObject(data['postcard_test_mail']);
             }
             if (data.hasOwnProperty('reason')) {
                 obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
@@ -119,6 +131,16 @@ SfvbApprovalCreateRequest.prototype['action'] = undefined;
 SfvbApprovalCreateRequest.prototype['affiliate_network'] = undefined;
 
 /**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCommsProviderImportRequest} comms_list_import
+ */
+SfvbApprovalCreateRequest.prototype['comms_list_import'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCommsSettingsUpdateRequest} comms_settings
+ */
+SfvbApprovalCreateRequest.prototype['comms_settings'] = undefined;
+
+/**
  * For a file.put_script write, the exact script to be written, at most 256 KB.  For tracking_html.put, the exact HTML the write will send, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
  * @member {String} content
  */
@@ -144,6 +166,11 @@ SfvbApprovalCreateRequest.prototype['item_pricing'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbApprovalParams} params
  */
 SfvbApprovalCreateRequest.prototype['params'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCommsTestPostcardRequest} postcard_test_mail
+ */
+SfvbApprovalCreateRequest.prototype['postcard_test_mail'] = undefined;
 
 /**
  * Why the agent wants to do this, in a sentence.  Shown to the person as unverified text, capped at 500 characters.
@@ -329,7 +356,25 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "transactional_email.update"
      * @const
      */
-    "transactional_email.update": "transactional_email.update"
+    "transactional_email.update": "transactional_email.update",
+
+    /**
+     * value: "comms_settings.update"
+     * @const
+     */
+    "comms_settings.update": "comms_settings.update",
+
+    /**
+     * value: "comms_list.import"
+     * @const
+     */
+    "comms_list.import": "comms_list.import",
+
+    /**
+     * value: "postcard.test_mail"
+     * @const
+     */
+    "postcard.test_mail": "postcard.test_mail"
 };
 
 

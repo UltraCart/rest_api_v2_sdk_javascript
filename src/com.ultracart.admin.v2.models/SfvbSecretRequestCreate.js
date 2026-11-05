@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSecretRequestCreate model module.
  * @module com.ultracart.admin.v2.models/SfvbSecretRequestCreate
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbSecretRequestCreate {
     /**

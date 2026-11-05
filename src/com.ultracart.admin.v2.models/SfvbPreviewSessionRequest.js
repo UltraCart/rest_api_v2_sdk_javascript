@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPreviewSessionRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionRequest
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbPreviewSessionRequest {
     /**

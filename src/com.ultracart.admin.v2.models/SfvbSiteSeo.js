@@ -17,7 +17,7 @@ import SfvbSiteSeoChange from './SfvbSiteSeoChange';
 /**
  * The SfvbSiteSeo model module.
  * @module com.ultracart.admin.v2.models/SfvbSiteSeo
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbSiteSeo {
     /**

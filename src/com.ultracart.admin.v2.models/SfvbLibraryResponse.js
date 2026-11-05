@@ -18,7 +18,7 @@ import SfvbLibraryFacet from './SfvbLibraryFacet';
 /**
  * The SfvbLibraryResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryResponse
- * @version 4.1.231
+ * @version 4.1.232
  */
 class SfvbLibraryResponse {
     /**

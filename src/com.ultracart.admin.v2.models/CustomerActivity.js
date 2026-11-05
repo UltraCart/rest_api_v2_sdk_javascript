@@ -20,7 +20,7 @@ import Property from './Property';
 /**
  * The CustomerActivity model module.
  * @module com.ultracart.admin.v2.models/CustomerActivity
- * @version 4.1.231
+ * @version 4.1.232
  */
 class CustomerActivity {
     /**
