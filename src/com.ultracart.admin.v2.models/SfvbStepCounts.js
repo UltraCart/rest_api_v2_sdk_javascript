@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbStepCounts model module.
  * @module com.ultracart.admin.v2.models/SfvbStepCounts
- * @version 4.1.229
+ * @version 4.1.230
  */
 class SfvbStepCounts {
     /**
@@ -118,7 +118,7 @@ SfvbStepCounts.prototype['sent'] = undefined;
 SfvbStepCounts.prototype['skipped'] = undefined;
 
 /**
- * email (the step's email, all time) or step (this step, the last 90 days).
+ * email (the step's email, all time), sequence (the begin step, customers who started the sequence, all time) or step (this step, the last 90 days).
  * @member {String} source
  */
 SfvbStepCounts.prototype['source'] = undefined;

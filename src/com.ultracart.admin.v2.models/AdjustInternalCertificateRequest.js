@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AdjustInternalCertificateRequest model module.
  * @module com.ultracart.admin.v2.models/AdjustInternalCertificateRequest
- * @version 4.1.229
+ * @version 4.1.230
  */
 class AdjustInternalCertificateRequest {
     /**

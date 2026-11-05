@@ -17,7 +17,7 @@ import SfvbAffiliateNetwork from './SfvbAffiliateNetwork';
 /**
  * The SfvbAffiliateNetworksResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbAffiliateNetworksResponse
- * @version 4.1.229
+ * @version 4.1.230
  */
 class SfvbAffiliateNetworksResponse {
     /**

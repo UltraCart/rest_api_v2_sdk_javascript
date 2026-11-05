@@ -17,7 +17,7 @@ import ItemAutoOrderStep from './ItemAutoOrderStep';
 /**
  * The ItemAutoOrder model module.
  * @module com.ultracart.admin.v2.models/ItemAutoOrder
- * @version 4.1.229
+ * @version 4.1.230
  */
 class ItemAutoOrder {
     /**
@@ -77,6 +77,15 @@ class ItemAutoOrder {
             }
             if (data.hasOwnProperty('auto_order_downgrade_items')) {
                 obj['auto_order_downgrade_items'] = ApiClient.convertToType(data['auto_order_downgrade_items'], ['String']);
+            }
+            if (data.hasOwnProperty('auto_order_myaccount_frequency_day_counts')) {
+                obj['auto_order_myaccount_frequency_day_counts'] = ApiClient.convertToType(data['auto_order_myaccount_frequency_day_counts'], ['Number']);
+            }
+            if (data.hasOwnProperty('auto_order_myaccount_frequency_last_step_only')) {
+                obj['auto_order_myaccount_frequency_last_step_only'] = ApiClient.convertToType(data['auto_order_myaccount_frequency_last_step_only'], 'Boolean');
+            }
+            if (data.hasOwnProperty('auto_order_myaccount_frequency_schedules')) {
+                obj['auto_order_myaccount_frequency_schedules'] = ApiClient.convertToType(data['auto_order_myaccount_frequency_schedules'], ['String']);
             }
             if (data.hasOwnProperty('auto_order_paused')) {
                 obj['auto_order_paused'] = ApiClient.convertToType(data['auto_order_paused'], 'Boolean');
@@ -180,6 +189,24 @@ ItemAutoOrder.prototype['auto_order_cancel_minimum_rebill_value'] = undefined;
  * @member {Array.<String>} auto_order_downgrade_items
  */
 ItemAutoOrder.prototype['auto_order_downgrade_items'] = undefined;
+
+/**
+ * Day counts (1 to 365, at most 20) a customer may switch this auto-enrolled item to from MyAccount, for example [30, 60, 90].  Requires the advanced auto order settings to be enabled on the account.  Omit to leave unchanged; send an empty array to clear.
+ * @member {Array.<Number>} auto_order_myaccount_frequency_day_counts
+ */
+ItemAutoOrder.prototype['auto_order_myaccount_frequency_day_counts'] = undefined;
+
+/**
+ * True if the MyAccount frequency change is only offered once the item is on its last auto order step.  Omit to leave unchanged.
+ * @member {Boolean} auto_order_myaccount_frequency_last_step_only
+ */
+ItemAutoOrder.prototype['auto_order_myaccount_frequency_last_step_only'] = undefined;
+
+/**
+ * Standard schedules a customer may switch this auto-enrolled item to from MyAccount.  Requires the advanced auto order settings to be enabled on the account.  Omit to leave unchanged; send an empty array to clear.
+ * @member {Array.<String>} auto_order_myaccount_frequency_schedules
+ */
+ItemAutoOrder.prototype['auto_order_myaccount_frequency_schedules'] = undefined;
 
 /**
  * True if the rebill processing of this item is paused

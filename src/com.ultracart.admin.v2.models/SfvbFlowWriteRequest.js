@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFlowWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFlowWriteRequest
- * @version 4.1.229
+ * @version 4.1.230
  */
 class SfvbFlowWriteRequest {
     /**
@@ -142,13 +142,13 @@ SfvbFlowWriteRequest.prototype['sending_name'] = undefined;
 SfvbFlowWriteRequest.prototype['sending_user'] = undefined;
 
 /**
- * The list or segment uuid for a list or segment trigger.  Create only.
+ * The list or segment uuid for a list or segment trigger.  Cleared when the trigger changes to one that takes none.
  * @member {String} trigger_parameter
  */
 SfvbFlowWriteRequest.prototype['trigger_parameter'] = undefined;
 
 /**
- * What enrolls a customer, such as cart abandoned.  Create only.
+ * What enrolls a customer, such as cart abandoned.  Required to create.  On a change, only while the flow is off.
  * @member {String} trigger_type
  */
 SfvbFlowWriteRequest.prototype['trigger_type'] = undefined;

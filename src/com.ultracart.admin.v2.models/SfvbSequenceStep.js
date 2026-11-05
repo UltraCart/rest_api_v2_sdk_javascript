@@ -17,7 +17,7 @@ import SfvbSequenceBranch from './SfvbSequenceBranch';
 /**
  * The SfvbSequenceStep model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStep
- * @version 4.1.229
+ * @version 4.1.230
  */
 class SfvbSequenceStep {
     /**
@@ -152,7 +152,7 @@ SfvbSequenceStep.prototype['email_uuids'] = undefined;
 SfvbSequenceStep.prototype['filter_profile_equation_json'] = undefined;
 
 /**
- * The hash of the step's type, stored settings and audience filter.  Send it back as If-Match when changing the step.
+ * The hash of the step's type, stored settings and audience filter.  Send it back as If-Match when changing the step.  What a running flow records in the settings (a resend step's resend mappings, a rate limiter's inventory refresh time, an experiment's winner) doesn't count.  An email step's smartSending and magicLink are the email's own settings, so the email's hash_sha256 guards them, not this one.
  * @member {String} hash_sha256
  */
 SfvbSequenceStep.prototype['hash_sha256'] = undefined;

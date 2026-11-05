@@ -1004,7 +1004,15 @@ import SfvbCodeLibraryEmail from './com.ultracart.admin.v2.models/SfvbCodeLibrar
 import SfvbCodeLibraryEmailsResponse from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
 import SfvbCommsDnsRecord from './com.ultracart.admin.v2.models/SfvbCommsDnsRecord';
 import SfvbCommsEmail from './com.ultracart.admin.v2.models/SfvbCommsEmail';
+import SfvbCommsFolder from './com.ultracart.admin.v2.models/SfvbCommsFolder';
+import SfvbCommsFolderItem from './com.ultracart.admin.v2.models/SfvbCommsFolderItem';
+import SfvbCommsFolderResponse from './com.ultracart.admin.v2.models/SfvbCommsFolderResponse';
+import SfvbCommsFolderWriteRequest from './com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest';
+import SfvbCommsFoldersResponse from './com.ultracart.admin.v2.models/SfvbCommsFoldersResponse';
 import SfvbCommsList from './com.ultracart.admin.v2.models/SfvbCommsList';
+import SfvbCommsListDetail from './com.ultracart.admin.v2.models/SfvbCommsListDetail';
+import SfvbCommsListResponse from './com.ultracart.admin.v2.models/SfvbCommsListResponse';
+import SfvbCommsListWriteRequest from './com.ultracart.admin.v2.models/SfvbCommsListWriteRequest';
 import SfvbCommsListsResponse from './com.ultracart.admin.v2.models/SfvbCommsListsResponse';
 import SfvbCommsPostcard from './com.ultracart.admin.v2.models/SfvbCommsPostcard';
 import SfvbCommsSegment from './com.ultracart.admin.v2.models/SfvbCommsSegment';
@@ -1435,7 +1443,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.229
+* @version 4.1.230
 */
 export {
     /**
@@ -7391,10 +7399,58 @@ export {
     SfvbCommsEmail,
 
     /**
+     * The SfvbCommsFolder model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsFolder}
+     */
+    SfvbCommsFolder,
+
+    /**
+     * The SfvbCommsFolderItem model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsFolderItem}
+     */
+    SfvbCommsFolderItem,
+
+    /**
+     * The SfvbCommsFolderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsFolderResponse}
+     */
+    SfvbCommsFolderResponse,
+
+    /**
+     * The SfvbCommsFolderWriteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest}
+     */
+    SfvbCommsFolderWriteRequest,
+
+    /**
+     * The SfvbCommsFoldersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsFoldersResponse}
+     */
+    SfvbCommsFoldersResponse,
+
+    /**
      * The SfvbCommsList model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsList}
      */
     SfvbCommsList,
+
+    /**
+     * The SfvbCommsListDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsListDetail}
+     */
+    SfvbCommsListDetail,
+
+    /**
+     * The SfvbCommsListResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsListResponse}
+     */
+    SfvbCommsListResponse,
+
+    /**
+     * The SfvbCommsListWriteRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsListWriteRequest}
+     */
+    SfvbCommsListWriteRequest,
 
     /**
      * The SfvbCommsListsResponse model constructor.
