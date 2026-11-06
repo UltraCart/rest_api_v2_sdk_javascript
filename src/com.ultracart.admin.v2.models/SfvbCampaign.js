@@ -19,7 +19,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbCampaign model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaign
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbCampaign {
     /**
@@ -70,6 +70,12 @@ class SfvbCampaign {
             }
             if (data.hasOwnProperty('end_once_customer_purchases_anywhere')) {
                 obj['end_once_customer_purchases_anywhere'] = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
+            }
+            if (data.hasOwnProperty('folder_name')) {
+                obj['folder_name'] = ApiClient.convertToType(data['folder_name'], 'String');
+            }
+            if (data.hasOwnProperty('folder_uuid')) {
+                obj['folder_uuid'] = ApiClient.convertToType(data['folder_uuid'], 'String');
             }
             if (data.hasOwnProperty('hash_sha256')) {
                 obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
@@ -158,6 +164,18 @@ SfvbCampaign.prototype['end_once_customer_purchases'] = undefined;
  * @member {Boolean} end_once_customer_purchases_anywhere
  */
 SfvbCampaign.prototype['end_once_customer_purchases_anywhere'] = undefined;
+
+/**
+ * That folder's name.
+ * @member {String} folder_name
+ */
+SfvbCampaign.prototype['folder_name'] = undefined;
+
+/**
+ * The campaign folder it is filed in, or none.
+ * @member {String} folder_uuid
+ */
+SfvbCampaign.prototype['folder_uuid'] = undefined;
 
 /**
  * Send this as If-Match when changing or archiving the campaign.

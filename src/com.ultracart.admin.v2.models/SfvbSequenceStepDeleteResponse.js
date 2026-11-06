@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSequenceStepDeleteResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStepDeleteResponse
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbSequenceStepDeleteResponse {
     /**

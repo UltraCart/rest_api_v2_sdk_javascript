@@ -37,16 +37,21 @@ import SfvbCommsFoldersResponse from '../com.ultracart.admin.v2.models/SfvbComms
 import SfvbCommsListResponse from '../com.ultracart.admin.v2.models/SfvbCommsListResponse';
 import SfvbCommsListWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsListWriteRequest';
 import SfvbCommsListsResponse from '../com.ultracart.admin.v2.models/SfvbCommsListsResponse';
+import SfvbCommsLookupResponse from '../com.ultracart.admin.v2.models/SfvbCommsLookupResponse';
 import SfvbCommsMembersResponse from '../com.ultracart.admin.v2.models/SfvbCommsMembersResponse';
 import SfvbCommsPlanResponse from '../com.ultracart.admin.v2.models/SfvbCommsPlanResponse';
 import SfvbCommsProviderImportRequest from '../com.ultracart.admin.v2.models/SfvbCommsProviderImportRequest';
 import SfvbCommsProviderImportResponse from '../com.ultracart.admin.v2.models/SfvbCommsProviderImportResponse';
 import SfvbCommsProvidersResponse from '../com.ultracart.admin.v2.models/SfvbCommsProvidersResponse';
+import SfvbCommsRulerValidateRequest from '../com.ultracart.admin.v2.models/SfvbCommsRulerValidateRequest';
+import SfvbCommsRulerValidateResponse from '../com.ultracart.admin.v2.models/SfvbCommsRulerValidateResponse';
 import SfvbCommsSegmentResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
 import SfvbCommsSegmentWriteRequest from '../com.ultracart.admin.v2.models/SfvbCommsSegmentWriteRequest';
 import SfvbCommsSegmentsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSegmentsResponse';
 import SfvbCommsSendingDomain from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
+import SfvbCommsSequenceFolderResponse from '../com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse';
+import SfvbCommsSequenceFoldersResponse from '../com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse';
 import SfvbCommsSequenceStatsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSequenceStatsResponse';
 import SfvbCommsSettingsResponse from '../com.ultracart.admin.v2.models/SfvbCommsSettingsResponse';
 import SfvbCommsSettingsUpdateRequest from '../com.ultracart.admin.v2.models/SfvbCommsSettingsUpdateRequest';
@@ -58,6 +63,7 @@ import SfvbCommsTestSendResponse from '../com.ultracart.admin.v2.models/SfvbComm
 import SfvbCommsTestSmsRequest from '../com.ultracart.admin.v2.models/SfvbCommsTestSmsRequest';
 import SfvbCommsTwilioAccount from '../com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
 import SfvbCommsTwilioAccountResponse from '../com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse';
+import SfvbCommsUnreferencedResponse from '../com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse';
 import SfvbCompileRequest from '../com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from '../com.ultracart.admin.v2.models/SfvbCompileResponse';
 import SfvbContainerResponse from '../com.ultracart.admin.v2.models/SfvbContainerResponse';
@@ -92,6 +98,8 @@ import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWrite
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
 import SfvbFlow from '../com.ultracart.admin.v2.models/SfvbFlow';
+import SfvbFlowBackfillRequest from '../com.ultracart.admin.v2.models/SfvbFlowBackfillRequest';
+import SfvbFlowBackfillResponse from '../com.ultracart.admin.v2.models/SfvbFlowBackfillResponse';
 import SfvbFlowStatusRequest from '../com.ultracart.admin.v2.models/SfvbFlowStatusRequest';
 import SfvbFlowWriteRequest from '../com.ultracart.admin.v2.models/SfvbFlowWriteRequest';
 import SfvbFlowsResponse from '../com.ultracart.admin.v2.models/SfvbFlowsResponse';
@@ -243,7 +251,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.232
+* @version 4.1.233
 */
 export default class SfvbApi {
 
@@ -695,6 +703,64 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}/images/attach', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the backfillSfvbCommsFlow operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~backfillSfvbCommsFlowCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFlowBackfillResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Back populate a live flow, or count who it would enroll
+     * Enrolls customers who would have met the flow's trigger before it existed: a segment trigger's members, or the orders of the last order_days_old days (1 to 90, default 5, every storefront on the account) for an order trigger, up to the plan's customer limit.  The flow must be on.  dry_run counts them and enrolls nobody.  A real backfill needs sfvb_publish, the sign-in of a person, and an approved flow.backfill request for exactly this flow and window; it runs in the background and mails each customer through the flow. 
+     * @param {Number} storefront_oid 
+     * @param {String} flow_uuid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbFlowBackfillRequest} flow_backfill_request The window and dry_run
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved flow.backfill request for exactly this flow and window.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~backfillSfvbCommsFlowCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFlowBackfillResponse}
+     */
+    backfillSfvbCommsFlow(storefront_oid, flow_uuid, flow_backfill_request, opts, callback) {
+      opts = opts || {};
+      let postBody = flow_backfill_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling backfillSfvbCommsFlow");
+      }
+      // verify the required parameter 'flow_uuid' is set
+      if (flow_uuid === undefined || flow_uuid === null) {
+        throw new Error("Missing the required parameter 'flow_uuid' when calling backfillSfvbCommsFlow");
+      }
+      // verify the required parameter 'flow_backfill_request' is set
+      if (flow_backfill_request === undefined || flow_backfill_request === null) {
+        throw new Error("Missing the required parameter 'flow_backfill_request' when calling backfillSfvbCommsFlow");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'flow_uuid': flow_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbFlowBackfillResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/comms/flows/{flow_uuid}/backfill', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1325,6 +1391,116 @@ export default class SfvbApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbCommsCampaignFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsCampaignFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a campaign folder
+     * Its campaigns are kept and filed under no folder, as the admin does; items names each one.  Send the folder's hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can't be deleted here. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {String} If_Match The folder's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsCampaignFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    deleteSfvbCommsCampaignFolder(storefront_oid, folder_uuid, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling deleteSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbCommsCampaignFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSfvbCommsFlowFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsFlowFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a flow folder
+     * Its flows are kept and filed under no folder, as the admin does; items names each one.  Send the folder's hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can't be deleted here. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {String} If_Match The folder's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbCommsFlowFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    deleteSfvbCommsFlowFolder(storefront_oid, folder_uuid, If_Match, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling deleteSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling deleteSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling deleteSfvbCommsFlowFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3588,6 +3764,98 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbCommsCampaignFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsCampaignFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one campaign folder
+     * The folder, with the name and uuid of each campaign filed in it. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsCampaignFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    getSfvbCommsCampaignFolder(storefront_oid, folder_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling getSfvbCommsCampaignFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsCampaignFolders operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsCampaignFoldersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the campaign folders
+     * Each campaign folder with how many campaigns are filed in it, whether the admin made it, and its hash_sha256. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsCampaignFoldersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse}
+     */
+    getSfvbCommsCampaignFolders(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsCampaignFolders");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFoldersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaign_folders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbCommsDashboardStats operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsDashboardStatsCallback
      * @param {String} error Error message, if any.
@@ -3688,6 +3956,98 @@ export default class SfvbApi {
       let returnType = SfvbCommsClicksResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/comms/sequences/{commseq_uuid}/emails/{email_uuid}/clicks', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsFlowFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsFlowFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read one flow folder
+     * The folder, with the name and uuid of each flow filed in it. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsFlowFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    getSfvbCommsFlowFolder(storefront_oid, folder_uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling getSfvbCommsFlowFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsFlowFolders operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsFlowFoldersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the flow folders
+     * Each flow folder with how many flows are filed in it, whether the admin made it, and its hash_sha256. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsFlowFoldersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse}
+     */
+    getSfvbCommsFlowFolders(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsFlowFolders");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFoldersResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flow_folders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -3886,6 +4246,49 @@ export default class SfvbApi {
       let returnType = SfvbCommsMembersResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/lists/{list_uuid}/members', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsLookup operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsLookupCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsLookupResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find which storefront a communications uuid lives on
+     * Takes a campaign, flow, sequence, step, email, postcard, list or segment uuid and says which of this account's storefronts it is on, what it is, the campaign or flow it belongs to, and the command that reads it.  A uuid nothing on this account has, another account's included, is 404.  Read only. 
+     * @param {String} uuid The uuid to find.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsLookupCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsLookupResponse}
+     */
+    getSfvbCommsLookup(uuid, callback) {
+      let postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling getSfvbCommsLookup");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'uuid': uuid
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsLookupResponse;
+      return this.apiClient.callApi(
+        '/sfvb/comms/lookup', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4269,7 +4672,7 @@ export default class SfvbApi {
 
     /**
      * Read one saved email template's body
-     * A system template or one saved on this storefront; any other is 404.  container_cjson is the body.  The Velocity template it renders inside is named in email_template_vm_path, not shown.  Read only. 
+     * A system template or one saved on this storefront; any other is 404.  container_cjson is the body.  The Velocity template it renders inside is the theme file at template_path; read it with the files endpoints.  Read only. 
      * @param {Number} storefront_oid 
      * @param {Number} email_template_oid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsTemplateCallback} callback The callback function, accepting three arguments: error, data, response
@@ -4383,6 +4786,49 @@ export default class SfvbApi {
       let returnType = SfvbCommsTwilioAccountResponse;
       return this.apiClient.callApi(
         '/sfvb/comms/twilio_account', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCommsUnreferenced operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsUnreferencedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List the emails and postcards on a storefront that no step names
+     * An email or postcard no step of any sequence on this storefront names, an off or archived flow's included, so nothing sends it.  The admin's add can leave one when its second call fails.  Most recently changed first.  Read only, nothing is deleted. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsUnreferencedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse}
+     */
+    getSfvbCommsUnreferenced(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCommsUnreferenced");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsUnreferencedResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/comms/unreferenced', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -4557,7 +5003,7 @@ export default class SfvbApi {
 
     /**
      * Get a flow or campaign email's subject and preview text
-     * The subject, preview text and hash_sha256 to send as If-Match when updating them, with whether the email is live and its review state.  The body is the email container (owner type email).  Find the uuid in the storefront's campaigns and flows. 
+     * The subject, preview text and hash_sha256 to send as If-Match when updating them, with whether the email is live and its review state.  The body is the email container (owner type email).  The Velocity template it renders inside is the theme file at template_path; read it with the files endpoints, whose read reports valid and velocity_errors.  Find the uuid in the storefront's campaigns and flows. 
      * @param {Number} storefront_oid 
      * @param {String} email_uuid 
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbEmailCallback} callback The callback function, accepting three arguments: error, data, response
@@ -7901,6 +8347,102 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbCommsCampaignFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsCampaignFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a campaign folder
+     * A new, empty folder.  File a campaign in it by setting its folder_uuid. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest} folder_write_request The new folder's name
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsCampaignFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    insertSfvbCommsCampaignFolder(storefront_oid, folder_write_request, callback) {
+      let postBody = folder_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'folder_write_request' is set
+      if (folder_write_request === undefined || folder_write_request === null) {
+        throw new Error("Missing the required parameter 'folder_write_request' when calling insertSfvbCommsCampaignFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaign_folders', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbCommsFlowFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsFlowFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a flow folder
+     * A new, empty folder.  File a flow in it by setting its folder_uuid. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest} folder_write_request The new folder's name
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCommsFlowFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    insertSfvbCommsFlowFolder(storefront_oid, folder_write_request, callback) {
+      let postBody = folder_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'folder_write_request' is set
+      if (folder_write_request === undefined || folder_write_request === null) {
+        throw new Error("Missing the required parameter 'folder_write_request' when calling insertSfvbCommsFlowFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flow_folders', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -12703,6 +13245,126 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the updateSfvbCommsCampaignFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsCampaignFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Rename a campaign folder
+     * Send the folder's hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can't be renamed here. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {String} If_Match The folder's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest} folder_write_request The new name
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsCampaignFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    updateSfvbCommsCampaignFolder(storefront_oid, folder_uuid, If_Match, folder_write_request, callback) {
+      let postBody = folder_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling updateSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbCommsCampaignFolder");
+      }
+      // verify the required parameter 'folder_write_request' is set
+      if (folder_write_request === undefined || folder_write_request === null) {
+        throw new Error("Missing the required parameter 'folder_write_request' when calling updateSfvbCommsCampaignFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbCommsFlowFolder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsFlowFolderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Rename a flow folder
+     * Send the folder's hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can't be renamed here. 
+     * @param {Number} storefront_oid 
+     * @param {String} folder_uuid 
+     * @param {String} If_Match The folder's hash_sha256 from the last read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsFolderWriteRequest} folder_write_request The new name
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsFlowFolderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    updateSfvbCommsFlowFolder(storefront_oid, folder_uuid, If_Match, folder_write_request, callback) {
+      let postBody = folder_write_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'folder_uuid' is set
+      if (folder_uuid === undefined || folder_uuid === null) {
+        throw new Error("Missing the required parameter 'folder_uuid' when calling updateSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling updateSfvbCommsFlowFolder");
+      }
+      // verify the required parameter 'folder_write_request' is set
+      if (folder_write_request === undefined || folder_write_request === null) {
+        throw new Error("Missing the required parameter 'folder_write_request' when calling updateSfvbCommsFlowFolder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'folder_uuid': folder_uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': If_Match
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsSequenceFolderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the updateSfvbCommsFolder operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbCommsFolderCallback
      * @param {String} error Error message, if any.
@@ -14141,6 +14803,54 @@ export default class SfvbApi {
       let returnType = SfvbValidationResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/validate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateSfvbCommsRuler operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~validateSfvbCommsRulerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsRulerValidateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check an Event Ruler pattern for an Is in BigQuery segment rule
+     * Compiles the pattern the way an Is in BigQuery segment rule's bigquery_ruler is checked, and says whether it is valid and, if not, why.  An invalid pattern is a 200 with valid false.  Nothing is read or saved.  A segment create or update refuses a rule whose pattern doesn't compile, or whose bigquery_table_id isn't project.dataset.table. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCommsRulerValidateRequest} ruler_validate_request The pattern to check
+     * @param {module:com.ultracart.admin.v2/SfvbApi~validateSfvbCommsRulerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsRulerValidateResponse}
+     */
+    validateSfvbCommsRuler(storefront_oid, ruler_validate_request, callback) {
+      let postBody = ruler_validate_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling validateSfvbCommsRuler");
+      }
+      // verify the required parameter 'ruler_validate_request' is set
+      if (ruler_validate_request === undefined || ruler_validate_request === null) {
+        throw new Error("Missing the required parameter 'ruler_validate_request' when calling validateSfvbCommsRuler");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCommsRulerValidateResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/comms/ruler/validate', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

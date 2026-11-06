@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsStat model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsStat
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbCommsStat {
     /**
@@ -118,7 +118,7 @@ class SfvbCommsStat {
 SfvbCommsStat.prototype['bounced'] = undefined;
 
 /**
- * email, sms, postcard, branch or sequence.
+ * email, sms, postcard, branch or sequence, or step for a step type that records no counts of its own, with every count named in not_measured.
  * @member {String} channel
  */
 SfvbCommsStat.prototype['channel'] = undefined;

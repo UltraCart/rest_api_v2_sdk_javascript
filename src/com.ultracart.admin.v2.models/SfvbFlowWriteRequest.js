@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFlowWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFlowWriteRequest
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbFlowWriteRequest {
     /**
@@ -55,6 +55,9 @@ class SfvbFlowWriteRequest {
             }
             if (data.hasOwnProperty('end_once_customer_purchases_anywhere')) {
                 obj['end_once_customer_purchases_anywhere'] = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
+            }
+            if (data.hasOwnProperty('folder_uuid')) {
+                obj['folder_uuid'] = ApiClient.convertToType(data['folder_uuid'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -104,6 +107,12 @@ SfvbFlowWriteRequest.prototype['end_once_customer_purchases'] = undefined;
  * @member {Boolean} end_once_customer_purchases_anywhere
  */
 SfvbFlowWriteRequest.prototype['end_once_customer_purchases_anywhere'] = undefined;
+
+/**
+ * File it in this flow folder.  An empty value takes it out of its folder.
+ * @member {String} folder_uuid
+ */
+SfvbFlowWriteRequest.prototype['folder_uuid'] = undefined;
 
 /**
  * The flow name, 1 to 250 characters.  Required to create.

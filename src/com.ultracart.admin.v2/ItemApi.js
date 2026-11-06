@@ -38,7 +38,7 @@ import TempMultimediaResponse from '../com.ultracart.admin.v2.models/TempMultime
 /**
 * Item service.
 * @module com.ultracart.admin.v2/ItemApi
-* @version 4.1.232
+* @version 4.1.233
 */
 export default class ItemApi {
 

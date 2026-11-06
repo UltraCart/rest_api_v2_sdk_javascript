@@ -22,7 +22,7 @@ import Warning from './Warning';
 /**
  * The ScreenRecordingQueryResponse model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingQueryResponse
- * @version 4.1.232
+ * @version 4.1.233
  */
 class ScreenRecordingQueryResponse {
     /**

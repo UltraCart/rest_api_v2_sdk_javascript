@@ -17,7 +17,7 @@ import SfvbCampaignMembership from './SfvbCampaignMembership';
 /**
  * The SfvbCampaignWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaignWriteRequest
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbCampaignWriteRequest {
     /**
@@ -53,6 +53,9 @@ class SfvbCampaignWriteRequest {
             }
             if (data.hasOwnProperty('end_once_customer_purchases_anywhere')) {
                 obj['end_once_customer_purchases_anywhere'] = ApiClient.convertToType(data['end_once_customer_purchases_anywhere'], 'Boolean');
+            }
+            if (data.hasOwnProperty('folder_uuid')) {
+                obj['folder_uuid'] = ApiClient.convertToType(data['folder_uuid'], 'String');
             }
             if (data.hasOwnProperty('memberships')) {
                 obj['memberships'] = ApiClient.convertToType(data['memberships'], [SfvbCampaignMembership]);
@@ -90,6 +93,12 @@ SfvbCampaignWriteRequest.prototype['end_once_customer_purchases'] = undefined;
  * @member {Boolean} end_once_customer_purchases_anywhere
  */
 SfvbCampaignWriteRequest.prototype['end_once_customer_purchases_anywhere'] = undefined;
+
+/**
+ * File it in this campaign folder.  An empty value takes it out of its folder.
+ * @member {String} folder_uuid
+ */
+SfvbCampaignWriteRequest.prototype['folder_uuid'] = undefined;
 
 /**
  * The lists and segments it sends to or leaves out.  Replaces the whole set.  An empty array clears it.

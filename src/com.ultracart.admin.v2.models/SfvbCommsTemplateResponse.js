@@ -17,7 +17,7 @@ import SfvbCommsTemplate from './SfvbCommsTemplate';
 /**
  * The SfvbCommsTemplateResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsTemplateResponse
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbCommsTemplateResponse {
     /**
@@ -60,6 +60,15 @@ class SfvbCommsTemplateResponse {
             if (data.hasOwnProperty('template')) {
                 obj['template'] = SfvbCommsTemplate.constructFromObject(data['template']);
             }
+            if (data.hasOwnProperty('template_exists')) {
+                obj['template_exists'] = ApiClient.convertToType(data['template_exists'], 'Boolean');
+            }
+            if (data.hasOwnProperty('template_note')) {
+                obj['template_note'] = ApiClient.convertToType(data['template_note'], 'String');
+            }
+            if (data.hasOwnProperty('template_path')) {
+                obj['template_path'] = ApiClient.convertToType(data['template_path'], 'String');
+            }
         }
         return obj;
     }
@@ -74,7 +83,7 @@ class SfvbCommsTemplateResponse {
 SfvbCommsTemplateResponse.prototype['container_cjson'] = undefined;
 
 /**
- * The Velocity template it renders inside.  Its content isn't shown here.
+ * The Velocity template it renders inside, as stored.  It is looked up in the storefront's active theme.
  * @member {String} email_template_vm_path
  */
 SfvbCommsTemplateResponse.prototype['email_template_vm_path'] = undefined;
@@ -89,6 +98,24 @@ SfvbCommsTemplateResponse.prototype['notes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbCommsTemplate} template
  */
 SfvbCommsTemplateResponse.prototype['template'] = undefined;
+
+/**
+ * True when the file at template_path exists.
+ * @member {Boolean} template_exists
+ */
+SfvbCommsTemplateResponse.prototype['template_exists'] = undefined;
+
+/**
+ * Why there is no template file, or null when there is one.
+ * @member {String} template_note
+ */
+SfvbCommsTemplateResponse.prototype['template_note'] = undefined;
+
+/**
+ * The theme file that template is, as a render finds it.  Read it with the files endpoints, whose read also reports valid and velocity_errors.  Null when it couldn't be worked out, with template_note saying why.
+ * @member {String} template_path
+ */
+SfvbCommsTemplateResponse.prototype['template_path'] = undefined;
 
 
 

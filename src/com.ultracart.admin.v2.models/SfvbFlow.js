@@ -18,7 +18,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbFlow model module.
  * @module com.ultracart.admin.v2.models/SfvbFlow
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbFlow {
     /**
@@ -72,6 +72,12 @@ class SfvbFlow {
             }
             if (data.hasOwnProperty('flow_uuid')) {
                 obj['flow_uuid'] = ApiClient.convertToType(data['flow_uuid'], 'String');
+            }
+            if (data.hasOwnProperty('folder_name')) {
+                obj['folder_name'] = ApiClient.convertToType(data['folder_name'], 'String');
+            }
+            if (data.hasOwnProperty('folder_uuid')) {
+                obj['folder_uuid'] = ApiClient.convertToType(data['folder_uuid'], 'String');
             }
             if (data.hasOwnProperty('hash_sha256')) {
                 obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
@@ -175,6 +181,18 @@ SfvbFlow.prototype['end_once_customer_purchases_anywhere'] = undefined;
  * @member {String} flow_uuid
  */
 SfvbFlow.prototype['flow_uuid'] = undefined;
+
+/**
+ * That folder's name.
+ * @member {String} folder_name
+ */
+SfvbFlow.prototype['folder_name'] = undefined;
+
+/**
+ * The flow folder it is filed in, or none.
+ * @member {String} folder_uuid
+ */
+SfvbFlow.prototype['folder_uuid'] = undefined;
 
 /**
  * Send this as If-Match when changing, archiving or turning the flow on or off.

@@ -19,6 +19,7 @@ import SfvbCommsSegmentWriteRequest from './SfvbCommsSegmentWriteRequest';
 import SfvbCommsSettingsUpdateRequest from './SfvbCommsSettingsUpdateRequest';
 import SfvbCommsTestPostcardRequest from './SfvbCommsTestPostcardRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
+import SfvbFlowBackfillRequest from './SfvbFlowBackfillRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
@@ -30,7 +31,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -78,6 +79,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('experiment_start')) {
                 obj['experiment_start'] = SfvbExperimentStartRequest.constructFromObject(data['experiment_start']);
+            }
+            if (data.hasOwnProperty('flow_backfill')) {
+                obj['flow_backfill'] = SfvbFlowBackfillRequest.constructFromObject(data['flow_backfill']);
             }
             if (data.hasOwnProperty('item_attribute_rows')) {
                 obj['item_attribute_rows'] = ApiClient.convertToType(data['item_attribute_rows'], [SfvbItemAttributeBatchRow]);
@@ -150,6 +154,11 @@ SfvbApprovalCreateRequest.prototype['content'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbExperimentStartRequest} experiment_start
  */
 SfvbApprovalCreateRequest.prototype['experiment_start'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbFlowBackfillRequest} flow_backfill
+ */
+SfvbApprovalCreateRequest.prototype['flow_backfill'] = undefined;
 
 /**
  * For item.attribute_batch, exactly the rows the batch will send - the dry run's change rows, each with merchant_item_oid and current_sha256.  UltraCart keeps only their hash.
@@ -374,7 +383,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "postcard.test_mail"
      * @const
      */
-    "postcard.test_mail": "postcard.test_mail"
+    "postcard.test_mail": "postcard.test_mail",
+
+    /**
+     * value: "flow.backfill"
+     * @const
+     */
+    "flow.backfill": "flow.backfill"
 };
 
 

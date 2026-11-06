@@ -1021,6 +1021,8 @@ import SfvbCommsListDetail from './com.ultracart.admin.v2.models/SfvbCommsListDe
 import SfvbCommsListResponse from './com.ultracart.admin.v2.models/SfvbCommsListResponse';
 import SfvbCommsListWriteRequest from './com.ultracart.admin.v2.models/SfvbCommsListWriteRequest';
 import SfvbCommsListsResponse from './com.ultracart.admin.v2.models/SfvbCommsListsResponse';
+import SfvbCommsLookupOwner from './com.ultracart.admin.v2.models/SfvbCommsLookupOwner';
+import SfvbCommsLookupResponse from './com.ultracart.admin.v2.models/SfvbCommsLookupResponse';
 import SfvbCommsMember from './com.ultracart.admin.v2.models/SfvbCommsMember';
 import SfvbCommsMembersResponse from './com.ultracart.admin.v2.models/SfvbCommsMembersResponse';
 import SfvbCommsPlan from './com.ultracart.admin.v2.models/SfvbCommsPlan';
@@ -1031,6 +1033,8 @@ import SfvbCommsProviderImportRequest from './com.ultracart.admin.v2.models/Sfvb
 import SfvbCommsProviderImportResponse from './com.ultracart.admin.v2.models/SfvbCommsProviderImportResponse';
 import SfvbCommsProviderList from './com.ultracart.admin.v2.models/SfvbCommsProviderList';
 import SfvbCommsProvidersResponse from './com.ultracart.admin.v2.models/SfvbCommsProvidersResponse';
+import SfvbCommsRulerValidateRequest from './com.ultracart.admin.v2.models/SfvbCommsRulerValidateRequest';
+import SfvbCommsRulerValidateResponse from './com.ultracart.admin.v2.models/SfvbCommsRulerValidateResponse';
 import SfvbCommsSegment from './com.ultracart.admin.v2.models/SfvbCommsSegment';
 import SfvbCommsSegmentDetail from './com.ultracart.admin.v2.models/SfvbCommsSegmentDetail';
 import SfvbCommsSegmentResponse from './com.ultracart.admin.v2.models/SfvbCommsSegmentResponse';
@@ -1041,6 +1045,9 @@ import SfvbCommsSender from './com.ultracart.admin.v2.models/SfvbCommsSender';
 import SfvbCommsSenderUpdate from './com.ultracart.admin.v2.models/SfvbCommsSenderUpdate';
 import SfvbCommsSendingDomain from './com.ultracart.admin.v2.models/SfvbCommsSendingDomain';
 import SfvbCommsSendingDomainsResponse from './com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse';
+import SfvbCommsSequenceFolder from './com.ultracart.admin.v2.models/SfvbCommsSequenceFolder';
+import SfvbCommsSequenceFolderResponse from './com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse';
+import SfvbCommsSequenceFoldersResponse from './com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse';
 import SfvbCommsSequenceStatsResponse from './com.ultracart.admin.v2.models/SfvbCommsSequenceStatsResponse';
 import SfvbCommsSettings from './com.ultracart.admin.v2.models/SfvbCommsSettings';
 import SfvbCommsSettingsResponse from './com.ultracart.admin.v2.models/SfvbCommsSettingsResponse';
@@ -1056,6 +1063,9 @@ import SfvbCommsTestSendResponse from './com.ultracart.admin.v2.models/SfvbComms
 import SfvbCommsTestSmsRequest from './com.ultracart.admin.v2.models/SfvbCommsTestSmsRequest';
 import SfvbCommsTwilioAccount from './com.ultracart.admin.v2.models/SfvbCommsTwilioAccount';
 import SfvbCommsTwilioAccountResponse from './com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse';
+import SfvbCommsUnreferencedEmail from './com.ultracart.admin.v2.models/SfvbCommsUnreferencedEmail';
+import SfvbCommsUnreferencedPostcard from './com.ultracart.admin.v2.models/SfvbCommsUnreferencedPostcard';
+import SfvbCommsUnreferencedResponse from './com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse';
 import SfvbCompileRequest from './com.ultracart.admin.v2.models/SfvbCompileRequest';
 import SfvbCompileResponse from './com.ultracart.admin.v2.models/SfvbCompileResponse';
 import SfvbContainerResponse from './com.ultracart.admin.v2.models/SfvbContainerResponse';
@@ -1097,6 +1107,8 @@ import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteR
 import SfvbFileWriteResponse from './com.ultracart.admin.v2.models/SfvbFileWriteResponse';
 import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse';
 import SfvbFlow from './com.ultracart.admin.v2.models/SfvbFlow';
+import SfvbFlowBackfillRequest from './com.ultracart.admin.v2.models/SfvbFlowBackfillRequest';
+import SfvbFlowBackfillResponse from './com.ultracart.admin.v2.models/SfvbFlowBackfillResponse';
 import SfvbFlowStatusRequest from './com.ultracart.admin.v2.models/SfvbFlowStatusRequest';
 import SfvbFlowWriteRequest from './com.ultracart.admin.v2.models/SfvbFlowWriteRequest';
 import SfvbFlowsResponse from './com.ultracart.admin.v2.models/SfvbFlowsResponse';
@@ -1483,7 +1495,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.232
+* @version 4.1.233
 */
 export {
     /**
@@ -7541,6 +7553,18 @@ export {
     SfvbCommsListsResponse,
 
     /**
+     * The SfvbCommsLookupOwner model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsLookupOwner}
+     */
+    SfvbCommsLookupOwner,
+
+    /**
+     * The SfvbCommsLookupResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsLookupResponse}
+     */
+    SfvbCommsLookupResponse,
+
+    /**
      * The SfvbCommsMember model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsMember}
      */
@@ -7601,6 +7625,18 @@ export {
     SfvbCommsProvidersResponse,
 
     /**
+     * The SfvbCommsRulerValidateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsRulerValidateRequest}
+     */
+    SfvbCommsRulerValidateRequest,
+
+    /**
+     * The SfvbCommsRulerValidateResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsRulerValidateResponse}
+     */
+    SfvbCommsRulerValidateResponse,
+
+    /**
      * The SfvbCommsSegment model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsSegment}
      */
@@ -7659,6 +7695,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsSendingDomainsResponse}
      */
     SfvbCommsSendingDomainsResponse,
+
+    /**
+     * The SfvbCommsSequenceFolder model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolder}
+     */
+    SfvbCommsSequenceFolder,
+
+    /**
+     * The SfvbCommsSequenceFolderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse}
+     */
+    SfvbCommsSequenceFolderResponse,
+
+    /**
+     * The SfvbCommsSequenceFoldersResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsSequenceFoldersResponse}
+     */
+    SfvbCommsSequenceFoldersResponse,
 
     /**
      * The SfvbCommsSequenceStatsResponse model constructor.
@@ -7749,6 +7803,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbCommsTwilioAccountResponse}
      */
     SfvbCommsTwilioAccountResponse,
+
+    /**
+     * The SfvbCommsUnreferencedEmail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsUnreferencedEmail}
+     */
+    SfvbCommsUnreferencedEmail,
+
+    /**
+     * The SfvbCommsUnreferencedPostcard model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsUnreferencedPostcard}
+     */
+    SfvbCommsUnreferencedPostcard,
+
+    /**
+     * The SfvbCommsUnreferencedResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse}
+     */
+    SfvbCommsUnreferencedResponse,
 
     /**
      * The SfvbCompileRequest model constructor.
@@ -7995,6 +8067,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbFlow}
      */
     SfvbFlow,
+
+    /**
+     * The SfvbFlowBackfillRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFlowBackfillRequest}
+     */
+    SfvbFlowBackfillRequest,
+
+    /**
+     * The SfvbFlowBackfillResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFlowBackfillResponse}
+     */
+    SfvbFlowBackfillResponse,
 
     /**
      * The SfvbFlowStatusRequest model constructor.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbEmail model module.
  * @module com.ultracart.admin.v2.models/SfvbEmail
- * @version 4.1.232
+ * @version 4.1.233
  */
 class SfvbEmail {
     /**
@@ -50,6 +50,9 @@ class SfvbEmail {
             if (data.hasOwnProperty('container_last_modified_dts')) {
                 obj['container_last_modified_dts'] = ApiClient.convertToType(data['container_last_modified_dts'], 'String');
             }
+            if (data.hasOwnProperty('email_template_vm_path')) {
+                obj['email_template_vm_path'] = ApiClient.convertToType(data['email_template_vm_path'], 'String');
+            }
             if (data.hasOwnProperty('email_uuid')) {
                 obj['email_uuid'] = ApiClient.convertToType(data['email_uuid'], 'String');
             }
@@ -80,6 +83,15 @@ class SfvbEmail {
             if (data.hasOwnProperty('suspended_for_spam')) {
                 obj['suspended_for_spam'] = ApiClient.convertToType(data['suspended_for_spam'], 'Boolean');
             }
+            if (data.hasOwnProperty('template_exists')) {
+                obj['template_exists'] = ApiClient.convertToType(data['template_exists'], 'Boolean');
+            }
+            if (data.hasOwnProperty('template_note')) {
+                obj['template_note'] = ApiClient.convertToType(data['template_note'], 'String');
+            }
+            if (data.hasOwnProperty('template_path')) {
+                obj['template_path'] = ApiClient.convertToType(data['template_path'], 'String');
+            }
             if (data.hasOwnProperty('transactional')) {
                 obj['transactional'] = ApiClient.convertToType(data['transactional'], 'Boolean');
             }
@@ -98,6 +110,12 @@ class SfvbEmail {
  * @member {String} container_last_modified_dts
  */
 SfvbEmail.prototype['container_last_modified_dts'] = undefined;
+
+/**
+ * The Velocity template the email body renders inside, as stored, such as templates/template_email.vm.  It is looked up in the storefront's active theme.
+ * @member {String} email_template_vm_path
+ */
+SfvbEmail.prototype['email_template_vm_path'] = undefined;
 
 /**
  * The email uuid.  The same uuid the email container (owner type email) and the email render take.
@@ -158,6 +176,24 @@ SfvbEmail.prototype['subject'] = undefined;
  * @member {Boolean} suspended_for_spam
  */
 SfvbEmail.prototype['suspended_for_spam'] = undefined;
+
+/**
+ * True when the file at template_path exists.  False means the email can't render.
+ * @member {Boolean} template_exists
+ */
+SfvbEmail.prototype['template_exists'] = undefined;
+
+/**
+ * Why there is no template file, or null when there is one.
+ * @member {String} template_note
+ */
+SfvbEmail.prototype['template_note'] = undefined;
+
+/**
+ * The theme file that template is, as the render finds it.  Read it with the files endpoints, whose read also reports valid and velocity_errors.  Null when it couldn't be worked out, with template_note saying why.
+ * @member {String} template_path
+ */
+SfvbEmail.prototype['template_path'] = undefined;
 
 /**
  * True for a transactional email, which skips the marketing footer rules.

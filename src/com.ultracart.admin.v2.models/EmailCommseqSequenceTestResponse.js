@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The EmailCommseqSequenceTestResponse model module.
  * @module com.ultracart.admin.v2.models/EmailCommseqSequenceTestResponse
- * @version 4.1.232
+ * @version 4.1.233
  */
 class EmailCommseqSequenceTestResponse {
     /**

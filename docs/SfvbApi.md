@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**archiveSfvbFlow**](SfvbApi.md#archiveSfvbFlow) | **PUT** /sfvb/storefronts/{storefront_oid}/flows/{flow_uuid}/archive | Archive or unarchive a flow
 [**archiveSfvbUpsellPath**](SfvbApi.md#archiveSfvbUpsellPath) | **POST** /sfvb/storefronts/{storefront_oid}/upsell_paths/{upsell_path_oid}/archive | Archive an upsell path
 [**attachSfvbBlogPostImage**](SfvbApi.md#attachSfvbBlogPostImage) | **POST** /sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid}/images/attach | Attach an image to a blog post
+[**backfillSfvbCommsFlow**](SfvbApi.md#backfillSfvbCommsFlow) | **POST** /sfvb/storefronts/{storefront_oid}/comms/flows/{flow_uuid}/backfill | Back populate a live flow, or count who it would enroll
 [**checkSfvbRedirect**](SfvbApi.md#checkSfvbRedirect) | **POST** /sfvb/storefronts/{storefront_oid}/redirects/check | Check a redirect rule without creating it
 [**clearSfvbLibraryScreenshot**](SfvbApi.md#clearSfvbLibraryScreenshot) | **DELETE** /sfvb/storefronts/{storefront_oid}/library/{library_oid}/screenshot | Remove a library entry&#39;s screenshot
 [**cloneSfvbCampaign**](SfvbApi.md#cloneSfvbCampaign) | **POST** /sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid}/clone | Copy a campaign on the same storefront
@@ -25,6 +26,8 @@ Method | HTTP request | Description
 [**deleteSfvbAffiliateNetwork**](SfvbApi.md#deleteSfvbAffiliateNetwork) | **DELETE** /sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks/{affiliate_network_oid} | Delete an affiliate network
 [**deleteSfvbApproval**](SfvbApi.md#deleteSfvbApproval) | **DELETE** /sfvb/approvals/{approval_id} | Cancel a pending approval request
 [**deleteSfvbBlogPost**](SfvbApi.md#deleteSfvbBlogPost) | **DELETE** /sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid} | Delete a blog post
+[**deleteSfvbCommsCampaignFolder**](SfvbApi.md#deleteSfvbCommsCampaignFolder) | **DELETE** /sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid} | Delete a campaign folder
+[**deleteSfvbCommsFlowFolder**](SfvbApi.md#deleteSfvbCommsFlowFolder) | **DELETE** /sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid} | Delete a flow folder
 [**deleteSfvbCommsFolder**](SfvbApi.md#deleteSfvbCommsFolder) | **DELETE** /sfvb/storefronts/{storefront_oid}/list_segment_folders/{folder_uuid} | Delete a list and segment folder
 [**deleteSfvbCommsSendingDomain**](SfvbApi.md#deleteSfvbCommsSendingDomain) | **DELETE** /sfvb/comms/sending_domains/{domain} | Remove a sending domain
 [**deleteSfvbCommsTwilioAccount**](SfvbApi.md#deleteSfvbCommsTwilioAccount) | **DELETE** /sfvb/comms/twilio_account | Remove the Twilio account
@@ -70,12 +73,17 @@ Method | HTTP request | Description
 [**getSfvbBlogPost**](SfvbApi.md#getSfvbBlogPost) | **GET** /sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid} | Read a blog post
 [**getSfvbCampaign**](SfvbApi.md#getSfvbCampaign) | **GET** /sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid} | Get a campaign
 [**getSfvbCjsonUsedElements**](SfvbApi.md#getSfvbCjsonUsedElements) | **POST** /sfvb/cjson/elements | Element types used by a container
+[**getSfvbCommsCampaignFolder**](SfvbApi.md#getSfvbCommsCampaignFolder) | **GET** /sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid} | Read one campaign folder
+[**getSfvbCommsCampaignFolders**](SfvbApi.md#getSfvbCommsCampaignFolders) | **GET** /sfvb/storefronts/{storefront_oid}/campaign_folders | List the campaign folders
 [**getSfvbCommsDashboardStats**](SfvbApi.md#getSfvbCommsDashboardStats) | **GET** /sfvb/storefronts/{storefront_oid}/comms/stats/dashboard | Read every flow&#39;s and campaign&#39;s counts over a window, with the account&#39;s daily sending
 [**getSfvbCommsEmailClicks**](SfvbApi.md#getSfvbCommsEmailClicks) | **GET** /sfvb/storefronts/{storefront_oid}/comms/sequences/{commseq_uuid}/emails/{email_uuid}/clicks | Read each link in one email and how often it was clicked
+[**getSfvbCommsFlowFolder**](SfvbApi.md#getSfvbCommsFlowFolder) | **GET** /sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid} | Read one flow folder
+[**getSfvbCommsFlowFolders**](SfvbApi.md#getSfvbCommsFlowFolders) | **GET** /sfvb/storefronts/{storefront_oid}/flow_folders | List the flow folders
 [**getSfvbCommsFolder**](SfvbApi.md#getSfvbCommsFolder) | **GET** /sfvb/storefronts/{storefront_oid}/list_segment_folders/{folder_uuid} | Read one list and segment folder
 [**getSfvbCommsFolders**](SfvbApi.md#getSfvbCommsFolders) | **GET** /sfvb/storefronts/{storefront_oid}/list_segment_folders | List the list and segment folders
 [**getSfvbCommsList**](SfvbApi.md#getSfvbCommsList) | **GET** /sfvb/storefronts/{storefront_oid}/lists/{list_uuid} | Read one email list
 [**getSfvbCommsListMembers**](SfvbApi.md#getSfvbCommsListMembers) | **GET** /sfvb/storefronts/{storefront_oid}/lists/{list_uuid}/members | Read one page of a list&#39;s members
+[**getSfvbCommsLookup**](SfvbApi.md#getSfvbCommsLookup) | **GET** /sfvb/comms/lookup | Find which storefront a communications uuid lives on
 [**getSfvbCommsPlan**](SfvbApi.md#getSfvbCommsPlan) | **GET** /sfvb/storefronts/{storefront_oid}/comms/plan | Read the account&#39;s communications plan and sending health
 [**getSfvbCommsProviders**](SfvbApi.md#getSfvbCommsProviders) | **GET** /sfvb/storefronts/{storefront_oid}/comms/providers | List the email providers the account can import lists from
 [**getSfvbCommsSegment**](SfvbApi.md#getSfvbCommsSegment) | **GET** /sfvb/storefronts/{storefront_oid}/segments/{segment_uuid} | Read one segment, with its rule
@@ -87,6 +95,7 @@ Method | HTTP request | Description
 [**getSfvbCommsTemplate**](SfvbApi.md#getSfvbCommsTemplate) | **GET** /sfvb/storefronts/{storefront_oid}/comms/templates/{email_template_oid} | Read one saved email template&#39;s body
 [**getSfvbCommsTemplates**](SfvbApi.md#getSfvbCommsTemplates) | **GET** /sfvb/storefronts/{storefront_oid}/comms/templates | List the email templates a new email can start from
 [**getSfvbCommsTwilioAccount**](SfvbApi.md#getSfvbCommsTwilioAccount) | **GET** /sfvb/comms/twilio_account | Read the Twilio account
+[**getSfvbCommsUnreferenced**](SfvbApi.md#getSfvbCommsUnreferenced) | **GET** /sfvb/storefronts/{storefront_oid}/comms/unreferenced | List the emails and postcards on a storefront that no step names
 [**getSfvbContainer**](SfvbApi.md#getSfvbContainer) | **GET** /sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id} | Read a container stored outside the file system
 [**getSfvbContainerVersion**](SfvbApi.md#getSfvbContainerVersion) | **GET** /sfvb/storefronts/{storefront_oid}/container_versions/{container_history_oid} | Read the CJSON stored in one container history entry
 [**getSfvbElement**](SfvbApi.md#getSfvbElement) | **GET** /sfvb/elements/{element_type} | Configuration schema and field card for one element type
@@ -160,6 +169,8 @@ Method | HTTP request | Description
 [**insertSfvbAffiliateNetwork**](SfvbApi.md#insertSfvbAffiliateNetwork) | **POST** /sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks | Add an affiliate network
 [**insertSfvbApproval**](SfvbApi.md#insertSfvbApproval) | **POST** /sfvb/approvals | Request a human approval
 [**insertSfvbBlogPost**](SfvbApi.md#insertSfvbBlogPost) | **POST** /sfvb/storefronts/{storefront_oid}/blog_posts | Create a blog post
+[**insertSfvbCommsCampaignFolder**](SfvbApi.md#insertSfvbCommsCampaignFolder) | **POST** /sfvb/storefronts/{storefront_oid}/campaign_folders | Create a campaign folder
+[**insertSfvbCommsFlowFolder**](SfvbApi.md#insertSfvbCommsFlowFolder) | **POST** /sfvb/storefronts/{storefront_oid}/flow_folders | Create a flow folder
 [**insertSfvbCommsFolder**](SfvbApi.md#insertSfvbCommsFolder) | **POST** /sfvb/storefronts/{storefront_oid}/list_segment_folders | Create a list and segment folder
 [**insertSfvbCommsList**](SfvbApi.md#insertSfvbCommsList) | **POST** /sfvb/storefronts/{storefront_oid}/lists | Create an email list
 [**insertSfvbCommsSegment**](SfvbApi.md#insertSfvbCommsSegment) | **POST** /sfvb/storefronts/{storefront_oid}/segments | Create a segment
@@ -251,6 +262,8 @@ Method | HTTP request | Description
 [**updateSfvbAffiliateNetwork**](SfvbApi.md#updateSfvbAffiliateNetwork) | **PUT** /sfvb/storefronts/{storefront_oid}/tracking/affiliate_networks/{affiliate_network_oid} | Change an affiliate network
 [**updateSfvbBlogPost**](SfvbApi.md#updateSfvbBlogPost) | **PUT** /sfvb/storefronts/{storefront_oid}/blog_posts/{blog_post_oid} | Change a blog post
 [**updateSfvbCampaign**](SfvbApi.md#updateSfvbCampaign) | **PUT** /sfvb/storefronts/{storefront_oid}/campaigns/{campaign_uuid} | Change a campaign
+[**updateSfvbCommsCampaignFolder**](SfvbApi.md#updateSfvbCommsCampaignFolder) | **PUT** /sfvb/storefronts/{storefront_oid}/campaign_folders/{folder_uuid} | Rename a campaign folder
+[**updateSfvbCommsFlowFolder**](SfvbApi.md#updateSfvbCommsFlowFolder) | **PUT** /sfvb/storefronts/{storefront_oid}/flow_folders/{folder_uuid} | Rename a flow folder
 [**updateSfvbCommsFolder**](SfvbApi.md#updateSfvbCommsFolder) | **PUT** /sfvb/storefronts/{storefront_oid}/list_segment_folders/{folder_uuid} | Rename a list and segment folder
 [**updateSfvbCommsList**](SfvbApi.md#updateSfvbCommsList) | **PUT** /sfvb/storefronts/{storefront_oid}/lists/{list_uuid} | Change an email list&#39;s name, folder or public settings
 [**updateSfvbCommsSegment**](SfvbApi.md#updateSfvbCommsSegment) | **PUT** /sfvb/storefronts/{storefront_oid}/segments/{segment_uuid} | Change a segment&#39;s name, rule or folder
@@ -276,6 +289,7 @@ Method | HTTP request | Description
 [**updateSfvbUtmShortcode**](SfvbApi.md#updateSfvbUtmShortcode) | **PUT** /sfvb/storefronts/{storefront_oid}/utm_shortcodes/{shortcode_oid} | Change a UTM shortcode
 [**uploadSfvbFile**](SfvbApi.md#uploadSfvbFile) | **POST** /sfvb/storefronts/{storefront_oid}/files/upload | Store a binary asset that was already uploaded
 [**validateSfvbCjson**](SfvbApi.md#validateSfvbCjson) | **POST** /sfvb/cjson/validate | Validate CJSON
+[**validateSfvbCommsRuler**](SfvbApi.md#validateSfvbCommsRuler) | **POST** /sfvb/storefronts/{storefront_oid}/comms/ruler/validate | Check an Event Ruler pattern for an Is in BigQuery segment rule
 [**validateSfvbVelocity**](SfvbApi.md#validateSfvbVelocity) | **POST** /sfvb/storefronts/{storefront_oid}/themes/{theme_oid}/velocity/validate | Validate a Velocity template against a theme
 
 
@@ -582,6 +596,45 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## backfillSfvbCommsFlow
+
+> SfvbFlowBackfillResponse backfillSfvbCommsFlow(storefront_oid, flow_uuid, flow_backfill_request, opts)
+
+Back populate a live flow, or count who it would enroll
+
+Enrolls customers who would have met the flow&#39;s trigger before it existed: a segment trigger&#39;s members, or the orders of the last order_days_old days (1 to 90, default 5, every storefront on the account) for an order trigger, up to the plan&#39;s customer limit.  The flow must be on.  dry_run counts them and enrolls nobody.  A real backfill needs sfvb_publish, the sign-in of a person, and an approved flow.backfill request for exactly this flow and window; it runs in the background and mails each customer through the flow. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **flow_uuid** | **String**|  | 
+ **flow_backfill_request** | [**SfvbFlowBackfillRequest**](SfvbFlowBackfillRequest.md)| The window and dry_run | 
+ **Approval_Id** | **String**| The approval_id of an approved flow.backfill request for exactly this flow and window.  See POST /sfvb/approvals. | [optional] 
+
+### Return type
+
+[**SfvbFlowBackfillResponse**](SfvbFlowBackfillResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -1056,6 +1109,82 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteSfvbCommsCampaignFolder
+
+> SfvbCommsSequenceFolderResponse deleteSfvbCommsCampaignFolder(storefront_oid, folder_uuid, If_Match)
+
+Delete a campaign folder
+
+Its campaigns are kept and filed under no folder, as the admin does; items names each one.  Send the folder&#39;s hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can&#39;t be deleted here. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+ **If_Match** | **String**| The folder&#39;s hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## deleteSfvbCommsFlowFolder
+
+> SfvbCommsSequenceFolderResponse deleteSfvbCommsFlowFolder(storefront_oid, folder_uuid, If_Match)
+
+Delete a flow folder
+
+Its flows are kept and filed under no folder, as the admin does; items names each one.  Send the folder&#39;s hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can&#39;t be deleted here. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+ **If_Match** | **String**| The folder&#39;s hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
 
 ### Authorization
 
@@ -2751,6 +2880,79 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getSfvbCommsCampaignFolder
+
+> SfvbCommsSequenceFolderResponse getSfvbCommsCampaignFolder(storefront_oid, folder_uuid)
+
+Read one campaign folder
+
+The folder, with the name and uuid of each campaign filed in it. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbCommsCampaignFolders
+
+> SfvbCommsSequenceFoldersResponse getSfvbCommsCampaignFolders(storefront_oid)
+
+List the campaign folders
+
+Each campaign folder with how many campaigns are filed in it, whether the admin made it, and its hash_sha256. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbCommsSequenceFoldersResponse**](SfvbCommsSequenceFoldersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getSfvbCommsDashboardStats
 
 > SfvbCommsDashboardResponse getSfvbCommsDashboardStats(storefront_oid, opts)
@@ -2816,6 +3018,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbCommsClicksResponse**](SfvbCommsClicksResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbCommsFlowFolder
+
+> SfvbCommsSequenceFolderResponse getSfvbCommsFlowFolder(storefront_oid, folder_uuid)
+
+Read one flow folder
+
+The folder, with the name and uuid of each flow filed in it. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbCommsFlowFolders
+
+> SfvbCommsSequenceFoldersResponse getSfvbCommsFlowFolders(storefront_oid)
+
+List the flow folders
+
+Each flow folder with how many flows are filed in it, whether the admin made it, and its hash_sha256. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbCommsSequenceFoldersResponse**](SfvbCommsSequenceFoldersResponse.md)
 
 ### Authorization
 
@@ -2966,6 +3241,42 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbCommsMembersResponse**](SfvbCommsMembersResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbCommsLookup
+
+> SfvbCommsLookupResponse getSfvbCommsLookup(uuid)
+
+Find which storefront a communications uuid lives on
+
+Takes a campaign, flow, sequence, step, email, postcard, list or segment uuid and says which of this account&#39;s storefronts it is on, what it is, the campaign or flow it belongs to, and the command that reads it.  A uuid nothing on this account has, another account&#39;s included, is 404.  Read only. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | **String**| The uuid to find. | 
+
+### Return type
+
+[**SfvbCommsLookupResponse**](SfvbCommsLookupResponse.md)
 
 ### Authorization
 
@@ -3275,7 +3586,7 @@ Name | Type | Description  | Notes
 
 Read one saved email template&#39;s body
 
-A system template or one saved on this storefront; any other is 404.  container_cjson is the body.  The Velocity template it renders inside is named in email_template_vm_path, not shown.  Read only. 
+A system template or one saved on this storefront; any other is 404.  container_cjson is the body.  The Velocity template it renders inside is the theme file at template_path; read it with the files endpoints.  Read only. 
 
 
 ### Example
@@ -3364,6 +3675,42 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**SfvbCommsTwilioAccountResponse**](SfvbCommsTwilioAccountResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbCommsUnreferenced
+
+> SfvbCommsUnreferencedResponse getSfvbCommsUnreferenced(storefront_oid)
+
+List the emails and postcards on a storefront that no step names
+
+An email or postcard no step of any sequence on this storefront names, an off or archived flow&#39;s included, so nothing sends it.  The admin&#39;s add can leave one when its second call fails.  Most recently changed first.  Read only, nothing is deleted. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+
+### Return type
+
+[**SfvbCommsUnreferencedResponse**](SfvbCommsUnreferencedResponse.md)
 
 ### Authorization
 
@@ -3496,7 +3843,7 @@ Name | Type | Description  | Notes
 
 Get a flow or campaign email&#39;s subject and preview text
 
-The subject, preview text and hash_sha256 to send as If-Match when updating them, with whether the email is live and its review state.  The body is the email container (owner type email).  Find the uuid in the storefront&#39;s campaigns and flows. 
+The subject, preview text and hash_sha256 to send as If-Match when updating them, with whether the email is live and its review state.  The body is the email container (owner type email).  The Velocity template it renders inside is the theme file at template_path; read it with the files endpoints, whose read reports valid and velocity_errors.  Find the uuid in the storefront&#39;s campaigns and flows. 
 
 
 ### Example
@@ -6084,6 +6431,80 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## insertSfvbCommsCampaignFolder
+
+> SfvbCommsSequenceFolderResponse insertSfvbCommsCampaignFolder(storefront_oid, folder_write_request)
+
+Create a campaign folder
+
+A new, empty folder.  File a campaign in it by setting its folder_uuid. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_write_request** | [**SfvbCommsFolderWriteRequest**](SfvbCommsFolderWriteRequest.md)| The new folder&#39;s name | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## insertSfvbCommsFlowFolder
+
+> SfvbCommsSequenceFolderResponse insertSfvbCommsFlowFolder(storefront_oid, folder_write_request)
+
+Create a flow folder
+
+A new, empty folder.  File a flow in it by setting its folder_uuid. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_write_request** | [**SfvbCommsFolderWriteRequest**](SfvbCommsFolderWriteRequest.md)| The new folder&#39;s name | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -9561,6 +9982,84 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## updateSfvbCommsCampaignFolder
+
+> SfvbCommsSequenceFolderResponse updateSfvbCommsCampaignFolder(storefront_oid, folder_uuid, If_Match, folder_write_request)
+
+Rename a campaign folder
+
+Send the folder&#39;s hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can&#39;t be renamed here. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+ **If_Match** | **String**| The folder&#39;s hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+ **folder_write_request** | [**SfvbCommsFolderWriteRequest**](SfvbCommsFolderWriteRequest.md)| The new name | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateSfvbCommsFlowFolder
+
+> SfvbCommsSequenceFolderResponse updateSfvbCommsFlowFolder(storefront_oid, folder_uuid, If_Match, folder_write_request)
+
+Rename a flow folder
+
+Send the folder&#39;s hash_sha256 as If-Match.  A folder the admin made itself (system_generated) can&#39;t be renamed here. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **folder_uuid** | **String**|  | 
+ **If_Match** | **String**| The folder&#39;s hash_sha256 from the last read.  Required; 428 when absent, 412 when stale. | 
+ **folder_write_request** | [**SfvbCommsFolderWriteRequest**](SfvbCommsFolderWriteRequest.md)| The new name | 
+
+### Return type
+
+[**SfvbCommsSequenceFolderResponse**](SfvbCommsSequenceFolderResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## updateSfvbCommsFolder
 
 > SfvbCommsFolderResponse updateSfvbCommsFolder(storefront_oid, folder_uuid, If_Match, folder_write_request)
@@ -10519,6 +11018,43 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbValidationResponse**](SfvbValidationResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## validateSfvbCommsRuler
+
+> SfvbCommsRulerValidateResponse validateSfvbCommsRuler(storefront_oid, ruler_validate_request)
+
+Check an Event Ruler pattern for an Is in BigQuery segment rule
+
+Compiles the pattern the way an Is in BigQuery segment rule&#39;s bigquery_ruler is checked, and says whether it is valid and, if not, why.  An invalid pattern is a 200 with valid false.  Nothing is read or saved.  A segment create or update refuses a rule whose pattern doesn&#39;t compile, or whose bigquery_table_id isn&#39;t project.dataset.table. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **ruler_validate_request** | [**SfvbCommsRulerValidateRequest**](SfvbCommsRulerValidateRequest.md)| The pattern to check | 
+
+### Return type
+
+[**SfvbCommsRulerValidateResponse**](SfvbCommsRulerValidateResponse.md)
 
 ### Authorization
 
