@@ -17,7 +17,7 @@ import SfvbCommsLookupOwner from './SfvbCommsLookupOwner';
 /**
  * The SfvbCommsLookupResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsLookupResponse
- * @version 4.1.233
+ * @version 4.1.234
  */
 class SfvbCommsLookupResponse {
     /**
@@ -48,6 +48,9 @@ class SfvbCommsLookupResponse {
         if (data) {
             obj = obj || new SfvbCommsLookupResponse();
 
+            if (data.hasOwnProperty('archived')) {
+                obj['archived'] = ApiClient.convertToType(data['archived'], 'Boolean');
+            }
             if (data.hasOwnProperty('communication_sequence_uuid')) {
                 obj['communication_sequence_uuid'] = ApiClient.convertToType(data['communication_sequence_uuid'], 'String');
             }
@@ -81,6 +84,12 @@ class SfvbCommsLookupResponse {
 
 
 }
+
+/**
+ * True when the uuid is an archived campaign or flow.  It is still on its storefront and can be read; it sends nothing.
+ * @member {Boolean} archived
+ */
+SfvbCommsLookupResponse.prototype['archived'] = undefined;
 
 /**
  * The sequence it belongs to, when there is one.

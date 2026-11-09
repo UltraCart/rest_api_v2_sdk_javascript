@@ -1221,6 +1221,7 @@ docs/SfvbPreviewAccessRequest.md
 docs/SfvbPreviewAccessResponse.md
 docs/SfvbPreviewSessionRequest.md
 docs/SfvbPreviewSessionResponse.md
+docs/SfvbPreviewTrackingHtmlRequest.md
 docs/SfvbPreviewUrlResponse.md
 docs/SfvbRecording.md
 docs/SfvbRecordingEvent.md
@@ -1311,6 +1312,8 @@ docs/SfvbTrackingAdvanced.md
 docs/SfvbTrackingAdvancedRequest.md
 docs/SfvbTrackingChange.md
 docs/SfvbTrackingHtml.md
+docs/SfvbTrackingHtmlRenderRequest.md
+docs/SfvbTrackingHtmlRenderResponse.md
 docs/SfvbTrackingHtmlRequest.md
 docs/SfvbTrackingHtmlResponse.md
 docs/SfvbTrackingPrivacy.md
@@ -2658,6 +2661,7 @@ src/com.ultracart.admin.v2.models/SfvbPreviewAccessRequest.js
 src/com.ultracart.admin.v2.models/SfvbPreviewAccessResponse.js
 src/com.ultracart.admin.v2.models/SfvbPreviewSessionRequest.js
 src/com.ultracart.admin.v2.models/SfvbPreviewSessionResponse.js
+src/com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest.js
 src/com.ultracart.admin.v2.models/SfvbPreviewUrlResponse.js
 src/com.ultracart.admin.v2.models/SfvbRecording.js
 src/com.ultracart.admin.v2.models/SfvbRecordingEvent.js
@@ -2748,6 +2752,8 @@ src/com.ultracart.admin.v2.models/SfvbTrackingAdvanced.js
 src/com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest.js
 src/com.ultracart.admin.v2.models/SfvbTrackingChange.js
 src/com.ultracart.admin.v2.models/SfvbTrackingHtml.js
+src/com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest.js
+src/com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse.js
 src/com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest.js
 src/com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse.js
 src/com.ultracart.admin.v2.models/SfvbTrackingPrivacy.js

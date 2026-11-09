@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbServerLog model module.
  * @module com.ultracart.admin.v2.models/SfvbServerLog
- * @version 4.1.233
+ * @version 4.1.234
  */
 class SfvbServerLog {
     /**
@@ -100,7 +100,7 @@ SfvbServerLog.prototype['app_error'] = undefined;
 SfvbServerLog.prototype['duration_ms'] = undefined;
 
 /**
- * Error lines in the log, including Velocity problems such as a null
+ * Error lines in the log, including Velocity problems such as setting a variable to null.
  * @member {Number} error_count
  */
 SfvbServerLog.prototype['error_count'] = undefined;

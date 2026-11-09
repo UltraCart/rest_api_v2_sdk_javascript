@@ -1214,6 +1214,7 @@ import SfvbPreviewAccessRequest from './com.ultracart.admin.v2.models/SfvbPrevie
 import SfvbPreviewAccessResponse from './com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from './com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from './com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
+import SfvbPreviewTrackingHtmlRequest from './com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest';
 import SfvbPreviewUrlResponse from './com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRecording from './com.ultracart.admin.v2.models/SfvbRecording';
 import SfvbRecordingEvent from './com.ultracart.admin.v2.models/SfvbRecordingEvent';
@@ -1304,6 +1305,8 @@ import SfvbTrackingAdvanced from './com.ultracart.admin.v2.models/SfvbTrackingAd
 import SfvbTrackingAdvancedRequest from './com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
 import SfvbTrackingChange from './com.ultracart.admin.v2.models/SfvbTrackingChange';
 import SfvbTrackingHtml from './com.ultracart.admin.v2.models/SfvbTrackingHtml';
+import SfvbTrackingHtmlRenderRequest from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest';
+import SfvbTrackingHtmlRenderResponse from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse';
 import SfvbTrackingHtmlRequest from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest';
 import SfvbTrackingHtmlResponse from './com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse';
 import SfvbTrackingPrivacy from './com.ultracart.admin.v2.models/SfvbTrackingPrivacy';
@@ -1495,7 +1498,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.233
+* @version 4.1.234
 */
 export {
     /**
@@ -8711,6 +8714,12 @@ export {
     SfvbPreviewSessionResponse,
 
     /**
+     * The SfvbPreviewTrackingHtmlRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest}
+     */
+    SfvbPreviewTrackingHtmlRequest,
+
+    /**
      * The SfvbPreviewUrlResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPreviewUrlResponse}
      */
@@ -9249,6 +9258,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtml}
      */
     SfvbTrackingHtml,
+
+    /**
+     * The SfvbTrackingHtmlRenderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest}
+     */
+    SfvbTrackingHtmlRenderRequest,
+
+    /**
+     * The SfvbTrackingHtmlRenderResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse}
+     */
+    SfvbTrackingHtmlRenderResponse,
 
     /**
      * The SfvbTrackingHtmlRequest model constructor.

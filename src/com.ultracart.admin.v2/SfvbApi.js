@@ -169,6 +169,7 @@ import SfvbPreviewAccessRequest from '../com.ultracart.admin.v2.models/SfvbPrevi
 import SfvbPreviewAccessResponse from '../com.ultracart.admin.v2.models/SfvbPreviewAccessResponse';
 import SfvbPreviewSessionRequest from '../com.ultracart.admin.v2.models/SfvbPreviewSessionRequest';
 import SfvbPreviewSessionResponse from '../com.ultracart.admin.v2.models/SfvbPreviewSessionResponse';
+import SfvbPreviewTrackingHtmlRequest from '../com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest';
 import SfvbPreviewUrlResponse from '../com.ultracart.admin.v2.models/SfvbPreviewUrlResponse';
 import SfvbRecordingEventsResponse from '../com.ultracart.admin.v2.models/SfvbRecordingEventsResponse';
 import SfvbRecordingResponse from '../com.ultracart.admin.v2.models/SfvbRecordingResponse';
@@ -222,6 +223,8 @@ import SfvbThemeJobResponse from '../com.ultracart.admin.v2.models/SfvbThemeJobR
 import SfvbThemesResponse from '../com.ultracart.admin.v2.models/SfvbThemesResponse';
 import SfvbTrackingAdvancedRequest from '../com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
 import SfvbTrackingHtml from '../com.ultracart.admin.v2.models/SfvbTrackingHtml';
+import SfvbTrackingHtmlRenderRequest from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest';
+import SfvbTrackingHtmlRenderResponse from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse';
 import SfvbTrackingHtmlRequest from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRequest';
 import SfvbTrackingHtmlResponse from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse';
 import SfvbTrackingPrivacyRequest from '../com.ultracart.admin.v2.models/SfvbTrackingPrivacyRequest';
@@ -251,7 +254,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.233
+* @version 4.1.234
 */
 export default class SfvbApi {
 
@@ -2291,14 +2294,18 @@ export default class SfvbApi {
 
     /**
      * Clear one tracking provider
-     * Clears every field and secret the API can change, the consent gate and the events, and turns off Google Tag Gateway.  The provider stops being sent anything.  An OAuth connection is left alone, and notes say to disconnect it in the admin.  Send the provider's hash_sha256 as If-Match.  Needs sfvb_publish.  No approval. 
+     * Clears every field and secret the API can change, the consent gate and the events, and turns off Google Tag Gateway.  An OAuth connection is left alone, and notes say to disconnect it in the admin.  Send the provider's hash_sha256 as If-Match.  Needs sfvb_publish.  dry_run=true reports the changes, and approval_needed, without clearing.  No approval, except when the clear removes a consent gate while something outside the provider's fields still fires it (Google Ads for an affiliate's own Google conversion id, Commission Junction for an affiliate network of its type): that needs an approved tracking_provider.clear request for the provider (Approval-Id). 
      * @param {Number} storefront_oid 
      * @param {String} provider 
      * @param {String} If_Match The provider's hash_sha256 from the last read.  428 when absent, 412 when stale.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.dry_run 
+     * @param {String} opts.Approval_Id When the clear removes a consent gate while something else still fires the provider, the approval_id of an approved tracking_provider.clear request for it.  See POST /sfvb/approvals.
      * @param {module:com.ultracart.admin.v2/SfvbApi~deleteSfvbTrackingProviderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingProvider}
      */
-    deleteSfvbTrackingProvider(storefront_oid, provider, If_Match, callback) {
+    deleteSfvbTrackingProvider(storefront_oid, provider, If_Match, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -2318,9 +2325,11 @@ export default class SfvbApi {
         'provider': provider
       };
       let queryParams = {
+        'dry_run': opts['dry_run']
       };
       let headerParams = {
-        'If-Match': If_Match
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
       };
       let formParams = {
       };
@@ -4261,7 +4270,7 @@ export default class SfvbApi {
 
     /**
      * Find which storefront a communications uuid lives on
-     * Takes a campaign, flow, sequence, step, email, postcard, list or segment uuid and says which of this account's storefronts it is on, what it is, the campaign or flow it belongs to, and the command that reads it.  A uuid nothing on this account has, another account's included, is 404.  Read only. 
+     * Takes a campaign, flow, sequence, step, email, postcard, list or segment uuid and says which of this account's storefronts it is on, what it is, the campaign or flow it belongs to, and the command that reads it.  An archived campaign or flow is found too, with archived true, and owner.archived is true when what was found belongs to one.  A uuid nothing on this account has, another account's included, and a deleted step, email, postcard, list or segment, is 404.  Read only. 
      * @param {String} uuid The uuid to find.
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCommsLookupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCommsLookupResponse}
@@ -11371,6 +11380,60 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the putSfvbPreviewTrackingHtml operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbPreviewTrackingHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Stage custom tracking HTML in a preview session
+     * Runs Tracking HTML, Conversion HTML or both instead of the storefront's live slots, only in a browser that opened this session's preview access link, so a page can be checked before the write is approved.  Staged Conversion HTML runs only on a test order's receipt.  Each slot gets the same checks as a write.  An empty string unstages a slot; a slot left out is left as it is.  Containers pushed to the session later keep what is staged.  Needs sfvb_write and a token that resolves to a user; no approval, since nothing durable is written and only that user's own session runs it. 
+     * @param {Number} storefront_oid 
+     * @param {String} preview_session_id 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest} preview_tracking_html The HTML to stage
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbPreviewTrackingHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingHtmlResponse}
+     */
+    putSfvbPreviewTrackingHtml(storefront_oid, preview_session_id, preview_tracking_html, callback) {
+      let postBody = preview_tracking_html;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbPreviewTrackingHtml");
+      }
+      // verify the required parameter 'preview_session_id' is set
+      if (preview_session_id === undefined || preview_session_id === null) {
+        throw new Error("Missing the required parameter 'preview_session_id' when calling putSfvbPreviewTrackingHtml");
+      }
+      // verify the required parameter 'preview_tracking_html' is set
+      if (preview_tracking_html === undefined || preview_tracking_html === null) {
+        throw new Error("Missing the required parameter 'preview_tracking_html' when calling putSfvbPreviewTrackingHtml");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'preview_session_id': preview_session_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingHtmlResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/preview_sessions/{preview_session_id}/tracking_html', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the putSfvbRecordingSettings operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbRecordingSettingsCallback
      * @param {String} error Error message, if any.
@@ -11768,6 +11831,60 @@ export default class SfvbApi {
       let returnType = SfvbEmailRenderResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/emails/{email_uuid}/render', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the renderSfvbTrackingHtml operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~renderSfvbTrackingHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Render the Conversion HTML against a test order
+     * The Conversion HTML as the receipt of that order would inject it: order tokens filled, then Velocity run with $order, $conversion and $formatHelper.  Renders the stored slot, or content when it is sent (a draft, checked as a write is).  Only a test order on this account may be used; a real or unknown order is refused the same way.  Nothing is saved, injected or sent: the receipt's provider pixels, analytics and postbacks do not run, and a token that would write something ([CouponForNewAffiliate=...]) is left as written.  Only the conversion slot renders; tracking HTML is checked by staging it in a preview session. 
+     * @param {Number} storefront_oid 
+     * @param {String} slot conversion
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest} tracking_html_render_request The test order, and optionally a draft
+     * @param {module:com.ultracart.admin.v2/SfvbApi~renderSfvbTrackingHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse}
+     */
+    renderSfvbTrackingHtml(storefront_oid, slot, tracking_html_render_request, callback) {
+      let postBody = tracking_html_render_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling renderSfvbTrackingHtml");
+      }
+      // verify the required parameter 'slot' is set
+      if (slot === undefined || slot === null) {
+        throw new Error("Missing the required parameter 'slot' when calling renderSfvbTrackingHtml");
+      }
+      // verify the required parameter 'tracking_html_render_request' is set
+      if (tracking_html_render_request === undefined || tracking_html_render_request === null) {
+        throw new Error("Missing the required parameter 'tracking_html_render_request' when calling renderSfvbTrackingHtml");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'slot': slot
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingHtmlRenderResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/html/{slot}/render', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

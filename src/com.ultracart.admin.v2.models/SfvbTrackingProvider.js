@@ -22,7 +22,7 @@ import SfvbTrackingWholesaleTier from './SfvbTrackingWholesaleTier';
 /**
  * The SfvbTrackingProvider model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProvider
- * @version 4.1.233
+ * @version 4.1.234
  */
 class SfvbTrackingProvider {
     /**
@@ -100,6 +100,9 @@ class SfvbTrackingProvider {
             }
             if (data.hasOwnProperty('oauth')) {
                 obj['oauth'] = SfvbTrackingProviderOauth.constructFromObject(data['oauth']);
+            }
+            if (data.hasOwnProperty('server_side')) {
+                obj['server_side'] = ApiClient.convertToType(data['server_side'], 'String');
             }
             if (data.hasOwnProperty('wholesale_tiers')) {
                 obj['wholesale_tiers'] = ApiClient.convertToType(data['wholesale_tiers'], [SfvbTrackingWholesaleTier]);
@@ -204,6 +207,12 @@ SfvbTrackingProvider.prototype['notes'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbTrackingProviderOauth} oauth
  */
 SfvbTrackingProvider.prototype['oauth'] = undefined;
+
+/**
+ * What the provider also sends from UltraCart's servers.  A consent gate holds back only the browser pixel, not these.  Absent when it sends nothing server side.
+ * @member {String} server_side
+ */
+SfvbTrackingProvider.prototype['server_side'] = undefined;
 
 /**
  * For google_analytics, the account number per wholesale pricing tier.

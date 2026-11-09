@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.233
+ * @version 4.1.234
  */
 class SfvbApprovalParams {
     /**
@@ -253,7 +253,7 @@ SfvbApprovalParams.prototype['slot'] = undefined;
 SfvbApprovalParams.prototype['step_uuid'] = undefined;
 
 /**
- * The tracking provider key, for tracking_provider.change.
+ * The tracking provider key, for tracking_provider.change and tracking_provider.clear.
  * @member {String} tracking_provider
  */
 SfvbApprovalParams.prototype['tracking_provider'] = undefined;

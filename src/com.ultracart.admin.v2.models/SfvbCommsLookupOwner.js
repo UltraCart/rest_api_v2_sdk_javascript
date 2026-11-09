@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsLookupOwner model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsLookupOwner
- * @version 4.1.233
+ * @version 4.1.234
  */
 class SfvbCommsLookupOwner {
     /**
@@ -47,6 +47,9 @@ class SfvbCommsLookupOwner {
         if (data) {
             obj = obj || new SfvbCommsLookupOwner();
 
+            if (data.hasOwnProperty('archived')) {
+                obj['archived'] = ApiClient.convertToType(data['archived'], 'Boolean');
+            }
             if (data.hasOwnProperty('live')) {
                 obj['live'] = ApiClient.convertToType(data['live'], 'Boolean');
             }
@@ -68,6 +71,12 @@ class SfvbCommsLookupOwner {
 
 
 }
+
+/**
+ * True when the campaign or flow is archived.  It sends nothing, and 'sf comms flows list' or 'campaigns list' shows it only with --include-deleted.
+ * @member {Boolean} archived
+ */
+SfvbCommsLookupOwner.prototype['archived'] = undefined;
 
 /**
  * True when it is sending now, by the same rule the sequence read uses.

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**archived** | **Boolean** | True when the uuid is an archived campaign or flow.  It is still on its storefront and can be read; it sends nothing. | [optional] 
 **communication_sequence_uuid** | **String** | The sequence it belongs to, when there is one. | [optional] 
 **kind** | **String** | campaign, flow, sequence, step, email, postcard, list or segment. | [optional] 
 **name** | **String** | The campaign, flow, list or segment name, or the email subject. | [optional] 
