@@ -22,7 +22,7 @@ import SfvbTrackingWholesaleTier from './SfvbTrackingWholesaleTier';
 /**
  * The SfvbTrackingProvider model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProvider
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbTrackingProvider {
     /**
@@ -198,7 +198,7 @@ SfvbTrackingProvider.prototype['key'] = undefined;
 SfvbTrackingProvider.prototype['name'] = undefined;
 
 /**
- * Anything the write left for a person to do, such as disconnecting an OAuth connection in the admin.
+ * Anything for a person to know or do, such as a field the provider needs before it sends anything, or an OAuth connection to disconnect in the admin after a write.
  * @member {Array.<String>} notes
  */
 SfvbTrackingProvider.prototype['notes'] = undefined;

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingCheckPlanServerSide model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingCheckPlanServerSide
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbTrackingCheckPlanServerSide {
     /**

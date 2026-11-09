@@ -31,7 +31,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -336,6 +336,12 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * @const
      */
     "tracking_provider.change": "tracking_provider.change",
+
+    /**
+     * value: "tracking_provider.clear"
+     * @const
+     */
+    "tracking_provider.clear": "tracking_provider.clear",
 
     /**
      * value: "tracking_html.put"

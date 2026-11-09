@@ -19,7 +19,7 @@ import SfvbTrackingCheckPlanRequest from './SfvbTrackingCheckPlanRequest';
 /**
  * The SfvbTrackingCheckPlanProvider model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingCheckPlanProvider
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbTrackingCheckPlanProvider {
     /**

@@ -17,7 +17,7 @@ import SfvbCommsTemplate from './SfvbCommsTemplate';
 /**
  * The SfvbCommsTemplatesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsTemplatesResponse
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbCommsTemplatesResponse {
     /**

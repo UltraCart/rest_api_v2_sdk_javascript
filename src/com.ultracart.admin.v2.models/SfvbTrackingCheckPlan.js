@@ -19,7 +19,7 @@ import SfvbTrackingCheckPlanUnchecked from './SfvbTrackingCheckPlanUnchecked';
 /**
  * The SfvbTrackingCheckPlan model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingCheckPlan
- * @version 4.1.235
+ * @version 4.1.236
  */
 class SfvbTrackingCheckPlan {
     /**

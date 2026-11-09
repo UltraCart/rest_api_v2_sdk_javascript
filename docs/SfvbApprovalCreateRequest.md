@@ -64,6 +64,8 @@ Name | Type | Description | Notes
 
 * `tracking_provider.change` (value: `"tracking_provider.change"`)
 
+* `tracking_provider.clear` (value: `"tracking_provider.clear"`)
+
 * `tracking_html.put` (value: `"tracking_html.put"`)
 
 * `affiliate_network.change` (value: `"affiliate_network.change"`)
