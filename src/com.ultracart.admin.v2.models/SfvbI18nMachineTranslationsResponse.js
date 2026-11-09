@@ -17,7 +17,7 @@ import SfvbI18nTranslation from './SfvbI18nTranslation';
 /**
  * The SfvbI18nMachineTranslationsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nMachineTranslationsResponse
- * @version 4.1.234
+ * @version 4.1.235
  */
 class SfvbI18nMachineTranslationsResponse {
     /**

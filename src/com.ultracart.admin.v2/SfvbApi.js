@@ -222,6 +222,7 @@ import SfvbThemeDuplicateRequest from '../com.ultracart.admin.v2.models/SfvbThem
 import SfvbThemeJobResponse from '../com.ultracart.admin.v2.models/SfvbThemeJobResponse';
 import SfvbThemesResponse from '../com.ultracart.admin.v2.models/SfvbThemesResponse';
 import SfvbTrackingAdvancedRequest from '../com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
+import SfvbTrackingCheckPlan from '../com.ultracart.admin.v2.models/SfvbTrackingCheckPlan';
 import SfvbTrackingHtml from '../com.ultracart.admin.v2.models/SfvbTrackingHtml';
 import SfvbTrackingHtmlRenderRequest from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest';
 import SfvbTrackingHtmlRenderResponse from '../com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse';
@@ -254,7 +255,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.234
+* @version 4.1.235
 */
 export default class SfvbApi {
 
@@ -7450,6 +7451,65 @@ export default class SfvbApi {
       let returnType = SfvbThemeJobResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/theme_jobs/{job_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbTrackingCheckPlan operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingCheckPlanCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlan} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Plan a browser check of a storefront's tracking
+     * What each tracking provider should load on one page, for page_view or a test order's purchase, under a consent state and region, with the requests and calls to look for and the ones that must not appear.  Built from the same rules the storefront's tracking templates follow, never by running them, so nothing is sent to any provider.  Includes the hosts the storefront's custom and affiliate network HTML loads, the sends made from UltraCart servers, and a snippet that collects what the browser saw.  Grade the results locally; they are never sent here.  With neither consent nor region, every provider is listed with the gate that holds it back.  A purchase needs a test order on this account. 
+     * @param {Number} storefront_oid 
+     * @param {String} path A storefront page path, such as / or /checkout/receipt.html, with an optional query
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.event page_view (the default) or purchase
+     * @param {String} opts.order_id For purchase, a test order on this account
+     * @param {String} opts.consent none, all, or a comma list of statistics, preferences and marketing
+     * @param {String} opts.region Where the browser is.  eea, non-us or other
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbTrackingCheckPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlan}
+     */
+    getSfvbTrackingCheckPlan(storefront_oid, path, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbTrackingCheckPlan");
+      }
+      // verify the required parameter 'path' is set
+      if (path === undefined || path === null) {
+        throw new Error("Missing the required parameter 'path' when calling getSfvbTrackingCheckPlan");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'path': path,
+        'event': opts['event'],
+        'order_id': opts['order_id'],
+        'consent': opts['consent'],
+        'region': opts['region']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbTrackingCheckPlan;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/tracking/check_plan', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

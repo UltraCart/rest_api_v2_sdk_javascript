@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryShareTarget model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryShareTarget
- * @version 4.1.234
+ * @version 4.1.235
  */
 class SfvbLibraryShareTarget {
     /**

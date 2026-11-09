@@ -18,7 +18,7 @@ import SfvbCommsSequenceFolder from './SfvbCommsSequenceFolder';
 /**
  * The SfvbCommsSequenceFolderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSequenceFolderResponse
- * @version 4.1.234
+ * @version 4.1.235
  */
 class SfvbCommsSequenceFolderResponse {
     /**

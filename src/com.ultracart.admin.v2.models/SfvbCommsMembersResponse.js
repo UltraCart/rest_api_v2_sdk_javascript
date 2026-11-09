@@ -17,7 +17,7 @@ import SfvbCommsMember from './SfvbCommsMember';
 /**
  * The SfvbCommsMembersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsMembersResponse
- * @version 4.1.234
+ * @version 4.1.235
  */
 class SfvbCommsMembersResponse {
     /**

@@ -1304,6 +1304,13 @@ import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesRespon
 import SfvbTrackingAdvanced from './com.ultracart.admin.v2.models/SfvbTrackingAdvanced';
 import SfvbTrackingAdvancedRequest from './com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
 import SfvbTrackingChange from './com.ultracart.admin.v2.models/SfvbTrackingChange';
+import SfvbTrackingCheckPlan from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlan';
+import SfvbTrackingCheckPlanEvent from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanEvent';
+import SfvbTrackingCheckPlanGate from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanGate';
+import SfvbTrackingCheckPlanProvider from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanProvider';
+import SfvbTrackingCheckPlanRequest from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanRequest';
+import SfvbTrackingCheckPlanServerSide from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanServerSide';
+import SfvbTrackingCheckPlanUnchecked from './com.ultracart.admin.v2.models/SfvbTrackingCheckPlanUnchecked';
 import SfvbTrackingHtml from './com.ultracart.admin.v2.models/SfvbTrackingHtml';
 import SfvbTrackingHtmlRenderRequest from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderRequest';
 import SfvbTrackingHtmlRenderResponse from './com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse';
@@ -1498,7 +1505,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.234
+* @version 4.1.235
 */
 export {
     /**
@@ -9252,6 +9259,48 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbTrackingChange}
      */
     SfvbTrackingChange,
+
+    /**
+     * The SfvbTrackingCheckPlan model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlan}
+     */
+    SfvbTrackingCheckPlan,
+
+    /**
+     * The SfvbTrackingCheckPlanEvent model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanEvent}
+     */
+    SfvbTrackingCheckPlanEvent,
+
+    /**
+     * The SfvbTrackingCheckPlanGate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanGate}
+     */
+    SfvbTrackingCheckPlanGate,
+
+    /**
+     * The SfvbTrackingCheckPlanProvider model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanProvider}
+     */
+    SfvbTrackingCheckPlanProvider,
+
+    /**
+     * The SfvbTrackingCheckPlanRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanRequest}
+     */
+    SfvbTrackingCheckPlanRequest,
+
+    /**
+     * The SfvbTrackingCheckPlanServerSide model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanServerSide}
+     */
+    SfvbTrackingCheckPlanServerSide,
+
+    /**
+     * The SfvbTrackingCheckPlanUnchecked model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanUnchecked}
+     */
+    SfvbTrackingCheckPlanUnchecked,
 
     /**
      * The SfvbTrackingHtml model constructor.
