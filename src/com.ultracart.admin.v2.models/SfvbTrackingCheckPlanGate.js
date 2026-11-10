@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingCheckPlanGate model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingCheckPlanGate
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbTrackingCheckPlanGate {
     /**
@@ -50,6 +50,9 @@ class SfvbTrackingCheckPlanGate {
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
             }
+            if (data.hasOwnProperty('service')) {
+                obj['service'] = ApiClient.convertToType(data['service'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -65,6 +68,12 @@ class SfvbTrackingCheckPlanGate {
  * @member {module:com.ultracart.admin.v2.models/SfvbTrackingCheckPlanGate.RegionEnum} region
  */
 SfvbTrackingCheckPlanGate.prototype['region'] = undefined;
+
+/**
+ * The cookie service the consent gate is stored under, for example openai or facebook (#1959).
+ * @member {String} service
+ */
+SfvbTrackingCheckPlanGate.prototype['service'] = undefined;
 
 /**
  * The consent category that must be granted.  Statistics, Preferences or Marketing.

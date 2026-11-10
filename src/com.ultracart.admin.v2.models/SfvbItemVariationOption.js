@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemVariationOption model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationOption
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbItemVariationOption {
     /**
@@ -47,8 +47,8 @@ class SfvbItemVariationOption {
         if (data) {
             obj = obj || new SfvbItemVariationOption();
 
-            if (data.hasOwnProperty('default')) {
-                obj['default'] = ApiClient.convertToType(data['default'], 'Boolean');
+            if (data.hasOwnProperty('default_option')) {
+                obj['default_option'] = ApiClient.convertToType(data['default_option'], 'Boolean');
             }
             if (data.hasOwnProperty('multimedia_oid')) {
                 obj['multimedia_oid'] = ApiClient.convertToType(data['multimedia_oid'], 'Number');
@@ -65,9 +65,9 @@ class SfvbItemVariationOption {
 
 /**
  * True for the option the item page starts on.  At most one per axis.
- * @member {Boolean} default
+ * @member {Boolean} default_option
  */
-SfvbItemVariationOption.prototype['default'] = undefined;
+SfvbItemVariationOption.prototype['default_option'] = undefined;
 
 /**
  * An image or swatch of the parent item shown for this option, or null.

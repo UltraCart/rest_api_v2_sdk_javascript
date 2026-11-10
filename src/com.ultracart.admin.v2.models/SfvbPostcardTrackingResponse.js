@@ -17,7 +17,7 @@ import SfvbPostcardCard from './SfvbPostcardCard';
 /**
  * The SfvbPostcardTrackingResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPostcardTrackingResponse
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbPostcardTrackingResponse {
     /**

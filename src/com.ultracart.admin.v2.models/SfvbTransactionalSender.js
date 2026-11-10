@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTransactionalSender model module.
  * @module com.ultracart.admin.v2.models/SfvbTransactionalSender
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbTransactionalSender {
     /**

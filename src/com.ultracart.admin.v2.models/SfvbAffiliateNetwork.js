@@ -17,7 +17,7 @@ import SfvbTrackingChange from './SfvbTrackingChange';
 /**
  * The SfvbAffiliateNetwork model module.
  * @module com.ultracart.admin.v2.models/SfvbAffiliateNetwork
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbAffiliateNetwork {
     /**

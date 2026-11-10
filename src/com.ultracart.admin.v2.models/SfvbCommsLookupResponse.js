@@ -17,7 +17,7 @@ import SfvbCommsLookupOwner from './SfvbCommsLookupOwner';
 /**
  * The SfvbCommsLookupResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsLookupResponse
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbCommsLookupResponse {
     /**

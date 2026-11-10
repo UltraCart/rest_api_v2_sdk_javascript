@@ -17,7 +17,7 @@ import SfvbItemVariationValue from './SfvbItemVariationValue';
 /**
  * The SfvbItemVariationChange model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationChange
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbItemVariationChange {
     /**
@@ -57,8 +57,8 @@ class SfvbItemVariationChange {
             if (data.hasOwnProperty('child')) {
                 obj['child'] = ApiClient.convertToType(data['child'], 'String');
             }
-            if (data.hasOwnProperty('default')) {
-                obj['default'] = ApiClient.convertToType(data['default'], 'Boolean');
+            if (data.hasOwnProperty('default_option')) {
+                obj['default_option'] = ApiClient.convertToType(data['default_option'], 'Boolean');
             }
             if (data.hasOwnProperty('default_text')) {
                 obj['default_text'] = ApiClient.convertToType(data['default_text'], 'String');
@@ -111,9 +111,9 @@ SfvbItemVariationChange.prototype['child'] = undefined;
 
 /**
  * add_option and add_axis make the option the default.
- * @member {Boolean} default
+ * @member {Boolean} default_option
  */
-SfvbItemVariationChange.prototype['default'] = undefined;
+SfvbItemVariationChange.prototype['default_option'] = undefined;
 
 /**
  * The prompt, for add_axis and set_default_text.  Null clears it.

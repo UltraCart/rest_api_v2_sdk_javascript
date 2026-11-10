@@ -17,7 +17,7 @@ import SfvbNotFoundEntry from './SfvbNotFoundEntry';
 /**
  * The SfvbNotFoundSummary model module.
  * @module com.ultracart.admin.v2.models/SfvbNotFoundSummary
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbNotFoundSummary {
     /**

@@ -17,7 +17,7 @@ import SfvbPageItem from './SfvbPageItem';
 /**
  * The SfvbPageItemsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageItemsResponse
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbPageItemsResponse {
     /**

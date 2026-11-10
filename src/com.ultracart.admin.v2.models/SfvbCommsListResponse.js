@@ -17,7 +17,7 @@ import SfvbCommsListDetail from './SfvbCommsListDetail';
 /**
  * The SfvbCommsListResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsListResponse
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbCommsListResponse {
     /**

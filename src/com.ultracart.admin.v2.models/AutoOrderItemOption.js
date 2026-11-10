@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoOrderItemOption model module.
  * @module com.ultracart.admin.v2.models/AutoOrderItemOption
- * @version 4.1.240
+ * @version 4.1.241
  */
 class AutoOrderItemOption {
     /**

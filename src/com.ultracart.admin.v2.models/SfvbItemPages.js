@@ -17,7 +17,7 @@ import SfvbItemPageAssignment from './SfvbItemPageAssignment';
 /**
  * The SfvbItemPages model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPages
- * @version 4.1.240
+ * @version 4.1.241
  */
 class SfvbItemPages {
     /**
