@@ -21,9 +21,11 @@ import SfvbCommsTestPostcardRequest from './SfvbCommsTestPostcardRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbFlowBackfillRequest from './SfvbFlowBackfillRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
+import SfvbItemDefaultPageRow from './SfvbItemDefaultPageRow';
 import SfvbItemPreorderChildrenRequest from './SfvbItemPreorderChildrenRequest';
 import SfvbItemPreorderRequest from './SfvbItemPreorderRequest';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
+import SfvbItemVariationsRequest from './SfvbItemVariationsRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 import SfvbSiteSeoRequest from './SfvbSiteSeoRequest';
 import SfvbSmartAttributionRequest from './SfvbSmartAttributionRequest';
@@ -33,7 +35,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.239
+ * @version 4.1.240
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -88,6 +90,9 @@ class SfvbApprovalCreateRequest {
             if (data.hasOwnProperty('item_attribute_rows')) {
                 obj['item_attribute_rows'] = ApiClient.convertToType(data['item_attribute_rows'], [SfvbItemAttributeBatchRow]);
             }
+            if (data.hasOwnProperty('item_default_page_rows')) {
+                obj['item_default_page_rows'] = ApiClient.convertToType(data['item_default_page_rows'], [SfvbItemDefaultPageRow]);
+            }
             if (data.hasOwnProperty('item_preorder')) {
                 obj['item_preorder'] = SfvbItemPreorderRequest.constructFromObject(data['item_preorder']);
             }
@@ -96,6 +101,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('item_pricing')) {
                 obj['item_pricing'] = SfvbItemPricingRequest.constructFromObject(data['item_pricing']);
+            }
+            if (data.hasOwnProperty('item_variations')) {
+                obj['item_variations'] = SfvbItemVariationsRequest.constructFromObject(data['item_variations']);
             }
             if (data.hasOwnProperty('params')) {
                 obj['params'] = SfvbApprovalParams.constructFromObject(data['params']);
@@ -175,6 +183,12 @@ SfvbApprovalCreateRequest.prototype['flow_backfill'] = undefined;
 SfvbApprovalCreateRequest.prototype['item_attribute_rows'] = undefined;
 
 /**
+ * For item.default_page, exactly the rows the apply will send - the dry run's ready rows, each with merchant_item_oid, page_oid and current_sha256.  UltraCart keeps only their hash.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbItemDefaultPageRow>} item_default_page_rows
+ */
+SfvbApprovalCreateRequest.prototype['item_default_page_rows'] = undefined;
+
+/**
  * @member {module:com.ultracart.admin.v2.models/SfvbItemPreorderRequest} item_preorder
  */
 SfvbApprovalCreateRequest.prototype['item_preorder'] = undefined;
@@ -188,6 +202,11 @@ SfvbApprovalCreateRequest.prototype['item_preorder_children'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbItemPricingRequest} item_pricing
  */
 SfvbApprovalCreateRequest.prototype['item_pricing'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemVariationsRequest} item_variations
+ */
+SfvbApprovalCreateRequest.prototype['item_variations'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbApprovalParams} params
@@ -306,6 +325,18 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * @const
      */
     "item.preorder": "item.preorder",
+
+    /**
+     * value: "item.variations"
+     * @const
+     */
+    "item.variations": "item.variations",
+
+    /**
+     * value: "item.default_page"
+     * @const
+     */
+    "item.default_page": "item.default_page",
 
     /**
      * value: "twilio_account.delete"

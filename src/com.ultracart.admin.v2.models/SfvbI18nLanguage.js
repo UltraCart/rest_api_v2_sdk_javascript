@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbI18nLanguage model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nLanguage
- * @version 4.1.239
+ * @version 4.1.240
  */
 class SfvbI18nLanguage {
     /**

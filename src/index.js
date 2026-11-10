@@ -1134,12 +1134,20 @@ import SfvbItemAttributeBatchRow from './com.ultracart.admin.v2.models/SfvbItemA
 import SfvbItemAttributeBatchRowResult from './com.ultracart.admin.v2.models/SfvbItemAttributeBatchRowResult';
 import SfvbItemAttributeUpdate from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdate';
 import SfvbItemAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
+import SfvbItemChildCreateRequest from './com.ultracart.admin.v2.models/SfvbItemChildCreateRequest';
+import SfvbItemChildCreateResponse from './com.ultracart.admin.v2.models/SfvbItemChildCreateResponse';
 import SfvbItemContainer from './com.ultracart.admin.v2.models/SfvbItemContainer';
 import SfvbItemContainersResponse from './com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbItemContentRequest from './com.ultracart.admin.v2.models/SfvbItemContentRequest';
+import SfvbItemDefaultPageRequest from './com.ultracart.admin.v2.models/SfvbItemDefaultPageRequest';
+import SfvbItemDefaultPageResponse from './com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse';
+import SfvbItemDefaultPageResult from './com.ultracart.admin.v2.models/SfvbItemDefaultPageResult';
+import SfvbItemDefaultPageRow from './com.ultracart.admin.v2.models/SfvbItemDefaultPageRow';
 import SfvbItemMultimedia from './com.ultracart.admin.v2.models/SfvbItemMultimedia';
 import SfvbItemMultimediaDescriptionRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemPageAssignment from './com.ultracart.admin.v2.models/SfvbItemPageAssignment';
+import SfvbItemPages from './com.ultracart.admin.v2.models/SfvbItemPages';
 import SfvbItemPreorder from './com.ultracart.admin.v2.models/SfvbItemPreorder';
 import SfvbItemPreorderChange from './com.ultracart.admin.v2.models/SfvbItemPreorderChange';
 import SfvbItemPreorderChildRow from './com.ultracart.admin.v2.models/SfvbItemPreorderChildRow';
@@ -1156,6 +1164,16 @@ import SfvbItemResponse from './com.ultracart.admin.v2.models/SfvbItemResponse';
 import SfvbItemSeo from './com.ultracart.admin.v2.models/SfvbItemSeo';
 import SfvbItemSeoRequest from './com.ultracart.admin.v2.models/SfvbItemSeoRequest';
 import SfvbItemTags from './com.ultracart.admin.v2.models/SfvbItemTags';
+import SfvbItemVariationAxis from './com.ultracart.admin.v2.models/SfvbItemVariationAxis';
+import SfvbItemVariationChange from './com.ultracart.admin.v2.models/SfvbItemVariationChange';
+import SfvbItemVariationChangeResult from './com.ultracart.admin.v2.models/SfvbItemVariationChangeResult';
+import SfvbItemVariationChild from './com.ultracart.admin.v2.models/SfvbItemVariationChild';
+import SfvbItemVariationCombination from './com.ultracart.admin.v2.models/SfvbItemVariationCombination';
+import SfvbItemVariationOption from './com.ultracart.admin.v2.models/SfvbItemVariationOption';
+import SfvbItemVariationValue from './com.ultracart.admin.v2.models/SfvbItemVariationValue';
+import SfvbItemVariations from './com.ultracart.admin.v2.models/SfvbItemVariations';
+import SfvbItemVariationsRequest from './com.ultracart.admin.v2.models/SfvbItemVariationsRequest';
+import SfvbItemVariationsResponse from './com.ultracart.admin.v2.models/SfvbItemVariationsResponse';
 import SfvbItemVolumeDiscount from './com.ultracart.admin.v2.models/SfvbItemVolumeDiscount';
 import SfvbLibraryAiReview from './com.ultracart.admin.v2.models/SfvbLibraryAiReview';
 import SfvbLibraryContentManifest from './com.ultracart.admin.v2.models/SfvbLibraryContentManifest';
@@ -1515,7 +1533,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.239
+* @version 4.1.240
 */
 export {
     /**
@@ -8251,6 +8269,18 @@ export {
     SfvbItemAttributeUpdateRequest,
 
     /**
+     * The SfvbItemChildCreateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemChildCreateRequest}
+     */
+    SfvbItemChildCreateRequest,
+
+    /**
+     * The SfvbItemChildCreateResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemChildCreateResponse}
+     */
+    SfvbItemChildCreateResponse,
+
+    /**
      * The SfvbItemContainer model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbItemContainer}
      */
@@ -8269,6 +8299,30 @@ export {
     SfvbItemContentRequest,
 
     /**
+     * The SfvbItemDefaultPageRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageRequest}
+     */
+    SfvbItemDefaultPageRequest,
+
+    /**
+     * The SfvbItemDefaultPageResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse}
+     */
+    SfvbItemDefaultPageResponse,
+
+    /**
+     * The SfvbItemDefaultPageResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResult}
+     */
+    SfvbItemDefaultPageResult,
+
+    /**
+     * The SfvbItemDefaultPageRow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageRow}
+     */
+    SfvbItemDefaultPageRow,
+
+    /**
      * The SfvbItemMultimedia model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimedia}
      */
@@ -8285,6 +8339,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimediaRequest}
      */
     SfvbItemMultimediaRequest,
+
+    /**
+     * The SfvbItemPageAssignment model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPageAssignment}
+     */
+    SfvbItemPageAssignment,
+
+    /**
+     * The SfvbItemPages model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPages}
+     */
+    SfvbItemPages,
 
     /**
      * The SfvbItemPreorder model constructor.
@@ -8381,6 +8447,66 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemTags}
      */
     SfvbItemTags,
+
+    /**
+     * The SfvbItemVariationAxis model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationAxis}
+     */
+    SfvbItemVariationAxis,
+
+    /**
+     * The SfvbItemVariationChange model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationChange}
+     */
+    SfvbItemVariationChange,
+
+    /**
+     * The SfvbItemVariationChangeResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationChangeResult}
+     */
+    SfvbItemVariationChangeResult,
+
+    /**
+     * The SfvbItemVariationChild model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationChild}
+     */
+    SfvbItemVariationChild,
+
+    /**
+     * The SfvbItemVariationCombination model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationCombination}
+     */
+    SfvbItemVariationCombination,
+
+    /**
+     * The SfvbItemVariationOption model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationOption}
+     */
+    SfvbItemVariationOption,
+
+    /**
+     * The SfvbItemVariationValue model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationValue}
+     */
+    SfvbItemVariationValue,
+
+    /**
+     * The SfvbItemVariations model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariations}
+     */
+    SfvbItemVariations,
+
+    /**
+     * The SfvbItemVariationsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationsRequest}
+     */
+    SfvbItemVariationsRequest,
+
+    /**
+     * The SfvbItemVariationsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemVariationsResponse}
+     */
+    SfvbItemVariationsResponse,
 
     /**
      * The SfvbItemVolumeDiscount model constructor.

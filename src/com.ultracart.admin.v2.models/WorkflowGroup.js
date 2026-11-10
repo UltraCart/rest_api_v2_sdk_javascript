@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowGroup model module.
  * @module com.ultracart.admin.v2.models/WorkflowGroup
- * @version 4.1.239
+ * @version 4.1.240
  */
 class WorkflowGroup {
     /**

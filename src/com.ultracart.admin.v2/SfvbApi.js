@@ -117,10 +117,15 @@ import SfvbI18nResetResponse from '../com.ultracart.admin.v2.models/SfvbI18nRese
 import SfvbItemAttributeBatchRequest from '../com.ultracart.admin.v2.models/SfvbItemAttributeBatchRequest';
 import SfvbItemAttributeBatchResponse from '../com.ultracart.admin.v2.models/SfvbItemAttributeBatchResponse';
 import SfvbItemAttributeUpdateRequest from '../com.ultracart.admin.v2.models/SfvbItemAttributeUpdateRequest';
+import SfvbItemChildCreateRequest from '../com.ultracart.admin.v2.models/SfvbItemChildCreateRequest';
+import SfvbItemChildCreateResponse from '../com.ultracart.admin.v2.models/SfvbItemChildCreateResponse';
 import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbItemContainersResponse';
 import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemContentRequest';
+import SfvbItemDefaultPageRequest from '../com.ultracart.admin.v2.models/SfvbItemDefaultPageRequest';
+import SfvbItemDefaultPageResponse from '../com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse';
 import SfvbItemMultimediaDescriptionRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemPages from '../com.ultracart.admin.v2.models/SfvbItemPages';
 import SfvbItemPreorder from '../com.ultracart.admin.v2.models/SfvbItemPreorder';
 import SfvbItemPreorderChildrenRequest from '../com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest';
 import SfvbItemPreorderListResponse from '../com.ultracart.admin.v2.models/SfvbItemPreorderListResponse';
@@ -131,6 +136,9 @@ import SfvbItemRelated from '../com.ultracart.admin.v2.models/SfvbItemRelated';
 import SfvbItemRelatedRequest from '../com.ultracart.admin.v2.models/SfvbItemRelatedRequest';
 import SfvbItemResponse from '../com.ultracart.admin.v2.models/SfvbItemResponse';
 import SfvbItemSeoRequest from '../com.ultracart.admin.v2.models/SfvbItemSeoRequest';
+import SfvbItemVariations from '../com.ultracart.admin.v2.models/SfvbItemVariations';
+import SfvbItemVariationsRequest from '../com.ultracart.admin.v2.models/SfvbItemVariationsRequest';
+import SfvbItemVariationsResponse from '../com.ultracart.admin.v2.models/SfvbItemVariationsResponse';
 import SfvbLibraryDeleteResult from '../com.ultracart.admin.v2.models/SfvbLibraryDeleteResult';
 import SfvbLibraryEntry from '../com.ultracart.admin.v2.models/SfvbLibraryEntry';
 import SfvbLibraryEntryRequest from '../com.ultracart.admin.v2.models/SfvbLibraryEntryRequest';
@@ -261,7 +269,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.239
+* @version 4.1.240
 */
 export default class SfvbApi {
 
@@ -2702,6 +2710,54 @@ export default class SfvbApi {
       let returnType = SfvbItemAttributeBatchResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/attributes/batch/dry_run', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dryRunSfvbItemDefaultPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbItemDefaultPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check moving items' default (canonical) pages
+     * Checks up to 2,000 rows on up to 200 items, each naming an item and a page it is already on, and saves nothing.  Each row answers ready, already_default, target_not_found, target_not_on_host, target_not_assigned, target_hidden (refused - a hidden page isn't served to shoppers), item_not_found, invalid or stale, with the item's current default and current_sha256.  rows_sha256 covers the ready rows - request item.default_page with exactly those rows, then apply them. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageRequest} item_default_page_request The rows
+     * @param {module:com.ultracart.admin.v2/SfvbApi~dryRunSfvbItemDefaultPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse}
+     */
+    dryRunSfvbItemDefaultPage(storefront_oid, item_default_page_request, callback) {
+      let postBody = item_default_page_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling dryRunSfvbItemDefaultPage");
+      }
+      // verify the required parameter 'item_default_page_request' is set
+      if (item_default_page_request === undefined || item_default_page_request === null) {
+        throw new Error("Missing the required parameter 'item_default_page_request' when calling dryRunSfvbItemDefaultPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemDefaultPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/default_page/dry_run', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -5722,6 +5778,55 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbItemPages operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPages} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the pages an item is on and its default page
+     * Every page the item is assigned to on this storefront, whether each is visible, and which is the default - the page the item's canonical link uses.  Another storefront's pages aren't listed.  hash_sha256 is the same value the default-page dry run reports as current_sha256.  Address the item by merchant_item_id or merchant_item_oid. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemPages}
+     */
+    getSfvbItemPages(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbItemPages");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemPages;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/pages', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbItemPreorder operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPreorderCallback
      * @param {String} error Error message, if any.
@@ -5912,6 +6017,55 @@ export default class SfvbApi {
       let returnType = SfvbItemRelated;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/related', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbItemVariations operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemVariationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemVariations} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read an item's variations
+     * The variation axes, such as Size, with their options in the order shoppers see them, and every filled combination with the child item it sells and its quantity.  A combination not listed has no child, and storefronts show it as unavailable.  hash_sha256 goes back as If-Match on the update.  Address the parent by merchant_item_id or merchant_item_oid. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbItemVariationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemVariations}
+     */
+    getSfvbItemVariations(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbItemVariations");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemVariations;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/variations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -8939,6 +9093,54 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the insertSfvbItemChild operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbItemChildCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemChildCreateResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a child item for a parent's variations
+     * Creates a new item copying the parent's description, cost, weight, dimensions and item folder, so it can be assigned to a combination with the variations update.  It is not assigned here and nothing else is copied.  merchant_item_id may use letters, digits, dot, underscore and dash, at most 20 characters; an id already on the account is 409 sfvb.item_exists.  Needs sfvb_publish when items are live.  dry_run checks without creating. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemChildCreateRequest} item_child_request The child to create
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbItemChildCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemChildCreateResponse}
+     */
+    insertSfvbItemChild(storefront_oid, item_child_request, callback) {
+      let postBody = item_child_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbItemChild");
+      }
+      // verify the required parameter 'item_child_request' is set
+      if (item_child_request === undefined || item_child_request === null) {
+        throw new Error("Missing the required parameter 'item_child_request' when calling insertSfvbItemChild");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemChildCreateResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/children', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the insertSfvbPage operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbPageCallback
      * @param {String} error Error message, if any.
@@ -11413,6 +11615,68 @@ export default class SfvbApi {
       let returnType = SfvbItemResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/seo', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemVariations operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemVariationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemVariationsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an item's variations
+     * A list of changes applied in order - add_axis, remove_axis, rename_axis, add_option, remove_option, rename_option, reorder_options, set_default, set_default_text, set_option_multimedia and set_combination.  Every change is checked before anything is saved, and nothing the list doesn't mention changes.  Child items must already exist; create one with POST items/children.  Needs sfvb_publish when items are live and If-Match with the hash_sha256 from the read.  Removing an axis, removing an option whose combinations sell a child, or re-pointing or clearing a combination shoppers can buy today also needs the approval of the person who signed in the CLI - an approved item.variations request for this item and exactly this list.  Adding never does.  dry_run returns the planned variations, what each change does, and whether approval is needed. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match hash_sha256 from the variations read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemVariationsRequest} item_variations_request The changes
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {String} opts.Approval_Id The approval_id of an approved item.variations request for this item and list.  Required when the list removes or re-points something shoppers can buy.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemVariationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemVariationsResponse}
+     */
+    putSfvbItemVariations(storefront_oid, If_Match, item_variations_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_variations_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemVariations");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling putSfvbItemVariations");
+      }
+      // verify the required parameter 'item_variations_request' is set
+      if (item_variations_request === undefined || item_variations_request === null) {
+        throw new Error("Missing the required parameter 'item_variations_request' when calling putSfvbItemVariations");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemVariationsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/variations', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -14411,6 +14675,58 @@ export default class SfvbApi {
       let returnType = SfvbItemAttributeBatchResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/attributes/batch', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbItemDefaultPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbItemDefaultPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Move items' default (canonical) pages
+     * Applies the dry run's ready rows with their rows_sha256 under an approved item.default_page request for exactly those rows.  Each item's default moves to the named page on this storefront only; every page assignment stays, and nothing else on the item changes.  A row whose pages changed since the dry run is skipped as stale, and one failed row doesn't stop the others.  Each row is read back; it answers updated with previous_default_path, so the change can be undone, or failed.  Needs sfvb_publish when items are live. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemDefaultPageRequest} item_default_page_request The dry run's ready rows and rows_sha256
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved item.default_page request for exactly these rows.  Required.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbItemDefaultPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse}
+     */
+    updateSfvbItemDefaultPage(storefront_oid, item_default_page_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_default_page_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbItemDefaultPage");
+      }
+      // verify the required parameter 'item_default_page_request' is set
+      if (item_default_page_request === undefined || item_default_page_request === null) {
+        throw new Error("Missing the required parameter 'item_default_page_request' when calling updateSfvbItemDefaultPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemDefaultPageResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/default_page', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

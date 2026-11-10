@@ -19,7 +19,7 @@ import ErrorResponse from '../com.ultracart.admin.v2.models/ErrorResponse';
 /**
 * ConversationEmbed service.
 * @module com.ultracart.admin.v2/ConversationEmbedApi
-* @version 4.1.239
+* @version 4.1.240
 */
 export default class ConversationEmbedApi {
 
