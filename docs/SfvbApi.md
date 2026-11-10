@@ -98,6 +98,7 @@ Method | HTTP request | Description
 [**getSfvbCommsUnreferenced**](SfvbApi.md#getSfvbCommsUnreferenced) | **GET** /sfvb/storefronts/{storefront_oid}/comms/unreferenced | List the emails and postcards on a storefront that no step names
 [**getSfvbContainer**](SfvbApi.md#getSfvbContainer) | **GET** /sfvb/storefronts/{storefront_oid}/containers/{owner_type}/{owner_object_id} | Read a container stored outside the file system
 [**getSfvbContainerVersion**](SfvbApi.md#getSfvbContainerVersion) | **GET** /sfvb/storefronts/{storefront_oid}/container_versions/{container_history_oid} | Read the CJSON stored in one container history entry
+[**getSfvbDocsGap**](SfvbApi.md#getSfvbDocsGap) | **GET** /sfvb/docs/gaps/{report_id} | Get a documentation-gap report&#39;s status
 [**getSfvbElement**](SfvbApi.md#getSfvbElement) | **GET** /sfvb/elements/{element_type} | Configuration schema and field card for one element type
 [**getSfvbEmail**](SfvbApi.md#getSfvbEmail) | **GET** /sfvb/storefronts/{storefront_oid}/emails/{email_uuid} | Get a flow or campaign email&#39;s subject and preview text
 [**getSfvbEvents**](SfvbApi.md#getSfvbEvents) | **GET** /sfvb/events | Replay events
@@ -177,6 +178,7 @@ Method | HTTP request | Description
 [**insertSfvbCommsSegment**](SfvbApi.md#insertSfvbCommsSegment) | **POST** /sfvb/storefronts/{storefront_oid}/segments | Create a segment
 [**insertSfvbCommsSendingDomain**](SfvbApi.md#insertSfvbCommsSendingDomain) | **POST** /sfvb/comms/sending_domains | Add a sending domain
 [**insertSfvbCommsTwilioAccount**](SfvbApi.md#insertSfvbCommsTwilioAccount) | **POST** /sfvb/comms/twilio_account | Connect the Twilio account
+[**insertSfvbDocsGap**](SfvbApi.md#insertSfvbDocsGap) | **POST** /sfvb/docs/gaps | Send UltraCart a documentation-gap report
 [**insertSfvbPage**](SfvbApi.md#insertSfvbPage) | **POST** /sfvb/storefronts/{storefront_oid}/pages | Create a page
 [**insertSfvbRedirect**](SfvbApi.md#insertSfvbRedirect) | **POST** /sfvb/storefronts/{storefront_oid}/redirects | Create a 301 redirect rule
 [**insertSfvbSecretRequest**](SfvbApi.md#insertSfvbSecretRequest) | **POST** /sfvb/secrets | Ask a person to enter secret values
@@ -3806,6 +3808,42 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getSfvbDocsGap
+
+> SfvbDocsGap getSfvbDocsGap(report_id)
+
+Get a documentation-gap report&#39;s status
+
+The status of a report this account sent.  received until UltraCart staff look at it, then accepted, declined or fixed.  The report text and UltraCart&#39;s internal notes are not returned.  A report from another account answers 404. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **report_id** | **String**|  | 
+
+### Return type
+
+[**SfvbDocsGap**](SfvbDocsGap.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getSfvbElement
 
 > SfvbElementSchemaResponse getSfvbElement(element_type)
@@ -6726,6 +6764,43 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SfvbCommsTwilioAccountResponse**](SfvbCommsTwilioAccountResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## insertSfvbDocsGap
+
+> SfvbDocsGap insertSfvbDocsGap(docs_gap_report, opts)
+
+Send UltraCart a documentation-gap report
+
+Reports a place where docs.ultracart.com is wrong or missing, for UltraCart staff to triage.  Send the report uc-storefront docs gap review checked, in this form.  Optionally name the storefront the agent was working on with storefront_oid.  The server checks the report again and refuses one that holds a credential or an email address (an ultracart.com address may stay), without keeping it.  Sending the same report again returns the earlier report_id with 200 and duplicate true rather than a second report.  An account may send 20 reports a UTC day.  Requires a token that resolves to a user, so use the device authorization flow. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **docs_gap_report** | [**SfvbDocsGapReport**](SfvbDocsGapReport.md)| The report | 
+ **storefront_oid** | **Number**| The storefront the agent was working on, recorded for context.  Leave it out when none applies. | [optional] 
+
+### Return type
+
+[**SfvbDocsGap**](SfvbDocsGap.md)
 
 ### Authorization
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingChange model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingChange
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbTrackingChange {
     /**

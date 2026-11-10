@@ -17,7 +17,7 @@ import SfvbLibraryInstallRecord from './SfvbLibraryInstallRecord';
 /**
  * The SfvbLibraryUnshareResult model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryUnshareResult
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbLibraryUnshareResult {
     /**

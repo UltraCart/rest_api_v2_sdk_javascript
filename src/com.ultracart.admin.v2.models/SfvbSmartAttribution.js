@@ -17,7 +17,7 @@ import SfvbSmartAttributionPlatform from './SfvbSmartAttributionPlatform';
 /**
  * The SfvbSmartAttribution model module.
  * @module com.ultracart.admin.v2.models/SfvbSmartAttribution
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbSmartAttribution {
     /**

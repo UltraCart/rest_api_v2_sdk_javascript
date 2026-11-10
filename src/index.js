@@ -1073,6 +1073,9 @@ import SfvbContainerRevertRequest from './com.ultracart.admin.v2.models/SfvbCont
 import SfvbContainerVersion from './com.ultracart.admin.v2.models/SfvbContainerVersion';
 import SfvbContainerVersionsResponse from './com.ultracart.admin.v2.models/SfvbContainerVersionsResponse';
 import SfvbContainerWriteRequest from './com.ultracart.admin.v2.models/SfvbContainerWriteRequest';
+import SfvbDocsGap from './com.ultracart.admin.v2.models/SfvbDocsGap';
+import SfvbDocsGapReport from './com.ultracart.admin.v2.models/SfvbDocsGapReport';
+import SfvbDocsGapReportGap from './com.ultracart.admin.v2.models/SfvbDocsGapReportGap';
 import SfvbElement from './com.ultracart.admin.v2.models/SfvbElement';
 import SfvbElementSchemaResponse from './com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from './com.ultracart.admin.v2.models/SfvbElementsResponse';
@@ -1505,7 +1508,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.236
+* @version 4.1.237
 */
 export {
     /**
@@ -7873,6 +7876,24 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbContainerWriteRequest}
      */
     SfvbContainerWriteRequest,
+
+    /**
+     * The SfvbDocsGap model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbDocsGap}
+     */
+    SfvbDocsGap,
+
+    /**
+     * The SfvbDocsGapReport model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbDocsGapReport}
+     */
+    SfvbDocsGapReport,
+
+    /**
+     * The SfvbDocsGapReportGap model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbDocsGapReportGap}
+     */
+    SfvbDocsGapReportGap,
 
     /**
      * The SfvbElement model constructor.

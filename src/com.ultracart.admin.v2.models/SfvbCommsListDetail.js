@@ -17,7 +17,7 @@ import SfvbCommsSegmentUsedBy from './SfvbCommsSegmentUsedBy';
 /**
  * The SfvbCommsListDetail model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsListDetail
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbCommsListDetail {
     /**

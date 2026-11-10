@@ -71,6 +71,8 @@ import SfvbContainerRevertRequest from '../com.ultracart.admin.v2.models/SfvbCon
 import SfvbContainerVersion from '../com.ultracart.admin.v2.models/SfvbContainerVersion';
 import SfvbContainerVersionsResponse from '../com.ultracart.admin.v2.models/SfvbContainerVersionsResponse';
 import SfvbContainerWriteRequest from '../com.ultracart.admin.v2.models/SfvbContainerWriteRequest';
+import SfvbDocsGap from '../com.ultracart.admin.v2.models/SfvbDocsGap';
+import SfvbDocsGapReport from '../com.ultracart.admin.v2.models/SfvbDocsGapReport';
 import SfvbElementSchemaResponse from '../com.ultracart.admin.v2.models/SfvbElementSchemaResponse';
 import SfvbElementsResponse from '../com.ultracart.admin.v2.models/SfvbElementsResponse';
 import SfvbEmail from '../com.ultracart.admin.v2.models/SfvbEmail';
@@ -255,7 +257,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.236
+* @version 4.1.237
 */
 export default class SfvbApi {
 
@@ -4961,6 +4963,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbDocsGap operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbDocsGapCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbDocsGap} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a documentation-gap report's status
+     * The status of a report this account sent.  received until UltraCart staff look at it, then accepted, declined or fixed.  The report text and UltraCart's internal notes are not returned.  A report from another account answers 404. 
+     * @param {String} report_id 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbDocsGapCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbDocsGap}
+     */
+    getSfvbDocsGap(report_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'report_id' is set
+      if (report_id === undefined || report_id === null) {
+        throw new Error("Missing the required parameter 'report_id' when calling getSfvbDocsGap");
+      }
+
+      let pathParams = {
+        'report_id': report_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbDocsGap;
+      return this.apiClient.callApi(
+        '/sfvb/docs/gaps/{report_id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbElement operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbElementCallback
      * @param {String} error Error message, if any.
@@ -8740,6 +8785,52 @@ export default class SfvbApi {
       let returnType = SfvbCommsTwilioAccountResponse;
       return this.apiClient.callApi(
         '/sfvb/comms/twilio_account', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbDocsGap operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbDocsGapCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbDocsGap} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send UltraCart a documentation-gap report
+     * Reports a place where docs.ultracart.com is wrong or missing, for UltraCart staff to triage.  Send the report uc-storefront docs gap review checked, in this form.  Optionally name the storefront the agent was working on with storefront_oid.  The server checks the report again and refuses one that holds a credential or an email address (an ultracart.com address may stay), without keeping it.  Sending the same report again returns the earlier report_id with 200 and duplicate true rather than a second report.  An account may send 20 reports a UTC day.  Requires a token that resolves to a user, so use the device authorization flow. 
+     * @param {module:com.ultracart.admin.v2.models/SfvbDocsGapReport} docs_gap_report The report
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.storefront_oid The storefront the agent was working on, recorded for context.  Leave it out when none applies.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbDocsGapCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbDocsGap}
+     */
+    insertSfvbDocsGap(docs_gap_report, opts, callback) {
+      opts = opts || {};
+      let postBody = docs_gap_report;
+      // verify the required parameter 'docs_gap_report' is set
+      if (docs_gap_report === undefined || docs_gap_report === null) {
+        throw new Error("Missing the required parameter 'docs_gap_report' when calling insertSfvbDocsGap");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'storefront_oid': opts['storefront_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbDocsGap;
+      return this.apiClient.callApi(
+        '/sfvb/docs/gaps', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

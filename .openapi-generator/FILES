@@ -1080,6 +1080,9 @@ docs/SfvbContainerRevertRequest.md
 docs/SfvbContainerVersion.md
 docs/SfvbContainerVersionsResponse.md
 docs/SfvbContainerWriteRequest.md
+docs/SfvbDocsGap.md
+docs/SfvbDocsGapReport.md
+docs/SfvbDocsGapReportGap.md
 docs/SfvbElement.md
 docs/SfvbElementSchemaResponse.md
 docs/SfvbElementsResponse.md
@@ -2527,6 +2530,9 @@ src/com.ultracart.admin.v2.models/SfvbContainerRevertRequest.js
 src/com.ultracart.admin.v2.models/SfvbContainerVersion.js
 src/com.ultracart.admin.v2.models/SfvbContainerVersionsResponse.js
 src/com.ultracart.admin.v2.models/SfvbContainerWriteRequest.js
+src/com.ultracart.admin.v2.models/SfvbDocsGap.js
+src/com.ultracart.admin.v2.models/SfvbDocsGapReport.js
+src/com.ultracart.admin.v2.models/SfvbDocsGapReportGap.js
 src/com.ultracart.admin.v2.models/SfvbElement.js
 src/com.ultracart.admin.v2.models/SfvbElementSchemaResponse.js
 src/com.ultracart.admin.v2.models/SfvbElementsResponse.js

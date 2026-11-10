@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFlowStatusRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFlowStatusRequest
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbFlowStatusRequest {
     /**

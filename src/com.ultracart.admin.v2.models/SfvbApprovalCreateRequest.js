@@ -31,7 +31,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.236
+ * @version 4.1.237
  */
 class SfvbApprovalCreateRequest {
     /**
