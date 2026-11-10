@@ -17,7 +17,7 @@ import SfvbItemPreorderChildRow from './SfvbItemPreorderChildRow';
 /**
  * The SfvbItemPreorderChildrenRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest
- * @version 4.1.238
+ * @version 4.1.239
  */
 class SfvbItemPreorderChildrenRequest {
     /**

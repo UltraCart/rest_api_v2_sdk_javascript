@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderSecrets model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderSecrets
- * @version 4.1.238
+ * @version 4.1.239
  */
 class SfvbTrackingProviderSecrets {
     /**
@@ -82,6 +82,9 @@ class SfvbTrackingProviderSecrets {
             }
             if (data.hasOwnProperty('northbeam_api_key')) {
                 obj['northbeam_api_key'] = ApiClient.convertToType(data['northbeam_api_key'], 'String');
+            }
+            if (data.hasOwnProperty('openai_conversions_api_key')) {
+                obj['openai_conversions_api_key'] = ApiClient.convertToType(data['openai_conversions_api_key'], 'String');
             }
             if (data.hasOwnProperty('pinterest_token')) {
                 obj['pinterest_token'] = ApiClient.convertToType(data['pinterest_token'], 'String');
@@ -170,6 +173,12 @@ SfvbTrackingProviderSecrets.prototype['nextdoor_access_token'] = undefined;
  * @member {String} northbeam_api_key
  */
 SfvbTrackingProviderSecrets.prototype['northbeam_api_key'] = undefined;
+
+/**
+ * OpenAI Conversions API Key.  A secret handle (sec_...) made for this storefront by POST secrets with sink tracking.openai.conversions_api_key, or an empty string to clear it.
+ * @member {String} openai_conversions_api_key
+ */
+SfvbTrackingProviderSecrets.prototype['openai_conversions_api_key'] = undefined;
 
 /**
  * Pinterest Conversion Token.  A secret handle (sec_...) made for this storefront by POST secrets with sink tracking.pinterest.capi_token, or an empty string to clear it.

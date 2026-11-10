@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsTestSendResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsTestSendResponse
- * @version 4.1.238
+ * @version 4.1.239
  */
 class SfvbCommsTestSendResponse {
     /**

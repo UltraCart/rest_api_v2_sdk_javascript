@@ -37,7 +37,7 @@ import TaxState from '../com.ultracart.admin.v2.models/TaxState';
 /**
 * Tax service.
 * @module com.ultracart.admin.v2/TaxApi
-* @version 4.1.238
+* @version 4.1.239
 */
 export default class TaxApi {
 

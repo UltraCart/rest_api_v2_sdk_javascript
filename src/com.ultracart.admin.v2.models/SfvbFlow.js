@@ -18,7 +18,7 @@ import SfvbCommsPostcard from './SfvbCommsPostcard';
 /**
  * The SfvbFlow model module.
  * @module com.ultracart.admin.v2.models/SfvbFlow
- * @version 4.1.238
+ * @version 4.1.239
  */
 class SfvbFlow {
     /**

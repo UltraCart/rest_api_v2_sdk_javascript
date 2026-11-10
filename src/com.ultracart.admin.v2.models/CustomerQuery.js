@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomerQuery model module.
  * @module com.ultracart.admin.v2.models/CustomerQuery
- * @version 4.1.238
+ * @version 4.1.239
  */
 class CustomerQuery {
     /**

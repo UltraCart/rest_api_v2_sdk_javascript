@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationEngagementResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationEngagementResponse
- * @version 4.1.238
+ * @version 4.1.239
  */
 class ConversationEngagementResponse {
     /**

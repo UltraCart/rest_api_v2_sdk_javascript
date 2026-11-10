@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderEvent model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderEvent
- * @version 4.1.238
+ * @version 4.1.239
  */
 class SfvbTrackingProviderEvent {
     /**
