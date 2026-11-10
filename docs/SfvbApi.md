@@ -114,6 +114,8 @@ Method | HTTP request | Description
 [**getSfvbI18nMessage**](SfvbApi.md#getSfvbI18nMessage) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/messages/{key} | Read one built-in message
 [**getSfvbI18nMessageMachineTranslations**](SfvbApi.md#getSfvbI18nMessageMachineTranslations) | **GET** /sfvb/storefronts/{storefront_oid}/i18n/messages/{key}/machine_translations | Read where a message&#39;s translations come from
 [**getSfvbItem**](SfvbApi.md#getSfvbItem) | **GET** /sfvb/storefronts/{storefront_oid}/items | Read an item&#39;s storefront facing content
+[**getSfvbItemPreorder**](SfvbApi.md#getSfvbItemPreorder) | **GET** /sfvb/storefronts/{storefront_oid}/items/preorder | Read an item&#39;s pre-order flag and ETA
+[**getSfvbItemPreorderChildren**](SfvbApi.md#getSfvbItemPreorderChildren) | **GET** /sfvb/storefronts/{storefront_oid}/items/preorder/children | Read the pre-order flag and ETA of a parent item&#39;s variations
 [**getSfvbItemPricing**](SfvbApi.md#getSfvbItemPricing) | **GET** /sfvb/storefronts/{storefront_oid}/items/pricing | Read what an item charges
 [**getSfvbItemRelated**](SfvbApi.md#getSfvbItemRelated) | **GET** /sfvb/storefronts/{storefront_oid}/items/related | Read an item&#39;s related items
 [**getSfvbLibraryEntry**](SfvbApi.md#getSfvbLibraryEntry) | **GET** /sfvb/storefronts/{storefront_oid}/library/{library_oid} | Read one library entry including its CJSON
@@ -221,6 +223,8 @@ Method | HTTP request | Description
 [**putSfvbItemContent**](SfvbApi.md#putSfvbItemContent) | **PUT** /sfvb/storefronts/{storefront_oid}/items/content | Change an item&#39;s title or long description
 [**putSfvbItemMultimedia**](SfvbApi.md#putSfvbItemMultimedia) | **PUT** /sfvb/storefronts/{storefront_oid}/items/multimedia | Attach an image to an item
 [**putSfvbItemMultimediaDescription**](SfvbApi.md#putSfvbItemMultimediaDescription) | **PUT** /sfvb/storefronts/{storefront_oid}/items/multimedia/description | Change an item image&#39;s description
+[**putSfvbItemPreorder**](SfvbApi.md#putSfvbItemPreorder) | **PUT** /sfvb/storefronts/{storefront_oid}/items/preorder | Change an item&#39;s pre-order flag or ETA
+[**putSfvbItemPreorderChildren**](SfvbApi.md#putSfvbItemPreorderChildren) | **PUT** /sfvb/storefronts/{storefront_oid}/items/preorder/children | Change the pre-order flag or ETA of several variations of one parent
 [**putSfvbItemPricing**](SfvbApi.md#putSfvbItemPricing) | **PUT** /sfvb/storefronts/{storefront_oid}/items/pricing | Change what an item charges
 [**putSfvbItemRelated**](SfvbApi.md#putSfvbItemRelated) | **PUT** /sfvb/storefronts/{storefront_oid}/items/related | Replace an item&#39;s related items
 [**putSfvbItemSeo**](SfvbApi.md#putSfvbItemSeo) | **PUT** /sfvb/storefronts/{storefront_oid}/items/seo | Change an item&#39;s search metadata
@@ -4402,6 +4406,82 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getSfvbItemPreorder
+
+> SfvbItemPreorder getSfvbItemPreorder(storefront_oid, opts)
+
+Read an item&#39;s pre-order flag and ETA
+
+Whether the item is on pre-order, its ETA, and what itempreorder shows shoppers because of them, with a hash_sha256 to send as If-Match when changing them.  A variation is an item of its own and can be read here; read a parent&#39;s variations together with GET items/preorder/children.  Address by merchant_item_id or merchant_item_oid. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **merchant_item_id** | **String**|  | [optional] 
+ **merchant_item_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**SfvbItemPreorder**](SfvbItemPreorder.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getSfvbItemPreorderChildren
+
+> SfvbItemPreorderListResponse getSfvbItemPreorderChildren(storefront_oid, opts)
+
+Read the pre-order flag and ETA of a parent item&#39;s variations
+
+The parent&#39;s own values and each variation&#39;s, with the option values that pick it (such as Size 2T) and its hash_sha256 to send when changing it.  Read fresh, never from a cache.  Address the parent by merchant_item_id or merchant_item_oid. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **merchant_item_id** | **String**|  | [optional] 
+ **merchant_item_oid** | **Number**|  | [optional] 
+
+### Return type
+
+[**SfvbItemPreorderListResponse**](SfvbItemPreorderListResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getSfvbItemPricing
 
 > SfvbItemPricing getSfvbItemPricing(storefront_oid, opts)
@@ -8419,6 +8499,87 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## putSfvbItemPreorder
+
+> SfvbItemPreorder putSfvbItemPreorder(storefront_oid, If_Match, item_preorder_request, opts)
+
+Change an item&#39;s pre-order flag or ETA
+
+Partial - a field left out is untouched, and nothing else on the item changes.  eta is YYYY-MM-DD; clear_eta removes it.  Needs sfvb_publish when items are live and If-Match with the hash_sha256 from the read.  Putting the item on or off pre-order also needs the approval of the person who signed in the CLI - an approved item.preorder request for this item and exactly this change - because a pre-order item can be ordered while out of stock and its orders go to the Pre-ordered stage.  An ETA-only change needs no approval.  A change that sets every field to what it already is returns the item unchanged.  The answer has the values before and after, what shoppers now see, and warnings such as an ETA in the past. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **If_Match** | **String**| hash_sha256 from the pre-order read.  Required; 428 when absent, 412 when stale. | 
+ **item_preorder_request** | [**SfvbItemPreorderRequest**](SfvbItemPreorderRequest.md)| The change | 
+ **merchant_item_id** | **String**|  | [optional] 
+ **merchant_item_oid** | **Number**|  | [optional] 
+ **Approval_Id** | **String**| The approval_id of an approved item.preorder request for this item and change.  Required when the change puts the item on or off pre-order.  See POST /sfvb/approvals. | [optional] 
+
+### Return type
+
+[**SfvbItemPreorder**](SfvbItemPreorder.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
+- **Accept**: application/json
+
+
+## putSfvbItemPreorderChildren
+
+> SfvbItemPreorderListResponse putSfvbItemPreorderChildren(storefront_oid, item_preorder_children_request, opts)
+
+Change the pre-order flag or ETA of several variations of one parent
+
+The same change for each variation named, 1 to 100, by its merchant item id or by an option value only one variation has (such as 2T), each with the hash_sha256 from the children read.  All or nothing - every row is checked before any variation is saved, and an unknown, ambiguous, repeated or stale row refuses the whole call.  Putting any of them on or off pre-order needs one approved item.preorder request for the parent and exactly this change; an ETA-only change needs none.  Needs sfvb_publish when items are live.  Each variation is saved on its own, so if a save itself fails part way the error names the variations already saved. 
+
+
+### Example
+
+
+(No example for this operation).
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storefront_oid** | **Number**|  | 
+ **item_preorder_children_request** | [**SfvbItemPreorderChildrenRequest**](SfvbItemPreorderChildrenRequest.md)| The change and the variations | 
+ **merchant_item_id** | **String**|  | [optional] 
+ **merchant_item_oid** | **Number**|  | [optional] 
+ **Approval_Id** | **String**| The approval_id of an approved item.preorder request for the parent and this change.  Required when the change puts any variation on or off pre-order.  See POST /sfvb/approvals. | [optional] 
+
+### Return type
+
+[**SfvbItemPreorderListResponse**](SfvbItemPreorderListResponse.md)
+
+### Authorization
+
+[ultraCartOauth](../README.md#ultraCartOauth), [ultraCartSimpleApiKey](../README.md#ultraCartSimpleApiKey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json; charset=UTF-8
 - **Accept**: application/json
 
 

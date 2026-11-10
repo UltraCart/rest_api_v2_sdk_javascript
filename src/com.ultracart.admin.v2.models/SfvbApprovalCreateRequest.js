@@ -21,6 +21,8 @@ import SfvbCommsTestPostcardRequest from './SfvbCommsTestPostcardRequest';
 import SfvbExperimentStartRequest from './SfvbExperimentStartRequest';
 import SfvbFlowBackfillRequest from './SfvbFlowBackfillRequest';
 import SfvbItemAttributeBatchRow from './SfvbItemAttributeBatchRow';
+import SfvbItemPreorderChildrenRequest from './SfvbItemPreorderChildrenRequest';
+import SfvbItemPreorderRequest from './SfvbItemPreorderRequest';
 import SfvbItemPricingRequest from './SfvbItemPricingRequest';
 import SfvbRedirectDeleteRow from './SfvbRedirectDeleteRow';
 import SfvbSiteSeoRequest from './SfvbSiteSeoRequest';
@@ -31,7 +33,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.237
+ * @version 4.1.238
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -85,6 +87,12 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('item_attribute_rows')) {
                 obj['item_attribute_rows'] = ApiClient.convertToType(data['item_attribute_rows'], [SfvbItemAttributeBatchRow]);
+            }
+            if (data.hasOwnProperty('item_preorder')) {
+                obj['item_preorder'] = SfvbItemPreorderRequest.constructFromObject(data['item_preorder']);
+            }
+            if (data.hasOwnProperty('item_preorder_children')) {
+                obj['item_preorder_children'] = SfvbItemPreorderChildrenRequest.constructFromObject(data['item_preorder_children']);
             }
             if (data.hasOwnProperty('item_pricing')) {
                 obj['item_pricing'] = SfvbItemPricingRequest.constructFromObject(data['item_pricing']);
@@ -165,6 +173,16 @@ SfvbApprovalCreateRequest.prototype['flow_backfill'] = undefined;
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbItemAttributeBatchRow>} item_attribute_rows
  */
 SfvbApprovalCreateRequest.prototype['item_attribute_rows'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemPreorderRequest} item_preorder
+ */
+SfvbApprovalCreateRequest.prototype['item_preorder'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest} item_preorder_children
+ */
+SfvbApprovalCreateRequest.prototype['item_preorder_children'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbItemPricingRequest} item_pricing
@@ -282,6 +300,12 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * @const
      */
     "item.pricing": "item.pricing",
+
+    /**
+     * value: "item.preorder"
+     * @const
+     */
+    "item.preorder": "item.preorder",
 
     /**
      * value: "twilio_account.delete"

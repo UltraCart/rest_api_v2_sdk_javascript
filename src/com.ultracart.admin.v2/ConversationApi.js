@@ -129,7 +129,7 @@ import ItemResponse from '../com.ultracart.admin.v2.models/ItemResponse';
 /**
 * Conversation service.
 * @module com.ultracart.admin.v2/ConversationApi
-* @version 4.1.237
+* @version 4.1.238
 */
 export default class ConversationApi {
 

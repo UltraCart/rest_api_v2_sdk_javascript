@@ -17,7 +17,7 @@ import SfvbStorefront from './SfvbStorefront';
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.237
+ * @version 4.1.238
  */
 class SfvbWhoamiResponse {
     /**
@@ -57,6 +57,9 @@ class SfvbWhoamiResponse {
             if (data.hasOwnProperty('authentication_type')) {
                 obj['authentication_type'] = ApiClient.convertToType(data['authentication_type'], 'String');
             }
+            if (data.hasOwnProperty('can_edit_items')) {
+                obj['can_edit_items'] = ApiClient.convertToType(data['can_edit_items'], 'Boolean');
+            }
             if (data.hasOwnProperty('can_publish')) {
                 obj['can_publish'] = ApiClient.convertToType(data['can_publish'], 'Boolean');
             }
@@ -65,6 +68,9 @@ class SfvbWhoamiResponse {
             }
             if (data.hasOwnProperty('can_read')) {
                 obj['can_read'] = ApiClient.convertToType(data['can_read'], 'Boolean');
+            }
+            if (data.hasOwnProperty('can_read_items')) {
+                obj['can_read_items'] = ApiClient.convertToType(data['can_read_items'], 'Boolean');
             }
             if (data.hasOwnProperty('can_write')) {
                 obj['can_write'] = ApiClient.convertToType(data['can_write'], 'Boolean');
@@ -116,6 +122,12 @@ SfvbWhoamiResponse.prototype['application_name'] = undefined;
 SfvbWhoamiResponse.prototype['authentication_type'] = undefined;
 
 /**
+ * True when this token may change item data.  Needs can_write, and the UltraCart user behind the token must hold Edit Items.  A token with no user is judged on its scopes alone.
+ * @member {Boolean} can_edit_items
+ */
+SfvbWhoamiResponse.prototype['can_edit_items'] = undefined;
+
+/**
  * True when this token may write a target that is currently live - an active upsell offer, an email on a delivering flow, the active theme, the storefront root.  Never infer this; it is the difference between a draft edit and a shopper visible change.
  * @member {Boolean} can_publish
  */
@@ -132,6 +144,12 @@ SfvbWhoamiResponse.prototype['can_publish_public'] = undefined;
  * @member {Boolean} can_read
  */
 SfvbWhoamiResponse.prototype['can_read'] = undefined;
+
+/**
+ * True when this token may read item data - the item, its pricing, pre-order and related items.  Needs can_read, and the UltraCart user behind the token must hold View Items or Edit Items.  A token with no user is judged on its scopes alone.
+ * @member {Boolean} can_read_items
+ */
+SfvbWhoamiResponse.prototype['can_read_items'] = undefined;
 
 /**
  * True when this token may write.  Writing a target that is not currently live needs only this.

@@ -17,7 +17,7 @@ import SfvbDocsGapReportGap from './SfvbDocsGapReportGap';
 /**
  * The SfvbDocsGapReport model module.
  * @module com.ultracart.admin.v2.models/SfvbDocsGapReport
- * @version 4.1.237
+ * @version 4.1.238
  */
 class SfvbDocsGapReport {
     /**

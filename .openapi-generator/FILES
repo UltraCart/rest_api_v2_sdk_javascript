@@ -1147,6 +1147,13 @@ docs/SfvbItemContentRequest.md
 docs/SfvbItemMultimedia.md
 docs/SfvbItemMultimediaDescriptionRequest.md
 docs/SfvbItemMultimediaRequest.md
+docs/SfvbItemPreorder.md
+docs/SfvbItemPreorderChange.md
+docs/SfvbItemPreorderChildRow.md
+docs/SfvbItemPreorderChildrenRequest.md
+docs/SfvbItemPreorderListResponse.md
+docs/SfvbItemPreorderOption.md
+docs/SfvbItemPreorderRequest.md
 docs/SfvbItemPricing.md
 docs/SfvbItemPricingRequest.md
 docs/SfvbItemRelated.md
@@ -2597,6 +2604,13 @@ src/com.ultracart.admin.v2.models/SfvbItemContentRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemMultimedia.js
 src/com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemMultimediaRequest.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorder.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderChange.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderChildRow.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderListResponse.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderOption.js
+src/com.ultracart.admin.v2.models/SfvbItemPreorderRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemPricing.js
 src/com.ultracart.admin.v2.models/SfvbItemPricingRequest.js
 src/com.ultracart.admin.v2.models/SfvbItemRelated.js

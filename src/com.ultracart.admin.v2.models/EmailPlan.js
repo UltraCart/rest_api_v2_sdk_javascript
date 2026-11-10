@@ -17,7 +17,7 @@ import EmailPlanAdditional from './EmailPlanAdditional';
 /**
  * The EmailPlan model module.
  * @module com.ultracart.admin.v2.models/EmailPlan
- * @version 4.1.237
+ * @version 4.1.238
  */
 class EmailPlan {
     /**

@@ -17,7 +17,7 @@ import SfvbTransactionalDeliveryOption from './SfvbTransactionalDeliveryOption';
 /**
  * The SfvbTransactionalEmailUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbTransactionalEmailUpdateRequest
- * @version 4.1.237
+ * @version 4.1.238
  */
 class SfvbTransactionalEmailUpdateRequest {
     /**

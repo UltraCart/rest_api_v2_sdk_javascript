@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **experiment_start** | [**SfvbExperimentStartRequest**](SfvbExperimentStartRequest.md) |  | [optional] 
 **flow_backfill** | [**SfvbFlowBackfillRequest**](SfvbFlowBackfillRequest.md) |  | [optional] 
 **item_attribute_rows** | [**[SfvbItemAttributeBatchRow]**](SfvbItemAttributeBatchRow.md) | For item.attribute_batch, exactly the rows the batch will send - the dry run&#39;s change rows, each with merchant_item_oid and current_sha256.  UltraCart keeps only their hash. | [optional] 
+**item_preorder** | [**SfvbItemPreorderRequest**](SfvbItemPreorderRequest.md) |  | [optional] 
+**item_preorder_children** | [**SfvbItemPreorderChildrenRequest**](SfvbItemPreorderChildrenRequest.md) |  | [optional] 
 **item_pricing** | [**SfvbItemPricingRequest**](SfvbItemPricingRequest.md) |  | [optional] 
 **params** | [**SfvbApprovalParams**](SfvbApprovalParams.md) |  | [optional] 
 **postcard_test_mail** | [**SfvbCommsTestPostcardRequest**](SfvbCommsTestPostcardRequest.md) |  | [optional] 
@@ -45,6 +47,8 @@ Name | Type | Description | Notes
 * `item.attribute_batch` (value: `"item.attribute_batch"`)
 
 * `item.pricing` (value: `"item.pricing"`)
+
+* `item.preorder` (value: `"item.preorder"`)
 
 * `twilio_account.delete` (value: `"twilio_account.delete"`)
 

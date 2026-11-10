@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxJarConfig model module.
  * @module com.ultracart.admin.v2.models/TaxJarConfig
- * @version 4.1.237
+ * @version 4.1.238
  */
 class TaxJarConfig {
     /**
@@ -62,6 +62,9 @@ class TaxJarConfig {
             if (data.hasOwnProperty('send_test_orders')) {
                 obj['send_test_orders'] = ApiClient.convertToType(data['send_test_orders'], 'Boolean');
             }
+            if (data.hasOwnProperty('skip_calculation_outside_nexus')) {
+                obj['skip_calculation_outside_nexus'] = ApiClient.convertToType(data['skip_calculation_outside_nexus'], 'Boolean');
+            }
             if (data.hasOwnProperty('skip_channel_orders')) {
                 obj['skip_channel_orders'] = ApiClient.convertToType(data['skip_channel_orders'], 'Boolean');
             }
@@ -104,6 +107,12 @@ TaxJarConfig.prototype['send_outside_nexus'] = undefined;
  * @member {Boolean} send_test_orders
  */
 TaxJarConfig.prototype['send_test_orders'] = undefined;
+
+/**
+ * Only calculate tax for states within your nexus.  Requires send_outside_nexus to be true.  When true, orders outside your nexus are still transmitted to TaxJar for nexus tracking, but no tax calculation is requested for them, reducing API calls.
+ * @member {Boolean} skip_calculation_outside_nexus
+ */
+TaxJarConfig.prototype['skip_calculation_outside_nexus'] = undefined;
 
 /**
  * Do not send channel partner orders to TaxJar.  Set this to true if your channel partner reports tax on their own.

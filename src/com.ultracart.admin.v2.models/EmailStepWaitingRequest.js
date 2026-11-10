@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailStepWaitingRequest model module.
  * @module com.ultracart.admin.v2.models/EmailStepWaitingRequest
- * @version 4.1.237
+ * @version 4.1.238
  */
 class EmailStepWaitingRequest {
     /**

@@ -29,7 +29,7 @@ import WorkflowUsersResponse from '../com.ultracart.admin.v2.models/WorkflowUser
 /**
 * Workflow service.
 * @module com.ultracart.admin.v2/WorkflowApi
-* @version 4.1.237
+* @version 4.1.238
 */
 export default class WorkflowApi {
 

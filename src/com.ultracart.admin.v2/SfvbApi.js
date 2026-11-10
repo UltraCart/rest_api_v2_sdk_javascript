@@ -121,6 +121,10 @@ import SfvbItemContainersResponse from '../com.ultracart.admin.v2.models/SfvbIte
 import SfvbItemContentRequest from '../com.ultracart.admin.v2.models/SfvbItemContentRequest';
 import SfvbItemMultimediaDescriptionRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemPreorder from '../com.ultracart.admin.v2.models/SfvbItemPreorder';
+import SfvbItemPreorderChildrenRequest from '../com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest';
+import SfvbItemPreorderListResponse from '../com.ultracart.admin.v2.models/SfvbItemPreorderListResponse';
+import SfvbItemPreorderRequest from '../com.ultracart.admin.v2.models/SfvbItemPreorderRequest';
 import SfvbItemPricing from '../com.ultracart.admin.v2.models/SfvbItemPricing';
 import SfvbItemPricingRequest from '../com.ultracart.admin.v2.models/SfvbItemPricingRequest';
 import SfvbItemRelated from '../com.ultracart.admin.v2.models/SfvbItemRelated';
@@ -257,7 +261,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.237
+* @version 4.1.238
 */
 export default class SfvbApi {
 
@@ -5718,6 +5722,104 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbItemPreorder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPreorderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorder} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read an item's pre-order flag and ETA
+     * Whether the item is on pre-order, its ETA, and what itempreorder shows shoppers because of them, with a hash_sha256 to send as If-Match when changing them.  A variation is an item of its own and can be read here; read a parent's variations together with GET items/preorder/children.  Address by merchant_item_id or merchant_item_oid. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPreorderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemPreorder}
+     */
+    getSfvbItemPreorder(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbItemPreorder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemPreorder;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/preorder', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbItemPreorderChildren operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPreorderChildrenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorderListResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the pre-order flag and ETA of a parent item's variations
+     * The parent's own values and each variation's, with the option values that pick it (such as Size 2T) and its hash_sha256 to send when changing it.  Read fresh, never from a cache.  Address the parent by merchant_item_id or merchant_item_oid. 
+     * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPreorderChildrenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemPreorderListResponse}
+     */
+    getSfvbItemPreorderChildren(storefront_oid, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbItemPreorderChildren");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemPreorderListResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/preorder/children', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbItemPricing operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbItemPricingCallback
      * @param {String} error Error message, if any.
@@ -11017,6 +11119,124 @@ export default class SfvbApi {
       let returnType = SfvbItemResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/items/multimedia/description', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemPreorder operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemPreorderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorder} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change an item's pre-order flag or ETA
+     * Partial - a field left out is untouched, and nothing else on the item changes.  eta is YYYY-MM-DD; clear_eta removes it.  Needs sfvb_publish when items are live and If-Match with the hash_sha256 from the read.  Putting the item on or off pre-order also needs the approval of the person who signed in the CLI - an approved item.preorder request for this item and exactly this change - because a pre-order item can be ordered while out of stock and its orders go to the Pre-ordered stage.  An ETA-only change needs no approval.  A change that sets every field to what it already is returns the item unchanged.  The answer has the values before and after, what shoppers now see, and warnings such as an ETA in the past. 
+     * @param {Number} storefront_oid 
+     * @param {String} If_Match hash_sha256 from the pre-order read.  Required; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorderRequest} item_preorder_request The change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {String} opts.Approval_Id The approval_id of an approved item.preorder request for this item and change.  Required when the change puts the item on or off pre-order.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemPreorderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemPreorder}
+     */
+    putSfvbItemPreorder(storefront_oid, If_Match, item_preorder_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_preorder_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemPreorder");
+      }
+      // verify the required parameter 'If_Match' is set
+      if (If_Match === undefined || If_Match === null) {
+        throw new Error("Missing the required parameter 'If_Match' when calling putSfvbItemPreorder");
+      }
+      // verify the required parameter 'item_preorder_request' is set
+      if (item_preorder_request === undefined || item_preorder_request === null) {
+        throw new Error("Missing the required parameter 'item_preorder_request' when calling putSfvbItemPreorder");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+        'If-Match': If_Match,
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemPreorder;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/preorder', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the putSfvbItemPreorderChildren operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~putSfvbItemPreorderChildrenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorderListResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change the pre-order flag or ETA of several variations of one parent
+     * The same change for each variation named, 1 to 100, by its merchant item id or by an option value only one variation has (such as 2T), each with the hash_sha256 from the children read.  All or nothing - every row is checked before any variation is saved, and an unknown, ambiguous, repeated or stale row refuses the whole call.  Putting any of them on or off pre-order needs one approved item.preorder request for the parent and exactly this change; an ETA-only change needs none.  Needs sfvb_publish when items are live.  Each variation is saved on its own, so if a save itself fails part way the error names the variations already saved. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest} item_preorder_children_request The change and the variations
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.merchant_item_id 
+     * @param {Number} opts.merchant_item_oid 
+     * @param {String} opts.Approval_Id The approval_id of an approved item.preorder request for the parent and this change.  Required when the change puts any variation on or off pre-order.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~putSfvbItemPreorderChildrenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbItemPreorderListResponse}
+     */
+    putSfvbItemPreorderChildren(storefront_oid, item_preorder_children_request, opts, callback) {
+      opts = opts || {};
+      let postBody = item_preorder_children_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling putSfvbItemPreorderChildren");
+      }
+      // verify the required parameter 'item_preorder_children_request' is set
+      if (item_preorder_children_request === undefined || item_preorder_children_request === null) {
+        throw new Error("Missing the required parameter 'item_preorder_children_request' when calling putSfvbItemPreorderChildren");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+        'merchant_item_id': opts['merchant_item_id'],
+        'merchant_item_oid': opts['merchant_item_oid']
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbItemPreorderListResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/items/preorder/children', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

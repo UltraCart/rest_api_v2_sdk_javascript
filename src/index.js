@@ -1140,6 +1140,13 @@ import SfvbItemContentRequest from './com.ultracart.admin.v2.models/SfvbItemCont
 import SfvbItemMultimedia from './com.ultracart.admin.v2.models/SfvbItemMultimedia';
 import SfvbItemMultimediaDescriptionRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaDescriptionRequest';
 import SfvbItemMultimediaRequest from './com.ultracart.admin.v2.models/SfvbItemMultimediaRequest';
+import SfvbItemPreorder from './com.ultracart.admin.v2.models/SfvbItemPreorder';
+import SfvbItemPreorderChange from './com.ultracart.admin.v2.models/SfvbItemPreorderChange';
+import SfvbItemPreorderChildRow from './com.ultracart.admin.v2.models/SfvbItemPreorderChildRow';
+import SfvbItemPreorderChildrenRequest from './com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest';
+import SfvbItemPreorderListResponse from './com.ultracart.admin.v2.models/SfvbItemPreorderListResponse';
+import SfvbItemPreorderOption from './com.ultracart.admin.v2.models/SfvbItemPreorderOption';
+import SfvbItemPreorderRequest from './com.ultracart.admin.v2.models/SfvbItemPreorderRequest';
 import SfvbItemPricing from './com.ultracart.admin.v2.models/SfvbItemPricing';
 import SfvbItemPricingRequest from './com.ultracart.admin.v2.models/SfvbItemPricingRequest';
 import SfvbItemRelated from './com.ultracart.admin.v2.models/SfvbItemRelated';
@@ -1508,7 +1515,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.237
+* @version 4.1.238
 */
 export {
     /**
@@ -8278,6 +8285,48 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbItemMultimediaRequest}
      */
     SfvbItemMultimediaRequest,
+
+    /**
+     * The SfvbItemPreorder model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorder}
+     */
+    SfvbItemPreorder,
+
+    /**
+     * The SfvbItemPreorderChange model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderChange}
+     */
+    SfvbItemPreorderChange,
+
+    /**
+     * The SfvbItemPreorderChildRow model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderChildRow}
+     */
+    SfvbItemPreorderChildRow,
+
+    /**
+     * The SfvbItemPreorderChildrenRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderChildrenRequest}
+     */
+    SfvbItemPreorderChildrenRequest,
+
+    /**
+     * The SfvbItemPreorderListResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderListResponse}
+     */
+    SfvbItemPreorderListResponse,
+
+    /**
+     * The SfvbItemPreorderOption model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderOption}
+     */
+    SfvbItemPreorderOption,
+
+    /**
+     * The SfvbItemPreorderRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbItemPreorderRequest}
+     */
+    SfvbItemPreorderRequest,
 
     /**
      * The SfvbItemPricing model constructor.
