@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbCliAccess from './SfvbCliAccess';
 import SfvbStorefront from './SfvbStorefront';
 
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.243
+ * @version 4.1.244
  */
 class SfvbWhoamiResponse {
     /**
@@ -74,6 +75,9 @@ class SfvbWhoamiResponse {
             }
             if (data.hasOwnProperty('can_write')) {
                 obj['can_write'] = ApiClient.convertToType(data['can_write'], 'Boolean');
+            }
+            if (data.hasOwnProperty('cli_access')) {
+                obj['cli_access'] = SfvbCliAccess.constructFromObject(data['cli_access']);
             }
             if (data.hasOwnProperty('device_scope')) {
                 obj['device_scope'] = ApiClient.convertToType(data['device_scope'], 'String');
@@ -156,6 +160,11 @@ SfvbWhoamiResponse.prototype['can_read_items'] = undefined;
  * @member {Boolean} can_write
  */
 SfvbWhoamiResponse.prototype['can_write'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCliAccess} cli_access
+ */
+SfvbWhoamiResponse.prototype['cli_access'] = undefined;
 
 /**
  * Device scope name, when this is a device flow token.

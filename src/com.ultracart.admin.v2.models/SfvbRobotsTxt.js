@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRobotsTxt model module.
  * @module com.ultracart.admin.v2.models/SfvbRobotsTxt
- * @version 4.1.243
+ * @version 4.1.244
  */
 class SfvbRobotsTxt {
     /**

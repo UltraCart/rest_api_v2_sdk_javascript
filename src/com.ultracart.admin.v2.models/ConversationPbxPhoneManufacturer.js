@@ -17,7 +17,7 @@ import ConversationPbxPhoneModel from './ConversationPbxPhoneModel';
 /**
  * The ConversationPbxPhoneManufacturer model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPhoneManufacturer
- * @version 4.1.243
+ * @version 4.1.244
  */
 class ConversationPbxPhoneManufacturer {
     /**

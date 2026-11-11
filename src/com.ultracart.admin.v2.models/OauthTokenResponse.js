@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OauthTokenResponse
- * @version 4.1.243
+ * @version 4.1.244
  */
 class OauthTokenResponse {
     /**
@@ -53,6 +53,9 @@ class OauthTokenResponse {
             if (data.hasOwnProperty('error')) {
                 obj['error'] = ApiClient.convertToType(data['error'], 'String');
             }
+            if (data.hasOwnProperty('error_code')) {
+                obj['error_code'] = ApiClient.convertToType(data['error_code'], 'String');
+            }
             if (data.hasOwnProperty('error_description')) {
                 obj['error_description'] = ApiClient.convertToType(data['error_description'], 'String');
             }
@@ -64,6 +67,9 @@ class OauthTokenResponse {
             }
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
+            }
+            if (data.hasOwnProperty('object_id')) {
+                obj['object_id'] = ApiClient.convertToType(data['object_id'], 'String');
             }
             if (data.hasOwnProperty('refresh_token')) {
                 obj['refresh_token'] = ApiClient.convertToType(data['refresh_token'], 'String');
@@ -96,6 +102,12 @@ OauthTokenResponse.prototype['access_token'] = undefined;
 OauthTokenResponse.prototype['error'] = undefined;
 
 /**
+ * With error access_denied, a machine readable reason.  sfvb.beta_access_required means the account isn't enabled for the StoreFront CLI beta, not that a person clicked Deny.
+ * @member {String} error_code
+ */
+OauthTokenResponse.prototype['error_code'] = undefined;
+
+/**
  * @member {String} error_description
  */
 OauthTokenResponse.prototype['error_description'] = undefined;
@@ -116,6 +128,12 @@ OauthTokenResponse.prototype['expires_in'] = undefined;
  * @member {String} merchant_id
  */
 OauthTokenResponse.prototype['merchant_id'] = undefined;
+
+/**
+ * With error_code sfvb.beta_access_required, the merchant id that was refused.
+ * @member {String} object_id
+ */
+OauthTokenResponse.prototype['object_id'] = undefined;
 
 /**
  * The refresh token that should be used to fetch a new access token when the expiration occurs

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsSequenceFolder model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSequenceFolder
- * @version 4.1.243
+ * @version 4.1.244
  */
 class SfvbCommsSequenceFolder {
     /**
