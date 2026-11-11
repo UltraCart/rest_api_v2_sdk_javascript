@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTrackingProviderField model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingProviderField
- * @version 4.1.242
+ * @version 4.1.243
  */
 class SfvbTrackingProviderField {
     /**

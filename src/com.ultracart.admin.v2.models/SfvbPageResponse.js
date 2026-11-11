@@ -18,7 +18,7 @@ import SfvbPageMultimedia from './SfvbPageMultimedia';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.242
+ * @version 4.1.243
  */
 class SfvbPageResponse {
     /**
@@ -52,6 +52,9 @@ class SfvbPageResponse {
             if (data.hasOwnProperty('attributes')) {
                 obj['attributes'] = ApiClient.convertToType(data['attributes'], [SfvbPageAttribute]);
             }
+            if (data.hasOwnProperty('blog_post_template')) {
+                obj['blog_post_template'] = ApiClient.convertToType(data['blog_post_template'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
@@ -64,11 +67,29 @@ class SfvbPageResponse {
             if (data.hasOwnProperty('item_template')) {
                 obj['item_template'] = ApiClient.convertToType(data['item_template'], 'String');
             }
+            if (data.hasOwnProperty('items_per_page')) {
+                obj['items_per_page'] = ApiClient.convertToType(data['items_per_page'], 'Number');
+            }
             if (data.hasOwnProperty('multimedia')) {
                 obj['multimedia'] = ApiClient.convertToType(data['multimedia'], [SfvbPageMultimedia]);
             }
+            if (data.hasOwnProperty('page_type')) {
+                obj['page_type'] = ApiClient.convertToType(data['page_type'], 'String');
+            }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('review_template')) {
+                obj['review_template'] = ApiClient.convertToType(data['review_template'], 'String');
+            }
+            if (data.hasOwnProperty('sort_order')) {
+                obj['sort_order'] = ApiClient.convertToType(data['sort_order'], 'Number');
+            }
+            if (data.hasOwnProperty('sort_order_child_groups')) {
+                obj['sort_order_child_groups'] = ApiClient.convertToType(data['sort_order_child_groups'], 'String');
+            }
+            if (data.hasOwnProperty('sort_order_child_items')) {
+                obj['sort_order_child_items'] = ApiClient.convertToType(data['sort_order_child_items'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -91,6 +112,12 @@ class SfvbPageResponse {
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageAttribute>} attributes
  */
 SfvbPageResponse.prototype['attributes'] = undefined;
+
+/**
+ * Template that renders the blog posts under this page.  Omitted when not set.
+ * @member {String} blog_post_template
+ */
+SfvbPageResponse.prototype['blog_post_template'] = undefined;
 
 /**
  * The page description, the text a page template renders as the page's description.  Omitted when empty.
@@ -117,16 +144,52 @@ SfvbPageResponse.prototype['group_template'] = undefined;
 SfvbPageResponse.prototype['item_template'] = undefined;
 
 /**
+ * Items per page on a template that paginates.  Omitted when the template's default applies.
+ * @member {Number} items_per_page
+ */
+SfvbPageResponse.prototype['items_per_page'] = undefined;
+
+/**
  * The page's images, including codes a template declares but nothing has attached yet.  These are what the pageimage element renders - the default image when pageImageCode is empty, otherwise the image with that code.  The default image comes first.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageMultimedia>} multimedia
  */
 SfvbPageResponse.prototype['multimedia'] = undefined;
 
 /**
+ * S for a static page, D for a dynamic one.
+ * @member {String} page_type
+ */
+SfvbPageResponse.prototype['page_type'] = undefined;
+
+/**
  * The page path, normalized to begin and end with a slash.
  * @member {String} path
  */
 SfvbPageResponse.prototype['path'] = undefined;
+
+/**
+ * Template that renders the item review pages under this page.  Omitted when not set.
+ * @member {String} review_template
+ */
+SfvbPageResponse.prototype['review_template'] = undefined;
+
+/**
+ * Position among its siblings when the parent sorts child pages by a custom order.  Omitted when not set.
+ * @member {Number} sort_order
+ */
+SfvbPageResponse.prototype['sort_order'] = undefined;
+
+/**
+ * How the pages under this one are ordered.  TA or TD by title, DA or DD by description, C custom.
+ * @member {String} sort_order_child_groups
+ */
+SfvbPageResponse.prototype['sort_order_child_groups'] = undefined;
+
+/**
+ * How the page's items are ordered.  IA or ID by item id, DA or DD by description, SA or SD by manufacturer SKU, PA or PD by price, RA or RD by review, NA or ND by inventory, C custom.
+ * @member {String} sort_order_child_items
+ */
+SfvbPageResponse.prototype['sort_order_child_items'] = undefined;
 
 /**
  * The page title.

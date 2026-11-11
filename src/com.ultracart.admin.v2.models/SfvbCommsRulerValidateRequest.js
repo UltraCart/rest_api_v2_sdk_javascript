@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsRulerValidateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsRulerValidateRequest
- * @version 4.1.242
+ * @version 4.1.243
  */
 class SfvbCommsRulerValidateRequest {
     /**

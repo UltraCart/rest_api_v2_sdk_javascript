@@ -17,7 +17,7 @@ import SfvbSecretRequest from './SfvbSecretRequest';
 /**
  * The SfvbSecretRequestsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSecretRequestsResponse
- * @version 4.1.242
+ * @version 4.1.243
  */
 class SfvbSecretRequestsResponse {
     /**

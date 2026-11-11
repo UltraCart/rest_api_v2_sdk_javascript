@@ -270,7 +270,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.242
+* @version 4.1.243
 */
 export default class SfvbApi {
 
@@ -7768,7 +7768,7 @@ export default class SfvbApi {
 
     /**
      * Check what upgrading a theme would do
-     * The same dry run the admin shows before an upgrade, and nothing is changed.  Lists the newer versions this account may use, and for one of them (version, or the newest when omitted) which customized files the upgrade would merge cleanly, leave with merge conflicts, or overwrite, plus the change log.  Use it before duplicateSfvbTheme with upgrade_to_version.  When no upgrade is possible the response says why in reason with can_duplicate_and_upgrade false.  A version that was asked for and is not available is refused with sfvb.theme_upgrade_unavailable. 
+     * The same dry run the admin shows before an upgrade, and nothing is changed.  Lists the newer versions this account may use, and for one of them (version, or the newest when omitted) which customized files the upgrade would merge cleanly, leave with merge conflicts, or overwrite, plus the change log.  Use it before duplicateSfvbTheme with upgrade_to_version.  When no upgrade is possible the response says why in reason with can_duplicate_and_upgrade false.  A version that was asked for and is not available is refused with sfvb.theme_upgrade_unavailable.  Limited to 10 a minute and 100 an hour per account. 
      * @param {Number} storefront_oid 
      * @param {Number} theme_oid 
      * @param {Object} opts Optional parameters
