@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileSearchRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbFileSearchRequest
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbFileSearchRequest {
     /**
@@ -193,7 +193,7 @@ SfvbFileSearchRequest.prototype['size_min'] = undefined;
 SfvbFileSearchRequest.prototype['sub_directories'] = undefined;
 
 /**
- * Text to find inside files.  Only text/_* files are searched.  This is the expensive filter; narrow with path or file_name where possible.
+ * Text to find inside files.  Text files are searched, including .cjson and .json; binaries such as images, fonts and PDFs are skipped.  This is the expensive filter; narrow with path or file_name where possible.
  * @member {String} text
  */
 SfvbFileSearchRequest.prototype['text'] = undefined;

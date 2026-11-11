@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCallQueue model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCallQueue
- * @version 4.1.241
+ * @version 4.1.242
  */
 class ConversationPbxCallQueue {
     /**

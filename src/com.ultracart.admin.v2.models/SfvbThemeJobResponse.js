@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeJobResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeJobResponse
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbThemeJobResponse {
     /**
@@ -62,6 +62,9 @@ class SfvbThemeJobResponse {
             if (data.hasOwnProperty('job_id')) {
                 obj['job_id'] = ApiClient.convertToType(data['job_id'], 'Number');
             }
+            if (data.hasOwnProperty('merge_conflicts')) {
+                obj['merge_conflicts'] = ApiClient.convertToType(data['merge_conflicts'], ['String']);
+            }
             if (data.hasOwnProperty('progress')) {
                 obj['progress'] = ApiClient.convertToType(data['progress'], 'Number');
             }
@@ -82,6 +85,12 @@ class SfvbThemeJobResponse {
             }
             if (data.hasOwnProperty('target_path')) {
                 obj['target_path'] = ApiClient.convertToType(data['target_path'], 'String');
+            }
+            if (data.hasOwnProperty('theme_oid')) {
+                obj['theme_oid'] = ApiClient.convertToType(data['theme_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('upgrade_to_version')) {
+                obj['upgrade_to_version'] = ApiClient.convertToType(data['upgrade_to_version'], 'String');
             }
         }
         return obj;
@@ -121,6 +130,12 @@ SfvbThemeJobResponse.prototype['finished_dts'] = undefined;
 SfvbThemeJobResponse.prototype['job_id'] = undefined;
 
 /**
+ * Paths of the copy's files that still have unresolved merge conflicts, read fresh on every poll, so the list shrinks as you resolve them.  Each needs its conflict marker lines resolved and the file saved before the theme can be activated.  Empty when there are none.
+ * @member {Array.<String>} merge_conflicts
+ */
+SfvbThemeJobResponse.prototype['merge_conflicts'] = undefined;
+
+/**
  * Percent complete, 0-100.
  * @member {Number} progress
  */
@@ -157,10 +172,22 @@ SfvbThemeJobResponse.prototype['submitted_dts'] = undefined;
 SfvbThemeJobResponse.prototype['success'] = undefined;
 
 /**
- * Path the new theme is being created at.  Returned when the job is started and on every poll, so you do not have to keep the response that started it.  The theme oid itself is NOT returned, so once the job completes you list themes and match on this path.  It is also what success is checked against - a finished job whose theme is not here reports success false rather than pretending.
+ * Path the new theme is being created at.  Returned when the job is started and on every poll, so you do not have to keep the response that started it.  Once the job completes, the theme found at this path is reported as theme_oid.  It is also what success is checked against - a finished job whose theme is not here reports success false rather than pretending.
  * @member {String} target_path
  */
 SfvbThemeJobResponse.prototype['target_path'] = undefined;
+
+/**
+ * Oid of the theme the job created, once it is complete and the theme exists.  Null until then.
+ * @member {Number} theme_oid
+ */
+SfvbThemeJobResponse.prototype['theme_oid'] = undefined;
+
+/**
+ * The version the copy was asked to be upgraded to, when the duplicate asked for an upgrade.  Null for a plain copy.  A complete job reports success only when the copy is at this version.
+ * @member {String} upgrade_to_version
+ */
+SfvbThemeJobResponse.prototype['upgrade_to_version'] = undefined;
 
 
 

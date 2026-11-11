@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **content** | **String** | UTF-8 content.  Only text/_* files can be read this way. | [optional] 
 **fs_file_oid** | **Number** | StoreFront file system file oid. | [optional] 
 **hash_sha256** | **String** | SHA-256 of the content.  Send this back as If-Match when writing.  The ETag header carries the same hash, but a compressing proxy may append a suffix such as -gzip to it, so this body value is the authoritative one.  Both forms are accepted on write. | [optional] 
+**merge_conflict** | **Boolean** | True when a theme upgrade left unresolved merge conflicts in this file.  The content holds conflict marker lines.  Resolve each conflict and save the file without any marker lines to clear it - a save that still has marker lines is refused. | [optional] 
 **mime_type** | **String** | Mime type. | [optional] 
 **path** | **String** | Full path of the file. | [optional] 
 **size** | **Number** | Size in bytes. | [optional] 

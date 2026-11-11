@@ -1324,10 +1324,12 @@ import SfvbThemeAttribute from './com.ultracart.admin.v2.models/SfvbThemeAttribu
 import SfvbThemeAttributeUpdate from './com.ultracart.admin.v2.models/SfvbThemeAttributeUpdate';
 import SfvbThemeAttributeUpdateRequest from './com.ultracart.admin.v2.models/SfvbThemeAttributeUpdateRequest';
 import SfvbThemeAttributesResponse from './com.ultracart.admin.v2.models/SfvbThemeAttributesResponse';
+import SfvbThemeChangeLogEntry from './com.ultracart.admin.v2.models/SfvbThemeChangeLogEntry';
 import SfvbThemeDuplicateRequest from './com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest';
 import SfvbThemeFont from './com.ultracart.admin.v2.models/SfvbThemeFont';
 import SfvbThemeFontFamily from './com.ultracart.admin.v2.models/SfvbThemeFontFamily';
 import SfvbThemeJobResponse from './com.ultracart.admin.v2.models/SfvbThemeJobResponse';
+import SfvbThemeUpgradeCheckResponse from './com.ultracart.admin.v2.models/SfvbThemeUpgradeCheckResponse';
 import SfvbThemesResponse from './com.ultracart.admin.v2.models/SfvbThemesResponse';
 import SfvbTrackingAdvanced from './com.ultracart.admin.v2.models/SfvbTrackingAdvanced';
 import SfvbTrackingAdvancedRequest from './com.ultracart.admin.v2.models/SfvbTrackingAdvancedRequest';
@@ -1533,7 +1535,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.241
+* @version 4.1.242
 */
 export {
     /**
@@ -9409,6 +9411,12 @@ export {
     SfvbThemeAttributesResponse,
 
     /**
+     * The SfvbThemeChangeLogEntry model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeChangeLogEntry}
+     */
+    SfvbThemeChangeLogEntry,
+
+    /**
      * The SfvbThemeDuplicateRequest model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest}
      */
@@ -9431,6 +9439,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbThemeJobResponse}
      */
     SfvbThemeJobResponse,
+
+    /**
+     * The SfvbThemeUpgradeCheckResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbThemeUpgradeCheckResponse}
+     */
+    SfvbThemeUpgradeCheckResponse,
 
     /**
      * The SfvbThemesResponse model constructor.

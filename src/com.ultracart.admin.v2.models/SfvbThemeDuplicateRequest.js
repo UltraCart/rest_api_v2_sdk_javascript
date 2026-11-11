@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbThemeDuplicateRequest {
     /**
@@ -56,6 +56,9 @@ class SfvbThemeDuplicateRequest {
             if (data.hasOwnProperty('theme_name')) {
                 obj['theme_name'] = ApiClient.convertToType(data['theme_name'], 'String');
             }
+            if (data.hasOwnProperty('upgrade_to_version')) {
+                obj['upgrade_to_version'] = ApiClient.convertToType(data['upgrade_to_version'], 'String');
+            }
         }
         return obj;
     }
@@ -80,6 +83,12 @@ SfvbThemeDuplicateRequest.prototype['target_storefront_oid'] = undefined;
  * @member {String} theme_name
  */
 SfvbThemeDuplicateRequest.prototype['theme_name'] = undefined;
+
+/**
+ * Upgrade the copy to this theme version after copying it, as the admin's Duplicate and Upgrade does.  Only the copy is upgraded - the source theme is never touched.  Must be one of the available_versions from getSfvbThemeUpgradeCheck, which also predicts the merge conflicts.  Omit for a plain copy.
+ * @member {String} upgrade_to_version
+ */
+SfvbThemeDuplicateRequest.prototype['upgrade_to_version'] = undefined;
 
 
 

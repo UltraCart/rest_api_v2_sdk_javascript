@@ -19,6 +19,6 @@ Name | Type | Description | Notes
 **size_max** | **Number** | Maximum size in bytes. | [optional] 
 **size_min** | **Number** | Minimum size in bytes. | [optional] 
 **sub_directories** | **Boolean** | Recurse below path.  Defaults to true. | [optional] 
-**text** | **String** | Text to find inside files.  Only text/_* files are searched.  This is the expensive filter; narrow with path or file_name where possible. | [optional] 
+**text** | **String** | Text to find inside files.  Text files are searched, including .cjson and .json; binaries such as images, fonts and PDFs are skipped.  This is the expensive filter; narrow with path or file_name where possible. | [optional] 
 
 

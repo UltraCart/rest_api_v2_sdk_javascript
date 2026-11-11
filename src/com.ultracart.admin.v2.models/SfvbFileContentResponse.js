@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileContentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResponse
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbFileContentResponse {
     /**
@@ -58,6 +58,9 @@ class SfvbFileContentResponse {
             }
             if (data.hasOwnProperty('hash_sha256')) {
                 obj['hash_sha256'] = ApiClient.convertToType(data['hash_sha256'], 'String');
+            }
+            if (data.hasOwnProperty('merge_conflict')) {
+                obj['merge_conflict'] = ApiClient.convertToType(data['merge_conflict'], 'Boolean');
             }
             if (data.hasOwnProperty('mime_type')) {
                 obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
@@ -110,6 +113,12 @@ SfvbFileContentResponse.prototype['fs_file_oid'] = undefined;
  * @member {String} hash_sha256
  */
 SfvbFileContentResponse.prototype['hash_sha256'] = undefined;
+
+/**
+ * True when a theme upgrade left unresolved merge conflicts in this file.  The content holds conflict marker lines.  Resolve each conflict and save the file without any marker lines to clear it - a save that still has marker lines is refused.
+ * @member {Boolean} merge_conflict
+ */
+SfvbFileContentResponse.prototype['merge_conflict'] = undefined;
 
 /**
  * Mime type.

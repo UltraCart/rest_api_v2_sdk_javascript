@@ -17,7 +17,7 @@ import SfvbTheme from './SfvbTheme';
 /**
  * The SfvbThemesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemesResponse
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbThemesResponse {
     /**
@@ -51,6 +51,12 @@ class SfvbThemesResponse {
             if (data.hasOwnProperty('active_theme_oid')) {
                 obj['active_theme_oid'] = ApiClient.convertToType(data['active_theme_oid'], 'Number');
             }
+            if (data.hasOwnProperty('theme_count')) {
+                obj['theme_count'] = ApiClient.convertToType(data['theme_count'], 'Number');
+            }
+            if (data.hasOwnProperty('theme_limit')) {
+                obj['theme_limit'] = ApiClient.convertToType(data['theme_limit'], 'Number');
+            }
             if (data.hasOwnProperty('themes')) {
                 obj['themes'] = ApiClient.convertToType(data['themes'], [SfvbTheme]);
             }
@@ -66,6 +72,18 @@ class SfvbThemesResponse {
  * @member {Number} active_theme_oid
  */
 SfvbThemesResponse.prototype['active_theme_oid'] = undefined;
+
+/**
+ * How many themes the storefront holds now.  When it equals theme_limit, delete an inactive theme in the admin before duplicating.
+ * @member {Number} theme_count
+ */
+SfvbThemesResponse.prototype['theme_count'] = undefined;
+
+/**
+ * Most themes a storefront can hold, active and inactive together.  A duplicate or install at the limit is refused with sfvb.theme_limit_reached.
+ * @member {Number} theme_limit
+ */
+SfvbThemesResponse.prototype['theme_limit'] = undefined;
 
 /**
  * Themes belonging to the storefront.  Exactly one is flagged active.

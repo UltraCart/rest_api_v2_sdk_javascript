@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbTheme model module.
  * @module com.ultracart.admin.v2.models/SfvbTheme
- * @version 4.1.241
+ * @version 4.1.242
  */
 class SfvbTheme {
     /**
@@ -55,6 +55,12 @@ class SfvbTheme {
             }
             if (data.hasOwnProperty('fs_directory_oid')) {
                 obj['fs_directory_oid'] = ApiClient.convertToType(data['fs_directory_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('merge_conflict_count')) {
+                obj['merge_conflict_count'] = ApiClient.convertToType(data['merge_conflict_count'], 'Number');
+            }
+            if (data.hasOwnProperty('ok_to_activate')) {
+                obj['ok_to_activate'] = ApiClient.convertToType(data['ok_to_activate'], 'Boolean');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
@@ -101,6 +107,18 @@ SfvbTheme.prototype['description'] = undefined;
  * @member {Number} fs_directory_oid
  */
 SfvbTheme.prototype['fs_directory_oid'] = undefined;
+
+/**
+ * How many of the theme's files still have unresolved merge conflicts from an upgrade.  Find them with searchSfvbFiles, merge_conflicts true and this theme's path.
+ * @member {Number} merge_conflict_count
+ */
+SfvbTheme.prototype['merge_conflict_count'] = undefined;
+
+/**
+ * False while any file in the theme has an unresolved merge conflict.  Never activate a theme that reports false - resolve every conflict first.  Activation itself happens in the UltraCart admin, which runs the same check.
+ * @member {Boolean} ok_to_activate
+ */
+SfvbTheme.prototype['ok_to_activate'] = undefined;
 
 /**
  * Root path of the theme in the storefront file system, for example /themes/mytheme/
