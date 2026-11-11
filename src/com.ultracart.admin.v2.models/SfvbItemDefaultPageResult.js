@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemDefaultPageResult model module.
  * @module com.ultracart.admin.v2.models/SfvbItemDefaultPageResult
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbItemDefaultPageResult {
     /**

@@ -17,7 +17,7 @@ import SfvbUtmShortcode from './SfvbUtmShortcode';
 /**
  * The SfvbUtmShortcodesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbUtmShortcodesResponse
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbUtmShortcodesResponse {
     /**

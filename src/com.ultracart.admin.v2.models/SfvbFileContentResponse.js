@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbErrorDetail from './SfvbErrorDetail';
 
 /**
  * The SfvbFileContentResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResponse
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbFileContentResponse {
     /**
@@ -61,6 +62,9 @@ class SfvbFileContentResponse {
             }
             if (data.hasOwnProperty('merge_conflict')) {
                 obj['merge_conflict'] = ApiClient.convertToType(data['merge_conflict'], 'Boolean');
+            }
+            if (data.hasOwnProperty('metadata_error')) {
+                obj['metadata_error'] = SfvbErrorDetail.constructFromObject(data['metadata_error']);
             }
             if (data.hasOwnProperty('mime_type')) {
                 obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
@@ -119,6 +123,11 @@ SfvbFileContentResponse.prototype['hash_sha256'] = undefined;
  * @member {Boolean} merge_conflict
  */
 SfvbFileContentResponse.prototype['merge_conflict'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbErrorDetail} metadata_error
+ */
+SfvbFileContentResponse.prototype['metadata_error'] = undefined;
 
 /**
  * Mime type.

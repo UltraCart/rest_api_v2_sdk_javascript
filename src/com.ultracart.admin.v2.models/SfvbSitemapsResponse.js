@@ -18,7 +18,7 @@ import SfvbSitemap from './SfvbSitemap';
 /**
  * The SfvbSitemapsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSitemapsResponse
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbSitemapsResponse {
     /**

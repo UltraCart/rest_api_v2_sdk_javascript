@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthTokenResponse model module.
  * @module com.ultracart.admin.v2.models/OauthTokenResponse
- * @version 4.1.244
+ * @version 4.1.245
  */
 class OauthTokenResponse {
     /**
@@ -68,8 +68,14 @@ class OauthTokenResponse {
             if (data.hasOwnProperty('merchant_id')) {
                 obj['merchant_id'] = ApiClient.convertToType(data['merchant_id'], 'String');
             }
+            if (data.hasOwnProperty('minimum_version')) {
+                obj['minimum_version'] = ApiClient.convertToType(data['minimum_version'], 'String');
+            }
             if (data.hasOwnProperty('object_id')) {
                 obj['object_id'] = ApiClient.convertToType(data['object_id'], 'String');
+            }
+            if (data.hasOwnProperty('recommended_version')) {
+                obj['recommended_version'] = ApiClient.convertToType(data['recommended_version'], 'String');
             }
             if (data.hasOwnProperty('refresh_token')) {
                 obj['refresh_token'] = ApiClient.convertToType(data['refresh_token'], 'String');
@@ -130,10 +136,22 @@ OauthTokenResponse.prototype['expires_in'] = undefined;
 OauthTokenResponse.prototype['merchant_id'] = undefined;
 
 /**
+ * With error_code sfvb.cli_upgrade_required, the lowest StoreFront CLI version the server supports.
+ * @member {String} minimum_version
+ */
+OauthTokenResponse.prototype['minimum_version'] = undefined;
+
+/**
  * With error_code sfvb.beta_access_required, the merchant id that was refused.
  * @member {String} object_id
  */
 OauthTokenResponse.prototype['object_id'] = undefined;
+
+/**
+ * With error_code sfvb.cli_upgrade_required, the StoreFront CLI version to install.
+ * @member {String} recommended_version
+ */
+OauthTokenResponse.prototype['recommended_version'] = undefined;
 
 /**
  * The refresh token that should be used to fetch a new access token when the expiration occurs

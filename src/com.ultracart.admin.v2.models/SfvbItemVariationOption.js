@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemVariationOption model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationOption
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbItemVariationOption {
     /**

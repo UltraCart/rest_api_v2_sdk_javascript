@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSequenceStepMoveRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStepMoveRequest
- * @version 4.1.244
+ * @version 4.1.245
  */
 class SfvbSequenceStepMoveRequest {
     /**
