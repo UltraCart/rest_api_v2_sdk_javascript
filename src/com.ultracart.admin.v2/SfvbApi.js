@@ -270,7 +270,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.245
+* @version 4.1.246
 */
 export default class SfvbApi {
 
@@ -2971,7 +2971,7 @@ export default class SfvbApi {
 
     /**
      * Duplicate a theme
-     * Copies a theme into a new one and returns a job handle to poll.  Asynchronous, because copying a theme copies every file in it.  Needs sfvb_write rather than sfvb_publish, because the job explicitly does not activate what it creates, so the worst outcome of a mistaken call is a spare theme.  This is how you get somewhere safe to work - duplicate, edit the copy with an ordinary write scope, and let a human promote it.  Set upgrade_to_version to also upgrade the copy to a newer theme version, as the admin's Duplicate and Upgrade does - only the copy is upgraded.  Run getSfvbThemeUpgradeCheck first to see the available versions and the merge conflicts the upgrade will leave, then resolve those in the copy before anyone activates it.  Refused with sfvb.theme_limit_reached at the storefront's theme limit, sfvb.theme_upgrade_unavailable for a version that can't be used, and sfvb.theme_merge_conflicts while the source theme has unresolved conflicts. 
+     * Copies a theme into a new one and returns a job handle to poll.  Asynchronous, because copying a theme copies every file in it.  Needs sfvb_write rather than sfvb_publish, because the job explicitly does not activate what it creates, so the worst outcome of a mistaken call is a spare theme.  This is how you get somewhere safe to work - duplicate, edit the copy with an ordinary write scope, and let a human promote it.  The copy is named by its settings.json themeName, like every theme, so theme_name is ignored - edit themeName in the copy's settings.json to rename it.  Set upgrade_to_version to also upgrade the copy to a newer theme version, as the admin's Duplicate and Upgrade does - only the copy is upgraded.  Run getSfvbThemeUpgradeCheck first to see the available versions and the merge conflicts the upgrade will leave, then resolve those in the copy before anyone activates it.  Refused with sfvb.theme_limit_reached at the storefront's theme limit, sfvb.theme_upgrade_unavailable for a version that can't be used, and sfvb.theme_merge_conflicts while the source theme has unresolved conflicts. 
      * @param {Number} storefront_oid 
      * @param {Number} theme_oid 
      * @param {module:com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest} duplicate_request Theme duplication details

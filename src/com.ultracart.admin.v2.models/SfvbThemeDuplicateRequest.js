@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbThemeDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeDuplicateRequest
- * @version 4.1.245
+ * @version 4.1.246
  */
 class SfvbThemeDuplicateRequest {
     /**
@@ -79,7 +79,7 @@ SfvbThemeDuplicateRequest.prototype['folder'] = undefined;
 SfvbThemeDuplicateRequest.prototype['target_storefront_oid'] = undefined;
 
 /**
- * Name for the new theme.
+ * Ignored.  A theme is named by its settings.json themeName, which the copy keeps from the source, so the copy has the source's name.  Edit themeName in the copy's settings.json to rename it.  Kept so existing callers still work.
  * @member {String} theme_name
  */
 SfvbThemeDuplicateRequest.prototype['theme_name'] = undefined;

@@ -18,7 +18,7 @@ import SfvbTransactionalEmailDetail from './SfvbTransactionalEmailDetail';
 /**
  * The SfvbTransactionalEmailResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTransactionalEmailResponse
- * @version 4.1.245
+ * @version 4.1.246
  */
 class SfvbTransactionalEmailResponse {
     /**

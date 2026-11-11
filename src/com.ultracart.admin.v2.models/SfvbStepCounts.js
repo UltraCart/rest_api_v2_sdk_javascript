@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbStepCounts model module.
  * @module com.ultracart.admin.v2.models/SfvbStepCounts
- * @version 4.1.245
+ * @version 4.1.246
  */
 class SfvbStepCounts {
     /**

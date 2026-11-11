@@ -17,7 +17,7 @@ import SfvbUpsellPath from './SfvbUpsellPath';
 /**
  * The SfvbUpsellPathsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellPathsResponse
- * @version 4.1.245
+ * @version 4.1.246
  */
 class SfvbUpsellPathsResponse {
     /**

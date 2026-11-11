@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUtmShortcode model module.
  * @module com.ultracart.admin.v2.models/SfvbUtmShortcode
- * @version 4.1.245
+ * @version 4.1.246
  */
 class SfvbUtmShortcode {
     /**
