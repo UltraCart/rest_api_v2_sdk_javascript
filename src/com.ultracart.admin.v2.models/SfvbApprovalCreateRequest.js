@@ -35,7 +35,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.248
+ * @version 4.1.249
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -80,6 +80,9 @@ class SfvbApprovalCreateRequest {
             }
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], 'String');
+            }
+            if (data.hasOwnProperty('delegate_email')) {
+                obj['delegate_email'] = ApiClient.convertToType(data['delegate_email'], 'String');
             }
             if (data.hasOwnProperty('experiment_start')) {
                 obj['experiment_start'] = SfvbExperimentStartRequest.constructFromObject(data['experiment_start']);
@@ -165,6 +168,12 @@ SfvbApprovalCreateRequest.prototype['comms_settings'] = undefined;
  * @member {String} content
  */
 SfvbApprovalCreateRequest.prototype['content'] = undefined;
+
+/**
+ * Optional.  The email of a colleague on this account who should decide the request instead of the person who signed in.  They must hold an admin permission that covers the action; they get an email with a link and decide with their own authenticator code.  Any colleague who can't be used is refused with sfvb.delegate_not_allowed, for every reason alike.  The approval stays yours to poll and use.
+ * @member {String} delegate_email
+ */
+SfvbApprovalCreateRequest.prototype['delegate_email'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbExperimentStartRequest} experiment_start

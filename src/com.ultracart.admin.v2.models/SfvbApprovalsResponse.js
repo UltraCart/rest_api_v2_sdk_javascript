@@ -17,7 +17,7 @@ import SfvbApproval from './SfvbApproval';
 /**
  * The SfvbApprovalsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalsResponse
- * @version 4.1.248
+ * @version 4.1.249
  */
 class SfvbApprovalsResponse {
     /**

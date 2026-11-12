@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbRedirectResolveBatchRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectResolveBatchRequest
- * @version 4.1.248
+ * @version 4.1.249
  */
 class SfvbRedirectResolveBatchRequest {
     /**

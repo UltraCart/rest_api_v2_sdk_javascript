@@ -18,7 +18,7 @@ import SfvbApprovalReview from './SfvbApprovalReview';
 /**
  * The SfvbApproval model module.
  * @module com.ultracart.admin.v2.models/SfvbApproval
- * @version 4.1.248
+ * @version 4.1.249
  */
 class SfvbApproval {
     /**
@@ -60,6 +60,15 @@ class SfvbApproval {
             }
             if (data.hasOwnProperty('created_at')) {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
+            }
+            if (data.hasOwnProperty('decided_by')) {
+                obj['decided_by'] = ApiClient.convertToType(data['decided_by'], 'String');
+            }
+            if (data.hasOwnProperty('delegate_name')) {
+                obj['delegate_name'] = ApiClient.convertToType(data['delegate_name'], 'String');
+            }
+            if (data.hasOwnProperty('delegated')) {
+                obj['delegated'] = ApiClient.convertToType(data['delegated'], 'Boolean');
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -139,6 +148,24 @@ SfvbApproval.prototype['approval_url'] = undefined;
  * @member {String} created_at
  */
 SfvbApproval.prototype['created_at'] = undefined;
+
+/**
+ * Who decided the request, once decided.
+ * @member {module:com.ultracart.admin.v2.models/SfvbApproval.DecidedByEnum} decided_by
+ */
+SfvbApproval.prototype['decided_by'] = undefined;
+
+/**
+ * The name of the colleague the request was handed to, while it is.  Tell the person who is now deciding.
+ * @member {String} delegate_name
+ */
+SfvbApproval.prototype['delegate_name'] = undefined;
+
+/**
+ * True when the request was handed to a colleague to decide.
+ * @member {Boolean} delegated
+ */
+SfvbApproval.prototype['delegated'] = undefined;
 
 /**
  * The sentence the person reads before approving.  Written by the server, not the agent.
@@ -236,6 +263,27 @@ SfvbApproval.prototype['user_code'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>decided_by</code> property.
+ * @enum {String}
+ * @readonly
+ */
+SfvbApproval['DecidedByEnum'] = {
+
+    /**
+     * value: "requester"
+     * @const
+     */
+    "requester": "requester",
+
+    /**
+     * value: "delegate"
+     * @const
+     */
+    "delegate": "delegate"
+};
 
 
 /**
