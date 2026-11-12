@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailDispatchLogsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailDispatchLogsResponse
- * @version 4.1.250
+ * @version 4.1.251
  */
 class EmailDispatchLogsResponse {
     /**

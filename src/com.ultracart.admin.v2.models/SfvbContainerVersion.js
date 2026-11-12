@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersion
- * @version 4.1.250
+ * @version 4.1.251
  */
 class SfvbContainerVersion {
     /**
@@ -157,7 +157,7 @@ SfvbContainerVersion.prototype['edited_by'] = undefined;
 SfvbContainerVersion.prototype['hash_sha256'] = undefined;
 
 /**
- * What the container was before the write this entry precedes.  create means it did not exist, so reverting to this entry removes it again; update means it held the cjson recorded here.
+ * What the container was before the write this entry precedes.  create means it did not exist, so reverting to this entry removes it again; update means it held the cjson recorded here; delete means it held the cjson recorded here and the write after it removed the container, so reverting to this entry puts that cjson back.
  * @member {module:com.ultracart.admin.v2.models/SfvbContainerVersion.OperationEnum} operation
  */
 SfvbContainerVersion.prototype['operation'] = undefined;
@@ -201,7 +201,13 @@ SfvbContainerVersion['OperationEnum'] = {
      * value: "update"
      * @const
      */
-    "update": "update"
+    "update": "update",
+
+    /**
+     * value: "delete"
+     * @const
+     */
+    "delete": "delete"
 };
 
 

@@ -17,7 +17,7 @@ import SfvbRedirectResolveResponse from './SfvbRedirectResolveResponse';
 /**
  * The SfvbRedirectResolveBatchResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbRedirectResolveBatchResponse
- * @version 4.1.250
+ * @version 4.1.251
  */
 class SfvbRedirectResolveBatchResponse {
     /**

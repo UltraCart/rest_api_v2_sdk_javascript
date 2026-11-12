@@ -17,7 +17,7 @@ import SfvbLibraryShareTarget from './SfvbLibraryShareTarget';
 /**
  * The SfvbLibraryShareTargetsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryShareTargetsResponse
- * @version 4.1.250
+ * @version 4.1.251
  */
 class SfvbLibraryShareTargetsResponse {
     /**
