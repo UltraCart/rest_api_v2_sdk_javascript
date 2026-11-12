@@ -18,7 +18,7 @@ import SfvbCommsUnreferencedPostcard from './SfvbCommsUnreferencedPostcard';
 /**
  * The SfvbCommsUnreferencedResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsUnreferencedResponse
- * @version 4.1.251
+ * @version 4.1.252
  */
 class SfvbCommsUnreferencedResponse {
     /**

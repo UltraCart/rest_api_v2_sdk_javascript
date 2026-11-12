@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsSenderUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSenderUpdate
- * @version 4.1.251
+ * @version 4.1.252
  */
 class SfvbCommsSenderUpdate {
     /**

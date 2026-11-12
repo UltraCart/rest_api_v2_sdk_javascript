@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TaxProviderAnrokProduct model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAnrokProduct
- * @version 4.1.251
+ * @version 4.1.252
  */
 class TaxProviderAnrokProduct {
     /**

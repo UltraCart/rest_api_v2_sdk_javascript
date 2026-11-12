@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxPayConnector model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxPayConnector
- * @version 4.1.251
+ * @version 4.1.252
  */
 class ConversationPbxPayConnector {
     /**

@@ -19,7 +19,7 @@ import AffiliateTierRelationship from './AffiliateTierRelationship';
 /**
  * The Affiliate model module.
  * @module com.ultracart.admin.v2.models/Affiliate
- * @version 4.1.251
+ * @version 4.1.252
  */
 class Affiliate {
     /**
