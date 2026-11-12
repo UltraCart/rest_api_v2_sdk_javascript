@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSequenceStepCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbSequenceStepCreateRequest
- * @version 4.1.247
+ * @version 4.1.248
  */
 class SfvbSequenceStepCreateRequest {
     /**
@@ -58,6 +58,9 @@ class SfvbSequenceStepCreateRequest {
             }
             if (data.hasOwnProperty('config_json')) {
                 obj['config_json'] = ApiClient.convertToType(data['config_json'], 'String');
+            }
+            if (data.hasOwnProperty('filter_profile_equation_json')) {
+                obj['filter_profile_equation_json'] = ApiClient.convertToType(data['filter_profile_equation_json'], 'String');
             }
             if (data.hasOwnProperty('library_item_oid')) {
                 obj['library_item_oid'] = ApiClient.convertToType(data['library_item_oid'], 'Number');
@@ -103,10 +106,16 @@ SfvbSequenceStepCreateRequest.prototype['after_step_uuid'] = undefined;
 SfvbSequenceStepCreateRequest.prototype['branch_step_uuid'] = undefined;
 
 /**
- * A wait step's settings, as the admin saves them and set-config changes them, namely delay_duration and delay_duration_unit (minutes, hours, days, weeks or months), and optionally the delay_until_* options.  Not for an email step.
+ * A wait step's settings, as the admin saves them and set-config changes them, namely delay_duration and delay_duration_unit (minutes, hours, days, weeks or months), and optionally the delay_until_* options.  For a split, percentage_left (0.01 to 0.99, 0.5 by default) and merchant_notes.  For a condition, reverse, disabled and merchant_notes.  Not for an email step.
  * @member {String} config_json
  */
 SfvbSequenceStepCreateRequest.prototype['config_json'] = undefined;
+
+/**
+ * A condition step's rule, required for one, as an audience filter in the shape segments use.  Customers who match go to the yes side.  Only for a condition step.
+ * @member {String} filter_profile_equation_json
+ */
+SfvbSequenceStepCreateRequest.prototype['filter_profile_equation_json'] = undefined;
 
 /**
  * An email item from the code library (#1589) to start the new email from, taking its body, with new element ids, and its subject and preview text unless subject or preview_text is given.  The item must be this account's own, shared with it, or published, approved by UltraCart and free.  Only for an email step.  The items are listed by the code library email read.
@@ -139,7 +148,7 @@ SfvbSequenceStepCreateRequest.prototype['side'] = undefined;
 SfvbSequenceStepCreateRequest.prototype['subject'] = undefined;
 
 /**
- * The kind of step, one of email (the default), wait or post_card.
+ * The kind of step, one of email (the default), wait, post_card, split or condition.
  * @member {String} type
  */
 SfvbSequenceStepCreateRequest.prototype['type'] = undefined;

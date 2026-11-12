@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The IntegrationLogSummaryQueryResponse model module.
  * @module com.ultracart.admin.v2.models/IntegrationLogSummaryQueryResponse
- * @version 4.1.247
+ * @version 4.1.248
  */
 class IntegrationLogSummaryQueryResponse {
     /**
