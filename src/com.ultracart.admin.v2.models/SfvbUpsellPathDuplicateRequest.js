@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbUpsellPathDuplicateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbUpsellPathDuplicateRequest
- * @version 4.1.249
+ * @version 4.1.250
  */
 class SfvbUpsellPathDuplicateRequest {
     /**

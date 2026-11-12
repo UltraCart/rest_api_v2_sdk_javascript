@@ -18,7 +18,7 @@ import SfvbCommsDashboardRow from './SfvbCommsDashboardRow';
 /**
  * The SfvbCommsDashboardResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsDashboardResponse
- * @version 4.1.249
+ * @version 4.1.250
  */
 class SfvbCommsDashboardResponse {
     /**

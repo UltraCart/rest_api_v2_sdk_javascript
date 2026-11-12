@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSitemapFile model module.
  * @module com.ultracart.admin.v2.models/SfvbSitemapFile
- * @version 4.1.249
+ * @version 4.1.250
  */
 class SfvbSitemapFile {
     /**

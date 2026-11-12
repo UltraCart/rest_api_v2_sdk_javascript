@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationAgentAuthMerchant model module.
  * @module com.ultracart.admin.v2.models/ConversationAgentAuthMerchant
- * @version 4.1.249
+ * @version 4.1.250
  */
 class ConversationAgentAuthMerchant {
     /**
