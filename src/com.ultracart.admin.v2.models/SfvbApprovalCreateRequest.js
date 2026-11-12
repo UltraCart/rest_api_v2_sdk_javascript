@@ -35,7 +35,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.246
+ * @version 4.1.247
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -161,7 +161,7 @@ SfvbApprovalCreateRequest.prototype['comms_list_import'] = undefined;
 SfvbApprovalCreateRequest.prototype['comms_settings'] = undefined;
 
 /**
- * For a file.put_script write, the exact script to be written, at most 256 KB.  For tracking_html.put, the exact HTML the write will send, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
+ * For a file.put_script write, the exact script to be written, at most 256 KB, and for a file.put_template write the exact template.  For tracking_html.put, the exact HTML the write will send, at most 256 KB.  UltraCart reviews it and keeps only its hash, so send the same bytes again on the write.  Leave it out for a revert, which names params.version.
  * @member {String} content
  */
 SfvbApprovalCreateRequest.prototype['content'] = undefined;
@@ -283,6 +283,12 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * @const
      */
     "file.put_script": "file.put_script",
+
+    /**
+     * value: "file.put_template"
+     * @const
+     */
+    "file.put_template": "file.put_template",
 
     /**
      * value: "redirect.delete_batch"

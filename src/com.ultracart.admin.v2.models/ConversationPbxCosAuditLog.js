@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationPbxCosAuditLog model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxCosAuditLog
- * @version 4.1.246
+ * @version 4.1.247
  */
 class ConversationPbxCosAuditLog {
     /**

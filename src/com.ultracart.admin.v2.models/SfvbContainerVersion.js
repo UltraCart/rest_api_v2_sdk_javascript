@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerVersion model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerVersion
- * @version 4.1.246
+ * @version 4.1.247
  */
 class SfvbContainerVersion {
     /**
@@ -58,6 +58,12 @@ class SfvbContainerVersion {
             }
             if (data.hasOwnProperty('container_name')) {
                 obj['container_name'] = ApiClient.convertToType(data['container_name'], 'String');
+            }
+            if (data.hasOwnProperty('content_created_dts')) {
+                obj['content_created_dts'] = ApiClient.convertToType(data['content_created_dts'], 'String');
+            }
+            if (data.hasOwnProperty('content_edited_by')) {
+                obj['content_edited_by'] = ApiClient.convertToType(data['content_edited_by'], 'String');
             }
             if (data.hasOwnProperty('created_dts')) {
                 obj['created_dts'] = ApiClient.convertToType(data['created_dts'], 'String');
@@ -115,7 +121,19 @@ SfvbContainerVersion.prototype['container_history_oid'] = undefined;
 SfvbContainerVersion.prototype['container_name'] = undefined;
 
 /**
- * When this snapshot was taken, ISO 8601 UTC.
+ * When this version's content was written, ISO 8601 UTC.  Same source and limits as content_edited_by.
+ * @member {String} content_created_dts
+ */
+SfvbContainerVersion.prototype['content_created_dts'] = undefined;
+
+/**
+ * Login of whoever wrote this version's content, taken from the write recorded on the next older entry.  Absent on a create entry and on the oldest entry kept, such as a template body that was in place before any history.  Saves made outside this API, in the admin visual builder, are not recorded, so after one this names the previous API write.
+ * @member {String} content_edited_by
+ */
+SfvbContainerVersion.prototype['content_edited_by'] = undefined;
+
+/**
+ * When the write that replaced this version happened, ISO 8601 UTC.  On the current entry, when it was written.
  * @member {String} created_dts
  */
 SfvbContainerVersion.prototype['created_dts'] = undefined;
@@ -127,7 +145,7 @@ SfvbContainerVersion.prototype['created_dts'] = undefined;
 SfvbContainerVersion.prototype['current'] = undefined;
 
 /**
- * Login of whoever caused this snapshot.
+ * Login of whoever made the write that replaced this version.  On the current entry, whoever wrote it.  See content_edited_by for who wrote a history entry's content.
  * @member {String} edited_by
  */
 SfvbContainerVersion.prototype['edited_by'] = undefined;

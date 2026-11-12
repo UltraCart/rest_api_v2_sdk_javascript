@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPreviewTrackingHtmlRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewTrackingHtmlRequest
- * @version 4.1.246
+ * @version 4.1.247
  */
 class SfvbPreviewTrackingHtmlRequest {
     /**

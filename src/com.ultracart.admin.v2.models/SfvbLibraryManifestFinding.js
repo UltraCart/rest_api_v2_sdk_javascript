@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbLibraryManifestFinding model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryManifestFinding
- * @version 4.1.246
+ * @version 4.1.247
  */
 class SfvbLibraryManifestFinding {
     /**

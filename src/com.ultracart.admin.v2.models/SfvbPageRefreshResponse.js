@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageRefreshResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageRefreshResponse
- * @version 4.1.246
+ * @version 4.1.247
  */
 class SfvbPageRefreshResponse {
     /**
