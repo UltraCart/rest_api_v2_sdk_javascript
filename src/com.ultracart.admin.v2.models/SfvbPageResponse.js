@@ -12,13 +12,15 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbErrorDetail from './SfvbErrorDetail';
 import SfvbPageAttribute from './SfvbPageAttribute';
 import SfvbPageMultimedia from './SfvbPageMultimedia';
+import SfvbRedirect from './SfvbRedirect';
 
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbPageResponse {
     /**
@@ -78,6 +80,12 @@ class SfvbPageResponse {
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('redirect')) {
+                obj['redirect'] = SfvbRedirect.constructFromObject(data['redirect']);
+            }
+            if (data.hasOwnProperty('redirect_warnings')) {
+                obj['redirect_warnings'] = ApiClient.convertToType(data['redirect_warnings'], [SfvbErrorDetail]);
             }
             if (data.hasOwnProperty('review_template')) {
                 obj['review_template'] = ApiClient.convertToType(data['review_template'], 'String');
@@ -166,6 +174,17 @@ SfvbPageResponse.prototype['page_type'] = undefined;
  * @member {String} path
  */
 SfvbPageResponse.prototype['path'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbRedirect} redirect
+ */
+SfvbPageResponse.prototype['redirect'] = undefined;
+
+/**
+ * Findings on that redirect that did not block it, such as a chain.  Left out when there are none.
+ * @member {Array.<module:com.ultracart.admin.v2.models/SfvbErrorDetail>} redirect_warnings
+ */
+SfvbPageResponse.prototype['redirect_warnings'] = undefined;
 
 /**
  * Template that renders the item review pages under this page.  Omitted when not set.

@@ -170,6 +170,8 @@ import SfvbPageItemsAddRequest from '../com.ultracart.admin.v2.models/SfvbPageIt
 import SfvbPageItemsRemoveRequest from '../com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest';
 import SfvbPageItemsResponse from '../com.ultracart.admin.v2.models/SfvbPageItemsResponse';
 import SfvbPageListResponse from '../com.ultracart.admin.v2.models/SfvbPageListResponse';
+import SfvbPageMoveRequest from '../com.ultracart.admin.v2.models/SfvbPageMoveRequest';
+import SfvbPageMoveResponse from '../com.ultracart.admin.v2.models/SfvbPageMoveResponse';
 import SfvbPageMultimediaRequest from '../com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
 import SfvbPageRefreshRequest from '../com.ultracart.admin.v2.models/SfvbPageRefreshRequest';
 import SfvbPageRefreshResponse from '../com.ultracart.admin.v2.models/SfvbPageRefreshResponse';
@@ -203,6 +205,8 @@ import SfvbRedirectResponse from '../com.ultracart.admin.v2.models/SfvbRedirectR
 import SfvbRedirectsResponse from '../com.ultracart.admin.v2.models/SfvbRedirectsResponse';
 import SfvbRenderRequest from '../com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from '../com.ultracart.admin.v2.models/SfvbRenderResponse';
+import SfvbSearchFacetsRequest from '../com.ultracart.admin.v2.models/SfvbSearchFacetsRequest';
+import SfvbSearchFacetsResponse from '../com.ultracart.admin.v2.models/SfvbSearchFacetsResponse';
 import SfvbSecretKindsResponse from '../com.ultracart.admin.v2.models/SfvbSecretKindsResponse';
 import SfvbSecretRequest from '../com.ultracart.admin.v2.models/SfvbSecretRequest';
 import SfvbSecretRequestCreate from '../com.ultracart.admin.v2.models/SfvbSecretRequestCreate';
@@ -270,7 +274,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.252
+* @version 4.1.253
 */
 export default class SfvbApi {
 
@@ -7104,6 +7108,49 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbSearchFacets operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSearchFacetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSearchFacetsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read the storefront's faceted search configuration
+     * Every facet the storefront can offer shoppers - the standard ones and one per item attribute on the storefront - with its heading and whether it is on, in the fixed order shoppers see them, and the Cost facet's price breaks.  The same settings as the store admin's Faceted Search Results.  Send hash_sha256 as If-Match to change them. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSearchFacetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSearchFacetsResponse}
+     */
+    getSfvbSearchFacets(storefront_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbSearchFacets");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbSearchFacetsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/search/facets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbSecretKinds operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSecretKindsCallback
      * @param {String} error Error message, if any.
@@ -10615,6 +10662,58 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the moveSfvbPage operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~moveSfvbPageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageMoveResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Move or rename a page
+     * Moves a page to a new path - a new parent, a new last part, or both, so a rename is a move under the same parent.  Its sub-pages, their items and the page folder with its body move with it.  Refused for the root page, a path inside the page itself, a path where a page or folder already exists, a parent that does not exist, and a page whose folder holds a started experiment.  With redirect_old_url 301 the same call adds one pattern redirect from the old path to the new one, so every old address, sub-pages and items included, keeps working; the redirect is checked before anything moves, and if it is refused after the move the move is undone, so the page moves with its redirect or not at all.  dry_run runs every check and reports what would move.  Needs sfvb_publish, plus the approval of the person who signed in the CLI, as an approved page.move request for exactly this path, new path and redirect in the Approval-Id header. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbPageMoveRequest} page_move_request The page and where it goes
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved page.move request for exactly this path, new path and redirect.  Required unless dry_run.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~moveSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageMoveResponse}
+     */
+    moveSfvbPage(storefront_oid, page_move_request, opts, callback) {
+      opts = opts || {};
+      let postBody = page_move_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling moveSfvbPage");
+      }
+      // verify the required parameter 'page_move_request' is set
+      if (page_move_request === undefined || page_move_request === null) {
+        throw new Error("Missing the required parameter 'page_move_request' when calling moveSfvbPage");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbPageMoveResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/pages/move', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the moveSfvbSequenceStep operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~moveSfvbSequenceStepCallback
      * @param {String} error Error message, if any.
@@ -11966,7 +12065,7 @@ export default class SfvbApi {
 
     /**
      * Change a page's settings
-     * A partial update.  Only the fields you send change - title, description, templates, visibility, sitemap exclusion, sort orders, items per page and page type.  Unlike the store admin's page save, the page's attributes, images, items, selectors and permissions are left exactly as they are.  Fields that would move or rename the page, and fields this endpoint does not know, are refused.  The root page cannot be hidden.  Always needs sfvb_publish, because page settings are live. 
+     * A partial update.  Only the fields you send change - title, description, templates, visibility, sitemap exclusion, sort orders, items per page and page type.  Unlike the store admin's page save, the page's attributes, images, items, selectors and permissions are left exactly as they are.  Fields that would move or rename the page, and fields this endpoint does not know, are refused.  The root page cannot be hidden.  Always needs sfvb_publish, because page settings are live.  Hiding a page with redirect_old_url 301 and redirect_target also adds a 301 redirect from its address, checked first like any redirect rule.  The page is hidden and the rule added together, or neither. 
      * @param {Number} storefront_oid 
      * @param {String} path Page path, for example /lp/spring-sale/
      * @param {module:com.ultracart.admin.v2.models/SfvbPageSettingsRequest} page_settings_request The settings to change
@@ -12955,7 +13054,7 @@ export default class SfvbApi {
      * @param {Number} storefront_oid 
      * @param {String} owner_type 
      * @param {String} owner_object_id 
-     * @param {String} If_Match CJSON hash of the container being reverted.  Required; 428 when absent, 412 when stale.
+     * @param {String} If_Match CJSON hash of the container being reverted.  Required while the container holds content; 428 when absent, 412 when stale.  Leave it out when the container has been removed, since there is nothing to match.
      * @param {module:com.ultracart.admin.v2.models/SfvbContainerRevertRequest} container_revert_request Version to revert the container to
      * @param {Object} opts Optional parameters
      * @param {String} opts.container_name 
@@ -14901,6 +15000,58 @@ export default class SfvbApi {
       let returnType = SfvbRedirectResponse;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/redirects/{redirect_id}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateSfvbSearchFacets operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~updateSfvbSearchFacetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbSearchFacetsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change the storefront's faceted search configuration
+     * A partial update.  Turn facets on or off, change their headings, and replace the Cost facet's price breaks; facets left out and every other search setting are unchanged.  Facets cannot be reordered - the order is fixed.  Turning facets on or off, or changing the price breaks, starts a search index rebuild, reported in rebuild.  dry_run checks the change and reports it, and the rebuild it would start, without saving.  Needs sfvb_publish, because facets show on every search and category page at once. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbSearchFacetsRequest} search_facets_request The facets and price breaks to change
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.If_Match hash_sha256 from the last read.  Required unless dry_run; 428 when absent, 412 when stale.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~updateSfvbSearchFacetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbSearchFacetsResponse}
+     */
+    updateSfvbSearchFacets(storefront_oid, search_facets_request, opts, callback) {
+      opts = opts || {};
+      let postBody = search_facets_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling updateSfvbSearchFacets");
+      }
+      // verify the required parameter 'search_facets_request' is set
+      if (search_facets_request === undefined || search_facets_request === null) {
+        throw new Error("Missing the required parameter 'search_facets_request' when calling updateSfvbSearchFacets");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'If-Match': opts['If_Match']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json; charset=UTF-8'];
+      let accepts = ['application/json'];
+      let returnType = SfvbSearchFacetsResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/search/facets', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

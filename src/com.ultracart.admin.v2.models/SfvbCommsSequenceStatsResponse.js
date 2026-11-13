@@ -18,7 +18,7 @@ import SfvbCommsStepStat from './SfvbCommsStepStat';
 /**
  * The SfvbCommsSequenceStatsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSequenceStatsResponse
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbCommsSequenceStatsResponse {
     /**

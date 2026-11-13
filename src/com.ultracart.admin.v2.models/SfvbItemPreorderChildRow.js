@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemPreorderChildRow model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPreorderChildRow
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbItemPreorderChildRow {
     /**

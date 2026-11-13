@@ -1234,6 +1234,8 @@ docs/SfvbPageItemsAddRequest.md
 docs/SfvbPageItemsRemoveRequest.md
 docs/SfvbPageItemsResponse.md
 docs/SfvbPageListResponse.md
+docs/SfvbPageMoveRequest.md
+docs/SfvbPageMoveResponse.md
 docs/SfvbPageMultimedia.md
 docs/SfvbPageMultimediaRequest.md
 docs/SfvbPageRefreshRequest.md
@@ -1282,6 +1284,10 @@ docs/SfvbRedirectsResponse.md
 docs/SfvbRenderRequest.md
 docs/SfvbRenderResponse.md
 docs/SfvbRobotsTxt.md
+docs/SfvbSearchFacet.md
+docs/SfvbSearchFacetUpdate.md
+docs/SfvbSearchFacetsRequest.md
+docs/SfvbSearchFacetsResponse.md
 docs/SfvbSecretHandle.md
 docs/SfvbSecretKind.md
 docs/SfvbSecretKindsResponse.md
@@ -2713,6 +2719,8 @@ src/com.ultracart.admin.v2.models/SfvbPageItemsAddRequest.js
 src/com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest.js
 src/com.ultracart.admin.v2.models/SfvbPageItemsResponse.js
 src/com.ultracart.admin.v2.models/SfvbPageListResponse.js
+src/com.ultracart.admin.v2.models/SfvbPageMoveRequest.js
+src/com.ultracart.admin.v2.models/SfvbPageMoveResponse.js
 src/com.ultracart.admin.v2.models/SfvbPageMultimedia.js
 src/com.ultracart.admin.v2.models/SfvbPageMultimediaRequest.js
 src/com.ultracart.admin.v2.models/SfvbPageRefreshRequest.js
@@ -2761,6 +2769,10 @@ src/com.ultracart.admin.v2.models/SfvbRedirectsResponse.js
 src/com.ultracart.admin.v2.models/SfvbRenderRequest.js
 src/com.ultracart.admin.v2.models/SfvbRenderResponse.js
 src/com.ultracart.admin.v2.models/SfvbRobotsTxt.js
+src/com.ultracart.admin.v2.models/SfvbSearchFacet.js
+src/com.ultracart.admin.v2.models/SfvbSearchFacetUpdate.js
+src/com.ultracart.admin.v2.models/SfvbSearchFacetsRequest.js
+src/com.ultracart.admin.v2.models/SfvbSearchFacetsResponse.js
 src/com.ultracart.admin.v2.models/SfvbSecretHandle.js
 src/com.ultracart.admin.v2.models/SfvbSecretKind.js
 src/com.ultracart.admin.v2.models/SfvbSecretKindsResponse.js

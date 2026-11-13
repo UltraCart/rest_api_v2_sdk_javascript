@@ -35,7 +35,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -465,7 +465,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "flow.backfill"
      * @const
      */
-    "flow.backfill": "flow.backfill"
+    "flow.backfill": "flow.backfill",
+
+    /**
+     * value: "page.move"
+     * @const
+     */
+    "page.move": "page.move"
 };
 
 

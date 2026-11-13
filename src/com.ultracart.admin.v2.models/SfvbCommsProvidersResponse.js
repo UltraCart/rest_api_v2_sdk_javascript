@@ -17,7 +17,7 @@ import SfvbCommsProvider from './SfvbCommsProvider';
 /**
  * The SfvbCommsProvidersResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsProvidersResponse
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbCommsProvidersResponse {
     /**

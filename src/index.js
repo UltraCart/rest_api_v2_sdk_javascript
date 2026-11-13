@@ -1227,6 +1227,8 @@ import SfvbPageItemsAddRequest from './com.ultracart.admin.v2.models/SfvbPageIte
 import SfvbPageItemsRemoveRequest from './com.ultracart.admin.v2.models/SfvbPageItemsRemoveRequest';
 import SfvbPageItemsResponse from './com.ultracart.admin.v2.models/SfvbPageItemsResponse';
 import SfvbPageListResponse from './com.ultracart.admin.v2.models/SfvbPageListResponse';
+import SfvbPageMoveRequest from './com.ultracart.admin.v2.models/SfvbPageMoveRequest';
+import SfvbPageMoveResponse from './com.ultracart.admin.v2.models/SfvbPageMoveResponse';
 import SfvbPageMultimedia from './com.ultracart.admin.v2.models/SfvbPageMultimedia';
 import SfvbPageMultimediaRequest from './com.ultracart.admin.v2.models/SfvbPageMultimediaRequest';
 import SfvbPageRefreshRequest from './com.ultracart.admin.v2.models/SfvbPageRefreshRequest';
@@ -1275,6 +1277,10 @@ import SfvbRedirectsResponse from './com.ultracart.admin.v2.models/SfvbRedirects
 import SfvbRenderRequest from './com.ultracart.admin.v2.models/SfvbRenderRequest';
 import SfvbRenderResponse from './com.ultracart.admin.v2.models/SfvbRenderResponse';
 import SfvbRobotsTxt from './com.ultracart.admin.v2.models/SfvbRobotsTxt';
+import SfvbSearchFacet from './com.ultracart.admin.v2.models/SfvbSearchFacet';
+import SfvbSearchFacetUpdate from './com.ultracart.admin.v2.models/SfvbSearchFacetUpdate';
+import SfvbSearchFacetsRequest from './com.ultracart.admin.v2.models/SfvbSearchFacetsRequest';
+import SfvbSearchFacetsResponse from './com.ultracart.admin.v2.models/SfvbSearchFacetsResponse';
 import SfvbSecretHandle from './com.ultracart.admin.v2.models/SfvbSecretHandle';
 import SfvbSecretKind from './com.ultracart.admin.v2.models/SfvbSecretKind';
 import SfvbSecretKindsResponse from './com.ultracart.admin.v2.models/SfvbSecretKindsResponse';
@@ -1537,7 +1543,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.252
+* @version 4.1.253
 */
 export {
     /**
@@ -8831,6 +8837,18 @@ export {
     SfvbPageListResponse,
 
     /**
+     * The SfvbPageMoveRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageMoveRequest}
+     */
+    SfvbPageMoveRequest,
+
+    /**
+     * The SfvbPageMoveResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbPageMoveResponse}
+     */
+    SfvbPageMoveResponse,
+
+    /**
      * The SfvbPageMultimedia model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbPageMultimedia}
      */
@@ -9117,6 +9135,30 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbRobotsTxt}
      */
     SfvbRobotsTxt,
+
+    /**
+     * The SfvbSearchFacet model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSearchFacet}
+     */
+    SfvbSearchFacet,
+
+    /**
+     * The SfvbSearchFacetUpdate model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSearchFacetUpdate}
+     */
+    SfvbSearchFacetUpdate,
+
+    /**
+     * The SfvbSearchFacetsRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSearchFacetsRequest}
+     */
+    SfvbSearchFacetsRequest,
+
+    /**
+     * The SfvbSearchFacetsResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbSearchFacetsResponse}
+     */
+    SfvbSearchFacetsResponse,
 
     /**
      * The SfvbSecretHandle model constructor.

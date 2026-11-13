@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ChannelPartnerImportResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerImportResponse
- * @version 4.1.252
+ * @version 4.1.253
  */
 class ChannelPartnerImportResponse {
     /**

@@ -19,7 +19,7 @@ import SfvbTrackingPrivacy from './SfvbTrackingPrivacy';
 /**
  * The SfvbTrackingSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingSettingsResponse
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbTrackingSettingsResponse {
     /**

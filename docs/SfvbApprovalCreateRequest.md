@@ -97,6 +97,8 @@ Name | Type | Description | Notes
 
 * `flow.backfill` (value: `"flow.backfill"`)
 
+* `page.move` (value: `"page.move"`)
+
 
 
 

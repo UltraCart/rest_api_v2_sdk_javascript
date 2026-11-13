@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbApprovalParams {
     /**
@@ -80,8 +80,17 @@ class SfvbApprovalParams {
             if (data.hasOwnProperty('merchant_item_oid')) {
                 obj['merchant_item_oid'] = ApiClient.convertToType(data['merchant_item_oid'], 'Number');
             }
+            if (data.hasOwnProperty('new_path')) {
+                obj['new_path'] = ApiClient.convertToType(data['new_path'], 'String');
+            }
+            if (data.hasOwnProperty('pages_moved')) {
+                obj['pages_moved'] = ApiClient.convertToType(data['pages_moved'], 'Number');
+            }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('redirect_old_url')) {
+                obj['redirect_old_url'] = ApiClient.convertToType(data['redirect_old_url'], 'String');
             }
             if (data.hasOwnProperty('request_sha256')) {
                 obj['request_sha256'] = ApiClient.convertToType(data['request_sha256'], 'String');
@@ -199,10 +208,28 @@ SfvbApprovalParams.prototype['item_count'] = undefined;
 SfvbApprovalParams.prototype['merchant_item_oid'] = undefined;
 
 /**
+ * For page.move, where the page goes, exactly as the move will send it.  path is the page as it is now.
+ * @member {String} new_path
+ */
+SfvbApprovalParams.prototype['new_path'] = undefined;
+
+/**
+ * For page.move, how many pages move, the page itself included, when it was requested.  Set by the server.
+ * @member {Number} pages_moved
+ */
+SfvbApprovalParams.prototype['pages_moved'] = undefined;
+
+/**
  * The file path, for file.delete, file.put_script and file.put_template, or the page path for experiment.start of a page experiment.  Exactly as the gated call will send it.
  * @member {String} path
  */
 SfvbApprovalParams.prototype['path'] = undefined;
+
+/**
+ * For page.move, 301 when the move also redirects the old addresses, as the move will send it.  Left out or none for no redirect.
+ * @member {String} redirect_old_url
+ */
+SfvbApprovalParams.prototype['redirect_old_url'] = undefined;
 
 /**
  * For experiment.start of a url experiment, the hash of the checked experiment approved, for item.pricing, tracking_provider.change and affiliate_network.change the hash of the change, and for smart_attribution.change the hash of the configuration the change would store.  Set by the server.  The gated call must send the same.

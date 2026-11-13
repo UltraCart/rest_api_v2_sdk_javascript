@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbPageSettingsRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbPageSettingsRequest
- * @version 4.1.252
+ * @version 4.1.253
  */
 class SfvbPageSettingsRequest {
     /**
@@ -67,6 +67,15 @@ class SfvbPageSettingsRequest {
             }
             if (data.hasOwnProperty('page_type')) {
                 obj['page_type'] = ApiClient.convertToType(data['page_type'], 'String');
+            }
+            if (data.hasOwnProperty('redirect_note')) {
+                obj['redirect_note'] = ApiClient.convertToType(data['redirect_note'], 'String');
+            }
+            if (data.hasOwnProperty('redirect_old_url')) {
+                obj['redirect_old_url'] = ApiClient.convertToType(data['redirect_old_url'], 'String');
+            }
+            if (data.hasOwnProperty('redirect_target')) {
+                obj['redirect_target'] = ApiClient.convertToType(data['redirect_target'], 'String');
             }
             if (data.hasOwnProperty('review_template')) {
                 obj['review_template'] = ApiClient.convertToType(data['review_template'], 'String');
@@ -139,6 +148,24 @@ SfvbPageSettingsRequest.prototype['items_per_page'] = undefined;
 SfvbPageSettingsRequest.prototype['page_type'] = undefined;
 
 /**
+ * The note on that redirect rule.  Up to 500 characters.  A note naming the page is used when left out.
+ * @member {String} redirect_note
+ */
+SfvbPageSettingsRequest.prototype['redirect_note'] = undefined;
+
+/**
+ * 301 to redirect the page's address to redirect_target in the same call (#1102).  Only with visible false, on a page that is visible now.  The page is hidden and the rule added together, or neither.
+ * @member {module:com.ultracart.admin.v2.models/SfvbPageSettingsRequest.RedirectOldUrlEnum} redirect_old_url
+ */
+SfvbPageSettingsRequest.prototype['redirect_old_url'] = undefined;
+
+/**
+ * Where the hidden page's address redirects to, for example /lp/summer-sale/.  Required with redirect_old_url, and checked like any redirect rule.
+ * @member {String} redirect_target
+ */
+SfvbPageSettingsRequest.prototype['redirect_target'] = undefined;
+
+/**
  * Template that renders the item review pages under this page.
  * @member {String} review_template
  */
@@ -182,6 +209,21 @@ SfvbPageSettingsRequest.prototype['visible_dts'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>redirect_old_url</code> property.
+ * @enum {String}
+ * @readonly
+ */
+SfvbPageSettingsRequest['RedirectOldUrlEnum'] = {
+
+    /**
+     * value: "301"
+     * @const
+     */
+    "301": "301"
+};
 
 
 
