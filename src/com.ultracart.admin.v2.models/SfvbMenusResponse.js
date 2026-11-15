@@ -17,7 +17,7 @@ import SfvbMenu from './SfvbMenu';
 /**
  * The SfvbMenusResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbMenusResponse
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbMenusResponse {
     /**
@@ -59,7 +59,7 @@ class SfvbMenusResponse {
 }
 
 /**
- * The storefront's menus, sorted by code.  Entries are omitted here - read a single menu to get its tree.
+ * The storefront's menus, sorted by code.  Entries are omitted unless include_entries=true was passed, in which case each menu carries the same tree the single-menu read returns.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbMenu>} menus
  */
 SfvbMenusResponse.prototype['menus'] = undefined;

@@ -1100,6 +1100,7 @@ import SfvbExperimentStartVariation from './com.ultracart.admin.v2.models/SfvbEx
 import SfvbExperimentVariationUpdateRequest from './com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest';
 import SfvbExperimentsResponse from './com.ultracart.admin.v2.models/SfvbExperimentsResponse';
 import SfvbFileContentResponse from './com.ultracart.admin.v2.models/SfvbFileContentResponse';
+import SfvbFileContentResult from './com.ultracart.admin.v2.models/SfvbFileContentResult';
 import SfvbFileEntry from './com.ultracart.admin.v2.models/SfvbFileEntry';
 import SfvbFileRevertRequest from './com.ultracart.admin.v2.models/SfvbFileRevertRequest';
 import SfvbFileSearchRequest from './com.ultracart.admin.v2.models/SfvbFileSearchRequest';
@@ -1110,6 +1111,8 @@ import SfvbFileVersion from './com.ultracart.admin.v2.models/SfvbFileVersion';
 import SfvbFileVersionsResponse from './com.ultracart.admin.v2.models/SfvbFileVersionsResponse';
 import SfvbFileWriteRequest from './com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from './com.ultracart.admin.v2.models/SfvbFileWriteResponse';
+import SfvbFilesContentRequest from './com.ultracart.admin.v2.models/SfvbFilesContentRequest';
+import SfvbFilesContentResponse from './com.ultracart.admin.v2.models/SfvbFilesContentResponse';
 import SfvbFilesResponse from './com.ultracart.admin.v2.models/SfvbFilesResponse';
 import SfvbFlow from './com.ultracart.admin.v2.models/SfvbFlow';
 import SfvbFlowBackfillRequest from './com.ultracart.admin.v2.models/SfvbFlowBackfillRequest';
@@ -1543,7 +1546,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.253
+* @version 4.1.254
 */
 export {
     /**
@@ -8075,6 +8078,12 @@ export {
     SfvbFileContentResponse,
 
     /**
+     * The SfvbFileContentResult model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFileContentResult}
+     */
+    SfvbFileContentResult,
+
+    /**
      * The SfvbFileEntry model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbFileEntry}
      */
@@ -8133,6 +8142,18 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbFileWriteResponse}
      */
     SfvbFileWriteResponse,
+
+    /**
+     * The SfvbFilesContentRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFilesContentRequest}
+     */
+    SfvbFilesContentRequest,
+
+    /**
+     * The SfvbFilesContentResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbFilesContentResponse}
+     */
+    SfvbFilesContentResponse,
 
     /**
      * The SfvbFilesResponse model constructor.

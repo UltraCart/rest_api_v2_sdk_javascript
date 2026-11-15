@@ -20,7 +20,7 @@ import SfvbRedirect from './SfvbRedirect';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbPageResponse {
     /**
@@ -56,6 +56,9 @@ class SfvbPageResponse {
             }
             if (data.hasOwnProperty('blog_post_template')) {
                 obj['blog_post_template'] = ApiClient.convertToType(data['blog_post_template'], 'String');
+            }
+            if (data.hasOwnProperty('catalog_group_oid')) {
+                obj['catalog_group_oid'] = ApiClient.convertToType(data['catalog_group_oid'], 'Number');
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -126,6 +129,12 @@ SfvbPageResponse.prototype['attributes'] = undefined;
  * @member {String} blog_post_template
  */
 SfvbPageResponse.prototype['blog_post_template'] = undefined;
+
+/**
+ * The page's id.  It stays the same when the page is moved or renamed, where the path and the page folder's id do not.  The page read accepts it in place of path.
+ * @member {Number} catalog_group_oid
+ */
+SfvbPageResponse.prototype['catalog_group_oid'] = undefined;
 
 /**
  * The page description, the text a page template renders as the page's description.  Omitted when empty.

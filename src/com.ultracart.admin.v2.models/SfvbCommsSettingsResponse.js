@@ -18,7 +18,7 @@ import SfvbCommsSettings from './SfvbCommsSettings';
 /**
  * The SfvbCommsSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSettingsResponse
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbCommsSettingsResponse {
     /**

@@ -98,6 +98,8 @@ import SfvbFileUploadUrlResponse from '../com.ultracart.admin.v2.models/SfvbFile
 import SfvbFileVersionsResponse from '../com.ultracart.admin.v2.models/SfvbFileVersionsResponse';
 import SfvbFileWriteRequest from '../com.ultracart.admin.v2.models/SfvbFileWriteRequest';
 import SfvbFileWriteResponse from '../com.ultracart.admin.v2.models/SfvbFileWriteResponse';
+import SfvbFilesContentRequest from '../com.ultracart.admin.v2.models/SfvbFilesContentRequest';
+import SfvbFilesContentResponse from '../com.ultracart.admin.v2.models/SfvbFilesContentResponse';
 import SfvbFilesResponse from '../com.ultracart.admin.v2.models/SfvbFilesResponse';
 import SfvbFlow from '../com.ultracart.admin.v2.models/SfvbFlow';
 import SfvbFlowBackfillRequest from '../com.ultracart.admin.v2.models/SfvbFlowBackfillRequest';
@@ -274,7 +276,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.253
+* @version 4.1.254
 */
 export default class SfvbApi {
 
@@ -5393,6 +5395,54 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbFileContents operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbFileContentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbFilesContentResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Read several storefront files
+     * The current content of up to 50 files in one call, each answered exactly as the single file read answers it.  A file that can't be read carries its own error and the others are still read.  When the response reaches its size limit, the paths not yet read come back in remaining_paths; send them again.  Only reads - a POST because the list of paths can be long. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbFilesContentRequest} files_request The files to read
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbFileContentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbFilesContentResponse}
+     */
+    getSfvbFileContents(storefront_oid, files_request, callback) {
+      let postBody = files_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbFileContents");
+      }
+      // verify the required parameter 'files_request' is set
+      if (files_request === undefined || files_request === null) {
+        throw new Error("Missing the required parameter 'files_request' when calling getSfvbFileContents");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbFilesContentResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/files/content', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbFileUploadUrl operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbFileUploadUrlCallback
      * @param {String} error Error message, if any.
@@ -6323,12 +6373,15 @@ export default class SfvbApi {
 
     /**
      * List a storefront's store menus
-     * The menus a menu element's menuName can name, sorted by code and without their entries.  A code the active theme's templates ask for but nothing has created is included with unconfigured true - that code renders an empty list today, and writing it creates it.  A menu no template names is marked undeclared, which usually means a menuName is misspelled. 
+     * The menus a menu element's menuName can name, sorted by code.  Without include_entries each menu is listed without its entries; with include_entries=true each carries the tree the single-menu read returns, so one call reads every menu.  A code the active theme's templates ask for but nothing has created is included with unconfigured true - that code renders an empty list today, and writing it creates it.  A menu no template names is marked undeclared, which usually means a menuName is misspelled. 
      * @param {Number} storefront_oid 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.include_entries True to include each menu's entries
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbMenusCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbMenusResponse}
      */
-    getSfvbMenus(storefront_oid, callback) {
+    getSfvbMenus(storefront_oid, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
@@ -6339,6 +6392,7 @@ export default class SfvbApi {
         'storefront_oid': storefront_oid
       };
       let queryParams = {
+        'include_entries': opts['include_entries']
       };
       let headerParams = {
       };
@@ -6564,28 +6618,28 @@ export default class SfvbApi {
 
     /**
      * Read a page's attributes and images
-     * What the pageattribute and pageimage elements render for this page.  These are not in any file, which is why a page folder can be empty and its elements still render something.  Attributes and image codes a template declares but nothing has set are included, so the response describes what the page can show rather than only what has been saved. 
+     * What the pageattribute and pageimage elements render for this page.  These are not in any file, which is why a page folder can be empty and its elements still render something.  Attributes and image codes a template declares but nothing has set are included, so the response describes what the page can show rather than only what has been saved.  Name the page by path or by catalog_group_oid, not both.  The oid is the id the page list and menu reads return, and it stays the same when the page moves. 
      * @param {Number} storefront_oid 
-     * @param {String} path Page path, for example /catalog/dispensers/
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.path Page path, for example /catalog/dispensers/.  Required unless catalog_group_oid is given.
+     * @param {Number} opts.catalog_group_oid The page's id, in place of path
      * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbPageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageResponse}
      */
-    getSfvbPage(storefront_oid, path, callback) {
+    getSfvbPage(storefront_oid, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'storefront_oid' is set
       if (storefront_oid === undefined || storefront_oid === null) {
         throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbPage");
-      }
-      // verify the required parameter 'path' is set
-      if (path === undefined || path === null) {
-        throw new Error("Missing the required parameter 'path' when calling getSfvbPage");
       }
 
       let pathParams = {
         'storefront_oid': storefront_oid
       };
       let queryParams = {
-        'path': path
+        'path': opts['path'],
+        'catalog_group_oid': opts['catalog_group_oid']
       };
       let headerParams = {
       };
@@ -10329,10 +10383,13 @@ export default class SfvbApi {
 
     /**
      * List the storefront's pages
-     * Every page with its settings, sorted by path with the root first.  Hidden pages are included.  Pass under to list one page and everything below it.  Read from the same cached catalog the admin page tree uses, so a page created a moment ago can take a moment to appear here - read it directly with the single-page read to confirm a write. 
+     * Every page with its settings, sorted by path with the root first.  Hidden pages are included.  Pass under to list one page and everything below it.  Read from the same cached catalog the admin page tree uses, so a page created a moment ago can take a moment to appear here - read it directly with the single-page read to confirm a write.  Pass detail=true to get each page's single-page read in detail as well, at most 25 pages a call.  Page through with offset and limit, following next_offset until it is omitted. 
      * @param {Number} storefront_oid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.under Only this page and the pages below it, for example /lp/
+     * @param {Boolean} opts.detail True to include each page's single-page read, a window at a time
+     * @param {Number} opts.offset Where the window starts, with detail=true.  Default 0.
+     * @param {Number} opts.limit Pages in the window, 1 to 25, with detail=true.  Default 25.
      * @param {module:com.ultracart.admin.v2/SfvbApi~listSfvbPagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbPageListResponse}
      */
@@ -10348,7 +10405,10 @@ export default class SfvbApi {
         'storefront_oid': storefront_oid
       };
       let queryParams = {
-        'under': opts['under']
+        'under': opts['under'],
+        'detail': opts['detail'],
+        'offset': opts['offset'],
+        'limit': opts['limit']
       };
       let headerParams = {
       };
@@ -15015,7 +15075,7 @@ export default class SfvbApi {
 
     /**
      * Change the storefront's faceted search configuration
-     * A partial update.  Turn facets on or off, change their headings, and replace the Cost facet's price breaks; facets left out and every other search setting are unchanged.  Facets cannot be reordered - the order is fixed.  Turning facets on or off, or changing the price breaks, starts a search index rebuild, reported in rebuild.  dry_run checks the change and reports it, and the rebuild it would start, without saving.  Needs sfvb_publish, because facets show on every search and category page at once. 
+     * A partial update.  Turn facets on or off, change their headings, and replace the Cost facet's price breaks; facets left out and every other search setting are unchanged.  Facets cannot be reordered - the order is fixed.  Turning facets on or off, or changing the price breaks, starts a search index rebuild, reported in rebuild.  dry_run checks the change and reports it, and the rebuild it would start, without saving.  Needs sfvb_publish, because facets show on every search and category page at once.  Changes are limited to 30 an hour and 100 a day per storefront, and those that start a rebuild to 6 an hour and 20 a day (429, nothing saved). 
      * @param {Number} storefront_oid 
      * @param {module:com.ultracart.admin.v2.models/SfvbSearchFacetsRequest} search_facets_request The facets and price breaks to change
      * @param {Object} opts Optional parameters

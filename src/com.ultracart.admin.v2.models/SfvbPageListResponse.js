@@ -17,7 +17,7 @@ import SfvbPageSummary from './SfvbPageSummary';
 /**
  * The SfvbPageListResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageListResponse
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbPageListResponse {
     /**
@@ -48,8 +48,14 @@ class SfvbPageListResponse {
         if (data) {
             obj = obj || new SfvbPageListResponse();
 
+            if (data.hasOwnProperty('next_offset')) {
+                obj['next_offset'] = ApiClient.convertToType(data['next_offset'], 'Number');
+            }
             if (data.hasOwnProperty('pages')) {
                 obj['pages'] = ApiClient.convertToType(data['pages'], [SfvbPageSummary]);
+            }
+            if (data.hasOwnProperty('total')) {
+                obj['total'] = ApiClient.convertToType(data['total'], 'Number');
             }
         }
         return obj;
@@ -59,10 +65,22 @@ class SfvbPageListResponse {
 }
 
 /**
+ * The offset of the next window, omitted on the last one.  Only with detail=true.
+ * @member {Number} next_offset
+ */
+SfvbPageListResponse.prototype['next_offset'] = undefined;
+
+/**
  * Pages sorted by path, the root first.  Hidden pages are included.
  * @member {Array.<module:com.ultracart.admin.v2.models/SfvbPageSummary>} pages
  */
 SfvbPageListResponse.prototype['pages'] = undefined;
+
+/**
+ * How many pages the whole list has.  Only with detail=true.
+ * @member {Number} total
+ */
+SfvbPageListResponse.prototype['total'] = undefined;
 
 
 

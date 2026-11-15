@@ -1107,6 +1107,7 @@ docs/SfvbExperimentStartVariation.md
 docs/SfvbExperimentVariationUpdateRequest.md
 docs/SfvbExperimentsResponse.md
 docs/SfvbFileContentResponse.md
+docs/SfvbFileContentResult.md
 docs/SfvbFileEntry.md
 docs/SfvbFileRevertRequest.md
 docs/SfvbFileSearchRequest.md
@@ -1117,6 +1118,8 @@ docs/SfvbFileVersion.md
 docs/SfvbFileVersionsResponse.md
 docs/SfvbFileWriteRequest.md
 docs/SfvbFileWriteResponse.md
+docs/SfvbFilesContentRequest.md
+docs/SfvbFilesContentResponse.md
 docs/SfvbFilesResponse.md
 docs/SfvbFlow.md
 docs/SfvbFlowBackfillRequest.md
@@ -2592,6 +2595,7 @@ src/com.ultracart.admin.v2.models/SfvbExperimentStartVariation.js
 src/com.ultracart.admin.v2.models/SfvbExperimentVariationUpdateRequest.js
 src/com.ultracart.admin.v2.models/SfvbExperimentsResponse.js
 src/com.ultracart.admin.v2.models/SfvbFileContentResponse.js
+src/com.ultracart.admin.v2.models/SfvbFileContentResult.js
 src/com.ultracart.admin.v2.models/SfvbFileEntry.js
 src/com.ultracart.admin.v2.models/SfvbFileRevertRequest.js
 src/com.ultracart.admin.v2.models/SfvbFileSearchRequest.js
@@ -2602,6 +2606,8 @@ src/com.ultracart.admin.v2.models/SfvbFileVersion.js
 src/com.ultracart.admin.v2.models/SfvbFileVersionsResponse.js
 src/com.ultracart.admin.v2.models/SfvbFileWriteRequest.js
 src/com.ultracart.admin.v2.models/SfvbFileWriteResponse.js
+src/com.ultracart.admin.v2.models/SfvbFilesContentRequest.js
+src/com.ultracart.admin.v2.models/SfvbFilesContentResponse.js
 src/com.ultracart.admin.v2.models/SfvbFilesResponse.js
 src/com.ultracart.admin.v2.models/SfvbFlow.js
 src/com.ultracart.admin.v2.models/SfvbFlowBackfillRequest.js

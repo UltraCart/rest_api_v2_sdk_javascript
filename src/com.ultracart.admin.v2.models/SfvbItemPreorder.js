@@ -18,7 +18,7 @@ import SfvbItemPreorderOption from './SfvbItemPreorderOption';
 /**
  * The SfvbItemPreorder model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPreorder
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbItemPreorder {
     /**

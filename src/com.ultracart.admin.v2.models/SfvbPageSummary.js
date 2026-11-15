@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import SfvbPageResponse from './SfvbPageResponse';
 
 /**
  * The SfvbPageSummary model module.
  * @module com.ultracart.admin.v2.models/SfvbPageSummary
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbPageSummary {
     /**
@@ -47,8 +48,14 @@ class SfvbPageSummary {
         if (data) {
             obj = obj || new SfvbPageSummary();
 
+            if (data.hasOwnProperty('catalog_group_oid')) {
+                obj['catalog_group_oid'] = ApiClient.convertToType(data['catalog_group_oid'], 'Number');
+            }
             if (data.hasOwnProperty('child_count')) {
                 obj['child_count'] = ApiClient.convertToType(data['child_count'], 'Number');
+            }
+            if (data.hasOwnProperty('detail')) {
+                obj['detail'] = SfvbPageResponse.constructFromObject(data['detail']);
             }
             if (data.hasOwnProperty('exclude_from_sitemap')) {
                 obj['exclude_from_sitemap'] = ApiClient.convertToType(data['exclude_from_sitemap'], 'Boolean');
@@ -97,10 +104,21 @@ class SfvbPageSummary {
 }
 
 /**
+ * The page's id.  It stays the same when the page is moved or renamed, where the path and the page folder's id do not, and it is what a menu entry's catalog_group_oid names.
+ * @member {Number} catalog_group_oid
+ */
+SfvbPageSummary.prototype['catalog_group_oid'] = undefined;
+
+/**
  * Number of pages directly under this one.
  * @member {Number} child_count
  */
 SfvbPageSummary.prototype['child_count'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbPageResponse} detail
+ */
+SfvbPageSummary.prototype['detail'] = undefined;
 
 /**
  * True when the page is left out of the sitemap and marked noindex.

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbContainerRevertRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbContainerRevertRequest
- * @version 4.1.253
+ * @version 4.1.254
  */
 class SfvbContainerRevertRequest {
     /**
