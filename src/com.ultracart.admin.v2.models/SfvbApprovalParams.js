@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbApprovalParams model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalParams
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbApprovalParams {
     /**
@@ -73,6 +73,9 @@ class SfvbApprovalParams {
             }
             if (data.hasOwnProperty('experiment_oid')) {
                 obj['experiment_oid'] = ApiClient.convertToType(data['experiment_oid'], 'Number');
+            }
+            if (data.hasOwnProperty('ip')) {
+                obj['ip'] = ApiClient.convertToType(data['ip'], 'String');
             }
             if (data.hasOwnProperty('item_count')) {
                 obj['item_count'] = ApiClient.convertToType(data['item_count'], 'Number');
@@ -194,6 +197,12 @@ SfvbApprovalParams.prototype['esp_twilio_uuid'] = undefined;
  * @member {Number} experiment_oid
  */
 SfvbApprovalParams.prototype['experiment_oid'] = undefined;
+
+/**
+ * For cli.location, the IPv4 address the StoreFront CLI sign-in asks to be used from.  Set by the server from the caller's own address, never by the caller.
+ * @member {String} ip
+ */
+SfvbApprovalParams.prototype['ip'] = undefined;
 
 /**
  * For item.attribute_batch, how many items the batch would change when it was requested.  Set by the server.

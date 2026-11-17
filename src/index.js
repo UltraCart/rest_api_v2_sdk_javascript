@@ -1001,6 +1001,7 @@ import SfvbCampaignMembership from './com.ultracart.admin.v2.models/SfvbCampaign
 import SfvbCampaignWriteRequest from './com.ultracart.admin.v2.models/SfvbCampaignWriteRequest';
 import SfvbCampaignsResponse from './com.ultracart.admin.v2.models/SfvbCampaignsResponse';
 import SfvbCliAccess from './com.ultracart.admin.v2.models/SfvbCliAccess';
+import SfvbCliLocation from './com.ultracart.admin.v2.models/SfvbCliLocation';
 import SfvbCliVersion from './com.ultracart.admin.v2.models/SfvbCliVersion';
 import SfvbCodeLibraryEmail from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmail';
 import SfvbCodeLibraryEmailsResponse from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
@@ -1546,7 +1547,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.254
+* @version 4.1.255
 */
 export {
     /**
@@ -7482,6 +7483,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/SfvbCliAccess}
      */
     SfvbCliAccess,
+
+    /**
+     * The SfvbCliLocation model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCliLocation}
+     */
+    SfvbCliLocation,
 
     /**
      * The SfvbCliVersion model constructor.

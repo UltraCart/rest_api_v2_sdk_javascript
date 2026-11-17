@@ -17,7 +17,7 @@ import SfvbThemeChangeLogEntry from './SfvbThemeChangeLogEntry';
 /**
  * The SfvbThemeUpgradeCheckResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbThemeUpgradeCheckResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbThemeUpgradeCheckResponse {
     /**

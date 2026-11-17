@@ -17,7 +17,7 @@ import SfvbStorefront from './SfvbStorefront';
 /**
  * The SfvbStorefrontsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbStorefrontsResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbStorefrontsResponse {
     /**

@@ -17,7 +17,7 @@ import SfvbI18nLanguage from './SfvbI18nLanguage';
 /**
  * The SfvbI18nLanguagesResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbI18nLanguagesResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbI18nLanguagesResponse {
     /**

@@ -18,7 +18,7 @@ import SfvbPageItemSelector from './SfvbPageItemSelector';
 /**
  * The SfvbPageSelectors model module.
  * @module com.ultracart.admin.v2.models/SfvbPageSelectors
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbPageSelectors {
     /**

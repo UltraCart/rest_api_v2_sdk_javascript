@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSearchFacetUpdate model module.
  * @module com.ultracart.admin.v2.models/SfvbSearchFacetUpdate
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbSearchFacetUpdate {
     /**

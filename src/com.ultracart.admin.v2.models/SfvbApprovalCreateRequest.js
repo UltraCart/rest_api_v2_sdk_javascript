@@ -35,7 +35,7 @@ import SfvbTransactionalEmailUpdateRequest from './SfvbTransactionalEmailUpdateR
 /**
  * The SfvbApprovalCreateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbApprovalCreateRequest
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbApprovalCreateRequest {
     /**
@@ -471,7 +471,13 @@ SfvbApprovalCreateRequest['ActionEnum'] = {
      * value: "page.move"
      * @const
      */
-    "page.move": "page.move"
+    "page.move": "page.move",
+
+    /**
+     * value: "cli.location"
+     * @const
+     */
+    "cli.location": "cli.location"
 };
 
 

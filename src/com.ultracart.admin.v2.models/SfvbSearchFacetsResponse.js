@@ -17,7 +17,7 @@ import SfvbSearchFacet from './SfvbSearchFacet';
 /**
  * The SfvbSearchFacetsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbSearchFacetsResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbSearchFacetsResponse {
     /**

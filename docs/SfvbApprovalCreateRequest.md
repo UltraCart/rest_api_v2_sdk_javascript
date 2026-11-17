@@ -99,6 +99,8 @@ Name | Type | Description | Notes
 
 * `page.move` (value: `"page.move"`)
 
+* `cli.location` (value: `"cli.location"`)
+
 
 
 

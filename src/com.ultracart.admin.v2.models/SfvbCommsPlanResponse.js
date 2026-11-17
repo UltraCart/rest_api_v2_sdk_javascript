@@ -17,7 +17,7 @@ import SfvbCommsPlan from './SfvbCommsPlan';
 /**
  * The SfvbCommsPlanResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsPlanResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbCommsPlanResponse {
     /**

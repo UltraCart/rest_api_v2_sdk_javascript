@@ -172,7 +172,7 @@ import TwiliosResponse from '../com.ultracart.admin.v2.models/TwiliosResponse';
 /**
 * Storefront service.
 * @module com.ultracart.admin.v2/StorefrontApi
-* @version 4.1.254
+* @version 4.1.255
 */
 export default class StorefrontApi {
 

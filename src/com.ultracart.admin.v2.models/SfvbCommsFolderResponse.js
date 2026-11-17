@@ -18,7 +18,7 @@ import SfvbCommsFolderItem from './SfvbCommsFolderItem';
 /**
  * The SfvbCommsFolderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsFolderResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbCommsFolderResponse {
     /**

@@ -13,13 +13,14 @@
 
 import ApiClient from '../ApiClient';
 import SfvbCliAccess from './SfvbCliAccess';
+import SfvbCliLocation from './SfvbCliLocation';
 import SfvbCliVersion from './SfvbCliVersion';
 import SfvbStorefront from './SfvbStorefront';
 
 /**
  * The SfvbWhoamiResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbWhoamiResponse
- * @version 4.1.254
+ * @version 4.1.255
  */
 class SfvbWhoamiResponse {
     /**
@@ -79,6 +80,9 @@ class SfvbWhoamiResponse {
             }
             if (data.hasOwnProperty('cli_access')) {
                 obj['cli_access'] = SfvbCliAccess.constructFromObject(data['cli_access']);
+            }
+            if (data.hasOwnProperty('cli_location')) {
+                obj['cli_location'] = SfvbCliLocation.constructFromObject(data['cli_location']);
             }
             if (data.hasOwnProperty('cli_version')) {
                 obj['cli_version'] = SfvbCliVersion.constructFromObject(data['cli_version']);
@@ -169,6 +173,11 @@ SfvbWhoamiResponse.prototype['can_write'] = undefined;
  * @member {module:com.ultracart.admin.v2.models/SfvbCliAccess} cli_access
  */
 SfvbWhoamiResponse.prototype['cli_access'] = undefined;
+
+/**
+ * @member {module:com.ultracart.admin.v2.models/SfvbCliLocation} cli_location
+ */
+SfvbWhoamiResponse.prototype['cli_location'] = undefined;
 
 /**
  * @member {module:com.ultracart.admin.v2.models/SfvbCliVersion} cli_version

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **domain** | **String** | For sending_domain.delete, the sending domain. | [optional] 
 **esp_twilio_uuid** | **String** | For twilio_account.delete, the Twilio account&#39;s esp_twilio_uuid, as GET comms/twilio_account returns it. | [optional] 
 **experiment_oid** | **Number** | For experiment.end, the experiment to end. | [optional] 
+**ip** | **String** | For cli.location, the IPv4 address the StoreFront CLI sign-in asks to be used from.  Set by the server from the caller&#39;s own address, never by the caller. | [optional] 
 **item_count** | **Number** | For item.attribute_batch, how many items the batch would change when it was requested.  Set by the server. | [optional] 
 **merchant_item_oid** | **Number** | For item.pricing, the item whose pricing changes. | [optional] 
 **new_path** | **String** | For page.move, where the page goes, exactly as the move will send it.  path is the page as it is now. | [optional] 
