@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ScreenRecordingPageViewParameter model module.
  * @module com.ultracart.admin.v2.models/ScreenRecordingPageViewParameter
- * @version 4.1.255
+ * @version 4.1.256
  */
 class ScreenRecordingPageViewParameter {
     /**

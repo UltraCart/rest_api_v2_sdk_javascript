@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The ConversationPbxTimeBasedResponse model module.
  * @module com.ultracart.admin.v2.models/ConversationPbxTimeBasedResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class ConversationPbxTimeBasedResponse {
     /**

@@ -19,7 +19,7 @@ import Warning from './Warning';
 /**
  * The ChannelPartnerEstimateTaxResponse model module.
  * @module com.ultracart.admin.v2.models/ChannelPartnerEstimateTaxResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class ChannelPartnerEstimateTaxResponse {
     /**

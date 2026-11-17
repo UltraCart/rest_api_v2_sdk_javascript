@@ -20,7 +20,7 @@ import SfvbRedirect from './SfvbRedirect';
 /**
  * The SfvbPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class SfvbPageResponse {
     /**

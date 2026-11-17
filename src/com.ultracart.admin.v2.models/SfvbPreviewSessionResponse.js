@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbPreviewSessionResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPreviewSessionResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class SfvbPreviewSessionResponse {
     /**

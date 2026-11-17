@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OauthDeviceAuthorizationResponse model module.
  * @module com.ultracart.admin.v2.models/OauthDeviceAuthorizationResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class OauthDeviceAuthorizationResponse {
     /**

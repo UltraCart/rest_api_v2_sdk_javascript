@@ -17,7 +17,7 @@ import SfvbItemDefaultPageResult from './SfvbItemDefaultPageResult';
 /**
  * The SfvbItemDefaultPageResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbItemDefaultPageResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class SfvbItemDefaultPageResponse {
     /**

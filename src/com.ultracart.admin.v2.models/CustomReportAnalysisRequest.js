@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomReportAnalysisRequest model module.
  * @module com.ultracart.admin.v2.models/CustomReportAnalysisRequest
- * @version 4.1.255
+ * @version 4.1.256
  */
 class CustomReportAnalysisRequest {
     /**

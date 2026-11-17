@@ -276,7 +276,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.255
+* @version 4.1.256
 */
 export default class SfvbApi {
 
@@ -7491,6 +7491,43 @@ export default class SfvbApi {
     }
 
     /**
+     * Callback function to receive the result of the getSfvbSession operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSessionCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbWhoamiResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Who this token is
+     * Returns the merchant, user, granted scopes and reachable storefronts for the calling token.  Declared for any scope so an application can always discover which account it is connected to. 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbSessionCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbWhoamiResponse}
+     */
+    getSfvbSession(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbWhoamiResponse;
+      return this.apiClient.callApi(
+        '/sfvb/session', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getSfvbSiteAttributes operation.
      * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbSiteAttributesCallback
      * @param {String} error Error message, if any.
@@ -8540,43 +8577,6 @@ export default class SfvbApi {
       let returnType = SfvbVersionResponse;
       return this.apiClient.callApi(
         '/sfvb/version', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getSfvbWhoami operation.
-     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbWhoamiCallback
-     * @param {String} error Error message, if any.
-     * @param {module:com.ultracart.admin.v2.models/SfvbWhoamiResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Who this token is
-     * Returns the merchant, user, granted scopes and reachable storefronts for the calling token.  Declared for any scope so an application can always discover which account it is connected to. 
-     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbWhoamiCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbWhoamiResponse}
-     */
-    getSfvbWhoami(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = SfvbWhoamiResponse;
-      return this.apiClient.callApi(
-        '/sfvb/whoami', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

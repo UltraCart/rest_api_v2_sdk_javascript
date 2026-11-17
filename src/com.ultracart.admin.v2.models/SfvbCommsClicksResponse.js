@@ -17,7 +17,7 @@ import SfvbCommsClick from './SfvbCommsClick';
 /**
  * The SfvbCommsClicksResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsClicksResponse
- * @version 4.1.255
+ * @version 4.1.256
  */
 class SfvbCommsClicksResponse {
     /**
