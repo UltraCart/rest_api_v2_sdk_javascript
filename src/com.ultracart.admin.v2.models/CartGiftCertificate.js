@@ -17,7 +17,7 @@ import Currency from './Currency';
 /**
  * The CartGiftCertificate model module.
  * @module com.ultracart.admin.v2.models/CartGiftCertificate
- * @version 4.1.256
+ * @version 4.1.257
  */
 class CartGiftCertificate {
     /**

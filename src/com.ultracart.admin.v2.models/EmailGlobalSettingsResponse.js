@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailGlobalSettingsResponse model module.
  * @module com.ultracart.admin.v2.models/EmailGlobalSettingsResponse
- * @version 4.1.256
+ * @version 4.1.257
  */
 class EmailGlobalSettingsResponse {
     /**

@@ -1004,7 +1004,12 @@ import SfvbCliAccess from './com.ultracart.admin.v2.models/SfvbCliAccess';
 import SfvbCliLocation from './com.ultracart.admin.v2.models/SfvbCliLocation';
 import SfvbCliVersion from './com.ultracart.admin.v2.models/SfvbCliVersion';
 import SfvbCodeLibraryEmail from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmail';
+import SfvbCodeLibraryEmailCreateRequest from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailCreateRequest';
+import SfvbCodeLibraryEmailDetail from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailDetail';
+import SfvbCodeLibraryEmailResponse from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse';
 import SfvbCodeLibraryEmailsResponse from './com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
+import SfvbCodeLibraryFile from './com.ultracart.admin.v2.models/SfvbCodeLibraryFile';
+import SfvbCodeLibraryFileSkipped from './com.ultracart.admin.v2.models/SfvbCodeLibraryFileSkipped';
 import SfvbCommsBranchStat from './com.ultracart.admin.v2.models/SfvbCommsBranchStat';
 import SfvbCommsChange from './com.ultracart.admin.v2.models/SfvbCommsChange';
 import SfvbCommsClick from './com.ultracart.admin.v2.models/SfvbCommsClick';
@@ -1547,7 +1552,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.256
+* @version 4.1.257
 */
 export {
     /**
@@ -7503,10 +7508,40 @@ export {
     SfvbCodeLibraryEmail,
 
     /**
+     * The SfvbCodeLibraryEmailCreateRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailCreateRequest}
+     */
+    SfvbCodeLibraryEmailCreateRequest,
+
+    /**
+     * The SfvbCodeLibraryEmailDetail model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailDetail}
+     */
+    SfvbCodeLibraryEmailDetail,
+
+    /**
+     * The SfvbCodeLibraryEmailResponse model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse}
+     */
+    SfvbCodeLibraryEmailResponse,
+
+    /**
      * The SfvbCodeLibraryEmailsResponse model constructor.
      * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse}
      */
     SfvbCodeLibraryEmailsResponse,
+
+    /**
+     * The SfvbCodeLibraryFile model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryFile}
+     */
+    SfvbCodeLibraryFile,
+
+    /**
+     * The SfvbCodeLibraryFileSkipped model constructor.
+     * @property {module:com.ultracart.admin.v2.models/SfvbCodeLibraryFileSkipped}
+     */
+    SfvbCodeLibraryFileSkipped,
 
     /**
      * The SfvbCommsBranchStat model constructor.

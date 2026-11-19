@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConversationCustomerAuth model module.
  * @module com.ultracart.admin.v2.models/ConversationCustomerAuth
- * @version 4.1.256
+ * @version 4.1.257
  */
 class ConversationCustomerAuth {
     /**

@@ -20,7 +20,7 @@ import Warning from './Warning';
 /**
  * The EmailStepStatResponse model module.
  * @module com.ultracart.admin.v2.models/EmailStepStatResponse
- * @version 4.1.256
+ * @version 4.1.257
  */
 class EmailStepStatResponse {
     /**

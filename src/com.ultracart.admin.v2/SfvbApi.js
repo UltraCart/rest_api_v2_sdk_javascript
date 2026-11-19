@@ -28,6 +28,8 @@ import SfvbBlogPostsResponse from '../com.ultracart.admin.v2.models/SfvbBlogPost
 import SfvbCampaign from '../com.ultracart.admin.v2.models/SfvbCampaign';
 import SfvbCampaignWriteRequest from '../com.ultracart.admin.v2.models/SfvbCampaignWriteRequest';
 import SfvbCampaignsResponse from '../com.ultracart.admin.v2.models/SfvbCampaignsResponse';
+import SfvbCodeLibraryEmailCreateRequest from '../com.ultracart.admin.v2.models/SfvbCodeLibraryEmailCreateRequest';
+import SfvbCodeLibraryEmailResponse from '../com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse';
 import SfvbCodeLibraryEmailsResponse from '../com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse';
 import SfvbCommsClicksResponse from '../com.ultracart.admin.v2.models/SfvbCommsClicksResponse';
 import SfvbCommsDashboardResponse from '../com.ultracart.admin.v2.models/SfvbCommsDashboardResponse';
@@ -276,7 +278,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.256
+* @version 4.1.257
 */
 export default class SfvbApi {
 
@@ -3837,6 +3839,55 @@ export default class SfvbApi {
       let returnType = SfvbElementsResponse;
       return this.apiClient.callApi(
         '/sfvb/cjson/elements', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getSfvbCodeLibraryEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~getSfvbCodeLibraryEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * One code library email item, with its body and file list
+     * Answers for an item this account owns, one shared with it, or one published for everyone, approved by UltraCart and free, the same items listSfvbCodeLibraryEmails lists; anything else is not found.  Returns the title, description, subject, preview text, the body as stored and the image files the item carries, without their contents (#2126). 
+     * @param {Number} storefront_oid 
+     * @param {Number} library_item_oid 
+     * @param {module:com.ultracart.admin.v2/SfvbApi~getSfvbCodeLibraryEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse}
+     */
+    getSfvbCodeLibraryEmail(storefront_oid, library_item_oid, callback) {
+      let postBody = null;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling getSfvbCodeLibraryEmail");
+      }
+      // verify the required parameter 'library_item_oid' is set
+      if (library_item_oid === undefined || library_item_oid === null) {
+        throw new Error("Missing the required parameter 'library_item_oid' when calling getSfvbCodeLibraryEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid,
+        'library_item_oid': library_item_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = SfvbCodeLibraryEmailResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/code_library/emails/{library_item_oid}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -8872,6 +8923,54 @@ export default class SfvbApi {
       let returnType = SfvbBlogPostDetail;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/blog_posts', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the insertSfvbCodeLibraryEmail operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~insertSfvbCodeLibraryEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Save a reusable email to this account's code library
+     * Saves a whole email (body, subject and preview text) as a code library email item that the admin's \"start from library\" picker and the step insert's library_item_oid can start a new email from (#2126).  No flow, campaign, sequence or step is made, and nothing sends.  The item is private to this account, never published or shared.  The body must pass the library content scanner and the email container rules.  Image files the body names by a path starting with / are carried with the item when they are PNG, JPEG or GIF and their contents are that image, up to 25 files, 5 MB each and 20 MB in all; any other file is listed in files_skipped with the reason.  Make a new uuid for each save.  Sending the same uuid again returns the item it saved, unchanged, with created false, so a retry after an uncertain response is safe.  Titles may repeat. 
+     * @param {Number} storefront_oid 
+     * @param {module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailCreateRequest} code_library_email_create_request The email to save, with the uuid that makes a retry safe
+     * @param {module:com.ultracart.admin.v2/SfvbApi~insertSfvbCodeLibraryEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse}
+     */
+    insertSfvbCodeLibraryEmail(storefront_oid, code_library_email_create_request, callback) {
+      let postBody = code_library_email_create_request;
+      // verify the required parameter 'storefront_oid' is set
+      if (storefront_oid === undefined || storefront_oid === null) {
+        throw new Error("Missing the required parameter 'storefront_oid' when calling insertSfvbCodeLibraryEmail");
+      }
+      // verify the required parameter 'code_library_email_create_request' is set
+      if (code_library_email_create_request === undefined || code_library_email_create_request === null) {
+        throw new Error("Missing the required parameter 'code_library_email_create_request' when calling insertSfvbCodeLibraryEmail");
+      }
+
+      let pathParams = {
+        'storefront_oid': storefront_oid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = SfvbCodeLibraryEmailResponse;
+      return this.apiClient.callApi(
+        '/sfvb/storefronts/{storefront_oid}/code_library/emails', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -1011,7 +1011,12 @@ docs/SfvbCliAccess.md
 docs/SfvbCliLocation.md
 docs/SfvbCliVersion.md
 docs/SfvbCodeLibraryEmail.md
+docs/SfvbCodeLibraryEmailCreateRequest.md
+docs/SfvbCodeLibraryEmailDetail.md
+docs/SfvbCodeLibraryEmailResponse.md
 docs/SfvbCodeLibraryEmailsResponse.md
+docs/SfvbCodeLibraryFile.md
+docs/SfvbCodeLibraryFileSkipped.md
 docs/SfvbCommsBranchStat.md
 docs/SfvbCommsChange.md
 docs/SfvbCommsClick.md
@@ -2500,7 +2505,12 @@ src/com.ultracart.admin.v2.models/SfvbCliAccess.js
 src/com.ultracart.admin.v2.models/SfvbCliLocation.js
 src/com.ultracart.admin.v2.models/SfvbCliVersion.js
 src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmail.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmailCreateRequest.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmailDetail.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse.js
 src/com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryFile.js
+src/com.ultracart.admin.v2.models/SfvbCodeLibraryFileSkipped.js
 src/com.ultracart.admin.v2.models/SfvbCommsBranchStat.js
 src/com.ultracart.admin.v2.models/SfvbCommsChange.js
 src/com.ultracart.admin.v2.models/SfvbCommsClick.js

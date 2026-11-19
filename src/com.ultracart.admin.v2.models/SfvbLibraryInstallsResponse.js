@@ -17,7 +17,7 @@ import SfvbLibraryInstallRecord from './SfvbLibraryInstallRecord';
 /**
  * The SfvbLibraryInstallsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbLibraryInstallsResponse
- * @version 4.1.256
+ * @version 4.1.257
  */
 class SfvbLibraryInstallsResponse {
     /**
