@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemRevguard model module.
  * @module com.ultracart.admin.v2.models/ItemRevguard
- * @version 4.1.257
+ * @version 4.1.258
  */
 class ItemRevguard {
     /**

@@ -17,7 +17,7 @@ import CartItem from './CartItem';
 /**
  * The ConversationEventAddItem model module.
  * @module com.ultracart.admin.v2.models/ConversationEventAddItem
- * @version 4.1.257
+ * @version 4.1.258
  */
 class ConversationEventAddItem {
     /**

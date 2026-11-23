@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbSiteSeoChange model module.
  * @module com.ultracart.admin.v2.models/SfvbSiteSeoChange
- * @version 4.1.257
+ * @version 4.1.258
  */
 class SfvbSiteSeoChange {
     /**

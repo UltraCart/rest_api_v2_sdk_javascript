@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ItemContentAssignment model module.
  * @module com.ultracart.admin.v2.models/ItemContentAssignment
- * @version 4.1.257
+ * @version 4.1.258
  */
 class ItemContentAssignment {
     /**

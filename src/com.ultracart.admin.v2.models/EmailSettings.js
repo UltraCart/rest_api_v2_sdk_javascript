@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EmailSettings model module.
  * @module com.ultracart.admin.v2.models/EmailSettings
- * @version 4.1.257
+ * @version 4.1.258
  */
 class EmailSettings {
     /**
@@ -47,6 +47,9 @@ class EmailSettings {
         if (data) {
             obj = obj || new EmailSettings();
 
+            if (data.hasOwnProperty('campaign_hourly_divisor')) {
+                obj['campaign_hourly_divisor'] = ApiClient.convertToType(data['campaign_hourly_divisor'], 'Number');
+            }
             if (data.hasOwnProperty('emails_per_day')) {
                 obj['emails_per_day'] = ApiClient.convertToType(data['emails_per_day'], 'Number');
             }
@@ -113,6 +116,12 @@ class EmailSettings {
 
 
 }
+
+/**
+ * Campaign hourly send divisor, default 8
+ * @member {Number} campaign_hourly_divisor
+ */
+EmailSettings.prototype['campaign_hourly_divisor'] = undefined;
 
 /**
  * Emails per day allowed

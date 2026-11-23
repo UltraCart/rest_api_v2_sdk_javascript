@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**campaign_hourly_divisor** | **Number** | Campaign hourly send divisor, default 8 | [optional] 
 **emails_per_day** | **Number** | Emails per day allowed | [optional] 
 **emails_per_hour** | **Number** | Emails per hour allowed | [optional] 
 **emails_per_month** | **Number** | Emails per month allowed | [optional] 

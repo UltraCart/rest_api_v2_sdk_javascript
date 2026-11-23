@@ -17,7 +17,7 @@ import SfvbPageResponse from './SfvbPageResponse';
 /**
  * The SfvbPageSummary model module.
  * @module com.ultracart.admin.v2.models/SfvbPageSummary
- * @version 4.1.257
+ * @version 4.1.258
  */
 class SfvbPageSummary {
     /**

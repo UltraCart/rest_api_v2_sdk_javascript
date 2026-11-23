@@ -18,7 +18,7 @@ import SfvbCodeLibraryFileSkipped from './SfvbCodeLibraryFileSkipped';
 /**
  * The SfvbCodeLibraryEmailResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCodeLibraryEmailResponse
- * @version 4.1.257
+ * @version 4.1.258
  */
 class SfvbCodeLibraryEmailResponse {
     /**
