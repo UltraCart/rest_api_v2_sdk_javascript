@@ -278,7 +278,7 @@ import SfvbWidgetIdsResponse from '../com.ultracart.admin.v2.models/SfvbWidgetId
 /**
 * Sfvb service.
 * @module com.ultracart.admin.v2/SfvbApi
-* @version 4.1.258
+* @version 4.1.259
 */
 export default class SfvbApi {
 
@@ -3528,6 +3528,46 @@ export default class SfvbApi {
       let returnType = SfvbNotFoundEntry;
       return this.apiClient.callApi(
         '/sfvb/storefronts/{storefront_oid}/not_found/{not_found_id}/fixed', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the flushSfvbStoreFrontCache operation.
+     * @callback module:com.ultracart.admin.v2/SfvbApi~flushSfvbStoreFrontCacheCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Flush the StoreFront page cache
+     * Marks every cached page on every storefront of the account out of date, so each re-renders on its next visit.  Templates, settings and files are not changed.  Allowed once per account every 15 minutes; an earlier call answers 429.  Needs an approved storefront_cache.flush request (POST approvals with no storefront_oid and empty params), and every request needs a fresh code. 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.Approval_Id The approval_id of an approved storefront_cache.flush request for this account.  See POST /sfvb/approvals.
+     * @param {module:com.ultracart.admin.v2/SfvbApi~flushSfvbStoreFrontCacheCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    flushSfvbStoreFrontCache(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Approval-Id': opts['Approval_Id']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/sfvb/cache/flush', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

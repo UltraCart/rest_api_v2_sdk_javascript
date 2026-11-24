@@ -17,7 +17,7 @@ import SfvbItemVariationOption from './SfvbItemVariationOption';
 /**
  * The SfvbItemVariationAxis model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationAxis
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbItemVariationAxis {
     /**

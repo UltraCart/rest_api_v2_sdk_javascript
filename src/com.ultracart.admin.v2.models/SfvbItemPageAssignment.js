@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemPageAssignment model module.
  * @module com.ultracart.admin.v2.models/SfvbItemPageAssignment
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbItemPageAssignment {
     /**

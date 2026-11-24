@@ -20,7 +20,7 @@ import SfvbItemTags from './SfvbItemTags';
 /**
  * The SfvbItemResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbItemResponse
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbItemResponse {
     /**

@@ -17,7 +17,7 @@ import SfvbErrorDetail from './SfvbErrorDetail';
 /**
  * The SfvbTrackingHtmlRenderResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbTrackingHtmlRenderResponse
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbTrackingHtmlRenderResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbFileUploadUrlResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbFileUploadUrlResponse
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbFileUploadUrlResponse {
     /**

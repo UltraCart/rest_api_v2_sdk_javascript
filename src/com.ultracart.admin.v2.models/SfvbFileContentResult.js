@@ -18,7 +18,7 @@ import SfvbFileContentResponse from './SfvbFileContentResponse';
 /**
  * The SfvbFileContentResult model module.
  * @module com.ultracart.admin.v2.models/SfvbFileContentResult
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbFileContentResult {
     /**

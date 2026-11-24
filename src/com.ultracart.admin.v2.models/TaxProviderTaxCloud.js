@@ -17,7 +17,7 @@ import TaxCloudConfig from './TaxCloudConfig';
 /**
  * The TaxProviderTaxCloud model module.
  * @module com.ultracart.admin.v2.models/TaxProviderTaxCloud
- * @version 4.1.258
+ * @version 4.1.259
  */
 class TaxProviderTaxCloud {
     /**

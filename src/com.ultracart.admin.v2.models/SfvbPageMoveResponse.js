@@ -19,7 +19,7 @@ import SfvbRedirect from './SfvbRedirect';
 /**
  * The SfvbPageMoveResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbPageMoveResponse
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbPageMoveResponse {
     /**

@@ -17,7 +17,7 @@ import SfvbCampaignMembership from './SfvbCampaignMembership';
 /**
  * The SfvbCampaignWriteRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCampaignWriteRequest
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbCampaignWriteRequest {
     /**

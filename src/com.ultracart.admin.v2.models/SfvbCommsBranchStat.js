@@ -17,7 +17,7 @@ import SfvbCommsStat from './SfvbCommsStat';
 /**
  * The SfvbCommsBranchStat model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsBranchStat
- * @version 4.1.258
+ * @version 4.1.259
  */
 class SfvbCommsBranchStat {
     /**

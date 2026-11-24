@@ -17,7 +17,7 @@ import TaxProviderAnrokProduct from './TaxProviderAnrokProduct';
 /**
  * The TaxProviderAnrokTestResult model module.
  * @module com.ultracart.admin.v2.models/TaxProviderAnrokTestResult
- * @version 4.1.258
+ * @version 4.1.259
  */
 class TaxProviderAnrokTestResult {
     /**

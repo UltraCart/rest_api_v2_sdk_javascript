@@ -99,6 +99,8 @@ Name | Type | Description | Notes
 
 * `page.move` (value: `"page.move"`)
 
+* `storefront_cache.flush` (value: `"storefront_cache.flush"`)
+
 * `cli.location` (value: `"cli.location"`)
 
 
