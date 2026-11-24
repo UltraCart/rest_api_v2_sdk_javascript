@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbItemVariationChangeResult model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationChangeResult
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbItemVariationChangeResult {
     /**

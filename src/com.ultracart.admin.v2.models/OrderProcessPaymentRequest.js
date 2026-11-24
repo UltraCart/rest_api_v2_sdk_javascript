@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderProcessPaymentRequest model module.
  * @module com.ultracart.admin.v2.models/OrderProcessPaymentRequest
- * @version 4.1.259
+ * @version 4.1.260
  */
 class OrderProcessPaymentRequest {
     /**
@@ -53,6 +53,9 @@ class OrderProcessPaymentRequest {
             if (data.hasOwnProperty('card_verification_number_token')) {
                 obj['card_verification_number_token'] = ApiClient.convertToType(data['card_verification_number_token'], 'String');
             }
+            if (data.hasOwnProperty('rotating_transaction_gateway_code')) {
+                obj['rotating_transaction_gateway_code'] = ApiClient.convertToType(data['rotating_transaction_gateway_code'], 'String');
+            }
         }
         return obj;
     }
@@ -71,6 +74,12 @@ OrderProcessPaymentRequest.prototype['amount'] = undefined;
  * @member {String} card_verification_number_token
  */
 OrderProcessPaymentRequest.prototype['card_verification_number_token'] = undefined;
+
+/**
+ * Rotating transaction gateway code to process the payment through (optional).  Must be an active rotating transaction gateway on the account.  The charge is attempted on that gateway only, without cascading to other gateways, the same as choosing a gateway on the Accounts Receivable Process Payment screen.
+ * @member {String} rotating_transaction_gateway_code
+ */
+OrderProcessPaymentRequest.prototype['rotating_transaction_gateway_code'] = undefined;
 
 
 

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCommsDailyStat model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsDailyStat
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbCommsDailyStat {
     /**

@@ -17,7 +17,7 @@ import SfvbCommsStat from './SfvbCommsStat';
 /**
  * The SfvbCommsDashboardRow model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsDashboardRow
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbCommsDashboardRow {
     /**

@@ -18,7 +18,7 @@ import SfvbPostcardAddress from './SfvbPostcardAddress';
 /**
  * The SfvbCommsSettingsUpdateRequest model module.
  * @module com.ultracart.admin.v2.models/SfvbCommsSettingsUpdateRequest
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbCommsSettingsUpdateRequest {
     /**

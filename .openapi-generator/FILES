@@ -816,6 +816,7 @@ docs/OrderAutoOrderUpdateBillingUrlResponse.md
 docs/OrderBilling.md
 docs/OrderBuysafe.md
 docs/OrderByTokenQuery.md
+docs/OrderCancelRequest.md
 docs/OrderChannelPartner.md
 docs/OrderCheckout.md
 docs/OrderCoupon.md
@@ -2311,6 +2312,7 @@ src/com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse.js
 src/com.ultracart.admin.v2.models/OrderBilling.js
 src/com.ultracart.admin.v2.models/OrderBuysafe.js
 src/com.ultracart.admin.v2.models/OrderByTokenQuery.js
+src/com.ultracart.admin.v2.models/OrderCancelRequest.js
 src/com.ultracart.admin.v2.models/OrderChannelPartner.js
 src/com.ultracart.admin.v2.models/OrderCheckout.js
 src/com.ultracart.admin.v2.models/OrderCoupon.js

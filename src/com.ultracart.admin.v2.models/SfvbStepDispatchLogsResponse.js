@@ -18,7 +18,7 @@ import SfvbStepDispatchLog from './SfvbStepDispatchLog';
 /**
  * The SfvbStepDispatchLogsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbStepDispatchLogsResponse
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbStepDispatchLogsResponse {
     /**

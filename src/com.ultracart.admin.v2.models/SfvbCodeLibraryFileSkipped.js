@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbCodeLibraryFileSkipped model module.
  * @module com.ultracart.admin.v2.models/SfvbCodeLibraryFileSkipped
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbCodeLibraryFileSkipped {
     /**

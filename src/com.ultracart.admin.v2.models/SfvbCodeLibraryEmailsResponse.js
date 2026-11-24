@@ -17,7 +17,7 @@ import SfvbCodeLibraryEmail from './SfvbCodeLibraryEmail';
 /**
  * The SfvbCodeLibraryEmailsResponse model module.
  * @module com.ultracart.admin.v2.models/SfvbCodeLibraryEmailsResponse
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbCodeLibraryEmailsResponse {
     /**

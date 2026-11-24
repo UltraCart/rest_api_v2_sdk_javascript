@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SfvbExperimentObjective model module.
  * @module com.ultracart.admin.v2.models/SfvbExperimentObjective
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbExperimentObjective {
     /**

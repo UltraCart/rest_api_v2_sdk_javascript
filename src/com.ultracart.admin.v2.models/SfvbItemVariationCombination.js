@@ -18,7 +18,7 @@ import SfvbItemVariationValue from './SfvbItemVariationValue';
 /**
  * The SfvbItemVariationCombination model module.
  * @module com.ultracart.admin.v2.models/SfvbItemVariationCombination
- * @version 4.1.259
+ * @version 4.1.260
  */
 class SfvbItemVariationCombination {
     /**

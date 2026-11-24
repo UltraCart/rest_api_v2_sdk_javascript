@@ -810,6 +810,7 @@ import OrderAutoOrderUpdateBillingUrlResponse from './com.ultracart.admin.v2.mod
 import OrderBilling from './com.ultracart.admin.v2.models/OrderBilling';
 import OrderBuysafe from './com.ultracart.admin.v2.models/OrderBuysafe';
 import OrderByTokenQuery from './com.ultracart.admin.v2.models/OrderByTokenQuery';
+import OrderCancelRequest from './com.ultracart.admin.v2.models/OrderCancelRequest';
 import OrderChannelPartner from './com.ultracart.admin.v2.models/OrderChannelPartner';
 import OrderCheckout from './com.ultracart.admin.v2.models/OrderCheckout';
 import OrderCoupon from './com.ultracart.admin.v2.models/OrderCoupon';
@@ -1552,7 +1553,7 @@ import WorkflowApi from './com.ultracart.admin.v2/WorkflowApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.1.259
+* @version 4.1.260
 */
 export {
     /**
@@ -6342,6 +6343,12 @@ export {
      * @property {module:com.ultracart.admin.v2.models/OrderByTokenQuery}
      */
     OrderByTokenQuery,
+
+    /**
+     * The OrderCancelRequest model constructor.
+     * @property {module:com.ultracart.admin.v2.models/OrderCancelRequest}
+     */
+    OrderCancelRequest,
 
     /**
      * The OrderChannelPartner model constructor.

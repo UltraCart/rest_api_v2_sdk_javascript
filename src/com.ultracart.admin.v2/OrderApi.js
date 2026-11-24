@@ -24,6 +24,7 @@ import OrderAssignRmaRequest from '../com.ultracart.admin.v2.models/OrderAssignR
 import OrderAssignToAffiliateRequest from '../com.ultracart.admin.v2.models/OrderAssignToAffiliateRequest';
 import OrderAutoOrderUpdateBillingUrlResponse from '../com.ultracart.admin.v2.models/OrderAutoOrderUpdateBillingUrlResponse';
 import OrderByTokenQuery from '../com.ultracart.admin.v2.models/OrderByTokenQuery';
+import OrderCancelRequest from '../com.ultracart.admin.v2.models/OrderCancelRequest';
 import OrderCustomerActivityResponse from '../com.ultracart.admin.v2.models/OrderCustomerActivityResponse';
 import OrderEdiDocumentsResponse from '../com.ultracart.admin.v2.models/OrderEdiDocumentsResponse';
 import OrderEmailsResponse from '../com.ultracart.admin.v2.models/OrderEmailsResponse';
@@ -50,7 +51,7 @@ import ReplaceOrderItemIdRequest from '../com.ultracart.admin.v2.models/ReplaceO
 /**
 * Order service.
 * @module com.ultracart.admin.v2/OrderApi
-* @version 4.1.259
+* @version 4.1.260
 */
 export default class OrderApi {
 
@@ -309,6 +310,54 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/cancel', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cancelOrderWithOptions operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~cancelOrderWithOptionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Cancel an order with options
+     * Cancel an order on the UltraCart account, with the options in the request body.  If the success flag is false, then consult the error message for why it failed.  An empty request body behaves the same as cancelOrder. 
+     * @param {String} order_id The order id to cancel.
+     * @param {module:com.ultracart.admin.v2.models/OrderCancelRequest} cancel_request Cancel order options
+     * @param {module:com.ultracart.admin.v2/OrderApi~cancelOrderWithOptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    cancelOrderWithOptions(order_id, cancel_request, callback) {
+      let postBody = cancel_request;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling cancelOrderWithOptions");
+      }
+      // verify the required parameter 'cancel_request' is set
+      if (cancel_request === undefined || cancel_request === null) {
+        throw new Error("Missing the required parameter 'cancel_request' when calling cancelOrderWithOptions");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = BaseResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/cancel_with_options', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1880,6 +1929,49 @@ export default class OrderApi {
       let returnType = BaseResponse;
       return this.apiClient.callApi(
         '/order/orders/{order_id}/resend_shipment_confirmation', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sendUpdateBillingEmail operation.
+     * @callback module:com.ultracart.admin.v2/OrderApi~sendUpdateBillingEmailCallback
+     * @param {String} error Error message, if any.
+     * @param {module:com.ultracart.admin.v2.models/BaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Send update billing email
+     * Queues the update billing email to the customer on an order in Accounts Receivable, the same as the Send Billing Update button.  The email is sent within a minute.  The request is refused if the merchant has turned off the update billing notification, if a StoreFront communication flow handles unprocessed payments for the order, or if this method already sent the email for the order in the last 24 hours.  While the order is less than 7 days old, a reminder is sent every 2 days. 
+     * @param {String} order_id The order id to send the update billing email for.
+     * @param {module:com.ultracart.admin.v2/OrderApi~sendUpdateBillingEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.ultracart.admin.v2.models/BaseResponse}
+     */
+    sendUpdateBillingEmail(order_id, callback) {
+      let postBody = null;
+      // verify the required parameter 'order_id' is set
+      if (order_id === undefined || order_id === null) {
+        throw new Error("Missing the required parameter 'order_id' when calling sendUpdateBillingEmail");
+      }
+
+      let pathParams = {
+        'order_id': order_id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ultraCartOauth', 'ultraCartSimpleApiKey'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = BaseResponse;
+      return this.apiClient.callApi(
+        '/order/orders/{order_id}/send_update_billing_email', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
